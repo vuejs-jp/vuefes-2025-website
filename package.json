@@ -27,6 +27,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.29.1",
     "prettier": "4.0.0-alpha.11",
     "typescript": "5.7.3",
