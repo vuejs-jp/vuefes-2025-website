@@ -1,0 +1,14 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: "0.2"
+useGitIgnore: true
+words:
+  - lightningcss
+  - nuxi
+  - nuxt
+  - ubugeeei
+  - vuefes
+  - vuejs
+ignorePaths:
+  - "dist"
+  - "node_modules"
+  - "pnpm-lock.yaml"

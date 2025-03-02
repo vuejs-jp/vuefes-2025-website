@@ -17,6 +17,7 @@
     "lint:fix": "eslint --fix .",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
+    "spell": "cspell '**' --cache",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "cspell": "^8.17.5",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.29.1",
     "prettier": "4.0.0-alpha.11",
