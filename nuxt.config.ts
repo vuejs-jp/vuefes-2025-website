@@ -10,11 +10,7 @@ export default defineNuxtConfig({
   vite: {
     css: {
       transformer: "lightningcss",
-      lightningcss: {
-        nonStandard: {
-          deepSelectorCombinator: true,
-        },
-      },
+      lightningcss: { nonStandard: { deepSelectorCombinator: true } },
     },
   },
 });

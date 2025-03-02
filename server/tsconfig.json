@@ -1,3 +1,1 @@
-{
-  "extends": "../.nuxt/tsconfig.server.json"
-}
+{ "extends": "../.nuxt/tsconfig.server.json" }
