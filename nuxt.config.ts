@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   future: { compatibilityVersion: 4 },
   imports: { autoImport: false },
+
+  modules: ["@nuxt/eslint"],
+
   vite: {
     css: {
       transformer: "lightningcss",

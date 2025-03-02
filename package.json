@@ -13,16 +13,20 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/eslint": "1.1.0",
+    "eslint": "^9.0.0",
     "nuxt": "^3.15.4",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "lightningcss": "^1.29.1",
-    "typescript": "^5.8.2",
+    "typescript": "5.7.3",
     "vue-tsc": "^2.2.8"
   }
 }
