@@ -21,6 +21,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "lightningcss": "^1.29.1",
     "typescript": "^5.8.2",
     "vue-tsc": "^2.2.8"
   }
