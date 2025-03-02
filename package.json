@@ -13,8 +13,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint . && textlint .",
+    "lint:fix": "eslint --fix . && textlint --fix .",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "spell": "cspell '**' --cache",
@@ -32,6 +32,9 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.29.1",
     "prettier": "4.0.0-alpha.11",
+    "textlint": "^14.4.2",
+    "textlint-filter-rule-allowlist": "^4.0.0",
+    "textlint-rule-preset-vuejs-jp": "github:vuejs-jp/textlint-rule-preset-vuejs-jp",
     "typescript": "5.7.3",
     "vue-tsc": "^2.2.8"
   }
