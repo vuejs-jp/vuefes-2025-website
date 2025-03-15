@@ -6,7 +6,7 @@
     "name": "ubugeeei",
     "email": "ubuge1122@gmail.com"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.3",
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3",
