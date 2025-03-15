@@ -17,8 +17,10 @@ const { data: message } = await useLazyAsyncData(locale.value, () =>
 </script>
 
 <template>
+  <h1 class="site-title">Vue Fes Japan 2025</h1>
+
   <LanguageSwitcher />
-  <h1>{{ t("message") }}</h1>
+  <h2>{{ t("message") }}</h2>
   <ContentRenderer v-if="message" :value="message" />
 
   <h1>h1</h1>
@@ -29,3 +31,11 @@ const { data: message } = await useLazyAsyncData(locale.value, () =>
   <p class="text-body-3">body-3</p>
   <p class="text-caption">caption</p>
 </template>
+
+<style scoped>
+.site-title {
+  font-family: ClashDisplay-SemiBold;
+  font-size: 4rem;
+  padding: 2rem;
+}
+</style>
