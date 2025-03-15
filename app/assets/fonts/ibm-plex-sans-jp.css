@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "IBMPlexSansJP-Thin";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-Thin.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansJP-ExtraLight";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansJP-Light";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansJP-Regular";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansJP-Medium";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansJP-SemiBold";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansJP-Bold";
+  src: url("../fonts/external/ibm-plex-sans-jp/IBMPlexSansJP-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}

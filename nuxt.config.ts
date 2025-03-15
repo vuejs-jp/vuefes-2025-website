@@ -44,6 +44,9 @@ export default defineNuxtConfig({
     css: {
       transformer: "lightningcss",
       lightningcss: {
+        drafts: {
+          customMedia: true,
+        },
         nonStandard: {
           deepSelectorCombinator: true,
         },

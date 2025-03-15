@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { useI18n } from "#imports";
+import { useI18n, watchEffect } from "#imports";
 
 const { locale, setLocale } = useI18n();
 
-async function switchLanguage(event: Event) {
-  const locale = event.target as HTMLSelectElement;
+watchEffect(async () => {
   await setLocale(locale.value as "en" | "ja");
-}
+});
 </script>
 
 <template>
   <label for="language-select">
-    <select id="language-select" :value="locale" @change="switchLanguage">
+    <select id="language-select" v-model="locale">
       <option v-for="lang in ['en', 'ja']" :key="lang" :value="lang">
         {{ lang }}
       </option>
