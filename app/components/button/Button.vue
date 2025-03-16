@@ -84,16 +84,19 @@ button {
     background-color: var(--color-white);
     color: var(--color-primary);
     border: 1px solid var(--color-divider);
+    border-radius: var(--radius-m);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     box-sizing: border-box;
-    width: 6.5rem;
     height: 5rem;
-    padding: 1.25rem 2rem;
-    border-radius: 25%;
+    padding: 0;
+
     @media (--mobile) {
-      width: 5.5rem;
       height: 4rem;
-      padding: 1.25rem 2rem;
-      border-radius: 12.5%;
+      padding: 0;
     }
   }
 }

@@ -173,3 +173,15 @@ html {
     font-family: JetBrainsMono-Bold;
   }
 }
+
+/** 
+ * Radius
+  ------------------------------------------ */
+
+:root {
+  --radius-m: 1.5rem;
+
+  @media (--mobile) {
+    --radius-m: 0.75rem;
+  }
+}
