@@ -46,8 +46,12 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   width: 100vw;
-  padding: 24px;
   box-sizing: border-box;
+
+  padding: 24px;
+  @media (--mobile) {
+    padding: 12px;
+  }
 
   .main-visual-head {
     grid-column: 1 / -1;
