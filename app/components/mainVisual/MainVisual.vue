@@ -96,7 +96,6 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
 
     @media (--mobile) {
       display: grid;
-      /* 中央に均等に縦並び */
       grid-template-columns: 1fr;
       grid-template-rows: 1fr auto 1fr;
       justify-content: center;
