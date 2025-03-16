@@ -7,11 +7,13 @@ words:
   - nuxi
   - nuxt
   - nuxtjs
+  - Otemachi
   - textareas
   - textlint
   - ubugeeei
   - vuefes
   - vuejs
+  - webgl
 ignorePaths:
   - dist
   - node_modules
