@@ -6,6 +6,8 @@ words:
   - lightningcss
   - nuxi
   - nuxt
+  - nuxtjs
+  - textareas
   - textlint
   - ubugeeei
   - vuefes
@@ -14,3 +16,5 @@ ignorePaths:
   - dist
   - node_modules
   - pnpm-lock.yaml
+  - app/assets/fonts/external
+  - app/assets/icons

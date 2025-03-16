@@ -1,0 +1,49 @@
+{
+  "workbench.editor.enablePreview": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  //
+  // formatter
+  //
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[grapql]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  //
+  // theme
+  //
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#e17439",
+    "activityBar.background": "#7820cb",
+    "activityBar.foreground": "#fff",
+    "activityBar.inactiveForeground": "#fff",
+    "activityBarBadge.foreground": "#15202b",
+    "editorGroup.border": "#e17439",
+    "panel.border": "#e17439",
+    "sash.hoverBorder": "#0d7d63",
+    "sideBar.border": "#0d7d63",
+    "statusBar.background": "#415ec5",
+    "statusBar.foreground": "#fff",
+    "statusBarItem.hoverBackground": "#0d7d63",
+    "statusBarItem.remoteBackground": "#0d7d63",
+    "statusBarItem.remoteForeground": "#fff",
+    "titleBar.activeBackground": "#0d7d63",
+    "titleBar.activeForeground": "#fff",
+    "titleBar.inactiveBackground": "#0d7d63",
+    "titleBar.inactiveForeground": "#fff"
+  },
+  //
+  // other extensions
+  //
+  "todo-tree.general.tags": ["FIXME:", "WARN:", "TODO:", "NOTE:"],
+  "typescript.tsserver.watchOptions": { "watchFile": "dynamicPriorityPolling" },
+  "vue.inlayHints.destructuredProps": true,
+  "vue.inlayHints.missingProps": true,
+  "vue.inlayHints.inlineHandlerLeading": true,
+  "vue.inlayHints.optionsWrapper": true,
+  "vue.inlayHints.vBindShorthand": true
+}
