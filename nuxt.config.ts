@@ -8,7 +8,12 @@ export default defineNuxtConfig({
     inlineRouteRules: true,
   },
 
-  modules: ["@nuxt/eslint", "@nuxt/content", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/content",
+    "@nuxtjs/i18n",
+    "@nuxtjs/storybook",
+  ],
 
   i18n: {
     langDir: ".",

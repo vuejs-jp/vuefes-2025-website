@@ -25,18 +25,30 @@
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "spell": "cspell '**' --cache",
+    "story:dev": "storybook dev -p 6006",
+    "story:build": "storybook build",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3",
     "@nuxt/content": "3.3.0",
     "@nuxt/eslint": "1.1.0",
     "@nuxtjs/i18n": "9.3.1",
+    "@nuxtjs/storybook": "^8.3.3",
+    "@storybook-vue/nuxt": "^8.3.3",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/test": "8.4.7",
+    "@storybook/vue3": "8.4.7",
     "cspell": "^8.17.5",
     "eslint": "^9.0.0",
+    "eslint-plugin-storybook": "^0.11.4",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.29.1",
     "nuxt": "^3.15.4",
     "prettier": "4.0.0-alpha.11",
+    "storybook": "8.4.7",
     "textlint": "^14.4.2",
     "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-rule-preset-vuejs-jp": "github:vuejs-jp/textlint-rule-preset-vuejs-jp",
@@ -44,5 +56,10 @@
     "vue": "latest",
     "vue-router": "latest",
     "vue-tsc": "^2.2.8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
