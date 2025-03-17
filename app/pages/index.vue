@@ -14,8 +14,13 @@ const { locale, t } = useI18n();
 
 const bp = useBreakpoint();
 
-const { data: message } = useAsyncData(locale.value, () =>
+const { data: message } = useAsyncData(`message-${locale.value}`, () =>
   queryCollection("i18n").path(`/${locale.value}/message`).first(),
+);
+
+const { data: sponsorWanted } = useAsyncData(
+  `sponsor-wanted-${locale.value}`,
+  () => queryCollection("i18n").path(`/${locale.value}/sponsor-wanted`).first(),
 );
 </script>
 
@@ -29,14 +34,38 @@ const { data: message } = useAsyncData(locale.value, () =>
       <img
         :src="
           bp === 'pc'
-            ? '/images/message-cover-pc.svg'
-            : '/images/message-cover-sp.svg'
+            ? '/images/top/cover/message-pc.svg'
+            : '/images/top/cover/message-sp.svg'
         "
         :alt="t('messageCoverImageAlt')"
       />
       <div class="message-content">
         <Heading>{{ t("message") }}</Heading>
         <ContentRenderer v-if="message" :value="message" />
+      </div>
+    </section>
+
+    <section class="sponsor-wanted">
+      <img
+        :src="
+          bp === 'pc'
+            ? '/images/top/cover/sponsor-wanted-pc.svg'
+            : '/images/top/cover/sponsor-wanted-sp.svg'
+        "
+        :alt="t('sponsorWantedCoverImageAlt')"
+      />
+      <div class="sponsor-wanted-content">
+        <Heading>{{ t("sponsorWanted") }}</Heading>
+        <ContentRenderer v-if="sponsorWanted" :value="sponsorWanted" />
+        <Button
+          class="sponsor-apply-button"
+          @click="
+            () => {
+              // TODO: link to form
+            }
+          "
+          >{{ t("sponsorApplyButton") }}</Button
+        >
       </div>
     </section>
   </div>
@@ -68,13 +97,19 @@ const { data: message } = useAsyncData(locale.value, () =>
     margin: 0.5rem;
   }
 
-  .message {
+  .message,
+  .sponsor-wanted {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-m);
     background-color: var(--color-white);
+
+    margin-bottom: 1.5rem;
+    @media (--mobile) {
+      margin-bottom: 0.5rem;
+    }
 
     img {
       border-radius: var(--radius-m) var(--radius-m) 0 0;
@@ -86,11 +121,23 @@ const { data: message } = useAsyncData(locale.value, () =>
       }
     }
 
-    .message-content {
-      padding: 3.5rem;
+    .message-content,
+    .sponsor-wanted-content {
+      padding: 3rem 3.5rem;
       @media (--mobile) {
         padding: 0 1.5rem;
         margin: 1.5rem 0;
+      }
+    }
+
+    .sponsor-wanted-content {
+      .sponsor-apply-button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        @media (--mobile) {
+          margin-top: 1rem;
+        }
       }
     }
   }
