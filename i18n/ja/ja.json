@@ -10,5 +10,15 @@
   "messageCoverImageAlt": "Vue Fes Japan 2025。VueをイメージしたVのシルエットと、日本の日の丸をイメージした丸のシルエットが横に並んでいる。色はVue.jsのロゴに使われている2色の色から作られた深い抹茶のような色。ロゴの右には同じ抹茶色でVue Fes Japan 2025と描かれている。",
   "sponsorWanted": "スポンサー募集",
   "sponsorWantedCoverImageAlt": "Sponsor Wantedのカバー画像",
-  "sponsorApplyButton": "スポンサー応募はこちら"
+  "sponsorApplyButton": "スポンサー応募はこちら",
+  "snsIntroduction": "最新情報は公式SNSをご覧ください",
+  "snsIconImageAlt": {
+    "x": "X(旧Twitter)アイコン",
+    "youtube": "YouTubeアイコン",
+    "github": "GitHubアイコン",
+    "note": "noteアイコン"
+  },
+  "privacyPolicy": "プライバシーポリシー",
+  "coc": "行動規範",
+  "transactions": "特定商取引法に基づく表示"
 }

@@ -6,7 +6,13 @@ import {
   useBreakpoint,
   useI18n,
 } from "#imports";
-import { ContentRenderer, Heading, Header, MainVisual } from "#components";
+import {
+  ContentRenderer,
+  Footer,
+  Heading,
+  Header,
+  MainVisual,
+} from "#components";
 
 defineRouteRules({ prerender: true });
 
@@ -68,6 +74,10 @@ const { data: sponsorWanted } = useAsyncData(
         >
       </div>
     </section>
+
+    <h2 class="sns-introduction-heading">{{ t("snsIntroduction") }}</h2>
+
+    <Footer />
   </div>
 
   <MainVisual />
@@ -140,6 +150,12 @@ const { data: sponsorWanted } = useAsyncData(
         }
       }
     }
+  }
+
+  .sns-introduction-heading {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    padding: 0 0.5rem;
   }
 }
 </style>

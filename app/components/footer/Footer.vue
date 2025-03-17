@@ -1,24 +1,34 @@
 <script setup lang="ts">
-import { useLocalePath } from "#imports";
+import { useI18n, useLocalePath } from "#imports";
 import { Button } from "#components";
 
 const localePath = useLocalePath();
+const { t } = useI18n();
 </script>
 
 <template>
   <footer>
     <div class="sns-container">
-      <Button icon>
-        <img src="~/assets/icons/ic_x.svg" alt="x (formally Twitter) icon" />
+      <Button icon link="https://x.com/vuefes">
+        <img src="/images/icons/ic_x.svg" :alt="t('snsIconImageAlt.x')" />
       </Button>
-      <Button icon>
-        <img src="~/assets/icons/ic_youtube.svg" alt="YouTube icon" />
+      <Button
+        icon
+        link="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA"
+      >
+        <img
+          src="/images/icons/ic_youtube.svg"
+          :alt="t('snsIconImageAlt.youtube')"
+        />
       </Button>
-      <Button icon>
-        <img src="~/assets/icons/ic_github.svg" alt="GitHub icon" />
+      <Button icon link="https://github.com/vuejs-jp">
+        <img
+          src="/images/icons/ic_github.svg"
+          :alt="t('snsIconImageAlt.github')"
+        />
       </Button>
-      <Button icon>
-        <img src="~/assets/icons/ic_note.svg" alt="note icon" />
+      <Button icon link="https://note.com/vuejs_jp/m/mb35849fee631">
+        <img src="/images/icons/ic_note.svg" :alt="t('snsIconImageAlt.note')" />
       </Button>
     </div>
 
@@ -69,17 +79,19 @@ const localePath = useLocalePath();
             <NuxtLink to="#">関連イベント</NuxtLink>
           </li> -->
           <li>
-            <NuxtLink :to="localePath('/privacy')"
-              >プライバシーポリシー</NuxtLink
-            >
+            <NuxtLink :to="localePath('/privacy')">{{
+              t("privacyPolicy")
+            }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/code-of-conduct')">行動規範</NuxtLink>
+            <NuxtLink :to="localePath('/code-of-conduct')">{{
+              t("coc")
+            }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/tokusho')"
-              >特定商取引法に基づく表記</NuxtLink
-            >
+            <NuxtLink :to="localePath('/tokusho')">{{
+              t("transactions")
+            }}</NuxtLink>
           </li>
         </ul>
       </div>

@@ -10,6 +10,7 @@ const {
   disabled?: boolean;
   outlined?: boolean;
   icon?: boolean;
+  link?: string;
 }>();
 
 const emit = defineEmits<{
@@ -20,7 +21,23 @@ const langClass = useLangClass();
 </script>
 
 <template>
+  <NuxtLink
+    v-if="link"
+    :to="link"
+    :class="[
+      langClass,
+      {
+        'button-outlined': outlined,
+        'button-icon': icon,
+      },
+    ]"
+    class="button"
+    external
+    target="_blank"
+    ><slot
+  /></NuxtLink>
   <button
+    v-else
     :type
     :class="[
       langClass,
@@ -39,7 +56,8 @@ const langClass = useLangClass();
 <style scoped>
 @import "~/assets/styles/custom-media-query.css";
 
-button {
+button,
+a {
   padding: 1rem 2.5rem;
   border-radius: 6.25rem;
   background-color: var(--color-primary);
