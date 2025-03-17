@@ -11,7 +11,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
       </div>
       <div class="site-title site-title-ja">
         <div>ビューフェス</div>
-        <div>ジャパン 2025</div>
+        <div>ジャパン2025</div>
       </div>
     </div>
 
@@ -44,13 +44,13 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  width: 100%;
   box-sizing: border-box;
-
   padding: 24px;
+
   @media (--mobile) {
-    padding: 12px;
+    padding: 16px;
   }
 
   .main-visual-head {
@@ -58,11 +58,17 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     display: flex;
     justify-content: space-between;
 
+    @media (--mobile) {
+      padding: 2px 4px;
+    }
+
     .site-title {
       * {
         font-family: ClashDisplay-SemiBold, IBMPlexSansJP-SemiBold;
-        font-size: 3rem;
-        line-height: 1.2;
+        line-height: inherit;
+        font-size: inherit;
+        font-feature-settings: "palt";
+
         @media (--mobile) {
           font-size: 1.5rem;
         }
@@ -70,11 +76,26 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     }
 
     .site-title-en {
+      font-size: 3rem;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
       text-align: left;
+
+      @media (--mobile) {
+        letter-spacing: -0.01em;
+      }
     }
 
     .site-title-ja {
+      font-size: 2.5rem;
+      line-height: 1.1;
       text-align: right;
+
+      @media (--mobile) {
+        * {
+          font-size: 1.25rem;
+        }
+      }
     }
   }
 
@@ -85,39 +106,52 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     justify-content: space-between;
     align-items: center;
 
-    .lang-en {
-      text-align: left;
-    }
-
-    .main-visual-graphic {
-      width: 50%;
-      max-width: 600px;
-    }
-
-    .lang-ja {
-      text-align: right;
-    }
-
     @media (--mobile) {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto 1fr;
+      grid-template-rows: 309fr auto 271fr;
       justify-content: center;
+    }
 
-      .lang-en {
+    .lang-en {
+      flex-basis: 25%;
+      flex-shrink: 0;
+      font-family: JetBrainsMono-Regular;
+      font-size: 1.25rem;
+      text-align: left;
+
+      @media (--mobile) {
         grid-row: 1;
         text-align: center;
+        padding-top: 20px;
+        font-size: 0.875rem;
       }
+    }
 
-      .main-visual-graphic {
+    .main-visual-graphic {
+      flex-basis: 50%;
+      flex-shrink: 1;
+      max-width: 640px;
+      min-width: 1px;
+
+      @media (--mobile) {
         grid-row: 2;
-        width: 66%;
+        width: 72%;
         margin: 0 auto;
       }
+    }
 
-      .lang-ja {
+    .lang-ja {
+      flex-basis: 25%;
+      flex-shrink: 0;
+      font-family: JetBrainsMono-Regular;
+      font-size: 1.25rem;
+      text-align: right;
+
+      @media (--mobile) {
         grid-row: 3;
         text-align: center;
+        font-size: 0.875rem;
       }
     }
   }
@@ -126,14 +160,39 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+
+    @media (--mobile) {
+      align-items: center;
+    }
 
     .lang-en {
-      text-align: left;
+      * {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+        @media (--mobile) {
+          max-width: 176px;
+          font-size: 1rem;
+        }
+      }
     }
 
     .lang-ja {
-      text-align: right;
+      * {
+        font-family: IBMPlexSansJP-Medium;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-align: right;
+
+        @media (--mobile) {
+          font-size: 0.875rem;
+        }
+      }
     }
   }
 }
