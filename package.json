@@ -6,6 +6,9 @@
     "name": "ubugeeei",
     "email": "ubuge1122@gmail.com"
   },
+  "engines": {
+    "node": ">=23.0.0"
+  },
   "packageManager": "pnpm@10.6.3",
   "pnpm": {
     "onlyBuiltDependencies": [

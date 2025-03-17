@@ -2,8 +2,10 @@
 
 ## Requirement
 
-- Node.js v23
-- pnpm@latest (auto resolve via package.json's `packageManager` field)
+- Node.js
+- pnpm
+
+For version information, please refer to package.json.
 
 ## Setup
 
