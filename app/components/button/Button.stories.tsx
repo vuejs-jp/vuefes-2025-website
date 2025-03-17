@@ -37,11 +37,20 @@ export const Default = Template.bind({});
 export const Outlined = Template.bind({});
 Outlined.args = { outlined: true };
 
-export const Icon: StoryFn<{ icon: boolean }> = (args = { icon: true }) => ({
+export const Icon: StoryFn<{ icon: boolean }> = () => ({
   name: "Button",
   setup: () => () => (
-    <Button {...args} onClick={() => console.log("clicked")}>
-      <span class="icon">🚀</span>
+    <Button
+      icon
+      onClick={() => console.log("clicked")}
+      style={{ width: "70px", height: "70px" }}
+    >
+      <img
+        src="~/assets/icons/ic_github.svg"
+        alt="GitHub icon"
+        width="48px"
+        height="48px"
+      />
     </Button>
   ),
 });
