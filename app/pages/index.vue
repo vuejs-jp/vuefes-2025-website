@@ -31,9 +31,11 @@ const { data: sponsorWanted } = useAsyncData(
 </script>
 
 <template>
-  <MainVisual />
+  <MainVisual class="main-visual" />
 
   <div class="content">
+    <div style="height: 100vh" />
+
     <Header class="header" />
 
     <section class="message">
@@ -78,21 +80,28 @@ const { data: sponsorWanted } = useAsyncData(
     <h2 class="sns-introduction-heading">{{ t("snsIntroduction") }}</h2>
 
     <Footer />
-  </div>
 
-  <MainVisual />
+    <div style="height: 100vh" />
+  </div>
 </template>
 
 <style scoped>
 @import "~/assets/styles/custom-media-query.css";
 
+.main-visual {
+  position: fixed;
+  z-index: -1;
+}
+
 .content {
+  margin: 0 auto;
+  background-color: transparent;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  margin: 0 auto;
   max-width: 700px;
   @media (--mobile) {
     max-width: none;
