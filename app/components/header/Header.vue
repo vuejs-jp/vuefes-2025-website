@@ -12,7 +12,7 @@ watchEffect(async () => {
   <header>
     <img
       class="logo-image"
-      src="~/assets/images/logo-primary-base.svg"
+      src="/images/logo-primary-base.svg"
       :alt="$t('logo.alt')"
     />
 

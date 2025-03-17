@@ -5,13 +5,16 @@ defineSlots<{
 </script>
 
 <template>
-  <h1 v-bind="$attrs"><slot /></h1>
+  <h2 v-bind="$attrs"><slot /></h2>
   <hr />
 </template>
 
 <style scoped>
-h1::before {
-  content: "・";
+h2 {
+  margin: 0;
+  &::before {
+    content: "・";
+  }
 }
 
 hr {
@@ -19,6 +22,5 @@ hr {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  margin: 0.5em;
 }
 </style>

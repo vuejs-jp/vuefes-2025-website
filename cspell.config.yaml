@@ -8,14 +8,16 @@ words:
   - nuxi
   - nuxt
   - nuxtjs
-  - Otemachi
+  - otemachi
   - palt
+  - rolldown
   - textareas
   - textlint
   - tokusho
   - ubugeeei
   - vuefes
   - vuejs
+  - vuetify
   - webgl
 ignorePaths:
   - dist

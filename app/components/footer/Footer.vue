@@ -25,7 +25,7 @@ const localePath = useLocalePath();
     <div class="container">
       <img
         class="logo-image"
-        src="~/assets/images/logo-primary-sub.svg"
+        src="/images/logo-primary-sub.svg"
         :alt="$t('logo.alt')"
       />
 
