@@ -3,38 +3,42 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
 </script>
 
 <template>
-  <div class="main-visual">
-    <div class="main-visual-head">
-      <div class="site-title site-title-en">
-        <div>Vue Fes</div>
-        <div>Japan 2025</div>
-      </div>
-      <div class="site-title site-title-ja">
-        <div>ビューフェス</div>
-        <div>ジャパン2025</div>
-      </div>
-    </div>
+  <section class="main-visual">
+    <h1 class="main-visual-head">
+      <span class="site-title site-title-en" lang="en">
+        <span>Vue Fes</span>
+        <span>Japan 2025</span>
+      </span>
+      <span class="site-title site-title-ja" lang="ja">
+        <span>ビューフェス</span>
+        <span>ジャパン2025</span>
+      </span>
+    </h1>
 
     <div class="main-visual-body">
-      <div class="lang-en">OCTOBER 25, 2025</div>
+      <time datetime="2025-10-25" class="lang-en" lang="en"
+        >OCTOBER 25, 2025</time
+      >
       <!-- TODO: appearance -->
       <MainVisualGraphic appearance="svg" class="main-visual-graphic" />
-      <div class="lang-ja">2025年10月25日</div>
+      <time datetime="2025-10-25" class="lang-ja" lang="ja"
+        >2025年10月25日</time
+      >
     </div>
 
     <div class="main-visual-foot">
-      <div class="lang-en">
-        <div>Otemachi</div>
-        <div>Place Hall & Conference</div>
+      <div class="lang-en" lang="en">
+        <span>Otemachi</span>
+        <span>Place Hall & Conference</span>
       </div>
 
-      <div class="lang-ja">
-        <div>大手町</div>
-        <div>プレイス ホール &</div>
-        <div>カンファレンス</div>
+      <div class="lang-ja" lang="ja">
+        <span>大手町</span>
+        <span>プレイス ホール &</span>
+        <span>カンファレンス</span>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
@@ -63,6 +67,8 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     }
 
     .site-title {
+      display: flex;
+      flex-direction: column;
       * {
         font-family: ClashDisplay-SemiBold, IBMPlexSansJP-SemiBold;
         line-height: inherit;
@@ -172,6 +178,8 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
         line-height: 1.2;
         letter-spacing: -0.02em;
         text-align: left;
+        display: flex;
+        flex-direction: column;
 
         @media (--mobile) {
           max-width: 176px;
@@ -188,6 +196,8 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
         line-height: 1.2;
         letter-spacing: -0.02em;
         text-align: right;
+        display: flex;
+        flex-direction: column;
 
         @media (--mobile) {
           font-size: 0.875rem;
