@@ -16,23 +16,19 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     </h1>
 
     <div class="main-visual-body">
-      <time datetime="2025-10-25" class="lang-en" lang="en"
-        >OCTOBER 25, 2025</time
-      >
+      <time datetime="2025-10-25" lang="en">OCTOBER 25, 2025</time>
       <!-- TODO: appearance -->
       <MainVisualGraphic appearance="svg" class="main-visual-graphic" />
-      <time datetime="2025-10-25" class="lang-ja" lang="ja"
-        >2025年10月25日</time
-      >
+      <time datetime="2025-10-25" lang="ja">2025年10月25日</time>
     </div>
 
     <div class="main-visual-foot">
-      <div class="lang-en" lang="en">
+      <div lang="en">
         <span>Otemachi</span>
         <span>Place Hall & Conference</span>
       </div>
 
-      <div class="lang-ja" lang="ja">
+      <div lang="ja">
         <span>大手町</span>
         <span>プレイス ホール &</span>
         <span>カンファレンス</span>
@@ -119,7 +115,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
       justify-content: center;
     }
 
-    .lang-en {
+    [lang="en"] {
       flex-basis: 25%;
       flex-shrink: 0;
       font-family: JetBrainsMono-Regular;
@@ -147,7 +143,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
       }
     }
 
-    .lang-ja {
+    [lang="ja"] {
       flex-basis: 25%;
       flex-shrink: 0;
       font-family: JetBrainsMono-Regular;
@@ -172,7 +168,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
       align-items: center;
     }
 
-    .lang-en {
+    [lang="en"] {
       * {
         font-size: 1.5rem;
         line-height: 1.2;
@@ -188,7 +184,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
       }
     }
 
-    .lang-ja {
+    [lang="ja"] {
       * {
         font-family: IBMPlexSansJP-Medium;
         font-size: 1.5rem;

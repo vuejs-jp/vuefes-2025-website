@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { useLangClass } from "#imports";
+import { useI18n } from "#imports";
 
 const {
   type = "button",
   outlined = false,
   icon = false,
+  link: to,
 } = defineProps<{
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
@@ -17,15 +18,15 @@ const emit = defineEmits<{
   click: [];
 }>();
 
-const langClass = useLangClass();
+const { locale: lang } = useI18n();
 </script>
 
 <template>
   <NuxtLink
     v-if="link"
-    :to="link"
+    :to
+    :lang
     :class="[
-      langClass,
       {
         'button-outlined': outlined,
         'button-icon': icon,
@@ -39,8 +40,8 @@ const langClass = useLangClass();
   <button
     v-else
     :type
+    :lang
     :class="[
-      langClass,
       {
         'button-outlined': outlined,
         'button-icon': icon,
@@ -74,11 +75,11 @@ a {
     line-height: 28px;
   }
 
-  &.lang-ja {
+  &[lang="ja"] {
     font-family: IBMPlexSansJP-Bold;
   }
 
-  &.lang-en {
+  &[lang="en"] {
     font-family: JetBrainsMono-Regular;
   }
 

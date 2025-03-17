@@ -118,7 +118,7 @@ const Typography = () => (
     </div>
 
     <h3>JA</h3>
-    <div class="lang-ja" style={langsStyle}>
+    <div lang="ja" style={langsStyle}>
       <h3>Heading ja</h3>
       <h1>H1</h1>
       <h2>H2</h2>
@@ -142,7 +142,7 @@ const Typography = () => (
     </div>
 
     <h3>EN</h3>
-    <div class="lang-en" style={langsStyle}>
+    <div lang="en" style={langsStyle}>
       <h3>Heading ja</h3>
       <h1>H1</h1>
       <h2>H2</h2>

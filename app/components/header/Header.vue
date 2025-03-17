@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { useI18n, watchEffect } from "#imports";
+import { onMounted, useI18n, watch } from "#imports";
 
 const { locale, setLocale } = useI18n();
 
-watchEffect(async () => {
-  await setLocale(locale.value as "en" | "ja");
-});
+function handleLocaleChange(newLocale: typeof locale.value) {
+  setLocale(newLocale);
+  document.documentElement.lang = newLocale;
+}
+
+watch(locale, (v) => handleLocaleChange(v));
+onMounted(() => handleLocaleChange(locale.value));
 </script>
 
 <template>

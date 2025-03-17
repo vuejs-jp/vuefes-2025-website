@@ -150,7 +150,7 @@ html {
 }
 
 :root,
-.lang-ja {
+[lang="ja"] {
   * {
     font-family: IBMPlexSansJP-Regular;
   }
@@ -162,7 +162,7 @@ html {
   }
 }
 
-.lang-en {
+[lang="en"] {
   * {
     font-family: JetBrainsMono-Regular;
   }
