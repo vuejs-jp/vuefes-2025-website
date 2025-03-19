@@ -18,7 +18,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
     <div class="main-visual-body">
       <time datetime="2025-10-25" lang="en">OCTOBER 25, 2025</time>
       <!-- TODO: appearance -->
-      <MainVisualGraphic appearance="svg" class="main-visual-graphic" />
+      <MainVisualGraphic appearance="png" class="main-visual-graphic" />
       <time datetime="2025-10-25" lang="ja">2025年10月25日</time>
     </div>
 

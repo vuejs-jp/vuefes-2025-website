@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { appearance = "webgl", animation: _animation = true } = defineProps<{
-  appearance?: "webgl" | "svg";
+  appearance?: "webgl" | "png";
 
   /**
    * only used when `appearance` is `webgl`
@@ -13,7 +13,7 @@ const { appearance = "webgl", animation: _animation = true } = defineProps<{
   <template v-if="appearance === 'webgl'">
     <!-- TODO: -->
     <img
-      src="/images/main-visual.svg"
+      src="/images/main-visual.png"
       :alt="
         // TODO:
         $t('mainVisual.webglAlt')
@@ -21,7 +21,7 @@ const { appearance = "webgl", animation: _animation = true } = defineProps<{
     />
   </template>
 
-  <template v-else-if="appearance === 'svg'">
-    <img src="/images/main-visual.svg" :alt="$t('mainVisual.imageAlt')" />
+  <template v-else-if="appearance === 'png'">
+    <img src="/images/main-visual.png" :alt="$t('mainVisual.imageAlt')" />
   </template>
 </template>

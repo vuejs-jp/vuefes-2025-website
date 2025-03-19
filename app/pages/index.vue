@@ -45,8 +45,8 @@ const { data: sponsorWanted } = useAsyncData(
       <img
         :src="
           bp === 'pc'
-            ? '/images/top/cover/message-pc.svg'
-            : '/images/top/cover/message-sp.svg'
+            ? '/images/top/cover/message-pc.png'
+            : '/images/top/cover/message-sp.png'
         "
         :alt="t('messageCoverImageAlt')"
       />
