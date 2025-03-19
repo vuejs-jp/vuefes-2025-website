@@ -15,9 +15,11 @@ import {
   MainVisual,
 } from "#components";
 
+import type { MessageSchema } from "~~/i18n/message-schema";
+
 defineRouteRules({ prerender: true });
 
-const { locale, t } = useI18n();
+const { locale, t } = useI18n<{ message: MessageSchema }>();
 
 const bp = useBreakpoint();
 

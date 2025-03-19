@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { useI18n, useLocalePath } from "#imports";
 import { Button } from "#components";
+import type { MessageSchema } from "~~/i18n/message-schema";
 
 const localePath = useLocalePath();
-const { t } = useI18n();
+const { t } = useI18n<{ message: MessageSchema }>();
 </script>
 
 <template>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { onMounted, useI18n, watch } from "#imports";
+import type { MessageSchema } from "~~/i18n/message-schema";
 
-const { locale, setLocale } = useI18n();
+const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
 
 function handleLocaleChange(newLocale: typeof locale.value) {
   setLocale(newLocale);
