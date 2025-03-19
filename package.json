@@ -64,5 +64,8 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "dependencies": {
+    "@nuxtjs/seo": "^3.0.1"
   }
 }

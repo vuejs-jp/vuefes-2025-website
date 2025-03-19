@@ -1,4 +1,8 @@
 {
+  "nuxtSiteConfig": {
+    "name": "Vue Fes Japan 2025",
+    "description": "description [english]"
+  },
   "mainVisual": {
     "imageAlt": "The main visual of Vue Fes Japan 2025. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors are deep matcha-like shades derived from the two colors used in the Vue.js logo, and the circle features a traditional Japanese gold marbling pattern.",
     "webglAlt": "TODO"
