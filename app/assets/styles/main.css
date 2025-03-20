@@ -49,7 +49,7 @@
 /* TODO: 仮 */
 html {
   background-color: var(--color-primary-sub);
-  color: var(--color-primary-base);
+  color: var(--color-text-default);
 }
 
 /** 

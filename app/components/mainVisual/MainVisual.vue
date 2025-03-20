@@ -48,6 +48,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
   width: 100%;
   box-sizing: border-box;
   padding: 24px;
+  color: var(--color-primary-base);
 
   @media (--mobile) {
     padding: 16px;
