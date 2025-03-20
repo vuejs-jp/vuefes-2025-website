@@ -10,25 +10,26 @@ const { t } = useI18n<{ message: MessageSchema }>();
 <template>
   <footer>
     <div class="sns-container">
-      <VFButton icon link="https://x.com/vuefes">
+      <VFButton icon link="https://x.com/vuefes" external>
         <img src="/images/icons/ic_x.svg" :alt="t('snsIconImageAlt.x')" />
       </VFButton>
       <VFButton
         icon
         link="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA"
+        external
       >
         <img
           src="/images/icons/ic_youtube.svg"
           :alt="t('snsIconImageAlt.youtube')"
         />
       </VFButton>
-      <VFButton icon link="https://github.com/vuejs-jp">
+      <VFButton icon link="https://github.com/vuejs-jp" external>
         <img
           src="/images/icons/ic_github.svg"
           :alt="t('snsIconImageAlt.github')"
         />
       </VFButton>
-      <VFButton icon link="https://note.com/vuejs_jp/m/mb35849fee631">
+      <VFButton icon link="https://note.com/vuejs_jp/m/mb35849fee631" external>
         <img src="/images/icons/ic_note.svg" :alt="t('snsIconImageAlt.note')" />
       </VFButton>
     </div>
@@ -80,7 +81,7 @@ const { t } = useI18n<{ message: MessageSchema }>();
             <NuxtLink to="#">関連イベント</NuxtLink>
           </li> -->
           <li>
-            <NuxtLink :to="localePath('/privacy')">{{
+            <NuxtLink :to="localePath('/privacy-policy')">{{
               t("privacyPolicy")
             }}</NuxtLink>
           </li>

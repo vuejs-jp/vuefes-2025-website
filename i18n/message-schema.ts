@@ -35,4 +35,5 @@ export type MessageSchema = {
   privacyPolicy: string;
   coc: string;
   transactions: string;
+  backTop: string;
 };

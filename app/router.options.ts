@@ -1,17 +1,23 @@
 import { useNuxtApp } from "#app";
 import type { RouterConfig } from "@nuxt/schema";
 
+function stripLocalePath(path: string) {
+  return path.startsWith(`/en`) ? path.slice(3) : path;
+}
+
 export default <RouterConfig>{
   async scrollBehavior(to, from, savedPosition) {
     const nuxtApp = useNuxtApp();
 
-    // make sure the route has changed.
-    if (nuxtApp.$i18n && to.name !== from.name) {
-      // `$i18n` is injected in the `setup` of the nuxtjs/i18n module.
-      // `scrollBehavior` is guarded against being called even when it is not completed
+    if (
+      nuxtApp.$i18n &&
+      stripLocalePath(to.path?.toString() ?? "") ===
+        stripLocalePath(from.path?.toString() ?? "")
+    ) {
       await nuxtApp.$i18n.waitForPendingLocaleChange();
+      return savedPosition;
     }
 
-    return savedPosition;
+    return { top: 0 };
   },
 };

@@ -7,12 +7,29 @@ const {
   outlined = false,
   icon = false,
   link: to,
+  external = false,
 } = defineProps<{
+  /** @default "button" */
   type?: "button" | "submit" | "reset";
+
+  /** @default false */
   disabled?: boolean;
+
+  /** @default false */
   outlined?: boolean;
+
+  /** @default false */
   icon?: boolean;
+
+  /** @default undefined */
   link?: string;
+
+  /**
+   * only works when `link` is true
+   *
+   * @default false
+   */
+  external?: true;
 }>();
 
 const emit = defineEmits<{
@@ -33,9 +50,9 @@ const { locale: lang } = useI18n<{ message: MessageSchema }>();
         'button-icon': icon,
       },
     ]"
+    :external
+    :target="external ? '_blank' : undefined"
     class="button"
-    external
-    target="_blank"
     ><slot
   /></NuxtLink>
   <button
@@ -93,6 +110,7 @@ a {
     background-color: transparent;
     border: 1px solid var(--color-place-holder);
     color: var(--color-text-default);
+    text-decoration: none;
     &:hover,
     &:active {
       border: 1px solid var(--color-primary);
@@ -119,5 +137,9 @@ a {
       padding: 0;
     }
   }
+}
+
+a {
+  display: inline-block;
 }
 </style>

@@ -43,4 +43,5 @@ export default {
   privacyPolicy: "プライバシーポリシー",
   coc: "行動規範",
   transactions: "特定商取引法に基づく表示",
+  backTop: "トップに戻る",
 } satisfies MessageSchema;

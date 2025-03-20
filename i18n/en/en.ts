@@ -45,4 +45,5 @@ export default {
   coc: "Code of Conduct",
   transactions:
     "Notation based on the Act on Specified Commercial Transactions",
+  backTop: "Back to Top",
 } satisfies MessageSchema;
