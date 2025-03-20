@@ -50,6 +50,12 @@
 html {
   background-color: var(--color-primary-sub);
   color: var(--color-text-default);
+
+  h1,
+  h2,
+  h3 {
+    color: var(--color-primary);
+  }
 }
 
 /** 
