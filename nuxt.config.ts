@@ -83,4 +83,10 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  runtimeConfig: {
+    public: {
+      contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
+    },
+  },
 });

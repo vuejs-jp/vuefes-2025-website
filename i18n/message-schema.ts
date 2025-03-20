@@ -36,4 +36,9 @@ export type MessageSchema = {
   coc: string;
   transactions: string;
   backTop: string;
+
+  validation: {
+    required: string;
+    email: string;
+  };
 };

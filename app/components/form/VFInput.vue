@@ -12,15 +12,24 @@ defineProps<{
 }>();
 
 const id = useId();
+const descriptionId = useId();
 const { locale: lang } = useI18n<{ message: MessageSchema }>();
 </script>
 
 <template>
   <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
   <label v-if="$attrs.label" :for="id" :lang>{{ $attrs.label }}</label>
-  <InputText v-bind="$attrs" :id="id" />
+  <InputText
+    v-bind="$attrs"
+    :id="id"
+    :aria-describedby="descriptionId"
+    :class="{
+      invalid: formState?.invalid,
+    }"
+  />
   <p
     v-if="formState"
+    :id="descriptionId"
     class="error-message text-caption"
     :aria-hidden="formState.valid"
   >
@@ -45,7 +54,14 @@ input {
 
   &:enabled:focus,
   &:enabled:hover {
-    border-color: var(--color-primaryÏ);
+    border-color: var(--color-primary);
+    &.invalid {
+      border-color: var(--color-error);
+    }
+  }
+
+  &.invalid {
+    border-color: var(--color-error);
   }
 }
 

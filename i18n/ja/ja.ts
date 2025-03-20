@@ -44,4 +44,9 @@ export default {
   coc: "行動規範",
   transactions: "特定商取引法に基づく表示",
   backTop: "トップに戻る",
+
+  validation: {
+    required: "{target}の入力は必須です。",
+    email: "メールアドレスが正しい形式ではありません。",
+  },
 } satisfies MessageSchema;

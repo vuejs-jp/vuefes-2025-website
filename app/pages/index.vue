@@ -8,6 +8,7 @@ import {
   useAsyncData,
   useBreakpoint,
   useI18n,
+  useRuntimeConfig,
 } from "#imports";
 
 import {
@@ -29,6 +30,8 @@ import type { MessageSchema } from "~~/i18n/message-schema";
 
 defineRouteRules({ prerender: true });
 
+const config = useRuntimeConfig();
+
 const { locale, t } = useI18n<{ message: MessageSchema }>();
 
 const bp = useBreakpoint();
@@ -44,22 +47,51 @@ const { data: sponsorWanted } = useAsyncData(
 
 const contactForm = (() => {
   const schema = z.object({
-    name: z.string().nonempty(),
-    email: z.string().email().nonempty(),
-    content: z.string().nonempty(),
+    name: z.string().nonempty(
+      t("validation.required", {
+        target: t("contactForm.formFields.name.label"),
+      }),
+    ),
+    email: z
+      .string()
+      .nonempty(
+        t("validation.required", {
+          target: t("contactForm.formFields.email.label"),
+        }),
+      )
+      .email(t("validation.email")),
+    content: z.string().nonempty(
+      t("validation.required", {
+        target: t("contactForm.formFields.content.label"),
+      }),
+    ),
   });
 
   type State = Partial<z.infer<typeof schema>>;
 
   const state = reactive<State>({
-    name: undefined,
-    email: undefined,
-    content: undefined,
+    name: "",
+    email: "",
+    content: "",
   });
 
-  function submit(event: FormSubmitEvent) {
-    console.log("🚀 ~ submit ~ event:", event);
-    // TODO:
+  async function submit(event: FormSubmitEvent) {
+    const formData = new FormData();
+    Object.entries(event.states).forEach(([name, { value }]) => {
+      formData.append(name, value);
+    });
+    try {
+      await fetch(config.public.contactFormEndpoint, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      event.reset();
+      // TODO: show success message
+    } catch (error) {
+      console.error(error);
+      // TODO: show error message
+    }
   }
 
   return { state, schema, submit };

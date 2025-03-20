@@ -12,17 +12,24 @@ defineProps<{
 }>();
 
 const id = useId();
+const descriptionId = useId();
 const { locale: lang } = useI18n<{ message: MessageSchema }>();
 </script>
 
 <template>
   <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
   <label v-if="$attrs.label" :for="id" :lang>{{ $attrs.label }}</label>
-  <Textarea v-bind="$attrs" :id="id" :class="{ 'has-form-state': formState }" />
+  <Textarea
+    v-bind="$attrs"
+    :id="id"
+    :aria-describedby="descriptionId"
+    :class="{ 'has-form-state': formState, invalid: formState?.invalid }"
+  />
   <p
     v-if="formState"
-    class="error-message text-caption"
+    :id="descriptionId"
     :aria-hidden="formState.valid"
+    class="error-message text-caption"
   >
     <span v-if="formState?.invalid">
       {{ formState.error.message }}
@@ -46,6 +53,10 @@ textarea {
   &:enabled:focus,
   &:enabled:hover {
     border-color: var(--color-primary);
+  }
+
+  &.invalid {
+    border-color: var(--color-error);
   }
 }
 

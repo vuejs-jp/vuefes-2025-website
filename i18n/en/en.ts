@@ -46,4 +46,9 @@ export default {
   transactions:
     "Notation based on the Act on Specified Commercial Transactions",
   backTop: "Back to Top",
+
+  validation: {
+    required: "The input of {target} is required.",
+    email: "The Email Address is not in the correct format.",
+  },
 } satisfies MessageSchema;
