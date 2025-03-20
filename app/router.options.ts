@@ -2,7 +2,7 @@ import { useNuxtApp } from "#app";
 import type { RouterConfig } from "@nuxt/schema";
 
 function stripLocalePath(path: string) {
-  return path.startsWith(`/en`) ? path.slice(3) : path;
+  return path === "/en" ? "/" : path.startsWith(`/en`) ? path.slice(3) : path;
 }
 
 export default <RouterConfig>{
