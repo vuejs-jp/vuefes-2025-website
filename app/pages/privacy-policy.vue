@@ -5,12 +5,18 @@ import {
   queryCollection,
   useAsyncData,
   useI18n,
+
+  // NOTE: import useHead to avoid `useHead is not defined` error
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
 } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
 defineRouteRules({ prerender: true });
 
 const { locale, t } = useI18n<{ message: MessageSchema }>();
+useSeoMeta({ title: t("privacyPolicy") });
 
 const { data: privacy } = useAsyncData(`privacy-${locale.value}`, () =>
   queryCollection("i18n").path(`/${locale.value}/privacy`).first(),

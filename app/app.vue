@@ -11,7 +11,7 @@ const { t } = useI18n<{ message: MessageSchema }>();
 
 useSeoMeta({
   ogImage: "/og-image.png",
-  titleTemplate: (s) => `${t("nuxtSiteConfig.name")}${s ? ` - ${s}` : ""}`,
+  titleTemplate: (s) => `${t("nuxtSiteConfig.name")}${s ? ` – ${s}` : ""}`,
 });
 </script>
 
