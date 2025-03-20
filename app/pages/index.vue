@@ -232,14 +232,6 @@ const contactForm = (() => {
         margin-bottom: 1rem;
       }
     }
-    /* :deep(input[name="name"]),
-      :deep(input[name="email"]),
-      :deep(textarea[name="content"]) {
-        margin-bottom: 1.5rem;
-        @media (--mobile) {
-          margin-bottom: 1rem;
-        }
-      } */
 
     button[type="submit"] {
       display: block;
