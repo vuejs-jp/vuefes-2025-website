@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n, useLocalePath } from "#imports";
-import { Button } from "#components";
+import { VFButton } from "#components";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
 const localePath = useLocalePath();
@@ -10,10 +10,10 @@ const { t } = useI18n<{ message: MessageSchema }>();
 <template>
   <footer>
     <div class="sns-container">
-      <Button icon link="https://x.com/vuefes">
+      <VFButton icon link="https://x.com/vuefes">
         <img src="/images/icons/ic_x.svg" :alt="t('snsIconImageAlt.x')" />
-      </Button>
-      <Button
+      </VFButton>
+      <VFButton
         icon
         link="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA"
       >
@@ -21,16 +21,16 @@ const { t } = useI18n<{ message: MessageSchema }>();
           src="/images/icons/ic_youtube.svg"
           :alt="t('snsIconImageAlt.youtube')"
         />
-      </Button>
-      <Button icon link="https://github.com/vuejs-jp">
+      </VFButton>
+      <VFButton icon link="https://github.com/vuejs-jp">
         <img
           src="/images/icons/ic_github.svg"
           :alt="t('snsIconImageAlt.github')"
         />
-      </Button>
-      <Button icon link="https://note.com/vuejs_jp/m/mb35849fee631">
+      </VFButton>
+      <VFButton icon link="https://note.com/vuejs_jp/m/mb35849fee631">
         <img src="/images/icons/ic_note.svg" :alt="t('snsIconImageAlt.note')" />
-      </Button>
+      </VFButton>
     </div>
 
     <div class="container">

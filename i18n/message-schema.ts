@@ -15,6 +15,16 @@ export type MessageSchema = {
   sponsorWanted: string;
   sponsorWantedCoverImageAlt: string;
   sponsorApplyButton: string;
+  contactForm: {
+    title: string;
+    description: string;
+    formFields: {
+      name: { label: string; placeholder: string };
+      email: { label: string; placeholder: string };
+      content: { label: string; placeholder: string };
+      submit: { label: string };
+    };
+  };
   snsIntroduction: string;
   snsIconImageAlt: {
     x: string;

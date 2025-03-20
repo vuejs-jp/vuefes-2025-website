@@ -7,6 +7,12 @@ export default defineNuxtConfig({
   experimental: {
     inlineRouteRules: true,
   },
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
 
   modules: [
     "@nuxtjs/seo",
@@ -14,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/i18n",
     "@nuxtjs/storybook",
+    "@primevue/nuxt-module",
   ],
 
   site: {

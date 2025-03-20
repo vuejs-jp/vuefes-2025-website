@@ -81,7 +81,7 @@ a {
   }
 
   &[lang="en"] {
-    font-family: JetBrainsMono-Regular;
+    font-family: JetBrainsMono-Bold;
   }
 
   &:hover,

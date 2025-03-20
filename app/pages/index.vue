@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { z } from "zod";
+
 import {
   defineRouteRules,
   queryCollection,
+  reactive,
   useAsyncData,
   useBreakpoint,
   useI18n,
@@ -9,11 +12,18 @@ import {
 
 import {
   ContentRenderer,
-  Footer,
-  Heading,
-  Header,
+  VFFooter,
+  VFHeading,
+  VFHeader,
   MainVisual,
 } from "#components";
+
+import {
+  type FormSubmitEvent,
+  VFForm,
+  VFInput,
+  VFTextarea,
+} from "~/components/form";
 
 import type { MessageSchema } from "~~/i18n/message-schema";
 
@@ -31,6 +41,29 @@ const { data: sponsorWanted } = useAsyncData(
   `sponsor-wanted-${locale.value}`,
   () => queryCollection("i18n").path(`/${locale.value}/sponsor-wanted`).first(),
 );
+
+const contactForm = (() => {
+  const schema = z.object({
+    name: z.string().nonempty(),
+    email: z.string().email().nonempty(),
+    content: z.string().nonempty(),
+  });
+
+  type State = Partial<z.infer<typeof schema>>;
+
+  const state = reactive<State>({
+    name: undefined,
+    email: undefined,
+    content: undefined,
+  });
+
+  function submit(event: FormSubmitEvent) {
+    console.log("🚀 ~ submit ~ event:", event);
+    // TODO:
+  }
+
+  return { state, schema, submit };
+})();
 </script>
 
 <template>
@@ -39,7 +72,7 @@ const { data: sponsorWanted } = useAsyncData(
   <div class="content">
     <div style="height: 100vh" />
 
-    <Header class="header" />
+    <VFHeader class="header" />
 
     <section class="message">
       <img
@@ -51,7 +84,7 @@ const { data: sponsorWanted } = useAsyncData(
         :alt="t('messageCoverImageAlt')"
       />
       <div class="message-content">
-        <Heading>{{ t("message") }}</Heading>
+        <VFHeading>{{ t("message") }}</VFHeading>
         <ContentRenderer v-if="message" :value="message" />
       </div>
     </section>
@@ -66,23 +99,66 @@ const { data: sponsorWanted } = useAsyncData(
         :alt="t('sponsorWantedCoverImageAlt')"
       />
       <div class="sponsor-wanted-content">
-        <Heading>{{ t("sponsorWanted") }}</Heading>
+        <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
         <ContentRenderer v-if="sponsorWanted" :value="sponsorWanted" />
-        <Button
+        <VFButton
           class="sponsor-apply-button"
           @click="
             () => {
               // TODO: link to form
             }
           "
-          >{{ t("sponsorApplyButton") }}</Button
+          >{{ t("sponsorApplyButton") }}</VFButton
         >
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-content">
+        <VFHeading>{{ t("contactForm.title") }}</VFHeading>
+        <p>{{ t("contactForm.description") }}</p>
+        <VFForm
+          :state="contactForm.state"
+          :schema="contactForm.schema"
+          @submit="contactForm.submit"
+        >
+          <template #default="$form">
+            <VFInput
+              name="name"
+              required
+              :label="t('contactForm.formFields.name.label')"
+              :placeholder="t('contactForm.formFields.name.placeholder')"
+              :form-state="$form.name"
+            />
+
+            <VFInput
+              name="email"
+              required
+              :label="t('contactForm.formFields.email.label')"
+              :placeholder="t('contactForm.formFields.email.placeholder')"
+              :form-state="$form.email"
+            />
+
+            <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
+            <VFTextarea
+              name="content"
+              required
+              :label="t('contactForm.formFields.content.label')"
+              :placeholder="t('contactForm.formFields.content.placeholder')"
+              :form-state="$form.content"
+            />
+
+            <VFButton type="submit">{{
+              t("contactForm.formFields.submit.label")
+            }}</VFButton>
+          </template>
+        </VFForm>
       </div>
     </section>
 
     <h2 class="sns-introduction-heading">{{ t("snsIntroduction") }}</h2>
 
-    <Footer />
+    <VFFooter />
 
     <div style="height: 100vh" />
   </div>
@@ -120,7 +196,8 @@ const { data: sponsorWanted } = useAsyncData(
   }
 
   .message,
-  .sponsor-wanted {
+  .sponsor-wanted,
+  .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,7 +221,8 @@ const { data: sponsorWanted } = useAsyncData(
     }
 
     .message-content,
-    .sponsor-wanted-content {
+    .sponsor-wanted-content,
+    .contact-content {
       padding: 3rem 3.5rem;
       @media (--mobile) {
         padding: 0 1.5rem;
@@ -154,6 +232,32 @@ const { data: sponsorWanted } = useAsyncData(
 
     .sponsor-wanted-content {
       .sponsor-apply-button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        @media (--mobile) {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .contact-content {
+      p {
+        margin-bottom: 1.5rem;
+        @media (--mobile) {
+          margin-bottom: 1rem;
+        }
+      }
+      /* :deep(input[name="name"]),
+      :deep(input[name="email"]),
+      :deep(textarea[name="content"]) {
+        margin-bottom: 1.5rem;
+        @media (--mobile) {
+          margin-bottom: 1rem;
+        }
+      } */
+
+      button[type="submit"] {
         display: block;
         margin: 0 auto;
         margin-top: 1.5rem;

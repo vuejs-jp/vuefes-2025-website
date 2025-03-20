@@ -19,6 +19,20 @@ export default {
   sponsorWanted: "Sponsorship Opportunities",
   sponsorWantedCoverImageAlt: "Sponsor Wanted cover image",
   sponsorApplyButton: "Apply for Sponsorship Here",
+  contactForm: {
+    title: "Contact Us",
+    description:
+      "Thank you for your interest in Vue Fes Japan. For any questions or inquiries regarding Vue Fes Japan, please use the form below. Typically, you will receive a response from our representative within 3 business days. If you do not receive a reply within 3 business days, please do not hesitate to contact us again.",
+    formFields: {
+      name: { label: "Name", placeholder: "Example: Taro Yamada" },
+      email: {
+        label: "Email Address",
+        placeholder: "Example: hello{'@'}vuefes.jp",
+      },
+      content: { label: "Contact Details", placeholder: "Example: Inquiry" },
+      submit: { label: "Send" },
+    },
+  },
   snsIntroduction:
     "Please check our official social media for the latest updates.",
   snsIconImageAlt: {

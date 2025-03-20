@@ -41,6 +41,9 @@
   --color-divider-light: #efefef;
   --color-place-holder: #bbbbbb;
   --color-white: #ffffff;
+
+  /* original (not IE3) */
+  --color-error: #ff0000;
 }
 
 /* TODO: 仮 */

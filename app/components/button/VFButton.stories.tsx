@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/vue3";
-import Button from "./Button.vue";
+import VFButton from "./VFButton.vue";
 
 export default {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/VFButton",
+  component: VFButton,
   argTypes: {
     type: {
       control: { type: "select" },
@@ -17,18 +17,18 @@ export default {
     },
     onClick: { action: "clicked" },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof VFButton>;
 
 const Template: StoryFn<{
   type: "button" | "submit" | "reset";
   outlined: boolean;
   icon: boolean;
 }> = (args) => ({
-  name: "Button",
+  name: "VFButton",
   setup: () => () => (
-    <Button {...args} onClick={() => console.log("clicked")}>
+    <VFButton {...args} onClick={() => console.log("clicked")}>
       ラベル
-    </Button>
+    </VFButton>
   ),
 });
 
@@ -38,9 +38,9 @@ export const Outlined = Template.bind({});
 Outlined.args = { outlined: true };
 
 export const Icon: StoryFn<{ icon: boolean }> = () => ({
-  name: "Button",
+  name: "VFButton",
   setup: () => () => (
-    <Button
+    <VFButton
       icon
       onClick={() => console.log("clicked")}
       style={{ width: "70px", height: "70px" }}
@@ -51,6 +51,6 @@ export const Icon: StoryFn<{ icon: boolean }> = () => ({
         width="48px"
         height="48px"
       />
-    </Button>
+    </VFButton>
   ),
 });

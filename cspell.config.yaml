@@ -3,6 +3,7 @@ version: "0.2"
 useGitIgnore: true
 words:
   - autodocs
+  - inputtext
   - kazupon
   - lightningcss
   - nuxi
@@ -10,6 +11,7 @@ words:
   - nuxtjs
   - otemachi
   - palt
+  - primevue
   - rolldown
   - textareas
   - textlint
