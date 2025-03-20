@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import MainVisualGraphic from "./MainVisualGraphic.vue";
+
+const { titleTag = "h1" } = defineProps<{
+  titleTag?: "h1" | "div";
+}>();
 </script>
 
 <template>
   <section class="main-visual">
-    <h1 class="main-visual-head">
+    <component :is="titleTag" class="main-visual-head">
       <span class="site-title site-title-en" lang="en">
         <span>Vue Fes</span>
         <span>Japan 2025</span>
@@ -13,7 +17,7 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
         <span>ビューフェス</span>
         <span>ジャパン2025</span>
       </span>
-    </h1>
+    </component>
 
     <div class="main-visual-body">
       <time datetime="2025-10-25" lang="en">OCTOBER 25, 2025</time>
@@ -49,12 +53,12 @@ import MainVisualGraphic from "./MainVisualGraphic.vue";
   box-sizing: border-box;
   padding: 24px;
   color: var(--color-primary-base);
-
   @media (--mobile) {
     padding: 16px;
   }
 
   .main-visual-head {
+    margin-top: 0;
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;

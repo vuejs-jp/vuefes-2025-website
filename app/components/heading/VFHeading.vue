@@ -1,16 +1,23 @@
 <script setup lang="ts">
+const { nth = 2 } = defineProps<{
+  /** @default 2 */
+  nth?: 1 | 2 | 3;
+}>();
+
 defineSlots<{
   default: () => unknown;
 }>();
 </script>
 
 <template>
-  <h2 v-bind="$attrs"><slot /></h2>
+  <component :is="`h${nth}`" v-bind="$attrs"><slot /></component>
   <hr />
 </template>
 
 <style scoped>
-h2 {
+h1,
+h2,
+h3 {
   margin: 0;
   &::before {
     content: "・";
