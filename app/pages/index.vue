@@ -70,21 +70,25 @@ const contactForm = (() => {
   });
 
   async function submit(event: FormSubmitEvent) {
-    const formData = new FormData();
-    Object.entries(event.states).forEach(([name, { value }]) => {
-      formData.append(name, value);
-    });
-    try {
-      await fetch(config.public.contactFormEndpoint, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+    if (event.valid) {
+      const formData = new FormData();
+      Object.entries(event.states).forEach(([name, { value }]) => {
+        formData.append(name, value);
       });
-      event.reset();
-      // TODO: show success message
-    } catch (error) {
-      console.error(error);
-      // TODO: show error message
+      try {
+        await fetch(config.public.contactFormEndpoint, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+        event.reset();
+        // TODO: show success message
+        window.alert("TODO: 成功時のメッセージを表示");
+      } catch (error) {
+        console.error(error);
+        // TODO: show error message
+        window.alert("TODO: エラーメッセージを表示");
+      }
     }
   }
 
