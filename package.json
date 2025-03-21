@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3",
-    "@kgierke/nuxt-basic-auth": "1.7.0",
     "@nuxt/content": "3.3.0",
     "@nuxt/eslint": "1.1.0",
     "@nuxtjs/i18n": "9.3.1",

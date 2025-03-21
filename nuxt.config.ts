@@ -1,27 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
-const defineBasicAuth = () => {
-  const username = process.env.BASIC_AUTH_USERNAME;
-  const password = process.env.BASIC_AUTH_PASSWORD;
-
-  if (typeof username === "string" && typeof password === "string") {
-    return {
-      enabled: true,
-      users: [
-        {
-          username,
-          password,
-        },
-      ],
-    };
-  }
-
-  return {
-    enabled: false,
-    users: undefined,
-  };
-};
-
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -44,7 +21,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/storybook",
     "@primevue/nuxt-module",
-    "@kgierke/nuxt-basic-auth",
   ],
 
   site: {
@@ -107,9 +83,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  // https://nuxt.com/modules/nuxt-basic-auth
-  basicAuth: defineBasicAuth(),
 
   runtimeConfig: {
     public: {

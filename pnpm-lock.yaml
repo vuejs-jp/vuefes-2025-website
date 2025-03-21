@@ -11,9 +11,6 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^3
         version: 3.2.6(react@18.3.1)(storybook@8.4.7(prettier@4.0.0-alpha.11))
-      '@kgierke/nuxt-basic-auth':
-        specifier: 1.7.0
-        version: 1.7.0(magicast@0.3.5)
       '@nuxt/content':
         specifier: 3.3.0
         version: 3.3.0(magicast@0.3.5)(typescript@5.7.3)
@@ -986,9 +983,6 @@ packages:
 
   '@keyv/serialize@1.0.3':
     resolution: {integrity: sha512-qnEovoOp5Np2JDGonIDL6Ayihw0RhnRh6vxPuHo4RDn1UOzwEo4AeIfpL6UGIrsceWrCMiVPgwRjbHu4vYFc3g==}
-
-  '@kgierke/nuxt-basic-auth@1.7.0':
-    resolution: {integrity: sha512-OT1XcUTDVgUd2d5eZbsvaLPrX17wKo9YkoCB0ViTQNDokRzgeOpKKG1v8qFep1RJAh23WMlP4fo/rRsyBM96Yg==}
 
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
@@ -7930,13 +7924,6 @@ snapshots:
   '@keyv/serialize@1.0.3':
     dependencies:
       buffer: 6.0.3
-
-  '@kgierke/nuxt-basic-auth@1.7.0(magicast@0.3.5)':
-    dependencies:
-      '@nuxt/kit': 3.16.0(magicast@0.3.5)
-      defu: 6.1.4
-    transitivePeerDependencies:
-      - magicast
 
   '@kwsites/file-exists@1.1.1':
     dependencies:

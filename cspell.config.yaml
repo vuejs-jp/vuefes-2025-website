@@ -2,9 +2,14 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: "0.2"
 useGitIgnore: true
 words:
+  - allscale
+  - allspeed
   - autodocs
+  - fract
   - inputtext
   - kazupon
+  - kgierke
+  - lacunarity
   - lightningcss
   - nuxi
   - nuxt
@@ -13,6 +18,7 @@ words:
   - palt
   - primevue
   - rolldown
+  - Sumi
   - textareas
   - textlint
   - tokusho
@@ -21,13 +27,6 @@ words:
   - vuejs
   - vuetify
   - webgl
-  - kgierke
-  - fract
-  - lacunarity
-  - sumi
-  - Sumi
-  - allscale
-  - allspeed
 ignorePaths:
   - dist
   - node_modules
