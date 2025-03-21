@@ -101,7 +101,7 @@ const { t } = useI18n<{ message: MessageSchema }>();
       </div>
 
       <p class="text-caption">
-        © 2018-2024 Vue.js Japan Users Group some rights reserved. <br />
+        © 2018-2025 Vue.js Japan Users Group some rights reserved. <br />
         Vue.js artworks by Evan You is licensed under a Creative Commons
         Attribution 4.0 International License.
       </p>
