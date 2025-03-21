@@ -3,7 +3,8 @@ import type { MessageSchema } from "../message-schema";
 export default {
   nuxtSiteConfig: {
     name: "Vue Fes Japan 2025",
-    description: "description [english]",
+    description:
+      "This is one of the largest Vue.js conferences in Japan, taking place on Saturday, October 25, 2025. In addition to sessions by renowned speakers from Japan and abroad, we are planning various events such as lightning talks, hands-on workshops, and merchandise sales. Join us to enjoy and celebrate Vue.js together!",
   },
   mainVisual: {
     imageAlt:
