@@ -21,6 +21,7 @@ words:
   - vuejs
   - vuetify
   - webgl
+  - kgierke
 ignorePaths:
   - dist
   - node_modules
