@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import MainVisualWebGL from "./MainVisualWebGL.vue";
 
 const { appearance = "webgl", animation: _animation = true } = defineProps<{

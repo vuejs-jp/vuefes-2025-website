@@ -15,7 +15,7 @@ onMounted(() => {
       window.WebGLRenderingContext &&
       (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
     );
-  } catch (e) {
+  } catch (_e) {
     isWebGLSupported.value = false;
   }
 });
