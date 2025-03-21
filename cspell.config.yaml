@@ -22,6 +22,12 @@ words:
   - vuetify
   - webgl
   - kgierke
+  - fract
+  - lacunarity
+  - sumi
+  - Sumi
+  - allscale
+  - allspeed
 ignorePaths:
   - dist
   - node_modules
