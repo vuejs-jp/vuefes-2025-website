@@ -69,7 +69,7 @@ onMounted(() => {
   width: 100%;
   box-sizing: border-box;
   padding: 24px;
-  color: var(--color-primary-base);
+  color: var(--color-base);
   @media (--mobile) {
     padding: 16px;
   }

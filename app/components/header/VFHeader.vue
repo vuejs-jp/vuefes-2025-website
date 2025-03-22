@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, useI18n, watch } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
+import Logo from "~icons/logo/logo";
 
 const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
 
@@ -15,11 +16,7 @@ onMounted(() => handleLocaleChange(locale.value));
 
 <template>
   <header>
-    <img
-      class="logo-image"
-      src="/images/logo-primary-base.svg"
-      :alt="$t('logo.alt')"
-    />
+    <Logo class="logo-image" />
 
     <div class="lang-switcher">
       <button
@@ -60,6 +57,11 @@ header {
     @media (--mobile) {
       height: 2rem;
     }
+
+    :deep(svg),
+    :deep(path) {
+      fill: var(--color-base) !important;
+    }
   }
 
   .lang-switcher {
@@ -73,7 +75,7 @@ header {
       font-size: 1.125rem;
 
       &.active {
-        color: var(--color-primary);
+        color: var(--color-base);
         text-decoration: underline;
       }
     }

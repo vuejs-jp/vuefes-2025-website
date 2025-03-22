@@ -3,6 +3,13 @@ import { useI18n, useLocalePath } from "#imports";
 import { VFButton } from "#components";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
+import XIcon from "~icons/sns-icons/ic_x";
+import YoutubeIcon from "~icons/sns-icons/ic_youtube";
+import GithubIcon from "~icons/sns-icons/ic_github";
+import NoteIcon from "~icons/sns-icons/ic_note";
+
+import Logo from "~icons/logo/logo";
+
 const localePath = useLocalePath();
 const { t } = useI18n<{ message: MessageSchema }>();
 </script>
@@ -11,35 +18,25 @@ const { t } = useI18n<{ message: MessageSchema }>();
   <footer>
     <div class="sns-container">
       <VFButton icon link="https://x.com/vuefes" external>
-        <img src="/images/icons/ic_x.svg" :alt="t('snsIconImageAlt.x')" />
+        <XIcon />
       </VFButton>
       <VFButton
         icon
         link="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA"
         external
       >
-        <img
-          src="/images/icons/ic_youtube.svg"
-          :alt="t('snsIconImageAlt.youtube')"
-        />
+        <YoutubeIcon />
       </VFButton>
       <VFButton icon link="https://github.com/vuejs-jp" external>
-        <img
-          src="/images/icons/ic_github.svg"
-          :alt="t('snsIconImageAlt.github')"
-        />
+        <GithubIcon />
       </VFButton>
       <VFButton icon link="https://note.com/vuejs_jp/m/mb35849fee631" external>
-        <img src="/images/icons/ic_note.svg" :alt="t('snsIconImageAlt.note')" />
+        <NoteIcon />
       </VFButton>
     </div>
 
     <div class="container">
-      <img
-        class="logo-image"
-        src="/images/logo-primary-sub.svg"
-        :alt="$t('logo.alt')"
-      />
+      <Logo class="logo-image" />
 
       <div class="links">
         <ul class="past-vuefes-links">
@@ -129,14 +126,19 @@ footer {
   }
 
   .container {
-    color: var(--color-primary-sub);
-    background-color: var(--color-primary);
+    color: var(--color-sub);
+    background-color: var(--color-base);
     border-radius: var(--radius-m);
     margin-top: 0.5rem;
 
     padding: 5rem;
     @media (--mobile) {
       padding: 3rem 2rem;
+    }
+
+    :deep(svg),
+    :deep(path) {
+      fill: var(--color-sub) !important;
     }
 
     .links {
@@ -154,7 +156,7 @@ footer {
           width: 100%;
         }
         :deep(a) {
-          color: var(--color-primary-sub);
+          color: var(--colo-base);
           text-decoration: none;
         }
       }

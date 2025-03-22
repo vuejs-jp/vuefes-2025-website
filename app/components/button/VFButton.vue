@@ -79,7 +79,7 @@ button,
 a {
   padding: 1rem 2.5rem;
   border-radius: 6.25rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-base);
   color: var(--color-white);
   border: none;
 
@@ -113,14 +113,17 @@ a {
     text-decoration: none;
     &:hover,
     &:active {
-      border: 1px solid var(--color-primary);
-      color: var(--color-primary);
+      border: 1px solid var(--color-base);
+      color: var(--color-base);
     }
   }
 
   &.button-icon {
     background-color: var(--color-white);
-    color: var(--color-primary);
+    :deep(svg),
+    :deep(path) {
+      fill: var(--color-base) !important;
+    }
     border: 1px solid var(--color-divider);
     border-radius: var(--radius-m);
 

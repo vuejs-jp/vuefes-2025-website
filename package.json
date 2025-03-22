@@ -63,6 +63,7 @@
     "textlint-rule-preset-vuejs-jp": "github:vuejs-jp/textlint-rule-preset-vuejs-jp",
     "three": "^0.174.0",
     "typescript": "5.7.3",
+    "unplugin-icons": "^22.1.0",
     "vue": "latest",
     "vue-router": "latest",
     "vue-tsc": "^2.2.8",

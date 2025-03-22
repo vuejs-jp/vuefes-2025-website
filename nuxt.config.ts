@@ -1,3 +1,6 @@
+import Icons from "unplugin-icons/vite";
+import { FileSystemIconLoader } from "unplugin-icons/loaders";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -82,6 +85,14 @@ export default defineNuxtConfig({
         },
       },
     },
+    plugins: [
+      Icons({
+        customCollections: {
+          "sns-icons": FileSystemIconLoader("./public/images/sns"),
+          logo: FileSystemIconLoader("./public/images/logo"),
+        },
+      }),
+    ],
   },
 
   runtimeConfig: {
