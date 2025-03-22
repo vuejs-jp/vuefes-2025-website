@@ -21,7 +21,7 @@ export default {
   sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像",
   sponsorApplyButton: "スポンサー応募はこちら",
   contactForm: {
-    title: "お問合せ",
+    title: "お問い合わせ",
     description:
       "Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが再度お問い合わせください。",
     formFields: {
@@ -30,7 +30,10 @@ export default {
         label: "メールアドレス",
         placeholder: "入力例：hello{'@'}vuefes.jp",
       },
-      content: { label: "お問合せ内容", placeholder: "入力例：お問い合わせ" },
+      content: {
+        label: "お問い合わせ内容",
+        placeholder: "入力例：お問い合わせ",
+      },
       submit: { label: "送信する" },
     },
     successMessage: "送信しました",

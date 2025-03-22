@@ -80,8 +80,8 @@ The Conference's website uses cookies and similar technologies. These technologi
 In order to improve the use and usability of this website, we use a service provided by a third party, which may set cookies. The Third Party services used by the Conference are as follows
 
 - Google Analytics
+- Google Document
 - Google Forms
-- Google Presentation
 
 The data acquired through the use of third party cookies is acquired and managed in accordance with the privacy policy of the operator of each service.
 
