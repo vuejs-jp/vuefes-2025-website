@@ -25,3 +25,6 @@ logs
 
 .cspellcache
 *storybook.log
+
+# Local Netlify folder
+.netlify
