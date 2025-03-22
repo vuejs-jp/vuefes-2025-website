@@ -217,9 +217,9 @@ let leftCone: THREE.Mesh;
 let rightSphere: THREE.Mesh;
 let animationFrameId: number;
 let clock: THREE.Clock;
-const offsetTime: number = Math.random() * 100;
+const offsetTime: number = 0;
 let lastLogTime = Math.floor(offsetTime);
-const COLOR_CHANGE_INTERVAL = 30; // 色変更の間隔（秒）
+const COLOR_CHANGE_INTERVAL = 15; // 色変更の間隔（秒）
 let resizeTimeoutId: number | null = null;
 
 // 基準サイズの定義

@@ -30,16 +30,11 @@ onMounted(() => {
   window.setInterval(
     () => {
       body.classList.remove(THEMES[currentTheme]!);
-      // random theme but must not be the same as the current theme
-      const _currentTheme = currentTheme;
-      do {
-        currentTheme = Math.floor(Math.random() * THEMES.length);
-      } while (currentTheme === _currentTheme);
-
+      // 順番に次のテーマに切り替え
+      currentTheme = (currentTheme + 1) % THEMES.length;
       body.classList.add(THEMES[currentTheme]!);
     },
-    // random time 8000 ~ 15000
-    Math.floor(Math.random() * 7000) + 8000,
+    15000, // 15秒間隔
   );
 });
 </script>
