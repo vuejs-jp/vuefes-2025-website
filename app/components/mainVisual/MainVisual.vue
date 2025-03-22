@@ -156,7 +156,8 @@ onMounted(() => {
       justify-content: center;
     }
 
-    [lang="en"] {
+    [lang="en"],
+    [lang="en-US"] {
       flex-basis: 25%;
       flex-shrink: 0;
       font-family: JetBrainsMono-Regular;
@@ -184,7 +185,8 @@ onMounted(() => {
       }
     }
 
-    [lang="ja"] {
+    [lang="ja"],
+    [lang="ja-JP"] {
       flex-basis: 25%;
       flex-shrink: 0;
       font-family: JetBrainsMono-Regular;
@@ -209,7 +211,8 @@ onMounted(() => {
       align-items: center;
     }
 
-    [lang="en"] {
+    [lang="en"],
+    [lang="en-US"] {
       * {
         font-size: 1.5rem;
         line-height: 1.2;
@@ -225,7 +228,8 @@ onMounted(() => {
       }
     }
 
-    [lang="ja"] {
+    [lang="ja"],
+    [lang="ja-JP"] {
       * {
         font-family: IBMPlexSansJP-Medium;
         font-size: 1.5rem;

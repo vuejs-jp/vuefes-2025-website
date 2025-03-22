@@ -92,11 +92,13 @@ a {
     font-size: 16px;
   }
 
-  &[lang="ja"] {
+  &[lang="ja"],
+  &[lang="ja-JP"] {
     font-family: IBMPlexSansJP-Bold;
   }
 
-  &[lang="en"] {
+  &[lang="en"],
+  &[lang="en-US"] {
     font-family: JetBrainsMono-Bold;
   }
 

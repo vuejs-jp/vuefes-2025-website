@@ -151,11 +151,13 @@ const positionRight = computed(() => {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-m);
 
-  &[lang="ja"] {
+  &[lang="ja"],
+  &[lang="ja-JP"] {
     font-family: IBMPlexSansJP-Bold;
   }
 
-  &[lang="en"] {
+  &[lang="en"],
+  &[lang="en-US"] {
     font-family: JetBrainsMono-Bold;
   }
 

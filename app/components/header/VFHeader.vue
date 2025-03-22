@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import { onMounted, useI18n, watch } from "#imports";
+import { useI18n } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 import Logo from "~icons/logo/logo";
 
 const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
-
-function handleLocaleChange(newLocale: typeof locale.value) {
-  setLocale(newLocale);
-  document.documentElement.lang = newLocale;
-}
-
-watch(locale, (v) => handleLocaleChange(v));
-onMounted(() => handleLocaleChange(locale.value));
 </script>
 
 <template>

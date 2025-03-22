@@ -71,11 +71,13 @@ label {
   color: var(--color-text-default);
   margin-bottom: 0.25rem;
 
-  &[lang="ja"] {
+  &[lang="ja"],
+  &[lang="ja-JP"] {
     font-family: IBMPlexSansJP-SemiBold;
   }
 
-  &[lang="en"] {
+  &[lang="en"],
+  &[lang="en-US"] {
     font-family: JetBrainsMono-Regular;
   }
 }

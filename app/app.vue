@@ -2,9 +2,15 @@
 import "~/assets/styles/main.css";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
-// NOTE: import useHead to avoid `useHead is not defined` error
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { onMounted, useHead, useI18n, useSeoMeta } from "#imports";
+import {
+  onMounted,
+  useI18n,
+
+  // NOTE: import useHead to avoid `useHead is not defined` error
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
+} from "#imports";
 import { NuxtPage, NuxtRouteAnnouncer } from "#components";
 
 const { t } = useI18n<{ message: MessageSchema }>();
