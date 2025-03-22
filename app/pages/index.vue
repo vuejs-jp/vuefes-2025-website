@@ -9,6 +9,11 @@ import {
   useBreakpoint,
   useI18n,
   useRuntimeConfig,
+
+  // NOTE: import useHead to avoid `useHead is not defined` error
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
 } from "#imports";
 
 import { ContentRenderer, VFHeading } from "#components";
@@ -28,6 +33,10 @@ defineRouteRules({ prerender: true });
 const config = useRuntimeConfig();
 
 const { locale, t } = useI18n<{ message: MessageSchema }>();
+
+useSeoMeta({
+  title: "",
+});
 
 const bp = useBreakpoint();
 
