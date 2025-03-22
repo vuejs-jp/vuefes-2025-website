@@ -10,7 +10,7 @@ import { NuxtPage, NuxtRouteAnnouncer } from "#components";
 const { t } = useI18n<{ message: MessageSchema }>();
 
 useSeoMeta({
-  ogImage: "/og-image.png",
+  ogImage: "/og-image-noised.png",
   titleTemplate: (s) => `${t("nuxtSiteConfig.name")}${s ? ` – ${s}` : ""}`,
 });
 

@@ -70,6 +70,8 @@ onMounted(() => {
   box-sizing: border-box;
   padding: 24px;
   color: var(--color-base);
+  background: var(--color-sub) url("~/assets/images/noise/1.png") repeat;
+  background-blend-mode: overlay;
   @media (--mobile) {
     padding: 16px;
   }
