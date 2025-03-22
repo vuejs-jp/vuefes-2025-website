@@ -80,8 +80,8 @@ body {
   }
 
   h2 {
-    font-size: 18px;
-    line-height: 31px;
+    font-size: 20px;
+    line-height: 34px;
   }
 
   h3 {
@@ -128,8 +128,8 @@ body {
     }
 
     h2 {
-      font-size: 16px;
-      line-height: 27px;
+      font-size: 18px;
+      line-height: 31px;
     }
 
     h3 {
@@ -166,7 +166,7 @@ body {
 :root,
 [lang="ja"] {
   * {
-    font-family: IBMPlexSansJP-Regular;
+    font-family: IBMPlexSansJP-Medium;
   }
 
   h1,
@@ -193,9 +193,9 @@ body {
   ------------------------------------------ */
 
 :root {
-  --radius-m: 1.5rem;
+  --radius-m: 1.25rem;
 
   @media (--mobile) {
-    --radius-m: 0.75rem;
+    --radius-m: 0.625rem;
   }
 }

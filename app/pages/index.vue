@@ -124,7 +124,11 @@ const contactForm = (() => {
     />
     <div class="message-content">
       <VFHeading>{{ t("message") }}</VFHeading>
-      <ContentRenderer v-if="message" :value="message" />
+      <ContentRenderer
+        v-if="message"
+        :value="message"
+        class="message-content-text"
+      />
     </div>
   </section>
 
@@ -139,7 +143,11 @@ const contactForm = (() => {
     />
     <div class="sponsor-wanted-content">
       <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
-      <ContentRenderer v-if="sponsorWanted" :value="sponsorWanted" />
+      <ContentRenderer
+        v-if="sponsorWanted"
+        :value="sponsorWanted"
+        class="sponsor-wanted-text"
+      />
       <VFButton
         class="sponsor-apply-button"
         @click="
@@ -155,36 +163,40 @@ const contactForm = (() => {
   <section class="contact">
     <div class="contact-content">
       <!-- NOTE: provide id for hash link from coc -->
-      <VFHeading id="contact-form">{{ t("contactForm.title") }}</VFHeading>
-      <p>{{ t("contactForm.description") }}</p>
+      <VFHeading id="contact-text">{{ t("contactForm.title") }}</VFHeading>
+      <div class="sponsor-wanted-text">
+        <p>{{ t("contactForm.description") }}</p>
+      </div>
       <VFForm
         :state="contactForm.state"
         :schema="contactForm.schema"
         @submit="contactForm.submit"
       >
         <template #default="$form">
-          <VFInput
-            name="name"
-            required
-            :label="t('contactForm.formFields.name.label')"
-            :placeholder="t('contactForm.formFields.name.placeholder')"
-            :form-state="$form.name"
-          />
-          <VFInput
-            name="email"
-            required
-            :label="t('contactForm.formFields.email.label')"
-            :placeholder="t('contactForm.formFields.email.placeholder')"
-            :form-state="$form.email"
-          />
-          <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-          <VFTextarea
-            name="content"
-            required
-            :label="t('contactForm.formFields.content.label')"
-            :placeholder="t('contactForm.formFields.content.placeholder')"
-            :form-state="$form.content"
-          />
+          <div class="contact-form-items">
+            <VFInput
+              name="name"
+              required
+              :label="t('contactForm.formFields.name.label')"
+              :placeholder="t('contactForm.formFields.name.placeholder')"
+              :form-state="$form.name"
+            />
+            <VFInput
+              name="email"
+              required
+              :label="t('contactForm.formFields.email.label')"
+              :placeholder="t('contactForm.formFields.email.placeholder')"
+              :form-state="$form.email"
+            />
+            <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
+            <VFTextarea
+              name="content"
+              required
+              :label="t('contactForm.formFields.content.label')"
+              :placeholder="t('contactForm.formFields.content.placeholder')"
+              :form-state="$form.content"
+            />
+          </div>
           <VFButton type="submit">{{
             t("contactForm.formFields.submit.label")
           }}</VFButton>
@@ -210,11 +222,7 @@ const contactForm = (() => {
   justify-content: center;
   border-radius: var(--radius-m);
   background-color: var(--color-white);
-
-  margin-bottom: 1.5rem;
-  @media (--mobile) {
-    margin-bottom: 0.5rem;
-  }
+  border: 1px solid var(--color-divider-light);
 
   img {
     border-radius: var(--radius-m) var(--radius-m) 0 0;
@@ -227,12 +235,27 @@ const contactForm = (() => {
   }
 
   .message-content,
-  .sponsor-wanted-content,
-  .contact-content {
-    padding: 3rem 3.5rem;
+  .sponsor-wanted-content {
+    padding: 2.5rem 3.5rem 3rem;
     @media (--mobile) {
-      padding: 0 1.5rem;
-      margin: 1.5rem 0;
+      padding: 2rem 1.5rem 3rem;
+    }
+  }
+
+  .contact-content {
+    padding: 3rem 3.5rem 3rem;
+    @media (--mobile) {
+      padding: 2rem 1.5rem 3rem;
+    }
+  }
+
+  .message-content-text,
+  .sponsor-wanted-text,
+  .contact-text {
+    margin-top: 2rem;
+
+    @media (--mobile) {
+      margin-top: 1.5rem;
     }
   }
 
@@ -240,21 +263,14 @@ const contactForm = (() => {
     .sponsor-apply-button {
       display: block;
       margin: 0 auto;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       @media (--mobile) {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
     }
   }
 
   .contact-content {
-    p {
-      margin-bottom: 1.5rem;
-      @media (--mobile) {
-        margin-bottom: 1rem;
-      }
-    }
-
     button[type="submit"] {
       display: block;
       margin: 0 auto;
@@ -262,6 +278,16 @@ const contactForm = (() => {
       @media (--mobile) {
         margin-top: 1rem;
       }
+    }
+  }
+
+  .contact-form-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-top: 2rem;
+    @media (--mobile) {
+      margin-top: 1.5rem;
     }
   }
 }
@@ -275,7 +301,7 @@ const contactForm = (() => {
 
 .sns-introduction-heading {
   text-align: center;
-  margin: 1rem 0 2rem 0;
-  padding: 0 0.5rem;
+  margin-top: 0;
+  text-wrap-style: auto;
 }
 </style>
