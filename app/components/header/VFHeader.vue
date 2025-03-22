@@ -16,23 +16,25 @@ onMounted(() => handleLocaleChange(locale.value));
 
 <template>
   <header>
-    <Logo class="logo-image" />
+    <div class="header">
+      <Logo class="logo-image" />
 
-    <div class="lang-switcher">
-      <button
-        type="button"
-        :class="{ active: locale === 'ja' }"
-        @click="setLocale('ja')"
-      >
-        JA
-      </button>
-      <button
-        type="button"
-        :class="{ active: locale === 'en' }"
-        @click="setLocale('en')"
-      >
-        EN
-      </button>
+      <div class="lang-switcher">
+        <button
+          type="button"
+          :class="{ active: locale === 'ja' }"
+          @click="setLocale('ja')"
+        >
+          JA
+        </button>
+        <button
+          type="button"
+          :class="{ active: locale === 'en' }"
+          @click="setLocale('en')"
+        >
+          EN
+        </button>
+      </div>
     </div>
   </header>
 </template>
@@ -41,42 +43,49 @@ onMounted(() => handleLocaleChange(locale.value));
 @import "~/assets/styles/custom-media-query.css";
 
 header {
-  background-color: var(--color-white);
-  border-radius: var(--radius-m);
-  display: flex;
-  justify-content: space-between;
-
-  padding: 1.5rem 2rem;
-  @media (--mobile) {
-    padding: 1rem 1.5rem;
-  }
-
-  .logo-image {
-    max-width: 60%;
-    height: 3rem;
-    @media (--mobile) {
-      height: 2rem;
-    }
-
-    :deep(svg),
-    :deep(path) {
-      fill: var(--color-base) !important;
-    }
-  }
-
-  .lang-switcher {
+  .header {
+    background-color: var(--color-white);
+    border-radius: var(--radius-m);
     display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.625rem 1.25rem 2rem;
+    border: 1px solid var(--color-divider-light);
 
-    button {
-      color: var(--color-place-holder);
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 1.125rem;
+    @media (--mobile) {
+      padding: 1.25rem 1.125rem 1rem 1.5rem;
+    }
 
-      &.active {
-        color: var(--color-base);
-        text-decoration: underline;
+    .logo-image {
+      display: block;
+      width: 258px;
+      height: 48px;
+      @media (--mobile) {
+        width: 172px;
+        height: 32px;
+      }
+
+      :deep(svg),
+      :deep(path) {
+        fill: var(--color-base) !important;
+      }
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 0.25rem;
+
+      button {
+        color: var(--color-place-holder);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: JetBrainsMono-Regular;
+        font-size: 1.125rem;
+
+        &.active {
+          color: var(--color-base);
+          text-decoration: underline;
+        }
       }
     }
   }

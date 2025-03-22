@@ -90,7 +90,6 @@ a {
   line-height: 31px;
   @media (--mobile) {
     font-size: 16px;
-    line-height: 28px;
   }
 
   &[lang="ja"] {
@@ -124,7 +123,7 @@ a {
     :deep(path) {
       fill: var(--color-base) !important;
     }
-    border: 1px solid var(--color-divider);
+    border: 1px solid var(--color-divider-light);
     border-radius: var(--radius-m);
 
     display: flex;

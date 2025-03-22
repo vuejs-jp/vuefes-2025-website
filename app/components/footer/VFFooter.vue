@@ -110,12 +110,14 @@ const { t } = useI18n<{ message: MessageSchema }>();
 @import "~/assets/styles/custom-media-query.css";
 
 footer {
+  width: 100%;
+
   .sns-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
 
-    :deep(img) {
+    :deep(svg) {
       width: 40px;
       height: 40px;
       @media (--mobile) {
@@ -130,10 +132,22 @@ footer {
     background-color: var(--color-base);
     border-radius: var(--radius-m);
     margin-top: 0.5rem;
+    padding: 3rem 3.5rem;
+    border: 1px solid var(--color-divider-light);
 
-    padding: 5rem;
     @media (--mobile) {
-      padding: 3rem 2rem;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .logo-image {
+      display: block;
+      width: 301px;
+      height: 56px;
+
+      @media (--mobile) {
+        width: 215px;
+        height: 40px;
+      }
     }
 
     :deep(svg),
@@ -142,24 +156,57 @@ footer {
     }
 
     .links {
-      margin-top: 2rem;
-
+      margin-top: 2.5rem;
       display: flex;
+      gap: 2.5rem;
+
       @media (--mobile) {
+        margin-top: 3rem;
         flex-direction: column;
       }
 
       .past-vuefes-links,
       .other-links {
-        width: 50%;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0;
+
         @media (--mobile) {
-          width: 100%;
+          flex-basis: 100%;
+        }
+        :deep(li) {
+          font-size: 0.875rem;
+          line-height: 1.72;
+
+          @media (--mobile) {
+            font-size: 0.75rem;
+            line-height: 1.67;
+          }
         }
         :deep(a) {
-          color: var(--colo-base);
+          font-size: 0.875rem;
+          line-height: 1.72;
+          color: var(--color-white);
           text-decoration: none;
+
+          @media (--mobile) {
+            font-size: 0.75rem;
+            line-height: 1.67;
+          }
         }
       }
+    }
+  }
+
+  .text-caption {
+    margin-top: 2.5rem;
+    font-family: IBMPlexSansJP-Regular;
+    color: var(--color-white);
+
+    @media (--mobile) {
+      margin-top: 3rem;
     }
   }
 }

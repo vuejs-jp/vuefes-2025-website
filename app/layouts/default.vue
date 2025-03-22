@@ -37,17 +37,20 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
 .content {
   margin: 0 auto;
+  padding: 0.5rem;
   background-color: transparent;
   display: flex;
+  row-gap: 1.5rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 700px;
 
   @media (--mobile) {
+    row-gap: 1rem;
+    padding: 0.25rem;
     max-width: none;
     width: 100%;
-    padding: 0.25rem;
   }
 }
 
@@ -55,6 +58,12 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   position: sticky;
   top: 0;
   width: 100%;
-  margin: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  @media (--mobile) {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
 }
 </style>

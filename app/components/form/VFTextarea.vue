@@ -17,24 +17,27 @@ const { locale: lang } = useI18n<{ message: MessageSchema }>();
 </script>
 
 <template>
-  <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
-  <label v-if="$attrs.label" :for="id" :lang>{{ $attrs.label }}</label>
-  <Textarea
-    v-bind="$attrs"
-    :id="id"
-    :aria-describedby="descriptionId"
-    :class="{ 'has-form-state': formState, invalid: formState?.invalid }"
-  />
-  <p
-    v-if="formState"
-    :id="descriptionId"
-    :aria-hidden="formState.valid"
-    class="error-message text-caption"
-  >
-    <span v-if="formState?.invalid">
-      {{ formState.error.message }}
-    </span>
-  </p>
+  <div>
+    <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
+    <label v-if="$attrs.label" :for="id" :lang>{{ $attrs.label }}</label>
+    <Textarea
+      v-bind="$attrs"
+      :id="id"
+      :aria-describedby="descriptionId"
+      :class="{ 'has-form-state': formState, invalid: formState?.invalid }"
+      rows="6"
+    />
+    <p
+      v-if="formState?.invalid"
+      :id="descriptionId"
+      :aria-hidden="formState.valid"
+      class="error-message text-caption"
+    >
+      <span v-if="formState?.invalid">
+        {{ formState.error.message }}
+      </span>
+    </p>
+  </div>
 </template>
 
 <style scoped>
@@ -45,6 +48,9 @@ textarea {
   padding: 1rem;
   border: 1px solid var(--color-divider);
   border-radius: 0.5rem;
+  @media (--mobile) {
+    font-size: 0.875rem;
+  }
 
   &::placeholder {
     color: var(--color-place-holder);
@@ -63,10 +69,10 @@ textarea {
 label {
   display: block;
   color: var(--color-text-default);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 
   &[lang="ja"] {
-    font-family: IBMPlexSansJP-Bold;
+    font-family: IBMPlexSansJP-SemiBold;
   }
 
   &[lang="en"] {
