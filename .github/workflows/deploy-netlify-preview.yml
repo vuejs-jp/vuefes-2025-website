@@ -1,0 +1,48 @@
+name: Deploy Netlify Preview
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Dependencies
+        uses: ./.github/actions/setup-node-pnpm
+
+      - name: Generate Site
+        run: pnpm generate
+
+      - name: Set Deploy Message
+        id: set-message
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.ref_name }}" = "main" ]; then
+            echo "message=最新：プレビューサイト" >> $GITHUB_OUTPUT
+          else
+            pr_title="${{ github.event.pull_request.title }}"
+            pr_number="${{ github.event.pull_request.number }}"
+            echo "message=PR #${pr_number}: ${pr_title}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: ".output/public"
+          production-branch: TODO-define-production-branch
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "${{ steps.set-message.outputs.message }}"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
