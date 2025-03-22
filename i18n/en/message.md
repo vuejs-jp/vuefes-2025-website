@@ -12,4 +12,4 @@ Additionally, last October, Evan You, the creator of Vue.js, launched a new comp
 
 This is the place where you can experience cutting-edge information and trends firsthand—that’s Vue Fes Japan 2025. This year, to ensure even more people can enjoy the event, we are pursuing initiatives toward internationalization, such as rebranding the conference for its evolution and providing English translations for Japanese sessions. Let’s come together to share an authentic experience and excitement!
 
-Kazuya Kawaguchi, Representative of the Vue.js Japan User Group ([kazu_pon](https://github.com/kazupon){:target="_blank"})
+Kazuya Kawaguchi, Representative of the Vue.js Japan User Group ([kazu_pon](https://github.com/kazupon){:target="\_blank"})
