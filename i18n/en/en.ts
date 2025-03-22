@@ -33,6 +33,8 @@ export default {
       content: { label: "Contact Details", placeholder: "Example: Inquiry" },
       submit: { label: "Send" },
     },
+    successMessage: "Sent successfully",
+    errorMessage: "Failed to send. Please try again.",
   },
   snsIntroduction:
     "Please check our official social media for the latest updates.",

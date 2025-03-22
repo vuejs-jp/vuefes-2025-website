@@ -19,6 +19,7 @@ import {
   VFInput,
   VFTextarea,
 } from "~/components/form";
+import VFToast, { useToast } from "~/components/toast/VFToast.vue";
 
 import type { MessageSchema } from "~~/i18n/message-schema";
 
@@ -40,6 +41,8 @@ const { data: sponsorWanted } = useAsyncData(
 );
 
 const contactForm = (() => {
+  const toast = useToast();
+
   const schema = z.object({
     name: z.string().nonempty(
       t("validation.required", {
@@ -82,17 +85,21 @@ const contactForm = (() => {
           headers: { Accept: "application/json" },
         });
         event.reset();
-        // TODO: show success message
-        window.alert("TODO: 成功時のメッセージを表示");
+        toast.open({
+          type: "success",
+          message: t("contactForm.successMessage"),
+        });
       } catch (error) {
         console.error(error);
-        // TODO: show error message
-        window.alert("TODO: エラーメッセージを表示");
+        toast.open({
+          type: "alert",
+          message: t("contactForm.errorMessage"),
+        });
       }
     }
   }
 
-  return { state, schema, submit };
+  return { state, schema, submit, toastState: toast.state };
 })();
 </script>
 
@@ -178,6 +185,8 @@ const contactForm = (() => {
   </section>
 
   <h2 class="sns-introduction-heading">{{ t("snsIntroduction") }}</h2>
+
+  <VFToast :state="contactForm.toastState.value" />
 </template>
 
 <style scoped>

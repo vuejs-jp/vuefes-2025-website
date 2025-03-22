@@ -25,8 +25,9 @@
   --color-divider: #dbe1e7;
   --color-divider-light: #efefef;
   --color-place-holder: #bbbbbb;
+  --color-black: #333333;
   --color-white: #ffffff;
-  --color-error: #c81a1a;
+  --color-alert: #c81a1a;
 }
 
 body {

@@ -24,6 +24,8 @@ export type MessageSchema = {
       content: { label: string; placeholder: string };
       submit: { label: string };
     };
+    successMessage: string;
+    errorMessage: string;
   };
   snsIntroduction: string;
   snsIconImageAlt: {

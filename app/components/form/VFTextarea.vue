@@ -56,7 +56,7 @@ textarea {
   }
 
   &.invalid {
-    border-color: var(--color-error);
+    border-color: var(--color-alert);
   }
 }
 
@@ -75,7 +75,7 @@ label {
 }
 
 .error-message {
-  color: var(--color-error);
+  color: var(--color-alert);
   margin: 0.5rem 0;
 
   /* align to text-caption line-height */

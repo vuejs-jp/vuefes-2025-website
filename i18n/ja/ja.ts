@@ -33,6 +33,8 @@ export default {
       content: { label: "お問合せ内容", placeholder: "入力例：お問い合わせ" },
       submit: { label: "送信する" },
     },
+    successMessage: "送信しました",
+    errorMessage: "送信に失敗しました。もう一度お試しください。",
   },
   snsIntroduction: "最新情報は公式SNSをご覧ください",
   snsIconImageAlt: {
