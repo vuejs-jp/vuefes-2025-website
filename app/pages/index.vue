@@ -266,13 +266,6 @@ const contactForm = (() => {
   }
 }
 
-.theme-purple .sponsor-wanted {
-  img {
-    border: var(--color-place-holder) solid 1px;
-    border-bottom: none;
-  }
-}
-
 .sns-introduction-heading {
   text-align: center;
   margin: 1rem 0 2rem 0;
