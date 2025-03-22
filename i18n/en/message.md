@@ -1,9 +1,15 @@
-We will hold Japan's largest Vue.js conference, Vue Fes Japan, again in 2024!\
-This conference, which was born in 2018, was created to celebrate, learn, and most importantly, enjoy Vue.js together, just like a festival.\
-The previous Vue Fes Japan 2023 was our first offline event in five years, with nearly 600 participants. After a long period of cancellations and online events, it was a conference where we could truly feel the enthusiasm of the Vue.js community.\
-Since Vue 3 became the default in January 2022, Vue.js has been steadily evolving. The latest version, 3.4, has recorded 4.8 million downloads per week. Major frameworks and libraries like Nuxt, Vuetify, and Quasar have completed their support for Vue 3, and the entire ecosystem has entered a stable phase.\
-Meanwhile, new trends are emerging within the Vue.js ecosystem.\
-Nitro, the core server engine of Nuxt, is starting to be used in other meta-frameworks like SolidStart and Analog. The high-quality JavaScript utility collection, UnJS, has begun to gain support from communities beyond Vue.js. Vite, developed by Vue.js creator Evan You, has evolved into a next-generation tool that supports a wide variety of front-end technologies, boasting over 11 million downloads per week.\
-Furthermore, Evan is leading the Rolldown project, which uses OXC as a JavaScript compiler, developing it to replace Vite's core Rollup with Rolldown, with an initial version set to be released in March 2024. The open-source software surrounding Vue.js is showing remarkable expansion.\
-The place to experience these latest trends is this year's Vue Fes Japan 2024. We invite you to join the conference and enjoy an experience that can only be felt in person!\
-Be More Collaboration! Be More Expansion!
+Japan's largest Vue.js conference, Vue Fes Japan, is back again this year!
+
+Vue Fes Japan began in 2018 with the very purpose of celebrating, learning, and—most importantly—enjoying Vue.js together, much like a festival.
+
+The previous Vue Fes Japan 2024 was a fantastic event, drawing around 750 participants from both Japan and overseas, and truly showcased the passion of our community.
+
+In September last year, the latest stable release, Vue 3.5, was launched and has now grown to over 6.4 million downloads per week. Moreover, the in-development Vue 3.6 is expected to bring even greater performance improvements with its experimental Vapor project and new reactivity system based on alien-signals, promising further evolution.
+
+The ecosystem surrounding Vue.js is also gaining momentum. The official ESLint plugin, eslint-plugin-vue v10, and the new Vue DevTools are now available, while the meta-framework Nuxt and its server engine Nitro continue to evolve further alongside the UnJS project, gearing up for the next generation.
+
+Additionally, last October, Evan You, the creator of Vue.js, launched a new company, VoidZero, to advance the development of the next-generation JavaScript toolchain. Projects like Vite, Vitest, Rolldown, and Oxc—as part of VoidZero’s open source initiatives—are set to make a significant impact not only on the Vue.js community but also on the broader JavaScript ecosystem.
+
+This is the place where you can experience cutting-edge information and trends firsthand—that’s Vue Fes Japan 2025. This year, to ensure even more people can enjoy the event, we are pursuing initiatives toward internationalization, such as rebranding the conference for its evolution and providing English translations for Japanese sessions. Let’s come together to share an authentic experience and excitement!
+
+Kazuya Kawaguchi, Representative of the Vue.js Japan User Group ([kazu_pon](https://github.com/kazupon){:target="_blank"})
