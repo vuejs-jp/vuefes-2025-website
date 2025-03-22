@@ -68,12 +68,29 @@ onMounted(() => {
   height: 100svh;
   width: 100%;
   box-sizing: border-box;
-  padding: 24px;
   color: var(--color-base);
-  background: var(--color-sub) url("~/assets/images/noise/1.png") repeat;
-  background-blend-mode: overlay;
+  background: var(--color-sub);
+
+  padding: 24px;
   @media (--mobile) {
     padding: 16px;
+  }
+
+  /**
+   * NOTE: 
+   * background-blend-mode is not working on iOS. \n
+   * So, use before pseudo element + mix-blend-mode instead.
+   */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    background: var(--color-sub) url("~/assets/images/noise/1.png") repeat;
+    mix-blend-mode: overlay;
   }
 
   .main-visual-head {
