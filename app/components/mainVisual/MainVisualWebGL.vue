@@ -193,7 +193,7 @@ const fragmentShader = `
         float t = (vPosition.y + 200.0) / 110.0;
         float maxX = mix(64.0, 0.0, t);
         if (length(vPosition.x) < maxX) {
-          a = 0.;
+          discard;
         }
       }
       color = normalize(vNormal).rgb;
@@ -269,6 +269,7 @@ const createMaterial = () => {
   return new THREE.ShaderMaterial({
     vertexShader,
     fragmentShader,
+    transparent: true,
     uniforms: {
       uTime: { value: 0 },
       uIsSphere: { value: 0 },
@@ -399,7 +400,7 @@ const handleResize = () => {
       renderer.setSize(containerWidth, containerHeight, false);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     }
-    const scale = 0.96;
+    const scale = 0.95;
     if (leftCone && rightSphere) {
       leftCone.scale.set(scale, scale, scale);
       leftCone.position.x = BASE_SIZE.coneOffset.x * scale;
