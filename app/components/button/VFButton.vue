@@ -13,9 +13,6 @@ const {
   type?: "button" | "submit" | "reset";
 
   /** @default false */
-  disabled?: boolean;
-
-  /** @default false */
   outlined?: boolean;
 
   /** @default false */
@@ -79,9 +76,9 @@ button,
 a {
   padding: 1rem 2.5rem;
   border-radius: 6.25rem;
+  border: none;
   background-color: var(--color-base);
   color: var(--color-white);
-  border: none;
 
   cursor: pointer;
 
@@ -102,9 +99,14 @@ a {
     font-family: JetBrainsMono-Bold;
   }
 
-  &:hover,
-  &:active {
+  &:enabled:hover,
+  &:enabled:active {
     background-color: var(--color-accent-hover);
+  }
+  &:disabled {
+    background-color: var(--color-place-holder);
+    color: var(--color-white);
+    cursor: not-allowed;
   }
 
   &.button-outlined {
@@ -112,10 +114,14 @@ a {
     border: 1px solid var(--color-place-holder);
     color: var(--color-text-default);
     text-decoration: none;
-    &:hover,
-    &:active {
+    &:enabled:hover,
+    &:enabled:active {
       border: 1px solid var(--color-base);
       color: var(--color-base);
+    }
+    &:disabled {
+      border: 1px solid var(--color-divider-light);
+      color: var(--color-divider-light);
     }
   }
 

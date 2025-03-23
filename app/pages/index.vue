@@ -195,9 +195,15 @@ const contactForm = (() => {
               :form-state="$form.content"
             />
           </div>
-          <VFButton type="submit">{{
-            t("contactForm.formFields.submit.label")
-          }}</VFButton>
+          <VFButton
+            type="submit"
+            :disabled="
+              $form.name?.invalid ||
+              $form.email?.invalid ||
+              $form.content?.invalid
+            "
+            >{{ t("contactForm.formFields.submit.label") }}</VFButton
+          >
         </template>
       </VFForm>
     </div>
