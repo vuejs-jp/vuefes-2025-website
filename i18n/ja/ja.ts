@@ -14,6 +14,10 @@ export default {
   logo: {
     alt: "Vue Fes Japan 2025 ロゴ。VueをイメージしたVのシルエットと、日本の日の丸をイメージした丸のシルエットが横に並んでいる。色はVue.jsのロゴに使われている2色の色から作られた深い抹茶のような色。",
   },
+  animation: {
+    play: "アニメーションを再生",
+    pause: "アニメーションを停止",
+  },
   message: "メッセージ",
   messageCoverImageAlt:
     "Vue Fes Japan 2025。VueをイメージしたVのシルエットと、日本の日の丸をイメージした丸のシルエットが横に並んでいる。色はVue.jsのロゴに使われている2色の色から作られた深い抹茶のような色。ロゴの右には同じ抹茶色でVue Fes Japan 2025と描かれている。",

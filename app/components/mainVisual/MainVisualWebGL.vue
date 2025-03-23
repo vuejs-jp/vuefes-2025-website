@@ -3,7 +3,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import * as THREE from "three";
 import noise2 from "@/assets/images/noise/2.png";
 
-const props = defineProps<{
+const { animation = true } = defineProps<{
   animation?: boolean;
 }>();
 
@@ -360,7 +360,7 @@ const init = () => {
 };
 
 const animate = () => {
-  if (!props.animation) return;
+  if (!animation) return;
 
   const elapsedTime = clock.getElapsedTime() + offsetTime;
   const currentSecond = Math.floor(elapsedTime);
@@ -419,7 +419,7 @@ const emit = defineEmits<{
 onMounted(() => {
   requestAnimationFrame(() => {
     init();
-    if (props.animation) {
+    if (animation) {
       animationFrameId = requestAnimationFrame(animate);
     } else {
       renderer.render(scene, camera);

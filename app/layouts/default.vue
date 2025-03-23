@@ -1,20 +1,22 @@
 <script setup lang="ts">
-import { computed, useBreakpoint, useRoute } from "#imports";
+import { computed, useRoute } from "#imports";
 import { MainVisual, VFHeader, VFFooter } from "#components";
+import { useAnimationStore } from "~/stores/animation";
 
-defineSlots<{
-  default: () => unknown;
-}>();
+defineSlots<{ default: () => unknown }>();
 
-const bp = useBreakpoint();
+const [animation] = useAnimationStore();
 
 const route = useRoute();
-
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
 </script>
 
 <template>
-  <MainVisual :title-tag="isRoot ? 'h1' : 'div'" class="main-visual" />
+  <MainVisual
+    :title-tag="isRoot ? 'h1' : 'div'"
+    :animation
+    class="main-visual"
+  />
 
   <div v-if="isRoot" style="height: 100vh" />
 
@@ -24,7 +26,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     <VFFooter />
   </div>
 
-  <div v-if="isRoot && bp === 'pc'" style="height: 100vh" />
+  <div v-if="isRoot" style="height: 100vh" />
 </template>
 
 <style scoped>

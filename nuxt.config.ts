@@ -88,8 +88,12 @@ export default defineNuxtConfig({
     plugins: [
       Icons({
         customCollections: {
-          "sns-icons": FileSystemIconLoader("./public/images/sns"),
-          logo: FileSystemIconLoader("./public/images/logo"),
+          icons: FileSystemIconLoader("./public/images/icons", (svg) =>
+            svg.replace(/#0D7D63/g, "var(--color-base)"),
+          ),
+          logo: FileSystemIconLoader("./public/images/logo", (svg) =>
+            svg.replace(/#0D7D63/g, "var(--color-base)"),
+          ),
         },
       }),
     ],

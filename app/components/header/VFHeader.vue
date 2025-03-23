@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { useI18n } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
+import { useAnimationStore } from "~/stores/animation";
+
 import Logo from "~icons/logo/logo";
+import AnimationPlay from "~icons/icons/animation-play";
+import AnimationPause from "~icons/icons/animation-pause";
 
 const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
+const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
+  useAnimationStore();
 </script>
 
 <template>
@@ -11,7 +17,7 @@ const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
     <div class="header">
       <Logo class="logo-image" />
 
-      <div class="lang-switcher">
+      <div class="header-control">
         <button
           type="button"
           :class="{ active: locale === 'ja' }"
@@ -25,6 +31,18 @@ const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
           @click="setLocale('en')"
         >
           EN
+        </button>
+
+        <button
+          type="button"
+          class="animation-control"
+          :aria-label="
+            animationEnabled ? $t('animation.pause') : $t('animation.play')
+          "
+          :disabled="!isWebGLSupported"
+          @click="setAnimationEnabled(!animationEnabled)"
+        >
+          <component :is="animationEnabled ? AnimationPause : AnimationPlay" />
         </button>
       </div>
     </div>
@@ -55,18 +73,14 @@ header {
         width: 172px;
         height: 32px;
       }
-
-      :deep(svg),
-      :deep(path) {
-        fill: var(--color-base) !important;
-      }
     }
 
-    .lang-switcher {
+    .header-control {
       display: flex;
       gap: 0.25rem;
-
       button {
+        display: flex;
+        align-items: center;
         color: var(--color-place-holder);
         background-color: transparent;
         border: none;
@@ -77,6 +91,12 @@ header {
         &.active {
           color: var(--color-base);
           text-decoration: underline;
+        }
+
+        &.animation-control:disabled {
+          /* to alter svg stroke */
+          --color-base: var(--color-place-holder);
+          cursor: not-allowed;
         }
       }
     }

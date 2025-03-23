@@ -34,9 +34,7 @@ const config = useRuntimeConfig();
 
 const { locale, t } = useI18n<{ message: MessageSchema }>();
 
-useSeoMeta({
-  title: "",
-});
+useSeoMeta({ title: "" });
 
 const bp = useBreakpoint();
 

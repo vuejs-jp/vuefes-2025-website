@@ -1,24 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
 import MainVisualGraphic from "./MainVisualGraphic.vue";
 
-const { titleTag = "h1" } = defineProps<{
+const { titleTag = "h1", animation = true } = defineProps<{
   titleTag?: "h1" | "div";
+  animation?: boolean;
 }>();
-
-const isWebGLSupported = ref(false);
-
-onMounted(() => {
-  try {
-    const canvas = document.createElement("canvas");
-    isWebGLSupported.value = !!(
-      window.WebGLRenderingContext &&
-      (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
-    );
-  } catch {
-    isWebGLSupported.value = false;
-  }
-});
 </script>
 
 <template>
@@ -37,7 +23,7 @@ onMounted(() => {
     <div class="main-visual-body">
       <time datetime="2025-10-25" lang="en">OCTOBER 25, 2025</time>
       <MainVisualGraphic
-        :appearance="isWebGLSupported ? 'webgl' : 'png'"
+        :appearance="animation ? 'webgl' : 'png'"
         class="main-visual-graphic"
       />
       <time datetime="2025-10-25" lang="ja">2025年10月25日</time>

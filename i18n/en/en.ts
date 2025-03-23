@@ -14,6 +14,10 @@ export default {
   logo: {
     alt: "Vue Fes Japan 2025 logo. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors are deep matcha-like shades derived from the two colors used in the Vue.js logo.",
   },
+  animation: {
+    play: "Play Animation",
+    pause: "Pause Animation",
+  },
   message: "Message",
   messageCoverImageAlt:
     "Vue Fes Japan 2025. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors are deep matcha-like shades derived from the two colors used in the Vue.js logo. To the right of the logo, 'Vue Fes Japan 2025' is written in the same matcha color.",

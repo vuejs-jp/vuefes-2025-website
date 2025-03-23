@@ -10,6 +10,10 @@ export type MessageSchema = {
   logo: {
     alt: string;
   };
+  animation: {
+    play: string;
+    pause: string;
+  };
   message: string;
   messageCoverImageAlt: string;
   sponsorWanted: string;

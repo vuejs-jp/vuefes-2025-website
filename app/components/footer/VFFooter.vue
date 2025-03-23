@@ -3,10 +3,10 @@ import { useI18n, useLocalePath } from "#imports";
 import { VFButton } from "#components";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
-import XIcon from "~icons/sns-icons/ic_x";
-import YoutubeIcon from "~icons/sns-icons/ic_youtube";
-import GithubIcon from "~icons/sns-icons/ic_github";
-import NoteIcon from "~icons/sns-icons/ic_note";
+import XIcon from "~icons/icons/ic_x";
+import YoutubeIcon from "~icons/icons/ic_youtube";
+import GithubIcon from "~icons/icons/ic_github";
+import NoteIcon from "~icons/icons/ic_note";
 
 import Logo from "~icons/logo/logo";
 
