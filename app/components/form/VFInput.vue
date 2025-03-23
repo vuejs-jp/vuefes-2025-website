@@ -67,6 +67,9 @@ input {
 
   &.invalid {
     border-color: var(--color-alert);
+    &::placeholder {
+      color: var(--color-place-holder);
+    }
   }
 }
 

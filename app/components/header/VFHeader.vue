@@ -100,6 +100,13 @@ header {
           text-decoration: underline;
         }
 
+        &.animation-control {
+          margin-left: 0.5rem;
+          @media (--mobile) {
+            margin-left: 0;
+          }
+        }
+
         &.animation-control:disabled {
           /* to alter svg stroke */
           --color-base: var(--color-place-holder);
