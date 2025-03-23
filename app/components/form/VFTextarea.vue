@@ -59,6 +59,9 @@ textarea {
   &:enabled:focus,
   &:enabled:hover {
     border-color: var(--color-primary);
+    &.invalid {
+      border-color: var(--color-alert);
+    }
   }
 
   &.invalid {
