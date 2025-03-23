@@ -198,9 +198,14 @@ const contactForm = (() => {
           <VFButton
             type="submit"
             :disabled="
-              $form.name?.invalid ||
-              $form.email?.invalid ||
-              $form.content?.invalid
+              !(
+                $form.name?.touched &&
+                $form.name?.valid &&
+                $form.email?.touched &&
+                $form.email?.valid &&
+                $form.content?.touched &&
+                $form.content?.valid
+              )
             "
             >{{ t("contactForm.formFields.submit.label") }}</VFButton
           >
