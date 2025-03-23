@@ -10,12 +10,16 @@ import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
+  useLocalePath,
 } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
 defineRouteRules({ prerender: true });
 
 const { locale, t } = useI18n<{ message: MessageSchema }>();
+
+const localePath = useLocalePath();
+
 useSeoMeta({ title: t("privacyPolicy") });
 
 const { data: privacy } = useAsyncData(`privacy-${locale.value}`, () =>
@@ -31,7 +35,7 @@ const { data: privacy } = useAsyncData(`privacy-${locale.value}`, () =>
       <ContentRenderer v-if="privacy" :value="privacy" />
 
       <div class="back-top-button">
-        <VFButton outlined link="/">{{ t("backTop") }}</VFButton>
+        <VFButton outlined :link="localePath('/')">{{ t("backTop") }}</VFButton>
       </div>
     </div>
   </section>
