@@ -22,7 +22,8 @@ export function useAnimationStore(): [
 
   onMounted(() => {
     isWebGLSupported.value = _isWebGLSupported();
-    if (isWebGLSupported.value) {
+    const isPreferredReducedMotion = _isPreferredReducedMotion();
+    if (isWebGLSupported.value && !isPreferredReducedMotion) {
       set(true);
     }
   });
@@ -43,6 +44,10 @@ export function useAnimationStore(): [
     } catch {
       return false;
     }
+  }
+
+  function _isPreferredReducedMotion(): boolean {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 }
 
