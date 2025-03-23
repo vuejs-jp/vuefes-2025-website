@@ -449,7 +449,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <canvas ref="canvasRef" />
+  <canvas ref="canvasRef" :aria-label="$t('mainVisual.webglAlt')" />
 </template>
 
 <style scoped>

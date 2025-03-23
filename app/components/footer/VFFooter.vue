@@ -18,26 +18,25 @@ const { t } = useI18n<{ message: MessageSchema }>();
   <footer>
     <div class="sns-container">
       <VFButton icon link="https://x.com/vuefes" external>
-        <XIcon />
+        <XIcon :aria-label="t('snsIconImageAlt.x')" role="img" />
       </VFButton>
       <VFButton
         icon
         link="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA"
         external
       >
-        <YoutubeIcon />
+        <YoutubeIcon :aria-label="t('snsIconImageAlt.youtube')" role="img" />
       </VFButton>
       <VFButton icon link="https://github.com/vuejs-jp" external>
-        <GithubIcon />
+        <GithubIcon :aria-label="t('snsIconImageAlt.github')" role="img" />
       </VFButton>
       <VFButton icon link="https://note.com/vuejs_jp/m/mb35849fee631" external>
-        <NoteIcon />
+        <NoteIcon :aria-label="t('snsIconImageAlt.note')" role="img" />
       </VFButton>
     </div>
 
     <div class="container">
-      <Logo class="logo-image" />
-
+      <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
       <div class="links">
         <ul class="past-vuefes-links">
           <li>
@@ -120,6 +119,7 @@ footer {
     :deep(svg) {
       width: 40px;
       height: 40px;
+
       @media (--mobile) {
         width: 24px;
         height: 24px;
@@ -176,6 +176,7 @@ footer {
         @media (--mobile) {
           flex-basis: 100%;
         }
+
         :deep(li) {
           font-size: 0.875rem;
           line-height: 1.72;
@@ -185,6 +186,7 @@ footer {
             line-height: 1.67;
           }
         }
+
         :deep(a) {
           font-size: 0.875rem;
           line-height: 1.72;

@@ -49,9 +49,11 @@ const { locale: lang } = useI18n<{ message: MessageSchema }>();
     ]"
     :external
     :target="external ? '_blank' : undefined"
+    role="button"
     class="button"
-    ><slot
-  /></NuxtLink>
+  >
+    <slot />
+  </NuxtLink>
   <button
     v-else
     :type
@@ -85,6 +87,7 @@ a {
   /* align to h2 */
   font-size: 18px;
   line-height: 31px;
+
   @media (--mobile) {
     font-size: 16px;
   }
@@ -103,6 +106,7 @@ a {
   &:enabled:active {
     background-color: var(--color-accent-hover);
   }
+
   &:disabled {
     background-color: var(--color-place-holder);
     color: var(--color-white);
@@ -114,11 +118,13 @@ a {
     border: 1px solid var(--color-place-holder);
     color: var(--color-text-default);
     text-decoration: none;
+
     &:enabled:hover,
     &:enabled:active {
       border: 1px solid var(--color-base);
       color: var(--color-base);
     }
+
     &:disabled {
       border: 1px solid var(--color-divider-light);
       color: var(--color-divider-light);

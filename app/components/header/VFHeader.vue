@@ -7,7 +7,7 @@ import Logo from "~icons/logo/logo";
 import AnimationPlay from "~icons/icons/animation-play";
 import AnimationPause from "~icons/icons/animation-pause";
 
-const { locale, setLocale } = useI18n<{ message: MessageSchema }>();
+const { locale, setLocale, t } = useI18n<{ message: MessageSchema }>();
 const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
   useAnimationStore();
 </script>
@@ -15,8 +15,7 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
 <template>
   <header>
     <div class="header">
-      <Logo class="logo-image" />
-
+      <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
       <div class="header-control">
         <button
           type="button"
@@ -42,7 +41,13 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
           :disabled="!isWebGLSupported"
           @click="setAnimationEnabled(!animationEnabled)"
         >
-          <component :is="animationEnabled ? AnimationPause : AnimationPlay" />
+          <component
+            :is="animationEnabled ? AnimationPause : AnimationPlay"
+            :aria-label="
+              animationEnabled ? $t('animation.pause') : $t('animation.play')
+            "
+            role="img"
+          />
         </button>
       </div>
     </div>
@@ -69,6 +74,7 @@ header {
       display: block;
       width: 258px;
       height: 48px;
+
       @media (--mobile) {
         width: 172px;
         height: 32px;
@@ -78,6 +84,7 @@ header {
     .header-control {
       display: flex;
       gap: 0.25rem;
+
       button {
         display: flex;
         align-items: center;
