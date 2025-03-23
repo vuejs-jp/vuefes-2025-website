@@ -8,9 +8,9 @@ export default {
   },
   mainVisual: {
     imageAlt:
-      "The main visual of Vue Fes Japan 2025. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors are deep matcha-like shades derived from the two colors used in the Vue.js logo, and the circle features a traditional Japanese gold marbling pattern.",
+      "The main visual of Vue Fes Japan 2025. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors are deep matcha-like shades derived from the two colors, and the circle features a Japanese gold marbling pattern.",
     webglAlt:
-      "The main visual animation of Vue Fes Japan 2025. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors gradually change, derived from the two colors used in the Vue.js logo.",
+      "The main visual animation of Vue Fes Japan 2025. It features a side-by-side silhouette of a V, which represents Vue, and a circle silhouette, which represents the Japanese flag Hinomaru, with a golden suminagashi pattern on the circle silhouette. The color of the silhouette changes at regular intervals along with the flowing sumi ink animation.",
   },
   logo: {
     alt: "Vue Fes Japan 2025 logo. It features a silhouette of a V, representing Vue, and a circle, representing the Japanese flag, side by side. The colors are deep matcha-like shades derived from the two colors used in the Vue.js logo.",
