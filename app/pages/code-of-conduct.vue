@@ -48,11 +48,6 @@ const { data: coc } = useAsyncData(`code-of-conduct-${locale.value}`, () =>
   width: 100%;
   border-radius: var(--radius-m);
   background-color: var(--color-white);
-  margin-bottom: 1.5rem;
-
-  @media (--mobile) {
-    margin-bottom: 0.5rem;
-  }
 
   .coc-content {
     padding: 3rem 3.5rem;
@@ -61,38 +56,32 @@ const { data: coc } = useAsyncData(`code-of-conduct-${locale.value}`, () =>
       font-size: 1.25rem;
     }
 
-    :deep(h2:not(.heading)) {
+    :deep(h2) {
       margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
       color: var(--color-text-default);
     }
 
-    :deep(p) {
-      margin-top: 0.5rem;
-    }
     :deep(p:first-of-type) {
       margin-top: 3rem;
     }
     :deep(ul) {
       list-style-type: initial;
-      margin-left: 1.5em;
+      margin: 0 0 0 1.5em;
     }
     :deep(ol) {
       list-style-type: decimal;
-      margin-left: 1.25em;
+      margin: 0 0 0 1.25em;
     }
     &.lang-en {
       :deep(ol) {
-        margin-left: 2em;
+        margin: 0 0 0 2em;
       }
     }
 
     @media (--mobile) {
-      padding: 0 1.5rem;
-      margin: 1.5rem 0;
+      padding: 2rem 1.5rem 3rem;
 
-      :deep(h2:not(.heading)) {
-        margin-top: 2.5rem;
-      }
       :deep(p:first-of-type) {
         margin-top: 1.5rem;
       }

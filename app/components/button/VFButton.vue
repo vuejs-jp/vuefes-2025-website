@@ -81,7 +81,6 @@ a {
   border: none;
   background-color: var(--color-base);
   color: var(--color-white);
-
   cursor: pointer;
 
   /* align to h2 */
@@ -102,33 +101,11 @@ a {
     font-family: JetBrainsMono-Bold;
   }
 
-  &:enabled:hover,
-  &:enabled:active {
-    background-color: var(--color-accent-hover);
-  }
-
-  &:disabled {
-    background-color: var(--color-place-holder);
-    color: var(--color-white);
-    cursor: not-allowed;
-  }
-
   &.button-outlined {
     background-color: transparent;
     border: 1px solid var(--color-place-holder);
     color: var(--color-text-default);
     text-decoration: none;
-
-    &:enabled:hover,
-    &:enabled:active {
-      border: 1px solid var(--color-base);
-      color: var(--color-base);
-    }
-
-    &:disabled {
-      border: 1px solid var(--color-divider-light);
-      color: var(--color-divider-light);
-    }
   }
 
   &.button-icon {
@@ -147,6 +124,63 @@ a {
     @media (--mobile) {
       height: 4rem;
       padding: 0;
+    }
+  }
+}
+
+button {
+  &:enabled:hover,
+  &:enabled:active {
+    background-color: var(--color-accent-hover);
+  }
+
+  &:disabled {
+    background-color: var(--color-place-holder);
+    color: var(--color-white);
+    cursor: not-allowed;
+  }
+
+  &.button-outlined {
+    &:enabled:hover,
+    &:enabled:active {
+      background-color: inherit;
+      border: 1px solid var(--color-base);
+      color: var(--color-base);
+    }
+
+    &:disabled {
+      border: 1px solid var(--color-divider-light);
+      color: var(--color-divider-light);
+    }
+  }
+
+  &.button-icon {
+    &:enabled:hover,
+    &:enabled:active {
+      background-color: var(--color-white);
+    }
+  }
+}
+
+a {
+  &:hover,
+  &:active {
+    background-color: var(--color-accent-hover);
+  }
+
+  &.button-outlined {
+    &:hover,
+    &:active {
+      background-color: inherit;
+      border: 1px solid var(--color-base);
+      color: var(--color-base);
+    }
+  }
+
+  &.button-icon {
+    &:hover,
+    &:active {
+      background-color: var(--color-white);
     }
   }
 }
