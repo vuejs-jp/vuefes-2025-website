@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   $production: {
     scripts: {
       registry: {
-        googleTagManager: {
+        googleAnalytics: {
           id: "G-H7VEJHSZH4",
         },
       },
