@@ -103,6 +103,7 @@ header {
         &.animation-control {
           margin-left: 0.5rem;
           @media (--mobile) {
+            height: 32px;
             margin-left: 0;
           }
         }

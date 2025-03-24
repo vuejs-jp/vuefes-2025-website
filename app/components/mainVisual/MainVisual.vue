@@ -51,7 +51,7 @@ const { titleTag = "h1", animation = true } = defineProps<{
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto 1fr auto;
-  height: 100svh;
+  height: 100dvh;
   width: 100%;
   box-sizing: border-box;
   color: var(--color-base);

@@ -283,9 +283,9 @@ const contactForm = (() => {
     button[type="submit"] {
       display: block;
       margin: 0 auto;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       @media (--mobile) {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
     }
   }
@@ -302,8 +302,15 @@ const contactForm = (() => {
 }
 
 .sns-introduction-heading {
+  font-size: 20px;
+  line-height: 34px;
   text-align: center;
   margin-top: 0;
   text-wrap-style: auto;
+
+  @media (--mobile) {
+    font-size: 18px;
+    line-height: 31px;
+  }
 }
 </style>

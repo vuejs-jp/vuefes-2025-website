@@ -18,7 +18,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     class="main-visual"
   />
 
-  <div v-if="isRoot" style="height: 100svh" />
+  <div v-if="isRoot" style="height: 100dvh" />
 
   <div class="content">
     <VFHeader class="header" />
@@ -26,7 +26,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     <VFFooter />
   </div>
 
-  <div v-if="isRoot" style="height: 100svh" />
+  <div style="height: 100dvh" />
 </template>
 
 <style scoped>
@@ -39,7 +39,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
 .content {
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   background-color: transparent;
   display: flex;
   row-gap: 1.5rem;
@@ -50,7 +50,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
   @media (--mobile) {
     row-gap: 1rem;
-    padding: 0.25rem;
+    padding: 0 0.25rem;
     max-width: none;
     width: 100%;
   }

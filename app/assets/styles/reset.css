@@ -96,3 +96,7 @@ textarea:not([rows]) {
 textarea {
   display: block;
 }
+
+p {
+  margin-top: 0;
+}

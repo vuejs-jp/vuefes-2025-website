@@ -80,8 +80,8 @@ body {
   }
 
   h2 {
-    font-size: 20px;
-    line-height: 34px;
+    font-size: 18px;
+    line-height: 31px;
   }
 
   h3 {
@@ -128,8 +128,8 @@ body {
     }
 
     h2 {
-      font-size: 18px;
-      line-height: 31px;
+      font-size: 16px;
+      line-height: 27px;
     }
 
     h3 {
@@ -186,6 +186,7 @@ body {
   h2,
   h3 {
     font-family: JetBrainsMono-Bold;
+    text-wrap-style: auto;
   }
 }
 
