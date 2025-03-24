@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/storybook",
     "@primevue/nuxt-module",
+    "@nuxt/scripts",
   ],
 
   site: {
@@ -70,6 +71,16 @@ export default defineNuxtConfig({
   content: {
     renderer: {
       anchorLinks: false,
+    },
+  },
+
+  $production: {
+    scripts: {
+      registry: {
+        googleTagManager: {
+          id: "G-H7VEJHSZH4",
+        },
+      },
     },
   },
 
