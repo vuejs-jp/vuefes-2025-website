@@ -16,11 +16,19 @@
   --color-purple-sub: #cde8ec;
   --color-orange-sub: #d7eccd;
   --color-navy-sub: #f9dbfd;
+
+  --color-primary-accent: #0d7d63;
+  --color-purple-accent: #7820cb;
+  --color-orange-accent: #e17439;
+  --color-navy-accent: #415ec5;
+
+  --color-primary-accent-hover: #045644;
+  --color-purple-accent-hover: #471e84;
+  --color-orange-accent-hover: #9d5f39;
+  --color-navy-accent-hover: #354181;
 }
 
 :root {
-  --color-accent: #0d7d63;
-  --color-accent-hover: #045644;
   --color-text-default: #516982;
   --color-divider: #dbe1e7;
   --color-divider-light: #efefef;
@@ -48,18 +56,26 @@ body {
   &.theme-primary {
     --color-base: var(--color-primary-base);
     --color-sub: var(--color-primary-sub);
+    --color-accent: var(--color-primary-accent);
+    --color-accent-hover: var(--color-primary-accent-hover);
   }
   &.theme-purple {
     --color-base: var(--color-purple-base);
     --color-sub: var(--color-purple-sub);
+    --color-accent: var(--color-purple-accent);
+    --color-accent-hover: var(--color-purple-accent-hover);
   }
   &.theme-orange {
     --color-base: var(--color-orange-base);
     --color-sub: var(--color-orange-sub);
+    --color-accent: var(--color-orange-accent);
+    --color-accent-hover: var(--color-orange-accent-hover);
   }
   &.theme-navy {
     --color-base: var(--color-navy-base);
     --color-sub: var(--color-navy-sub);
+    --color-accent: var(--color-navy-accent);
+    --color-accent-hover: var(--color-navy-accent-hover);
   }
 }
 
