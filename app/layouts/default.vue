@@ -22,7 +22,9 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
   <div class="content">
     <VFHeader class="header" />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <VFFooter />
   </div>
 
