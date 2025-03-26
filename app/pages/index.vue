@@ -161,8 +161,8 @@ const contactForm = (() => {
   <section class="contact">
     <div class="contact-content">
       <!-- NOTE: provide id for hash link from coc -->
-      <VFHeading id="contact-text">{{ t("contactForm.title") }}</VFHeading>
-      <div class="sponsor-wanted-text">
+      <VFHeading id="contact-form">{{ t("contactForm.title") }}</VFHeading>
+      <div class="contact-text">
         <p>{{ t("contactForm.description") }}</p>
       </div>
       <VFForm
