@@ -232,6 +232,7 @@ const contactForm = (() => {
   border-radius: var(--radius-m);
   background-color: var(--color-white);
   border: 1px solid var(--color-divider-light);
+  margin-bottom: 0.5rem;
 
   img {
     border-radius: var(--radius-m) var(--radius-m) 0 0;
@@ -305,12 +306,13 @@ const contactForm = (() => {
   font-size: 20px;
   line-height: 34px;
   text-align: center;
-  margin-top: 0;
+  margin-top: 1.5rem;
   text-wrap-style: auto;
-
+  
   @media (--mobile) {
     font-size: 18px;
     line-height: 31px;
+    margin-top: 1rem;
   }
 }
 </style>
