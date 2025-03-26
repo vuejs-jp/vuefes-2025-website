@@ -146,15 +146,16 @@ const contactForm = (() => {
         :value="sponsorWanted"
         class="sponsor-wanted-text"
       />
-      <VFButton
+
+      <!-- TODO: 2025-04-22 -->
+      <!-- <VFButton
         class="sponsor-apply-button"
-        @click="
-          () => {
-            // TODO: link to form
-          }
+        :link="
+          // TODO: link to form
+          ''
         "
         >{{ t("sponsorApplyButton") }}</VFButton
-      >
+      > -->
     </div>
   </section>
 
