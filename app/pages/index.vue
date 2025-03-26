@@ -308,7 +308,7 @@ const contactForm = (() => {
   text-align: center;
   margin-top: 1.5rem;
   text-wrap-style: auto;
-  
+
   @media (--mobile) {
     font-size: 18px;
     line-height: 31px;
