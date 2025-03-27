@@ -7,35 +7,35 @@
   ------------------------------------------ */
 
 :root {
-  --color-primary-base: #0d7d63;
-  --color-purple-base: #7820cb;
-  --color-orange-base: #e17439;
-  --color-navy-base: #415ec5;
+  --color-primary-base: #007f62;
+  --color-purple-base: #8314d3;
+  --color-orange-base: #f66c21;
+  --color-navy-base: #385fcc;
 
-  --color-primary-sub: #f7e8e4;
-  --color-purple-sub: #cde8ec;
-  --color-orange-sub: #d7eccd;
-  --color-navy-sub: #f9dbfd;
+  --color-primary-sub: #fae8e4;
+  --color-purple-sub: #d0edf2;
+  --color-orange-sub: #def7d1;
+  --color-navy-sub: #ffdaff;
 
-  --color-primary-accent: #0d7d63;
-  --color-purple-accent: #7820cb;
-  --color-orange-accent: #e17439;
-  --color-navy-accent: #415ec5;
+  --color-primary-accent: #007f62;
+  --color-purple-accent: #8314d3;
+  --color-orange-accent: #f66c21;
+  --color-navy-accent: #385fcc;
 
-  --color-primary-accent-hover: #045644;
-  --color-purple-accent-hover: #471e84;
-  --color-orange-accent-hover: #9d5f39;
-  --color-navy-accent-hover: #354181;
+  --color-primary-accent-hover: #245846;
+  --color-purple-accent-hover: #54178e;
+  --color-orange-accent-hover: #a05227;
+  --color-navy-accent-hover: #2d428a;
 }
 
 :root {
-  --color-text-default: #516982;
-  --color-divider: #dbe1e7;
+  --color-text-default: #3c576f;
+  --color-divider: #dae1e8;
   --color-divider-light: #efefef;
-  --color-place-holder: #bbbbbb;
-  --color-black: #333333;
-  --color-white: #ffffff;
-  --color-alert: #c81a1a;
+  --color-place-holder: #bbb;
+  --color-black: #333;
+  --color-white: #fff;
+  --color-alert: #db0000;
 }
 
 body {
