@@ -106,12 +106,16 @@ header {
             height: 32px;
             margin-left: 0;
           }
-        }
 
-        &.animation-control:disabled {
-          /* to alter svg stroke */
-          --color-base: var(--color-place-holder);
-          cursor: not-allowed;
+          &:disabled {
+            /* to alter svg stroke */
+            --color-base: var(--color-place-holder);
+            cursor: not-allowed;
+          }
+
+          &:hover {
+            --color-base: var(--color-accent-hover);
+          }
         }
       }
     }

@@ -18,13 +18,14 @@ const { t } = useI18n<{ message: MessageSchema }>();
 <template>
   <footer>
     <div class="sns-container">
-      <VFButton icon link="https://x.com/vuefes" external>
+      <VFButton icon link="https://x.com/vuefes" external class="sns-button">
         <XIcon :aria-label="t('snsIconImageAlt.x')" role="img" />
       </VFButton>
       <VFButton
         icon
         link="https://bsky.app/profile/vuefes.bsky.social"
         external
+        class="sns-button"
       >
         <BlueskyIcon :aria-label="t('snsIconImageAlt.bluesky')" role="img" />
       </VFButton>
@@ -32,13 +33,24 @@ const { t } = useI18n<{ message: MessageSchema }>();
         icon
         link="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA"
         external
+        class="sns-button"
       >
         <YoutubeIcon :aria-label="t('snsIconImageAlt.youtube')" role="img" />
       </VFButton>
-      <VFButton icon link="https://github.com/vuejs-jp" external>
+      <VFButton
+        icon
+        link="https://github.com/vuejs-jp"
+        external
+        class="sns-button"
+      >
         <GithubIcon :aria-label="t('snsIconImageAlt.github')" role="img" />
       </VFButton>
-      <VFButton icon link="https://note.com/vuejs_jp/m/mb35849fee631" external>
+      <VFButton
+        icon
+        link="https://note.com/vuejs_jp/m/mb35849fee631"
+        external
+        class="sns-button"
+      >
         <NoteIcon :aria-label="t('snsIconImageAlt.note')" role="img" />
       </VFButton>
     </div>
@@ -134,9 +146,8 @@ footer {
       }
     }
 
-    :deep(svg):hover,
-    :deep(path):hover {
-      fill: var(--color-accent-hover);
+    .sns-button:hover {
+      --color-base: var(--color-accent-hover);
     }
   }
 
