@@ -46,14 +46,7 @@ const handleWebGLInitialized = () => {
     </div>
 
     <div v-else-if="appearance === 'png'" class="main-visual-graphic-wrapper">
-      <img
-        src="/images/main-visual.png"
-        :alt="$t('mainVisual.imageAlt')"
-        :style="{
-          opacity: webGLLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-out',
-        }"
-      />
+      <img src="/images/main-visual.png" :alt="$t('mainVisual.imageAlt')" />
     </div>
   </Transition>
 </template>
