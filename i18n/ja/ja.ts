@@ -47,6 +47,7 @@ export default {
   snsIntroduction: "最新情報は公式SNSをご覧ください",
   snsIconImageAlt: {
     x: "X(旧Twitter)アイコン",
+    bluesky: "Blueskyアイコン",
     youtube: "YouTubeアイコン",
     github: "GitHubアイコン",
     note: "noteアイコン",

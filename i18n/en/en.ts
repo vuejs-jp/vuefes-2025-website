@@ -45,6 +45,7 @@ export default {
     "Please check our official social media for the latest updates.",
   snsIconImageAlt: {
     x: "X (formerly Twitter) icon",
+    bluesky: "Bluesky icon",
     youtube: "YouTube icon",
     github: "GitHub icon",
     note: "note icon",

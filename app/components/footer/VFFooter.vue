@@ -7,6 +7,7 @@ import XIcon from "~icons/icons/ic_x";
 import YoutubeIcon from "~icons/icons/ic_youtube";
 import GithubIcon from "~icons/icons/ic_github";
 import NoteIcon from "~icons/icons/ic_note";
+import BlueskyIcon from "~icons/icons/ic_bluesky";
 
 import Logo from "~icons/logo/logo";
 
@@ -19,6 +20,13 @@ const { t } = useI18n<{ message: MessageSchema }>();
     <div class="sns-container">
       <VFButton icon link="https://x.com/vuefes" external>
         <XIcon :aria-label="t('snsIconImageAlt.x')" role="img" />
+      </VFButton>
+      <VFButton
+        icon
+        link="https://bsky.app/profile/vuefes.bsky.social"
+        external
+      >
+        <BlueskyIcon :aria-label="t('snsIconImageAlt.bluesky')" role="img" />
       </VFButton>
       <VFButton
         icon
@@ -113,7 +121,7 @@ footer {
 
   .sns-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
 
     :deep(svg) {
@@ -124,6 +132,11 @@ footer {
         width: 24px;
         height: 24px;
       }
+    }
+
+    :deep(svg):hover,
+    :deep(path):hover {
+      fill: var(--color-accent-hover);
     }
   }
 

@@ -34,6 +34,7 @@ export type MessageSchema = {
   snsIntroduction: string;
   snsIconImageAlt: {
     x: string;
+    bluesky: string;
     youtube: string;
     github: string;
     note: string;
