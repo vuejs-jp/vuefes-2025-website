@@ -19,8 +19,8 @@ const handleWebGLInitialized = () => {
 </script>
 
 <template>
-  <div class="main-visual-graphic-wrapper">
-    <template v-if="appearance === 'webgl'">
+  <Transition mode="out-in">
+    <div v-if="appearance === 'webgl'" class="main-visual-graphic-wrapper">
       <MainVisualWebGL
         :animation="_animation"
         :style="{
@@ -43,12 +43,19 @@ const handleWebGLInitialized = () => {
         src="/images/main-visual.png"
         :alt="$t('mainVisual.imageAlt')"
       />
-    </template>
+    </div>
 
-    <template v-else-if="appearance === 'png'">
-      <img src="/images/main-visual.png" :alt="$t('mainVisual.imageAlt')" />
-    </template>
-  </div>
+    <div v-else-if="appearance === 'png'" class="main-visual-graphic-wrapper">
+      <img
+        src="/images/main-visual.png"
+        :alt="$t('mainVisual.imageAlt')"
+        :style="{
+          opacity: webGLLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-out',
+        }"
+      />
+    </div>
+  </Transition>
 </template>
 
 <style scoped>
@@ -70,5 +77,15 @@ const handleWebGLInitialized = () => {
   min-width: 1px;
   min-height: 160px;
   object-fit: contain;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
