@@ -18,7 +18,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     class="main-visual"
   />
 
-  <div v-if="isRoot" style="height: 100dvh" />
+  <div v-if="isRoot" style="height: 100svh" />
 
   <div class="content">
     <VFHeader class="header" />
@@ -28,7 +28,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     <VFFooter />
   </div>
 
-  <div style="height: 100dvh" />
+  <div style="height: 100lvh" />
 </template>
 
 <style scoped>
