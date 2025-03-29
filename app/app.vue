@@ -2,22 +2,17 @@
 import "~/assets/styles/main.css";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
-import {
-  useI18n,
-
-  // NOTE: import useHead to avoid `useHead is not defined` error
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  useHead,
-  useSeoMeta,
-} from "#imports";
+import { useI18n, useHead, useSeoMeta } from "#imports";
 import { NuxtPage, NuxtRouteAnnouncer } from "#components";
 import { useAutoThemeChanger } from "./stores/animation";
 
 const { t } = useI18n<{ message: MessageSchema }>();
 
+useHead({ templateParams: { separator: "-" } });
 useSeoMeta({
+  titleTemplate: `${t("nuxtSiteConfig.name")} %separator %s`,
+  ogTitle: `${t("nuxtSiteConfig.name")} %separator %s`,
   ogImage: "https://vuefes.jp/2025/og-image.png",
-  titleTemplate: (s) => `${t("nuxtSiteConfig.name")}${s ? ` – ${s}` : ""}`,
 });
 
 useAutoThemeChanger();
