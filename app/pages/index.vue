@@ -9,6 +9,7 @@ import {
   useBreakpoint,
   useI18n,
   useRuntimeConfig,
+  useWithBase,
 
   // NOTE: import useHead to avoid `useHead is not defined` error
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -31,6 +32,7 @@ import type { MessageSchema } from "~~/i18n/message-schema";
 defineRouteRules({ prerender: true });
 
 const config = useRuntimeConfig();
+const withBase = useWithBase();
 
 const { locale, t } = useI18n<{ message: MessageSchema }>();
 
@@ -116,8 +118,8 @@ const contactForm = (() => {
       <img
         :src="
           bp === 'pc'
-            ? '/images/top/cover/message-pc.png'
-            : '/images/top/cover/message-sp.png'
+            ? withBase('/images/top/cover/message-pc.png')
+            : withBase('/images/top/cover/message-sp.png')
         "
         :alt="t('messageCoverImageAlt')"
       />
@@ -135,8 +137,8 @@ const contactForm = (() => {
       <img
         :src="
           bp === 'pc'
-            ? '/images/top/cover/sponsor-wanted-pc.svg'
-            : '/images/top/cover/sponsor-wanted-sp.svg'
+            ? withBase('/images/top/cover/sponsor-wanted-pc.svg')
+            : withBase('/images/top/cover/sponsor-wanted-sp.svg')
         "
         :alt="t('sponsorWantedCoverImageAlt')"
       />
