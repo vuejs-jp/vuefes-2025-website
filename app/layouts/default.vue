@@ -63,11 +63,9 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 
   @media (--mobile) {
     padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
   }
 }
 </style>
