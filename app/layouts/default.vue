@@ -22,7 +22,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
   <div class="content">
     <VFHeader class="header" />
-    <main class="main">
+    <main>
       <slot />
     </main>
     <VFFooter />
@@ -68,14 +68,6 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   @media (--mobile) {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-  }
-}
-
-.main {
-  margin-top: 0.5rem;
-
-  @media (--mobile) {
-    margin-top: 0.25rem;
   }
 }
 </style>
