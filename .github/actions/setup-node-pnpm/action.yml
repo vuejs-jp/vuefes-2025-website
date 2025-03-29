@@ -13,7 +13,7 @@ runs:
     - name: Setup Node
       uses: actions/setup-node@v4
       with:
-        node-version: 23
+        node-version: 22
 
     - uses: pnpm/action-setup@v2
       name: Install pnpm
