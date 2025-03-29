@@ -236,7 +236,7 @@ const BASE_SIZE = {
 // カラーセットの定義
 const COLOR_SETS = {
   set1: {
-    color1: "#0B745B",
+    color1: "#007F62",
     color2: "#16C787",
     color3: "#C6A167",
   },
@@ -246,12 +246,12 @@ const COLOR_SETS = {
     color3: "#EE7F88",
   },
   set3: {
-    color1: "#E56D46",
+    color1: "#F66C21",
     color2: "#FA8663",
     color3: "#004E4B",
   },
   set4: {
-    color1: "#3741E4",
+    color1: "#385FCC",
     color2: "#FF9301",
     color3: "#FFB2DC",
   },
@@ -345,6 +345,10 @@ const init = () => {
 
   mat1 = createMaterial();
   mat2 = createMaterial();
+
+  if (mat1.uniforms.uColorSet2) {
+    mat1.uniforms.uColorSet2.value.color1 = new THREE.Color("#8314D3");
+  }
 
   leftCone = new THREE.Mesh(coneGeometry, mat1);
   leftCone.rotation.x = Math.PI;
