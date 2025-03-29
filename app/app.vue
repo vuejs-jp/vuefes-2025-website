@@ -16,7 +16,7 @@ import { useAutoThemeChanger } from "./stores/animation";
 const { t } = useI18n<{ message: MessageSchema }>();
 
 useSeoMeta({
-  ogImage: "/og-image.png",
+  ogImage: "https://vuefes.jp/2025/og-image.png",
   titleTemplate: (s) => `${t("nuxtSiteConfig.name")}${s ? ` – ${s}` : ""}`,
 });
 
