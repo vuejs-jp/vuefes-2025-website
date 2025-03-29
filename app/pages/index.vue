@@ -111,44 +111,45 @@ const contactForm = (() => {
 </script>
 
 <template>
-  <section class="message">
-    <img
-      :src="
-        bp === 'pc'
-          ? '/images/top/cover/message-pc.png'
-          : '/images/top/cover/message-sp.png'
-      "
-      :alt="t('messageCoverImageAlt')"
-    />
-    <div class="message-content">
-      <VFHeading>{{ t("message") }}</VFHeading>
-      <ContentRenderer
-        v-if="message"
-        :value="message"
-        class="message-content-text"
+  <div class="section-container">
+    <section class="message">
+      <img
+        :src="
+          bp === 'pc'
+            ? '/images/top/cover/message-pc.png'
+            : '/images/top/cover/message-sp.png'
+        "
+        :alt="t('messageCoverImageAlt')"
       />
-    </div>
-  </section>
+      <div class="message-content">
+        <VFHeading>{{ t("message") }}</VFHeading>
+        <ContentRenderer
+          v-if="message"
+          :value="message"
+          class="message-content-text"
+        />
+      </div>
+    </section>
 
-  <section class="sponsor-wanted">
-    <img
-      :src="
-        bp === 'pc'
-          ? '/images/top/cover/sponsor-wanted-pc.svg'
-          : '/images/top/cover/sponsor-wanted-sp.svg'
-      "
-      :alt="t('sponsorWantedCoverImageAlt')"
-    />
-    <div class="sponsor-wanted-content">
-      <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
-      <ContentRenderer
-        v-if="sponsorWanted"
-        :value="sponsorWanted"
-        class="sponsor-wanted-text"
+    <section class="sponsor-wanted">
+      <img
+        :src="
+          bp === 'pc'
+            ? '/images/top/cover/sponsor-wanted-pc.svg'
+            : '/images/top/cover/sponsor-wanted-sp.svg'
+        "
+        :alt="t('sponsorWantedCoverImageAlt')"
       />
+      <div class="sponsor-wanted-content">
+        <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
+        <ContentRenderer
+          v-if="sponsorWanted"
+          :value="sponsorWanted"
+          class="sponsor-wanted-text"
+        />
 
-      <!-- TODO: 2025-04-22 -->
-      <!-- <VFButton
+        <!-- TODO: 2025-04-22 -->
+        <!-- <VFButton
         class="sponsor-apply-button"
         :link="
           // TODO: link to form
@@ -156,64 +157,65 @@ const contactForm = (() => {
         "
         >{{ t("sponsorApplyButton") }}</VFButton
       > -->
-    </div>
-  </section>
-
-  <section class="contact">
-    <div class="contact-content">
-      <!-- NOTE: provide id for hash link from coc -->
-      <VFHeading id="contact-form">{{ t("contactForm.title") }}</VFHeading>
-      <div class="contact-text">
-        <p>{{ t("contactForm.description") }}</p>
       </div>
-      <VFForm
-        :state="contactForm.state"
-        :schema="contactForm.schema"
-        @submit="contactForm.submit"
-      >
-        <template #default="$form">
-          <div class="contact-form-items">
-            <VFInput
-              name="name"
-              required
-              :label="t('contactForm.formFields.name.label')"
-              :placeholder="t('contactForm.formFields.name.placeholder')"
-              :form-state="$form.name"
-            />
-            <VFInput
-              name="email"
-              required
-              :label="t('contactForm.formFields.email.label')"
-              :placeholder="t('contactForm.formFields.email.placeholder')"
-              :form-state="$form.email"
-            />
-            <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-            <VFTextarea
-              name="content"
-              required
-              :label="t('contactForm.formFields.content.label')"
-              :placeholder="t('contactForm.formFields.content.placeholder')"
-              :form-state="$form.content"
-            />
-          </div>
-          <VFButton
-            type="submit"
-            :disabled="
-              !(
-                $form.name?.touched &&
-                $form.name?.valid &&
-                $form.email?.touched &&
-                $form.email?.valid &&
-                $form.content?.touched &&
-                $form.content?.valid
-              )
-            "
-            >{{ t("contactForm.formFields.submit.label") }}</VFButton
-          >
-        </template>
-      </VFForm>
-    </div>
-  </section>
+    </section>
+
+    <section class="contact">
+      <div class="contact-content">
+        <!-- NOTE: provide id for hash link from coc -->
+        <VFHeading id="contact-form">{{ t("contactForm.title") }}</VFHeading>
+        <div class="contact-text">
+          <p>{{ t("contactForm.description") }}</p>
+        </div>
+        <VFForm
+          :state="contactForm.state"
+          :schema="contactForm.schema"
+          @submit="contactForm.submit"
+        >
+          <template #default="$form">
+            <div class="contact-form-items">
+              <VFInput
+                name="name"
+                required
+                :label="t('contactForm.formFields.name.label')"
+                :placeholder="t('contactForm.formFields.name.placeholder')"
+                :form-state="$form.name"
+              />
+              <VFInput
+                name="email"
+                required
+                :label="t('contactForm.formFields.email.label')"
+                :placeholder="t('contactForm.formFields.email.placeholder')"
+                :form-state="$form.email"
+              />
+              <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
+              <VFTextarea
+                name="content"
+                required
+                :label="t('contactForm.formFields.content.label')"
+                :placeholder="t('contactForm.formFields.content.placeholder')"
+                :form-state="$form.content"
+              />
+            </div>
+            <VFButton
+              type="submit"
+              :disabled="
+                !(
+                  $form.name?.touched &&
+                  $form.name?.valid &&
+                  $form.email?.touched &&
+                  $form.email?.valid &&
+                  $form.content?.touched &&
+                  $form.content?.valid
+                )
+              "
+              >{{ t("contactForm.formFields.submit.label") }}</VFButton
+            >
+          </template>
+        </VFForm>
+      </div>
+    </section>
+  </div>
 
   <h2 class="sns-introduction-heading">{{ t("snsIntroduction") }}</h2>
 
@@ -222,6 +224,16 @@ const contactForm = (() => {
 
 <style scoped>
 @import "~/assets/styles/custom-media-query.css";
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  @media (--mobile) {
+    row-gap: 1rem;
+  }
+}
 
 .message,
 .sponsor-wanted,
@@ -233,7 +245,6 @@ const contactForm = (() => {
   border-radius: var(--radius-m);
   background-color: var(--color-white);
   border: 1px solid var(--color-divider-light);
-  margin-bottom: 0.5rem;
 
   img {
     border-radius: var(--radius-m) var(--radius-m) 0 0;
