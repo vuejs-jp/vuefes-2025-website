@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useI18n } from "#imports";
+import { useI18n, useLocalePath } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 import { useAnimationStore } from "~/stores/animation";
 
@@ -7,6 +7,7 @@ import Logo from "~icons/logo/logo";
 import AnimationPlay from "~icons/icons/animation-play";
 import AnimationPause from "~icons/icons/animation-pause";
 
+const localePath = useLocalePath();
 const { locale, setLocale, t } = useI18n<{ message: MessageSchema }>();
 const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
   useAnimationStore();
@@ -15,7 +16,9 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
 <template>
   <header>
     <div class="header">
-      <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+      <NuxtLink :to="localePath('/')" :title="t('backTop')" class="logo">
+        <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+      </NuxtLink>
       <div class="header-control">
         <button
           type="button"
@@ -70,14 +73,23 @@ header {
       padding: 1.25rem 1.125rem 1rem 1.5rem;
     }
 
-    .logo-image {
-      display: block;
-      width: 258px;
-      height: 48px;
+    .logo {
+      &:hover {
+        :deep(svg),
+        :deep(path) {
+          fill: var(--color-accent-hover) !important;
+        }
+      }
 
-      @media (--mobile) {
-        width: 172px;
-        height: 32px;
+      .logo-image {
+        display: block;
+        width: 258px;
+        height: 48px;
+
+        @media (--mobile) {
+          width: 172px;
+          height: 32px;
+        }
       }
     }
 

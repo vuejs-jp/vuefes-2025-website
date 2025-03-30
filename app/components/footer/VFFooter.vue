@@ -56,7 +56,9 @@ const { t } = useI18n<{ message: MessageSchema }>();
     </div>
 
     <div class="container">
-      <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+      <NuxtLink :to="localePath('/')" :title="t('backTop')" class="logo">
+        <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+      </NuxtLink>
       <div class="links">
         <ul class="past-vuefes-links">
           <li>
@@ -167,14 +169,18 @@ footer {
       padding: 2.5rem 1.5rem;
     }
 
-    .logo-image {
-      display: block;
-      width: 301px;
-      height: 56px;
+    .logo {
+      display: inline-block;
 
-      @media (--mobile) {
-        width: 215px;
-        height: 40px;
+      .logo-image {
+        display: block;
+        width: 301px;
+        height: 56px;
+
+        @media (--mobile) {
+          width: 215px;
+          height: 40px;
+        }
       }
     }
 
