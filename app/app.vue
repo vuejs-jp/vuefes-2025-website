@@ -8,10 +8,12 @@ import { useAutoThemeChanger } from "./stores/animation";
 
 const { t } = useI18n<{ message: MessageSchema }>();
 
+const pageTitle = `${t("nuxtSiteConfig.name")} %separator %s`;
+
 useHead({ templateParams: { separator: "-" } });
 useSeoMeta({
-  titleTemplate: `${t("nuxtSiteConfig.name")} %separator %s`,
-  ogTitle: `${t("nuxtSiteConfig.name")} %separator %s`,
+  titleTemplate: pageTitle,
+  ogTitle: pageTitle,
   ogImage: "https://vuefes.jp/2025/og-image.png",
 });
 
