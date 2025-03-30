@@ -2,6 +2,10 @@
   command = "pnpm rebuild && pnpm build"
   publish = "dist/"
 
+[build.processing.html]
+  # Rewrite link URLs to pretty URLs (/about.html -> /about, /about/index.html -> /about/)
+  pretty_urls = true
+
 [[redirects]]
   # get contents from dist/* by accessing /2025/*
   from = "/2025/*"
