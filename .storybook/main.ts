@@ -7,6 +7,7 @@ const config: StorybookConfig = {
       from: "../app/assets/",
       to: "~/assets/",
     },
+    "../public",
   ],
   addons: [
     {

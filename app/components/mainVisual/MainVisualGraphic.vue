@@ -54,6 +54,7 @@ const handleWebGLInitialized = () => {
 <style scoped>
 .main-visual-graphic-wrapper {
   position: relative;
+  z-index: 1;
   width: 100%;
   height: auto;
   display: flex;

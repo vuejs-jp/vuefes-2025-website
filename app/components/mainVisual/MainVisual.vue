@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import MainVisualGraphic from "./MainVisualGraphic.vue";
+import VFScrollAttention from "~/components/scrollAttention/VFScrollAttention.vue";
 
-const { titleTag = "h1", animation = true } = defineProps<{
+const {
+  titleTag = "h1",
+  animation = true,
+  showScrollAttention = false,
+} = defineProps<{
   titleTag?: "h1" | "div";
   animation?: boolean;
+  showScrollAttention?: boolean;
 }>();
 </script>
 
@@ -41,6 +47,8 @@ const { titleTag = "h1", animation = true } = defineProps<{
         <span>カンファレンス</span>
       </div>
     </div>
+
+    <VFScrollAttention v-if="showScrollAttention" />
   </section>
 </template>
 
@@ -70,6 +78,7 @@ const { titleTag = "h1", animation = true } = defineProps<{
   &::before {
     content: "";
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;

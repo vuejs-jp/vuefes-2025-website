@@ -46,7 +46,7 @@ export const Icon: StoryFn<{ icon: boolean }> = () => ({
       style={{ width: "70px", height: "70px" }}
     >
       <img
-        src="~/assets/icons/ic_github.svg"
+        src="/images/icons/ic_github.svg"
         alt="GitHub icon"
         width="48px"
         height="48px"

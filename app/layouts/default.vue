@@ -15,6 +15,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   <MainVisual
     :title-tag="isRoot ? 'h1' : 'div'"
     :animation
+    :show-scroll-attention="isRoot"
     class="main-visual"
   />
 
