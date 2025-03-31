@@ -6,11 +6,16 @@
     "name": "ubugeeei",
     "email": "ubuge1122@gmail.com"
   },
-  "engines": {
-    "node": "22"
-  },
   "packageManager": "pnpm@10.6.3",
+  "engines": {
+    "node": "22",
+    "pnpm": ">=10"
+  },
+  "//": "NOTE: align to Netlify's Node.js version",
   "pnpm": {
+    "executionEnv": {
+      "nodeVersion": "22.14.0"
+    },
     "onlyBuiltDependencies": [
       "better-sqlite3",
       "esbuild",
