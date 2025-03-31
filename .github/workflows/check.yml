@@ -17,9 +17,6 @@ jobs:
       - name: Check Spelling
         run: pnpm spell
 
-      - name: Check Formatting
-        run: pnpm fmt:check
-
       - name: Check Linting
         run: pnpm lint
 

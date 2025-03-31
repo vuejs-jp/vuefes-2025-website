@@ -40,8 +40,9 @@ useSeoMeta({ title: "" });
 
 const bp = useBreakpoint();
 
-const { data: message } = useAsyncData(`message-${locale.value}`, () =>
-  queryCollection("i18n").path(`/${locale.value}/message`).first(),
+const { data: message } = useAsyncData(
+  `message-${locale.value}`,
+  () => queryCollection("i18n").path(`/${locale.value}/message`).first(),
 );
 
 const { data: sponsorWanted } = useAsyncData(
@@ -53,24 +54,16 @@ const contactForm = (() => {
   const toast = useToast();
 
   const schema = z.object({
-    name: z.string().nonempty(
-      t("validation.required", {
-        target: t("contactForm.formFields.name.label"),
-      }),
-    ),
+    name: z
+      .string()
+      .nonempty(t("validation.required", { target: t("contactForm.formFields.name.label") })),
     email: z
       .string()
-      .nonempty(
-        t("validation.required", {
-          target: t("contactForm.formFields.email.label"),
-        }),
-      )
+      .nonempty(t("validation.required", { target: t("contactForm.formFields.email.label") }))
       .email(t("validation.email")),
-    content: z.string().nonempty(
-      t("validation.required", {
-        target: t("contactForm.formFields.content.label"),
-      }),
-    ),
+    content: z
+      .string()
+      .nonempty(t("validation.required", { target: t("contactForm.formFields.content.label") })),
   });
 
   type State = Partial<z.infer<typeof schema>>;
@@ -98,7 +91,8 @@ const contactForm = (() => {
           type: "success",
           message: t("contactForm.successMessage"),
         });
-      } catch (error) {
+      }
+      catch (error) {
         console.error(error);
         toast.open({
           type: "alert",
@@ -165,7 +159,9 @@ const contactForm = (() => {
     <section class="contact">
       <div class="contact-content">
         <!-- NOTE: provide id for hash link from coc -->
-        <VFHeading id="contact-form">{{ t("contactForm.title") }}</VFHeading>
+        <VFHeading id="contact-form">
+          {{ t("contactForm.title") }}
+        </VFHeading>
         <div class="contact-text">
           <p>{{ t("contactForm.description") }}</p>
         </div>
@@ -203,23 +199,26 @@ const contactForm = (() => {
               type="submit"
               :disabled="
                 !(
-                  $form.name?.touched &&
-                  $form.name?.valid &&
-                  $form.email?.touched &&
-                  $form.email?.valid &&
-                  $form.content?.touched &&
-                  $form.content?.valid
+                  $form.name?.touched
+                  && $form.name?.valid
+                  && $form.email?.touched
+                  && $form.email?.valid
+                  && $form.content?.touched
+                  && $form.content?.valid
                 )
               "
-              >{{ t("contactForm.formFields.submit.label") }}</VFButton
             >
+              {{ t("contactForm.formFields.submit.label") }}
+            </VFButton>
           </template>
         </VFForm>
       </div>
     </section>
   </div>
 
-  <h2 class="sns-introduction-heading">{{ t("snsIntroduction") }}</h2>
+  <h2 class="sns-introduction-heading">
+    {{ t("snsIntroduction") }}
+  </h2>
 
   <VFToast :state="contactForm.toastState.value" />
 </template>

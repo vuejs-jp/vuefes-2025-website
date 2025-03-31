@@ -15,7 +15,7 @@ export default {
 const Template: StoryFn<{
   animation: boolean;
   showScrollAttention: boolean;
-}> = (args) => ({
+}> = args => ({
   name: "MainVisual",
   setup: () => () => <MainVisual {...args} />,
 });

@@ -9,8 +9,7 @@ import AnimationPause from "~icons/icons/animation-pause";
 
 const localePath = useLocalePath();
 const { locale, setLocale, t } = useI18n<{ message: MessageSchema }>();
-const [animationEnabled, setAnimationEnabled, isWebGLSupported] =
-  useAnimationStore();
+const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationStore();
 </script>
 
 <template>

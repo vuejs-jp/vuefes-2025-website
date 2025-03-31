@@ -23,7 +23,7 @@ const Template: StoryFn<{
   type: "button" | "submit" | "reset";
   outlined: boolean;
   icon: boolean;
-}> = (args) => ({
+}> = args => ({
   name: "VFButton",
   setup: () => () => (
     <VFButton {...args} onClick={() => console.log("clicked")}>

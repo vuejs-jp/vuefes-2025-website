@@ -65,32 +65,32 @@ const Colors = () => (
       </div>
       <div
         style={
-          colorStyle +
-          "color: var(--color-primary); background: var(--color-divider);"
+          colorStyle
+          + "color: var(--color-primary); background: var(--color-divider);"
         }
       >
         Divider
       </div>
       <div
         style={
-          colorStyle +
-          "color: var(--color-primary); background: var(--color-divider-light);"
+          colorStyle
+          + "color: var(--color-primary); background: var(--color-divider-light);"
         }
       >
         Divider Light
       </div>
       <div
         style={
-          colorStyle +
-          "color: var(--color-primary); background: var(--color-place-holder);"
+          colorStyle
+          + "color: var(--color-primary); background: var(--color-place-holder);"
         }
       >
         Place Holder
       </div>
       <div
         style={
-          colorStyle +
-          "color: var(--color-primary); background: var(--color-white);"
+          colorStyle
+          + "color: var(--color-primary); background: var(--color-white);"
         }
       >
         White
@@ -124,19 +124,27 @@ const Typography = () => (
       <h2>H2</h2>
       <h3>H3</h3>
       <p>
-        BODY1 <br />
+        BODY1
+        {" "}
+        <br />
         昨日、スーパーで３つのApple製品と５個のバナナを購入し、友人のミカさんにEメールで報告しました。
       </p>
       <p class="text-body-2">
-        BODY2 <br />
+        BODY2
+        {" "}
+        <br />
         昨日、スーパーで３つのApple製品と５個のバナナを購入し、友人のミカさんにEメールで報告しました。
       </p>
       <p class="text-body-3">
-        BODY3 <br />
+        BODY3
+        {" "}
+        <br />
         昨日、スーパーで３つのApple製品と５個のバナナを購入し、友人のミカさんにEメールで報告しました。
       </p>
       <p class="text-caption">
-        CAPTION <br />
+        CAPTION
+        {" "}
+        <br />
         昨日、スーパーで３つのApple製品と５個のバナナを購入し、友人のミカさんにEメールで報告しました。
       </p>
     </div>
@@ -148,22 +156,30 @@ const Typography = () => (
       <h2>H2</h2>
       <h3>H3</h3>
       <p>
-        BODY1 <br />
+        BODY1
+        {" "}
+        <br />
         The quick brown fox jumps over the lazy dog the quick brown fox jumps
         over the lazy dog.
       </p>
       <p class="text-body-2">
-        BODY2 <br />
+        BODY2
+        {" "}
+        <br />
         The quick brown fox jumps over the lazy dog the quick brown fox jumps
         over the lazy dog.
       </p>
       <p class="text-body-3">
-        BODY3 <br />
+        BODY3
+        {" "}
+        <br />
         The quick brown fox jumps over the lazy dog the quick brown fox jumps
         over the lazy dog.
       </p>
       <p class="text-caption">
-        CAPTION <br />
+        CAPTION
+        {" "}
+        <br />
         The quick brown fox jumps over the lazy dog the quick brown fox jumps
         over the lazy dog.
       </p>

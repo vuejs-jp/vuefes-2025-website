@@ -62,34 +62,22 @@ const { t } = useI18n<{ message: MessageSchema }>();
       <div class="links">
         <ul class="past-vuefes-links">
           <li>
-            <NuxtLink to="https://vuefes.jp/2024" external target="_blank"
-              >Vue Fes Japan 2024</NuxtLink
-            >
+            <NuxtLink to="https://vuefes.jp/2024" external target="_blank">Vue Fes Japan 2024</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="https://vuefes.jp/2023" external target="_blank"
-              >Vue Fes Japan 2023</NuxtLink
-            >
+            <NuxtLink to="https://vuefes.jp/2023" external target="_blank">Vue Fes Japan 2023</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="https://vuefes.jp/2022" external target="_blank"
-              >Vue Fes Japan Online 2022</NuxtLink
-            >
+            <NuxtLink to="https://vuefes.jp/2022" external target="_blank">Vue Fes Japan Online 2022</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="https://vuefes.jp/2020" external target="_blank"
-              >Vue Fes Japan 2020</NuxtLink
-            >
+            <NuxtLink to="https://vuefes.jp/2020" external target="_blank">Vue Fes Japan 2020</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="https://vuefes.jp/2019" external target="_blank"
-              >Vue Fes Japan 2019</NuxtLink
-            >
+            <NuxtLink to="https://vuefes.jp/2019" external target="_blank">Vue Fes Japan 2019</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="https://vuefes.jp/2018" external target="_blank"
-              >Vue Fes Japan 2018</NuxtLink
-            >
+            <NuxtLink to="https://vuefes.jp/2018" external target="_blank">Vue Fes Japan 2018</NuxtLink>
           </li>
         </ul>
 

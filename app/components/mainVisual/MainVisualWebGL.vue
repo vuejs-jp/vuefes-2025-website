@@ -425,7 +425,8 @@ onMounted(() => {
     init();
     if (animation) {
       animationFrameId = requestAnimationFrame(animate);
-    } else {
+    }
+    else {
       renderer.render(scene, camera);
     }
     emit("initialized");

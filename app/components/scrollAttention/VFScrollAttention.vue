@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
+
 let showAttentionTimerId: ReturnType<typeof setTimeout> | undefined;
 let scrollTimerId: ReturnType<typeof setTimeout> | undefined;
 

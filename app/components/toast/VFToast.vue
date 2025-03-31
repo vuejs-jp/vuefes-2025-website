@@ -1,5 +1,4 @@
 <script lang="ts">
-import { useI18n } from "#imports";
 import {
   computed,
   onUnmounted,
@@ -8,16 +7,17 @@ import {
   useTemplateRef,
   watch,
 } from "vue";
+import { useI18n } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
 export type ToastOption =
   | {
-      autoClose: true;
-      durationMs?: number;
-    }
+    autoClose: true;
+    durationMs?: number;
+  }
   | {
-      autoClose: false;
-    };
+    autoClose: false;
+  };
 
 export type ToastType = "success" | "alert";
 

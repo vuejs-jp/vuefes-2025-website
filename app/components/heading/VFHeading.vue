@@ -10,7 +10,9 @@ defineSlots<{
 </script>
 
 <template>
-  <component :is="`h${nth}`" v-bind="$attrs"><slot /></component>
+  <component :is="`h${nth}`" v-bind="$attrs">
+    <slot />
+  </component>
   <hr />
 </template>
 

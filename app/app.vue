@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import "~/assets/styles/main.css";
+import { useAutoThemeChanger } from "./stores/animation";
 import type { MessageSchema } from "~~/i18n/message-schema";
 
 import { useI18n, useHead, useSeoMeta } from "#imports";
 import { NuxtPage, NuxtRouteAnnouncer } from "#components";
-import { useAutoThemeChanger } from "./stores/animation";
 
 const { t } = useI18n<{ message: MessageSchema }>();
 
@@ -23,6 +23,7 @@ useSeoMeta({
 
 useAutoThemeChanger();
 </script>
+
 <template>
   <NuxtRouteAnnouncer />
 

@@ -2,10 +2,9 @@
 import Textarea from "primevue/textarea";
 import { useId } from "vue";
 
+import type { FormFieldState } from "./VFForm.vue";
 import type { MessageSchema } from "~~/i18n/message-schema";
 import { useI18n } from "#imports";
-
-import type { FormFieldState } from "./VFForm.vue";
 
 defineProps<{
   formState?: FormFieldState;
@@ -24,7 +23,7 @@ const { locale: lang } = useI18n<{ message: MessageSchema }>();
       v-bind="$attrs"
       :id="id"
       :aria-describedby="descriptionId"
-      :class="{ 'has-form-state': formState, invalid: formState?.invalid }"
+      :class="{ 'has-form-state': formState, 'invalid': formState?.invalid }"
       rows="6"
     />
     <p

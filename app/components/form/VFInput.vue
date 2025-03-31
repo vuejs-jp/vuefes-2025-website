@@ -2,10 +2,9 @@
 import InputText from "primevue/inputtext";
 import { useId } from "vue";
 
+import type { FormFieldState } from "./VFForm.vue";
 import type { MessageSchema } from "~~/i18n/message-schema";
 import { useI18n } from "#imports";
-
-import type { FormFieldState } from "./VFForm.vue";
 
 defineProps<{
   formState?: FormFieldState;

@@ -30,12 +30,16 @@ const { data: privacy } = useAsyncData(`privacy-${locale.value}`, () =>
 <template>
   <section class="privacy">
     <div class="privacy-content" :class="{ 'lang-en': locale === 'en' }">
-      <VFHeading :nth="1" class="heading">{{ t("privacyPolicy") }}</VFHeading>
+      <VFHeading :nth="1" class="heading">
+        {{ t("privacyPolicy") }}
+      </VFHeading>
 
       <ContentRenderer v-if="privacy" :value="privacy" />
 
       <div class="back-top-button">
-        <VFButton outlined :link="localePath('/')">{{ t("backTop") }}</VFButton>
+        <VFButton outlined :link="localePath('/')">
+          {{ t("backTop") }}
+        </VFButton>
       </div>
     </div>
   </section>

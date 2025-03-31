@@ -71,7 +71,7 @@ const {
   }
 
   /**
-   * NOTE: 
+   * NOTE:
    * background-blend-mode is not working on iOS. \n
    * So, use before pseudo element + mix-blend-mode instead.
    */

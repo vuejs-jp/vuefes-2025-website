@@ -30,8 +30,6 @@
     "check": "nuxi typecheck",
     "lint": "eslint . && textlint .",
     "lint:fix": "eslint --fix . && textlint --fix .",
-    "fmt": "prettier --write .",
-    "fmt:check": "prettier --check .",
     "spell": "cspell '**' --cache",
     "story:dev": "storybook dev -p 6006",
     "story:build": "storybook build",

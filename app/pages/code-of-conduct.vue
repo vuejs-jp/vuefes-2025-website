@@ -30,12 +30,16 @@ const { data: coc } = useAsyncData(`code-of-conduct-${locale.value}`, () =>
 <template>
   <section class="coc">
     <div class="coc-content" :class="{ 'lang-en': locale === 'en' }">
-      <VFHeading :nth="1" class="heading">{{ t("coc") }}</VFHeading>
+      <VFHeading :nth="1" class="heading">
+        {{ t("coc") }}
+      </VFHeading>
 
       <ContentRenderer v-if="coc" :value="coc" />
 
       <div class="back-top-button">
-        <VFButton outlined :link="localePath('/')">{{ t("backTop") }}</VFButton>
+        <VFButton outlined :link="localePath('/')">
+          {{ t("backTop") }}
+        </VFButton>
       </div>
     </div>
   </section>
