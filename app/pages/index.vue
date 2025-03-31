@@ -263,6 +263,10 @@ const contactForm = (() => {
     @media (--mobile) {
       padding: 2rem 1.5rem 3rem;
     }
+
+    :deep(h3) {
+      color: var(--color-text-default);
+    }
   }
 
   .contact-content {
