@@ -65,11 +65,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "ja",
     // FIXME: https://github.com/vuejs-jp/vuefes-2025/issues/236
-    // detectBrowserLanguage: {
-    //   useCookie: true,
-    //   cookieKey: "i18n_redirected",
-    //   redirectOn: "root",
-    // },
+    detectBrowserLanguage: false,
   },
 
   content: {
