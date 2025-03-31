@@ -22,7 +22,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   <div v-if="isRoot" style="height: 100svh" />
 
   <div class="content">
-    <VFHeader class="header" />
+    <VFHeader :is-root class="header" />
     <main class="main">
       <slot />
     </main>

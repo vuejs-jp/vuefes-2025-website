@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NuxtLink } from "#components";
 import { useI18n, useLocalePath } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 import { useAnimationStore } from "~/stores/animation";
@@ -6,6 +7,11 @@ import { useAnimationStore } from "~/stores/animation";
 import Logo from "~icons/logo/logo";
 import AnimationPlay from "~icons/icons/animation-play";
 import AnimationPause from "~icons/icons/animation-pause";
+
+const { isRoot = false } = defineProps<{
+  /** @default false */
+  isRoot?: boolean;
+}>();
 
 const localePath = useLocalePath();
 const { locale, setLocale, t } = useI18n<{ message: MessageSchema }>();
@@ -15,9 +21,19 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
 <template>
   <header>
     <div class="header">
-      <NuxtLink :to="localePath('/')" :title="t('backTop')" class="logo">
+      <component
+        :is="
+          isRoot ? 'div': NuxtLink"
+        v-bind="isRoot
+          ? {}
+          : {
+            to: localePath('/'),
+            title: t('backTop'),
+          }"
+        class="logo"
+      >
         <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
-      </NuxtLink>
+      </component>
       <div class="header-control">
         <button
           type="button"
@@ -73,13 +89,6 @@ header {
     }
 
     .logo {
-      &:hover {
-        :deep(svg),
-        :deep(path) {
-          fill: var(--color-accent-hover) !important;
-        }
-      }
-
       .logo-image {
         display: block;
         width: 258px;
@@ -88,6 +97,15 @@ header {
         @media (--mobile) {
           width: 172px;
           height: 32px;
+        }
+      }
+
+      &a {
+        &:hover {
+          :deep(svg),
+          :deep(path) {
+            fill: var(--color-accent-hover) !important;
+          }
         }
       }
     }
