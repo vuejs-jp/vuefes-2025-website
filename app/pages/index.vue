@@ -107,7 +107,7 @@ const contactForm = (() => {
       />
       <div class="message-content">
         <VFHeading>{{ t("message") }}</VFHeading>
-        <ServerContentRenderer :path="`/${locale}/message`" />
+        <ServerContentRenderer :path="`/${locale}/message`" class="message-content-text" />
       </div>
     </section>
 
