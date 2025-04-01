@@ -28,7 +28,7 @@ useSeoMeta({ title: t("coc") });
         {{ t("coc") }}
       </VFHeading>
 
-      <ServerContentRenderer :path="`/${locale}/privacy`" />
+      <ServerContentRenderer :path="`/${locale}/code-of-conduct`" />
 
       <div class="back-top-button">
         <VFButton outlined :link="localePath('/')">
