@@ -1,6 +1,7 @@
 {
   "name": "vuefes-2025",
   "private": true,
+  "version": "1.0.0",
   "type": "module",
   "author": {
     "name": "ubugeeei",
@@ -33,6 +34,9 @@
     "spell": "cspell '**' --cache",
     "story:dev": "storybook dev -p 6006",
     "story:build": "storybook build",
+    "release:major": "pnpx changelogen@latest --release --major",
+    "release:minor": "pnpx changelogen@latest --release --minor",
+    "release:patch": "pnpx changelogen@latest --release --patch",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {

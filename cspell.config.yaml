@@ -42,3 +42,4 @@ ignorePaths:
   - pnpm-lock.yaml
   - app/assets/fonts/external
   - app/assets/icons
+  - CHANGELOG.md
