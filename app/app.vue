@@ -11,6 +11,7 @@ const { t } = useI18n<{ message: MessageSchema }>();
 // NOTE: use getter to handle locale changes
 const title = () => `${t("nuxtSiteConfig.name")} %separator %s`;
 const description = () => t("nuxtSiteConfig.description");
+const ogImage = "https://vuefes.jp/2025/og-image.png";
 
 useHead({ templateParams: { separator: "-" } });
 useSeoMeta({
@@ -18,7 +19,8 @@ useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
-  ogImage: "https://vuefes.jp/2025/og-image.png",
+  ogImage,
+  twitterImage: ogImage,
 });
 
 useAutoThemeChanger();
