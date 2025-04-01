@@ -14,7 +14,7 @@ const { isRoot = false } = defineProps<{
 }>();
 
 const localePath = useLocalePath();
-const { locale, setLocale, t } = useI18n<{ message: MessageSchema }>();
+const { locale, t } = useI18n<{ message: MessageSchema }>();
 const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationStore();
 </script>
 
@@ -22,48 +22,40 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
   <header>
     <div class="header">
       <component
-        :is="
-          isRoot ? 'div': NuxtLink"
-        v-bind="isRoot
-          ? {}
-          : {
-            to: localePath('/'),
-            title: t('backTop'),
-          }"
+        :is="isRoot ? 'div' : NuxtLink"
+        v-bind="isRoot ? {} : { to: localePath('/'), title: t('backTop') }"
         class="logo"
       >
         <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
       </component>
       <div class="header-control">
-        <button
-          type="button"
+        <NuxtLink
+          to="/"
+          lang="ja"
+          title="日本語に切り替え"
           :class="{ active: locale === 'ja' }"
-          @click="setLocale('ja')"
         >
           JA
-        </button>
-        <button
-          type="button"
+        </NuxtLink>
+        <NuxtLink
+          to="/en"
+          lang="en"
+          title="Switch to English"
           :class="{ active: locale === 'en' }"
-          @click="setLocale('en')"
         >
           EN
-        </button>
+        </NuxtLink>
 
         <button
           type="button"
           class="animation-control"
-          :aria-label="
-            animationEnabled ? $t('animation.pause') : $t('animation.play')
-          "
           :disabled="!isWebGLSupported"
+          :aria-label="animationEnabled ? $t('animation.pause') : $t('animation.play')"
           @click="setAnimationEnabled(!animationEnabled)"
         >
           <component
             :is="animationEnabled ? AnimationPause : AnimationPlay"
-            :aria-label="
-              animationEnabled ? $t('animation.pause') : $t('animation.play')
-            "
+            :aria-label="animationEnabled ? $t('animation.pause') : $t('animation.play')"
             role="img"
           />
         </button>
@@ -102,6 +94,7 @@ header {
 
       &a {
         &:hover {
+
           :deep(svg),
           :deep(path) {
             fill: var(--color-accent-hover) !important;
@@ -114,8 +107,11 @@ header {
       display: flex;
       gap: 0.25rem;
 
-      button {
+      button,
+      a {
         display: flex;
+        padding: 0 0.2rem;
+        text-decoration: none;
         align-items: center;
         color: var(--color-place-holder);
         background-color: transparent;
@@ -131,6 +127,7 @@ header {
 
         &.animation-control {
           margin-left: 0.5rem;
+
           @media (--mobile) {
             height: 32px;
             margin-left: 0;
