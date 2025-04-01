@@ -3,9 +3,7 @@ import { z } from "zod";
 
 import {
   defineRouteRules,
-  queryCollection,
   reactive,
-  useAsyncData,
   useBreakpoint,
   useI18n,
   useRuntimeConfig,
@@ -17,7 +15,7 @@ import {
   useSeoMeta,
 } from "#imports";
 
-import { ContentRenderer, VFHeading } from "#components";
+import { ServerContentRenderer, VFHeading } from "#components";
 
 import {
   type FormSubmitEvent,
@@ -39,16 +37,6 @@ const { locale, t } = useI18n<{ message: MessageSchema }>();
 useSeoMeta({ title: "" });
 
 const bp = useBreakpoint();
-
-const { data: message } = useAsyncData(
-  `message-${locale.value}`,
-  () => queryCollection("i18n").path(`/${locale.value}/message`).first(),
-);
-
-const { data: sponsorWanted } = useAsyncData(
-  `sponsor-wanted-${locale.value}`,
-  () => queryCollection("i18n").path(`/${locale.value}/sponsor-wanted`).first(),
-);
 
 const contactForm = (() => {
   const toast = useToast();
@@ -119,11 +107,7 @@ const contactForm = (() => {
       />
       <div class="message-content">
         <VFHeading>{{ t("message") }}</VFHeading>
-        <ContentRenderer
-          v-if="message"
-          :value="message"
-          class="message-content-text"
-        />
+        <ServerContentRenderer :path="`/${locale}/message`" />
       </div>
     </section>
 
@@ -138,9 +122,8 @@ const contactForm = (() => {
       />
       <div class="sponsor-wanted-content">
         <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
-        <ContentRenderer
-          v-if="sponsorWanted"
-          :value="sponsorWanted"
+        <ServerContentRenderer
+          :path="`/${locale}/sponsor-wanted`"
           class="sponsor-wanted-text"
         />
 

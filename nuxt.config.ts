@@ -27,7 +27,10 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2024-11-01",
   future: { compatibilityVersion: 4 },
-  experimental: { inlineRouteRules: true },
+  experimental: {
+    inlineRouteRules: true,
+    componentIslands: true,
+  },
   runtimeConfig: {
     public: {
       contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",

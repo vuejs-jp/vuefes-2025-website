@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { ContentRenderer, VFButton, VFHeading } from "#components";
+import { ServerContentRenderer, VFButton, VFHeading } from "#components";
 import {
   defineRouteRules,
-  queryCollection,
-  useAsyncData,
   useI18n,
 
   // NOTE: import useHead to avoid `useHead is not defined` error
@@ -21,10 +19,6 @@ const { locale, t } = useI18n<{ message: MessageSchema }>();
 const localePath = useLocalePath();
 
 useSeoMeta({ title: t("coc") });
-
-const { data: coc } = useAsyncData(`code-of-conduct-${locale.value}`, () =>
-  queryCollection("i18n").path(`/${locale.value}/code-of-conduct`).first(),
-);
 </script>
 
 <template>
@@ -34,7 +28,7 @@ const { data: coc } = useAsyncData(`code-of-conduct-${locale.value}`, () =>
         {{ t("coc") }}
       </VFHeading>
 
-      <ContentRenderer v-if="coc" :value="coc" />
+      <ServerContentRenderer :path="`/${locale}/privacy`" />
 
       <div class="back-top-button">
         <VFButton outlined :link="localePath('/')">
