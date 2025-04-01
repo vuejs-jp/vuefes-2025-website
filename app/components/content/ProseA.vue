@@ -21,17 +21,3 @@ const localePath = useLocalePath();
     <slot />
   </NuxtLink>
 </template>
-
-<style scoped>
-a {
-  color: var(--color-base);
-
-  &:not([class]) {
-    color: var(--color-base);
-  }
-
-  &:hover {
-    color: var(--color-accent-hover);
-  }
-}
-</style>

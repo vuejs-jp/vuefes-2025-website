@@ -57,6 +57,15 @@ body {
     color: var(--color-base);
   }
 
+  .server-content-renderer {
+    a {
+      color: var(--color-base) !important;
+      &:hover {
+        color: var(--color-accent-hover) !important;
+      }
+    }
+  }
+
   &,
   &.theme-primary {
     --color-base: var(--color-primary-base);

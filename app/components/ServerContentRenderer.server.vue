@@ -8,5 +8,5 @@ const content = await queryCollection("i18n").path(path).first();
 </script>
 
 <template>
-  <ContentRenderer v-if="content" :value="content" />
+  <ContentRenderer v-if="content" :value="content" class="server-content-renderer" />
 </template>
