@@ -15,7 +15,7 @@ import {
   useSeoMeta,
 } from "#imports";
 
-import { ServerContentRenderer, VFHeading } from "#components";
+import { VFHeading } from "#components";
 
 import {
   type FormSubmitEvent,
@@ -107,7 +107,12 @@ const contactForm = (() => {
       />
       <div class="message-content">
         <VFHeading>{{ t("message") }}</VFHeading>
-        <ServerContentRenderer :path="`/${locale}/message`" class="message-content-text" />
+        <div class="message-content-text">
+          <NuxtIsland
+            name="ServerContentRenderer"
+            :props="{ path: `/${locale}/message` }"
+          />
+        </div>
       </div>
     </section>
 
@@ -122,10 +127,12 @@ const contactForm = (() => {
       />
       <div class="sponsor-wanted-content">
         <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
-        <ServerContentRenderer
-          :path="`/${locale}/sponsor-wanted`"
-          class="sponsor-wanted-text"
-        />
+        <div class="sponsor-wanted-text">
+          <NuxtIsland
+            name="ServerContentRenderer"
+            :props="{ path: `/${locale}/sponsor-wanted` }"
+          />
+        </div>
 
         <!-- TODO: 2025-04-22 -->
         <!-- <VFButton

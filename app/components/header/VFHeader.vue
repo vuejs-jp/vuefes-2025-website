@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NuxtLink } from "#components";
-import { useI18n, useLocalePath } from "#imports";
+import { useI18n, useLocalePath, useSwitchLocalePath } from "#imports";
 import type { MessageSchema } from "~~/i18n/message-schema";
 import { useAnimationStore } from "~/stores/animation";
 
@@ -14,6 +14,7 @@ const { isRoot = false } = defineProps<{
 }>();
 
 const localePath = useLocalePath();
+const switchLocalePath = useSwitchLocalePath();
 const { locale, t } = useI18n<{ message: MessageSchema }>();
 const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationStore();
 </script>
@@ -30,7 +31,7 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
       </component>
       <div class="header-control">
         <NuxtLink
-          to="/"
+          :to="switchLocalePath('ja')"
           lang="ja"
           title="日本語に切り替え"
           :class="{ active: locale === 'ja' }"
@@ -38,7 +39,7 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
           JA
         </NuxtLink>
         <NuxtLink
-          to="/en"
+          :to="switchLocalePath('en')"
           lang="en"
           title="Switch to English"
           :class="{ active: locale === 'en' }"

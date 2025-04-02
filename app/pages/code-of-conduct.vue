@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ServerContentRenderer, VFButton, VFHeading } from "#components";
+import { VFButton, VFHeading } from "#components";
 import {
   defineRouteRules,
   useI18n,
@@ -28,7 +28,7 @@ useSeoMeta({ title: t("coc") });
         {{ t("coc") }}
       </VFHeading>
 
-      <ServerContentRenderer :path="`/${locale}/code-of-conduct`" />
+      <NuxtIsland name="ServerContentRenderer" :props="{ path: `/${locale}/code-of-conduct` }" />
 
       <div class="back-top-button">
         <VFButton outlined :link="localePath('/')">
