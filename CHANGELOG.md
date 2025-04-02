@@ -160,14 +160,13 @@
 - Hal ([@Hal-Spidernight](https://github.com/Hal-Spidernight))
 - Ktym4a ([@ktym4a](https://github.com/ktym4a))
 - Nozomu Ikuta ([@nozomuikuta](https://github.com/nozomuikuta))
-- Koyama Shigehito <koyama.shigehito.chabatake102@gmail.com>
+- Koyama Shigehito
 - Kanno_stanfoot(genj1) ([@genj11](https://github.com/genj11))
-- Yamageji <koyama.shigehito.chabatake102@gmail.com>
+- Yamageji
 - You Tanaka ([@rettuce](https://github.com/rettuce))
-- OKI Yoshiya <oki.yoshiya@ceroan.co.jp>
-- Kitagawa <mnch.mai@gmail.com>
+- OKI Yoshiya
+- Kitagawa
 - Hal-Spidernight ([@Hal-Spidernight](https://github.com/Hal-Spidernight))
 - Ryuhei Shikanai ([@ryuhei373](https://github.com/ryuhei373))
-- Totocalcio <totohyper@yahoo.co.jp>
+- Totocalcio
 - Kanno_stanfoot(_genj1) ([@genj11](https://github.com/genj11))
-
