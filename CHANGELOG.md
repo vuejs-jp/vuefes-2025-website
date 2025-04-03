@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.2...v1.0.3)
+
+### 🚀 Enhancements
+
+- Mdc pre-render module (drop nuxt/content) ([#321](https://github.com/vuejs-jp/vuefes-2025/pull/321))
+
+### ❤️ Contributors
+
+- Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 ## v1.0.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.1...v1.0.2)
