@@ -15,7 +15,7 @@ import {
   useSeoMeta,
 } from "#imports";
 
-import { ServerContentRenderer, VFHeading } from "#components";
+import { VFHeading, JaMessage, EnMessage, JaSponsorWanted, EnSponsorWanted } from "#components";
 
 import {
   type FormSubmitEvent,
@@ -107,7 +107,7 @@ const contactForm = (() => {
       />
       <div class="message-content">
         <VFHeading>{{ t("message") }}</VFHeading>
-        <ServerContentRenderer :path="`/${locale}/message`" class="message-content-text" />
+        <component :is="locale === 'ja' ? JaMessage : EnMessage" class="message-content-text" />
       </div>
     </section>
 
@@ -122,10 +122,7 @@ const contactForm = (() => {
       />
       <div class="sponsor-wanted-content">
         <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
-        <ServerContentRenderer
-          :path="`/${locale}/sponsor-wanted`"
-          class="sponsor-wanted-text"
-        />
+        <component :is="locale === 'ja' ? JaSponsorWanted : EnSponsorWanted" class="sponsor-wanted-text" />
 
         <!-- TODO: 2025-04-22 -->
         <!-- <VFButton

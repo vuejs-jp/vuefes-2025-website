@@ -57,11 +57,12 @@ body {
     color: var(--color-base);
   }
 
-  .server-content-renderer {
+  /* pre-rendered by nuxt module */
+  [data-vf-mdc] {
     a {
-      color: var(--color-base) !important;
+      color: var(--color-base);
       &:hover {
-        color: var(--color-accent-hover) !important;
+        color: var(--color-accent-hover);
       }
     }
   }

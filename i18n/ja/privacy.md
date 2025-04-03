@@ -83,7 +83,7 @@ Third Party それぞれの Cookie の利用により取得されたデータは
 
 当該運営会社のプライバシーポリシーや Cookie に関する説明は、以下をご参照ください。
 
-- Google 社の [プライバシーポリシー](https://policies.google.com/privacy?hl=ja){:target="\_blank"}
+- Google 社の [プライバシーポリシー](https://policies.google.com/privacy?hl=ja)
 
 ## Cookie の削除又は無効化
 

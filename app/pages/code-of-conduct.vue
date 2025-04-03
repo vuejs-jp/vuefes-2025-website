@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ServerContentRenderer, VFButton, VFHeading } from "#components";
+import { VFButton, VFHeading, JaCodeOfConduct, EnCodeOfConduct } from "#components";
 import {
   defineRouteRules,
   useI18n,
@@ -28,7 +28,7 @@ useSeoMeta({ title: t("coc") });
         {{ t("coc") }}
       </VFHeading>
 
-      <ServerContentRenderer :path="`/${locale}/code-of-conduct`" />
+      <component :is="locale === 'ja' ? JaCodeOfConduct : EnCodeOfConduct" />
 
       <div class="back-top-button">
         <VFButton outlined :link="localePath('/')">

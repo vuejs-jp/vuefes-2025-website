@@ -87,7 +87,7 @@ The data acquired through the use of third party cookies is acquired and managed
 
 Please refer to the privacy policy of the operator of the respective service for a description of their cookies.
 
-- [Google's Privacy Policy](https://policies.google.com/privacy){:target="\_blank"}
+- [Google's Privacy Policy](https://policies.google.com/privacy)
 
 ## Deleting or Disabling Cookies
 

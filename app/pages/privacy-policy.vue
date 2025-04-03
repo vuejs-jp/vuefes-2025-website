@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ServerContentRenderer, VFButton, VFHeading } from "#components";
+import { VFButton, VFHeading, JaPrivacy, EnPrivacy } from "#components";
 import {
   defineRouteRules,
   useI18n,
@@ -28,7 +28,7 @@ useSeoMeta({ title: t("privacyPolicy") });
         {{ t("privacyPolicy") }}
       </VFHeading>
 
-      <ServerContentRenderer :path="`/${locale}/privacy`" />
+      <component :is="locale === 'ja' ? JaPrivacy : EnPrivacy" />
 
       <div class="back-top-button">
         <VFButton outlined :link="localePath('/')">

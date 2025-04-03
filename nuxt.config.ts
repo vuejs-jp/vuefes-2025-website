@@ -6,7 +6,6 @@ import { FileSystemIconLoader } from "unplugin-icons/loaders";
 export default defineNuxtConfig({
 
   modules: [
-    "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/scripts",
     "@nuxtjs/i18n",
@@ -45,12 +44,6 @@ export default defineNuxtConfig({
     // The name and description are set for each language in the following files:
     // i18n/ja/ja.json, i18n/en/en.json
     url: "https://vuefes.jp/2025",
-  },
-
-  content: {
-    renderer: {
-      anchorLinks: false,
-    },
   },
 
   vite: {
