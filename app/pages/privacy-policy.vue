@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VFButton, VFHeading } from "#components";
+import { ServerContentRenderer, VFButton, VFHeading } from "#components";
 import {
   defineRouteRules,
   useI18n,
@@ -28,7 +28,7 @@ useSeoMeta({ title: t("privacyPolicy") });
         {{ t("privacyPolicy") }}
       </VFHeading>
 
-      <NuxtIsland name="ServerContentRenderer" :props="{ path: `/${locale}/privacy` }" />
+      <ServerContentRenderer :path="`/${locale}/privacy`" />
 
       <div class="back-top-button">
         <VFButton outlined :link="localePath('/')">
