@@ -18,4 +18,7 @@ export default withNuxt()
     rules: {
       "@stylistic/brace-style": "off",
     },
+  }).append({
+    // generated
+    ignores: ["app/components/_i18n"],
   });

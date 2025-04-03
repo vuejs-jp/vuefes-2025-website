@@ -1,5 +1,5 @@
 import fsp from "node:fs/promises";
-import { addComponent, addComponentsDir, createResolver, defineNuxtModule } from "nuxt/kit";
+import { addComponent, createResolver, defineNuxtModule } from "nuxt/kit";
 
 import { unified } from "unified";
 import rehypeStringify from "rehype-stringify";
@@ -36,12 +36,8 @@ export default defineNuxtModule({
       .use(rehypeStringify);
 
     const mdcContentRootDir = resolve("../i18n/");
-    const componentsDir = resolve("../.nuxt/mdc-prerender/components");
+    const componentsDir = resolve("../app/components/_i18n");
     nuxt.options.watch.push(mdcContentRootDir);
-    addComponentsDir({ path: componentsDir, pathPrefix: false, prefix: "", global: true });
-
-    // FIXME: does not work...
-    nuxt.options.watch.push(componentsDir);
 
     /*
      * prerendering all mdc files on nitro init
@@ -71,9 +67,6 @@ export default defineNuxtModule({
         const outputFile = getOutputPath({ locale, relativePath, content: "" });
         await fsp.unlink(outputFile).catch();
       }
-
-      // NOTE: force restart because hmr does not work...
-      fsp.utimes(resolve("../nuxt.config.ts"), new Date(), new Date()).catch();
     });
 
     return;

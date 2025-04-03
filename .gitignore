@@ -28,3 +28,5 @@ logs
 
 # Local Netlify folder
 .netlify
+
+app/components/_i18n
