@@ -46,21 +46,35 @@ const handleWebGLInitialized = () => {
     </div>
 
     <div v-else-if="appearance === 'png'" class="main-visual-graphic-wrapper">
-      <img src="/images/main-visual.png" :alt="$t('mainVisual.imageAlt')" />
+      <picture>
+        <source
+          srcset="/images/main-visual.webp"
+          type="image/webp"
+        />
+        <img
+          src="/images/main-visual.png"
+          :alt="$t('mainVisual.imageAlt')"
+        />
+      </picture>
     </div>
   </Transition>
 </template>
 
 <style scoped>
+@import "~/assets/styles/custom-media-query.css";
+
 .main-visual-graphic-wrapper {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   aspect-ratio: 650 / 320;
+  @media (--mobile) {
+    margin: 0 14.5%;
+  }
 }
 
 .main-visual-graphic-wrapper :deep(canvas),

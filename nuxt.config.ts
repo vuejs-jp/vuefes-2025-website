@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/storybook",
     "@primevue/nuxt-module",
+    // "@nuxt/image",
   ],
 
   $production: {
@@ -112,4 +113,8 @@ export default defineNuxtConfig({
       twitterCreator: "@vuefes",
     },
   },
+  // img:{
+  //  domains: ['vuefes.jp/2025'],
+  //  provider: "ipx",
+  // }
 });
