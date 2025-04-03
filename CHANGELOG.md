@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.1...v1.0.2)
+
+### 🚀 Enhancements
+
+- Replace ServerContentRenderer with NuxtIsland ([#318](https://github.com/vuejs-jp/vuefes-2025/pull/318))
+
+### ❤️ Contributors
+
+- Ktym4a ([@ktym4a](https://github.com/ktym4a))
+
 ## v1.0.1
 
 
