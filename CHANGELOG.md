@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.3...v1.0.4)
+
+### 🚀 Enhancements
+
+- Mdc prerenderer hmr ([#322](https://github.com/vuejs-jp/vuefes-2025/pull/322))
+
+### 🏡 Chore
+
+- Optimize images, change image to picture for mainVisual ([#320](https://github.com/vuejs-jp/vuefes-2025/pull/320))
+
+### ❤️ Contributors
+
+- Hal ([@Hal-Spidernight](https://github.com/Hal-Spidernight))
+- Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 ## v1.0.3
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.2...v1.0.3)
