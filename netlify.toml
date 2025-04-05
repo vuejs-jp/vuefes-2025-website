@@ -6,6 +6,12 @@
   # Rewrite link URLs to pretty URLs (/about.html -> /about, /about/index.html -> /about/)
   pretty_urls = true
 
+[context.branch-deploy]
+  # Build and publish the branch-deploy context
+  # `cp ./netlify/_noIndexHeaders ./dist/_headers` to add noindex headers
+  command = "pnpm rebuild && pnpm build && cp ./netlify/_noIndexHeaders ./dist/_headers"
+  publish = "dist/"
+
 [[redirects]]
   # get contents from dist/* by accessing /2025/*
   from = "/2025/*"

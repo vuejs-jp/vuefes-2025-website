@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     // i18n/ja/ja.json, i18n/en/en.json
     url: "https://vuefes.jp/2025",
   },
+  robots: { robotsTxt: false },
 
   vite: {
     css: {
