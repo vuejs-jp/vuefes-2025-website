@@ -38,6 +38,9 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
         >
           JA
         </NuxtLink>
+        <div aria-hidden="true" class="language-separator">
+          /
+        </div>
         <NuxtLink
           :to="switchLocalePath('en')"
           lang="en"
@@ -74,11 +77,11 @@ header {
     border-radius: var(--radius-m);
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1.625rem 1.25rem 2rem;
+    padding: 1.5rem 2rem 1.25rem 2rem;
     border: 1px solid var(--color-divider-light);
 
     @media (--mobile) {
-      padding: 1.25rem 1.125rem 1rem 1.5rem;
+      padding: 1.25rem 1.4rem 1rem 1.5rem;
     }
 
     .logo {
@@ -106,15 +109,15 @@ header {
 
     .header-control {
       display: flex;
-      gap: 0.25rem;
+      align-items: center;
 
       button,
       a {
         display: flex;
-        padding: 0 0.2rem;
+        padding: 0 0.125rem;
         text-decoration: none;
         align-items: center;
-        color: var(--color-place-holder);
+        color: var(--color-text-default);
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -127,11 +130,12 @@ header {
         }
 
         &.animation-control {
-          margin-left: 0.5rem;
+          padding: 0;
+          margin-left: 1.375rem;
 
           @media (--mobile) {
             height: 32px;
-            margin-left: 0;
+            margin-left: 0.75rem;
           }
 
           &:disabled {
@@ -145,6 +149,12 @@ header {
           }
         }
       }
+    }
+    .language-separator {
+      color: var(--color-place-holder);
+      font-size: 1.125rem;
+      font-family: JetBrainsMono-Regular;
+      line-height: 1.25;
     }
   }
 }
