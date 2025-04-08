@@ -31,25 +31,27 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
         <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
       </component>
       <div class="header-control">
-        <NuxtLink
-          :to="switchLocalePath('ja')"
-          lang="ja"
-          title="日本語に切り替え"
-          :class="{ active: locale === 'ja' }"
-        >
-          JA
-        </NuxtLink>
-        <div aria-hidden="true" class="language-separator">
-          /
-        </div>
-        <NuxtLink
-          :to="switchLocalePath('en')"
-          lang="en"
-          title="Switch to English"
-          :class="{ active: locale === 'en' }"
-        >
-          EN
-        </NuxtLink>
+        <nav>
+          <NuxtLink
+            :to="switchLocalePath('ja')"
+            lang="ja"
+            title="日本語に切り替え"
+            :class="{ active: locale === 'ja' }"
+          >
+            JA
+          </NuxtLink>
+          <div aria-hidden="true" class="language-separator">
+            /
+          </div>
+          <NuxtLink
+            :to="switchLocalePath('en')"
+            lang="en"
+            title="Switch to English"
+            :class="{ active: locale === 'en' }"
+          >
+            EN
+          </NuxtLink>
+        </nav>
 
         <button
           type="button"
@@ -112,6 +114,17 @@ header {
       display: flex;
       align-items: center;
 
+      nav {
+        display: flex;
+        align-items: center;
+        .language-separator {
+          color: var(--color-place-holder);
+          font-size: 1.125rem;
+          font-family: JetBrainsMono-Regular;
+          line-height: 1.25;
+        }
+      }
+
       button,
       a {
         display: flex;
@@ -150,12 +163,6 @@ header {
           }
         }
       }
-    }
-    .language-separator {
-      color: var(--color-place-holder);
-      font-size: 1.125rem;
-      font-family: JetBrainsMono-Regular;
-      line-height: 1.25;
     }
   }
 }
