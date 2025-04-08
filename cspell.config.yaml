@@ -19,6 +19,8 @@ words:
   - lightningcss
   - matcha
   - noindex
+  - noopener
+  - noreferrer
   - nuxi
   - nuxt
   - nuxtjs

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MainVisualGraphic from "./MainVisualGraphic.vue";
-import VFScrollAttention from "~/components/scrollAttention/VFScrollAttention.vue";
+import { useI18n } from "#imports";
+import { VFScrollAttention } from "#components";
 
 const {
   titleTag = "h1",
@@ -11,6 +12,8 @@ const {
   animation?: boolean;
   showScrollAttention?: boolean;
 }>();
+
+const { locale } = useI18n();
 </script>
 
 <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
@@ -18,32 +21,32 @@ const {
 <template>
   <section class="main-visual">
     <component :is="titleTag" class="main-visual-head">
-      <span class="site-title site-title-en" lang="en">
+      <span class="site-title site-title-en" lang="en" :aria-hidden="locale !== 'en'">
         <span>Vue Fes</span>
         <span>Japan 2025</span>
       </span>
-      <span class="site-title site-title-ja" lang="ja">
+      <span class="site-title site-title-ja" lang="ja" :aria-hidden="locale !== 'ja'">
         <span>ビューフェス</span>
         <span>ジャパン2025</span>
       </span>
     </component>
 
     <div class="main-visual-body">
-      <time datetime="2025-10-25" lang="en">OCTOBER 25, 2025</time>
+      <time datetime="2025-10-25" lang="en" :aria-hidden="locale !== 'en'">OCTOBER 25, 2025</time>
       <MainVisualGraphic
         :appearance="animation ? 'webgl' : 'png'"
         class="main-visual-graphic"
       />
-      <time datetime="2025-10-25" lang="ja">2025年10月25日</time>
+      <time datetime="2025-10-25" lang="ja" :aria-hidden="locale !== 'ja'">2025年10月25日</time>
     </div>
 
     <div class="main-visual-foot">
-      <div lang="en">
+      <div lang="en" :aria-hidden="locale !== 'en'">
         <span>Otemachi</span>
         <span>Place Hall & Conference</span>
       </div>
 
-      <div lang="ja">
+      <div lang="ja" :aria-hidden="locale !== 'ja'">
         <span>大手町</span>
         <span>プレイス ホール &</span>
         <span>カンファレンス</span>

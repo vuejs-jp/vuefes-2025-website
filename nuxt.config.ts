@@ -30,7 +30,12 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   experimental: {
     inlineRouteRules: true,
-    componentIslands: true,
+    defaults: {
+      nuxtLink: {
+        // NOTE: removing noopener, noreferrer
+        externalRelAttribute: "",
+      },
+    },
   },
   runtimeConfig: {
     public: {
@@ -47,7 +52,10 @@ export default defineNuxtConfig({
     // i18n/ja/ja.json, i18n/en/en.json
     url: "https://vuefes.jp/2025",
   },
-  robots: { robotsTxt: false },
+
+  robots: {
+    robotsTxt: false,
+  },
 
   vite: {
     css: {
