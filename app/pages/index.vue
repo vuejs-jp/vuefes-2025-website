@@ -25,14 +25,12 @@ import {
 } from "~/components/form";
 import VFToast, { useToast } from "~/components/toast/VFToast.vue";
 
-import type { MessageSchema } from "~~/i18n/message-schema";
-
 defineRouteRules({ prerender: true });
 
 const config = useRuntimeConfig();
 const withBase = useWithBase();
 
-const { locale, t } = useI18n<{ message: MessageSchema }>();
+const { locale, t } = useI18n();
 
 useSeoMeta({ title: "" });
 

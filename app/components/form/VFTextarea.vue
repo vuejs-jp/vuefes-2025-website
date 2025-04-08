@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import Textarea from "primevue/textarea";
 import { useId } from "vue";
-
 import type { FormFieldState } from "./VFForm.vue";
-import type { MessageSchema } from "~~/i18n/message-schema";
 import { useI18n } from "#imports";
 
 defineProps<{
@@ -12,7 +10,7 @@ defineProps<{
 
 const id = useId();
 const descriptionId = useId();
-const { locale: lang } = useI18n<{ message: MessageSchema }>();
+const { locale: lang } = useI18n();
 </script>
 
 <template>

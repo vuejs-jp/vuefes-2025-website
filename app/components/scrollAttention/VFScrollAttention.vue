@@ -77,6 +77,8 @@ onUnmounted(() => {
 });
 </script>
 
+<!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
+
 <template>
   <Transition name="vf-scroll-attention">
     <div v-if="isShow" class="vf-scroll-attention">

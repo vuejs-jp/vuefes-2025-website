@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { NuxtLink } from "#components";
 import { useI18n, useLocalePath, useSwitchLocalePath } from "#imports";
-import type { MessageSchema } from "~~/i18n/message-schema";
 import { useAnimationStore } from "~/stores/animation";
 
 import Logo from "~icons/logo/logo";
@@ -15,9 +14,11 @@ const { isRoot = false } = defineProps<{
 
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
-const { locale, t } = useI18n<{ message: MessageSchema }>();
+const { locale, t } = useI18n();
 const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationStore();
 </script>
+
+<!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
 
 <template>
   <header>
