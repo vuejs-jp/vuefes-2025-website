@@ -1,6 +1,45 @@
 # Changelog
 
 
+## v1.0.5
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.4...v1.0.5)
+
+### 🚀 Enhancements
+
+- A11y improvement ([d138425](https://github.com/vuejs-jp/vuefes-2025/commit/d138425))
+  - Remove role=button in link ([9c37071](https://github.com/vuejs-jp/vuefes-2025/commit/9c37071))
+  - Footer link text decoration ([de9e872](https://github.com/vuejs-jp/vuefes-2025/commit/de9e872))
+  - Removing noopener, noreferrer from link ([5e68f6c](https://github.com/vuejs-jp/vuefes-2025/commit/5e68f6c))
+  - Use nav tag for lang switcher ([57bbdea](https://github.com/vuejs-jp/vuefes-2025/commit/57bbdea))
+  - Redundant image alt in header ([e477f37](https://github.com/vuejs-jp/vuefes-2025/commit/e477f37))
+  - Redundant image alt ([ff26855](https://github.com/vuejs-jp/vuefes-2025/commit/ff26855))
+  - Main visual langs aria hidden ([460f62a](https://github.com/vuejs-jp/vuefes-2025/commit/460f62a))
+
+### 🩹 Fixes
+
+- Sns introduction heading color ([#349](https://github.com/vuejs-jp/vuefes-2025/pull/349))
+- Cls on section cover image ([#351](https://github.com/vuejs-jp/vuefes-2025/pull/351))
+
+
+### 🏡 Chore
+
+- Header lang switcher style ([#341](https://github.com/vuejs-jp/vuefes-2025/pull/341))
+- Disable inline styles in Nuxt configuration ([#335](https://github.com/vuejs-jp/vuefes-2025/pull/335))
+- I18n dx improvement ([#348](https://github.com/vuejs-jp/vuefes-2025/pull/348))
+- Add netlify configs for preview ([#336](https://github.com/vuejs-jp/vuefes-2025/pull/336))
+- **deps-dev:** Bump @nuxt/eslint from 1.1.0 to 1.3.0 ([#344](https://github.com/vuejs-jp/vuefes-2025/pull/344))
+- **deps-dev:** Bump eslint from 9.23.0 to 9.24.0 ([#342](https://github.com/vuejs-jp/vuefes-2025/pull/342))
+- **deps-dev:** Bump @unhead/vue from 2.0.2 to 2.0.5 ([#346](https://github.com/vuejs-jp/vuefes-2025/pull/346))
+- **deps-dev:** Bump typescript from 5.8.2 to 5.8.3 ([#343](https://github.com/vuejs-jp/vuefes-2025/pull/343))
+
+
+### ❤️ Contributors
+
+- Ubugeeei (@ubugeeei)
+- Koyama Shigehito (@yamageji)
+- Ktym4a (@ktym4a)
+
 ## v1.0.4
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.3...v1.0.4)

@@ -2,11 +2,12 @@
   "recommendations": [
     "johnsoncodehk.volar", // for Vue.js
     "streetsidesoftware.code-spell-checker", // for cspell
-    "taichi.vscode-textlint", // for textlint
+    "3w36zj6.textlint", // for textlint
     "dbaeumer.vscode-eslint", // for ESLint
     "esbenp.prettier-vscode", // for Prettier
     "vitest.explorer", // for vitest
     "ms-playwright.playwright", // for Playwright
+    "Lokalise.i18n-ally", // for vue-i18n
     "gruntfuggly.todo-tree"
   ]
 }

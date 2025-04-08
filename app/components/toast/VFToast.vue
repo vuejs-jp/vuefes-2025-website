@@ -8,7 +8,6 @@ import {
   watch,
 } from "vue";
 import { useI18n } from "#imports";
-import type { MessageSchema } from "~~/i18n/message-schema";
 
 export type ToastOption =
   | {
@@ -93,7 +92,7 @@ export function useToast(
 
 <script setup lang="ts">
 const { state } = defineProps<{ state: ToastState }>();
-const { locale: lang } = useI18n<{ message: MessageSchema }>();
+const { locale: lang } = useI18n();
 
 const rootElRef = useTemplateRef("root");
 
@@ -118,6 +117,7 @@ const positionRight = computed(() => {
     >
       <div class="vf-toast-content">
         <span class="vf-toast-icon" aria-hidden="true">
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           {{ state.type === "success" ? "🎉" : "⚠️" }}
         </span>
         <span class="vf-toast-message">

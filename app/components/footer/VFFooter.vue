@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useI18n, useLocalePath } from "#imports";
 import { VFButton } from "#components";
-import type { MessageSchema } from "~~/i18n/message-schema";
 
 import XIcon from "~icons/icons/ic_x";
 import YoutubeIcon from "~icons/icons/ic_youtube";
@@ -12,8 +11,10 @@ import BlueskyIcon from "~icons/icons/ic_bluesky";
 import Logo from "~icons/logo/logo";
 
 const localePath = useLocalePath();
-const { t } = useI18n<{ message: MessageSchema }>();
+const { t } = useI18n();
 </script>
+
+<!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
 
 <template>
   <footer>
@@ -57,7 +58,7 @@ const { t } = useI18n<{ message: MessageSchema }>();
 
     <div class="container">
       <NuxtLink :to="localePath('/')" :title="t('backTop')" class="logo">
-        <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+        <Logo class="logo-image" :aria-label="t('logo.shortAlt')" role="img" />
       </NuxtLink>
       <div class="links">
         <ul class="past-vuefes-links">
@@ -213,7 +214,6 @@ footer {
           font-size: 0.875rem;
           line-height: 1.72;
           color: var(--color-white);
-          text-decoration: none;
 
           @media (--mobile) {
             font-size: 0.75rem;

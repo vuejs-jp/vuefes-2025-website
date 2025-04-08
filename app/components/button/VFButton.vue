@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useI18n } from "#imports";
-import type { MessageSchema } from "~~/i18n/message-schema";
 
 const {
   type = "button",
@@ -33,7 +32,7 @@ const emit = defineEmits<{
   click: [];
 }>();
 
-const { locale: lang } = useI18n<{ message: MessageSchema }>();
+const { locale: lang } = useI18n();
 </script>
 
 <template>
@@ -49,7 +48,6 @@ const { locale: lang } = useI18n<{ message: MessageSchema }>();
     ]"
     :external
     :target="external ? '_blank' : undefined"
-    role="button"
     class="button"
   >
     <slot />

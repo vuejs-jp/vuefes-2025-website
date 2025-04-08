@@ -10,11 +10,10 @@ import {
   useSeoMeta,
   useLocalePath,
 } from "#imports";
-import type { MessageSchema } from "~~/i18n/message-schema";
 
 defineRouteRules({ prerender: true });
 
-const { locale, t } = useI18n<{ message: MessageSchema }>();
+const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
 

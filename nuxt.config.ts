@@ -30,7 +30,12 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   experimental: {
     inlineRouteRules: true,
-    componentIslands: true,
+    defaults: {
+      nuxtLink: {
+        // NOTE: removing noopener, noreferrer
+        externalRelAttribute: "",
+      },
+    },
   },
   runtimeConfig: {
     public: {
@@ -46,6 +51,10 @@ export default defineNuxtConfig({
     // The name and description are set for each language in the following files:
     // i18n/ja/ja.json, i18n/en/en.json
     url: "https://vuefes.jp/2025",
+  },
+
+  robots: {
+    robotsTxt: false,
   },
 
   vite: {
@@ -90,13 +99,13 @@ export default defineNuxtConfig({
         code: "ja",
         language: "ja-JP",
         name: "Japanese",
-        file: "ja/ja.ts",
+        file: "ja/index.yaml",
       },
       {
         code: "en",
         language: "en-US",
         name: "English",
-        file: "en/en.ts",
+        file: "en/index.yaml",
       },
     ],
     defaultLocale: "ja",

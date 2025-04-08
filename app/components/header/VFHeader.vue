@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { NuxtLink } from "#components";
 import { useI18n, useLocalePath, useSwitchLocalePath } from "#imports";
-import type { MessageSchema } from "~~/i18n/message-schema";
 import { useAnimationStore } from "~/stores/animation";
 
 import Logo from "~icons/logo/logo";
@@ -15,9 +14,11 @@ const { isRoot = false } = defineProps<{
 
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
-const { locale, t } = useI18n<{ message: MessageSchema }>();
+const { locale, t } = useI18n();
 const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationStore();
 </script>
+
+<!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
 
 <template>
   <header>
@@ -27,25 +28,30 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
         v-bind="isRoot ? {} : { to: localePath('/'), title: t('backTop') }"
         class="logo"
       >
-        <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+        <Logo class="logo-image" :aria-label="t('logo.shortAlt')" role="img" />
       </component>
       <div class="header-control">
-        <NuxtLink
-          :to="switchLocalePath('ja')"
-          lang="ja"
-          title="日本語に切り替え"
-          :class="{ active: locale === 'ja' }"
-        >
-          JA
-        </NuxtLink>
-        <NuxtLink
-          :to="switchLocalePath('en')"
-          lang="en"
-          title="Switch to English"
-          :class="{ active: locale === 'en' }"
-        >
-          EN
-        </NuxtLink>
+        <nav>
+          <NuxtLink
+            :to="switchLocalePath('ja')"
+            lang="ja"
+            title="日本語に切り替え"
+            :class="{ active: locale === 'ja' }"
+          >
+            JA
+          </NuxtLink>
+          <div aria-hidden="true" class="language-separator">
+            /
+          </div>
+          <NuxtLink
+            :to="switchLocalePath('en')"
+            lang="en"
+            title="Switch to English"
+            :class="{ active: locale === 'en' }"
+          >
+            EN
+          </NuxtLink>
+        </nav>
 
         <button
           type="button"
@@ -74,11 +80,11 @@ header {
     border-radius: var(--radius-m);
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1.625rem 1.25rem 2rem;
+    padding: 1.5rem 2rem 1.25rem 2rem;
     border: 1px solid var(--color-divider-light);
 
     @media (--mobile) {
-      padding: 1.25rem 1.125rem 1rem 1.5rem;
+      padding: 1.25rem 1.4rem 1rem 1.5rem;
     }
 
     .logo {
@@ -106,15 +112,26 @@ header {
 
     .header-control {
       display: flex;
-      gap: 0.25rem;
+      align-items: center;
+
+      nav {
+        display: flex;
+        align-items: center;
+        .language-separator {
+          color: var(--color-place-holder);
+          font-size: 1.125rem;
+          font-family: JetBrainsMono-Regular;
+          line-height: 1.25;
+        }
+      }
 
       button,
       a {
         display: flex;
-        padding: 0 0.2rem;
+        padding: 0 0.125rem;
         text-decoration: none;
         align-items: center;
-        color: var(--color-place-holder);
+        color: var(--color-text-default);
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -127,11 +144,12 @@ header {
         }
 
         &.animation-control {
-          margin-left: 0.5rem;
+          padding: 0;
+          margin-left: 1.375rem;
 
           @media (--mobile) {
             height: 32px;
-            margin-left: 0;
+            margin-left: 0.75rem;
           }
 
           &:disabled {
