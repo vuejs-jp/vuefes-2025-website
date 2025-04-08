@@ -48,7 +48,6 @@ const { locale: lang } = useI18n();
     ]"
     :external
     :target="external ? '_blank' : undefined"
-    role="button"
     class="button"
   >
     <slot />
