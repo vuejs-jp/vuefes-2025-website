@@ -28,7 +28,7 @@ const [animationEnabled, setAnimationEnabled, isWebGLSupported] = useAnimationSt
         v-bind="isRoot ? {} : { to: localePath('/'), title: t('backTop') }"
         class="logo"
       >
-        <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+        <Logo class="logo-image" :aria-label="t('logo.shortAlt')" role="img" />
       </component>
       <div class="header-control">
         <nav>
