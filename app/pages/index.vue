@@ -298,6 +298,9 @@ const contactForm = (() => {
 }
 
 .sns-introduction-heading {
+  /* NOTE: Although this is a heading, using --color-primary-base makes it blend with the main visual, reducing readability. Therefore, --color-text-default is used instead. */
+  color: var(--color-text-default);
+
   font-size: 20px;
   line-height: 34px;
   text-align: center;
