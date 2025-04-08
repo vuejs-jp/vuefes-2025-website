@@ -58,7 +58,7 @@ const { t } = useI18n();
 
     <div class="container">
       <NuxtLink :to="localePath('/')" :title="t('backTop')" class="logo">
-        <Logo class="logo-image" :aria-label="t('logo.alt')" role="img" />
+        <Logo class="logo-image" :aria-label="t('logo.shortAlt')" role="img" />
       </NuxtLink>
       <div class="links">
         <ul class="past-vuefes-links">
