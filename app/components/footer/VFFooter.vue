@@ -214,7 +214,6 @@ footer {
           font-size: 0.875rem;
           line-height: 1.72;
           color: var(--color-white);
-          text-decoration: none;
 
           @media (--mobile) {
             font-size: 0.75rem;
