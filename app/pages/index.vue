@@ -95,14 +95,16 @@ const contactForm = (() => {
 <template>
   <div class="section-container">
     <section class="message">
-      <img
-        :src="
-          bp === 'pc'
-            ? withBase('/images/top/cover/message-pc.png')
-            : withBase('/images/top/cover/message-sp.png')
-        "
-        :alt="t('messageCoverImageAlt')"
-      />
+      <div class="section-cover-wrapper">
+        <img
+          :src="
+            bp === 'pc'
+              ? withBase('/images/top/cover/message-pc.png')
+              : withBase('/images/top/cover/message-sp.png')
+          "
+          :alt="t('messageCoverImageAlt')"
+        />
+      </div>
       <div class="message-content">
         <VFHeading>{{ t("message") }}</VFHeading>
         <component :is="locale === 'ja' ? JaMessage : EnMessage" class="message-content-text" />
@@ -110,14 +112,16 @@ const contactForm = (() => {
     </section>
 
     <section class="sponsor-wanted">
-      <img
-        :src="
-          bp === 'pc'
-            ? withBase('/images/top/cover/sponsor-wanted-pc.svg')
-            : withBase('/images/top/cover/sponsor-wanted-sp.svg')
-        "
-        :alt="t('sponsorWantedCoverImageAlt')"
-      />
+      <div class="section-cover-wrapper">
+        <img
+          :src="
+            bp === 'pc'
+              ? withBase('/images/top/cover/sponsor-wanted-pc.svg')
+              : withBase('/images/top/cover/sponsor-wanted-sp.svg')
+          "
+          :alt="t('sponsorWantedCoverImageAlt')"
+        />
+      </div>
       <div class="sponsor-wanted-content">
         <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
         <component :is="locale === 'ja' ? JaSponsorWanted : EnSponsorWanted" class="sponsor-wanted-text" />
@@ -225,13 +229,21 @@ const contactForm = (() => {
   background-color: var(--color-white);
   border: 1px solid var(--color-divider-light);
 
-  img {
-    border-radius: var(--radius-m) var(--radius-m) 0 0;
+  .section-cover-wrapper {
+    /* for preventing CLS */
+    aspect-ratio: 682 / 383.867;
     width: 100%;
-    max-width: 700px;
-    @media (--mobile) {
-      max-width: none;
+
+    img {
+      border-radius: var(--radius-m) var(--radius-m) 0 0;
       width: 100%;
+      max-width: 700px;
+      height: auto;
+
+      @media (--mobile) {
+        max-width: none;
+        width: 100%;
+      }
     }
   }
 
