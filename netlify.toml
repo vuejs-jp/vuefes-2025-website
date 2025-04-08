@@ -1,5 +1,6 @@
 [build]
-  command = "pnpm rebuild && pnpm build"
+  # `cp ./netlify/_redirects ./dist/_redirects` to add redirects
+  command = "pnpm rebuild && pnpm build && cp ./netlify/_redirects ./dist/_redirects"
   publish = "dist/"
 
 [build.processing.html]
