@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v1.0.6
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.0.6)
+
+
+### 🩹 Fixes
+
+- Fix site URL and ensure canonical/og:url ([#363](https://github.com/vuejs-jp/vuefes-2025/pull/363))
+
+### ❤️ Contributors
+
+- Ktym4a ([@ktym4a](https://github.com/ktym4a))
+- Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 ## v1.0.5
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.4...v1.0.5)
