@@ -50,7 +50,7 @@ export default defineNuxtConfig({
   site: {
     // The name and description are set for each language in the following files:
     // i18n/ja/ja.json, i18n/en/en.json
-    url: "https://vuefes.jp/2025",
+    url: "https://vuefes.jp/",
   },
 
   robots: {
