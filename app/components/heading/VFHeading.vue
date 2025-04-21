@@ -22,6 +22,8 @@ defineSlots<{
 h1,
 h2,
 h3 {
+  color: var(--color-base);
+
   margin: 0;
   display: flex;
   align-items: center;

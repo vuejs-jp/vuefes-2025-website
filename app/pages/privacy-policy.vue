@@ -49,12 +49,6 @@ useSeoMeta({ title: t("privacyPolicy") });
   .privacy-content {
     padding: 3rem 3.5rem;
 
-    :deep(h2) {
-      margin-top: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--color-text-default);
-    }
-
     :deep(p:first-of-type) {
       margin-top: 3rem;
     }
