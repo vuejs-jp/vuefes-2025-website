@@ -4,10 +4,10 @@ Would you like to join us in supporting the growth of the Vue.js ecosystem and d
 
 ### Sponsorship Prospectus
 
-[Vue Fes Japan 2025 Sponsorship Information (Google Docs)](https://docs.google.com/document/d/1Eywy7QRq3xV3Nvzohv_Tsz25O7_Ae-2zXouKn4UQ6EQ/edit?usp=sharing)
+[Vue Fes Japan 2025 Sponsorship Information](https://docs.google.com/document/d/1Eywy7QRq3xV3Nvzohv_Tsz25O7_Ae-2zXouKn4UQ6EQ/edit?usp=sharing)
 
 ### Sponsor Application Form
 
 If you are interested in becoming a sponsor, please submit your application using the link below:
 
-[Sponsor Application Form (Google Form)](https://docs.google.com/forms/d/e/1FAIpQLSeegO1JNAP8BcbBXgH3bE3EPu-mS6iSJT6vIQG-mVxwr1aYcg/viewform?usp=dialog)
+[Sponsor Application Form](https://docs.google.com/forms/d/e/1FAIpQLSeegO1JNAP8BcbBXgH3bE3EPu-mS6iSJT6vIQG-mVxwr1aYcg/viewform?usp=dialog)
