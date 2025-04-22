@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## v1.1.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.1.0)
@@ -25,6 +24,7 @@
 
 - Ubugeeei [@ubugeeei](https://github.com/ubugeeei)
 - Ktym4a ([@ktym4a](https://github.com/ktym4a))
+
 
 ## v1.0.6
 
