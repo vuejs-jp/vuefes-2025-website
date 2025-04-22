@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.1.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.1.0)
+
+### 🚀 Enhancements
+
+- Open Sponsor Application
+  - Sponsor application ([#395](https://github.com/vuejs-jp/vuefes-2025/pull/395))
+  - Sponsor wanted link title ([e40f567](https://github.com/vuejs-jp/vuefes-2025/commit/e40f567))
+
+### 🩹 Fixes
+
+- Update site URL and ensure canonical/og:url ([#363](https://github.com/vuejs-jp/vuefes-2025/pull/363))
+- Heading styles ([8aade8c](https://github.com/vuejs-jp/vuefes-2025/commit/8aade8c))
+
+### 🏡 Chore
+
+- Add redirects for 2025 site ([#353](https://github.com/vuejs-jp/vuefes-2025/pull/353))
+- Add redirects for 2025 site ([#353](https://github.com/vuejs-jp/vuefes-2025/pull/353))
+
+### ❤️ Contributors
+
+- Ubugeeei [@ubugeeei](https://github.com/ubugeeei)
+- Ktym4a ([@ktym4a](https://github.com/ktym4a))
+
 
 ## v1.0.6
 
