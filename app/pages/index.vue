@@ -4,6 +4,7 @@ import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
 import SectionContact from "./_components/SectionContact.vue";
 import {
   defineRouteRules,
+  defineAsyncComponent,
   useI18n,
   // NOTE: import useHead to avoid `useHead is not defined` error
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -16,10 +17,16 @@ defineRouteRules({ prerender: true });
 const { t } = useI18n();
 
 useSeoMeta({ title: "" });
+
+let SectionCfp: ReturnType<typeof defineAsyncComponent> | null = null;
+if (__FEATURE_CFP__) {
+  SectionCfp = defineAsyncComponent(() => import("~/pages/_components/SectionCfp.vue"));
+}
 </script>
 
 <template>
   <div class="section-container">
+    <SectionCfp v-if="SectionCfp" />
     <SectionMessage />
     <SectionSponsorWanted />
     <SectionContact />

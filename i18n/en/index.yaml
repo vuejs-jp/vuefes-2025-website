@@ -14,11 +14,13 @@ logo:
 animation:
   play: "Play Animation"
   pause: "Pause Animation"
+cfpWanted: "Call for Proposals"
+cfpWantedCoverImageAlt: "Call for Proposals cover image"
+cfpApplyButton: "Apply for CFP Here"
 message: "Message"
 messageCoverImageAlt: Vue Fes Japan 2025 logo
 sponsorWanted: "Sponsorship Opportunities"
 sponsorWantedCoverImageAlt: "Sponsor Wanted cover image"
-sponsorApplyButton: "Apply for Sponsorship Here"
 contactForm:
   title: "Contact Us"
   description: >

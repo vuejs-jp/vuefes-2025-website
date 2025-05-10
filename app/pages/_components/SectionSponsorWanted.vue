@@ -20,16 +20,3 @@ const { locale, t } = useI18n();
     <component :is="locale === 'ja' ? JaSponsorWanted : EnSponsorWanted" />
   </VFSection>
 </template>
-
-<style scoped>
-@import "~/assets/styles/custom-media-query.css";
-
-.sponsor-apply-button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 2rem;
-  @media (--mobile) {
-    margin-top: 1.5rem;
-  }
-}
-</style>
