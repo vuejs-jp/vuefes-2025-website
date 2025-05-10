@@ -1,6 +1,7 @@
 /* eslint-disable nuxt/nuxt-config-keys-order */
 import Icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
+import type { NuxtPage } from "nuxt/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -126,5 +127,20 @@ export default defineNuxtConfig({
   // img:{
   //  domains: ['vuefes.jp/2025'],
   //  provider: "ipx",
-  // }
+  // },
+
+  hooks: {
+    // Private Folder Impl
+    "pages:extend": (pages) => {
+      const pagesToRemove: NuxtPage[] = [];
+      pages.forEach((page) => {
+        if (/\/_[^/]+/.test(page.path)) {
+          pagesToRemove.push(page);
+        }
+      });
+      pagesToRemove.forEach((page) => {
+        pages.splice(pages.indexOf(page), 1);
+      });
+    },
+  },
 });
