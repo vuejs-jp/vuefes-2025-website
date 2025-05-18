@@ -20,7 +20,7 @@ const { locale, t } = useI18n();
     }"
   >
     <component :is="locale === 'ja' ? JaCfpWanted : EnCfpWanted" />
-    <VFButton class="cfp-apply-button">
+    <VFButton class="cfp-apply-button" :link="t('cfpApplyLink')" external>
       {{ t('cfpApplyButton') }}
     </VFButton>
   </VFSection>
@@ -33,6 +33,8 @@ const { locale, t } = useI18n();
   display: block;
   margin: 0 auto;
   margin-top: 2rem;
+  width: fit-content;
+
   @media (--mobile) {
     margin-top: 1.5rem;
   }

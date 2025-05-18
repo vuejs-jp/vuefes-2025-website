@@ -17,6 +17,7 @@ animation:
 cfpWanted: "CFP募集"
 cfpWantedCoverImageAlt: "CFP募集のカバー画像"
 cfpApplyButton: "CFP応募はこちら"
+cfpApplyLink: "https://docs.google.com/forms/d/e/1FAIpQLSd1RljAjLstA6CxTY6qQuU_8H1pjY_hAhSQWC2hTTFGeTAmFQ/viewform"
 message: "メッセージ"
 messageCoverImageAlt: Vue Fes Japan 2025 ロゴ
 sponsorWanted: "スポンサー募集"

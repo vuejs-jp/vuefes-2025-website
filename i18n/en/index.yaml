@@ -17,6 +17,7 @@ animation:
 cfpWanted: "Call for Proposals"
 cfpWantedCoverImageAlt: "Call for Proposals cover image"
 cfpApplyButton: "Apply for CFP Here"
+cfpApplyLink: "https://docs.google.com/forms/d/e/1FAIpQLSeWZ_O2GyICebSjAgKaaODIOxbDpk8kBph26aBNcPeLb3qqLA/viewform"
 message: "Message"
 messageCoverImageAlt: Vue Fes Japan 2025 logo
 sponsorWanted: "Sponsorship Opportunities"

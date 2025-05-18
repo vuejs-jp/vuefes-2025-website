@@ -74,6 +74,8 @@ const { locale: lang } = useI18n();
 
 button,
 a {
+  text-decoration: none;
+
   padding: 1rem 2.5rem;
   border-radius: 6.25rem;
   border: none;
