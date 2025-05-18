@@ -42,6 +42,7 @@ if (__FEATURE_CFP__) {
 
 .section-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   row-gap: 1.5rem;
 

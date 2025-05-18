@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, useRoute } from "#imports";
+import { computed, defineAsyncComponent, useRoute } from "#imports";
 import { MainVisual, VFHeader, VFFooter } from "#components";
 import { useAnimationStore } from "~/stores/animation";
 
@@ -9,31 +9,42 @@ const [animation] = useAnimationStore();
 
 const route = useRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
+
+let Menu: ReturnType<typeof defineAsyncComponent> | null = null;
+if (__FEATURE_MENU__) {
+  Menu = defineAsyncComponent(() => import("~/components/menu/Menu.vue"));
+}
 </script>
 
 <template>
-  <MainVisual
-    :title-tag="isRoot ? 'h1' : 'div'"
-    :animation
-    :show-scroll-attention="isRoot"
-    class="main-visual"
-  />
+  <MainVisual :title-tag="isRoot ? 'h1' : 'div'" :animation :show-scroll-attention="isRoot" class="main-visual" />
 
   <div v-if="isRoot" style="height: 100svh" />
-
-  <div class="content">
-    <VFHeader :is-root class="header" />
-    <main class="main">
-      <slot />
-    </main>
-    <VFFooter />
+  <div class="layout">
+    <div class="side-content left-menu">
+      <div v-if="isRoot && Menu" class="nav-menu">
+        <Menu />
+      </div>
+    </div>
+    <div class="content">
+      <VFHeader :is-root class="header" />
+      <main class="main">
+        <slot />
+      </main>
+      <VFFooter />
+    </div>
+    <div class="side-content right-menu"></div>
   </div>
-
   <div style="height: 100lvh" />
 </template>
 
 <style scoped>
 @import "~/assets/styles/custom-media-query.css";
+
+.layout {
+  display: flex;
+  position: relative;
+}
 
 .main-visual {
   position: fixed;
@@ -41,7 +52,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 }
 
 .content {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 0.5rem;
   background-color: transparent;
   display: flex;
@@ -49,6 +60,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 700px;
   max-width: 700px;
 
   @media (--mobile) {
@@ -56,7 +68,31 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     padding: 0 0.25rem;
     max-width: none;
     width: 100%;
+    min-width: 0;
+    flex-basis: auto;
   }
+}
+
+.side-content {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 100%;
+  height: 100%;
+  width: calc((100vw - 700px) / 2);
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.left-menu {
+  position: sticky;
+  justify-content: end;
+  top: calc(100svh / 2 - 7rem);
+  left: 0;
+  padding-top: 0.5rem; /* align to header padding top */
+  padding-left: 0.5rem;
 }
 
 .header {
@@ -64,9 +100,19 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
+  z-index: 1;
 
   @media (--mobile) {
     padding-top: 0.25rem;
+  }
+}
+
+.nav-menu {
+  width: auto;
+  height: 100%;
+
+  @media (--pc-middle) {
+    display: none;
   }
 }
 

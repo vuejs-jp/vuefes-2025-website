@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { z } from "zod";
+import { HOME_HEADING_ID } from "~/constant";
 import { reactive, useI18n, useRuntimeConfig } from "#imports";
 import { VFSection, VFButton } from "#components";
 import { type FormSubmitEvent, VFForm, VFInput, VFTextarea } from "~/components/form";
@@ -61,7 +62,7 @@ async function submit(event: FormSubmitEvent) {
 
 <template>
   <VFSection
-    id="contact-form"
+    :id="HOME_HEADING_ID.contact"
     :title="t('contactForm.title')"
   >
     <p>{{ t("contactForm.description") }}</p>

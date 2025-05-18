@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { HOME_HEADING_ID } from "~/constant";
 import { useBreakpoint, useI18n, useWithBase } from "#imports";
 import { VFSection, JaSponsorWanted, EnSponsorWanted } from "#components";
 
@@ -9,6 +10,7 @@ const { locale, t } = useI18n();
 
 <template>
   <VFSection
+    :id="HOME_HEADING_ID.sponsorWanted"
     :title="t('sponsorWanted')"
     :cover-image="{
       src: bp === 'pc'
