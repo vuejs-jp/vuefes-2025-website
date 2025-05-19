@@ -5,7 +5,6 @@ import type { NuxtPage } from "nuxt/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   modules: [
     "@nuxt/eslint",
     "@nuxt/scripts",
@@ -58,6 +57,8 @@ export default defineNuxtConfig({
     robotsTxt: false,
   },
 
+  plugins: ["~/plugins/v-click-outside.ts"],
+
   vite: {
     define: {
       __FEATURE_SPEAKERS__: process.env.FEATURE_SPEAKERS || false, // 2025-05-25 ~
@@ -80,12 +81,8 @@ export default defineNuxtConfig({
     plugins: [
       Icons({
         customCollections: {
-          icons: FileSystemIconLoader("./public/images/icons", svg =>
-            svg.replace(/#007F62/g, "var(--color-base)"),
-          ),
-          logo: FileSystemIconLoader("./public/images/logo", svg =>
-            svg.replace(/#007F62/g, "var(--color-base)"),
-          ),
+          icons: FileSystemIconLoader("./public/images/icons", svg => svg.replace(/#007F62/g, "var(--color-base)")),
+          logo: FileSystemIconLoader("./public/images/logo", svg => svg.replace(/#007F62/g, "var(--color-base)")),
         },
       }),
     ],

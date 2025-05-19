@@ -43,6 +43,7 @@ words:
   - vuejs
   - vuetify
   - webgl
+  - vueuse
 ignorePaths:
   - dist
   - node_modules

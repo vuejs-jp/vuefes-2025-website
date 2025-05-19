@@ -4,12 +4,14 @@ import { computed, useRoute } from "#imports";
 export type MenuItemProps = {
   label: string;
   href: string;
+  lang?: "en" | "ja";
 };
+
 const { label, href: to } = defineProps<MenuItemProps>();
 
 const route = useRoute();
 
-const activeLinkComp = computed(() => to == route.hash);
+const activeLinkComp = computed(() => to.startsWith("#") ? to == route.hash : to == route.path);
 </script>
 
 <template>
@@ -17,6 +19,7 @@ const activeLinkComp = computed(() => to == route.hash);
     :class="{ 'menuitem-link': true, 'menuitem-link-active': activeLinkComp }"
     :to
     prefetch-on="visibility"
+    v-bind="$attrs"
   >
     {{ label }}
   </NuxtLink>

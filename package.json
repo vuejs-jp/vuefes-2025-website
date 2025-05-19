@@ -57,6 +57,7 @@
     "@storybook/vue3": "8.4.7",
     "@types/three": "^0.175.0",
     "@unhead/vue": "^2.0.5",
+    "@vueuse/core": "^13.2.0",
     "cspell": "^8.17.5",
     "eslint": "^9.24.0",
     "eslint-plugin-storybook": "^0.12.0",

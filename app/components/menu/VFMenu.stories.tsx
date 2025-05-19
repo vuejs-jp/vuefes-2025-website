@@ -1,16 +1,16 @@
 import type { Meta, StoryFn } from "@storybook/vue3";
-import Menu from "./Menu.vue";
+import VFMenu from "./VFMenu.vue";
 
 export default {
-  title: "Preview/Menu",
-  component: Menu,
-} satisfies Meta<typeof Menu>;
+  title: "Preview/VFMenu",
+  component: VFMenu,
+} satisfies Meta<typeof VFMenu>;
 
 const Template: StoryFn<{
   animation: boolean;
 }> = args => ({
-  name: "Menu",
-  setup: () => () => <Menu {...args} />,
+  name: "VFMenu",
+  setup: () => () => <VFMenu {...args} />,
 });
 
 export const Default = Template.bind({});

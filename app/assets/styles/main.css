@@ -34,6 +34,8 @@
   --color-divider-light: #efefef;
   --color-place-holder: #bbb;
   --color-black: #333;
+  --color-grey: #eee;
+  --color-grey-transparent: #eeeeeeaa;
   --color-white: #fff;
   --color-alert: #db0000;
 }
@@ -250,5 +252,20 @@ p {
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+
+/**
+  * Smooth Scroll
+  ------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

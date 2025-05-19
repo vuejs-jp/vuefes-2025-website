@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, useRoute } from "#imports";
+import { useScroll } from "@vueuse/core";
+import { computed, defineAsyncComponent, useBreakpoint, useRoute } from "#imports";
 import { MainVisual, VFHeader, VFFooter } from "#components";
 import { useAnimationStore } from "~/stores/animation";
 
@@ -7,35 +8,52 @@ defineSlots<{ default: () => unknown }>();
 
 const [animation] = useAnimationStore();
 
+const bp = useBreakpoint();
 const route = useRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
-let Menu: ReturnType<typeof defineAsyncComponent> | null = null;
+let VFMenu: ReturnType<typeof defineAsyncComponent> | null = null;
+let VFSpMenu: ReturnType<typeof defineAsyncComponent> | null = null;
 if (__FEATURE_MENU__) {
-  Menu = defineAsyncComponent(() => import("~/components/menu/Menu.vue"));
+  VFMenu = defineAsyncComponent(() => import("~/components/menu/VFMenu.vue"));
+  VFSpMenu = defineAsyncComponent(() => import("~/components/menu/VFSpMenu.vue"));
 }
+
+const { y } = useScroll(window);
+const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y.value > 450);
 </script>
 
 <template>
-  <MainVisual :title-tag="isRoot ? 'h1' : 'div'" :animation :show-scroll-attention="isRoot" class="main-visual" />
-
-  <div v-if="isRoot" style="height: 100svh" />
-  <div class="layout">
-    <div class="side-content left-menu">
-      <div v-if="isRoot && Menu" class="nav-menu">
-        <Menu />
+  <div>
+    <MainVisual
+      :title-tag="isRoot ? 'h1' : 'div'"
+      :animation
+      :show-scroll-attention="isRoot"
+      class="main-visual"
+    />
+    <div v-if="isRoot" style="height: 100svh" />
+    <div class="layout">
+      <div class="side-content left-menu">
+        <div v-if="isRoot && VFMenu && bp === 'pc'" class="nav-menu">
+          <VFMenu />
+        </div>
       </div>
+      <div class="content">
+        <VFHeader :is-root class="header" />
+
+        <main class="main">
+          <slot />
+        </main>
+        <VFFooter />
+      </div>
+      <div class="side-content right-menu"></div>
     </div>
-    <div class="content">
-      <VFHeader :is-root class="header" />
-      <main class="main">
-        <slot />
-      </main>
-      <VFFooter />
-    </div>
-    <div class="side-content right-menu"></div>
+    <div style="height: 100lvh" />
   </div>
-  <div style="height: 100lvh" />
+
+  <Transition>
+    <VFSpMenu v-if="isShowedSpMenu" class="sp-nav-menu" />
+  </Transition>
 </template>
 
 <style scoped>
@@ -91,7 +109,8 @@ if (__FEATURE_MENU__) {
   justify-content: end;
   top: calc(100svh / 2 - 7rem);
   left: 0;
-  padding-top: 0.5rem; /* align to header padding top */
+  padding-top: 0.5rem;
+  /* align to header padding top */
   padding-left: 0.5rem;
 }
 
@@ -100,7 +119,7 @@ if (__FEATURE_MENU__) {
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
-  z-index: 1;
+  z-index: 15;
 
   @media (--mobile) {
     padding-top: 0.25rem;
@@ -110,10 +129,22 @@ if (__FEATURE_MENU__) {
 .nav-menu {
   width: auto;
   height: 100%;
+}
 
-  @media (--pc-middle) {
-    display: none;
-  }
+.sp-nav-menu {
+  position: fixed;
+  bottom: 5svh;
+  width: 100vw;
+  height: auto;
+  z-index: 10;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 
 .main {
