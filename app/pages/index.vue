@@ -2,6 +2,7 @@
 import SectionMessage from "./_components/SectionMessage.vue";
 import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
 import SectionContact from "./_components/SectionContact.vue";
+import SectionSpeakers from "./_components/SectionSpeakers.vue";
 
 import {
   defineRouteRules,
@@ -23,17 +24,12 @@ let SectionCfp: ReturnType<typeof defineAsyncComponent> | null = null;
 if (__FEATURE_CFP__) {
   SectionCfp = defineAsyncComponent(() => import("~/pages/_components/SectionCfp.vue"));
 }
-
-let SectionSpeakers: ReturnType<typeof defineAsyncComponent> | null = null;
-if (__FEATURE_SPEAKERS__) {
-  SectionSpeakers = defineAsyncComponent(() => import("~/pages/_components/SectionSpeakers.vue"));
-}
 </script>
 
 <template>
   <div class="section-container">
     <SectionCfp v-if="SectionCfp" />
-    <SectionSpeakers v-if="SectionSpeakers" />
+    <SectionSpeakers />
     <SectionMessage />
     <SectionSponsorWanted />
     <SectionContact />

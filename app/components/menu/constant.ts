@@ -10,7 +10,7 @@ export const NAV_ITEMS = [
     label: "CFP Wanted",
     href: `#${HOME_HEADING_ID.cfpWanted}`,
   },
-  __FEATURE_SPEAKERS__ && {
+  {
     label: "Speakers",
     href: `#${HOME_HEADING_ID.speakers}`,
   },

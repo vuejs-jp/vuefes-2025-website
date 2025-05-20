@@ -61,11 +61,9 @@ export default defineNuxtConfig({
 
   vite: {
     define: {
-      __FEATURE_SPEAKERS__: process.env.FEATURE_SPEAKERS || false, // 2025-05-25 ~
       __FEATURE_CFP__: process.env.FEATURE_CFP || false, // 2025-06-01 ~
       __FEATURE_TICKET__: process.env.FEATURE_TICKET || false, //  2025-08-xx ~
       __FEATURE_SPONSOR_LIST__: process.env.FEATURE_SPONSOR_LIST || false,
-      __FEATURE_MENU__: process.env.FEATURE_MENU || false, // when ready
     },
     css: {
       transformer: "lightningcss",

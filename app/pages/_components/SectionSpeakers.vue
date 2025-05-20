@@ -5,6 +5,7 @@ import jaSpeakers from "../../../i18n/ja/attended-speakers";
 import { computed, useI18n } from "#imports";
 import { EnSpeakers, JaSpeakers, VFButton } from "#components";
 import type { AttendedSpeaker } from "~~/i18n/speaker";
+import { HOME_HEADING_ID } from "~/constant";
 
 const { t, locale } = useI18n();
 
@@ -50,7 +51,11 @@ const speakers = computed<CarouselSpeaker[]>(() => {
 </script>
 
 <template>
-  <VFSection :title="t('speakers.title')" class="section-speakers">
+  <VFSection
+    :id="HOME_HEADING_ID.speakers"
+    :title="t('speakers.title')"
+    class="section-speakers"
+  >
     <component :is="locale === 'ja' ? JaSpeakers : EnSpeakers" />
 
     <h3 class="featured-speaker-heading">

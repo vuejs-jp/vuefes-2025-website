@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
-import { computed, defineAsyncComponent, useBreakpoint, useRoute } from "#imports";
-import { MainVisual, VFHeader, VFFooter } from "#components";
+import { computed, useBreakpoint, useRoute } from "#imports";
+import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu } from "#components";
 import { useAnimationStore } from "~/stores/animation";
 
 defineSlots<{ default: () => unknown }>();
@@ -11,13 +11,6 @@ const [animation] = useAnimationStore();
 const bp = useBreakpoint();
 const route = useRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
-
-let VFMenu: ReturnType<typeof defineAsyncComponent> | null = null;
-let VFSpMenu: ReturnType<typeof defineAsyncComponent> | null = null;
-if (__FEATURE_MENU__) {
-  VFMenu = defineAsyncComponent(() => import("~/components/menu/VFMenu.vue"));
-  VFSpMenu = defineAsyncComponent(() => import("~/components/menu/VFSpMenu.vue"));
-}
 
 const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y.value > 450);
@@ -34,7 +27,7 @@ const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y
     <div v-if="isRoot" style="height: 100svh" />
     <div class="layout">
       <div class="side-content left-menu">
-        <div v-if="isRoot && VFMenu && bp === 'pc'" class="nav-menu">
+        <div v-if="isRoot && bp === 'pc'" class="nav-menu">
           <VFMenu />
         </div>
       </div>
