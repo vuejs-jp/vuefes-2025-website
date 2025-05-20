@@ -5,11 +5,16 @@ words:
   - allscale
   - allspeed
   - autodocs
+  - Chau
   - dateness
+  - dominikg
   - fract
+  - Guillaume
+  - hashimoto
   - Hinomaru
   - inputtext
   - intlify
+  - johnsoncodehk
   - Kawaguchi
   - kazu
   - kazupon
@@ -27,8 +32,11 @@ words:
   - nwtgck
   - otemachi
   - palt
+  - pcnextbutton
+  - pcprevbutton
   - primevue
   - rolldown
+  - sugiura
   - Sumi
   - suminagashi
   - textareas
@@ -42,8 +50,9 @@ words:
   - vuefes
   - vuejs
   - vuetify
-  - webgl
   - vueuse
+  - webgl
+  - yuji
 ignorePaths:
   - dist
   - node_modules

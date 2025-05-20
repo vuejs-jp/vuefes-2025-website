@@ -6,6 +6,10 @@ export const NAV_ITEMS = [
     label: "Home",
     href: `#${HOME_HEADING_ID.home}`,
   },
+  __FEATURE_CFP__ && {
+    label: "CFP Wanted",
+    href: `#${HOME_HEADING_ID.cfpWanted}`,
+  },
   __FEATURE_SPEAKERS__ && {
     label: "Speakers",
     href: `#${HOME_HEADING_ID.speakers}`,
@@ -13,10 +17,6 @@ export const NAV_ITEMS = [
   __FEATURE_TICKET__ && {
     label: "Tickets",
     href: `#${HOME_HEADING_ID.tickets}`,
-  },
-  __FEATURE_CFP__ && {
-    label: "CFP Wanted",
-    href: `#${HOME_HEADING_ID.cfpWanted}`,
   },
   {
     label: "Message",

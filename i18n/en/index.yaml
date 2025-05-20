@@ -20,6 +20,13 @@ cfpApplyButton: "Apply for CFP Here"
 cfpApplyLink: "https://docs.google.com/forms/d/e/1FAIpQLSeWZ_O2GyICebSjAgKaaODIOxbDpk8kBph26aBNcPeLb3qqLA/viewform"
 message: "Message"
 messageCoverImageAlt: Vue Fes Japan 2025 logo
+speakers:
+  title: "Speakers"
+  description: "Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text"
+  featured: "Featured Speakers"
+  previous: "Previous Speaker"
+  next: "Next Speaker"
+  viewAll: "View All Speakers"
 sponsorWanted: "Sponsorship Opportunities"
 sponsorWantedCoverImageAlt: "Sponsor Wanted cover image"
 contactForm:

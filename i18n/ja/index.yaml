@@ -20,6 +20,13 @@ cfpApplyButton: "CFP応募はこちら"
 cfpApplyLink: "https://docs.google.com/forms/d/e/1FAIpQLSd1RljAjLstA6CxTY6qQuU_8H1pjY_hAhSQWC2hTTFGeTAmFQ/viewform"
 message: "メッセージ"
 messageCoverImageAlt: Vue Fes Japan 2025 ロゴ
+speakers:
+  title: "スピーカー"
+  description: "スピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキスト"
+  featured: "注目のスピーカー"
+  previous: "前のスピーカー"
+  next: "次のスピーカー"
+  viewAll: "すべてのスピーカーを見る"
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
 contactForm:

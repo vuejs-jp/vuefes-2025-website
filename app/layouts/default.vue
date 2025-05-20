@@ -119,7 +119,7 @@ const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
-  z-index: 15;
+  z-index: 100;
 
   @media (--mobile) {
     padding-top: 0.25rem;
