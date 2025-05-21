@@ -29,15 +29,15 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
           </h3>
 
           <div class="speaker-socials">
-            <NuxtLink v-if="speaker.socialUrls?.github" :href="speaker.socialUrls.github" external>
+            <NuxtLink v-if="speaker.socialUrls?.github" :to="speaker.socialUrls.github" target="_blank">
               <GithubIcon :aria-label="t('snsIconImageAlt.github')" role="img" />
             </NuxtLink>
 
-            <NuxtLink v-if="speaker.socialUrls?.x" :href="speaker.socialUrls.x" external>
+            <NuxtLink v-if="speaker.socialUrls?.x" :to="speaker.socialUrls.x" target="_blank">
               <XIcon :aria-label="t('snsIconImageAlt.x')" role="img" />
             </NuxtLink>
 
-            <NuxtLink v-if="speaker.socialUrls?.bluesky" :href="speaker.socialUrls.bluesky" external>
+            <NuxtLink v-if="speaker.socialUrls?.bluesky" :to="speaker.socialUrls.bluesky" target="_blank">
               <BlueskyIcon :aria-label="t('snsIconImageAlt.bluesky')" role="img" />
             </NuxtLink>
             <!-- TODO: mastodon -->
