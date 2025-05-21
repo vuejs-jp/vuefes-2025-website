@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import Carousel from "primevue/carousel";
-import enSpeakers from "../../../i18n/en/attended-speakers";
-import jaSpeakers from "../../../i18n/ja/attended-speakers";
+import { SESSION_SPEAKERS as enSpeakers } from "../../../i18n/en/speakers";
+import { SESSION_SPEAKERS as jaSpeakers } from "../../../i18n/ja/speakers";
 import { computed, useI18n } from "#imports";
 import { EnSpeakers, JaSpeakers, VFButton } from "#components";
-import type { AttendedSpeaker } from "~~/i18n/speaker";
+import type { Speaker } from "~~/i18n/speaker";
 import { HOME_HEADING_ID } from "~/constant";
 
 const { t, locale } = useI18n();
@@ -28,7 +28,7 @@ class ColorSetIter {
   }
 }
 
-type CarouselSpeaker = AttendedSpeaker & {
+type CarouselSpeaker = Speaker & {
   id: string;
   color: ColorSet;
 };
@@ -36,11 +36,14 @@ type CarouselSpeaker = AttendedSpeaker & {
 const speakers = computed<CarouselSpeaker[]>(() => {
   const colorSetIter = new ColorSetIter();
 
-  const _speakers = (locale.value === "en" ? enSpeakers : jaSpeakers).map(it => ({
-    ...it,
-    id: it.name,
-    color: colorSetIter.next(),
-  }));
+  const _speakers
+    = (locale.value === "en" ? enSpeakers : jaSpeakers)
+      .filter(it => it.attended)
+      .map(it => ({
+        ...it,
+        id: it.name,
+        color: colorSetIter.next(),
+      }));
 
   return [
     { ..._speakers[_speakers.length - 1]! },

@@ -51,7 +51,6 @@ defineSlots<{
   background-color: var(--color-white);
   border: 1px solid var(--color-divider-light);
   width: 100%;
-  max-width: 700px;
 
   .section-cover-wrapper {
     /* for preventing CLS */

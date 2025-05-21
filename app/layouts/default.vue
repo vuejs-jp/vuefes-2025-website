@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
-import { computed, useBreakpoint, useRoute } from "#imports";
+import { computed, useBreakpoint, useLocaleRoute, useRoute } from "#imports";
 import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu } from "#components";
 import { useAnimationStore } from "~/stores/animation";
 
@@ -10,10 +10,17 @@ const [animation] = useAnimationStore();
 
 const bp = useBreakpoint();
 const route = useRoute();
+const localeRoute = useLocaleRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
 const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y.value > 450);
+
+const isWidenContent = computed(() =>
+  ["speakers"]
+    .map(it => localeRoute(it)?.name)
+    .includes(route.name?.toString() ?? ""),
+);
 </script>
 
 <template>
@@ -31,7 +38,7 @@ const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y
           <VFMenu />
         </div>
       </div>
-      <div class="content">
+      <div class="content" :class="{ 'widen-content': isWidenContent }">
         <VFHeader :is-root class="header" />
 
         <main class="main">
@@ -81,6 +88,15 @@ const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y
     width: 100%;
     min-width: 0;
     flex-basis: auto;
+  }
+
+  &.widen-content {
+    min-width: 960px;
+
+    @media (--mobile) {
+      min-width: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -141,6 +157,7 @@ const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y
 }
 
 .main {
+  width: 100%;
   margin-top: 0.5rem;
 
   @media (--mobile) {

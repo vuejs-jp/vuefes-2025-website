@@ -31,6 +31,12 @@ speakers:
   previous: "前のスピーカー"
   next: "次のスピーカー"
   viewAll: "すべてのスピーカーを見る"
+  sessions:
+    title: "セッション"
+  lightningTalks:
+    title: "ライトニングトーク"
+  sponsorSessions:
+    title: "スポンサーセッション"
 
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
