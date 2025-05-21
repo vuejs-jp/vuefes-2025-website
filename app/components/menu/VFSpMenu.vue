@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { NAV_ITEMS } from "./constant";
-import MenuItem from "./VFMenuItem.vue";
+import MenuItem, { type MenuItemProps } from "./VFMenuItem.vue";
 import SpMenuMobileButton from "./VFSpMenuMobileButton.vue";
 
 const menuOpen = ref(false);
@@ -9,14 +8,23 @@ const menuOpen = ref(false);
 function toggleMenu(toggle = !menuOpen.value) {
   menuOpen.value = toggle;
 }
+
+const { items, actives } = defineProps<{
+  items: MenuItemProps[];
+  actives?: string[];
+}>();
 </script>
 
 <template>
   <div class="sp-navigation-wrapper" lang="en">
     <Transition enter-active-class="zoom-blur-in" leave-active-class="zoom-blur-in-reverse">
       <ul v-if="menuOpen" v-show="menuOpen" class="sp-navigation-content">
-        <li v-for="(item, idx) in NAV_ITEMS" :key="idx">
-          <MenuItem class="sp-navigation-link" :label="item.label" :href="item.href" />
+        <li v-for="(item, idx) in items" :key="idx">
+          <MenuItem
+            class="sp-navigation-link"
+            :active="actives?.includes(item.id)"
+            v-bind="item"
+          />
         </li>
       </ul>
     </Transition>

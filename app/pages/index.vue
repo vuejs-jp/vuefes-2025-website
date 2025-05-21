@@ -27,17 +27,19 @@ if (__FEATURE_CFP__) {
 </script>
 
 <template>
-  <div class="section-container">
-    <SectionCfp v-if="SectionCfp" />
-    <SectionSpeakers />
-    <SectionMessage />
-    <SectionSponsorWanted />
-    <SectionContact />
-  </div>
+  <div id="pages-index">
+    <div class="section-container">
+      <SectionCfp v-if="SectionCfp" />
+      <SectionSpeakers />
+      <SectionMessage />
+      <SectionSponsorWanted />
+      <SectionContact />
+    </div>
 
-  <h2 class="sns-introduction-heading">
-    {{ t("snsIntroduction") }}
-  </h2>
+    <h2 class="sns-introduction-heading">
+      {{ t("snsIntroduction") }}
+    </h2>
+  </div>
 </template>
 
 <style scoped>

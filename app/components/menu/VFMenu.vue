@@ -1,12 +1,19 @@
 <script setup lang="ts">
-import MenuItem from "./VFMenuItem.vue";
-import { NAV_ITEMS } from "./constant";
+import MenuItem, { type MenuItemProps } from "./VFMenuItem.vue";
+
+const { items, actives } = defineProps<{
+  items: MenuItemProps[];
+  actives?: string[];
+}>();
 </script>
 
 <template>
   <ul class="navigation-content" lang="en">
-    <li v-for="(item, idx) in NAV_ITEMS" :key="idx">
-      <MenuItem :label="item.label" :href="item.href" />
+    <li v-for="(item, idx) in items" :key="idx">
+      <MenuItem
+        :active="actives?.includes(item.id)"
+        v-bind="item"
+      />
     </li>
   </ul>
 </template>

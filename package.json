@@ -64,6 +64,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.29.1",
     "nuxt": "^3.15.4",
+    "nuxt-typed-router": "3.8.0",
     "prettier": "4.0.0-alpha.11",
     "primevue": "^4.3.2",
     "rehype-external-links": "^3.0.0",

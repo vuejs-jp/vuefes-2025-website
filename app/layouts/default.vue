@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
-import { computed, useBreakpoint, useLocaleRoute, useRoute } from "#imports";
+import { useLocaleRoute } from "@typed-router";
+import { computed, nextTick, onUnmounted, ref, useBreakpoint, useRoute, watch } from "#imports";
 import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu } from "#components";
 import { useAnimationStore } from "~/stores/animation";
+import { HOME_HEADING_ID } from "~/constant";
+import type { MenuItemProps } from "~/components/menu/VFMenuItem.vue";
 
 defineSlots<{ default: () => unknown }>();
 
@@ -13,14 +16,149 @@ const route = useRoute();
 const localeRoute = useLocaleRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
 
+const menuItems = computed<MenuItemProps[]>(() =>
+  [
+    {
+      id: HOME_HEADING_ID.home,
+      label: "Home",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.home,
+      },
+    },
+    __FEATURE_CFP__ && {
+      id: HOME_HEADING_ID.cfp,
+      label: "CFP",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.cfp,
+      },
+    },
+    {
+      id: HOME_HEADING_ID.speakers,
+      label: "Speakers",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.speakers,
+      },
+    },
+    __FEATURE_TICKET__ && {
+      id: HOME_HEADING_ID.tickets,
+      label: "Tickets",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.tickets,
+      },
+    },
+    {
+      id: HOME_HEADING_ID.message,
+      label: "Message",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.message,
+      },
+    },
+    __FEATURE_SPONSOR_LIST__ && {
+      id: HOME_HEADING_ID.sponsors,
+      label: "Sponsors",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.sponsors,
+      },
+    },
+    {
+      id: HOME_HEADING_ID.sponsorWanted,
+      label: "Sponsor Wanted",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.sponsorWanted,
+      },
+    },
+    {
+      id: HOME_HEADING_ID.contact,
+      label: "Contact",
+      route: {
+        name: localeRoute({ name: "index" }).name,
+        hash: HOME_HEADING_ID.contact,
+      },
+    },
+  ].filter(it => !!it),
+);
+
 const { y } = useScroll(window);
-const isShowedSpMenu = computed(() => isRoot.value && bp.value === "mobile" && y.value > 450);
+const isShowedSpMenu = computed(() => bp.value === "mobile" && (!isRoot.value || y.value > 450));
 
 const isWidenContent = computed(() =>
-  ["speakers"]
-    .map(it => localeRoute(it)?.name)
-    .includes(route.name?.toString() ?? ""),
+  ([localeRoute({ name: "speakers" })?.name] as string[]).includes(route.name?.toString() ?? ""),
 );
+
+// scroll behavior
+watch(() => route.hash, async (hash) => {
+  if (hash === "") {
+    return;
+  }
+
+  await nextTick();
+
+  if (isRoot.value && hash === "#") {
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  const target = document.querySelector(hash);
+  if (target) {
+    const top = target.getBoundingClientRect().top + window.scrollY - window.innerHeight / 3;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+});
+
+// menu actives
+const menuActives = ref<string[]>([]);
+
+watch(() => route.name, async (name) => {
+  if (name === localeRoute({ name: "speakers" })?.name) {
+    menuActives.value = [HOME_HEADING_ID.speakers];
+    if (isRoot.value) {
+      menuActives.value.push(HOME_HEADING_ID.home);
+    }
+    return;
+  }
+
+  setTimeout(() => {
+    const targets = menuItems.value.map((item) => {
+      const target = document.getElementById(item.route.hash);
+      if (target) {
+        return target;
+      }
+    }).filter(it => !!it);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let minTop = Infinity;
+
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const rect = entry.target.getBoundingClientRect();
+            if (rect.top < minTop) {
+              minTop = rect.top;
+              menuActives.value = [entry.target.id];
+              if (isRoot.value) {
+                menuActives.value.push(HOME_HEADING_ID.home);
+              }
+            }
+          } else {
+            const index = menuActives.value.indexOf(entry.target.id);
+            if (index !== -1) {
+              menuActives.value.splice(index, 1);
+            }
+          }
+        });
+      },
+    );
+    targets.forEach(target => observer.observe(target!));
+    onUnmounted(() => observer.disconnect());
+  });
+}, { immediate: true });
 </script>
 
 <template>
@@ -34,8 +172,8 @@ const isWidenContent = computed(() =>
     <div v-if="isRoot" style="height: 100svh" />
     <div class="layout">
       <div class="side-content left-menu">
-        <div v-if="isRoot && bp === 'pc'" class="nav-menu">
-          <VFMenu />
+        <div v-if="bp === 'pc'" class="nav-menu">
+          <VFMenu :items="menuItems" :actives="menuActives" />
         </div>
       </div>
       <div class="content" :class="{ 'widen-content': isWidenContent }">
@@ -52,7 +190,12 @@ const isWidenContent = computed(() =>
   </div>
 
   <Transition>
-    <VFSpMenu v-if="isShowedSpMenu" class="sp-nav-menu" />
+    <VFSpMenu
+      v-if="isShowedSpMenu"
+      class="sp-nav-menu"
+      :items="menuItems"
+      :actives="menuActives"
+    />
   </Transition>
 </template>
 

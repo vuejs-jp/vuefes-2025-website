@@ -1,4 +1,5 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T extends RoutesNamesList, P extends string">
+import type { NuxtRoute, RoutesNamesList } from "@typed-router";
 import { useI18n } from "#imports";
 
 const {
@@ -18,7 +19,7 @@ const {
   icon?: boolean;
 
   /** @default undefined */
-  link?: string;
+  link?: NuxtRoute<T, P> | string;
 
   /**
    * only works when `link` is true
@@ -37,7 +38,7 @@ const { locale: lang } = useI18n();
 
 <template>
   <NuxtLink
-    v-if="link"
+    v-if="to"
     :to
     :lang
     :class="[

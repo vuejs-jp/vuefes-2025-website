@@ -5,15 +5,8 @@ import type { NuxtPage } from "nuxt/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    "@nuxt/eslint",
-    "@nuxt/scripts",
-    "@nuxtjs/i18n",
-    "@nuxtjs/seo",
-    "@nuxtjs/storybook",
-    "@primevue/nuxt-module",
-    // "@nuxt/image",
-  ],
+  modules: ["@nuxt/eslint", "@nuxt/scripts", "@nuxtjs/i18n", "@nuxtjs/seo", "@nuxtjs/storybook", // "@nuxt/image",
+    "@primevue/nuxt-module", "nuxt-typed-router"],
 
   $production: {
     scripts: {

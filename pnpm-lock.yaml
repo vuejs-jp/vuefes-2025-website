@@ -80,6 +80,9 @@ importers:
       nuxt:
         specifier: ^3.15.4
         version: 3.16.1(@parcel/watcher@2.5.1)(@types/node@22.13.14)(better-sqlite3@11.9.1)(db0@0.3.1(better-sqlite3@11.9.1))(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.3)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3))(yaml@2.7.0)
+      nuxt-typed-router:
+        specifier: 3.8.0
+        version: 3.8.0(magicast@0.3.5)(prettier@4.0.0-alpha.11)
       prettier:
         specifier: 4.0.0-alpha.11
         version: 4.0.0-alpha.11
@@ -4675,6 +4678,9 @@ packages:
     resolution: {integrity: sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+
   lodash.defaults@4.2.0:
     resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
 
@@ -4701,6 +4707,10 @@ packages:
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
+  log-symbols@7.0.0:
+    resolution: {integrity: sha512-zrc91EDk2M+2AXo/9BTvK91pqb7qrPg2nX/Hy+u8a5qQlbaOflCKO+6SqgZ+M+xUFxGdKTgwnGiL96b1W3ikRA==}
+    engines: {node: '>=18'}
 
   lomemo@1.0.1:
     resolution: {integrity: sha512-g8CnVp7UYypeQKpXpMzyrJoDzhOoqVQYSJApoq/cFI3vGxXoHQ+6lH5cApW9XwzVy5SL9/Owil7/JxbKckw0Lg==}
@@ -5137,6 +5147,11 @@ packages:
 
   nuxt-site-config@3.1.7:
     resolution: {integrity: sha512-28YrXiqnk8qwHb4pjA25o46NgMspBOGR9VfUiM9Z9avCILfihyZ5QDPuln5zqFhnGTerC8AblvEtN2VrCipLug==}
+
+  nuxt-typed-router@3.8.0:
+    resolution: {integrity: sha512-cGD5pWAD2x65RKfEmddWkJ/ZFE4WwKIzIMaXO83UiYr1i1dqDlXVTlrIRNHjNaqTFNTQxMxKMgLGPLfYUspAmg==}
+    peerDependencies:
+      prettier: ^2.5.x || 3.x
 
   nuxt@3.16.1:
     resolution: {integrity: sha512-V0odAW9Yo8s58yGnSy0RuX+rQwz0wtQp3eOgMTsh1YDDZdIIYZmAlZaLypNeieO/mbmvOOUcnuRyIGIRrF4+5A==}
@@ -12199,6 +12214,8 @@ snapshots:
     dependencies:
       p-locate: 6.0.0
 
+  lodash-es@4.17.21: {}
+
   lodash.defaults@4.2.0: {}
 
   lodash.isarguments@3.1.0: {}
@@ -12216,6 +12233,11 @@ snapshots:
   lodash.uniqwith@4.5.0: {}
 
   lodash@4.17.21: {}
+
+  log-symbols@7.0.0:
+    dependencies:
+      is-unicode-supported: 2.1.0
+      yoctocolors: 2.1.1
 
   lomemo@1.0.1: {}
 
@@ -12958,6 +12980,20 @@ snapshots:
     transitivePeerDependencies:
       - magicast
       - vue
+
+  nuxt-typed-router@3.8.0(magicast@0.3.5)(prettier@4.0.0-alpha.11):
+    dependencies:
+      '@nuxt/kit': 3.16.2(magicast@0.3.5)
+      chalk: 5.4.1
+      defu: 6.1.4
+      lodash-es: 4.17.21
+      log-symbols: 7.0.0
+      mkdirp: 3.0.1
+      nanoid: 5.1.5
+      pathe: 2.0.3
+      prettier: 4.0.0-alpha.11
+    transitivePeerDependencies:
+      - magicast
 
   nuxt@3.16.1(@parcel/watcher@2.5.1)(@types/node@22.13.14)(better-sqlite3@11.9.1)(db0@0.3.1(better-sqlite3@11.9.1))(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.3)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3))(yaml@2.7.0):
     dependencies:
