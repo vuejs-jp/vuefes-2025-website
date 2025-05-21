@@ -78,9 +78,15 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(var(--size), 1fr));
+    row-gap: 32px;
+
+    @media (--mobile) {
+      row-gap: 24px;
+    }
 
     .speaker {
       width: var(--size);
+      height: fit-content;
 
       .speaker-image {
         width: 100%;
