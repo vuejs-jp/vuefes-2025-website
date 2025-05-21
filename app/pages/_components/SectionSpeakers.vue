@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Carousel from "primevue/carousel";
+import { useLocaleRoute } from "@typed-router";
 import { SESSION_SPEAKERS as enSpeakers } from "../../../i18n/en/speakers";
 import { SESSION_SPEAKERS as jaSpeakers } from "../../../i18n/ja/speakers";
 import { computed, useI18n } from "#imports";
@@ -8,6 +9,7 @@ import type { Speaker } from "~~/i18n/speaker";
 import { HOME_HEADING_ID } from "~/constant";
 
 const { t, locale } = useI18n();
+const localeRoute = useLocaleRoute();
 
 interface ColorSet {
   base: string;
@@ -100,7 +102,7 @@ const speakers = computed<CarouselSpeaker[]>(() => {
     </div>
 
     <div class="view-all-speakers">
-      <VFButton link="/speakers">
+      <VFButton :link="localeRoute({ name: 'speakers' })">
         {{ t('speakers.viewAll') }}
       </VFButton>
     </div>
