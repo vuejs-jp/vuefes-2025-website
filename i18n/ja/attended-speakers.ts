@@ -12,6 +12,11 @@ export default [
     avatarUrl: "/images/avatars/daniel-roe.png",
   },
   {
+    name: "Johnson Chu",
+    affiliation: "Vue.js core team member • Volar.js author",
+    avatarUrl: "/images/avatars/johnson-chu.png",
+  },
+  {
     name: "Guillaume Chau",
     affiliation: "Directus Web Architect",
     avatarUrl: "/images/avatars/guillaume-chau.png",
@@ -21,10 +26,6 @@ export default [
     affiliation: " Svelte & Vite core team member",
     avatarUrl: "/images/avatars/dominikg.png",
   },
-  // TODO:
-  // {
-  //   name: "johnsoncodehk"
-  // }
   {
     name: "橋本 麦",
     avatarUrl: "/images/avatars/baku-hashimoto.png",
