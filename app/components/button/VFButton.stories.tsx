@@ -3,7 +3,8 @@ import VFButton from "./VFButton.vue";
 
 export default {
   title: "Components/VFButton",
-  component: VFButton,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  component: VFButton as any,
   argTypes: {
     type: {
       control: { type: "select" },
