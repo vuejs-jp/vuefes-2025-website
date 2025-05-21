@@ -2,7 +2,7 @@ export const HOME_HEADING_ID = {
   home: "",
   speakers: "speakers",
   tickets: "tickets",
-  cfpWanted: "cfp-wanted",
+  cfp: "cfp",
   message: "message",
   sponsors: "sponsors",
   sponsorWanted: "sponsor-wanted",

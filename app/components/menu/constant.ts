@@ -7,8 +7,8 @@ export const NAV_ITEMS = [
     href: `#${HOME_HEADING_ID.home}`,
   },
   __FEATURE_CFP__ && {
-    label: "CFP Wanted",
-    href: `#${HOME_HEADING_ID.cfpWanted}`,
+    label: "CFP",
+    href: `#${HOME_HEADING_ID.cfp}`,
   },
   {
     label: "Speakers",

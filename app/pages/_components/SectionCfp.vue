@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { HOME_HEADING_ID } from "~/constant";
 import { useBreakpoint, useI18n, useWithBase } from "#imports";
-import { VFButton, VFSection, JaCfpWanted, EnCfpWanted } from "#components";
+import { VFButton, VFSection, JaCfp, EnCfp } from "#components";
 
 const bp = useBreakpoint();
 const withBase = useWithBase();
@@ -10,18 +10,18 @@ const { locale, t } = useI18n();
 
 <template>
   <VFSection
-    :id="HOME_HEADING_ID.cfpWanted"
-    :title="t('cfpWanted')"
+    :id="HOME_HEADING_ID.cfp"
+    :title="t('cfp.title')"
     :cover-image="{
       src: bp === 'pc'
-        ? withBase('/images/top/cover/cfp-wanted-pc.svg')
-        : withBase('/images/top/cover/cfp-wanted-sp.svg'),
-      alt: t('cfpWantedCoverImageAlt'),
+        ? withBase('/images/top/cover/cfp-pc.svg')
+        : withBase('/images/top/cover/cfp-sp.svg'),
+      alt: t('cfp.coverImageAlt'),
     }"
   >
-    <component :is="locale === 'ja' ? JaCfpWanted : EnCfpWanted" />
-    <VFButton class="cfp-apply-button" :link="t('cfpApplyLink')" external>
-      {{ t('cfpApplyButton') }}
+    <component :is="locale === 'ja' ? JaCfp : EnCfp" />
+    <VFButton class="cfp-apply-button" :link="t('cfp.applyLink')" external>
+      {{ t('cfp.applyButton') }}
     </VFButton>
   </VFSection>
 </template>
