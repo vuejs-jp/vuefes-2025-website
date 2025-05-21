@@ -22,17 +22,17 @@ const label = computed(() => isOpened ? "Close" : "Menu");
 <style scoped>
 /* TODO: include VFButton style */
 .toggle-button {
-  background: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
+  background: var(--color-white-transparent);
+  backdrop-filter: blur(8px);
   color: var(--color-base);
-  font-weight: 500;
+  border: 1px solid var(--color-divider-light);
   border-radius: 20px;
-  border: 1px solid var(--color-white);
+  font-weight: 500;
 
   /* TODO: no hover style when touch devices (in VFButton) */
   &:hover {
-    background: var(--color-grey-transparent) !important;
-    backdrop-filter: blur(4px) !important;
+    background: var(--color-white-transparent) !important;
+    backdrop-filter: blur(8px) !important;
     color: var(--color-base) !important;
   }
 }

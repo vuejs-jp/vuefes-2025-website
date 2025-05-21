@@ -44,10 +44,10 @@ function toggleMenu(toggle = !menuOpen.value) {
   bottom: 95%;
   width: auto;
   max-width: 15rem;
-  background: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
+  background: var(--color-white-transparent);
+  backdrop-filter: blur(8px);
   border-radius: 20px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-divider-light);
   padding: 0.5rem 0.1rem;
   margin: 0 auto;
 }
@@ -86,7 +86,7 @@ function toggleMenu(toggle = !menuOpen.value) {
   100% {
     transform: scale(1);
     filter: blur(0);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
     opacity: 1;
   }
 }
@@ -98,7 +98,7 @@ function toggleMenu(toggle = !menuOpen.value) {
 }
 
 @keyframes zoomBlurOut {
-  0%   { transform: scale(1);   filter: blur(0);    backdrop-filter: blur(4px); opacity: 1; }
+  0%   { transform: scale(1);   filter: blur(0);    backdrop-filter: blur(8px); opacity: 1; }
   100% { transform: scale(0.8); filter: blur(12px); backdrop-filter: blur(0);   opacity: 0; }
 }
 

@@ -35,7 +35,7 @@
   --color-place-holder: #bbb;
   --color-black: #333;
   --color-grey: #eee;
-  --color-grey-transparent: #eeeeeeaa;
+  --color-white-transparent: rgba(255, 255, 255, 0.85);
   --color-white: #fff;
   --color-alert: #db0000;
 }
