@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SESSION_SPEAKERS as enSessionSpeakers } from "../../../i18n/en/speakers";
 import { SESSION_SPEAKERS as jaSessionSpeakers } from "../../../i18n/ja/speakers";
-import { VFSection } from "#components";
+import { VFSection, JaSpeakers, EnSpeakers } from "#components";
 import { computed, useI18n } from "#imports";
 
 import XIcon from "~icons/icons/ic_x";
@@ -18,6 +18,8 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
     <h1>{{ t("speakers.title") }}</h1>
 
     <VFSection :title="t('speakers.sessions.title')" wide>
+      <component :is="locale === 'ja' ? JaSpeakers : EnSpeakers" class="description" />
+
       <ul class="speakers">
         <li v-for="speaker in sessionSpeakers" :key="speaker.name" class="speaker">
           <img :src="speaker.avatarUrl" :alt="''" class="speaker-image" />
@@ -60,11 +62,19 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
 
   h1 {
     font-size: 3rem;
-    padding: 7.5rem 0.5rem;
+    padding: 7.5rem 0.5rem 0 0.5rem;
     margin: 0.5rem 0;
 
     @media (--mobile) {
       padding: 2.5rem 1rem;
+    }
+  }
+
+  .description {
+    margin-bottom: 2rem;
+
+    @media (--mobile) {
+      margin-bottom: 1rem;
     }
   }
 
