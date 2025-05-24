@@ -122,17 +122,12 @@ const speakers = computed<CarouselSpeaker[]>(() => {
       [data-pc-name=pcnextbutton],
       [data-pc-name=pcprevbutton] {
         position: absolute;
-        bottom: -72px;
+        bottom: -64px; /* button size (48px) + margin (16px)  */
         color: var(--color-base);
         border: 1px solid var(--color-base);
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
-
-        @media (--mobile) {
-          width: 48px;
-          height: 48px;
-        }
+        width: 48px;
+        height: 48px;
 
         /* reset */
         &:hover {
@@ -142,17 +137,14 @@ const speakers = computed<CarouselSpeaker[]>(() => {
       }
 
       [data-pc-name=pcprevbutton] {
-        transform: translateX(-50%);
-        left: 46%;
+        left: calc(50% - 48px - 4px); /* 50% - button size (48px) - gap (8px / 2 = 4px) */
       }
 
       [data-pc-name=pcnextbutton] {
-        transform: translateX(50%);
-        right: 46%;
+        right: calc(50% - 48px - 4px); /* 50% - button size (48px) - gap (8px / 2 = 4px) */
       }
 
       .p-carousel-viewport {
-
         .p-items-hidden .p-carousel-item {
           visibility: visible;
         }
@@ -168,9 +160,15 @@ const speakers = computed<CarouselSpeaker[]>(() => {
 .section-speakers {
   overflow: hidden;
   h3.featured-speaker-heading {
+    margin-bottom: 1rem;
     color: var(--color-base);
-    margin-bottom: 1.5rem;
     text-align: center;
+    font-size: 18px;
+
+    @media (--mobile) {
+      margin-top: 1.5rem;
+      font-size: 16px;
+    }
   }
 
   .speaker-card {
@@ -180,16 +178,17 @@ const speakers = computed<CarouselSpeaker[]>(() => {
     border-radius: 10px;
     height: 341px;
     overflow: hidden;
-    border: 1px solid var(--color-divider-light);
-    margin-inline: 0.5rem;
+    margin-inline: 0.55rem;
 
     .speaker-affiliation {
-      width: fit-content;
       position: absolute;
       right: 0;
+      padding: 0.4rem 0.53rem;
       font-size: 0.75rem;
-      padding: 0 0.5rem;
       font-family: JetBrainsMono-Regular;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      text-align: right;
     }
 
     .speaker-name {
@@ -197,10 +196,11 @@ const speakers = computed<CarouselSpeaker[]>(() => {
       position: absolute;
       left: 0;
       bottom: 0;
-      font-size: 1.6rem;
+      font-size: 1.53rem;
       font-family: IBMPlexSansJP-Regular;
-      padding: 0.65rem 1.1rem;
-
+      padding: 0.667rem 1.067rem 0.533rem 1.067rem;
+      line-height: 1;
+      letter-spacing: -0.031em;
     }
   }
 
@@ -211,12 +211,12 @@ const speakers = computed<CarouselSpeaker[]>(() => {
 }
 
 .carousel {
-  width: 110cqw;
-  margin: 0 calc(50% - 55cqw) 7rem;
+  width: 120cqw;
+  margin: 0 calc(50% - 60cqw) calc(32px + 16px + 48px);
 
-  @media (--mobile) {
-    width: 160cqw;
-    margin: 0 calc(50% - 80cqw) 7rem;
+  @media (--carousel) {
+    width: 214cqw;
+    margin: 0 calc(50% - 107cqw) calc(24px + 16px + 48px);
   }
 }
 </style>

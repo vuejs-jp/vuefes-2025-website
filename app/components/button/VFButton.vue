@@ -86,7 +86,7 @@ a {
 
   /* align to h2 */
   font-size: 18px;
-  line-height: 31px;
+  line-height: 1.5;
 
   @media (--mobile) {
     font-size: 16px;
