@@ -9,9 +9,8 @@ function toggleMenu(toggle = !menuOpen.value) {
   menuOpen.value = toggle;
 }
 
-const { items, actives } = defineProps<{
+const { items } = defineProps<{
   items: MenuItemProps[];
-  actives?: string[];
 }>();
 </script>
 
@@ -22,7 +21,6 @@ const { items, actives } = defineProps<{
         <li v-for="(item, idx) in items" :key="idx">
           <MenuItem
             class="sp-navigation-link"
-            :active="actives?.includes(item.id)"
             v-bind="item"
           />
         </li>

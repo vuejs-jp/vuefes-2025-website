@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import MenuItem, { type MenuItemProps } from "./VFMenuItem.vue";
 
-const { items, actives } = defineProps<{
+const { items } = defineProps<{
   items: MenuItemProps[];
-  actives?: string[];
 }>();
 </script>
 
 <template>
   <ul class="navigation-content" lang="en">
     <li v-for="(item, idx) in items" :key="idx">
-      <MenuItem
-        :active="actives?.includes(item.id)"
-        v-bind="item"
-      />
+      <MenuItem v-bind="item" />
     </li>
   </ul>
 </template>

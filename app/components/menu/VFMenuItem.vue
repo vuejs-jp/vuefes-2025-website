@@ -1,29 +1,19 @@
 <script setup lang="ts">
-import { computed } from "#imports";
-
 export type MenuItemProps = {
   id: string;
   label: string;
-  route: {
-    name: string;
-    hash: string;
-  };
-  active?: boolean;
+  routeName: string;
 };
 
-const { label, route, active } = defineProps<MenuItemProps>();
-
-const activeLinkComp = computed(() => (active !== undefined && active));
+const { label } = defineProps<MenuItemProps>();
 </script>
 
 <template>
   <NuxtLink
-    :class="{ 'menuitem-link': true, 'menuitem-link-active': activeLinkComp }"
-    :to="{
-      name: route.name as any,
-      hash: `#${route.hash}`,
-    }"
+    :class="{ 'menuitem-link': true }"
+    :to="{ name: routeName as any }"
     prefetch-on="visibility"
+    active-class="menuitem-link-active"
     v-bind="$attrs"
   >
     {{ label }}

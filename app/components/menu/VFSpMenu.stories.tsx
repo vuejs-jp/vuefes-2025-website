@@ -20,26 +20,17 @@ const Template: StoryFn<{
           {
             id: "1",
             label: "Home",
-            route: {
-              name: "home",
-              hash: "",
-            },
+            routeName: "home",
           },
           {
             id: "2",
             label: "About",
-            route: {
-              name: "about",
-              hash: "",
-            },
+            routeName: "about",
           },
           {
             id: "3",
             label: "Contact",
-            route: {
-              name: "contact",
-              hash: "",
-            },
+            routeName: "contact",
           },
         ]}
       />
