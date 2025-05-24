@@ -60,7 +60,10 @@ const menuItems = computed<MenuItemProps[]>(() =>
 );
 
 const { y } = useScroll(window);
-const isShowedSpMenu = computed(() => bp.value === "mobile" && (!isRoot.value || y.value > 450));
+const isShowedSpMenu = computed(() => {
+  const targetBp = isWidenContent.value ? ["mobile-wide", "mobile"] : ["mobile"];
+  return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
+});
 
 const isWidenContent = computed(() =>
   ([localeRoute({ name: "speaker" })?.name] as string[]).includes(route.name?.toString() ?? ""),
@@ -98,7 +101,7 @@ watch(() => route.hash, async (hash) => {
     <div v-if="isRoot" style="height: 100svh" />
     <div class="layout">
       <div class="side-content left-menu">
-        <div v-if="bp === 'pc'" class="nav-menu">
+        <div v-if="!isShowedSpMenu" class="nav-menu">
           <VFMenu :items="menuItems" />
         </div>
       </div>

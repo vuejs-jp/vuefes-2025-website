@@ -62,8 +62,8 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
 
   h1 {
     font-size: 3rem;
-    padding: 7.5rem 0.5rem 0 0.5rem;
-    margin: 0.5rem 0;
+    padding: 7.5rem 0.5rem;
+    margin: 0;
 
     @media (--mobile) {
       padding: 2.5rem 1rem;

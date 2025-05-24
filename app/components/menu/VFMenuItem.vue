@@ -11,7 +11,7 @@ const { label, disabled } = defineProps<MenuItemProps>();
 
 <template>
   <NuxtLink
-    :class="{ 'menuitem-link': true, 'menuitem-link-disabled': disabled }"
+    :class="{ 'menuitem-link': true, 'text-body-1': true, 'menuitem-link-disabled': disabled }"
     :to="{ name: routeName as any }"
     prefetch-on="visibility"
     active-class="menuitem-link-active"
@@ -26,7 +26,6 @@ const { label, disabled } = defineProps<MenuItemProps>();
   color: var(--color-base);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.2rem;
 
   &:hover {
     color: var(--color-base);

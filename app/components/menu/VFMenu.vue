@@ -16,7 +16,7 @@ const { items } = defineProps<{
 
 <style scoped>
 .navigation-content {
-  width: auto;
+  width: 170px;
   max-width: 15rem;
   background: var(--color-white);
   border-radius: 20px;
@@ -26,6 +26,8 @@ const { items } = defineProps<{
 
 .navigation-content li {
   list-style: none;
+  width: 150px;
+  height: 40px;
   padding: 0.5rem 2rem;
 }
 </style>
