@@ -2,7 +2,7 @@
 import SectionMessage from "./_components/SectionMessage.vue";
 import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
 import SectionContact from "./_components/SectionContact.vue";
-import SectionSpeakers from "./_components/SectionSpeakers.vue";
+import SectionSpeakers from "./_components/SectionSpeaker.vue";
 
 import {
   defineRouteRules,

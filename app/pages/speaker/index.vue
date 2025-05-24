@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SESSION_SPEAKERS as enSessionSpeakers } from "../../../i18n/en/speakers";
 import { SESSION_SPEAKERS as jaSessionSpeakers } from "../../../i18n/ja/speakers";
-import { VFSection, JaSpeakers, EnSpeakers } from "#components";
+import { VFSection, JaSpeaker, EnSpeaker } from "#components";
 import { computed, useI18n } from "#imports";
 
 import XIcon from "~icons/icons/ic_x";
@@ -18,7 +18,7 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
     <h1>{{ t("speakers.title") }}</h1>
 
     <VFSection :title="t('speakers.sessions.title')" wide>
-      <component :is="locale === 'ja' ? JaSpeakers : EnSpeakers" class="description" />
+      <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
 
       <ul class="speakers">
         <li v-for="speaker in sessionSpeakers" :key="speaker.name" class="speaker">

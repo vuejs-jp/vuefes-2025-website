@@ -4,7 +4,7 @@ import { useLocaleRoute } from "@typed-router";
 import { SESSION_SPEAKERS as enSpeakers } from "../../../i18n/en/speakers";
 import { SESSION_SPEAKERS as jaSpeakers } from "../../../i18n/ja/speakers";
 import { computed, useI18n } from "#imports";
-import { EnSpeakers, JaSpeakers, VFButton } from "#components";
+import { EnSpeaker, JaSpeaker, VFButton } from "#components";
 import type { Speaker } from "~~/i18n/speaker";
 import { HOME_HEADING_ID } from "~/constant";
 
@@ -57,11 +57,11 @@ const speakers = computed<CarouselSpeaker[]>(() => {
 
 <template>
   <VFSection
-    :id="HOME_HEADING_ID.speakers"
+    :id="HOME_HEADING_ID.speaker"
     :title="t('speakers.title')"
     class="section-speakers"
   >
-    <component :is="locale === 'ja' ? JaSpeakers : EnSpeakers" />
+    <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" />
 
     <h3 class="featured-speaker-heading">
       {{ t('speakers.featured') }}
@@ -102,7 +102,7 @@ const speakers = computed<CarouselSpeaker[]>(() => {
     </div>
 
     <div class="view-all-speakers">
-      <VFButton :link="localeRoute({ name: 'speakers' })">
+      <VFButton :link="localeRoute({ name: 'speaker' })">
         {{ t('speakers.viewAll') }}
       </VFButton>
     </div>

@@ -24,23 +24,37 @@ const menuItems = computed<MenuItemProps[]>(() =>
       routeName: localeRoute({ name: "index" }).name,
     },
     {
-      id: HOME_HEADING_ID.speakers,
-      label: "Speakers",
-      routeName: localeRoute({ name: "speakers" }).name,
+      id: HOME_HEADING_ID.timetable,
+      label: "Timetable",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_TIMETABLE__,
     },
-    __FEATURE_TICKET__ && {
-      id: HOME_HEADING_ID.tickets,
-      label: "Tickets",
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      routeName: localeRoute({ name: "" }).name,
+    {
+      id: HOME_HEADING_ID.speaker,
+      label: "Speaker",
+      routeName: localeRoute({ name: "speaker" }).name,
     },
-    __FEATURE_SPONSOR_LIST__ && {
-      id: HOME_HEADING_ID.sponsors,
-      label: "Sponsors",
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      routeName: localeRoute({ name: "" }).name,
+    {
+      id: HOME_HEADING_ID.ticket,
+      label: "Event",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_EVENT__,
+    },
+    {
+      id: HOME_HEADING_ID.event,
+      label: "Ticket",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_TICKET__,
+    },
+    {
+      id: HOME_HEADING_ID.sponsor,
+      label: "Sponsor",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_SPONSOR_LIST__,
     },
   ].filter(it => !!it),
 );
@@ -49,7 +63,7 @@ const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => bp.value === "mobile" && (!isRoot.value || y.value > 450));
 
 const isWidenContent = computed(() =>
-  ([localeRoute({ name: "speakers" })?.name] as string[]).includes(route.name?.toString() ?? ""),
+  ([localeRoute({ name: "speaker" })?.name] as string[]).includes(route.name?.toString() ?? ""),
 );
 
 // scroll behavior

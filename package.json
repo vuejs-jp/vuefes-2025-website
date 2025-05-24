@@ -24,8 +24,8 @@
     ]
   },
   "scripts": {
-    "build": "FEATURE_CFP=1 nuxt build",
-    "dev": "FEATURE_CFP=1 FEATURE_TICKET=0 FEATURE_SPONSOR_LIST=0 nuxt dev",
+    "build": "nuxt build",
+    "dev": "FEATURE_CFP=1 FEATURE_TIMETABLE=0 FEATURE_EVENT=0 FEATURE_TICKET=0 FEATURE_SPONSOR_LIST=0 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",

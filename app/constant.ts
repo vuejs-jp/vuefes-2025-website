@@ -1,12 +1,13 @@
 export const HOME_HEADING_ID = {
   home: "",
-  speakers: "speakers",
-  tickets: "tickets",
+  timetable: "timetable",
+  speaker: "speaker",
+  ticket: "ticket",
+  event: "event",
   cfp: "cfp",
   message: "message",
-  sponsors: "sponsors",
+  sponsor: "sponsor",
   sponsorWanted: "sponsor-wanted",
-
   // NOTE: Be careful as it is hardcoded in MDC
   contact: "contact-form",
 };
