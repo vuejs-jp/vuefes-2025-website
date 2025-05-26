@@ -55,6 +55,18 @@ export const SESSION_SPEAKERS: Speaker[] = [
     },
   },
   {
+    name: "Hiroshi Ogawa",
+    affiliation: "VoidZero Inc.",
+    title: "Vitest & Vite team member",
+    avatarUrl: "/images/avatars/hi-ogawa.png",
+    attended: true,
+    socialUrls: {
+      github: "https://github.com/hi-ogawa",
+      bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
+      x: "https://twitter.com/hiroshi_18181",
+    },
+  },
+  {
     name: "Yuji Sugiura",
     affiliation: "PixelGrid Inc.",
     title: "Frontend Engineer",

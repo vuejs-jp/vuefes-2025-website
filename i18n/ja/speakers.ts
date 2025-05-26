@@ -56,6 +56,18 @@ export const SESSION_SPEAKERS: Speaker[] = [
     },
   },
   {
+    name: "小川浩志",
+    affiliation: "VoidZero Inc.",
+    title: "Vitest & Vite コアチームメンバー",
+    avatarUrl: "/images/avatars/hi-ogawa.png",
+    attended: true,
+    socialUrls: {
+      github: "https://github.com/hi-ogawa",
+      bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
+      x: "https://twitter.com/hiroshi_18181",
+    },
+  },
+  {
     name: "杉浦 有右嗣",
     affiliation: "ピクセルグリッド",
     title: "フロントエンドエンジニア",
