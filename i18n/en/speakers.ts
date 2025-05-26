@@ -57,7 +57,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "Hiroshi Ogawa",
     affiliation: "VoidZero Inc.",
-    title: "Vitest & Vite team member",
+    title: "Vitest & Vite core team member",
     avatarUrl: "/images/avatars/hi-ogawa.png",
     attended: true,
     socialUrls: {
