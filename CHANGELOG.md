@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.1)
+
+### 🩹 Fixes
+
+- Update hi-ogawa ([e4d0f80](https://github.com/vuejs-jp/vuefes-2025/commit/e4d0f80))
+
+### ❤️ Contributors
+
+- OKI Yoshiya
+
 ## v1.2.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.0)

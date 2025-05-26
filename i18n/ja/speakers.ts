@@ -56,9 +56,9 @@ export const SESSION_SPEAKERS: Speaker[] = [
     },
   },
   {
-    name: "小川浩志",
+    name: "小川 浩志",
     affiliation: "VoidZero Inc.",
-    title: "Vitest & Vite コアチームメンバー",
+    title: "Vitest、Vite コアチームメンバー",
     avatarUrl: "/images/avatars/hi-ogawa.png",
     attended: true,
     socialUrls: {
