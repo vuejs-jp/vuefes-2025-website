@@ -1,39 +1,139 @@
 <script setup lang="ts">
-import { computed, useRoute } from "#imports";
-import { MainVisual, VFHeader, VFFooter } from "#components";
+import { useScroll } from "@vueuse/core";
+import { useLocaleRoute } from "@typed-router";
+import { computed, nextTick, useBreakpoint, useRoute, watch } from "#imports";
+import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu } from "#components";
 import { useAnimationStore } from "~/stores/animation";
+import { HOME_HEADING_ID } from "~/constant";
+import type { MenuItemProps } from "~/components/menu/VFMenuItem.vue";
 
 defineSlots<{ default: () => unknown }>();
 
 const [animation] = useAnimationStore();
 
+const bp = useBreakpoint();
 const route = useRoute();
+const localeRoute = useLocaleRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
+
+const menuItems = computed<MenuItemProps[]>(() =>
+  [
+    {
+      id: HOME_HEADING_ID.home,
+      label: "Home",
+      routeName: localeRoute({ name: "index" }).name,
+    },
+    {
+      id: HOME_HEADING_ID.timetable,
+      label: "Timetable",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_TIMETABLE__,
+    },
+    {
+      id: HOME_HEADING_ID.speaker,
+      label: "Speaker",
+      routeName: localeRoute({ name: "speaker" }).name,
+    },
+    {
+      id: HOME_HEADING_ID.ticket,
+      label: "Event",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_EVENT__,
+    },
+    {
+      id: HOME_HEADING_ID.event,
+      label: "Ticket",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_TICKET__,
+    },
+    {
+      id: HOME_HEADING_ID.sponsor,
+      label: "Sponsor",
+      // TODO:
+      routeName: localeRoute({ name: "index" }).name,
+      disabled: !__FEATURE_SPONSOR_LIST__,
+    },
+  ].filter(it => !!it),
+);
+
+const { y } = useScroll(window);
+const isShowedSpMenu = computed(() => {
+  const targetBp = isWidenContent.value ? ["mobile-wide", "mobile"] : ["mobile"];
+  return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
+});
+
+const isWidenContent = computed(() =>
+  ([localeRoute({ name: "speaker" })?.name] as string[]).includes(route.name?.toString() ?? ""),
+);
+
+// scroll behavior
+watch(() => route.hash, async (hash) => {
+  if (hash === "") {
+    return;
+  }
+
+  await nextTick();
+
+  if (isRoot.value && hash === "#") {
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  const target = document.querySelector(hash);
+  if (target) {
+    const top = target.getBoundingClientRect().top + window.scrollY - window.innerHeight / 3;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+});
 </script>
 
 <template>
-  <MainVisual
-    :title-tag="isRoot ? 'h1' : 'div'"
-    :animation
-    :show-scroll-attention="isRoot"
-    class="main-visual"
-  />
+  <div>
+    <MainVisual
+      :title-tag="isRoot ? 'h1' : 'div'"
+      :animation
+      :show-scroll-attention="isRoot"
+      class="main-visual"
+    />
+    <div v-if="isRoot" style="height: 100svh" />
+    <div class="layout">
+      <div class="side-content left-menu">
+        <div v-if="!isShowedSpMenu" class="nav-menu">
+          <VFMenu :items="menuItems" />
+        </div>
+      </div>
+      <div class="content" :class="{ 'widen-content': isWidenContent }">
+        <VFHeader :is-root class="header" />
 
-  <div v-if="isRoot" style="height: 100svh" />
-
-  <div class="content">
-    <VFHeader :is-root class="header" />
-    <main class="main">
-      <slot />
-    </main>
-    <VFFooter />
+        <main class="main">
+          <slot />
+        </main>
+        <VFFooter />
+      </div>
+      <div class="side-content right-menu"></div>
+    </div>
+    <div style="height: 100lvh" />
   </div>
 
-  <div style="height: 100lvh" />
+  <Transition>
+    <VFSpMenu
+      v-if="isShowedSpMenu"
+      class="sp-nav-menu"
+      :items="menuItems"
+    />
+  </Transition>
 </template>
 
 <style scoped>
 @import "~/assets/styles/custom-media-query.css";
+
+.layout {
+  display: flex;
+  position: relative;
+}
 
 .main-visual {
   position: fixed;
@@ -41,7 +141,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
 }
 
 .content {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 0.5rem;
   background-color: transparent;
   display: flex;
@@ -49,6 +149,7 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 700px;
   max-width: 700px;
 
   @media (--mobile) {
@@ -56,7 +157,41 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
     padding: 0 0.25rem;
     max-width: none;
     width: 100%;
+    min-width: 0;
+    flex-basis: auto;
   }
+
+  &.widen-content {
+    min-width: 960px;
+
+    @media (--mobile) {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}
+
+.side-content {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 100%;
+  height: 100%;
+  width: calc((100vw - 700px) / 2);
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.left-menu {
+  position: sticky;
+  justify-content: end;
+  top: calc(100svh / 2 - 7rem);
+  left: 0;
+  padding-top: 0.5rem;
+  /* align to header padding top */
+  padding-left: 0.5rem;
 }
 
 .header {
@@ -64,13 +199,36 @@ const isRoot = computed(() => ["/", "/en"].includes(route.path));
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
+  z-index: 100;
 
   @media (--mobile) {
     padding-top: 0.25rem;
   }
 }
 
+.nav-menu {
+  width: auto;
+  height: 100%;
+}
+
+.sp-nav-menu {
+  position: fixed;
+  bottom: 5svh;
+  width: 100vw;
+  height: auto;
+  z-index: 10;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 .main {
+  width: 100%;
   margin-top: 0.5rem;
 
   @media (--mobile) {

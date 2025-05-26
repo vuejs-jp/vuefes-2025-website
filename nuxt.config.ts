@@ -1,19 +1,12 @@
 /* eslint-disable nuxt/nuxt-config-keys-order */
 import Icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
+import type { NuxtPage } from "nuxt/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
-  modules: [
-    "@nuxt/eslint",
-    "@nuxt/scripts",
-    "@nuxtjs/i18n",
-    "@nuxtjs/seo",
-    "@nuxtjs/storybook",
-    "@primevue/nuxt-module",
-    // "@nuxt/image",
-  ],
+  modules: ["@nuxt/eslint", "@nuxt/scripts", "@nuxtjs/i18n", "@nuxtjs/seo", "@nuxtjs/storybook", // "@nuxt/image",
+    "@primevue/nuxt-module", "nuxt-typed-router"],
 
   $production: {
     scripts: {
@@ -57,7 +50,16 @@ export default defineNuxtConfig({
     robotsTxt: false,
   },
 
+  plugins: ["~/plugins/v-click-outside.ts"],
+
   vite: {
+    define: {
+      __FEATURE_CFP__: process.env.FEATURE_CFP || false, // 2025-06-02 ~
+      __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
+      __FEATURE_EVENT__: process.env.FEATURE_EVENT || false, // ?
+      __FEATURE_TICKET__: process.env.FEATURE_TICKET || false, //  2025-08-xx ~
+      __FEATURE_SPONSOR_LIST__: process.env.FEATURE_SPONSOR_LIST || false, // ?
+    },
     css: {
       transformer: "lightningcss",
       lightningcss: {
@@ -72,12 +74,8 @@ export default defineNuxtConfig({
     plugins: [
       Icons({
         customCollections: {
-          icons: FileSystemIconLoader("./public/images/icons", svg =>
-            svg.replace(/#007F62/g, "var(--color-base)"),
-          ),
-          logo: FileSystemIconLoader("./public/images/logo", svg =>
-            svg.replace(/#007F62/g, "var(--color-base)"),
-          ),
+          icons: FileSystemIconLoader("./public/images/icons", svg => svg.replace(/#007F62/g, "var(--color-base)")),
+          logo: FileSystemIconLoader("./public/images/logo", svg => svg.replace(/#007F62/g, "var(--color-base)")),
         },
       }),
     ],
@@ -126,5 +124,20 @@ export default defineNuxtConfig({
   // img:{
   //  domains: ['vuefes.jp/2025'],
   //  provider: "ipx",
-  // }
+  // },
+
+  hooks: {
+    // Private Folder Impl
+    "pages:extend": (pages) => {
+      const pagesToRemove: NuxtPage[] = [];
+      pages.forEach((page) => {
+        if (/\/_[^/]+/.test(page.path)) {
+          pagesToRemove.push(page);
+        }
+      });
+      pagesToRemove.forEach((page) => {
+        pages.splice(pages.indexOf(page), 1);
+      });
+    },
+  },
 });

@@ -1,5 +1,71 @@
 # Changelog
 
+## v1.2.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.0)
+
+### 🚀 Enhancements
+
+- Add redirects for 2025 site ([#353](https://github.com/vuejs-jp/vuefes-2025/pull/353))
+- Add redirects for 2025 site " ([#353](https://github.com/vuejs-jp/vuefes-2025/pull/353))
+- Sponsor application ([#395](https://github.com/vuejs-jp/vuefes-2025/pull/395))
+- VFSection ([#467](https://github.com/vuejs-jp/vuefes-2025/pull/467))
+- Private folder ([#468](https://github.com/vuejs-jp/vuefes-2025/pull/468))
+- Feature flags and cfp section ([#470](https://github.com/vuejs-jp/vuefes-2025/pull/470))
+- Menu (PC) ([672a830](https://github.com/vuejs-jp/vuefes-2025/commit/672a830))
+- Cfp content ([#485](https://github.com/vuejs-jp/vuefes-2025/pull/485))
+- Menu (SP) ([cb78e03](https://github.com/vuejs-jp/vuefes-2025/commit/cb78e03))
+- Speaker section ([#488](https://github.com/vuejs-jp/vuefes-2025/pull/488))
+- Enable speakers feature & menu feature ([#515](https://github.com/vuejs-jp/vuefes-2025/pull/515))
+- Add johnsoncodehk ([#519](https://github.com/vuejs-jp/vuefes-2025/pull/519))
+- All speakers page ([#527](https://github.com/vuejs-jp/vuefes-2025/pull/527))
+- Menu activation improvement ([#531](https://github.com/vuejs-jp/vuefes-2025/pull/531))
+- Speaker text ([#532](https://github.com/vuejs-jp/vuefes-2025/pull/532))
+- Add hi-ogawa ([#544](https://github.com/vuejs-jp/vuefes-2025/pull/544))
+
+### 🩹 Fixes
+
+- Update site URL and ensure canonical/og:url ([#363](https://github.com/vuejs-jp/vuefes-2025/pull/363))
+- Types ([d09c304](https://github.com/vuejs-jp/vuefes-2025/commit/d09c304))
+- Types ([e9ddf92](https://github.com/vuejs-jp/vuefes-2025/commit/e9ddf92))
+- Speaker section style ([#533](https://github.com/vuejs-jp/vuefes-2025/pull/533))
+- Menu spec ([#536](https://github.com/vuejs-jp/vuefes-2025/pull/536))
+- Menu spec ([#537](https://github.com/vuejs-jp/vuefes-2025/pull/537))
+- Add cross-env ([#523](https://github.com/vuejs-jp/vuefes-2025/pull/523), [#539](https://github.com/vuejs-jp/vuefes-2025/pull/539))
+- Styles ([#540](https://github.com/vuejs-jp/vuefes-2025/pull/540))
+- Text styles ([#542](https://github.com/vuejs-jp/vuefes-2025/pull/542))
+- Add presetPath option for Storybook configuration ([#541](https://github.com/vuejs-jp/vuefes-2025/pull/541))
+
+### 💅 Refactors
+
+- Top sections ([#469](https://github.com/vuejs-jp/vuefes-2025/pull/469))
+
+### 🏡 Chore
+
+- **release:** V1.0.5 ([8428a25](https://github.com/vuejs-jp/vuefes-2025/commit/8428a25))
+- **release:** V1.0.6 ([1d1edb6](https://github.com/vuejs-jp/vuefes-2025/commit/1d1edb6))
+- Heading styles ([8aade8c](https://github.com/vuejs-jp/vuefes-2025/commit/8aade8c))
+- Sponsor wanted link title ([e40f567](https://github.com/vuejs-jp/vuefes-2025/commit/e40f567))
+- **release:** V1.1.0 ([0128a85](https://github.com/vuejs-jp/vuefes-2025/commit/0128a85))
+- Cfp wording ([#517](https://github.com/vuejs-jp/vuefes-2025/pull/517))
+- Menu contrast ([#518](https://github.com/vuejs-jp/vuefes-2025/pull/518))
+- Enable cfp (tempolary) ([2ed57fb](https://github.com/vuejs-jp/vuefes-2025/commit/2ed57fb))
+- Cfp ja message format ([b6b3253](https://github.com/vuejs-jp/vuefes-2025/commit/b6b3253))
+- Styles ([1c8eec8](https://github.com/vuejs-jp/vuefes-2025/commit/1c8eec8))
+- Speaker locale route ([14191c1](https://github.com/vuejs-jp/vuefes-2025/commit/14191c1))
+- Styles ([#538](https://github.com/vuejs-jp/vuefes-2025/pull/538))
+- Remove comment ([4a9e6d8](https://github.com/vuejs-jp/vuefes-2025/commit/4a9e6d8))
+
+### ❤️ Contributors
+
+- Ubugeeei
+- OKI Yoshiya
+- Koyama Shigehito
+- Ryuhei Shikanai
+- Totocalcio
+- Hal
+- Ktym4a
+
 ## v1.1.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.1.0)

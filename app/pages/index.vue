@@ -1,208 +1,45 @@
 <script setup lang="ts">
-import { z } from "zod";
+import SectionMessage from "./_components/SectionMessage.vue";
+import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
+import SectionContact from "./_components/SectionContact.vue";
+import SectionSpeakers from "./_components/SectionSpeaker.vue";
 
 import {
   defineRouteRules,
-  reactive,
-  useBreakpoint,
+  defineAsyncComponent,
   useI18n,
-  useRuntimeConfig,
-  useWithBase,
-
   // NOTE: import useHead to avoid `useHead is not defined` error
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
 } from "#imports";
 
-import { VFHeading, JaMessage, EnMessage, JaSponsorWanted, EnSponsorWanted } from "#components";
-
-import {
-  type FormSubmitEvent,
-  VFForm,
-  VFInput,
-  VFTextarea,
-} from "~/components/form";
-import VFToast, { useToast } from "~/components/toast/VFToast.vue";
-
 defineRouteRules({ prerender: true });
 
-const config = useRuntimeConfig();
-const withBase = useWithBase();
-
-const { locale, t } = useI18n();
+const { t } = useI18n();
 
 useSeoMeta({ title: "" });
 
-const bp = useBreakpoint();
-
-const contactForm = (() => {
-  const toast = useToast();
-
-  const schema = z.object({
-    name: z
-      .string()
-      .nonempty(t("validation.required", { target: t("contactForm.formFields.name.label") })),
-    email: z
-      .string()
-      .nonempty(t("validation.required", { target: t("contactForm.formFields.email.label") }))
-      .email(t("validation.email")),
-    content: z
-      .string()
-      .nonempty(t("validation.required", { target: t("contactForm.formFields.content.label") })),
-  });
-
-  type State = Partial<z.infer<typeof schema>>;
-
-  const state = reactive<State>({
-    name: "",
-    email: "",
-    content: "",
-  });
-
-  async function submit(event: FormSubmitEvent) {
-    if (event.valid) {
-      const formData = new FormData();
-      Object.entries(event.states).forEach(([name, { value }]) => {
-        formData.append(name, value);
-      });
-      try {
-        await fetch(config.public.contactFormEndpoint, {
-          method: "POST",
-          body: formData,
-          headers: { Accept: "application/json" },
-        });
-        event.reset();
-        toast.open({
-          type: "success",
-          message: t("contactForm.successMessage"),
-        });
-      }
-      catch (error) {
-        console.error(error);
-        toast.open({
-          type: "alert",
-          message: t("contactForm.errorMessage"),
-        });
-      }
-    }
-  }
-
-  return { state, schema, submit, toastState: toast.state };
-})();
+let SectionCfp: ReturnType<typeof defineAsyncComponent> | null = null;
+if (__FEATURE_CFP__) {
+  SectionCfp = defineAsyncComponent(() => import("~/pages/_components/SectionCfp.vue"));
+}
 </script>
 
 <template>
-  <div class="section-container">
-    <section class="message">
-      <div class="section-cover-wrapper">
-        <img
-          :src="
-            bp === 'pc'
-              ? withBase('/images/top/cover/message-pc.png')
-              : withBase('/images/top/cover/message-sp.png')
-          "
-          :alt="t('messageCoverImageAlt')"
-        />
-      </div>
-      <div class="message-content">
-        <VFHeading>{{ t("message") }}</VFHeading>
-        <component :is="locale === 'ja' ? JaMessage : EnMessage" class="message-content-text" />
-      </div>
-    </section>
+  <div id="pages-index">
+    <div class="section-container">
+      <SectionCfp v-if="SectionCfp" />
+      <SectionSpeakers />
+      <SectionMessage />
+      <SectionSponsorWanted />
+      <SectionContact />
+    </div>
 
-    <section class="sponsor-wanted">
-      <div class="section-cover-wrapper">
-        <img
-          :src="
-            bp === 'pc'
-              ? withBase('/images/top/cover/sponsor-wanted-pc.svg')
-              : withBase('/images/top/cover/sponsor-wanted-sp.svg')
-          "
-          :alt="t('sponsorWantedCoverImageAlt')"
-        />
-      </div>
-      <div class="sponsor-wanted-content">
-        <VFHeading>{{ t("sponsorWanted") }}</VFHeading>
-        <component :is="locale === 'ja' ? JaSponsorWanted : EnSponsorWanted" class="sponsor-wanted-text" />
-
-        <!-- TODO: 2025-04-22 -->
-        <!-- <VFButton
-        class="sponsor-apply-button"
-        :link="
-          // TODO: link to form
-          ''
-        "
-        >{{ t("sponsorApplyButton") }}</VFButton
-      > -->
-      </div>
-    </section>
-
-    <section class="contact">
-      <div class="contact-content">
-        <!-- NOTE: provide id for hash link from coc -->
-        <VFHeading id="contact-form">
-          {{ t("contactForm.title") }}
-        </VFHeading>
-        <div class="contact-text">
-          <p>{{ t("contactForm.description") }}</p>
-        </div>
-        <VFForm
-          :state="contactForm.state"
-          :schema="contactForm.schema"
-          @submit="contactForm.submit"
-        >
-          <template #default="$form">
-            <div class="contact-form-items">
-              <VFInput
-                name="name"
-                required
-                :label="t('contactForm.formFields.name.label')"
-                :placeholder="t('contactForm.formFields.name.placeholder')"
-                :form-state="$form.name"
-              />
-              <VFInput
-                name="email"
-                required
-                :label="t('contactForm.formFields.email.label')"
-                :placeholder="t('contactForm.formFields.email.placeholder')"
-                :form-state="$form.email"
-              />
-              <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-              <VFTextarea
-                name="content"
-                required
-                :label="t('contactForm.formFields.content.label')"
-                :placeholder="t('contactForm.formFields.content.placeholder')"
-                :form-state="$form.content"
-              />
-            </div>
-            <VFButton
-              type="submit"
-              :disabled="
-                !(
-                  $form.name?.touched
-                  && $form.name?.valid
-                  && $form.email?.touched
-                  && $form.email?.valid
-                  && $form.content?.touched
-                  && $form.content?.valid
-                )
-              "
-            >
-              {{ t("contactForm.formFields.submit.label") }}
-            </VFButton>
-          </template>
-        </VFForm>
-      </div>
-    </section>
+    <h2 class="sns-introduction-heading">
+      {{ t("snsIntroduction") }}
+    </h2>
   </div>
-
-  <h2 class="sns-introduction-heading">
-    {{ t("snsIntroduction") }}
-  </h2>
-
-  <VFToast :state="contactForm.toastState.value" />
 </template>
 
 <style scoped>
@@ -210,102 +47,12 @@ const contactForm = (() => {
 
 .section-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   row-gap: 1.5rem;
 
   @media (--mobile) {
     row-gap: 1rem;
-  }
-}
-
-.message,
-.sponsor-wanted,
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-m);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-divider-light);
-
-  .section-cover-wrapper {
-    /* for preventing CLS */
-    aspect-ratio: 682 / 383.867;
-    width: 100%;
-
-    img {
-      border-radius: var(--radius-m) var(--radius-m) 0 0;
-      width: 100%;
-      max-width: 700px;
-      height: auto;
-
-      @media (--mobile) {
-        max-width: none;
-        width: 100%;
-      }
-    }
-  }
-
-  .message-content,
-  .sponsor-wanted-content {
-    padding: 2.5rem 3.5rem 3rem;
-    @media (--mobile) {
-      padding: 2rem 1.5rem 3rem;
-    }
-
-    :deep(h3) {
-      color: var(--color-text-default);
-    }
-  }
-
-  .contact-content {
-    padding: 3rem 3.5rem 3rem;
-    @media (--mobile) {
-      padding: 2rem 1.5rem 3rem;
-    }
-  }
-
-  .message-content-text,
-  .sponsor-wanted-text,
-  .contact-text {
-    margin-top: 2rem;
-
-    @media (--mobile) {
-      margin-top: 1.5rem;
-    }
-  }
-
-  .sponsor-wanted-content {
-    .sponsor-apply-button {
-      display: block;
-      margin: 0 auto;
-      margin-top: 2rem;
-      @media (--mobile) {
-        margin-top: 1.5rem;
-      }
-    }
-  }
-
-  .contact-content {
-    button[type="submit"] {
-      display: block;
-      margin: 0 auto;
-      margin-top: 2rem;
-      @media (--mobile) {
-        margin-top: 1.5rem;
-      }
-    }
-  }
-
-  .contact-form-items {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin-top: 2rem;
-    @media (--mobile) {
-      margin-top: 1.5rem;
-    }
   }
 }
 

@@ -1,1 +1,5 @@
-@custom-media --mobile (max-width: 768px);
+@custom-media --mobile (max-width: 1036px);
+
+@custom-media --mobile-wide (max-width: 1300px);
+
+@custom-media --carousel (max-width: 560px);

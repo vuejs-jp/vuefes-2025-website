@@ -5,4 +5,6 @@ declare module "~icons/icons/ic_github";
 declare module "~icons/icons/ic_note";
 declare module "~icons/icons/animation-play";
 declare module "~icons/icons/animation-pause";
+declare module "~icons/icons/keyboard-arrow-left";
+declare module "~icons/icons/keyboard-arrow-right";
 declare module "~icons/logo/logo";

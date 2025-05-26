@@ -1,7 +1,7 @@
 {
   "name": "vuefes-2025",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "author": {
     "name": "ubugeeei",
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "cross-env FEATURE_CFP=1 FEATURE_TIMETABLE=0 FEATURE_EVENT=0 FEATURE_TICKET=0 FEATURE_SPONSOR_LIST=0 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",
@@ -57,12 +57,15 @@
     "@storybook/vue3": "8.4.7",
     "@types/three": "^0.175.0",
     "@unhead/vue": "^2.0.5",
+    "@vueuse/core": "^13.2.0",
+    "cross-env": "^7.0.3",
     "cspell": "^8.17.5",
     "eslint": "^9.24.0",
     "eslint-plugin-storybook": "^0.12.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.29.1",
     "nuxt": "^3.15.4",
+    "nuxt-typed-router": "3.8.0",
     "prettier": "4.0.0-alpha.11",
     "primevue": "^4.3.2",
     "rehype-external-links": "^3.0.0",
