@@ -91,5 +91,4 @@ export const EVENT_SPEAKERS: Speaker[] = [
       mastodon: "https://elk.zone/m.webtoo.ls/@dominikg",
     },
   },
-  // TODO: dan, kia?
 ];
