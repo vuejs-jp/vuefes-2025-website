@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.4
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.4)
+
+### 🩹 Fixes
+
+- Speaker page style ([12dcb13](https://github.com/vuejs-jp/vuefes-2025/commit/12dcb13))
+
+### ❤️ Contributors
+
+- Yamageji
+
 ## v1.2.3
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.3)
