@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.2.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.2)
+
+### 🏡 Chore
+
+- Akryum bluesky url ([cd76539](https://github.com/vuejs-jp/vuefes-2025/commit/cd76539))
+
+### ❤️ Contributors
+
+- Ubugeeei
+
+
 ## v1.2.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.1)
