@@ -25,7 +25,7 @@ const { label, disabled } = defineProps<MenuItemProps>();
 .menuitem-link {
   color: var(--color-base);
   text-decoration: none;
-  font-weight: 500;
+  font-family: JetBrainsMono-Medium;
 
   &:hover {
     color: var(--color-base);
@@ -38,11 +38,10 @@ const { label, disabled } = defineProps<MenuItemProps>();
     &::before {
       content: "";
       position: absolute;
-      left: -20px;
-      top: 5px;
-      width: 10px;
-      height: 10px;
-      margin: 0;
+      left: -16px;
+      top: 0.34em;
+      width: 8px;
+      height: 8px;
       display: inline-block;
       background-color: var(--color-base);
       border-radius: 50%;

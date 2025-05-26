@@ -16,12 +16,12 @@ const { items } = defineProps<{
 
 <style scoped>
 .navigation-content {
-  width: 170px;
-  max-width: 15rem;
+  width: 100%;
   background: var(--color-white);
   border-radius: 20px;
-  padding: 0.5rem 0.1rem;
+  padding: 0.5rem 0;
   margin: 0;
+  border: 1px solid var(--color-divider-light);
 }
 
 .navigation-content li {

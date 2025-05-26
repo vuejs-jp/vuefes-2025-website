@@ -132,6 +132,7 @@ watch(() => route.hash, async (hash) => {
 
 .layout {
   display: flex;
+  column-gap: 1rem;
   position: relative;
 }
 
@@ -177,7 +178,6 @@ watch(() => route.hash, async (hash) => {
   min-width: 0;
   min-height: 100%;
   height: 100%;
-  width: calc((100vw - 700px) / 2);
 
   @media (--mobile) {
     display: none;
@@ -187,11 +187,8 @@ watch(() => route.hash, async (hash) => {
 .left-menu {
   position: sticky;
   justify-content: end;
-  top: calc(100svh / 2 - 7rem);
-  left: 0;
+  top: calc(100svh / 2 - 128px - 0.25rem);
   padding-top: 0.5rem;
-  /* align to header padding top */
-  padding-left: 0.5rem;
 }
 
 .header {
@@ -213,8 +210,8 @@ watch(() => route.hash, async (hash) => {
 
 .sp-nav-menu {
   position: fixed;
-  bottom: 5svh;
-  width: 100vw;
+  bottom: 24px;
+  width: 100%;
   height: auto;
   z-index: 10;
 }
