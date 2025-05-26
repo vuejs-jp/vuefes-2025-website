@@ -3,6 +3,7 @@ export interface Speaker {
   avatarUrl: string;
   attended: boolean;
   affiliation?: string;
+  title?: string;
 
   socialUrls?: {
     x?: string;

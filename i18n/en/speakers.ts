@@ -16,7 +16,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Daniel Roe",
-    affiliation: "Nuxt Core team lead",
+    affiliation: "Nuxt core team lead",
     avatarUrl: "/images/avatars/daniel-roe.png",
     attended: true,
     socialUrls: {
@@ -26,7 +26,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Johnson Chu",
-    affiliation: "Vue.js core team member • Volar.js author",
+    affiliation: "Vue.js core team member, Volar.js author",
     avatarUrl: "/images/avatars/johnson-chu.png",
     attended: true,
     socialUrls: {
@@ -36,7 +36,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Guillaume Chau",
-    affiliation: "Directus Web Architect",
+    affiliation: "Directus web architect",
     avatarUrl: "/images/avatars/guillaume-chau.png",
     attended: true,
     socialUrls: {
@@ -56,7 +56,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Yuji Sugiura",
-    affiliation: "PixelGrid Inc. Frontend Engineer",
+    affiliation: "PixelGrid Inc.",
+    title: "Frontend Engineer",
     avatarUrl: "/images/avatars/yuji-sugiura.png",
     attended: true,
     socialUrls: {
@@ -81,7 +82,7 @@ export const EVENT_SPEAKERS: Speaker[] = [
   },
   {
     name: "dominikg",
-    affiliation: " Svelte & Vite core team member",
+    affiliation: "Svelte & Vite core team member",
     avatarUrl: "/images/avatars/dominikg.png",
     attended: false,
     socialUrls: {

@@ -39,7 +39,7 @@ const { label, disabled } = defineProps<MenuItemProps>();
       content: "";
       position: absolute;
       left: -20px;
-      top: 10px;
+      top: 5px;
       width: 10px;
       height: 10px;
       margin: 0;

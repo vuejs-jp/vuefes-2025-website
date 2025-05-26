@@ -77,14 +77,15 @@ const speakers = computed<CarouselSpeaker[]>(() => {
             }"
           >
             <p
-              v-if="speaker.affiliation"
+              v-if="speaker.affiliation || speaker.title"
               :style="{
                 color: speaker.color.base,
                 backgroundColor: speaker.color.sub,
               }"
               class="speaker-affiliation"
             >
-              {{ speaker.affiliation }}
+              {{ speaker.affiliation }}<br v-if="speaker.affiliation && speaker.title" />
+              {{ speaker.title }}
             </p>
 
             <div

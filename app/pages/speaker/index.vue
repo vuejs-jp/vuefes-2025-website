@@ -24,7 +24,8 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
         <li v-for="speaker in sessionSpeakers" :key="speaker.name" class="speaker">
           <img :src="speaker.avatarUrl" :alt="''" class="speaker-image" />
           <p class="speaker-affiliation text-caption">
-            {{ speaker.affiliation }}
+            {{ speaker.affiliation }}<br v-if="speaker.affiliation && speaker.title" />
+            {{ speaker.title }}
           </p>
           <h3 class="speaker-name">
             {{ speaker.name }}
@@ -107,18 +108,18 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
       }
 
       .speaker-affiliation {
-        margin-top: 0.5rem;
+        margin: 1rem 0 0;
       }
 
       .speaker-name {
-        margin-top: 0.5rem;
+        margin: 0.25rem 0 0;
       }
 
       .speaker-socials {
         display: flex;
 
         gap: 0.5rem;
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
 
         svg {
           width: 1.5rem;

@@ -5,7 +5,8 @@ import type { Speaker } from "../speaker";
 export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "Evan You",
-    affiliation: "Creator of Vue.js & Vite",
+    title: "Vue.js、Vite クリエーター",
+
     avatarUrl: "/images/avatars/evan-you.png",
     attended: true,
     socialUrls: {
@@ -16,7 +17,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Daniel Roe",
-    affiliation: "Nuxt Core team lead",
+    title: "Nuxt コアチームリード",
     avatarUrl: "/images/avatars/daniel-roe.png",
     attended: true,
     socialUrls: {
@@ -26,7 +27,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Johnson Chu",
-    affiliation: "Vue.js core team member • Volar.js author",
+    title: "Vue.js コアチームメンバー、Volar.js 作者",
     avatarUrl: "/images/avatars/johnson-chu.png",
     attended: true,
     socialUrls: {
@@ -36,7 +37,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Guillaume Chau",
-    affiliation: "Directus Web Architect",
+    title: "Directus Web アーキテクト",
     avatarUrl: "/images/avatars/guillaume-chau.png",
     attended: true,
     socialUrls: {
@@ -56,7 +57,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "杉浦 有右嗣",
-    affiliation: "ピクセルグリッド フロントエンドエンジニア",
+    affiliation: "ピクセルグリッド",
+    title: "フロントエンドエンジニア",
     avatarUrl: "/images/avatars/yuji-sugiura.png",
     attended: true,
     socialUrls: {
@@ -70,7 +72,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
 export const EVENT_SPEAKERS: Speaker[] = [
   {
     name: "Evan You",
-    affiliation: "Creator of Vue.js & Vite",
+    title: "Vue.js、Vite 作者",
     avatarUrl: "/images/avatars/evan-you.png",
     attended: true,
     socialUrls: {
@@ -81,7 +83,7 @@ export const EVENT_SPEAKERS: Speaker[] = [
   },
   {
     name: "dominikg",
-    affiliation: " Svelte & Vite core team member",
+    title: " Svelte & Vite コアチームメンバー",
     avatarUrl: "/images/avatars/dominikg.png",
     attended: false,
     socialUrls: {
