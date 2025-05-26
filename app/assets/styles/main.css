@@ -115,22 +115,22 @@ body {
   /* align to BODY1 */
   * {
     font-size: 16px;
-    line-height: 27px;
+    line-height: 24px;
   }
 
   h1 {
     font-size: 20px;
-    line-height: 34px;
+    line-height: 30px;
   }
 
   h2 {
     font-size: 18px;
-    line-height: 31px;
+    line-height: 27px;
   }
 
   h3 {
     font-size: 16px;
-    line-height: 27px;
+    line-height: 24px;
   }
 
   /**
@@ -139,22 +139,22 @@ body {
 
   .text-body-1 {
     font-size: 16px;
-    line-height: 27px;
+    line-height: 24px;
   }
 
   .text-body-2 {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 21px;
   }
 
   .text-body-3 {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 19.5px;
   }
 
   .text-caption {
     font-size: 11px;
-    line-height: 19px;
+    line-height: 16.5px;
   }
 }
 
@@ -163,22 +163,22 @@ body {
     /* align to BODY1 */
     * {
       font-size: 14px;
-      line-height: 24px;
+      line-height: 21px;
     }
 
     h1 {
       font-size: 18px;
-      line-height: 31px;
+      line-height: 27px;
     }
 
     h2 {
       font-size: 16px;
-      line-height: 27px;
+      line-height: 24px;
     }
 
     h3 {
       font-size: 14px;
-      line-height: 24px;
+      line-height: 21px;
     }
 
     /**
@@ -187,22 +187,22 @@ body {
 
     .text-body-1 {
       font-size: 14px;
-      line-height: 24px;
+      line-height: 21px;
     }
 
     .text-body-2 {
       font-size: 12px;
-      line-height: 20px;
+      line-height: 18px;
     }
 
     .text-body-3 {
       font-size: 11px;
-      line-height: 19px;
+      line-height: 15px;
     }
 
     .text-caption {
       font-size: 10px;
-      line-height: 17px;
+      line-height: 15px;
     }
   }
 }
