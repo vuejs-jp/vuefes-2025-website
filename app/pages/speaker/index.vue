@@ -62,12 +62,13 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
   }
 
   h1 {
+    font-family: "ClashDisplay-Semibold";
     font-size: 3rem;
-    padding: 7.5rem 0.5rem;
+    padding: 7.5rem 0;
     margin: 0;
 
     @media (--mobile) {
-      padding: 2.5rem 1rem;
+      padding: 2.5rem 0.75rem;
     }
   }
 
@@ -75,50 +76,62 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
     margin-bottom: 2rem;
 
     @media (--mobile) {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
   }
 
   .speakers {
     --size: 180px;
+    margin: 0;
 
     @media (--mobile) {
-      --size: 156px;
+      --size: 146px;
     }
 
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(var(--size), 1fr));
     row-gap: 32px;
+    column-gap: 4.4%;
 
     @media (--mobile) {
       row-gap: 24px;
+      column-gap: 24px;
     }
 
     .speaker {
-      width: var(--size);
-      height: fit-content;
+      width: 100%;
+      /* height: fit-content; */
 
       .speaker-image {
         width: 100%;
-        height: var(--size);
-        border-radius: var(--radius-m);
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
         object-fit: cover;
 
       }
 
       .speaker-affiliation {
         margin: 1rem 0 0;
+        @media (--mobile) {
+          margin: 0.75rem 0 0;
+        }
       }
 
       .speaker-name {
+        font-size: 18px;
+        line-height: 1.5;
         margin: 0.25rem 0 0;
+        @media (--mobile) {
+          font-size: 16px;
+        }
+
       }
 
       .speaker-socials {
         display: flex;
 
-        gap: 0.5rem;
+        gap: 0.25rem;
         margin-top: 0.25rem;
 
         svg {
