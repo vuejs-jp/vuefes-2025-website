@@ -42,7 +42,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
     socialUrls: {
       github: "https://github.com/Akryum",
       x: "https://x.com/Akryum",
-      bluesky: "https://bsky.app/profile/akryum.dev",
+      bluesky: "https://bsky.app/profile/guillaume.akryum.dev",
     },
   },
   {
