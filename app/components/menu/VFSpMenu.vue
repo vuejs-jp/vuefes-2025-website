@@ -48,27 +48,26 @@ const { items } = defineProps<{
 .sp-navigation-content {
   position: absolute;
   bottom: 95%;
-  width: auto;
-  max-width: 15rem;
+  min-width: 159px;
   background: var(--color-white-transparent);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
   border: 1px solid var(--color-divider-light);
-  padding: 0.5rem 0.1rem;
+  padding: 0.5rem 0;
   margin: 0 auto;
 }
 
 .sp-navigation-link {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .sp-navigation-content li {
   list-style: none;
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .navigation-button-mobile {
-  margin: 1rem auto 0 auto;
+  margin: 0.5rem auto 0 auto;
 }
 
 @keyframes zoomBlurIn {
@@ -92,7 +91,7 @@ const { items } = defineProps<{
   100% {
     transform: scale(1);
     filter: blur(0);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
     opacity: 1;
   }
 }
