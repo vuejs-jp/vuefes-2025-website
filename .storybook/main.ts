@@ -21,7 +21,9 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: "@storybook-vue/nuxt",
-    options: {},
+    options: {
+      presetPath: "./preset.js",
+    },
   },
 };
 export default config;
