@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.2.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.3)
+
+### 🩹 Fixes
+
+- Update global menu style ([#548](https://github.com/vuejs-jp/vuefes-2025/pull/548))
+
+### ❤️ Contributors
+
+- Koyama Shigehito
+
+
 ## v1.2.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.2)
