@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
 import SectionCfp from "./_components/SectionCfp.vue";
 import SectionSpeakers from "./_components/SectionSpeaker.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
@@ -19,6 +20,13 @@ defineRouteRules({ prerender: true });
 const { t } = useI18n();
 
 useSeoMeta({ title: "" });
+
+let SectionStudentSupport: ReturnType<typeof defineAsyncComponent> | null = null;
+if (__FEATURE_STUDENT_SUPPORT__) {
+  SectionStudentSupport = defineAsyncComponent(() =>
+    import("./_components/SectionStudentSupport.vue"),
+  );
+}
 </script>
 
 <template>
@@ -26,6 +34,7 @@ useSeoMeta({ title: "" });
     <div class="section-container">
       <SectionCfp />
       <SectionSpeakers />
+      <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />
       <SectionMessage />
       <SectionSponsorWanted />
       <SectionContact />

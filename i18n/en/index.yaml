@@ -38,6 +38,11 @@ speakers:
   sponsorSessions:
     title: "Sponsor Sessions"
 
+student:
+  title: "Student Support Program"
+  guideline: "Application Guidelines"
+  apply: "Apply Here"
+
 sponsorWanted: "Sponsorship Opportunities"
 sponsorWantedCoverImageAlt: "Sponsor Wanted cover image"
 
