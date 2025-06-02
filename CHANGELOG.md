@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.3.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.3.0)
+
+### 🚀 Enhancements
+
+- Cfp content ([#485](https://github.com/vuejs-jp/vuefes-2025/pull/485))
+
+### ❤️ Contributors
+
+- Ubugeeei <@ubugeeei>
+
 ## v1.2.4
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.2.4)
