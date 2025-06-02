@@ -38,6 +38,11 @@ speakers:
   sponsorSessions:
     title: "スポンサーセッション"
 
+student:
+  title: "学生支援制度"
+  guideline: "募集要項"
+  apply: "応募はこちら"
+
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
 

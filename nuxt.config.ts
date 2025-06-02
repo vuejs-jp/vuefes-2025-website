@@ -54,7 +54,7 @@ export default defineNuxtConfig({
 
   vite: {
     define: {
-      __FEATURE_CFP__: process.env.FEATURE_CFP || false, // 2025-06-02 ~
+      __FEATURE_STUDENT_SUPPORT__: process.env.FEATURE_STUDENT_SUPPORT || false, // 2025-06-05 ~
       __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
       __FEATURE_EVENT__: process.env.FEATURE_EVENT || false, // ?
       __FEATURE_TICKET__: process.env.FEATURE_TICKET || false, //  2025-08-xx ~
