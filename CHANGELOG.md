@@ -1,5 +1,6 @@
 # Changelog
 
+
 ## v1.3.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.3.0)
