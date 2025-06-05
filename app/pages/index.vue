@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
 import SectionCfp from "./_components/SectionCfp.vue";
 import SectionSpeakers from "./_components/SectionSpeaker.vue";
+import SectionStudentSupport from "./_components/SectionStudentSupport.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
 import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
 import SectionContact from "./_components/SectionContact.vue";
@@ -20,13 +20,6 @@ defineRouteRules({ prerender: true });
 const { t } = useI18n();
 
 useSeoMeta({ title: "" });
-
-let SectionStudentSupport: ReturnType<typeof defineAsyncComponent> | null = null;
-if (__FEATURE_STUDENT_SUPPORT__) {
-  SectionStudentSupport = defineAsyncComponent(() =>
-    import("./_components/SectionStudentSupport.vue"),
-  );
-}
 </script>
 
 <template>

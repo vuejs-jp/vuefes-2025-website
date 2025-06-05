@@ -117,6 +117,8 @@ header {
       nav {
         display: flex;
         align-items: center;
+        gap: 0.125rem;
+
         .language-separator {
           color: var(--color-place-holder);
           font-size: 1.125rem;
@@ -140,7 +142,12 @@ header {
 
         &.active {
           color: var(--color-base);
-          text-decoration: underline;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         &.animation-control {

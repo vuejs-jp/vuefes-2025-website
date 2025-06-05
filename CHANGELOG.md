@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.4.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.4.0)
+
+### 🚀 Enhancements
+
+- Student support section ([#553](https://github.com/vuejs-jp/vuefes-2025/pull/553))
+- Unflag student support ([#561](https://github.com/vuejs-jp/vuefes-2025/pull/561))
+
+### 🏡 Chore
+
+- Active lang switcher style ([#567](https://github.com/vuejs-jp/vuefes-2025/pull/567))
+
+### ❤️ Contributors
+
+- Ryuhei Shikanai ([@ryuhei373](https://github.com/ryuhei373))
+- Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 ## v1.3.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.0.5...v1.3.0)
