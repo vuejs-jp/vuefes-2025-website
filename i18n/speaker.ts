@@ -1,7 +1,7 @@
 export interface Speaker {
   name: string;
   avatarUrl: string;
-  attended: boolean;
+  attendedIndex?: number;
   affiliation?: string;
   title?: string;
 

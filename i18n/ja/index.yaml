@@ -34,6 +34,8 @@ speakers:
   viewAll: "すべてのスピーカーを見る"
   sessions:
     title: "セッション"
+  panel:
+    title: "パネルディスカッション"
   lightningTalks:
     title: "ライトニングトーク"
   sponsorSessions:

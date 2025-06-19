@@ -34,6 +34,8 @@ speakers:
   viewAll: "View All Speakers"
   sessions:
     title: "Sessions"
+  panel:
+    title: "Panel Discussion"
   lightningTalks:
     title: "Lightning Talks"
   sponsorSessions:

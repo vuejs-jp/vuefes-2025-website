@@ -2,24 +2,26 @@
 
 import type { Speaker } from "../speaker";
 
-export const SESSION_SPEAKERS: Speaker[] = [
-  {
-    name: "Evan You",
-    title: "Vue.js、Vite クリエーター",
+const evan = {
+  name: "Evan You",
+  title: "Vue.js、Vite クリエーター",
 
-    avatarUrl: "/images/avatars/evan-you.png",
-    attended: true,
-    socialUrls: {
-      github: "https://github.com/yyx990803",
-      x: "https://x.com/youyuxi",
-      bluesky: "https://bsky.app/profile/evanyou.me",
-    },
+  avatarUrl: "/images/avatars/evan-you.png",
+  attendedIndex: 1,
+  socialUrls: {
+    github: "https://github.com/yyx990803",
+    x: "https://x.com/youyuxi",
+    bluesky: "https://bsky.app/profile/evanyou.me",
   },
+};
+
+export const SESSION_SPEAKERS: Speaker[] = [
+  evan,
   {
     name: "Daniel Roe",
     title: "Nuxt コアチームリード",
     avatarUrl: "/images/avatars/daniel-roe.png",
-    attended: true,
+    attendedIndex: 4,
     socialUrls: {
       github: "https://github.com/danielroe",
       bluesky: "https://bsky.app/profile/danielroe.dev",
@@ -29,7 +31,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
     name: "Johnson Chu",
     title: "Vue.js コアチームメンバー、Volar.js 作者",
     avatarUrl: "/images/avatars/johnson-chu.png",
-    attended: true,
+    attendedIndex: 5,
     socialUrls: {
       github: "https://github.com/johnsoncodehk",
       x: "https://x.com/johnsoncodehk",
@@ -39,7 +41,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
     name: "Guillaume Chau",
     title: "Directus Web アーキテクト",
     avatarUrl: "/images/avatars/guillaume-chau.png",
-    attended: true,
+    attendedIndex: 6,
     socialUrls: {
       github: "https://github.com/Akryum",
       x: "https://x.com/Akryum",
@@ -49,7 +51,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "橋本 麦",
     avatarUrl: "/images/avatars/baku-hashimoto.png",
-    attended: true,
+    attendedIndex: 7,
     socialUrls: {
       github: "https://github.com/baku89",
       x: "https://x.com/_baku89",
@@ -60,7 +62,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
     affiliation: "VoidZero Inc.",
     title: "Vitest、Vite コアチームメンバー",
     avatarUrl: "/images/avatars/hi-ogawa.png",
-    attended: true,
+    attendedIndex: 8,
     socialUrls: {
       github: "https://github.com/hi-ogawa",
       bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
@@ -72,7 +74,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
     affiliation: "ピクセルグリッド",
     title: "フロントエンドエンジニア",
     avatarUrl: "/images/avatars/yuji-sugiura.png",
-    attended: true,
+    attendedIndex: 9,
     socialUrls: {
       github: "https://github.com/leaysgur",
       x: "https://x.com/leaysgur",
@@ -80,27 +82,37 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
 ];
 
-// NOTE: tmp naming
-export const EVENT_SPEAKERS: Speaker[] = [
+export const PANEL_DISCUSSION_SPEAKERS: Speaker[] = [
+  evan,
   {
-    name: "Evan You",
-    title: "Vue.js、Vite 作者",
-    avatarUrl: "/images/avatars/evan-you.png",
-    attended: true,
+    name: "Dan Abramov",
+    affiliation: "React、Bluesky（以前）",
+    avatarUrl: "/images/avatars/dan_abramov.png",
+    attendedIndex: 2,
     socialUrls: {
-      github: "https://github.com/yyx990803",
-      x: "https://x.com/youyuxi",
-      bluesky: "https://bsky.app/profile/evanyou.me",
+      github: "https://github.com/gaearon",
+      bluesky: "https://bsky.app/profile/danabra.mov",
     },
   },
   {
     name: "dominikg",
-    title: " Svelte & Vite コアチームメンバー",
+    title: " Svelte、Vite コアチームメンバー",
     avatarUrl: "/images/avatars/dominikg.png",
-    attended: false,
+    attendedIndex: 3,
     socialUrls: {
       github: "https://github.com/dominikg",
+      bluesky: "https://bsky.app/profile/dominikg.dev",
       mastodon: "https://elk.zone/m.webtoo.ls/@dominikg",
+    },
+  },
+  {
+    name: "Kia King Ishii",
+    affiliation: "Global Brain",
+    title: "Vue.js コアチームメンバー",
+    avatarUrl: "/images/avatars/kiaking.png",
+    socialUrls: {
+      github: "https://github.com/kiaking",
+      x: "https://x.com/KiaKing85",
     },
   },
 ];
