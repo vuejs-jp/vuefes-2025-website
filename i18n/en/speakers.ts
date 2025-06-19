@@ -107,7 +107,7 @@ export const PANEL_DISCUSSION_SPEAKERS: Speaker[] = [
   {
     name: "Kia King Ishii",
     affiliation: "Global Brain",
-    title: "Vue.js Core Team Member",
+    title: "Vue.js core team member",
     avatarUrl: "/images/avatars/kiaking.png",
     socialUrls: {
       github: "https://github.com/kiaking",
