@@ -1,50 +1,48 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import MenuItem, { type MenuItemProps } from "./VFMenuItem.vue";
-import SpMenuMobileButton from "./VFSpMenuMobileButton.vue";
+import SpCtaMobileButton from "./VFSpCtaMobileButton.vue";
+import { VFCta } from "#components";
 
-const menuOpen = ref(false);
-
-function toggleMenu(toggle = !menuOpen.value) {
-  menuOpen.value = toggle;
-}
-
-const { items } = defineProps<{
-  items: MenuItemProps[];
+const { openerText } = defineProps<{
+  openerText: string;
 }>();
+
+const isOpened = ref(false);
+
+function toggleMenu(toggle = !isOpened.value) {
+  isOpened.value = toggle;
+}
 </script>
 
 <template>
-  <div class="sp-navigation-wrapper" lang="en">
+  <div class="sp-cta-wrapper" lang="en">
     <Transition enter-active-class="zoom-blur-in" leave-active-class="zoom-blur-in-reverse">
-      <ul v-if="menuOpen" v-show="menuOpen" class="sp-navigation-content">
-        <li v-for="(item, idx) in items" :key="idx">
-          <MenuItem
-            class="sp-navigation-link"
-            v-bind="item"
-          />
-        </li>
-      </ul>
+      <div v-if="isOpened" class="sp-cta-content">
+        <VFCta :is-bg="false">
+          <slot />
+        </VFCta>
+      </div>
     </Transition>
 
-    <SpMenuMobileButton
+    <SpCtaMobileButton
       v-click-outside="toggleMenu"
-      class="navigation-button-mobile"
-      :is-opened="menuOpen"
+      class="cta-button-mobile"
+      :is-opened
+      :opener-text="openerText"
       @click="toggleMenu"
     />
   </div>
 </template>
 
 <style scoped>
-.sp-navigation-wrapper {
+.sp-cta-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.sp-navigation-content {
+.sp-cta-content {
   position: fixed;
   bottom: 85px;
   left: 0;
@@ -52,27 +50,18 @@ const { items } = defineProps<{
   background: var(--color-white-transparent);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  padding: 0.5rem 0;
-  width: 161px;
+  max-width: 240px;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid var(--color-divider-light);
 }
 
-.sp-navigation-link {
-  font-weight: 500;
-}
-
-.sp-navigation-content li {
-  list-style: none;
-  padding: 0.5rem 2rem;
-}
-
-.navigation-button-mobile {
+.cta-button-mobile {
   margin: 0.5rem auto 0 auto;
 }
 
 @keyframes zoomBlurIn {
-  /* 0% = 小さくて強いぼかし・透明 */
+  /* 0% = small with strong blur and transparent */
   0% {
     transform: scale(1, 0.8);
     filter: blur(12px);
@@ -80,7 +69,7 @@ const { items } = defineProps<{
     opacity: 0;
   }
 
-  /* 60% くらいでほぼ等倍・ほぼ無色透明だがまだ少しぼかす */
+  /* Around 60% = almost full scale, almost clear but still slightly blurred */
   60% {
     transform: scale(1);
     filter: blur(1px);
@@ -88,7 +77,7 @@ const { items } = defineProps<{
     opacity: 1;
   }
 
-  /* 100% = 完全等倍・くっきり */
+  /* 100% = full scale and clear */
   100% {
     transform: scale(1);
     filter: blur(0);
@@ -97,10 +86,10 @@ const { items } = defineProps<{
   }
 }
 
-/* アニメーションを付けたいクラス */
+/* Class to apply the animation */
 .zoom-blur-in {
   animation: zoomBlurIn 0.3s cubic-bezier(.25,.8,.25,1) both;
-  /* both = forwards+backwards なので初期状態も 0% が効く */
+  /* both = forwards+backwards so initial state is affected by 0% */
 }
 
 @keyframes zoomBlurOut {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
 import { useLocaleRoute } from "@typed-router";
-import { computed, nextTick, useBreakpoint, useRoute, watch } from "#imports";
-import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu } from "#components";
+import { computed, nextTick, useBreakpoint, useRoute, watch, useI18n, type Breakpoint } from "#imports";
+import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu, VFCta, VFSpCta, JaCtaCfp, EnCtaCfp } from "#components";
 import { useAnimationStore } from "~/stores/animation";
 import { HOME_HEADING_ID } from "~/constant";
 import type { MenuItemProps } from "~/components/menu/VFMenuItem.vue";
@@ -15,6 +15,7 @@ const bp = useBreakpoint();
 const route = useRoute();
 const localeRoute = useLocaleRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
+const { locale } = useI18n();
 
 const menuItems = computed<MenuItemProps[]>(() =>
   [
@@ -61,7 +62,11 @@ const menuItems = computed<MenuItemProps[]>(() =>
 
 const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => {
-  const targetBp = isWidenContent.value ? ["mobile-wide", "mobile"] : ["mobile"];
+  const targetBp: Breakpoint[] = isWidenContent.value ? ["mobile-wide", "mobile"] : ["mobile"];
+  return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
+});
+const isShowedSpCta = computed(() => {
+  const targetBp: Breakpoint[] = isWidenContent.value ? ["pc", "mobile-wide", "mobile"] : ["mobile-wide", "mobile"];
   return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
 });
 
@@ -113,18 +118,33 @@ watch(() => route.hash, async (hash) => {
         </main>
         <VFFooter />
       </div>
-      <div class="side-content right-menu"></div>
+      <div class="side-content right-menu">
+        <div v-if="!isShowedSpCta" class="nav-menu">
+          <VFCta>
+            <component :is="locale === 'ja' ? JaCtaCfp : EnCtaCfp" />
+          </VFCta>
+        </div>
+      </div>
     </div>
     <div style="height: 100lvh" />
   </div>
 
-  <Transition>
-    <VFSpMenu
-      v-if="isShowedSpMenu"
-      class="sp-nav-menu"
-      :items="menuItems"
-    />
-  </Transition>
+  <div class="sp-nav-container">
+    <Transition>
+      <VFSpMenu
+        v-if="isShowedSpMenu"
+        :items="menuItems"
+      />
+    </Transition>
+    <Transition>
+      <VFSpCta
+        v-if="isShowedSpCta"
+        opener-text="CFP"
+      >
+        <component :is="locale === 'ja' ? JaCtaCfp : EnCtaCfp" />
+      </VFSpCta>
+    </Transition>
+  </div>
 </template>
 
 <style scoped>
@@ -179,16 +199,22 @@ watch(() => route.hash, async (hash) => {
   min-height: 100%;
   height: 100%;
 
+  position: sticky;
+  padding-top: 0.5rem;
+
   @media (--mobile) {
     display: none;
   }
 }
 
 .left-menu {
-  position: sticky;
   justify-content: end;
   top: calc(100svh / 2 - 128px - 0.25rem);
-  padding-top: 0.5rem;
+}
+
+.right-menu {
+  justify-content: start;
+  top: calc(100svh / 2 - 190px - 0.25rem); /* Hardcoded(190px) to half the content height */
 }
 
 .header {
@@ -208,12 +234,15 @@ watch(() => route.hash, async (hash) => {
   height: 100%;
 }
 
-.sp-nav-menu {
+.sp-nav-container {
   position: fixed;
   bottom: 24px;
   width: 100%;
   height: auto;
-  z-index: 10;
+  z-index: 200; /* higher than .header */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .v-enter-active,
 .v-leave-active {

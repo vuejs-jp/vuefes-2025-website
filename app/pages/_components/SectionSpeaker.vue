@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Carousel from "primevue/carousel";
 import { useLocaleRoute } from "@typed-router";
-import { SESSION_SPEAKERS as enSpeakers } from "../../../i18n/en/speakers";
-import { SESSION_SPEAKERS as jaSpeakers } from "../../../i18n/ja/speakers";
+import { SESSION_SPEAKERS as enSessionSpeakers, PANEL_DISCUSSION_SPEAKERS as enPanelDiscussionSpeakers } from "../../../i18n/en/speakers";
+import { SESSION_SPEAKERS as jaSessionSpeakers, PANEL_DISCUSSION_SPEAKERS as jaPanelDiscussionSpeakers } from "../../../i18n/ja/speakers";
 import { computed, useI18n } from "#imports";
 import { EnSpeaker, JaSpeaker, VFButton } from "#components";
 import type { Speaker } from "~~/i18n/speaker";
@@ -39,8 +39,11 @@ const speakers = computed<CarouselSpeaker[]>(() => {
   const colorSetIter = new ColorSetIter();
 
   const _speakers
-    = (locale.value === "en" ? enSpeakers : jaSpeakers)
-      .filter(it => it.attended)
+    = (locale.value === "en" ? [...enSessionSpeakers, ...enPanelDiscussionSpeakers] : [...jaSessionSpeakers, ...jaPanelDiscussionSpeakers])
+
+      .filter((it, index, speakers) => index === speakers.findIndex(s => s.name === it.name))
+      .filter(it => it.attendedIndex !== undefined)
+      .sort((a, b) => a.attendedIndex! - b.attendedIndex!)
       .map(it => ({
         ...it,
         id: it.name,
@@ -180,6 +183,7 @@ const speakers = computed<CarouselSpeaker[]>(() => {
     height: 341px;
     overflow: hidden;
     margin-inline: 0.55rem;
+    border: 1px solid var(--color-divider-light);
 
     .speaker-affiliation {
       position: absolute;

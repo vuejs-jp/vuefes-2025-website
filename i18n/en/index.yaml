@@ -19,6 +19,7 @@ cfp:
   title: "Call for Proposals"
   coverImageAlt: "Call for Proposals cover image"
   applyButton: "Apply for CFP Here"
+  applyButtonShort: "Apply Here" # for cta
   applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSeWZ_O2GyICebSjAgKaaODIOxbDpk8kBph26aBNcPeLb3qqLA/viewform"
 
 message: "Message"
@@ -33,6 +34,8 @@ speakers:
   viewAll: "View All Speakers"
   sessions:
     title: "Sessions"
+  panel:
+    title: "Panel Discussion"
   lightningTalks:
     title: "Lightning Talks"
   sponsorSessions:
