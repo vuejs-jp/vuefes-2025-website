@@ -8,6 +8,7 @@ export const HOME_HEADING_ID = {
   message: "message",
   sponsor: "sponsor",
   sponsorWanted: "sponsor-wanted",
+  volunteer: "volunteer",
   // NOTE: Be careful as it is hardcoded in MDC
   contact: "contact-form",
 };
