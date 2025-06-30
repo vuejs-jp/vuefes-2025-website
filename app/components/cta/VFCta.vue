@@ -1,21 +1,27 @@
 <script setup lang="ts">
 import { VFButton } from "#components";
-import { useI18n } from "#imports";
 
-const { isBg = true } = defineProps<{
+const { actionButton, isBg = true } = defineProps<{
+  actionButton?: {
+    label: string;
+    link: string;
+    external?: true;
+  };
   isBg?: boolean;
 }>();
-
-const { t } = useI18n();
 </script>
 
 <template>
   <div class="cta-content" :class="{ 'cta-bg': isBg }">
     <slot />
 
-    <!-- NOTE: hardcoded -->
-    <VFButton :link="t('cfp.applyLink')" external class="action-button">
-      {{ t("cfp.applyButtonShort") }}
+    <VFButton
+      v-if="actionButton"
+      :link="actionButton.link"
+      :external="actionButton.external"
+      class="action-button"
+    >
+      {{ actionButton.label }}
     </VFButton>
   </div>
 </template>

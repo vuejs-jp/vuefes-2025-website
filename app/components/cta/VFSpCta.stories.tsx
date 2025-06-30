@@ -5,6 +5,9 @@ export default {
   title: "Preview/VFSpCta",
   component: VFSpCta,
   argTypes: {
+    actionButton: {
+      control: { type: "object" },
+    },
     openerText: {
       control: { type: "text" },
       defaultValue: "CFP",
@@ -12,7 +15,12 @@ export default {
   },
 } satisfies Meta<typeof VFSpCta>;
 
-export const Default: StoryFn<{
+const Template: StoryFn<{
+  actionButton?: {
+    label: string;
+    link: string;
+    external?: true;
+  };
   openerText: string;
 }> = args => ({
   components: { VFSpCta },
@@ -23,9 +31,19 @@ export const Default: StoryFn<{
           <h2>プロポーザル募集</h2>
           <p><img src="/images/cta/cfp.svg" alt="" /></p>
           <p>Vue Fes Japan では、セッション・ライトニングトークへの登壇者を広く募集しています。締め切りは 6 月 29 日（日）23:59 まで！</p>
-          <p><a href="#" target="_self">応募はこちら</a></p>
         </div>
       </VFSpCta>
     </div>
   ),
 });
+
+export const Default = Template.bind({});
+
+export const WithActionButton = Template.bind({});
+WithActionButton.args = {
+  actionButton: {
+    label: "応募はこちら",
+    link: "https://vuefes.jp/cfp",
+    external: true,
+  },
+};

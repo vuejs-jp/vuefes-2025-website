@@ -15,13 +15,6 @@ animation:
   play: "アニメーションを再生"
   pause: "アニメーションを停止"
 
-cfp:
-  title: "プロポーザル募集"
-  coverImageAlt: "プロポーザル募集のカバー画像"
-  applyButton: "応募はこちら"
-  applyButtonShort: "応募はこちら" # for cta
-  applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSd1RljAjLstA6CxTY6qQuU_8H1pjY_hAhSQWC2hTTFGeTAmFQ/viewform"
-
 message: "メッセージ"
 messageCoverImageAlt: Vue Fes Japan 2025 ロゴ
 

@@ -3,7 +3,12 @@ import { ref } from "vue";
 import SpCtaMobileButton from "./VFSpCtaMobileButton.vue";
 import { VFCta } from "#components";
 
-const { openerText } = defineProps<{
+const { actionButton, openerText } = defineProps<{
+  actionButton?: {
+    label: string;
+    link: string;
+    external?: true;
+  };
   openerText: string;
 }>();
 
@@ -18,7 +23,7 @@ function toggleMenu(toggle = !isOpened.value) {
   <div class="sp-cta-wrapper" lang="en">
     <Transition enter-active-class="zoom-blur-in" leave-active-class="zoom-blur-in-reverse">
       <div v-if="isOpened" class="sp-cta-content">
-        <VFCta :is-bg="false">
+        <VFCta :is-bg="false" :action-button>
           <slot />
         </VFCta>
       </div>

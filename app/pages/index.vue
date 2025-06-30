@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SectionCfp from "./_components/SectionCfp.vue";
 import SectionSpeakers from "./_components/SectionSpeaker.vue";
 import SectionStudentSupport from "./_components/SectionStudentSupport.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
@@ -25,7 +24,6 @@ useSeoMeta({ title: "" });
 <template>
   <div id="pages-index">
     <div class="section-container">
-      <SectionCfp />
       <SectionSpeakers />
       <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />
       <SectionMessage />
