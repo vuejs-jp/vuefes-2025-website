@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.4.0...v1.6.0)
+
+### 🚀 Enhancements
+
+- CTA ([#589](https://github.com/vuejs-jp/vuefes-2025/pull/589))
+- Panel discussion ([#597](https://github.com/vuejs-jp/vuefes-2025/pull/597))
+- Remove cfp section and cta ([59d0c2a](https://github.com/vuejs-jp/vuefes-2025/commit/59d0c2a))
+
+### 🏡 Chore
+
+- **release:** V1.4.0 ([7dedee6](https://github.com/vuejs-jp/vuefes-2025/commit/7dedee6))
+- Notation ([dc429ce](https://github.com/vuejs-jp/vuefes-2025/commit/dc429ce))
+- **release:** V1.5.0 ([98d8e6f](https://github.com/vuejs-jp/vuefes-2025/commit/98d8e6f))
+
+### ❤️ Contributors
+
+- Kitagawa <mnch.mai@gmail.com>
+- Ubugeeei <ubuge1122@gmail.com>
+- Ktym4a ([@ktym4a](https://github.com/ktym4a))
+
 ## v1.5.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.4.0...v1.5.0)

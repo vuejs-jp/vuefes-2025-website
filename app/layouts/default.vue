@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
 import { useLocaleRoute } from "@typed-router";
-import { computed, nextTick, useBreakpoint, useRoute, watch, useI18n, type Breakpoint } from "#imports";
-import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu, VFCta, VFSpCta, JaCtaCfp, EnCtaCfp } from "#components";
+import { computed, nextTick, useBreakpoint, useRoute, watch, type Breakpoint } from "#imports";
+import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu } from "#components";
 import { useAnimationStore } from "~/stores/animation";
 import { HOME_HEADING_ID } from "~/constant";
 import type { MenuItemProps } from "~/components/menu/VFMenuItem.vue";
@@ -15,7 +15,6 @@ const bp = useBreakpoint();
 const route = useRoute();
 const localeRoute = useLocaleRoute();
 const isRoot = computed(() => ["/", "/en"].includes(route.path));
-const { locale } = useI18n();
 
 const menuItems = computed<MenuItemProps[]>(() =>
   [
@@ -120,9 +119,18 @@ watch(() => route.hash, async (hash) => {
       </div>
       <div class="side-content right-menu">
         <div v-if="!isShowedSpCta" class="nav-menu">
-          <VFCta>
+          <!-- MEMO: 他のCTAを追加する場合はここに追加 -->
+          <!--
+          <VFCta
+            :action-button="{
+              label: t('cfp.applyButtonShort'),
+              link: t('cfp.applyLink'),
+              external: true,
+            }"
+          >
             <component :is="locale === 'ja' ? JaCtaCfp : EnCtaCfp" />
           </VFCta>
+          -->
         </div>
       </div>
     </div>
@@ -136,14 +144,22 @@ watch(() => route.hash, async (hash) => {
         :items="menuItems"
       />
     </Transition>
+    <!-- MEMO: 他のCTAを追加する場合はここに追加 -->
+    <!--
     <Transition>
       <VFSpCta
         v-if="isShowedSpCta"
         opener-text="CFP"
+        :action-button="{
+          label: t('cfp.applyButtonShort'),
+          link: t('cfp.applyLink'),
+          external: true,
+        }"
       >
         <component :is="locale === 'ja' ? JaCtaCfp : EnCtaCfp" />
       </VFSpCta>
     </Transition>
+  -->
   </div>
 </template>
 
