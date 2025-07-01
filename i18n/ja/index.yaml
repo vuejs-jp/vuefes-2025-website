@@ -39,6 +39,13 @@ student:
   guideline: "募集要項"
   apply: "応募はこちら"
 
+volunteer:
+  title: "ボランティアスタッフ"
+  coverImageAlt: "ボランティアスタッフのカバー画像"
+  applyButton: "応募はこちら"
+  applyButtonShort: "応募はこちら" # for cta
+  applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMS7V6gNu_j0X-hgQo8zhn1iJX3hellN187NpbxeK9ZrSVaw/viewform?usp=dialog"
+
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
 

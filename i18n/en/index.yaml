@@ -39,6 +39,13 @@ student:
   guideline: "Application Guidelines"
   apply: "Apply Here"
 
+volunteer:
+  title: "Volunteer Staff"
+  coverImageAlt: "Volunteer Staff cover image"
+  applyButtonShort: "Apply Here" # for cta
+  applyButton: "Apply Here"
+  applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMS7V6gNu_j0X-hgQo8zhn1iJX3hellN187NpbxeK9ZrSVaw/viewform?usp=dialog"
+
 sponsorWanted: "Sponsorship Opportunities"
 sponsorWantedCoverImageAlt: "Sponsor Wanted cover image"
 
