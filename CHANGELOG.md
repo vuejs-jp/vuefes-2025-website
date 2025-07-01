@@ -16,8 +16,8 @@
 
 ### ❤️ Contributors
 
-- Kitagawa <mnch.mai@gmail.com>
-- Ubugeeei <ubuge1122@gmail.com>
+- Kitagawa ([@aster-mnch](https://github.com/aster-mnch))
+- Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
 
 ## v1.6.0
 
