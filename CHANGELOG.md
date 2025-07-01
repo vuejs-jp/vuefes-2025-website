@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.7.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.6.0...v1.7.0)
+
+### 🚀 Enhancements
+
+- Volunteer section and cta ([#603](https://github.com/vuejs-jp/vuefes-2025/pull/603))
+
+### 🏡 Chore
+
+- **release:** V1.6.0 ([3145a16](https://github.com/vuejs-jp/vuefes-2025/commit/3145a16))
+- CHANGELOG ([1817013](https://github.com/vuejs-jp/vuefes-2025/commit/1817013))
+
+### ❤️ Contributors
+
+- Kitagawa <mnch.mai@gmail.com>
+- Ubugeeei <ubuge1122@gmail.com>
+
 ## v1.6.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.4.0...v1.6.0)
