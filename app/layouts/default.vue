@@ -48,7 +48,7 @@ const menuItems = computed<MenuItemProps[]>(() =>
       label: "Ticket",
       // TODO:
       routeName: localeRoute({ name: "index" }).name,
-      disabled: !__FEATURE_TICKET__,
+      disabled: !__FEATURE_TICKET_NAMECARD__,
     },
     {
       id: HOME_HEADING_ID.sponsor,

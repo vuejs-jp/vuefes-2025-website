@@ -5,6 +5,7 @@ words:
   - Abramov
   - allscale
   - allspeed
+  - authjs
   - autodocs
   - Chau
   - dateness
@@ -27,6 +28,8 @@ words:
   - lacunarity
   - lightningcss
   - matcha
+  - namecard
+  - nitropack
   - noindex
   - noopener
   - noreferrer
@@ -39,8 +42,11 @@ words:
   - palt
   - pcnextbutton
   - pcprevbutton
+  - peatix
+  - presigner
   - primevue
   - rolldown
+  - sidebase
   - sugiura
   - Sumi
   - suminagashi
@@ -56,7 +62,9 @@ words:
   - vuejs
   - vuetify
   - vueuse
+  - webauthn
   - webgl
+  - workerd
   - yuji
 ignorePaths:
   - dist
@@ -64,4 +72,5 @@ ignorePaths:
   - pnpm-lock.yaml
   - app/assets/fonts/external
   - app/assets/icons
+  - server/db/drizzle
   - CHANGELOG.md

@@ -1,0 +1,25 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "d1-tutorial",
+	"main": "./.output/server/index.mjs",
+	"compatibility_date": "2025-07-03",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./.output/public/"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "vuefes-2025-dev",
+			"database_id": "0c6b7881-3c26-472e-9276-2b71ed6af10b",
+			"migrations_dir": "drizzle"
+		}
+	],
+}
