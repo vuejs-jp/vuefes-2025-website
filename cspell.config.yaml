@@ -7,6 +7,7 @@ words:
   - allspeed
   - authjs
   - autodocs
+  - ceroan
   - Chau
   - dateness
   - dominikg
@@ -30,6 +31,7 @@ words:
   - matcha
   - namecard
   - nitropack
+  - nakano
   - noindex
   - noopener
   - noreferrer
@@ -65,6 +67,7 @@ words:
   - webauthn
   - webgl
   - workerd
+  - Yoshiya
   - yuji
 ignorePaths:
   - dist
