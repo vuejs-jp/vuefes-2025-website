@@ -15,7 +15,7 @@ const { signOut } = useAuth();
   </div>
 
   <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-  <button @click="signOut({ callbackUrl: '/namecard' })">
+  <button @click="signOut({ callbackUrl: '/ticket' })">
     Sign Out
   </button>
 </template>

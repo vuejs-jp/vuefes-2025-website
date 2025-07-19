@@ -34,13 +34,13 @@ $fetch("/api/peatix/attendees/26570043", {
     <pre>{{ data }}</pre>
 
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-    <NuxtLink :to="`/namecard/${userId}/edit`">
+    <NuxtLink :to="`/ticket/${userId}/edit`">
       Edit
     </NuxtLink>
     <br />
 
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-    <button @click="signOut({ callbackUrl: '/namecard' })">
+    <button @click="signOut({ callbackUrl: '/ticket' })">
       Sign Out
     </button>
   </div>

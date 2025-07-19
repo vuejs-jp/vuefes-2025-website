@@ -7,6 +7,7 @@ import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
 import SectionContact from "./_components/SectionContact.vue";
 
 import {
+  defineAsyncComponent,
   defineRouteRules,
   useI18n,
   // NOTE: import useHead to avoid `useHead is not defined` error
@@ -20,11 +21,17 @@ defineRouteRules({ prerender: true });
 const { t } = useI18n();
 
 useSeoMeta({ title: "" });
+
+let SectionGetYourTicket: typeof import("./_components/SectionGetYourTicket.vue").default | null = null;
+if (__FEATURE_TICKET_NAMECARD__) {
+  SectionGetYourTicket = defineAsyncComponent(() => import("./_components/SectionGetYourTicket.vue"));
+}
 </script>
 
 <template>
   <div id="pages-index">
     <div class="section-container">
+      <SectionGetYourTicket v-if="SectionGetYourTicket" />
       <SectionVolunteer />
       <SectionSpeakers />
       <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />

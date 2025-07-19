@@ -28,9 +28,9 @@ export default NuxtAuthHandler({
     }),
   ],
   pages: {
-    signIn: "/namecard",
-    signOut: "/namecard",
-    error: "/namecard",
+    signIn: "/ticket",
+    signOut: "/ticket",
+    error: "/ticket",
   },
   callbacks: {
     async session({ session, user }) {

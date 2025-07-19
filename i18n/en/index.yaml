@@ -18,6 +18,11 @@ animation:
 message: "Message"
 messageCoverImageAlt: Vue Fes Japan 2025 logo
 
+ticket:
+  title: "Ticket"
+  coverImageAlt: "Get Your Ticket!"
+  viewTicketDetails: "View Ticket Details"
+
 speakers:
   title: "Speakers"
   description: "Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text"

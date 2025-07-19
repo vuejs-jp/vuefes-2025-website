@@ -1,22 +1,16 @@
-import { defineNuxtRouteMiddleware, navigateTo, useAuth, useLocaleRoute } from "#imports";
+import { navigateTo, useLocaleRoute } from "@typed-router";
+import { defineNuxtRouteMiddleware, useAuth } from "#imports";
 
-const AUTHENTICATED_ONLY = ["namecard-userId-edit"];
-
-export default defineNuxtRouteMiddleware((to) => {
-  const { status, data } = useAuth();
+export default defineNuxtRouteMiddleware(async (to) => {
+  const { status } = useAuth();
   const localeRoute = useLocaleRoute();
+  const AUTHENTICATED_ONLY = [localeRoute({ name: "ticket-userId-edit", params: { userId: ":userId" } })];
 
-  if (status.value === "authenticated") {
-    if (to.name === localeRoute("namecard")?.name && data.value?.userId) {
-      return navigateTo(`/namecard/${data.value.userId}/`);
-    };
-
-    return;
-  } else {
-    AUTHENTICATED_ONLY.forEach((route) => {
-      if (to.name === route) {
-        navigateTo(localeRoute("/namecard"));
+  if (status.value !== "authenticated") {
+    for (const route of AUTHENTICATED_ONLY) {
+      if (to.name === route?.name) {
+        return await navigateTo(localeRoute("/ticket"));
       }
-    });
+    };
   }
 });
