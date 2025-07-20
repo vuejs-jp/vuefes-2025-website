@@ -71,6 +71,9 @@ login:
 individualSponsor:
   title: "Individual Sponsor"
 
+handsOn:
+  title: "Hands-on Workshop"
+
 speakers:
   title: "Speakers"
   description: "Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text"

@@ -9,6 +9,8 @@ import {
   JaNamecardFlowAndAttentions,
   EnIndividualSponsor,
   JaIndividualSponsor,
+  EnHandsOnTicket,
+  JaHandsOnTicket,
 } from "#components";
 
 definePageMeta({
@@ -25,7 +27,7 @@ const localeRoute = useLocaleRoute();
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Ticket</h1>
 
-    <VFSection :title="t('ticket.type')" class="ticket-type">
+    <VFSection id="ticket-type" :title="t('ticket.type')" class="ticket-type">
       <div class="description">
         <p>{{ t('ticket.typeDescription1') }}</p>
         <p>{{ t('ticket.typeDescription2') }}</p>
@@ -152,7 +154,7 @@ const localeRoute = useLocaleRoute();
       />
     </VFSection>
 
-    <VFSection :title="t('namecard.title')" class="namecard">
+    <VFSection id="namecard" :title="t('namecard.title')" class="namecard">
       <div class="cover-image-wrapper">
         <img src="/images/ticket/namecard-cover.png" :alt="t('namecard.coverImageAlt')" />
       </div>
@@ -199,8 +201,12 @@ const localeRoute = useLocaleRoute();
       />
     </VFSection>
 
-    <VFSection :title="t('individualSponsor.title')" class="individual-sponsor">
+    <VFSection id="individual-sponsor" :title="t('individualSponsor.title')" class="individual-sponsor">
       <component :is="locale === 'ja' ? JaIndividualSponsor : EnIndividualSponsor" />
+    </VFSection>
+
+    <VFSection id="hands-on" :title="t('handsOn.title')" class="hands-on">
+      <component :is="locale === 'ja' ? JaHandsOnTicket : EnHandsOnTicket" />
     </VFSection>
   </div>
 </template>
@@ -431,7 +437,8 @@ const localeRoute = useLocaleRoute();
     }
   }
 
-  .individual-sponsor {
+  .individual-sponsor,
+  .hands-on {
     :deep(.individual-sponsor-attention) {
       font-size: 14px;
       line-height: 21px;

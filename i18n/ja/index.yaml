@@ -71,6 +71,9 @@ login:
 individualSponsor:
   title: "個人スポンサー"
 
+handsOn:
+  title: "ハンズオン"
+
 speakers:
   title: "スピーカー"
   description: "スピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキスト"
