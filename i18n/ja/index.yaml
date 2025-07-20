@@ -1,3 +1,5 @@
+back: "戻る"
+
 nuxtSiteConfig:
   name: "Vue Fes Japan 2025"
   description: >
@@ -51,6 +53,20 @@ ticket:
     attention2: "※ 詳しくは{about}をご覧ください。"
     about: "個人スポンサーについて"
   buy: "チケットを購入する"
+
+namecard:
+  title: "ネームカード"
+  description: "{ticketName}をご購入後、必要な情報をご登録いただくと、当日会場にてご自身のアバター＋名前入りのネームカードがもらえます！（要ソーシャルログイン）"
+  ticketName: "Vue Fes Japan 2025 のチケット"
+  # TODO: https://github.com/vuejs-jp/vuefes-2025/issues/695
+  deadlineDescription: "ネームカード編集期限：2025年9月**日（**）23:59"
+  attention: "※ネームカード作成は必須ではありません。"
+  coverImageAlt: "ネームカードイメージ画像"
+  confirm: 自分のネームカードを確認する
+
+login:
+  withGoogle: "Googleでログイン"
+  withGitHub: "GitHubでログイン"
 
 speakers:
   title: "スピーカー"

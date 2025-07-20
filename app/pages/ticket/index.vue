@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { definePageMeta, navigateTo, useAuth, useI18n, useLocaleRoute } from "#imports";
-import { VFButton, VFSection, EnTicketUsageInstructions, JaTicketUsageInstructions } from "#components";
+import {
+  VFButton,
+  VFSection,
+  EnTicketUsageInstructions,
+  JaTicketUsageInstructions,
+  EnNamecardFlowAndAttentions,
+  JaNamecardFlowAndAttentions,
+} from "#components";
 
 definePageMeta({
   middleware: () => __FEATURE_TICKET_NAMECARD__ || navigateTo("/"),
@@ -143,25 +150,51 @@ const localeRoute = useLocaleRoute();
       />
     </VFSection>
 
-    <!-- TODO: -->
-    <VFSection :title="t('ticket.type')" class="ticket-type">
-      <div v-if="status === 'authenticated'">
-        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+    <VFSection :title="t('namecard.title')" class="namecard">
+      <div class="cover-image-wrapper">
+        <img src="/images/ticket/namecard-cover.png" :alt="t('namecard.coverImageAlt')" />
+      </div>
+
+      <i18n-t keypath="namecard.description" tag="p" class="namecard-description">
+        <template #ticketName>
+          <a
+            :href="
+              // TODO: https://github.com/vuejs-jp/vuefes-2025/issues/693
+              '/'
+            "
+          >
+            {{ t('namecard.ticketName') }}
+          </a>
+        </template>
+      </i18n-t>
+      <p class="namecard-description">
+        {{ t('namecard.deadlineDescription') }}
+      </p>
+      <p class="namecard-attention">
+        {{ t('namecard.attention') }}
+      </p>
+
+      <div v-if="status === 'authenticated'" class="login-buttons">
         <VFButton v-if="data" :link="localeRoute({ name: 'ticket-userId', params: { userId: data.userId } })">
-          ネームカードを確認する
+          {{ t('namecard.confirm') }}
         </VFButton>
       </div>
 
-      <div v-else-if="status === 'unauthenticated'">
-        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-        <button @click="signIn('github', { callbackUrl: '/ticket' })">
-          Github
-        </button>
-        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-        <button @click="signIn('google', { callbackUrl: '/ticket' })">
-          Google
-        </button>
+      <div v-else-if="status === 'unauthenticated'" class="login-buttons">
+        <VFButton @click="signIn('google', { callbackUrl: '/ticket' })">
+          {{ t('login.withGoogle') }}
+        </VFButton>
+        <VFButton @click="signIn('github', { callbackUrl: '/ticket' })">
+          {{ t('login.withGitHub') }}
+        </VFButton>
       </div>
+
+      <hr class="divider" />
+
+      <component
+        :is="locale === 'ja' ? JaNamecardFlowAndAttentions : EnNamecardFlowAndAttentions"
+        class="namecard-flow-and-attentions"
+      />
     </VFSection>
   </div>
 </template>
@@ -277,6 +310,10 @@ const localeRoute = useLocaleRoute();
         font-size: 11px;
         line-height: 15px;
         margin-bottom: 0;
+
+        @media (--mobile) {
+          font-size: 10px;
+        }
       }
     }
 
@@ -287,13 +324,99 @@ const localeRoute = useLocaleRoute();
     }
 
     hr.divider {
-      margin: 2rem 0;
       width: 100%;
       border: 0;
       border-top: 1px solid var(--color-divider);
+      margin: 2rem 0;
+
+      @media (--mobile) {
+        margin: 1.5rem 0;
+      }
     }
 
     .ticket-usage-instructions {
+      :deep(ul) {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .namecard {
+    .cover-image-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 2rem;
+
+      /* for preventing CLS */
+      height: 430px;
+      aspect-ratio: 538 / 430;
+
+      @media (--mobile) {
+        margin-bottom: 1.5rem;
+
+        /* for preventing CLS */
+        height: 269.35px;
+        aspect-ratio: 337 / 269.35;
+      }
+
+      img {
+        width: 538px;
+        height: 430px;
+
+        @media (--mobile) {
+          width: 337px;
+          height: 269.35px;
+        }
+      }
+    }
+
+    .namecard-attention {
+      font-size: 14px;
+      line-height: 21px;
+      margin: 2rem 0;
+
+      @media (--mobile) {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 1.5rem 0;
+      }
+    }
+
+    .login-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+
+      @media (--mobile) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    hr.divider {
+      width: 100%;
+      border: 0;
+      border-top: 1px solid var(--color-divider);
+      margin: 2rem 0;
+
+      @media (--mobile) {
+        margin: 1.5rem 0;
+      }
+    }
+
+    .namecard-flow-and-attentions {
+      :deep(ol) {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+      }
       :deep(ul) {
         list-style-type: disc;
         padding-left: 1.5rem;
