@@ -68,6 +68,9 @@ login:
   withGoogle: "Googleでログイン"
   withGitHub: "GitHubでログイン"
 
+individualSponsor:
+  title: "個人スポンサー"
+
 speakers:
   title: "スピーカー"
   description: "スピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキストスピーカーテキスト"

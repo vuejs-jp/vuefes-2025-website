@@ -30,10 +30,10 @@ export default defineNuxtModule({
 
     const processor = unified()
       .use(remarkParse)
-      .use(remarkRehype)
+      .use(remarkRehype, { allowDangerousHtml: true })
       .use(remarkMDC)
       .use(rehypeExternalLinks, { target: "_blank" })
-      .use(rehypeStringify);
+      .use(rehypeStringify, { allowDangerousHtml: true });
 
     const mdcContentRootDir = resolve("../i18n/");
     const componentsDir = resolve("../app/components/_i18n");

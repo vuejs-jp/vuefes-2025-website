@@ -7,6 +7,8 @@ import {
   JaTicketUsageInstructions,
   EnNamecardFlowAndAttentions,
   JaNamecardFlowAndAttentions,
+  EnIndividualSponsor,
+  JaIndividualSponsor,
 } from "#components";
 
 definePageMeta({
@@ -195,6 +197,10 @@ const localeRoute = useLocaleRoute();
         :is="locale === 'ja' ? JaNamecardFlowAndAttentions : EnNamecardFlowAndAttentions"
         class="namecard-flow-and-attentions"
       />
+    </VFSection>
+
+    <VFSection :title="t('individualSponsor.title')" class="individual-sponsor">
+      <component :is="locale === 'ja' ? JaIndividualSponsor : EnIndividualSponsor" />
     </VFSection>
   </div>
 </template>
@@ -421,6 +427,31 @@ const localeRoute = useLocaleRoute();
         list-style-type: disc;
         padding-left: 1.5rem;
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .individual-sponsor {
+    :deep(.individual-sponsor-attention) {
+      font-size: 14px;
+      line-height: 21px;
+      margin: 2rem 0;
+
+      @media (--mobile) {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 1.5rem 0;
+      }
+    }
+
+    :deep(hr) {
+      width: 100%;
+      border: 0;
+      border-top: 1px solid var(--color-divider);
+      margin: 2rem 0;
+
+      @media (--mobile) {
+        margin: 1.5rem 0;
       }
     }
   }

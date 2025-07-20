@@ -68,6 +68,9 @@ login:
   withGoogle: "Log in with Google"
   withGitHub: "Log in with GitHub"
 
+individualSponsor:
+  title: "Individual Sponsor"
+
 speakers:
   title: "Speakers"
   description: "Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text Speaker text"

@@ -1,4 +1,4 @@
-【Ticket Usage Instructions】
+### 【Ticket Usage Instructions】
 
 - We use Peatix as our ticketing platform.
 - After purchasing your ticket, you will automatically receive a confirmation email with event details from Peatix.
