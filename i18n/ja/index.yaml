@@ -22,6 +22,35 @@ ticket:
   title: "チケット"
   coverImageAlt: "チケット販売"
   viewTicketDetails: "チケットの詳細を見る"
+  type: "チケット種別"
+  typeDescription1: "一般チケットはアフターパーティーあり/なしの 2 種類があります。オプションとしてハンズオン、個人スポンサーのチケットもご用意しております。"
+  # TODO:
+  typeDescription2: "**/**（**）24:00 までにご購入いただくと、オトクなお値段になる早割もありますので、お買い求めはお早めに！"
+  early: "早割"
+  standard: "通常"
+  priceUnit: "￥"
+  generalTicket: 
+    title: "一般チケット"
+    earlyPrice: "7000"
+    standardPrice: "8000"
+  afterPartyTicket: 
+    title: "一般＋アフターパーティーチケット"
+    earlyPrice: "10000"
+    standardPrice: "11000"
+  option: オプション
+  handsOn:
+    title: "ハンズオン"
+    price: "0"
+    attention1: "※ Vue Fes Japan へのご参加には、一般チケットも必要となります。"
+    attention2: "※ 詳しくは{about}をご覧ください。"
+    about: "ハンズオンについて"
+  individual:
+    sponsor: "個人スポンサー"
+    price: "10000"
+    attention1: "※ Vue Fes Japan へのご参加には、一般チケットも必要となります。"
+    attention2: "※ 詳しくは{about}をご覧ください。"
+    about: "個人スポンサーについて"
+  buy: "チケットを購入する"
 
 speakers:
   title: "スピーカー"

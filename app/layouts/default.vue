@@ -70,7 +70,10 @@ const isShowedSpCta = computed(() => {
 });
 
 const isWidenContent = computed(() =>
-  ([localeRoute({ name: "speaker" })?.name] as string[]).includes(route.name?.toString() ?? ""),
+  ([
+    localeRoute({ name: "speaker" })?.name,
+    localeRoute({ name: "ticket" })?.name,
+  ] as string[]).includes(route.name?.toString() ?? ""),
 );
 
 // scroll behavior

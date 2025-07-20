@@ -1,31 +1,305 @@
 <script setup lang="ts">
-import { definePageMeta, navigateTo, useAuth, useLocaleRoute } from "#imports";
-import { VFButton } from "#components";
+import { definePageMeta, navigateTo, useAuth, useI18n, useLocaleRoute } from "#imports";
+import { VFButton, VFSection, EnTicketUsageInstructions, JaTicketUsageInstructions } from "#components";
 
 definePageMeta({
   middleware: () => __FEATURE_TICKET_NAMECARD__ || navigateTo("/"),
 });
 
 const { signIn, status, data } = useAuth();
+const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 </script>
 
 <template>
-  <div v-if="status === 'authenticated'">
+  <div id="pages-ticket">
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-    <VFButton v-if="data" :link="localeRoute({ name: 'ticket-userId', params: { userId: data.userId } })">
-      ネームカードを確認する
-    </VFButton>
-  </div>
+    <h1>Ticket</h1>
 
-  <div v-else-if="status === 'unauthenticated'">
-    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-    <button @click="signIn('github', { callbackUrl: '/ticket' })">
-      Github
-    </button>
-    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-    <button @click="signIn('google', { callbackUrl: '/ticket' })">
-      Google
-    </button>
+    <VFSection :title="t('ticket.type')" class="ticket-type">
+      <div class="description">
+        <p>{{ t('ticket.typeDescription1') }}</p>
+        <p>{{ t('ticket.typeDescription2') }}</p>
+      </div>
+
+      <section class="general-tickets">
+        <ul class="general-ticket-list">
+          <li class="ticket-card">
+            <span class="ticket-card-title" :class="locale">{{ t('ticket.generalTicket.title') }}</span>
+
+            <div class="ticket-card-prices">
+              <span class="ticket-card-price">
+                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                <span class="ticket-card-price-type">({{ t('ticket.early') }})</span>
+                <span class="ticket-card-price-value">
+                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.earlyPrice'))).toLocaleString() }}
+                </span>
+              </span>
+
+              <span class="ticket-card-price">
+                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                <span class="ticket-card-price-type">({{ t('ticket.standard') }})</span>
+                <span class="ticket-card-price-value">
+                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.standardPrice'))).toLocaleString() }}
+                </span>
+              </span>
+            </div>
+          </li>
+
+          <li class="ticket-card">
+            <span class="ticket-card-title" :class="locale">{{ t('ticket.afterPartyTicket.title') }}</span>
+
+            <div class="ticket-card-prices">
+              <span class="ticket-card-price">
+                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                <span class="ticket-card-price-type">({{ t('ticket.early') }})</span>
+                <span class="ticket-card-price-value">
+                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.earlyPrice'))).toLocaleString() }}
+                </span>
+              </span>
+
+              <span class="ticket-card-price">
+                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                <span class="ticket-card-price-type">({{ t('ticket.standard') }})</span>
+                <span class="ticket-card-price-value">
+                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.standardPrice'))).toLocaleString() }}
+                </span>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="option-tickets">
+        <h3>{{ t('ticket.option') }}</h3>
+
+        <ul class="option-ticket-list">
+          <li>
+            <div class="ticket-card">
+              <span class="ticket-card-title" :class="locale">{{ t('ticket.handsOn.title') }}</span>
+              <div class="ticket-card-prices">
+                <span class="ticket-card-price">
+                  <span class="ticket-card-price-value">
+                    <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.handsOn.price'))).toLocaleString() }}
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="ticket-attention">
+              <p>{{ t('ticket.handsOn.attention1') }}</p>
+              <i18n-t keypath="ticket.handsOn.attention2" tag="p">
+                <template #about>
+                  <a href="#hands-on">
+                    {{ t('ticket.handsOn.about') }}
+                  </a>
+                </template>
+              </i18n-t>
+            </div>
+          </li>
+
+          <li>
+            <div class="ticket-card">
+              <span class="ticket-card-title" :class="locale">{{ t('ticket.individual.sponsor') }}</span>
+              <div class="ticket-card-prices">
+                <span class="ticket-card-price">
+                  <span class="ticket-card-price-value">
+                    <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.individual.price'))).toLocaleString() }}
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="ticket-attention">
+              <p>{{ t('ticket.individual.attention1') }}</p>
+              <i18n-t keypath="ticket.individual.attention2" tag="p">
+                <template #about>
+                  <a href="#individual-sponsor">
+                    {{ t('ticket.individual.about') }}
+                  </a>
+                </template>
+              </i18n-t>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="buy-ticket-button-wrapper">
+        <VFButton
+          class="buy-ticket-button"
+          :link="
+            // TODO: https://github.com/vuejs-jp/vuefes-2025/issues/693
+            '/'
+          "
+          external
+        >
+          {{ t('ticket.buy') }}
+        </VFButton>
+      </div>
+
+      <hr class="divider" />
+
+      <component
+        :is="locale === 'ja' ? JaTicketUsageInstructions : EnTicketUsageInstructions"
+        class="ticket-usage-instructions"
+      />
+    </VFSection>
+
+    <!-- TODO: -->
+    <VFSection :title="t('ticket.type')" class="ticket-type">
+      <div v-if="status === 'authenticated'">
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+        <VFButton v-if="data" :link="localeRoute({ name: 'ticket-userId', params: { userId: data.userId } })">
+          ネームカードを確認する
+        </VFButton>
+      </div>
+
+      <div v-else-if="status === 'unauthenticated'">
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+        <button @click="signIn('github', { callbackUrl: '/ticket' })">
+          Github
+        </button>
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+        <button @click="signIn('google', { callbackUrl: '/ticket' })">
+          Google
+        </button>
+      </div>
+    </VFSection>
   </div>
 </template>
+
+<style scoped>
+@import "~/assets/styles/custom-media-query.css";
+
+#pages-ticket {
+  display: grid;
+  row-gap: 1.5rem;
+  @media (--mobile) {
+    row-gap: 1rem;
+  }
+
+  h1 {
+    font-family: "ClashDisplay-Semibold";
+    font-size: 3rem;
+    padding: 7.5rem 0;
+    margin: 0;
+
+    @media (--mobile) {
+      padding: 2.5rem 0.75rem;
+    }
+  }
+
+  .ticket-type {
+    ul.general-ticket-list {
+      display: grid;
+      row-gap: 1.5rem;
+      margin-top: 3rem;
+
+      @media (--mobile) {
+        margin-top: 2rem;
+      }
+    }
+
+    ul.option-ticket-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      column-gap: 2rem;
+
+      @media (--mobile) {
+        grid-template-columns: unset;
+        row-gap: 1.5rem;
+      }
+    }
+
+    .ticket-card {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: var(--radius-m);
+      border: 1px solid var(--color-divider);
+      padding: 2rem 1.5rem;
+
+      @media (--mobile) {
+        padding: 1.25rem;
+        display: block;
+      }
+
+      .ticket-card-title {
+        display: block;
+
+        &.en {
+          max-width: 12rem;
+        }
+
+        @media (--mobile) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .ticket-card-prices {
+        display: flex;
+        gap: 2rem;
+
+        @media (--mobile) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .ticket-card-price {
+          display: flex;
+
+          .ticket-card-price-type {
+            display: block;
+            text-align: center;
+            margin-right: 0.5rem;
+          }
+
+          .ticket-card-price-value {
+            font-size: 1.75rem;
+
+            .ticket-card-price-unit {
+              font-size: 1.75rem;
+
+              &.en {
+                font-size: 1.25rem;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ticket-attention {
+      margin-top: 0.375rem;
+
+      p, a {
+        font-size: 11px;
+        line-height: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    .buy-ticket-button-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    hr.divider {
+      margin: 2rem 0;
+      width: 100%;
+      border: 0;
+      border-top: 1px solid var(--color-divider);
+    }
+
+    .ticket-usage-instructions {
+      :deep(ul) {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+</style>

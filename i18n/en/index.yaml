@@ -22,6 +22,35 @@ ticket:
   title: "Ticket"
   coverImageAlt: "Get Your Ticket!"
   viewTicketDetails: "View Ticket Details"
+  type: "Ticket Type"
+  typeDescription1: "There are two types of general tickets: with or without the after-party. We also offer optional hands-on workshop and individual sponsor tickets."
+  # TODO:
+  typeDescription2: "Early bird pricing is available until **/** (**) 24:00, offering a better price. Be sure to purchase early!"
+  early: "Early Bird"
+  standard: "Standard"
+  priceUnit: "JPY"
+  generalTicket: 
+    title: "General Ticket"
+    earlyPrice: "7000"
+    standardPrice: "8000"
+  afterPartyTicket: 
+    title: "General Admission + After-Party Ticket"
+    earlyPrice: "10000"
+    standardPrice: "11000"
+  option: "Options"
+  handsOn:
+    title: "Hands-on Workshop"
+    price: "0"
+    attention1: "※ A general ticket is also required to participate in Vue Fes Japan."
+    attention2: "※ Please see the {about} for details."
+    about: "Hands-on Workshop section"
+  individual:
+    sponsor: "Individual Sponsor"
+    price: "10000"
+    attention1: "※ A general ticket is also required to participate in Vue Fes Japan."
+    attention2: "※ Please see the {about} for details."
+    about: "Individual Sponsor section"
+  buy: "Buy Tickets"
 
 speakers:
   title: "Speakers"

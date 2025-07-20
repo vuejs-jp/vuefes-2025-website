@@ -13,7 +13,8 @@ const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : j
 
 <template>
   <div id="pages-speakers">
-    <h1>{{ t("speakers.title") }}</h1>
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+    <h1>Speaker</h1>
 
     <VFSection :title="t('speakers.sessions.title')" wide>
       <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
