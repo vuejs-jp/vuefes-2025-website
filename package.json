@@ -95,7 +95,7 @@
     "textlint": "^14.4.2",
     "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-rule-preset-vuejs-jp": "github:vuejs-jp/textlint-rule-preset-vuejs-jp",
-    "three": "^0.175.0",
+    "three": "^0.178.0",
     "typescript": "5.8.3",
     "unified": "^11.0.5",
     "unplugin-icons": "^22.1.0",
