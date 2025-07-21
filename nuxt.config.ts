@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     githubClientSecret: process.env.OAUTH_GITHUB_CLIENT_SECRET_ID,
     googleClientId: process.env.OAUTH_GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
-    authOrigin: process.env.DEPLOY_PRIME_URL,
+    authOrigin: `${process.env.DEPLOY_PRIME_URL}/2025/api/aut/`,
 
     // for Peatix API
     peatixApiOrigin: process.env.PEATIX_API_ORIGIN,
@@ -147,7 +147,6 @@ export default defineNuxtConfig({
   auth: {
     disableServerSideAuth: false,
     originEnvKey: "DEPLOY_PRIME_URL",
-    baseURL: process.env.NODE_ENV === "production" ? `/2025/api/auth/` : `http://localhost:${process.env.PORT || 3000}/api/auth`,
     provider: {
       type: "authjs",
       addDefaultCallbackUrl: true,
