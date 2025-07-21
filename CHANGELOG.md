@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.6.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.7.0...v1.7.1)
+
+### 🏡 Chore
+
+- Update speaker info (Baku Hashimoto) ([#703](https://github.com/vuejs-jp/vuefes-2025/pull/703))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 
 ## v1.7.0
 
@@ -18,6 +30,7 @@
 
 - Kitagawa ([@aster-mnch](https://github.com/aster-mnch))
 - Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 
 ## v1.6.0
 
