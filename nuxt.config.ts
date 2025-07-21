@@ -37,6 +37,7 @@ export default defineNuxtConfig({
     githubClientSecret: process.env.OAUTH_GITHUB_CLIENT_SECRET_ID,
     googleClientId: process.env.OAUTH_GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
+    authOrigin: process.env.AUTH_ORIGIN,
 
     // for Peatix API
     peatixApiOrigin: process.env.PEATIX_API_ORIGIN,
