@@ -1,4 +1,8 @@
 back: "Back"
+copyLink: "Copy Link"
+clipboard:
+  copySuccess: "Copied to clipboard"
+siteName: "Vue Fes Japan 2025 Official"
 
 nuxtSiteConfig:
   name: "Vue Fes Japan 2025"
@@ -65,6 +69,12 @@ namecard:
   confirm: "Check My Namecard"
   create: "Create Namecard"
   edit: "Edit Namecard"
+  status:
+    label: "Status"
+    notCreated: "Not Created"
+    created: "Created"
+  letsShare: "Let's Share A Namecard!"
+  joinEvent: "Join Vue Fes Japan!"
   namecardDefaultImageAlt: "Namecard image"
   namecardImageAlt: "{username}'s namecard image"
   form:

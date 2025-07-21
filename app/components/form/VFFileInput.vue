@@ -150,6 +150,10 @@ function handleFileSelect(ev: FileUploadSelectEvent, formState: FormFieldState) 
       background-color: var(--color-background-secondary);
       text-align: start;
 
+      @media (--mobile) {
+        width: 130px;
+      }
+
       &:focus,
       &:hover {
         border-color: var(--color-primary);

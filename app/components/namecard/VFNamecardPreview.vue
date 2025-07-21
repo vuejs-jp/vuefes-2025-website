@@ -3,13 +3,13 @@ import { computed, onMounted } from "vue";
 
 const {
   name,
-  type,
+  userRole,
   avatarImageUrl,
   width,
   height,
   aspectRatio,
 } = defineProps<{
-  type: "Attendee";
+  userRole: "Attendee" | "Attendee+Party" | "Sponsor" | "Speaker" | "Staff";
   name: string;
   avatarImageUrl?: string;
   width?: string;
@@ -18,9 +18,10 @@ const {
 }>();
 
 const fontColor = computed(() => {
-  switch (type) {
+  switch (userRole) {
     case "Attendee":
       return "#007f62";
+    // TODO:
     default:
       return "";
   }

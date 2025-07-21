@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { z } from "zod";
+import { useLocaleRoute } from "@typed-router";
 import { definePageMeta, navigateTo, ref, useAuth, useBreakpoint, useFetch, useI18n, watch } from "#imports";
 
 import type { FormSubmitEvent } from "~/components/form/VFForm.vue";
@@ -15,6 +16,7 @@ const { data: user } = useAuth();
 const { t } = useI18n();
 const toast = useToast();
 const bp = useBreakpoint();
+const localeRoute = useLocaleRoute();
 
 const { data: nameCardData } = useFetch("/api/namecard");
 
@@ -91,14 +93,14 @@ async function submit(event: FormSubmitEvent) {
 </script>
 
 <template>
-  <div id="pages-ticket-uerId-edit">
+  <div id="pages-ticket-userId-edit">
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Ticket</h1>
 
     <VFSection :title="nameCardData ? t('namecard.edit') : t('namecard.create')" class="namecard-section">
       <div class="namecard-preview-area">
         <VFNamecardPreview
-          :type="
+          :user-role="
             // TODO:
             'Attendee'
           "
@@ -150,7 +152,13 @@ async function submit(event: FormSubmitEvent) {
           />
 
           <div class="namecard-form-actions">
-            <VFButton outlined link="/ticket">
+            <VFButton
+              outlined
+              :link="localeRoute({
+                name: 'ticket-userId',
+                params: { userId: user!.userId },
+              })"
+            >
               {{ t("namecard.form.cancel") }}
             </VFButton>
             <VFButton
@@ -176,9 +184,10 @@ async function submit(event: FormSubmitEvent) {
 <style scoped>
 @import "~/assets/styles/custom-media-query.css";
 
-#pages-ticket-uerId-edit {
+#pages-ticket-userId-edit {
   display: grid;
   row-gap: 1.5rem;
+
   @media (--mobile) {
     row-gap: 1rem;
   }
@@ -213,11 +222,6 @@ async function submit(event: FormSubmitEvent) {
         display: flex;
         column-gap: 1rem;
         justify-content: center;
-
-        button {
-          width: 100%;
-          max-width: 200px;
-        }
       }
     }
   }

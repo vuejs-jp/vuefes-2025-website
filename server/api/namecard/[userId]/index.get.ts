@@ -39,6 +39,7 @@ export default defineEventHandler(async (event) => {
 
   return {
     name: nameCardData.displayName,
+    role: nameCardData.role,
     avatarUrl: await getSignedUrl(
       S3,
       new GetObjectCommand({

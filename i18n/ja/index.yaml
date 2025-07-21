@@ -1,4 +1,8 @@
 back: "戻る"
+copyLink: "リンクをコピー"
+clipboard:
+  copySuccess: "クリップボードにコピーしました"
+siteName: "Vue Fes Japan 2025 公式サイト"
 
 nuxtSiteConfig:
   name: "Vue Fes Japan 2025"
@@ -65,6 +69,12 @@ namecard:
   confirm: 自分のネームカードを確認する
   create: "ネームカード作成"
   edit: "ネームカード編集"
+  status:
+    label: "ステータス"
+    notCreated: "未作成"
+    created: "作成済み"
+  letsShare: "ネームカードをシェアしよう！"
+  joinEvent: "あなたも Vue Fes Japan に参加しませんか？"
   namecardDefaultImageAlt: "ネームカードイメージ画像"
   namecardImageAlt: "{username}さんのネームカードイメージ画像"
   form:
