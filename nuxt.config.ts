@@ -146,6 +146,7 @@ export default defineNuxtConfig({
   auth: {
     disableServerSideAuth: false,
     originEnvKey: "AUTH_ORIGIN",
+    baseURL: process.env.NODE_ENV === "production" ? "/2025/" : "/",
     provider: {
       type: "authjs",
       addDefaultCallbackUrl: true,
