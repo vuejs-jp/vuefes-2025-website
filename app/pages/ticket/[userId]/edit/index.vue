@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { z } from "zod";
-import { definePageMeta, navigateTo, ref, useAuth, useFetch, useI18n, watch } from "#imports";
-import { VFSection, VFFileInput } from "#components";
-import VFToast, { useToast } from "~/components/toast/VFToast.vue";
+import { definePageMeta, navigateTo, ref, useAuth, useBreakpoint, useFetch, useI18n, watch } from "#imports";
+
 import type { FormSubmitEvent } from "~/components/form/VFForm.vue";
-import VFForm from "~/components/form/VFForm.vue";
 import type { VFFile } from "~/components/form/VFFileInput.vue";
+import { VFFileInput, VFForm, VFNamecardPreview, VFSection, VFToast } from "#components";
+import { useToast } from "~/components/toast/VFToast.vue";
 
 definePageMeta({
   middleware: () => __FEATURE_TICKET_NAMECARD__ || navigateTo("/"),
@@ -14,6 +14,7 @@ definePageMeta({
 const { data: user } = useAuth();
 const { t } = useI18n();
 const toast = useToast();
+const bp = useBreakpoint();
 
 const { data: nameCardData } = useFetch("/api/namecard");
 
@@ -95,11 +96,27 @@ async function submit(event: FormSubmitEvent) {
     <h1>Ticket</h1>
 
     <VFSection :title="nameCardData ? t('namecard.edit') : t('namecard.create')" class="namecard-section">
-      <div class="namecard-image-wrapper">
-        <!-- TODO: switch -->
-        <img
-          :src="'/images/namecard/default.png'"
-          :alt="t('namecard.namecardDefaultImageAlt')"
+      <div class="namecard-preview-area">
+        <VFNamecardPreview
+          :type="
+            // TODO:
+            'Attendee'
+          "
+          :name="state.name || t('namecard.form.name.label')"
+          :avatar-image-url="state.avatarImage?.objectURL"
+          v-bind="
+            bp =='mobile'
+              ? {
+                width: '100%',
+                height: '284px',
+                aspectRatio: '200 / 284',
+              }
+              : {
+                width: '100%',
+                height: '360px',
+                aspectRatio: '253.52 / 360',
+              }
+          "
         />
       </div>
 
@@ -178,35 +195,13 @@ async function submit(event: FormSubmitEvent) {
   }
 
   .namecard-section {
-    .namecard-image-wrapper {
+    .namecard-preview-area {
       display: flex;
       justify-content: center;
       width: 100%;
       margin-bottom: 2rem;
       @media (--mobile) {
         margin-bottom: 1.5rem;
-      }
-
-      /* for preventing CLS */
-      height: 360px;
-      aspect-ratio: 253.52 / 360;
-
-      @media (--mobile) {
-        margin-bottom: 1.5rem;
-
-        /* for preventing CLS */
-        height: 284px;
-        aspect-ratio: 200 / 284;
-      }
-
-      img {
-        width: 253.52px;
-        height: 360px;
-
-        @media (--mobile) {
-          width: 200px;
-          height: 284px;
-        }
       }
     }
 
