@@ -50,6 +50,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "橋本 麦",
+    title: "映像作家",
     avatarUrl: "/images/avatars/baku-hashimoto.png",
     attendedIndex: 7,
     socialUrls: {
