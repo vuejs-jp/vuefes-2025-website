@@ -26,8 +26,8 @@ const schema = z.object({
 });
 
 export default defineEventHandler(async (event) => {
-  const { __FEATURE_TICKET_NAMECARD__ } = useRuntimeConfig();
-  if (!__FEATURE_TICKET_NAMECARD__) return;
+  const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
+  if (!__FEATURE_TICKET_NAME_BADGE__) return;
 
   // Authorization
   const session = await getServerSession(event);
@@ -111,5 +111,5 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  return { message: "Namecard registered successfully" };
+  return { message: "Name badge registered successfully" };
 });

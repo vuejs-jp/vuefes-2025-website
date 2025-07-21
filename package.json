@@ -26,8 +26,8 @@
     ]
   },
   "scripts": {
-    "build": "FEATURE_TICKET_NAMECARD=1 nuxt build",
-    "dev": "cross-env FEATURE_TIMETABLE=0 FEATURE_EVENT=0 FEATURE_SPONSOR_LIST=0 FEATURE_TICKET_NAMECARD=1 nuxt dev",
+    "build": "FEATURE_TICKET_NAME_BADGE=1 nuxt build",
+    "dev": "cross-env FEATURE_TIMETABLE=0 FEATURE_EVENT=0 FEATURE_SPONSOR_LIST=0 FEATURE_TICKET_NAME_BADGE=1 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",

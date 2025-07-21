@@ -2,11 +2,11 @@
 import { useRoute, useLocaleRoute } from "@typed-router";
 import { definePageMeta, navigateTo, useAuth, useBreakpoint, useFetch, useI18n } from "#imports";
 
-import { VFNamecardPreview, VFSection, VFToast } from "#components";
+import { VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
 
 definePageMeta({
-  middleware: () => __FEATURE_TICKET_NAMECARD__ || navigateTo("/"),
+  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
 });
 
 const { t } = useI18n();
@@ -16,7 +16,7 @@ const localeRoute = useLocaleRoute();
 
 const { data: session, status } = useAuth();
 const route = useRoute();
-const { data: nameCardData } = useFetch(`/api/namecard/${route.params.userId}`);
+const { data: nameBadgeData } = useFetch(`/api/name-badge/${route.params.userId}`);
 
 function copyUrl() {
   const url = window.location.href;
@@ -30,12 +30,12 @@ function copyUrl() {
   <div id="pages-ticket-userId">
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Ticket</h1>
-    <VFSection :title="t('namecard.title')" class="namecard-section">
-      <div class="namecard-preview-area">
-        <VFNamecardPreview
-          :user-role="nameCardData?.role ?? 'Attendee'"
-          :name="nameCardData?.name || t('namecard.form.name.label')"
-          :avatar-image-url="nameCardData?.avatarUrl"
+    <VFSection :title="t('nameBadge.title')" class="name-badge-section">
+      <div class="name-badge-preview-area">
+        <VFNameBadgePreview
+          :user-role="nameBadgeData?.role ?? 'Attendee'"
+          :name="nameBadgeData?.name || t('nameBadge.form.name.label')"
+          :avatar-image-url="nameBadgeData?.avatarUrl"
           v-bind="
             bp === 'mobile'
               ? {
@@ -56,36 +56,36 @@ function copyUrl() {
         v-if="status === 'authenticated' && session?.userId === route.params.userId"
         class="authenticated-action"
       >
-        <p class="name-card-status">
+        <p class="name-badge-status">
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-          {{ t("namecard.status.label") }} : {{ nameCardData ? t(`namecard.status.created`) : t(`namecard.status.notCreated`) }}
+          {{ t("nameBadge.status.label") }} : {{ nameBadgeData ? t(`nameBadge.status.created`) : t(`nameBadge.status.notCreated`) }}
         </p>
 
         <VFButton
           :link="localeRoute(`/ticket/${session!.userId}/edit`)"
           class="vf-button vf-button-primary"
         >
-          {{ t("namecard.edit") }}
+          {{ t("nameBadge.edit") }}
         </VFButton>
 
-        <p class="name-card-deadline">
-          {{ t("namecard.deadlineDescription") }}
+        <p class="name-badge-deadline">
+          {{ t("nameBadge.deadlineDescription") }}
         </p>
       </div>
 
       <hr class="divider" />
 
       <div class="foot-action">
-        <p class="name-card-lets-share">
-          {{ t("namecard.letsShare") }}
+        <p class="name-badge-lets-share">
+          {{ t("nameBadge.letsShare") }}
         </p>
         <VFButton outlined @click="copyUrl()">
           {{ t("copyLink") }}
         </VFButton>
         <!-- TODO: sns -->
 
-        <p class="name-card-join-event">
-          {{ t("namecard.joinEvent") }}
+        <p class="name-badge-join-event">
+          {{ t("nameBadge.joinEvent") }}
         </p>
         <VFButton :link="localeRoute('/')">
           {{ t("siteName") }}
@@ -118,8 +118,8 @@ function copyUrl() {
     }
   }
 
-  .namecard-section {
-    .namecard-preview-area {
+  .name-badge-section {
+    .name-badge-preview-area {
       display: flex;
       justify-content: center;
       width: 100%;
@@ -135,7 +135,7 @@ function copyUrl() {
       align-items: center;
       row-gap: 1rem;
 
-      .name-card-status {
+      .name-badge-status {
         margin-top: 2rem;
         color: var(--color-place-holder);
         @media (--mobile) {
@@ -143,7 +143,7 @@ function copyUrl() {
         }
       }
 
-      .name-card-deadline {
+      .name-badge-deadline {
         color: var(--color-text-secondary);
         text-align: center;
         margin-top: 1rem;
@@ -173,7 +173,7 @@ function copyUrl() {
         margin: 0;
       }
 
-      .name-card-join-event {
+      .name-badge-join-event {
         margin-top: 2rem;
 
         @media (--mobile) {

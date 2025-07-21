@@ -23,7 +23,7 @@ const { t } = useI18n();
 useSeoMeta({ title: "" });
 
 let SectionGetYourTicket: typeof import("./_components/SectionGetYourTicket.vue").default | null = null;
-if (__FEATURE_TICKET_NAMECARD__) {
+if (__FEATURE_TICKET_NAME_BADGE__) {
   SectionGetYourTicket = defineAsyncComponent(() => import("./_components/SectionGetYourTicket.vue"));
 }
 </script>

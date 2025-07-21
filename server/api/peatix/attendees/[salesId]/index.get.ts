@@ -3,8 +3,8 @@ import { usePeatixApi } from "../../../../peatix-api/usePeatixApi";
 import { useRuntimeConfig } from "#imports";
 
 export default defineEventHandler(async (event) => {
-  const { __FEATURE_TICKET_NAMECARD__ } = useRuntimeConfig();
-  if (!__FEATURE_TICKET_NAMECARD__) return;
+  const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
+  if (!__FEATURE_TICKET_NAME_BADGE__) return;
 
   const { peatixEventId } = useRuntimeConfig();
 

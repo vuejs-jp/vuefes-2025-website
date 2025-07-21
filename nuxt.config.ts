@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     // for server
     __FEATURE_TIMETABLE__: !["0", undefined].includes(process.env.FEATURE_TIMETABLE), // ?
     __FEATURE_EVENT__: !["0", undefined].includes(process.env.FEATURE_EVENT), // ?
-    __FEATURE_TICKET_NAMECARD__: !["0", undefined].includes(process.env.FEATURE_TICKET_NAMECARD), //  2025-08-xx ~
+    __FEATURE_TICKET_NAME_BADGE__: !["0", undefined].includes(process.env.FEATURE_TICKET_NAME_BADGE), //  2025-08-xx ~
     __FEATURE_SPONSOR_LIST__: !["0", undefined].includes(process.env.FEATURE_SPONSOR_LIST), // ?
 
     public: {
@@ -75,7 +75,7 @@ export default defineNuxtConfig({
     define: {
       __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
       __FEATURE_EVENT__: process.env.FEATURE_EVENT || false, // ?
-      __FEATURE_TICKET_NAMECARD__: process.env.FEATURE_TICKET_NAMECARD || false, //  2025-08-xx ~
+      __FEATURE_TICKET_NAME_BADGE__: process.env.FEATURE_TICKET_NAME_BADGE || false, //  2025-08-xx ~
       __FEATURE_SPONSOR_LIST__: process.env.FEATURE_SPONSOR_LIST || false, // ?
     },
     css: {

@@ -17,9 +17,9 @@ The conference handles the following personal information of Users:
   - Email address entered on the application form such as sponsors, CFP and ticket purchases
 - Name
   - Name entered on the application form such as sponsors, CFP and ticket purchases
-  - Name entered when creating a name card
+  - Name entered when creating a name badge
 - Avatar image
-  - Avatar image uploaded when creating a name card
+  - Avatar image uploaded when creating a name badge
 - Others
   - Occupation, age and years of work experience entered when purchasing tickets
 

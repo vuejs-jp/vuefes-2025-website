@@ -5,11 +5,11 @@ import { definePageMeta, navigateTo, ref, useAuth, useBreakpoint, useFetch, useI
 
 import type { FormSubmitEvent } from "~/components/form/VFForm.vue";
 import type { VFFile } from "~/components/form/VFFileInput.vue";
-import { VFFileInput, VFForm, VFNamecardPreview, VFSection, VFToast } from "#components";
+import { VFFileInput, VFForm, VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
 
 definePageMeta({
-  middleware: () => __FEATURE_TICKET_NAMECARD__ || navigateTo("/"),
+  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
 });
 
 const { data: user } = useAuth();
@@ -18,7 +18,7 @@ const toast = useToast();
 const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();
 
-const { data: nameCardData } = useFetch("/api/namecard");
+const { data: nameBadgeData } = useFetch("/api/name-badge");
 
 const sizeInMB = (sizeInBytes: number, decimalsNum = 2) => {
   const result = sizeInBytes / (1024 * 1024);
@@ -26,17 +26,17 @@ const sizeInMB = (sizeInBytes: number, decimalsNum = 2) => {
 };
 
 const schema = z.object({
-  name: z.string().min(1, t("namecard.form.name.error.required")),
-  salesId: z.string().min(1, t("namecard.form.receipt.error.required")),
+  name: z.string().min(1, t("nameBadge.form.name.error.required")),
+  salesId: z.string().min(1, t("nameBadge.form.receipt.error.required")),
   avatarImage: z
     .custom<VFFile>()
-    .refine(file => !!file, { message: t("namecard.form.avatarImage.error.required") })
+    .refine(file => !!file, { message: t("nameBadge.form.avatarImage.error.required") })
     .refine(async (file) => {
       const { size } = await fetch(file.objectURL).then(r => r.blob());
       return sizeInMB(size) <= 5;
-    }, { message: t("namecard.form.avatarImage.error.size") })
+    }, { message: t("nameBadge.form.avatarImage.error.size") })
     .refine(file => ["image/jpg", "image/jpeg", "image/png"].includes(file.type), {
-      message: t("namecard.form.avatarImage.error.type"),
+      message: t("nameBadge.form.avatarImage.error.type"),
     }),
 });
 
@@ -45,7 +45,7 @@ const state = ref<Partial<z.infer<typeof schema>>>({
   salesId: "",
   avatarImage: undefined,
 });
-watch(nameCardData, async (data) => {
+watch(nameBadgeData, async (data) => {
   if (data) {
     state.value.name = data?.name || "";
     state.value.salesId = data?.salesId || "";
@@ -64,7 +64,7 @@ watch(nameCardData, async (data) => {
 
 async function submit(event: FormSubmitEvent) {
   if (!user.value) {
-    toast.open({ type: "alert", message: t("namecard.form.submitResult.error") });
+    toast.open({ type: "alert", message: t("nameBadge.form.submitResult.error") });
     return;
   }
 
@@ -80,13 +80,13 @@ async function submit(event: FormSubmitEvent) {
       }
 
       // ident by session
-      await $fetch(`/api/namecard/`, { method: "POST", body: formData });
-      toast.open({ type: "success", message: t("namecard.form.submitResult.success") });
+      await $fetch(`/api/name-badge/`, { method: "POST", body: formData });
+      toast.open({ type: "success", message: t("nameBadge.form.submitResult.success") });
       await navigateTo(`/ticket/${user.value.userId}`);
     }
     catch (error) {
       console.error(error);
-      toast.open({ type: "alert", message: t("namecard.form.submitResult.error") });
+      toast.open({ type: "alert", message: t("nameBadge.form.submitResult.error") });
     }
   }
 }
@@ -97,14 +97,14 @@ async function submit(event: FormSubmitEvent) {
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Ticket</h1>
 
-    <VFSection :title="nameCardData ? t('namecard.edit') : t('namecard.create')" class="namecard-section">
-      <div class="namecard-preview-area">
-        <VFNamecardPreview
+    <VFSection :title="nameBadgeData ? t('nameBadge.edit') : t('nameBadge.create')" class="name-badge-section">
+      <div class="name-badge-preview-area">
+        <VFNameBadgePreview
           :user-role="
             // TODO:
             'Attendee'
           "
-          :name="state.name || t('namecard.form.name.label')"
+          :name="state.name || t('nameBadge.form.name.label')"
           :avatar-image-url="state.avatarImage?.objectURL"
           v-bind="
             bp =='mobile'
@@ -125,33 +125,33 @@ async function submit(event: FormSubmitEvent) {
       <VFForm
         :state
         :schema
-        class="namecard-form"
+        class="name-badge-form"
         @submit="submit"
       >
         <template #default="$form">
           <VFInput
             name="name"
             required
-            :label="t('namecard.form.name.label')"
-            :placeholder="t('namecard.form.name.placeholder')"
+            :label="t('nameBadge.form.name.label')"
+            :placeholder="t('nameBadge.form.name.placeholder')"
             :form-state="$form.name"
           />
           <VFFileInput
             name="avatarImage"
-            :label="t('namecard.form.avatarImage.label')"
-            :placeholder="t('namecard.form.avatarImage.placeholder')"
-            :description="t('namecard.form.avatarImage.description')"
+            :label="t('nameBadge.form.avatarImage.label')"
+            :placeholder="t('nameBadge.form.avatarImage.placeholder')"
+            :description="t('nameBadge.form.avatarImage.description')"
             :form-state="$form.avatarImage"
           />
           <VFInput
             name="salesId"
             required
-            :label="t('namecard.form.receipt.label')"
-            :description="t('namecard.form.receipt.description')"
+            :label="t('nameBadge.form.receipt.label')"
+            :description="t('nameBadge.form.receipt.description')"
             :form-state="$form.salesId"
           />
 
-          <div class="namecard-form-actions">
+          <div class="name-badge-form-actions">
             <VFButton
               outlined
               :link="localeRoute({
@@ -159,7 +159,7 @@ async function submit(event: FormSubmitEvent) {
                 params: { userId: user!.userId },
               })"
             >
-              {{ t("namecard.form.cancel") }}
+              {{ t("nameBadge.form.cancel") }}
             </VFButton>
             <VFButton
               type="submit"
@@ -170,7 +170,7 @@ async function submit(event: FormSubmitEvent) {
                   || !$form.salesId?.valid
               "
             >
-              {{ t("namecard.form.save") }}
+              {{ t("nameBadge.form.save") }}
             </VFButton>
           </div>
         </template>
@@ -203,8 +203,8 @@ async function submit(event: FormSubmitEvent) {
     }
   }
 
-  .namecard-section {
-    .namecard-preview-area {
+  .name-badge-section {
+    .name-badge-preview-area {
       display: flex;
       justify-content: center;
       width: 100%;
@@ -214,11 +214,11 @@ async function submit(event: FormSubmitEvent) {
       }
     }
 
-    .namecard-form {
+    .name-badge-form {
       display: grid;
       row-gap: 1.5rem;
 
-      .namecard-form-actions {
+      .name-badge-form-actions {
         display: flex;
         column-gap: 1rem;
         justify-content: center;

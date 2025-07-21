@@ -58,25 +58,25 @@ ticket:
     about: "Individual Sponsor section"
   buy: "Buy Tickets"
 
-namecard:
-  title: "Namecard"
+nameBadge:
+  title: "Name Badge"
   description: "After purchasing your {ticketName} and registering the required information, you will receive a name badge featuring your avatar and name at the venue on the day! (Social login required)"
   ticketName: "Vue Fes Japan 2025 ticket"
   # TODO: https://github.com/vuejs-jp/vuefes-2025/issues/695
-  deadlineDescription: "Namecard editing deadline: September **, 2025 (**) at 23:59"
+  deadlineDescription: "Name badge editing deadline: September **, 2025 (**) at 23:59"
   attention: "* Name badge creation is optional."
-  coverImageAlt: "Namecard image"
-  confirm: "Check My Namecard"
-  create: "Create Namecard"
-  edit: "Edit Namecard"
+  coverImageAlt: "Name badge image"
+  confirm: "Check My Name Badge"
+  create: "Create Name Badge"
+  edit: "Edit Name Badge"
   status:
     label: "Status"
     notCreated: "Not Created"
     created: "Created"
-  letsShare: "Let's Share A Namecard!"
+  letsShare: "Let's Share A Name Badge!"
   joinEvent: "Join Vue Fes Japan!"
-  namecardDefaultImageAlt: "Namecard image"
-  namecardImageAlt: "{username}'s namecard image"
+  nameBadgeDefaultImageAlt: "Name badge image"
+  nameBadgeImageAlt: "{username}'s Name badge image"
   form:
     cancel: "Cancel"
     save: "Save"
@@ -100,8 +100,8 @@ namecard:
       error:
         required: "Order number is required."
     submitResult:
-      success: "Name card saved successfully."
-      error: "Failed to save name card. Please try again."
+      success: "Name badge saved successfully."
+      error: "Failed to save name badge. Please try again."
 login:
   withGoogle: "Log in with Google"
   withGitHub: "Log in with GitHub"

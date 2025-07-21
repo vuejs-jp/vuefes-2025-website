@@ -4,8 +4,8 @@ import { defineEventHandler } from "h3";
 import { useRuntimeConfig } from "#imports";
 
 export default defineEventHandler(async () => {
-  const { __FEATURE_TICKET_NAMECARD__ } = useRuntimeConfig();
-  if (!__FEATURE_TICKET_NAMECARD__) return;
+  const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
+  if (!__FEATURE_TICKET_NAME_BADGE__) return;
 
   const S3 = new S3Client({
     region: "auto",

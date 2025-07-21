@@ -5,8 +5,8 @@ import {
   VFSection,
   EnTicketUsageInstructions,
   JaTicketUsageInstructions,
-  EnNamecardFlowAndAttentions,
-  JaNamecardFlowAndAttentions,
+  EnNameBadgeFlowAndAttentions,
+  JaNameBadgeFlowAndAttentions,
   EnIndividualSponsor,
   JaIndividualSponsor,
   EnHandsOnTicket,
@@ -14,7 +14,7 @@ import {
 } from "#components";
 
 definePageMeta({
-  middleware: () => __FEATURE_TICKET_NAMECARD__ || navigateTo("/"),
+  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
 });
 
 const { signIn, status, data } = useAuth();
@@ -35,45 +35,45 @@ const localeRoute = useLocaleRoute();
 
       <section class="general-tickets">
         <ul class="general-ticket-list">
-          <li class="ticket-card">
-            <span class="ticket-card-title" :class="locale">{{ t('ticket.generalTicket.title') }}</span>
+          <li class="ticket-badge">
+            <span class="ticket-badge-title" :class="locale">{{ t('ticket.generalTicket.title') }}</span>
 
-            <div class="ticket-card-prices">
-              <span class="ticket-card-price">
+            <div class="ticket-badge-prices">
+              <span class="ticket-badge-price">
                 <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-card-price-type">({{ t('ticket.early') }})</span>
-                <span class="ticket-card-price-value">
-                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.earlyPrice'))).toLocaleString() }}
+                <span class="ticket-badge-price-type">({{ t('ticket.early') }})</span>
+                <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.earlyPrice'))).toLocaleString() }}
                 </span>
               </span>
 
-              <span class="ticket-card-price">
+              <span class="ticket-badge-price">
                 <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-card-price-type">({{ t('ticket.standard') }})</span>
-                <span class="ticket-card-price-value">
-                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.standardPrice'))).toLocaleString() }}
+                <span class="ticket-badge-price-type">({{ t('ticket.standard') }})</span>
+                <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.standardPrice'))).toLocaleString() }}
                 </span>
               </span>
             </div>
           </li>
 
-          <li class="ticket-card">
-            <span class="ticket-card-title" :class="locale">{{ t('ticket.afterPartyTicket.title') }}</span>
+          <li class="ticket-badge">
+            <span class="ticket-badge-title" :class="locale">{{ t('ticket.afterPartyTicket.title') }}</span>
 
-            <div class="ticket-card-prices">
-              <span class="ticket-card-price">
+            <div class="ticket-badge-prices">
+              <span class="ticket-badge-price">
                 <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-card-price-type">({{ t('ticket.early') }})</span>
-                <span class="ticket-card-price-value">
-                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.earlyPrice'))).toLocaleString() }}
+                <span class="ticket-badge-price-type">({{ t('ticket.early') }})</span>
+                <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.earlyPrice'))).toLocaleString() }}
                 </span>
               </span>
 
-              <span class="ticket-card-price">
+              <span class="ticket-badge-price">
                 <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-card-price-type">({{ t('ticket.standard') }})</span>
-                <span class="ticket-card-price-value">
-                  <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.standardPrice'))).toLocaleString() }}
+                <span class="ticket-badge-price-type">({{ t('ticket.standard') }})</span>
+                <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.standardPrice'))).toLocaleString() }}
                 </span>
               </span>
             </div>
@@ -86,12 +86,12 @@ const localeRoute = useLocaleRoute();
 
         <ul class="option-ticket-list">
           <li>
-            <div class="ticket-card">
-              <span class="ticket-card-title" :class="locale">{{ t('ticket.handsOn.title') }}</span>
-              <div class="ticket-card-prices">
-                <span class="ticket-card-price">
-                  <span class="ticket-card-price-value">
-                    <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.handsOn.price'))).toLocaleString() }}
+            <div class="ticket-badge">
+              <span class="ticket-badge-title" :class="locale">{{ t('ticket.handsOn.title') }}</span>
+              <div class="ticket-badge-prices">
+                <span class="ticket-badge-price">
+                  <span class="ticket-badge-price-value">
+                    <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.handsOn.price'))).toLocaleString() }}
                   </span>
                 </span>
               </div>
@@ -109,12 +109,12 @@ const localeRoute = useLocaleRoute();
           </li>
 
           <li>
-            <div class="ticket-card">
-              <span class="ticket-card-title" :class="locale">{{ t('ticket.individual.sponsor') }}</span>
-              <div class="ticket-card-prices">
-                <span class="ticket-card-price">
-                  <span class="ticket-card-price-value">
-                    <span class="ticket-card-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.individual.price'))).toLocaleString() }}
+            <div class="ticket-badge">
+              <span class="ticket-badge-title" :class="locale">{{ t('ticket.individual.sponsor') }}</span>
+              <div class="ticket-badge-prices">
+                <span class="ticket-badge-price">
+                  <span class="ticket-badge-price-value">
+                    <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.individual.price'))).toLocaleString() }}
                   </span>
                 </span>
               </div>
@@ -147,28 +147,28 @@ const localeRoute = useLocaleRoute();
       />
     </VFSection>
 
-    <VFSection id="namecard" :title="t('namecard.title')" class="namecard">
+    <VFSection id="name-badge" :title="t('nameBadge.title')" class="name-badge">
       <div class="cover-image-wrapper">
-        <img src="/images/ticket/namecard-cover.png" :alt="t('namecard.coverImageAlt')" />
+        <img src="/images/ticket/name-badge-cover.png" :alt="t('nameBadge.coverImageAlt')" />
       </div>
 
-      <i18n-t keypath="namecard.description" tag="p" class="namecard-description">
+      <i18n-t keypath="nameBadge.description" tag="p" class="name-badge-description">
         <template #ticketName>
           <a href="https://vuefes2025.peatix.com/view" target="_blank">
-            {{ t('namecard.ticketName') }}
+            {{ t('nameBadge.ticketName') }}
           </a>
         </template>
       </i18n-t>
-      <p class="namecard-description">
-        {{ t('namecard.deadlineDescription') }}
+      <p class="name-badge-description">
+        {{ t('nameBadge.deadlineDescription') }}
       </p>
-      <p class="namecard-attention">
-        {{ t('namecard.attention') }}
+      <p class="name-badge-attention">
+        {{ t('nameBadge.attention') }}
       </p>
 
       <div v-if="status === 'authenticated'" class="login-buttons">
         <VFButton v-if="data" :link="localeRoute({ name: 'ticket-userId', params: { userId: data.userId } })">
-          {{ t('namecard.confirm') }}
+          {{ t('nameBadge.confirm') }}
         </VFButton>
       </div>
 
@@ -184,8 +184,8 @@ const localeRoute = useLocaleRoute();
       <hr class="divider" />
 
       <component
-        :is="locale === 'ja' ? JaNamecardFlowAndAttentions : EnNamecardFlowAndAttentions"
-        class="namecard-flow-and-attentions"
+        :is="locale === 'ja' ? JaNameBadgeFlowAndAttentions : EnNameBadgeFlowAndAttentions"
+        class="name-badge-flow-and-attentions"
       />
     </VFSection>
 
@@ -242,7 +242,7 @@ const localeRoute = useLocaleRoute();
       }
     }
 
-    .ticket-card {
+    .ticket-badge {
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -257,7 +257,7 @@ const localeRoute = useLocaleRoute();
         display: block;
       }
 
-      .ticket-card-title {
+      .ticket-badge-title {
         display: block;
 
         &.en {
@@ -269,7 +269,7 @@ const localeRoute = useLocaleRoute();
         }
       }
 
-      .ticket-card-prices {
+      .ticket-badge-prices {
         display: flex;
         gap: 2rem;
 
@@ -278,19 +278,19 @@ const localeRoute = useLocaleRoute();
           flex-direction: column;
         }
 
-        .ticket-card-price {
+        .ticket-badge-price {
           display: flex;
 
-          .ticket-card-price-type {
+          .ticket-badge-price-type {
             display: block;
             text-align: center;
             margin-right: 0.5rem;
           }
 
-          .ticket-card-price-value {
+          .ticket-badge-price-value {
             font-size: 1.75rem;
 
-            .ticket-card-price-unit {
+            .ticket-badge-price-unit {
               font-size: 1.75rem;
 
               &.en {
@@ -343,7 +343,7 @@ const localeRoute = useLocaleRoute();
     }
   }
 
-  .namecard {
+  .name-badge {
     .cover-image-wrapper {
       display: flex;
       justify-content: center;
@@ -373,7 +373,7 @@ const localeRoute = useLocaleRoute();
       }
     }
 
-    .namecard-attention {
+    .name-badge-attention {
       font-size: 14px;
       line-height: 21px;
       margin: 2rem 0;
@@ -412,7 +412,7 @@ const localeRoute = useLocaleRoute();
       }
     }
 
-    .namecard-flow-and-attentions {
+    .name-badge-flow-and-attentions {
       :deep(ol) {
         list-style-type: decimal;
         padding-left: 1.5rem;

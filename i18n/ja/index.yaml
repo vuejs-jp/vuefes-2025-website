@@ -58,7 +58,7 @@ ticket:
     about: "個人スポンサーについて"
   buy: "チケットを購入する"
 
-namecard:
+nameBadge:
   title: "ネームカード"
   description: "{ticketName}をご購入後、必要な情報をご登録いただくと、当日会場にてご自身のアバター＋名前入りのネームカードがもらえます！（要ソーシャルログイン）"
   ticketName: "Vue Fes Japan 2025 のチケット"
@@ -75,8 +75,8 @@ namecard:
     created: "作成済み"
   letsShare: "ネームカードをシェアしよう！"
   joinEvent: "あなたも Vue Fes Japan に参加しませんか？"
-  namecardDefaultImageAlt: "ネームカードイメージ画像"
-  namecardImageAlt: "{username}さんのネームカードイメージ画像"
+  nameBadgeDefaultImageAlt: "ネームカードイメージ画像"
+  nameBadgeImageAlt: "{username}さんのネームカードイメージ画像"
   form:
     cancel: "キャンセル"
     save: "保存する"

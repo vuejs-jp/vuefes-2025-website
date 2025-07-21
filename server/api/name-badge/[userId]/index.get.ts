@@ -9,8 +9,8 @@ import { attendees } from "../../../db/schema";
 import { createError, useRuntimeConfig } from "#imports";
 
 export default defineEventHandler(async (event) => {
-  const { __FEATURE_TICKET_NAMECARD__ } = useRuntimeConfig();
-  if (!__FEATURE_TICKET_NAMECARD__) return;
+  const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
+  if (!__FEATURE_TICKET_NAME_BADGE__) return;
 
   const userId = getRouterParam(event, "userId");
 
@@ -19,11 +19,11 @@ export default defineEventHandler(async (event) => {
   // WARNING: Must be respond only public data
 
   // image registration
-  const nameCardData = await db.select().from(attendees).where(eq(attendees.userId, String(userId))).get();
+  const nameBadgeData = await db.select().from(attendees).where(eq(attendees.userId, String(userId))).get();
 
-  if (!nameCardData) {
+  if (!nameBadgeData) {
     throw createError({
-      message: "Namecard not found",
+      message: "Name Badge not found",
       statusCode: 404,
     });
   }
@@ -38,13 +38,13 @@ export default defineEventHandler(async (event) => {
   });
 
   return {
-    name: nameCardData.displayName,
-    role: nameCardData.role,
+    name: nameBadgeData.displayName,
+    role: nameBadgeData.role,
     avatarUrl: await getSignedUrl(
       S3,
       new GetObjectCommand({
         Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
-        Key: new URL(nameCardData.avatarUrl ?? "").pathname.split("/").pop() ?? undefined,
+        Key: new URL(nameBadgeData.avatarUrl ?? "").pathname.split("/").pop() ?? undefined,
       }),
       { expiresIn: 3600 },
     ),

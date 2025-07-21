@@ -28,8 +28,8 @@ const fontColor = computed(() => {
 });
 
 onMounted(() => {
-  const previewRoot = document.querySelector(".namecard-preview");
-  const cardWrapper = document.querySelector(".base-namecard-wrapper") as HTMLElement;
+  const previewRoot = document.querySelector(".name-badge-preview");
+  const cardWrapper = document.querySelector(".base-name-badge-wrapper") as HTMLElement;
   const backface = cardWrapper.querySelector(".card-face-back") as HTMLElement;
   let rotationDegree = 0;
 
@@ -104,12 +104,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="namecard-preview">
-    <div class="base-namecard-wrapper" :style="{ width, height, aspectRatio }">
+  <div class="name-badge-preview">
+    <div class="base-name-badge-wrapper" :style="{ width, height, aspectRatio }">
       <img
-        src="/images/namecard/default.png"
-        alt="namecard"
-        class="base-namecard card-face card-face-front"
+        src="/images/name-badge/default.png"
+        alt="Name Badge Preview"
+        class="base-name-badge card-face card-face-front"
         :style="{ width, height, aspectRatio, backfaceVisibility: 'hidden' }"
       />
       <div class="card-face highlight" :style="{ width, height, aspectRatio }" />
@@ -118,7 +118,7 @@ onMounted(() => {
 
       <img v-if="avatarImageUrl" id="avatar-image" :src="avatarImageUrl" alt="avatar" />
 
-      <div id="namecard-name" :style="{ color: fontColor }">
+      <div id="name-badge-name" :style="{ color: fontColor }">
         {{ name }}
       </div>
     </div>
@@ -126,7 +126,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.namecard-preview {
+.name-badge-preview {
   position: relative;
   #avatar-image {
     position: absolute;
@@ -138,7 +138,7 @@ onMounted(() => {
     backface-visibility: hidden;
   }
 
-  #namecard-name {
+  #name-badge-name {
     position: absolute;
     top: 31.38%;
     left: 4.13%;
@@ -150,7 +150,7 @@ onMounted(() => {
   }
 }
 
-.base-namecard-wrapper {
+.base-name-badge-wrapper {
   transform-style: preserve-3d;
   perspective: 1000px;
   --rotation: 0deg;
