@@ -145,7 +145,7 @@ onMounted(() => {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    font-family: JetBrainsMono, IBMPlexSansJP;
+    font-family: JetBrainsMono-Regular, IBMPlexSansJP-Regular;
     backface-visibility: hidden;
   }
 }
