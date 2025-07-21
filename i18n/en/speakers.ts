@@ -49,6 +49,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Baku Hashimoto",
+    title: "Experimental Filmmaker",
     avatarUrl: "/images/avatars/baku-hashimoto.png",
     attendedIndex: 7,
     socialUrls: {
