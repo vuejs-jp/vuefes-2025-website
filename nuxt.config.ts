@@ -145,7 +145,7 @@ export default defineNuxtConfig({
 
   auth: {
     disableServerSideAuth: false,
-    baseURL: process.env.NODE_ENV === "production" ? `${process.env.AUTH_ORIGIN}/2025/` : `http://localhost:3000/`,
+    baseURL: process.env.NODE_ENV === "production" ? `${process.env.AUTH_ORIGIN}/2025/api/auth` : `http://localhost:${process.env.PORT || 3000}/api/auth`,
     provider: {
       type: "authjs",
       addDefaultCallbackUrl: true,
