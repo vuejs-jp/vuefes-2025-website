@@ -134,14 +134,7 @@ const localeRoute = useLocaleRoute();
       </section>
 
       <div class="buy-ticket-button-wrapper">
-        <VFButton
-          class="buy-ticket-button"
-          :link="
-            // TODO: https://github.com/vuejs-jp/vuefes-2025/issues/693
-            '/'
-          "
-          external
-        >
+        <VFButton class="buy-ticket-button" link="https://vuefes2025.peatix.com/view" external>
           {{ t('ticket.buy') }}
         </VFButton>
       </div>
@@ -161,12 +154,7 @@ const localeRoute = useLocaleRoute();
 
       <i18n-t keypath="namecard.description" tag="p" class="namecard-description">
         <template #ticketName>
-          <a
-            :href="
-              // TODO: https://github.com/vuejs-jp/vuefes-2025/issues/693
-              '/'
-            "
-          >
+          <a href="https://vuefes2025.peatix.com/view" target="_blank">
             {{ t('namecard.ticketName') }}
           </a>
         </template>
