@@ -63,6 +63,36 @@ namecard:
   attention: "※ネームカード作成は必須ではありません。"
   coverImageAlt: "ネームカードイメージ画像"
   confirm: 自分のネームカードを確認する
+  create: "ネームカード作成"
+  edit: "ネームカード編集"
+  namecardDefaultImageAlt: "ネームカードイメージ画像"
+  namecardImageAlt: "{username}さんのネームカードイメージ画像"
+  form:
+    cancel: "キャンセル"
+    save: "保存する"
+    name:
+      label: "お名前"
+      placeholder: "入力例：山田太郎"
+      description: "※全角**文字（半角**文字）まで。"
+      error:
+        required: "お名前は必須です"
+    avatarImage:
+      label: "アバター"
+      placeholder: "ファイルを選択"
+      description: "※.jpgもしくは.pngのみ可能です。5MB以下の画像を選択してください。"
+      error:
+        required: "アバター画像は必須です"
+        type: ".jpgもしくは.pngのみ可能です"
+        size: "ファイルサイズは最大5MBです"
+    receipt:
+      label: 注文番号
+      description: ※注文番号は、チケット購入時にPeatixから送信されるメール内に含まれる領収データから確認できます。
+      error:
+        required: "注文番号は必須です"
+    submitResult:
+      success: "ネームカードを保存しました。"
+      error: "ネームカードの保存に失敗しました。もう一度お試しください。"
+
 
 login:
   withGoogle: "Googleでログイン"

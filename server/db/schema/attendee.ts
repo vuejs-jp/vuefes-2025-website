@@ -2,8 +2,7 @@ import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
 import { users } from "./auth";
 
 export const attendees = sqliteTable("attendee", {
-  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-  userId: text("user_id").references(() => users.id, { onDelete: "cascade" }).notNull(),
+  userId: text("user_id").primaryKey().references(() => users.id, { onDelete: "cascade" }).notNull(),
   email: text("email").notNull(),
   avatarUrl: text("avatar_url"),
   imageFileName: text("image_file_name"),

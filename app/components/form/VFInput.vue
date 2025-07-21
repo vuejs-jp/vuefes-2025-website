@@ -8,6 +8,7 @@ import { useI18n } from "#imports";
 
 defineProps<{
   formState?: FormFieldState;
+  description?: string;
 }>();
 
 const id = useId();
@@ -27,6 +28,9 @@ const { locale: lang } = useI18n();
         invalid: formState?.invalid,
       }"
     />
+    <p v-if="description" class="description text-caption">
+      {{ description }}
+    </p>
     <p
       v-if="formState?.invalid"
       :id="descriptionId"
@@ -87,6 +91,11 @@ label {
     font-family: JetBrainsMono-Bold;
   }
 }
+
+.description {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
 
 .error-message {
   color: var(--color-alert);

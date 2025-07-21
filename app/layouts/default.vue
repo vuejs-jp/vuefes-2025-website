@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
-import { useLocaleRoute } from "@typed-router";
+import { useLocaleRoute, type RoutesNamesList } from "@typed-router";
 import { computed, nextTick, useBreakpoint, useRoute, watch, useI18n, type Breakpoint } from "#imports";
 import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu, VFCta, VFSpCta, JaCtaVolunteer, EnCtaVolunteer } from "#components";
 import { useAnimationStore } from "~/stores/animation";
@@ -69,11 +69,18 @@ const isShowedSpCta = computed(() => {
   return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
 });
 
+const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
+  "speaker",
+  "ticket",
+  "ticket-userId",
+  "ticket-userId-edit",
+];
+
 const isWidenContent = computed(() =>
-  ([
-    localeRoute({ name: "speaker" })?.name,
-    localeRoute({ name: "ticket" })?.name,
-  ] as string[]).includes(route.name?.toString() ?? ""),
+  WIDE_ROUTE_NAMES
+    .map(r => localeRoute(r as string)?.name as string | undefined)
+    .filter(it => !!it)
+    .includes(route.name?.toString() ?? ""),
 );
 
 // scroll behavior

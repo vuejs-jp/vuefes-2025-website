@@ -44,10 +44,10 @@ export default defineNuxtConfig({
     peatixEventId: process.env.PEATIX_EVENT_ID,
 
     // for server
-    __FEATURE_TIMETABLE__: ["0", undefined].includes(process.env.FEATURE_TIMETABLE), // ?
-    __FEATURE_EVENT__: ["0", undefined].includes(process.env.FEATURE_EVENT), // ?
-    __FEATURE_TICKET_NAMECARD__: ["0", undefined].includes(process.env.FEATURE_TICKET_NAMECARD), //  2025-08-xx ~
-    __FEATURE_SPONSOR_LIST__: ["0", undefined].includes(process.env.FEATURE_SPONSOR_LIST), // ?
+    __FEATURE_TIMETABLE__: !["0", undefined].includes(process.env.FEATURE_TIMETABLE), // ?
+    __FEATURE_EVENT__: !["0", undefined].includes(process.env.FEATURE_EVENT), // ?
+    __FEATURE_TICKET_NAMECARD__: !["0", undefined].includes(process.env.FEATURE_TICKET_NAMECARD), //  2025-08-xx ~
+    __FEATURE_SPONSOR_LIST__: !["0", undefined].includes(process.env.FEATURE_SPONSOR_LIST), // ?
 
     public: {
       contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",

@@ -63,7 +63,35 @@ namecard:
   attention: "* Name badge creation is optional."
   coverImageAlt: "Namecard image"
   confirm: "Check My Namecard"
-
+  create: "Create Namecard"
+  edit: "Edit Namecard"
+  namecardDefaultImageAlt: "Namecard image"
+  namecardImageAlt: "{username}'s namecard image"
+  form:
+    cancel: "Cancel"
+    save: "Save"
+    name:
+      label: "Name"
+      placeholder: "Example: Taro Yamada"
+      description: "※ Full-width ** characters (half-width ** characters) are allowed."
+      error:
+        required: "Name is required."
+    avatarImage:
+      label: "Avatar"
+      placeholder: "Select File"
+      description: "※ Only .jpg or .png files are allowed. Please select an image under 5MB."
+      error:
+        required: "Avatar image is required."
+        type: "Only .jpg or .png files are allowed."
+        size: "File size must be under 5MB."
+    receipt:
+      label: "Order Number"
+      description: "※ The order number can be found in the receipt data sent via email from Peatix at the time of ticket purchase."
+      error:
+        required: "Order number is required."
+    submitResult:
+      success: "Name card saved successfully."
+      error: "Failed to save name card. Please try again."
 login:
   withGoogle: "Log in with Google"
   withGitHub: "Log in with GitHub"
