@@ -86,6 +86,8 @@ nameBadge:
       description: "※ Full-width ** characters (half-width ** characters) are allowed."
       error:
         required: "Name is required."
+        tooLong: "Name must be 12 full-width characters (24 half-width characters) or less."
+        emoji: "Emojis are not allowed."
     avatarImage:
       label: "Avatar"
       placeholder: "Select File"

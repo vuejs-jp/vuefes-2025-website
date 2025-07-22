@@ -92,6 +92,9 @@ importers:
       drizzle-orm:
         specifier: ^0.44.2
         version: 0.44.2(better-sqlite3@11.9.1)
+      emoji-regex:
+        specifier: ^10.4.0
+        version: 10.4.0
       eslint:
         specifier: ^9.24.0
         version: 9.24.0(jiti@2.4.2)
