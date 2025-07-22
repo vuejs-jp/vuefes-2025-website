@@ -11,6 +11,8 @@ import {
   JaIndividualSponsor,
   EnHandsOnTicket,
   JaHandsOnTicket,
+  EnFaq,
+  JaFaq,
 } from "#components";
 
 definePageMeta({
@@ -195,6 +197,10 @@ const localeRoute = useLocaleRoute();
 
     <VFSection id="hands-on" :title="t('handsOn.title')" class="hands-on">
       <component :is="locale === 'ja' ? JaHandsOnTicket : EnHandsOnTicket" />
+    </VFSection>
+
+    <VFSection id="faq" :title="t('faq.title')" class="faq">
+      <component :is="locale === 'ja' ? JaFaq : EnFaq" />
     </VFSection>
   </div>
 </template>
