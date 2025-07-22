@@ -26,6 +26,7 @@ messageCoverImageAlt: Vue Fes Japan 2025 ロゴ
 
 ticket:
   title: "チケット"
+  details: "チケット詳細"
   coverImageAlt: "チケット販売"
   viewTicketDetails: "チケットの詳細を見る"
   type: "チケット種別"

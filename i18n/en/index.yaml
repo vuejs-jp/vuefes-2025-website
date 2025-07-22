@@ -26,6 +26,7 @@ messageCoverImageAlt: Vue Fes Japan 2025 logo
 
 ticket:
   title: "Ticket"
+  details: "Details"
   coverImageAlt: "Get Your Ticket!"
   viewTicketDetails: "View Ticket Details"
   type: "Ticket Type"
