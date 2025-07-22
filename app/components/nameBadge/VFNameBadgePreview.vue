@@ -17,13 +17,18 @@ const {
   aspectRatio?: string;
 }>();
 
-const fontColor = computed(() => {
+const variants = computed(() => {
   switch (userRole) {
+    case "Attendee+Party":
+    case "Staff":
+      return { color: "#fae8e4", baseImageUrl: "/images/name-badge/party.png" };
+    case "Sponsor":
+      return { color: "#f66c21", baseImageUrl: "/images/name-badge/sponsor.png" };
+    case "Speaker":
+      return { color: "#8314d3", baseImageUrl: "/images/name-badge/speaker.png" };
     case "Attendee":
-      return "#007f62";
-    // TODO:
     default:
-      return "";
+      return { color: "#007f62", baseImageUrl: "/images/name-badge/default.png" };
   }
 });
 
@@ -107,7 +112,7 @@ onMounted(() => {
   <div class="name-badge-preview">
     <div class="base-name-badge-wrapper" :style="{ width, height, aspectRatio }">
       <img
-        src="/images/name-badge/default.png"
+        :src="variants.baseImageUrl"
         alt="Name Badge Preview"
         class="base-name-badge card-face card-face-front"
         :style="{ width, height, aspectRatio, backfaceVisibility: 'hidden' }"
@@ -118,7 +123,7 @@ onMounted(() => {
 
       <img v-if="avatarImageUrl" id="avatar-image" :src="avatarImageUrl" alt="avatar" />
 
-      <div id="name-badge-name" :style="{ color: fontColor }">
+      <div id="name-badge-name" :style="{ color: variants.color }">
         {{ name }}
       </div>
     </div>

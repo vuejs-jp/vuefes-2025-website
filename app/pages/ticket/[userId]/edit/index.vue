@@ -129,10 +129,7 @@ async function submit(event: FormSubmitEvent) {
     <VFSection :title="nameBadgeData ? t('nameBadge.edit') : t('nameBadge.create')" class="name-badge-section">
       <div class="name-badge-preview-area">
         <VFNameBadgePreview
-          :user-role="
-            // TODO:
-            'Attendee'
-          "
+          :user-role="nameBadgeData?.role || 'Attendee'"
           :name="state.name || t('nameBadge.form.name.label')"
           :avatar-image-url="state.avatarImage?.objectURL"
           v-bind="
