@@ -3,9 +3,9 @@ import { z } from "zod";
 import emojiRegex from "emoji-regex";
 
 import { useLocaleRoute } from "@typed-router";
-import { definePageMeta, navigateTo, ref, useAuth, useBreakpoint, useFetch, useI18n, watch } from "#imports";
+import { computed, definePageMeta, navigateTo, onMounted, ref, useAuth, useBreakpoint, useFetch, useI18n, useTemplateRef } from "#imports";
 
-import type { FormSubmitEvent } from "~/components/form/VFForm.vue";
+import type { FormFieldStates, FormSubmitEvent } from "~/components/form/VFForm.vue";
 import type { VFFile } from "~/components/form/VFFileInput.vue";
 import { VFFileInput, VFForm, VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
@@ -20,7 +20,7 @@ const toast = useToast();
 const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();
 
-const { data: nameBadgeData } = useFetch("/api/name-badge");
+const { data: nameBadgeData, refresh } = useFetch("/api/name-badge");
 
 const sizeInMB = (sizeInBytes: number, decimalsNum = 2) => {
   const result = sizeInBytes / (1024 * 1024);
@@ -69,27 +69,34 @@ const schema = z.object({
     ),
 });
 
-const state = ref<Partial<z.infer<typeof schema>>>({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const form = useTemplateRef<any>("form");
+const currentStates = computed(() => form.value?.currentState?.() as FormFieldStates<z.infer<typeof schema>> | undefined);
+const initialValues = ref<Partial<z.infer<typeof schema>>>({
   name: "",
   salesId: "",
   avatarImage: undefined,
 });
-watch(nameBadgeData, async (data) => {
-  if (data) {
-    state.value.name = data?.name || "";
-    state.value.salesId = data?.salesId || "";
 
-    if (data?.avatarUrl && data?.avatarImageFileName) {
+onMounted(async () => {
+  await refresh();
+
+  if (nameBadgeData.value) {
+    form.value?.setFieldValue("name", nameBadgeData.value.name ?? "");
+    form.value?.setFieldValue("salesId", nameBadgeData.value.salesId ?? "");
+
+    if (nameBadgeData.value?.avatarUrl && nameBadgeData.value?.avatarImageFileName) {
       // NOTE: need to configure cors
-      const avatarBlob = await fetch(data.avatarUrl).then(r => r.blob());
-      state.value.avatarImage = {
-        name: data.avatarImageFileName,
+      const avatarBlob = await fetch(nameBadgeData.value.avatarUrl).then(r => r.blob());
+      form.value?.setFieldValue("avatarImage", {
+        displayName: nameBadgeData.value.avatarImageFileName,
+        name: nameBadgeData.value.avatarImageFileName,
         type: avatarBlob.type,
         objectURL: URL.createObjectURL(avatarBlob),
-      };
+      } satisfies VFFile);
     }
   }
-}, { immediate: true });
+});
 
 async function submit(event: FormSubmitEvent) {
   if (!user.value) {
@@ -130,8 +137,8 @@ async function submit(event: FormSubmitEvent) {
       <div class="name-badge-preview-area">
         <VFNameBadgePreview
           :user-role="nameBadgeData?.role || 'Attendee'"
-          :name="state.name || t('nameBadge.form.name.label')"
-          :avatar-image-url="state.avatarImage?.objectURL"
+          :name="currentStates?.name?.value || t('nameBadge.form.name.label')"
+          :avatar-image-url="currentStates?.avatarImage?.value?.objectURL"
           v-bind="
             bp =='mobile'
               ? {
@@ -149,7 +156,8 @@ async function submit(event: FormSubmitEvent) {
       </div>
 
       <VFForm
-        :state
+        ref="form"
+        :initial-values
         :schema
         class="name-badge-form"
         @submit="submit"

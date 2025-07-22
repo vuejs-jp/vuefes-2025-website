@@ -2,15 +2,16 @@
 import type { FormFieldState } from "@primevue/forms";
 import { FormField } from "@primevue/forms";
 import FileUpload, { type FileUploadSelectEvent } from "primevue/fileupload";
-import { shallowRef, toRaw, useId } from "#imports";
+import { shallowRef, toRaw, useId, watch } from "#imports";
 
 export interface VFFile {
+  displayName: string;
   name: string;
   objectURL: string;
   type: string;
 }
 
-defineProps<{
+const { formState } = defineProps<{
   formState?: FormFieldState;
   name?: string;
   label?: string;
@@ -25,15 +26,25 @@ const file = shallowRef<VFFile | null>(null);
 
 function handleFileSelect(ev: FileUploadSelectEvent, formState: FormFieldState) {
   file.value = {
+    displayName: ev.files[0].name,
     name: ev.files[0].name,
     objectURL: ev.files[0].objectURL,
     type: ev.files[0].type,
   };
+
   if (formState) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (formState as any).onInput({ value: toRaw(file.value) });
   }
 }
+
+watch(() => formState, (v) => {
+  if (v?.value) {
+    file.value = v.value as VFFile;
+  } else {
+    file.value = null;
+  }
+}, { immediate: true, deep: true });
 </script>
 
 <template>
@@ -61,7 +72,7 @@ function handleFileSelect(ev: FileUploadSelectEvent, formState: FormFieldState) 
       >
         <template #chooseicon>
           <div class="input-box" tabindex="0">
-            <span v-if="file">{{ file.name }}</span>
+            <span v-if="file?.displayName">{{ file.displayName }}</span>
             <span v-else>{{ placeholder }}</span>
           </div>
         </template>

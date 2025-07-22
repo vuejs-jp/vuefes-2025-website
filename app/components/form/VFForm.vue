@@ -6,11 +6,12 @@ import {
   Form as PForm,
 } from "@primevue/forms";
 import { zodResolver } from "@primevue/forms/resolvers/zod";
+import { useTemplateRef } from "#imports";
 
 export { type FormSubmitEvent, type FormFieldState } from "@primevue/forms";
 
 export interface FormProps<State extends object> {
-  state: State;
+  initialValues: State;
   /** @default "blur" */
   validateOn?: "blur" | "submit" | "immediate";
   schema?: ZodSchema<State>;
@@ -30,15 +31,30 @@ export interface FormSlots<State extends object> {
 </script>
 
 <script setup lang="ts" generic="State extends object">
-const { state, schema, validateOn = "blur" } = defineProps<FormProps<State>>();
+const { initialValues, schema, validateOn = "blur" } = defineProps<FormProps<State>>();
 const emit = defineEmits<FormEmits>();
 defineSlots<FormSlots<State>>();
+
+const form = useTemplateRef("form");
+
+defineExpose({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  currentState: () => (form.value as any)?.states as FormFieldStates<State> | undefined,
+
+  setFieldValue: (field: keyof State, value: State[keyof State]) => {
+    if (form.value) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (form.value as any).setFieldValue(field as string, value);
+    }
+  },
+});
 </script>
 
 <template>
   <PForm
     v-slot="$form"
-    :initial-values="state"
+    ref="form"
+    :initial-values
     :resolver="schema ? zodResolver(schema) : undefined"
     :validate-on-blur="validateOn === 'blur'"
     :validate-on-submit="validateOn === 'submit'"

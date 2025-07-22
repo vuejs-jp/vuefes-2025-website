@@ -67,7 +67,7 @@ async function submit(event: FormSubmitEvent) {
   >
     <p>{{ t("contactForm.description") }}</p>
     <VFForm
-      :state="state"
+      :initialValues="state"
       :schema="schema"
       @submit="submit"
     >
