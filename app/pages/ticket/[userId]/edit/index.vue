@@ -3,19 +3,39 @@ import { z } from "zod";
 import emojiRegex from "emoji-regex";
 
 import { useLocaleRoute } from "@typed-router";
-import { computed, definePageMeta, navigateTo, onMounted, ref, useAuth, useBreakpoint, useFetch, useI18n, useTemplateRef } from "#imports";
+import {
+  computed,
+  definePageMeta,
+  navigateTo,
+  onMounted,
+  ref,
+  useAuth,
+  useBreakpoint,
+  useFetch,
+  useI18n,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
+  useTemplateRef,
+} from "#imports";
 
 import type { FormFieldStates, FormSubmitEvent } from "~/components/form/VFForm.vue";
 import type { VFFile } from "~/components/form/VFFileInput.vue";
 import { VFFileInput, VFForm, VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
 
+const { t } = useI18n();
+const title = () => `${t("nuxtSiteConfig.name")} %separator %s`;
+useSeoMeta({
+  ogTitle: title,
+  title,
+});
+
 definePageMeta({
   middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
 });
 
 const { data: user } = useAuth();
-const { t } = useI18n();
 const toast = useToast();
 const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();

@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { useRoute, useLocaleRoute } from "@typed-router";
-import { defineOgImage, definePageMeta, navigateTo, useAuth, useBreakpoint, useFetch, useI18n } from "#imports";
+import {
+  defineOgImage,
+  definePageMeta,
+  navigateTo,
+  useAuth,
+  useBreakpoint,
+  useFetch,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useI18n,
+  useSeoMeta,
+} from "#imports";
 
 import { VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
@@ -28,6 +39,13 @@ defineOgImage({
     userRole: () => nameBadgeData.value?.role,
     avatarImageUrl: () => nameBadgeData.value?.avatarUrl,
   },
+});
+
+useSeoMeta({
+  title: () => t("nameBadge.pageTitle", { username: nameBadgeData.value?.name }),
+  ogTitle: () => t("nameBadge.pageTitle", { username: nameBadgeData.value?.name }),
+  description: () => t("nameBadge.pageDescription"),
+  ogDescription: () => t("nameBadge.pageDescription"),
 });
 
 function handleClickXIcon() {
