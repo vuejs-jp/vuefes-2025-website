@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const {
   name,
@@ -37,13 +37,22 @@ const variants = computed(() => {
   }
 });
 
+const isSafari = ref(false);
+const isTouchDevice = ref(false);
 onMounted(() => {
+  isSafari.value = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (window.matchMedia("(hover: none)").matches) {
+    isTouchDevice.value = true;
+  }
+
   const previewRoot = document.querySelector(".name-badge-preview");
   const cardWrapper = document.querySelector(".base-name-badge-wrapper") as HTMLElement;
   const backface = cardWrapper.querySelector(".card-face-back") as HTMLElement;
   let rotationDegree = 0;
 
   previewRoot?.addEventListener("pointermove", (event) => {
+    if (isTouchDevice.value) return;
+
     if (!cardWrapper) return;
 
     const { x, y } = event as PointerEvent;
@@ -73,6 +82,10 @@ onMounted(() => {
 
   // flip
   cardWrapper.addEventListener("click", () => {
+    if (isTouchDevice.value) return;
+    // NOTE: Safari has quirky animation support, so we're not handling it
+    if (isSafari.value) return;
+
     cardWrapper.classList.add("flip-start");
     cardWrapper.classList.toggle("focused");
 
