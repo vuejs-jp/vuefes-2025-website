@@ -157,6 +157,7 @@ export default defineNuxtConfig({
         path: "/fonts/og/IBMPlexSansJP-Regular.ttf",
       },
     ],
+    debug: true,
   },
 
   seo: {
