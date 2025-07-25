@@ -73,11 +73,11 @@ export default defineNuxtConfig({
     // The name and description are set for each language in the following files:
     // i18n/ja/ja.json, i18n/en/en.json
     url:
-    process.env.NETLIFY_BUILD_CONTEXT === "branch-deploy"
-      ? "https://main--vuefes-2025.netlify.app"
-      : process.env.NODE_ENV === "production"
-        ? "https://vuefes.jp/"
-        : "http://localhost:3000/",
+      process.env.CONTEXT === "branch-deploy"
+        ? "https://main--vuefes-2025.netlify.app"
+        : process.env.NODE_ENV === "production"
+          ? "https://vuefes.jp/"
+          : "http://localhost:3000/",
   },
 
   robots: {
