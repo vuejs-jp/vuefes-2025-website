@@ -5,6 +5,10 @@ import { defineOgImage, definePageMeta, navigateTo, useAuth, useBreakpoint, useF
 import { VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
 
+import XIcon from "~icons/icons/ic_x";
+import BlueskyIcon from "~icons/icons/ic_bluesky";
+import FacebookIcon from "~icons/icons/ic_facebook";
+
 definePageMeta({
   middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
 });
@@ -25,6 +29,21 @@ defineOgImage({
     avatarImageUrl: () => nameBadgeData.value?.avatarUrl,
   },
 });
+
+function handleClickXIcon() {
+  const url = `https://x.com/intent/tweet?text=${encodeURIComponent(t("nameBadge.shareText"))}\n${encodeURIComponent(window.location.href)}`;
+  const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
+}
+
+function handleClickBlueskyIcon() {
+  const url = `https://bsky.app/intent/compose?text=${encodeURIComponent(t("nameBadge.shareText"))}\n${encodeURIComponent(window.location.href)}`;
+  const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
+}
+
+function handleClickFacebookIcon() {
+  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+  const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
+}
 
 function copyUrl() {
   const url = window.location.href;
@@ -88,10 +107,26 @@ function copyUrl() {
         <p class="name-badge-lets-share">
           {{ t("nameBadge.letsShare") }}
         </p>
-        <VFButton outlined @click="copyUrl()">
-          {{ t("copyLink") }}
-        </VFButton>
-        <!-- TODO: sns -->
+
+        <div class="name-badge-sns-buttons">
+          <div class="name-badge-sns-icons">
+            <button type="button" class="sns-icon-button" @click="handleClickXIcon">
+              <XIcon />
+            </button>
+
+            <button type="button" class="sns-icon-button" @click="handleClickBlueskyIcon">
+              <BlueskyIcon />
+            </button>
+
+            <button type="button" class="sns-icon-button" @click="handleClickFacebookIcon">
+              <FacebookIcon />
+            </button>
+          </div>
+
+          <VFButton outlined @click="copyUrl()">
+            {{ t("copyLink") }}
+          </VFButton>
+        </div>
 
         <p class="name-badge-join-event">
           {{ t("nameBadge.joinEvent") }}
@@ -187,6 +222,38 @@ function copyUrl() {
 
         @media (--mobile) {
           margin-top: 1.5rem;
+        }
+      }
+
+      .name-badge-sns-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        @media (--mobile) {
+          flex-direction: column;
+        }
+
+        .name-badge-sns-icons {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+
+          .sns-icon-button {
+            background: none;
+            border: var(--color-divider) 1px solid;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 59px;
+            height: 59px;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
         }
       }
     }

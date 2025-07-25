@@ -289,7 +289,6 @@ onMounted(() => {
 }
 
 .card-face {
-  border-radius: 4.5% / 3.5%;
   height: 100%;
   position: absolute;
   width: 100%;

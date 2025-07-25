@@ -103,6 +103,8 @@ nameBadge:
     submitResult:
       success: "Name badge saved successfully."
       error: "Failed to save name badge. Please try again."
+  shareText: "I'll be at Vue Fes Japan 2025!\nBuy the ticket and create your name badge!\n#vuefes\n"
+
 login:
   withGoogle: "Log in with Google"
   withGitHub: "Log in with GitHub"
