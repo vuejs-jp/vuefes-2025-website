@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute, useLocaleRoute } from "@typed-router";
-import { definePageMeta, navigateTo, useAuth, useBreakpoint, useFetch, useI18n } from "#imports";
+import { defineOgImage, definePageMeta, navigateTo, useAuth, useBreakpoint, useFetch, useI18n } from "#imports";
 
 import { VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
@@ -17,6 +17,14 @@ const localeRoute = useLocaleRoute();
 const { data: session, status } = useAuth();
 const route = useRoute();
 const { data: nameBadgeData } = useFetch(`/api/name-badge/${route.params.userId}`);
+defineOgImage({
+  component: "NameBadge",
+  props: {
+    name: () => nameBadgeData.value?.name,
+    userRole: () => nameBadgeData.value?.role,
+    avatarImageUrl: () => nameBadgeData.value?.avatarUrl,
+  },
+});
 
 function copyUrl() {
   const url = window.location.href;

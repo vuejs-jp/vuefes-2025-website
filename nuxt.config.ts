@@ -5,8 +5,18 @@ import type { NuxtPage } from "nuxt/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/scripts", "@nuxtjs/i18n", "@nuxtjs/seo", // "@nuxt/image",
-    "@nuxtjs/storybook", "@primevue/nuxt-module", "nuxt-typed-router", "@sidebase/nuxt-auth"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/scripts",
+    "@nuxtjs/i18n",
+    "@nuxtjs/seo",
+    // "@nuxt/image",
+    "@nuxtjs/storybook",
+    "@primevue/nuxt-module",
+    "nuxt-typed-router",
+    "@sidebase/nuxt-auth",
+    "nuxt-og-image",
+  ],
 
   $production: {
     scripts: {
@@ -62,7 +72,7 @@ export default defineNuxtConfig({
   site: {
     // The name and description are set for each language in the following files:
     // i18n/ja/ja.json, i18n/en/en.json
-    url: "https://vuefes.jp/",
+    url: process.env.NODE_ENV === "production" ? "https://vuefes.jp/" : "http://localhost:3000/",
   },
 
   robots: {
@@ -130,7 +140,18 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
-    enabled: false,
+    enabled: true,
+    fonts: [
+      {
+        name: "JetBrainsMono-Regular",
+        path: "/fonts/og/JetBrainsMono-Regular.ttf",
+      },
+
+      {
+        name: "IBMPlexSansJP-Regular",
+        path: "/fonts/og/IBMPlexSansJP-Regular.ttf",
+      },
+    ],
   },
 
   seo: {

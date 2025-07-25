@@ -24,16 +24,16 @@ const {
 const variants = computed(() => {
   switch (userRole) {
     case "Attendee+Party":
-      return { color: "#fae8e4", baseImageUrl: "/images/name-badge/party.png" };
+      return { color: "#007f62", baseImageUrl: "/images/name-badge/party.png" };
     case "Sponsor":
       return { color: "#f66c21", baseImageUrl: "/images/name-badge/sponsor.png" };
     case "Speaker":
       return { color: "#8314d3", baseImageUrl: "/images/name-badge/speaker.png" };
     case "Staff":
-      return { color: "#333333", baseImageUrl: "/images/name-badge/staff.png" };
+      return { color: "#ffffff", baseImageUrl: "/images/name-badge/staff.png" };
     case "Attendee":
     default:
-      return { color: "#007f62", baseImageUrl: "/images/name-badge/default.png" };
+      return { color: "#385FCC", baseImageUrl: "/images/name-badge/default.png" };
   }
 });
 
