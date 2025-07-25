@@ -31,8 +31,7 @@ ticket:
   viewTicketDetails: "チケットの詳細を見る"
   type: "チケット種別"
   typeDescription1: "一般チケットはアフターパーティーあり/なしの 2 種類があります。オプションとしてハンズオン、個人スポンサーのチケットもご用意しております。"
-  # TODO:
-  typeDescription2: "**/**（**）24:00 までにご購入いただくと、オトクなお値段になる早割もありますので、お買い求めはお早めに！"
+  typeDescription2: "8 月 31 日（日）23:59 までにご購入いただくと、オトクなお値段になる早割もありますので、お買い求めはお早めに！"
   early: "早割"
   standard: "通常"
   priceUnit: "￥"
@@ -63,8 +62,7 @@ nameBadge:
   title: "ネームカード"
   description: "{ticketName}をご購入後、必要な情報をご登録いただくと、当日会場にてご自身のアバター＋名前入りのネームカードがもらえます！（要ソーシャルログイン）"
   ticketName: "Vue Fes Japan 2025 のチケット"
-  # TODO: https://github.com/vuejs-jp/vuefes-2025/issues/695
-  deadlineDescription: "ネームカード編集期限：2025年9月**日（**）23:59"
+  deadlineDescription: "ネームカード編集期限：2025 年 9 月 29 日 23:59"
   attention: "※ネームカード作成は必須ではありません。"
   coverImageAlt: "ネームカードイメージ画像"
   confirm: 自分のネームカードを確認する

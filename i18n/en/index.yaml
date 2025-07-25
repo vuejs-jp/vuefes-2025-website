@@ -31,8 +31,7 @@ ticket:
   viewTicketDetails: "View Ticket Details"
   type: "Ticket Type"
   typeDescription1: "There are two types of general tickets: with or without the after-party. We also offer optional hands-on workshop and individual sponsor tickets."
-  # TODO:
-  typeDescription2: "Early bird pricing is available until **/** (**) 24:00, offering a better price. Be sure to purchase early!"
+  typeDescription2: "If you purchase by Sunday, August 31st at 11:59 PM (JST), you can get a discounted Early Bird rate. Don't wait to get your tickets!"
   early: "Early Bird"
   standard: "Standard"
   priceUnit: "JPY"
@@ -63,8 +62,7 @@ nameBadge:
   title: "Name Badge"
   description: "After purchasing your {ticketName} and registering the required information, you will receive a name badge featuring your avatar and name at the venue on the day! (Social login required)"
   ticketName: "Vue Fes Japan 2025 ticket"
-  # TODO: https://github.com/vuejs-jp/vuefes-2025/issues/695
-  deadlineDescription: "Name badge editing deadline: September **, 2025 (**) at 23:59"
+  deadlineDescription: "Name badge editing deadline: September 29, 2025, 11:59 PM (JST)"
   attention: "* Name badge creation is optional."
   coverImageAlt: "Name badge image"
   confirm: "Check My Name Badge"

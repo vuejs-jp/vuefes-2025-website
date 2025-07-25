@@ -1,8 +1,8 @@
-### What payment methods are available when purchasing tickets?
+### What payment methods are available for ticket purchases?
 
-Credit card, convenience store payment, and ATM payment options are available.
+Credit cards, convenience store payments, and ATM payments are accepted.
 
-For more details, please check the Peatix Help section on "What payment methods are available for paid ticket applications?"
+For more details, please check the Peatix Help article [What payment methods are available for paid ticket applications?](https://help-attendee.peatix.com/ja-JP/support/solutions/articles/44001821736-%E6%9C%89%E6%96%99%E3%83%81%E3%82%B1%E3%83%83%E3%83%88%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E6%94%AF%E6%89%95%E3%81%84%E6%96%B9%E6%B3%95%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-).
 
 Please note that Vue Fes Japan 2025 does not support PayPal or bank transfer payments.
 
@@ -10,82 +10,82 @@ Please note that Vue Fes Japan 2025 does not support PayPal or bank transfer pay
 
 Yes, it is required.
 
-You can create an account using an email address or social accounts such as Facebook, Twitter, Google, or Apple.
+You can create an account using your email address or social accounts such as Facebook, X (formerly Twitter), Google, or Apple.
 
-### Will there be livestreaming or archived videos of the event?
+### Will there be live streaming or archived videos of the event?
 
-There will be no livestreaming on the day of the event. This is an offline-only conference, so please purchase a ticket to participate!
+There will be no live streaming on the day of the event. Vue Fes Japan 2025 is an offline-only conference, so please purchase a ticket to participate.
 
-While sessions will be recorded and eventually published on the Vue.js Japan User Group's YouTube channel, the videos are scheduled to be released sometime after the following year.
+Sessions will be recorded and published on the [Vue.js Japan User Group YouTube channel](https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA), but videos are expected to be released after the following year.
 
 ### What is the early bird discount?
 
-It's a special discount for those who purchase tickets early. You can buy tickets at a better price, so we encourage you to take advantage of this offer. The early bird discount will be available until **/** (**) at 24:00.
+It's a special discount for those who purchase tickets early. You can buy tickets at a more affordable price, so we encourage you to take advantage of this offer. The early bird discount is available until August 31 (Sun) at 23:59.
 
 ### What about the schedule and session details?
 
-They will be published on this website before tickets go on sale. Please note that some content may be published after tickets go on sale.
+The schedule and session details will be published on this website before ticket sales begin. Please note that some content may be published or changed after ticket sales start.
 
 ### What do I need for admission on the day of the event?
 
-<!-- TODO: link -->
-The QR code on your ticket is required. For instructions on how to check your ticket, please refer to the Peatix Help section on "[How to check your ticket.]()"
-On the day of the event, please have your QR code ready to be scanned on your smartphone when you arrive at the reception.
+You'll need the QR code included on your ticket. For information on how to check your ticket, please refer to [How to check your ticket](https://help-attendee.peatix.com/ja-JP/support/solutions/articles/44001821775) in the Peatix Help section.
+
+On the day of the event, please have your QR code ready to be scanned from your smartphone when you arrive at the reception.
 
 ### What is the name badge?
 
-After purchasing your ticket and registering the necessary information, you'll receive a name badge with your avatar and name at the venue! (Social login required)
+After purchasing your ticket and registering the required information, you'll receive a name badge with your avatar and name at the venue! (Social login required)
 
-The name badge is necessary for entry to each venue, so please wear it around your neck at all times.
+The name badge is necessary for entering each venue, so please wear it around your neck at all times.
 
-If you don't create a personalized name badge, we will provide you with a badge without an avatar or name at the venue on the day of the event.
+If you don't create a name badge, we will provide you with a badge without an avatar or name at the venue on the day of the event.
 
-### Is creating a name badge mandatory to participate in Vue Fes Japan 2025?
+### Is creating a name badge mandatory for participating in Vue Fes Japan 2025?
 
-No, it's not mandatory. If you don't create a personalized name badge, we will provide you with a badge without an avatar or name at the venue.
+No, it's not mandatory. If you don't create a name badge, we will provide you with a badge without an avatar or name at the venue on the day of the event.
 
 ### Can I get a receipt?
 
-Peatix issues receipt data. For more details, please check the Peatix Help section on "How to access receipt data."
+Yes, we issue digital receipts (qualified invoices) with invoice numbers. For details, please check [How to access receipt data](https://help-attendee.peatix.com/ja-JP/support/solutions/articles/44001821741-%E9%A0%98%E5%8F%8E%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B) in the Peatix Help section.
 
-For those who need an invoice-compatible receipt, we will issue it with the following specifications:
+The receipts are issued by Ceroan LLC, the operations and accounting contractor for Vue Fes Japan 2025 (registered invoice issuer).
 
-- Issue date: The date of Vue Fes Japan
-- Addressee: No name specified
-- Issued as a PDF
+### Will lunch be provided?
 
-The receipt will be sent via email within approximately two weeks after Vue Fes Japan, so please download it yourself. The issuer of the receipt will be Seroan LLC, the operations and accounting contractor for Vue Fes Japan 2025 (a registered invoice business).
+**Lunch will not be provided** at Vue Fes Japan 2025. The program distributed to all attendees will include information about lunch options around the venue for your reference.
+
+You are welcome to bring your own food and beverages into the venue. If you do, please be considerate of those around you.
 
 ### What is the after-party like?
 
-After all sessions end, you can enjoy a standing buffet-style meal and drinks (including alcohol) at the venue while socializing. We plan to make arrangements so that even those attending alone can have a good time. Look forward to it!
+After all sessions conclude, you can enjoy a standing buffet-style meal and drinks (including alcohol) while socializing at the venue.
 
-### What are the hands-on workshops like?
+### What are the hands-on sessions?
 
-Please see the section on "[About the Hands-on Workshops](#hands-on)."
+Please see "[About Hands-on Workshop](#hands-on)" for details.
 
-### What is the individual sponsorship program?
+### What is the individual sponsor option?
 
-Please see the section on "[About Individual Sponsorship](#individual-sponsor)."
+Please see "[About Individual Sponsors](#individual-sponsor)" for details.
 
 ### I purchased a ticket but haven't received an email
 
-It may have been treated as spam. Please check if it has been filtered into your spam folder. If you still haven't received it, please contact us through the inquiry form.
+The email may have been filtered as spam. Please check your spam folder. If you still haven't received it, please contact us through the inquiry form.
 
 ### Can I cancel my ticket?
 
-Cancellations are accepted until `/**/**(**)`, 2025. Please note that we cannot process cancellations or refunds after `**/**(**)`.
+Cancellations are accepted until September 21, 2025 (Sun). Please note that we cannot process cancellations or refunds after September 21, 2025.
 
-Additionally, cancellations and refunds are only possible if the payment method was by credit card and less than 50 days have passed since the ticket purchase. Please note that cancellations and refunds are not available for convenience store or ATM payments.
+Additionally, tickets can only be canceled and refunded if purchased with a credit card and within 50 days of purchase. Cancellations and refunds are not available for convenience store or ATM payments.
 
-If you wish to cancel, please contact us through the Vue Fes Japan 2025 inquiry form with the purchaser's name and order number included in the purchase confirmation email.
+If you wish to cancel, please contact us through the Vue Fes Japan 2025 inquiry form with your name as the purchaser and the order number included in the purchase confirmation email.
 
 ### Can I purchase multiple tickets?
 
-Due to reception system and name badge issuance constraints, we cannot accommodate multiple ticket purchases.
+Due to reception system and name badge issuance constraints, we cannot accommodate multiple ticket purchases for the same type of ticket.
 
-However, you can purchase different types of tickets (such as general and hands-on, general + after-party and individual sponsor). Please note that if you purchase both a general ticket and a general + after-party ticket, you cannot enter separately or create individual name badges.
+However, you can purchase different types of tickets (such as General and Hands-on, General + After-Party and Individual Sponsor, etc.). Please note that if you purchase both a General ticket and a General + After-Party ticket, you cannot enter separately or create individual name badges.
 
-### Can tickets be transferred?
+### Can tickets be transferred to someone else?
 
-Tickets cannot be transferred.
+No, tickets cannot be transferred.
