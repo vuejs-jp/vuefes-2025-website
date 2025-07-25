@@ -40,6 +40,7 @@ export default defineEventHandler(async (event) => {
   return {
     name: nameBadgeData.displayName,
     role: nameBadgeData.role,
+    lang: nameBadgeData.lang,
     avatarUrl: await getSignedUrl(
       S3,
       new GetObjectCommand({

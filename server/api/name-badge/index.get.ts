@@ -49,6 +49,7 @@ export default defineEventHandler(async (event) => {
           { expiresIn: 3600 },
         ),
         role: nameBadgeData.role,
+        lang: nameBadgeData.lang,
 
         /**
            * Authorized private data

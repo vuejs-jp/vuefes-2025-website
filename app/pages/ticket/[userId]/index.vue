@@ -36,6 +36,7 @@ function copyUrl() {
           :user-role="nameBadgeData?.role ?? 'Attendee'"
           :name="nameBadgeData?.name || t('nameBadge.form.name.label')"
           :avatar-image-url="nameBadgeData?.avatarUrl"
+          :lang="nameBadgeData?.lang ?? undefined"
           v-bind="
             bp === 'mobile'
               ? {

@@ -10,6 +10,7 @@ export const attendees = sqliteTable("attendee", {
 
   // NOTE: role is automatically determined later based on ticket number
   role: text("role", { enum: ["Attendee", "Attendee+Party", "Sponsor", "Speaker", "Staff"] }),
+  lang: text("lang", { enum: ["jp", "en"] }),
 
   // Speaker, Sponsor, Staff don't have a ticket number
   receiptId: text("receipt_id"),

@@ -12,6 +12,10 @@ const {
   userRole: "Attendee" | "Attendee+Party" | "Sponsor" | "Speaker" | "Staff";
   name: string;
   avatarImageUrl?: string;
+
+  /** only for userRole = "Staff" */
+  lang?: "jp" | "en";
+
   width?: string;
   height?: string;
   aspectRatio?: string;
@@ -20,12 +24,13 @@ const {
 const variants = computed(() => {
   switch (userRole) {
     case "Attendee+Party":
-    case "Staff":
       return { color: "#fae8e4", baseImageUrl: "/images/name-badge/party.png" };
     case "Sponsor":
       return { color: "#f66c21", baseImageUrl: "/images/name-badge/sponsor.png" };
     case "Speaker":
       return { color: "#8314d3", baseImageUrl: "/images/name-badge/speaker.png" };
+    case "Staff":
+      return { color: "#333333", baseImageUrl: "/images/name-badge/staff.png" };
     case "Attendee":
     default:
       return { color: "#007f62", baseImageUrl: "/images/name-badge/default.png" };
@@ -126,6 +131,10 @@ onMounted(() => {
       <div id="name-badge-name" :style="{ color: variants.color }">
         {{ name }}
       </div>
+
+      <div v-if="userRole==='Staff' && lang" id="name-badge-lang" :style="{ color: variants.color }">
+        {{ lang.toLocaleUpperCase() }}
+      </div>
     </div>
   </div>
 </template>
@@ -149,6 +158,17 @@ onMounted(() => {
     left: 4.13%;
     font-size: 1.2rem;
     font-weight: bold;
+    color: #333;
+    font-family: JetBrainsMono-Regular, IBMPlexSansJP-Regular;
+    backface-visibility: hidden;
+  }
+
+  #name-badge-lang {
+    position: absolute;
+    top: 47.5%;
+    left: 70%;
+    font-size: 1rem;
+    font-weight: normal;
     color: #333;
     font-family: JetBrainsMono-Regular, IBMPlexSansJP-Regular;
     backface-visibility: hidden;

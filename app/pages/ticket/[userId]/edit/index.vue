@@ -139,6 +139,7 @@ async function submit(event: FormSubmitEvent) {
           :user-role="nameBadgeData?.role || 'Attendee'"
           :name="currentStates?.name?.value || t('nameBadge.form.name.label')"
           :avatar-image-url="currentStates?.avatarImage?.value?.objectURL"
+          :lang="nameBadgeData?.lang ?? undefined"
           v-bind="
             bp =='mobile'
               ? {
