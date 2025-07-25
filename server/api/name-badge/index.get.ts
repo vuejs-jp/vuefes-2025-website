@@ -9,6 +9,7 @@ import { db } from "../../db/orm";
 import { getServerSession } from "#auth";
 
 import { createError, useRuntimeConfig } from "#imports";
+import { usePeatixApi } from "~~/server/peatix-api/usePeatixApi";
 
 export default defineEventHandler(async (event) => {
   const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
@@ -34,6 +35,39 @@ export default defineEventHandler(async (event) => {
       secretAccessKey: process.env.CLOUDFLARE_R2_SECRET_ACCESS!,
     },
   });
+
+  const { peatixEventId } = useRuntimeConfig();
+  const { client } = usePeatixApi();
+
+  if (nameBadgeData?.receiptId && !nameBadgeData?.role) {
+    const sale = await client.GET("/event/{eventId}/list_sales/{salesId}", {
+      params: {
+        path: {
+          eventId: peatixEventId,
+          salesId: nameBadgeData.receiptId,
+        },
+      },
+    }).then(response => response.data);
+
+    if (sale) {
+      const role = (() => {
+        switch (sale.ticketName) {
+          case "【早割】一般チケット／[Early Bird] General Ticket":
+          case "一般チケット／General Ticket":
+            return "Attendee";
+          case "【早割】一般＋アフターパーティーチケット／[Early Bird] General + After Party Ticket":
+          case "一般＋アフターパーティーチケット／General + After Party Ticket":
+            return "Attendee+Party";
+          default:
+            return null;
+        }
+      })();
+
+      if (role) {
+        await db.update(attendees).set({ role }).where(eq(attendees.userId, session.userId)).execute();
+      }
+    }
+  }
 
   return nameBadgeData
     ? {

@@ -47,20 +47,20 @@
                       "items": {
                         "type": "object",
                         "properties": {
-                          "sales_id": {
+                          "salesId": {
                             "type": "string"
                           },
-                          "event_id": {
+                          "eventId": {
                             "type": "string"
                           },
-                          "ticket_name": {
+                          "ticketName": {
                             "type": "string"
                           }
                         },
                         "required": [
-                          "sales_id",
-                          "event_id",
-                          "ticket_name"
+                          "salesId",
+                          "eventId",
+                          "ticketName"
                         ]
                       }
                     }
@@ -138,20 +138,20 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "sales_id": {
+                    "salesId": {
                       "type": "string"
                     },
-                    "event_id": {
+                    "eventId": {
                       "type": "string"
                     },
-                    "ticket_name": {
+                    "ticketName": {
                       "type": "string"
                     }
                   },
                   "required": [
-                    "sales_id",
-                    "event_id",
-                    "ticket_name"
+                    "salesId",
+                    "eventId",
+                    "ticketName"
                   ]
                 }
               }

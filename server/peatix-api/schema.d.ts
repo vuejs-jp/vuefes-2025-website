@@ -71,9 +71,9 @@ export interface operations {
                 content: {
                     "application/json": {
                         sales: {
-                            sales_id: string;
-                            event_id: string;
-                            ticket_name: string;
+                            salesId: string;
+                            eventId: string;
+                            ticketName: string;
                         }[];
                     };
                 };
@@ -113,9 +113,9 @@ export interface operations {
                 };
                 content: {
                     "application/json": {
-                        sales_id: string;
-                        event_id: string;
-                        ticket_name: string;
+                        salesId: string;
+                        eventId: string;
+                        ticketName: string;
                     };
                 };
             };

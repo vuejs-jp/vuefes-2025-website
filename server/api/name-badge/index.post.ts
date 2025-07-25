@@ -9,6 +9,7 @@ import { attendees } from "../../db/schema";
 
 import { getServerSession } from "#auth";
 import { createError, useRuntimeConfig } from "#imports";
+import { usePeatixApi } from "~~/server/peatix-api/usePeatixApi";
 
 const sizeInMB = (sizeInBytes: number, decimalsNum = 2) => {
   const result = sizeInBytes / (1024 * 1024);
@@ -50,6 +51,22 @@ export default defineEventHandler(async (event) => {
       statusCode: 400,
     });
   }
+
+  // async data syncing
+  console.log("call peatix api!!!");
+  const { peatixEventId } = useRuntimeConfig();
+  const { client } = usePeatixApi();
+  client.GET("/event/{eventId}/list_sales/{salesId}", {
+    params: {
+      path: {
+        eventId: peatixEventId,
+        salesId: validatedBody.data.salesId,
+      },
+      query: { fresh: "true" },
+    },
+  }).catch((error) => {
+    console.error("Failed to fetch sales data from Peatix API:", error);
+  });
 
   try {
     // image registration

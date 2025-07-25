@@ -6,7 +6,9 @@ import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { db } from "../../../db/orm";
 import { attendees } from "../../../db/schema";
 
+import { getServerSession } from "#auth";
 import { createError, useRuntimeConfig } from "#imports";
+import { usePeatixApi } from "~~/server/peatix-api/usePeatixApi";
 
 export default defineEventHandler(async (event) => {
   const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
@@ -26,6 +28,47 @@ export default defineEventHandler(async (event) => {
       message: "Name Badge not found",
       statusCode: 404,
     });
+  }
+
+  // try update role authorized and same user
+  try {
+    const session = await getServerSession(event);
+    if (session && session.user && session.userId && session.user.email && session.userId === userId) {
+      const { peatixEventId } = useRuntimeConfig();
+      const { client } = usePeatixApi();
+
+      if (nameBadgeData?.receiptId && !nameBadgeData?.role) {
+        const sale = await client.GET("/event/{eventId}/list_sales/{salesId}", {
+          params: {
+            path: {
+              eventId: peatixEventId,
+              salesId: nameBadgeData.receiptId,
+            },
+          },
+        }).then(response => response.data);
+
+        if (sale) {
+          const role = (() => {
+            switch (sale.ticketName) {
+              case "【早割】一般チケット／[Early Bird] General Ticket":
+              case "一般チケット／General Ticket":
+                return "Attendee";
+              case "【早割】一般＋アフターパーティーチケット／[Early Bird] General + After Party Ticket":
+              case "一般＋アフターパーティーチケット／General + After Party Ticket":
+                return "Attendee+Party";
+              default:
+                return null;
+            }
+          })();
+
+          if (role) {
+            await db.update(attendees).set({ role }).where(eq(attendees.userId, session.userId)).execute();
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.error("Failed to update role:", error);
   }
 
   const S3 = new S3Client({
