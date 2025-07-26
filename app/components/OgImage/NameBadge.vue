@@ -66,7 +66,7 @@ const variants = computed(() => {
     <div
       :style="{
         position: 'absolute',
-        top: '-69.5%',
+        top: '3.3333%',
         right: '8.33333%',
         width: '33.3333%',
         display: 'flex',
