@@ -60,6 +60,12 @@ export default defineNuxtConfig({
     __FEATURE_TICKET_NAME_BADGE__: !["0", undefined].includes(process.env.FEATURE_TICKET_NAME_BADGE), //  2025-08-xx ~
     __FEATURE_SPONSOR_LIST__: !["0", undefined].includes(process.env.FEATURE_SPONSOR_LIST), // ?
 
+    siteUrl: process.env.CONTEXT === "branch-deploy"
+      ? "https://main--vuefes-2025.netlify.app/2025/"
+      : process.env.NODE_ENV === "production"
+        ? "https://vuefes.jp/2025/"
+        : "http://localhost:3000/",
+
     public: {
       contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
     },

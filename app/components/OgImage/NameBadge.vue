@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "#imports";
+import { computed, useRuntimeConfig } from "#imports";
 
 const { name, userRole, avatarImageUrl } = defineProps<{
   name?: string;
@@ -7,38 +7,40 @@ const { name, userRole, avatarImageUrl } = defineProps<{
   avatarImageUrl?: string;
 }>();
 
+const runtimeConfig = useRuntimeConfig();
+
 const variants = computed(() => {
   switch (userRole) {
     case "Attendee+Party":
       return {
         color: "#007f62",
-        baseImageUrl: "/images/og/name-badge/party.png",
-        nameBadgeBaseImageUrl: "/images/name-badge/party.png",
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/name-badge/party.png`,
+        nameBadgeBaseImageUrl: `${runtimeConfig.siteUrl}images/name-badge/party.png`,
       };
     case "Sponsor":
       return {
         color: "#f66c21",
-        baseImageUrl: "/images/og/name-badge/sponsor.png",
-        nameBadgeBaseImageUrl: "/images/name-badge/sponsor.png",
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/name-badge/sponsor.png`,
+        nameBadgeBaseImageUrl: `${runtimeConfig.siteUrl}images/name-badge/sponsor.png`,
       };
     case "Speaker":
       return {
         color: "#8314d3",
-        baseImageUrl: "/images/og/name-badge/speaker.png",
-        nameBadgeBaseImageUrl: "/images/name-badge/speaker.png",
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/name-badge/speaker.png`,
+        nameBadgeBaseImageUrl: `${runtimeConfig.siteUrl}images/name-badge/speaker.png`,
       };
     case "Staff":
       return {
         color: "#ffffff",
-        baseImageUrl: "/images/og/name-badge/staff.png",
-        nameBadgeBaseImageUrl: "/images/name-badge/staff.png",
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/name-badge/staff.png`,
+        nameBadgeBaseImageUrl: `${runtimeConfig.siteUrl}images/name-badge/staff.png`,
       };
     case "Attendee":
     default:
       return {
         color: "#385FCC",
-        baseImageUrl: "/images/og/name-badge/default.png",
-        nameBadgeBaseImageUrl: "/images/name-badge/default.png",
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/name-badge/default.png`,
+        nameBadgeBaseImageUrl: `${runtimeConfig.siteUrl}images/name-badge/default.png`,
       };
   }
 });
