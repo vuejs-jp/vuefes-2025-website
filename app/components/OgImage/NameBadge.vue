@@ -97,31 +97,5 @@ const variants = computed(() => {
     >
       {{ name }}
     </div>
-
-    <div
-      id="name-badge-avatar"
-      :style="{
-        position: 'absolute',
-        bottom: '12.2%',
-        right: '2%',
-        transform: 'translateX(-50%)',
-        width: '15.4%',
-        height: '30.5%',
-        borderRadius: '50%',
-        overflow: 'hidden',
-      }"
-    >
-      <img
-        v-if="avatarImageUrl"
-        :src="avatarImageUrl"
-        alt="Avatar"
-        :style="{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          borderRadius: '50%',
-        }"
-      />
-    </div>
   </div>
 </template>
