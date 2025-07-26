@@ -17,6 +17,7 @@ import {
   useHead,
   useSeoMeta,
   useTemplateRef,
+  useRoute,
 } from "#imports";
 
 import type { FormFieldStates, FormSubmitEvent } from "~/components/form/VFForm.vue";
@@ -39,6 +40,14 @@ const { data: user } = useAuth();
 const toast = useToast();
 const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();
+const route = useRoute();
+
+if (route.params.userId !== user.value?.userId) {
+  navigateTo(localeRoute({
+    name: "ticket-userId",
+    params: { userId: user.value!.userId },
+  }));
+}
 
 const { data: nameBadgeData, refresh } = useFetch("/api/name-badge");
 
