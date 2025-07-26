@@ -49,7 +49,7 @@ useSeoMeta({
 });
 
 function handleClickXIcon() {
-  const url = `https://x.com/intent/tweet?text=${encodeURIComponent(t("nameBadge.shareText"))}\n${encodeURIComponent(window.location.href)}`;
+  const url = `https://x.com/intent/tweet?text=${encodeURIComponent(t("nameBadge.shareText"))}\n${encodeURIComponent(window.location.href)}/`;
   const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
 }
 
