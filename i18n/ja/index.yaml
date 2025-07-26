@@ -103,7 +103,7 @@ nameBadge:
     submitResult:
       success: "ネームカードを保存しました。"
       error: "ネームカードの保存に失敗しました。もう一度お試しください。"
-  shareText: "Vue Fes Japan 2025 に参加します！\nチケットを購入してネームカードを作成しよう！\n#vuefes\n"
+  shareText: "Vue Fes Japan 2025 に参加します！\nチケットを購入してネームカードを作成しよう！\n\n{link}\n\n#vuefes\n"
   pageTitle: "{username}さんのネームカード"
   pageDescription: "Vue Fes Japan 2025 のネームカードページです。チケットを購入して、あなたのネームカードを作成しましよう！"
 

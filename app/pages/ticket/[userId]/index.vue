@@ -49,12 +49,16 @@ useSeoMeta({
 });
 
 function handleClickXIcon() {
-  const url = `https://x.com/intent/tweet?text=${encodeURIComponent(t("nameBadge.shareText"))}\n${encodeURIComponent(window.location.href)}/`;
+  const shareUrl = `${window.location.href}/`;
+  const shareText = t("nameBadge.shareText", { link: shareUrl });
+  const url = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
   const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
 }
 
 function handleClickBlueskyIcon() {
-  const url = `https://bsky.app/intent/compose?text=${encodeURIComponent(t("nameBadge.shareText"))}\n${encodeURIComponent(window.location.href)}`;
+  const shareUrl = window.location.href;
+  const shareText = t("nameBadge.shareText", { link: shareUrl });
+  const url = `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}`;
   const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
 }
 
