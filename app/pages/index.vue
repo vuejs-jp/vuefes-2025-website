@@ -6,6 +6,7 @@ import SectionMessage from "./_components/SectionMessage.vue";
 import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
 // import SectionSponsors from "./_components/SectionSponsors.vue";
 import SectionContact from "./_components/SectionContact.vue";
+import SectionAccess from "./_components/SectionAccess.vue";
 
 import {
   defineAsyncComponent,
@@ -43,6 +44,7 @@ if (__FEATURE_TICKET_NAME_BADGE__) {
       <SectionMessage />
       <SectionSponsorWanted v-if="!SectionSponsors" />
       <SectionSponsors v-if="SectionSponsors" />
+      <SectionAccess />
       <SectionContact />
     </div>
 

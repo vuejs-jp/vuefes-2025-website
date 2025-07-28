@@ -162,6 +162,12 @@ sponsors:
   optionSponsor: "Option Sponsor"
   details: "Sponsor Details"
 
+access:
+  title: "Access"
+  googleMapLink: "View Google Maps"
+  alt1: "Low-angle view of the exterior of Otemachi Place Hall & Conference. The glass-walled high-rise building and protruding mid-rise section are supported by a row of white columns, and the plaza in front of the building entrance features lush greenery and information boards."
+  alt2: "A large seminar room in the Otemachi Place Hall & Conference Center. It features wood-grain walls, lattice-patterned acoustic ceiling panels, and rows of black stacking chairs."
+
 contactForm:
   title: "Contact Us"
   description: >

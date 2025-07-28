@@ -2,60 +2,61 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: "0.2"
 useGitIgnore: true
 words:
-  - Abramov
-  - Acconect
+  - abramov
+  - acconect
   - allscale
   - allspeed
   - andpad
+  - authjs
   - autodocs
   - bengo
-  - Chau
-  - CLOUDSIGN
+  - bsky
+  - ceroan
+  - chau
+  - chiyoda
+  - chooseicon
+  - cloudsign
   - codmon
   - cosme
   - cyberagent
   - databank
   - dateness
   - dominikg
-  - Finatext
-  - Finetext
-  - authjs
-  - autodocs
-  - bsky
-  - ceroan
-  - Chau
-  - chooseicon
-  - dateness
-  - dominikg
-  - FFEF
+  - ffef
+  - finatext
+  - finetext
   - fract
   - ftechno
-  - Guillaume
+  - guillaume
+  - hanzomon
   - hashimoto
-  - HENNGE
-  - Hinomaru
-  - Hiroshi
+  - hennge
+  - hinomaru
+  - hiroshi
   - ikkyu
-  - Ikyu
+  - ikyu
   - inputtext
   - intlify
-  - Ishii
+  - ishii
   - istyle
   - johnsoncodehk
-  - KARTE
-  - Kawaguchi
+  - karte
+  - kawaguchi
   - kazu
   - kazupon
-  - Kazuya
+  - kazuya
+  - keihin
   - kgierke
   - kiaking
-  - KINTO
-  - Kodomon
+  - kinto
+  - kodomon
   - lacunarity
   - lightningcss
-  - lycorp
   - livestreaming
+  - lycorp
   - matcha
+  - marunouchi
+  - mita
   - nakano
   - nitropack
   - noindex
@@ -75,25 +76,30 @@ words:
   - presigner
   - primevue
   - rolldown
-  - Stockmark
-  - studist
+  - shinkansen
   - sidebase
+  - stockmark
+  - studist
   - sugiura
-  - Sumi
+  - sumi
   - suminagashi
-  - Teachme
+  - teachme
   - tebiki
   - tenshoku
   - textareas
   - textlint
   - themself
   - tiful
+  - toei
+  - tohoku
+  - tokaido
   - tokusho
+  - tozai
   - ubugeeei
   - unhead
   - uniquevision
   - unplugin
-  - VEJHSZH
+  - vejhszh
   - visasq
   - vuefes
   - vuejs
@@ -101,14 +107,15 @@ words:
   - vueuse
   - webauthn
   - webgl
-  - xlink
-  - yappli
   - workerd
-  - Yoshiya
+  - xlink
+  - yamanote
+  - yappli
+  - yoshiya
   - yuji
   - zauel
   - zauer
-  - Zeiri
+  - zeiri
 ignorePaths:
   - dist
   - node_modules
