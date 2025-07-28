@@ -64,8 +64,7 @@ const menuItems = computed<MenuItemProps[]>(() =>
     {
       id: HOME_HEADING_ID.sponsor,
       label: "Sponsor",
-      // TODO:
-      routeName: localeRoute({ name: "index" }).name,
+      routeName: localeRoute({ name: "sponsors" }).name,
       disabled: !__FEATURE_SPONSOR_LIST__,
     },
   ].filter(it => !!it),
@@ -115,6 +114,8 @@ const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "ticket",
   "ticket-userId",
   "ticket-userId-edit",
+  "sponsors",
+  "sponsors-sponsorId",
 ];
 
 const isWidenContent = computed(() =>

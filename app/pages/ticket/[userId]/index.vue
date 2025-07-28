@@ -30,7 +30,7 @@ const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();
 
 const { data: session, status } = useAuth();
-const route = useRoute();
+const route = useRoute("ticket-userId-edit");
 const { data: nameBadgeData } = useFetch(`/api/name-badge/${route.params.userId}`);
 defineOgImage({
   component: "NameBadge",

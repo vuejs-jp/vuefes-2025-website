@@ -4,6 +4,7 @@ import SectionSpeakers from "./_components/SectionSpeaker.vue";
 import SectionStudentSupport from "./_components/SectionStudentSupport.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
 import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
+// import SectionSponsors from "./_components/SectionSponsors.vue";
 import SectionContact from "./_components/SectionContact.vue";
 
 import {
@@ -22,6 +23,10 @@ const { t } = useI18n();
 
 useSeoMeta({ title: "" });
 
+let SectionSponsors: ReturnType<typeof defineAsyncComponent> | null = null;
+if (__FEATURE_SPONSOR_LIST__) {
+  SectionSponsors = defineAsyncComponent(() => import("~/pages/_components/SectionSponsors.vue"));
+}
 let SectionGetYourTicket: typeof import("./_components/SectionGetYourTicket.vue").default | null = null;
 if (__FEATURE_TICKET_NAME_BADGE__) {
   SectionGetYourTicket = defineAsyncComponent(() => import("./_components/SectionGetYourTicket.vue"));
@@ -36,7 +41,8 @@ if (__FEATURE_TICKET_NAME_BADGE__) {
       <SectionSpeakers />
       <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />
       <SectionMessage />
-      <SectionSponsorWanted />
+      <SectionSponsorWanted v-if="!SectionSponsors" />
+      <SectionSponsors v-if="SectionSponsors" />
       <SectionContact />
     </div>
 

@@ -2,7 +2,7 @@
 import { VFHeading } from "#components";
 
 const { title, heading = 2, coverImage, id } = defineProps<{
-  title: string;
+  title?: string;
 
   /** @default 2 */
   heading?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -29,9 +29,11 @@ defineSlots<{
       />
     </div>
     <div class="section-content">
-      <VFHeading :id="id" :level="heading">
-        {{ title }}
-      </VFHeading>
+      <div v-if="title">
+        <VFHeading :id="id" :level="heading">
+          {{ title }}
+        </VFHeading>
+      </div>
       <div class="section-content-inner">
         <slot />
       </div>

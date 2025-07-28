@@ -3,8 +3,22 @@ version: "0.2"
 useGitIgnore: true
 words:
   - Abramov
+  - Acconect
   - allscale
   - allspeed
+  - andpad
+  - autodocs
+  - bengo
+  - Chau
+  - CLOUDSIGN
+  - codmon
+  - cosme
+  - cyberagent
+  - databank
+  - dateness
+  - dominikg
+  - Finatext
+  - Finetext
   - authjs
   - autodocs
   - bsky
@@ -15,22 +29,31 @@ words:
   - dominikg
   - FFEF
   - fract
+  - ftechno
   - Guillaume
   - hashimoto
+  - HENNGE
   - Hinomaru
   - Hiroshi
+  - ikkyu
+  - Ikyu
   - inputtext
   - intlify
   - Ishii
+  - istyle
   - johnsoncodehk
+  - KARTE
   - Kawaguchi
   - kazu
   - kazupon
   - Kazuya
   - kgierke
   - kiaking
+  - KINTO
+  - Kodomon
   - lacunarity
   - lightningcss
+  - lycorp
   - livestreaming
   - matcha
   - nakano
@@ -52,27 +75,40 @@ words:
   - presigner
   - primevue
   - rolldown
+  - Stockmark
+  - studist
   - sidebase
   - sugiura
   - Sumi
   - suminagashi
+  - Teachme
+  - tebiki
+  - tenshoku
   - textareas
   - textlint
   - themself
+  - tiful
   - tokusho
   - ubugeeei
   - unhead
+  - uniquevision
   - unplugin
   - VEJHSZH
+  - visasq
   - vuefes
   - vuejs
   - vuetify
   - vueuse
   - webauthn
   - webgl
+  - xlink
+  - yappli
   - workerd
   - Yoshiya
   - yuji
+  - zauel
+  - zauer
+  - Zeiri
 ignorePaths:
   - dist
   - node_modules

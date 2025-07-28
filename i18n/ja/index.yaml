@@ -151,6 +151,19 @@ volunteer:
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
 
+sponsors: 
+  title: "スポンサー"
+  coverImageAlt: "スポンサーのカバー画像"
+  viewAll: "スポンサー一覧はこちら"
+  platinaSponsor: "プラチナスポンサー"
+  goldSponsor: "ゴールドスポンサー"
+  silverSponsor: "シルバースポンサー"
+  bronzeSponsor: "ブロンズスポンサー"
+  optionSponsor: "オプションスポンサー"
+  details: "スポンサー情報"
+
+
+
 contactForm:
   title: "お問い合わせ"
   description: >
