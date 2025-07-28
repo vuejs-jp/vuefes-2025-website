@@ -68,6 +68,7 @@ watch(() => formState, (v) => {
         auto
         severity="secondary"
         class="p-button-outlined"
+        accept="image/*"
         @select="handleFileSelect($event, $field)"
       >
         <template #chooseicon>
