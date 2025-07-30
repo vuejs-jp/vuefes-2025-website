@@ -6,7 +6,15 @@ import GithubIcon from "~icons/icons/ic_github";
 import BlueskyIcon from "~icons/icons/ic_bluesky";
 import { SPONSORS as JaSponsors } from "~~/i18n/ja/sponsors";
 import { SPONSORS as EnSponsors } from "~~/i18n/en/sponsors";
-import { computed, defineOgImage, definePageMeta, useI18n } from "#imports";
+import {
+  computed,
+  defineOgImage,
+  definePageMeta,
+  useI18n,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
+} from "#imports";
 import { VFSection } from "#components";
 
 definePageMeta({ prerender: true });
@@ -25,6 +33,11 @@ const sponsors = computed(() => {
 const currentSponsor = computed(() =>
   sponsors.value.find(sponsor => sponsor.id === route.params.sponsorId),
 );
+
+useSeoMeta({
+  title: () => `${currentSponsor.value?.name || t("sponsors.title")}`,
+  ogTitle: () => `Vue Fes Japan 2025 - ${currentSponsor.value?.name || t("sponsors.title")}`,
+});
 
 defineOgImage({
   component: "OgSponsor",
