@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { definePageMeta, navigateTo, useAuth, useI18n, useLocaleRoute } from "#imports";
+import { definePageMeta, navigateTo, ref, useAuth, useI18n, useLocaleRoute } from "#imports";
 import {
   VFButton,
   VFSection,
@@ -22,10 +22,26 @@ definePageMeta({
 const { signIn, status, data } = useAuth();
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
+
+const isLoading = ref(false);
+
+async function handleClockGoogleSignIn() {
+  isLoading.value = true;
+  await signIn("google", { callbackUrl: "/ticket" })
+    .finally(() => { isLoading.value = false; });
+}
+
+async function handleClockGitHubSignIn() {
+  isLoading.value = true;
+  await signIn("github", { callbackUrl: "/ticket" })
+    .finally(() => { isLoading.value = false; });
+}
 </script>
 
 <template>
   <div id="pages-ticket">
+    <div v-if="isLoading" class="overlay" />
+
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Ticket</h1>
 
@@ -175,10 +191,10 @@ const localeRoute = useLocaleRoute();
       </div>
 
       <div v-else-if="status === 'unauthenticated'" class="login-buttons">
-        <VFButton @click="signIn('google', { callbackUrl: '/ticket' })">
+        <VFButton @click="handleClockGoogleSignIn">
           {{ t('login.withGoogle') }}
         </VFButton>
-        <VFButton @click="signIn('github', { callbackUrl: '/ticket' })">
+        <VFButton @click="handleClockGitHubSignIn">
           {{ t('login.withGitHub') }}
         </VFButton>
       </div>
@@ -209,6 +225,16 @@ const localeRoute = useLocaleRoute();
 @import "~/assets/styles/custom-media-query.css";
 
 #pages-ticket {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 999;
+  }
+
   display: grid;
   row-gap: 1.5rem;
   @media (--mobile) {

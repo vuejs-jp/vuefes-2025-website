@@ -127,6 +127,8 @@ onMounted(async () => {
   }
 });
 
+const isLoading = ref(false);
+
 async function submit(event: FormSubmitEvent) {
   if (!user.value) {
     toast.open({ type: "alert", message: t("nameBadge.form.submitResult.error") });
@@ -135,6 +137,7 @@ async function submit(event: FormSubmitEvent) {
 
   if (event.valid) {
     try {
+      isLoading.value = true;
       const formData = new FormData();
       formData.append("name", event.states.name!.value);
       formData.append("salesId", event.states.salesId!.value);
@@ -152,6 +155,8 @@ async function submit(event: FormSubmitEvent) {
     catch (error) {
       console.error(error);
       toast.open({ type: "alert", message: t("nameBadge.form.submitResult.error") });
+    } finally {
+      isLoading.value = false;
     }
   }
 }
@@ -159,6 +164,8 @@ async function submit(event: FormSubmitEvent) {
 
 <template>
   <div id="pages-ticket-userId-edit">
+    <div v-if="isLoading" class="overlay" />
+
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Ticket</h1>
 
@@ -254,6 +261,16 @@ async function submit(event: FormSubmitEvent) {
 
   @media (--mobile) {
     row-gap: 1rem;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 999;
   }
 
   h1 {
