@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <span :class="`sponsor-tag sponsor-tag--${plan.toLowerCase()}`">
-    {{ $t(`sponsors.${plan}Sponsor`) }}
+    {{ $t(`sponsors.${plan.toLowerCase()}Sponsor`) }}
   </span>
 </template>
 

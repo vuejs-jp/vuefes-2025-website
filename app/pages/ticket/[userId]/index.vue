@@ -33,7 +33,7 @@ const { data: session, status } = useAuth();
 const route = useRoute("ticket-userId-edit");
 const { data: nameBadgeData } = useFetch(`/api/name-badge/${route.params.userId}`);
 defineOgImage({
-  component: "NameBadge",
+  component: "OgNameBadge",
   props: {
     name: () => nameBadgeData.value?.name,
     userRole: () => nameBadgeData.value?.role,

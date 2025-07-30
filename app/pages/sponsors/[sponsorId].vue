@@ -6,7 +6,7 @@ import GithubIcon from "~icons/icons/ic_github";
 import BlueskyIcon from "~icons/icons/ic_bluesky";
 import { SPONSORS as JaSponsors } from "~~/i18n/ja/sponsors";
 import { SPONSORS as EnSponsors } from "~~/i18n/en/sponsors";
-import { computed, definePageMeta, useI18n } from "#imports";
+import { computed, defineOgImage, definePageMeta, useI18n } from "#imports";
 import { VFSection } from "#components";
 
 definePageMeta({ prerender: true });
@@ -17,12 +17,27 @@ const localeRoute = useLocaleRoute();
 
 const sponsors = computed(() => {
   const sponsorData = locale.value === "ja" ? JaSponsors : EnSponsors;
-  return Object.values(sponsorData).flat();
+  return Object.entries(sponsorData).flatMap(([plan, planSponsors]) =>
+    planSponsors.map(sponsor => ({ ...sponsor, plan })),
+  );
 });
 
 const currentSponsor = computed(() =>
   sponsors.value.find(sponsor => sponsor.id === route.params.sponsorId),
 );
+
+defineOgImage({
+  component: "OgSponsor",
+
+  // NOTE: for rendering svg images
+  renderer: "chromium",
+
+  props: {
+    name: () => currentSponsor.value?.name,
+    logoImageUrl: () => currentSponsor.value?.logoImageUrl,
+    plan: () => currentSponsor.value?.plan,
+  },
+});
 </script>
 
 <template>
