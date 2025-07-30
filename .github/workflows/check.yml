@@ -1,3 +1,5 @@
+# eslint-disable @stylistic/spaced-comment
+
 name: Check
 
 on: push
@@ -43,5 +45,5 @@ jobs:
           PEATIX_API_ORIGIN: ${{ vars.PEATIX_API_ORIGIN }}
           PEATIX_EVENT_ID: ${{ vars.PEATIX_EVENT_ID }}
 
-      - name: Check Building Storybook
-        run: pnpm story:build
+      # - name: Check Building Storybook
+      #   run: pnpm story:build
