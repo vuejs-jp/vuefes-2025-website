@@ -152,6 +152,7 @@ export default defineNuxtConfig({
 
   ogImage: {
     enabled: true,
+    runtimeCacheStorage: false,
     fonts: [
       {
         name: "JetBrainsMono-Regular",
