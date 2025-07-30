@@ -13,7 +13,6 @@ const runtimeConfig = useRuntimeConfig();
 const logoImageFullUrl = computed(() => `${runtimeConfig.siteUrl}${logoImageUrl.startsWith("/") ? logoImageUrl.slice(1) : logoImageUrl}`);
 
 const SPONSOR_TAG_STYLE_BASE = {
-  display: "inline flex",
   alignItems: "center",
   padding: "15px 25px",
 };
@@ -102,6 +101,7 @@ const variants = computed(() => {
       alt="Sponsor Logo"
       :style="{
         position: 'absolute',
+        width: '50%',
         top: '50%',
         left: '75%',
         transform: 'translate(-50%, -50%)',
@@ -128,7 +128,6 @@ const variants = computed(() => {
       <div
         :style="{
           margin: '0 auto',
-          width: 'fit-content',
           fontFamily: 'JetBrainsMono-Regular, IBMPlexSansJP-Regular',
         }"
       >

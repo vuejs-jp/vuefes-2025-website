@@ -29,9 +29,6 @@ const currentSponsor = computed(() =>
 defineOgImage({
   component: "OgSponsor",
 
-  // NOTE: for rendering svg images
-  renderer: "chromium",
-
   props: {
     name: () => currentSponsor.value?.name,
     logoImageUrl: () => currentSponsor.value?.logoImageUrl,
