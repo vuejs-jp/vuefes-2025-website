@@ -53,7 +53,6 @@ export default defineEventHandler(async (event) => {
   }
 
   // async data syncing
-  console.log("call peatix api!!!");
   const { peatixEventId } = useRuntimeConfig();
   const { client } = usePeatixApi();
   client.GET("/event/{eventId}/list_sales/{salesId}", {
