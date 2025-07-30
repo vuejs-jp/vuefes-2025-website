@@ -10,12 +10,12 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
-    // "@nuxt/image",
     "@nuxtjs/storybook",
     "@primevue/nuxt-module",
     "nuxt-typed-router",
     "@sidebase/nuxt-auth",
     "nuxt-og-image",
+    "@nuxtjs/robots",
   ],
 
   $production: {

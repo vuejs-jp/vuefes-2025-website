@@ -1,0 +1,2 @@
+User-agent: ClaudeBot
+Crawl-delay: 1
