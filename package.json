@@ -26,7 +26,7 @@
     ]
   },
   "scripts": {
-    "build": "cross-env FEATURE_SPONSOR_LIST=1 FEATURE_TICKET_NAME_BADGE=1 nuxt build",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' FEATURE_SPONSOR_LIST=1 FEATURE_TICKET_NAME_BADGE=1 nuxt build",
     "dev": "cross-env FEATURE_TIMETABLE=0 FEATURE_EVENT=0 FEATURE_SPONSOR_LIST=1 FEATURE_TICKET_NAME_BADGE=1 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
