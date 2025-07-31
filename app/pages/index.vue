@@ -38,13 +38,13 @@ if (__FEATURE_TICKET_NAME_BADGE__) {
   <div id="pages-index">
     <div class="section-container">
       <SectionGetYourTicket v-if="SectionGetYourTicket" />
-      <SectionVolunteer />
       <SectionSpeakers />
       <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />
-      <SectionMessage />
-      <SectionSponsorWanted v-if="!SectionSponsors" />
+      <SectionVolunteer />
       <SectionSponsors v-if="SectionSponsors" />
+      <SectionSponsorWanted v-if="!SectionSponsors" />
       <SectionAccess />
+      <SectionMessage />
       <SectionContact />
     </div>
 
