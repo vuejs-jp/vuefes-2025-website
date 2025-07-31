@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { HOME_HEADING_ID } from "~/constant";
 import { useBreakpoint, useI18n, useWithBase } from "#imports";
-import { VFButton, VFSection, JaVolunteer, EnVolunteer } from "#components";
+import { VFSection, JaVolunteer, EnVolunteer } from "#components";
 
 const bp = useBreakpoint();
 const withBase = useWithBase();
@@ -20,9 +20,6 @@ const { locale, t } = useI18n();
     }"
   >
     <component :is="locale === 'ja' ? JaVolunteer : EnVolunteer" />
-    <VFButton :link="t('volunteer.applyLink')" external class="volunteer-apply-button">
-      {{ t('volunteer.applyButton') }}
-    </VFButton>
   </VFSection>
 </template>
 
