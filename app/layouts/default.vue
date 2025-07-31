@@ -3,8 +3,6 @@ import { useScroll } from "@vueuse/core";
 import { useLocaleRoute, type RoutesNamesList } from "@typed-router";
 import { computed, nextTick, useBreakpoint, useRoute, watch, useI18n, type Breakpoint } from "#imports";
 import {
-  EnCtaVolunteer,
-  JaCtaVolunteer,
   EnCtaTicket,
   JaCtaTicket,
   MainVisual,
@@ -70,34 +68,22 @@ const menuItems = computed<MenuItemProps[]>(() =>
   ].filter(it => !!it),
 );
 
-const cta = computed(() => {
-  const props = __FEATURE_TICKET_NAME_BADGE__
+const cta = computed(() =>
+  __FEATURE_TICKET_NAME_BADGE__
     ? {
-        actionButton: {
-          label: t("ticket.details"),
-          link: localeRoute({ name: "ticket" }).path,
+        props: {
+          actionButton: {
+            label: t("ticket.details"),
+            link: localeRoute({ name: "ticket" }).path,
+          },
+          openerText: "Ticket",
         },
-        openerText: "Ticket",
-      } as const
-    : {
-        actionButton: {
-          label: t("volunteer.applyButtonShort"),
-          link: t("volunteer.applyLink"),
-          external: true,
-        },
-        openerText: "Volunteer",
-      } as const;
-
-  const content = __FEATURE_TICKET_NAME_BADGE__
-    ? locale.value === "ja"
-      ? JaCtaTicket
-      : EnCtaTicket
-    : locale.value === "ja"
-      ? JaCtaVolunteer
-      : EnCtaVolunteer;
-
-  return { props, content };
-});
+        content: locale.value === "ja"
+          ? JaCtaTicket
+          : EnCtaTicket,
+      }
+    : null,
+);
 
 const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => {
@@ -170,7 +156,7 @@ watch(() => route.hash, async (hash) => {
         <VFFooter />
       </div>
       <div class="side-content right-menu">
-        <div v-if="!isShowedSpCta" class="nav-menu">
+        <div v-if="!isShowedSpCta && cta" class="nav-menu">
           <VFCta
             :action-button="cta.props.actionButton"
           >
@@ -185,14 +171,14 @@ watch(() => route.hash, async (hash) => {
   <div class="sp-nav-container">
     <Transition>
       <VFSpMenu
-        v-if="isShowedSpMenu"
+        v-if="isShowedSpMenu && cta"
         :items="menuItems"
       />
     </Transition>
     <!-- MEMO: 他のCTAを追加する場合はここに追加 -->
 
     <Transition>
-      <VFSpCta v-if="isShowedSpCta" v-bind="cta.props">
+      <VFSpCta v-if="isShowedSpCta && cta" v-bind="cta.props">
         <component :is="cta.content" />
       </VFSpCta>
     </Transition>
