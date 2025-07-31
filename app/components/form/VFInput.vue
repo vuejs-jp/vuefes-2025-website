@@ -38,7 +38,8 @@ const { locale: lang } = useI18n();
       :aria-hidden="formState.valid"
     >
       <span v-if="formState?.invalid">
-        {{ formState.error.message }}
+        <!-- NOTE: formState.error potential nullish value -->
+        {{ formState.error?.message }}
       </span>
     </p>
   </div>
