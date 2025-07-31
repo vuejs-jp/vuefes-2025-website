@@ -46,7 +46,7 @@ body {
   background-color: var(--color-sub);
 
   * {
-    transition: all linear 0.5s;
+    transition: background-color linear 0.5s;
   }
 
   *:hover,

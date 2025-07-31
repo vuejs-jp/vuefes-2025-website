@@ -2,31 +2,63 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: "0.2"
 useGitIgnore: true
 words:
-  - Abramov
+  - abramov
+  - acconect
   - allscale
   - allspeed
+  - andpad
+  - authjs
   - autodocs
-  - Chau
+  - bengo
+  - bsky
+  - ceroan
+  - chau
+  - chiyoda
+  - chooseicon
+  - cloudsign
+  - codmon
+  - cosme
+  - cyberagent
+  - databank
   - dateness
   - dominikg
+  - ffef
+  - finatext
+  - finetext
   - fract
-  - Guillaume
+  - ftechno
+  - guillaume
+  - hanzomon
   - hashimoto
-  - Hinomaru
-  - Hiroshi
+  - hennge
+  - hinomaru
+  - hiroshi
+  - ikkyu
+  - ikyu
   - inputtext
   - intlify
-  - Ishii
+  - ishii
+  - istyle
   - johnsoncodehk
-  - Kawaguchi
+  - karte
+  - kawaguchi
   - kazu
   - kazupon
-  - Kazuya
+  - kazuya
+  - keihin
   - kgierke
   - kiaking
+  - kinto
+  - kodomon
   - lacunarity
   - lightningcss
+  - livestreaming
+  - lycorp
   - matcha
+  - marunouchi
+  - mita
+  - nakano
+  - nitropack
   - noindex
   - noopener
   - noreferrer
@@ -39,29 +71,56 @@ words:
   - palt
   - pcnextbutton
   - pcprevbutton
+  - peatix
+  - posx
+  - presigner
   - primevue
   - rolldown
+  - shinkansen
+  - sidebase
+  - stockmark
+  - studist
   - sugiura
-  - Sumi
+  - sumi
   - suminagashi
+  - teachme
+  - tebiki
+  - tenshoku
   - textareas
   - textlint
   - themself
+  - tiful
+  - toei
+  - tohoku
+  - tokaido
   - tokusho
+  - tozai
   - ubugeeei
   - unhead
+  - uniquevision
   - unplugin
-  - VEJHSZH
+  - vejhszh
+  - visasq
   - vuefes
   - vuejs
   - vuetify
   - vueuse
+  - webauthn
   - webgl
+  - workerd
+  - xlink
+  - yamanote
+  - yappli
+  - yoshiya
   - yuji
+  - zauel
+  - zauer
+  - zeiri
 ignorePaths:
   - dist
   - node_modules
   - pnpm-lock.yaml
   - app/assets/fonts/external
   - app/assets/icons
+  - server/db/drizzle
   - CHANGELOG.md

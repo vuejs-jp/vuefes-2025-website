@@ -1,3 +1,5 @@
+# eslint-disable @stylistic/spaced-comment
+
 name: Check
 
 on: push
@@ -5,6 +7,7 @@ on: push
 jobs:
   check:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,6 +28,22 @@ jobs:
 
       - name: Check Building
         run: pnpm build
+        env:
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_R2_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          CLOUDFLARE_R2_SECRET_ACCESS: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS }}
+          OAUTH_GITHUB_CLIENT_SECRET_ID: ${{ secrets.OAUTH_GITHUB_CLIENT_SECRET_ID }}
+          OAUTH_GOOGLE_CLIENT_SECRET_ID: ${{ secrets.OAUTH_GOOGLE_CLIENT_SECRET_ID }}
+          PEATIX_API_SECRET: ${{ secrets.PEATIX_API_SECRET }}
+          AUTH_ORIGIN: ${{ vars.AUTH_ORIGIN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_DATABASE_ID: ${{ vars.CLOUDFLARE_DATABASE_ID }}
+          CLOUDFLARE_R2_BUCKET_NAME: ${{ vars.CLOUDFLARE_R2_BUCKET_NAME }}
+          OAUTH_GITHUB_CLIENT_ID: ${{ vars.OAUTH_GITHUB_CLIENT_ID }}
+          OAUTH_GOOGLE_CLIENT_ID: ${{ vars.OAUTH_GOOGLE_CLIENT_ID }}
+          PEATIX_API_ORIGIN: ${{ vars.PEATIX_API_ORIGIN }}
+          PEATIX_EVENT_ID: ${{ vars.PEATIX_EVENT_ID }}
 
-      - name: Check Building Storybook
-        run: pnpm story:build
+      # - name: Check Building Storybook
+      #   run: pnpm story:build

@@ -5,8 +5,18 @@ import type { NuxtPage } from "nuxt/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/scripts", "@nuxtjs/i18n", "@nuxtjs/seo", "@nuxtjs/storybook", // "@nuxt/image",
-    "@primevue/nuxt-module", "nuxt-typed-router"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/scripts",
+    "@nuxtjs/i18n",
+    "@nuxtjs/seo",
+    "@nuxtjs/storybook",
+    "@primevue/nuxt-module",
+    "nuxt-typed-router",
+    "@sidebase/nuxt-auth",
+    "nuxt-og-image",
+    "@nuxtjs/robots",
+  ],
 
   $production: {
     scripts: {
@@ -31,6 +41,31 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    // for OAuth
+    authSecret: process.env.AUTH_SECRET,
+    githubClientId: process.env.OAUTH_GITHUB_CLIENT_ID,
+    githubClientSecret: process.env.OAUTH_GITHUB_CLIENT_SECRET_ID,
+    googleClientId: process.env.OAUTH_GOOGLE_CLIENT_ID,
+    googleClientSecret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
+    authOrigin: process.env.NODE_ENV === "production" ? `${process.env.DEPLOY_PRIME_URL}/2025/api/auth` : `http://localhost:${process.env.PORT || 3000}/api/auth`,
+
+    // for Peatix API
+    peatixApiOrigin: process.env.PEATIX_API_ORIGIN,
+    peatixApiSecret: process.env.PEATIX_API_SECRET,
+    peatixEventId: process.env.PEATIX_EVENT_ID,
+
+    // for server
+    __FEATURE_TIMETABLE__: !["0", undefined].includes(process.env.FEATURE_TIMETABLE), // ?
+    __FEATURE_EVENT__: !["0", undefined].includes(process.env.FEATURE_EVENT), // ?
+    __FEATURE_TICKET_NAME_BADGE__: !["0", undefined].includes(process.env.FEATURE_TICKET_NAME_BADGE), //  2025-08-xx ~
+    __FEATURE_SPONSOR_LIST__: !["0", undefined].includes(process.env.FEATURE_SPONSOR_LIST), // ?
+
+    siteUrl: process.env.CONTEXT === "branch-deploy"
+      ? "https://main--vuefes-2025.netlify.app/2025/"
+      : process.env.NODE_ENV === "production"
+        ? "https://vuefes.jp/2025/"
+        : "http://localhost:3000/",
+
     public: {
       contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
     },
@@ -43,7 +78,12 @@ export default defineNuxtConfig({
   site: {
     // The name and description are set for each language in the following files:
     // i18n/ja/ja.json, i18n/en/en.json
-    url: "https://vuefes.jp/",
+    url:
+      process.env.CONTEXT === "branch-deploy"
+        ? "https://main--vuefes-2025.netlify.app"
+        : process.env.NODE_ENV === "production"
+          ? "https://vuefes.jp/"
+          : "http://localhost:3000/",
   },
 
   robots: {
@@ -56,7 +96,7 @@ export default defineNuxtConfig({
     define: {
       __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
       __FEATURE_EVENT__: process.env.FEATURE_EVENT || false, // ?
-      __FEATURE_TICKET__: process.env.FEATURE_TICKET || false, //  2025-08-xx ~
+      __FEATURE_TICKET_NAME_BADGE__: process.env.FEATURE_TICKET_NAME_BADGE || false, //  2025-08-xx ~
       __FEATURE_SPONSOR_LIST__: process.env.FEATURE_SPONSOR_LIST || false, // ?
     },
     css: {
@@ -111,7 +151,19 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
-    enabled: false,
+    enabled: true,
+    runtimeCacheStorage: false,
+    fonts: [
+      {
+        name: "JetBrainsMono-Regular",
+        path: "/fonts/og/JetBrainsMono-Regular.ttf",
+      },
+
+      {
+        name: "IBMPlexSansJP-Regular",
+        path: "/fonts/og/IBMPlexSansJP-Regular.ttf",
+      },
+    ],
   },
 
   seo: {
@@ -124,6 +176,19 @@ export default defineNuxtConfig({
   //  domains: ['vuefes.jp/2025'],
   //  provider: "ipx",
   // },
+
+  auth: {
+    disableServerSideAuth: false,
+    baseURL: process.env.NODE_ENV === "production" ? `${process.env.DEPLOY_PRIME_URL}/2025/api/auth` : `http://localhost:${process.env.PORT || 3000}/api/auth`,
+    provider: {
+      type: "authjs",
+      addDefaultCallbackUrl: true,
+    },
+    sessionRefresh: {
+      enablePeriodically: true,
+      enableOnWindowFocus: true,
+    },
+  },
 
   hooks: {
     // Private Folder Impl

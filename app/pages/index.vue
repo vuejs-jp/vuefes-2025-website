@@ -4,9 +4,12 @@ import SectionSpeakers from "./_components/SectionSpeaker.vue";
 import SectionStudentSupport from "./_components/SectionStudentSupport.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
 import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
+// import SectionSponsors from "./_components/SectionSponsors.vue";
 import SectionContact from "./_components/SectionContact.vue";
+import SectionAccess from "./_components/SectionAccess.vue";
 
 import {
+  defineAsyncComponent,
   defineRouteRules,
   useI18n,
   // NOTE: import useHead to avoid `useHead is not defined` error
@@ -20,16 +23,28 @@ defineRouteRules({ prerender: true });
 const { t } = useI18n();
 
 useSeoMeta({ title: "" });
+
+let SectionSponsors: ReturnType<typeof defineAsyncComponent> | null = null;
+if (__FEATURE_SPONSOR_LIST__) {
+  SectionSponsors = defineAsyncComponent(() => import("~/pages/_components/SectionSponsors.vue"));
+}
+let SectionGetYourTicket: typeof import("./_components/SectionGetYourTicket.vue").default | null = null;
+if (__FEATURE_TICKET_NAME_BADGE__) {
+  SectionGetYourTicket = defineAsyncComponent(() => import("./_components/SectionGetYourTicket.vue"));
+}
 </script>
 
 <template>
   <div id="pages-index">
     <div class="section-container">
-      <SectionVolunteer />
+      <SectionGetYourTicket v-if="SectionGetYourTicket" />
       <SectionSpeakers />
       <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />
+      <SectionVolunteer />
+      <SectionSponsors v-if="SectionSponsors" />
+      <SectionSponsorWanted v-if="!SectionSponsors" />
+      <SectionAccess />
       <SectionMessage />
-      <SectionSponsorWanted />
       <SectionContact />
     </div>
 

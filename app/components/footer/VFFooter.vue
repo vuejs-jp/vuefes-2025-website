@@ -97,13 +97,11 @@ const { t } = useI18n();
               t("coc")
             }}</NuxtLink>
           </li>
-
-          <!-- NOTE: チケット販売までは必要ない -->
-          <!-- <li>
+          <li>
             <NuxtLink :to="localePath('/tokusho')">{{
               t("transactions")
             }}</NuxtLink>
-          </li> -->
+          </li>
         </ul>
       </div>
 

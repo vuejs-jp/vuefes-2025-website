@@ -1,3 +1,9 @@
+back: "戻る"
+copyLink: "リンクをコピー"
+clipboard:
+  copySuccess: "クリップボードにコピーしました"
+siteName: "Vue Fes Japan 2025 公式サイト"
+
 nuxtSiteConfig:
   name: "Vue Fes Japan 2025"
   description: >
@@ -17,6 +23,102 @@ animation:
 
 message: "メッセージ"
 messageCoverImageAlt: Vue Fes Japan 2025 ロゴ
+
+ticket:
+  title: "チケット"
+  details: "チケット詳細"
+  coverImageAlt: "チケット販売"
+  viewTicketDetails: "チケットの詳細を見る"
+  type: "チケット種別"
+  typeDescription1: "一般チケットはアフターパーティーあり/なしの 2 種類があります。オプションとしてハンズオン、個人スポンサーのチケットもご用意しております。"
+  typeDescription2: "8 月 31 日（日）23:59 までにご購入いただくと、オトクなお値段になる早割もありますので、お買い求めはお早めに！"
+  early: "早割"
+  standard: "通常"
+  priceUnit: "￥"
+  generalTicket: 
+    title: "一般チケット"
+    earlyPrice: "7000"
+    standardPrice: "8000"
+  afterPartyTicket: 
+    title: "一般＋アフターパーティーチケット"
+    earlyPrice: "10000"
+    standardPrice: "11000"
+  option: オプション
+  handsOn:
+    title: "ハンズオン"
+    price: "0"
+    attention1: "※ Vue Fes Japan へのご参加には、一般チケットも必要となります。"
+    attention2: "※ 詳しくは{about}をご覧ください。"
+    about: "ハンズオンについて"
+  individual:
+    sponsor: "個人スポンサー"
+    price: "10000"
+    attention1: "※ Vue Fes Japan へのご参加には、一般チケットも必要となります。"
+    attention2: "※ 詳しくは{about}をご覧ください。"
+    about: "個人スポンサーについて"
+  buy: "チケットを購入する"
+
+nameBadge:
+  title: "ネームカード"
+  description: "{ticketName}をご購入後、必要な情報をご登録いただくと、当日会場にてご自身のアバター＋名前入りのネームカードがもらえます！（要ソーシャルログイン）"
+  ticketName: "Vue Fes Japan 2025 のチケット"
+  deadlineDescription: "ネームカード編集期限：2025 年 9 月 29 日 23:59"
+  attention: "※ネームカード作成は必須ではありません。"
+  coverImageAlt: "ネームカードイメージ画像"
+  confirm: 自分のネームカードを確認する
+  create: "ネームカード作成"
+  edit: "ネームカード編集"
+  status:
+    label: "ステータス"
+    notCreated: "未作成"
+    created: "作成済み"
+  letsShare: "ネームカードをシェアしよう！"
+  joinEvent: "あなたも Vue Fes Japan に参加しませんか？"
+  nameBadgeDefaultImageAlt: "ネームカードイメージ画像"
+  nameBadgeImageAlt: "{username}さんのネームカードイメージ画像"
+  form:
+    cancel: "キャンセル"
+    save: "保存する"
+    name:
+      label: "お名前"
+      placeholder: "入力例：山田太郎"
+      description: "※全角**文字（半角**文字）まで。"
+      error:
+        required: "お名前は必須です"
+        tooLong: "お名前は全角 12 文字（半角 24 文字）までです"
+        emoji: "絵文字は使用できません"
+    avatarImage:
+      label: "アバター"
+      placeholder: "ファイルを選択"
+      description: "※.jpg もしくは .png のみ可能です。5MB 以下の画像を選択してください。"
+      error:
+        required: "アバター画像は必須です"
+        type: ".jpg もしくは .png のみ可能です"
+        size: "ファイルサイズは最大 5MB です"
+    receipt:
+      label: 注文番号
+      description: ※注文番号は、チケット購入時に Peatix から送信されるメール内に含まれる領収データから確認できます。
+      error:
+        required: "注文番号は必須です"
+    submitResult:
+      success: "ネームカードを保存しました。"
+      error: "ネームカードの保存に失敗しました。もう一度お試しください。"
+  shareText: "Vue Fes Japan 2025 に参加します！\nチケットを購入してネームカードを作成しよう！\n\n{link}\n\n#vuefes\n"
+  pageTitle: "{username}さんのネームカード"
+  pageDescription: "Vue Fes Japan 2025 のネームカードページです。チケットを購入して、あなたのネームカードを作成しましよう！"
+
+login:
+  withGoogle: "Google でログイン"
+  withGitHub: "GitHub でログイン"
+
+individualSponsor:
+  title: "個人スポンサー"
+
+handsOn:
+  title: "ハンズオン"
+
+faq:
+  title: "FAQ"
 
 speakers:
   title: "スピーカー"
@@ -48,6 +150,23 @@ volunteer:
 
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
+
+sponsors: 
+  title: "スポンサー"
+  coverImageAlt: "スポンサーのカバー画像"
+  viewAll: "スポンサー一覧はこちら"
+  platinaSponsor: "プラチナスポンサー"
+  goldSponsor: "ゴールドスポンサー"
+  silverSponsor: "シルバースポンサー"
+  bronzeSponsor: "ブロンズスポンサー"
+  optionSponsor: "オプションスポンサー"
+  details: "スポンサー情報"
+
+access:
+  title: "アクセス"
+  googleMapLink: "Googleマップを見る"
+  alt1: "大手町プレイス ホール＆カンファレンスの建物外観のローアングルビュー。ガラス張りの高層ビルと張り出した中層部を白い円柱列が支えており、建物入口前の広場には緑豊かな植栽と案内板が設置されている。"
+  alt2: "大手町プレイス ホール＆カンファレンス会場内の大きなセミナールーム。木目調の壁面と格子状の音響天井パネル、黒いスタッキングチェアが並べられている。"
 
 contactForm:
   title: "お問い合わせ"

@@ -20,6 +20,8 @@ export default withNuxt()
       ".github/dependabot.yml",
       "i18n/**/*.yaml",
       "app/components/_i18n",
+      "server/db/drizzle",
+      "server/peatix-api/schema.d.ts",
     ],
   })
   .append({

@@ -1,3 +1,9 @@
+back: "Back"
+copyLink: "Copy Link"
+clipboard:
+  copySuccess: "Copied to clipboard"
+siteName: "Vue Fes Japan 2025 Official"
+
 nuxtSiteConfig:
   name: "Vue Fes Japan 2025"
   description: >
@@ -17,6 +23,102 @@ animation:
 
 message: "Message"
 messageCoverImageAlt: Vue Fes Japan 2025 logo
+
+ticket:
+  title: "Ticket"
+  details: "Details"
+  coverImageAlt: "Get Your Ticket!"
+  viewTicketDetails: "View Ticket Details"
+  type: "Ticket Type"
+  typeDescription1: "There are two types of general tickets: with or without the after-party. We also offer optional hands-on workshop and individual sponsor tickets."
+  typeDescription2: "If you purchase by Sunday, August 31st at 11:59 PM (JST), you can get a discounted Early Bird rate. Don't wait to get your tickets!"
+  early: "Early Bird"
+  standard: "Standard"
+  priceUnit: "JPY"
+  generalTicket: 
+    title: "General Ticket"
+    earlyPrice: "7000"
+    standardPrice: "8000"
+  afterPartyTicket: 
+    title: "General Admission + After-Party Ticket"
+    earlyPrice: "10000"
+    standardPrice: "11000"
+  option: "Options"
+  handsOn:
+    title: "Hands-on Workshop"
+    price: "0"
+    attention1: "※ A general ticket is also required to participate in Vue Fes Japan."
+    attention2: "※ Please see the {about} for details."
+    about: "Hands-on Workshop section"
+  individual:
+    sponsor: "Individual Sponsor"
+    price: "10000"
+    attention1: "※ A general ticket is also required to participate in Vue Fes Japan."
+    attention2: "※ Please see the {about} for details."
+    about: "Individual Sponsor section"
+  buy: "Buy Tickets"
+
+nameBadge:
+  title: "Name Badge"
+  description: "After purchasing your {ticketName} and registering the required information, you will receive a name badge featuring your avatar and name at the venue on the day! (Social login required)"
+  ticketName: "Vue Fes Japan 2025 ticket"
+  deadlineDescription: "Name badge editing deadline: September 29, 2025, 11:59 PM (JST)"
+  attention: "* Name badge creation is optional."
+  coverImageAlt: "Name badge image"
+  confirm: "Check My Name Badge"
+  create: "Create Name Badge"
+  edit: "Edit Name Badge"
+  status:
+    label: "Status"
+    notCreated: "Not Created"
+    created: "Created"
+  letsShare: "Let's Share A Name Badge!"
+  joinEvent: "Join Vue Fes Japan!"
+  nameBadgeDefaultImageAlt: "Name badge image"
+  nameBadgeImageAlt: "{username}'s Name badge image"
+  form:
+    cancel: "Cancel"
+    save: "Save"
+    name:
+      label: "Name"
+      placeholder: "Example: Taro Yamada"
+      description: "※ Full-width ** characters (half-width ** characters) are allowed."
+      error:
+        required: "Name is required."
+        tooLong: "Name must be 12 full-width characters (24 half-width characters) or less."
+        emoji: "Emojis are not allowed."
+    avatarImage:
+      label: "Avatar"
+      placeholder: "Select File"
+      description: "※ Only .jpg or .png files are allowed. Please select an image under 5MB."
+      error:
+        required: "Avatar image is required."
+        type: "Only .jpg or .png files are allowed."
+        size: "File size must be under 5MB."
+    receipt:
+      label: "Order Number"
+      description: "※ The order number can be found in the receipt data sent via email from Peatix at the time of ticket purchase."
+      error:
+        required: "Order number is required."
+    submitResult:
+      success: "Name badge saved successfully."
+      error: "Failed to save name badge. Please try again."
+  shareText: "I'll be at Vue Fes Japan 2025!\nBuy the ticket and create your name badge!\n\n{link}\n\n#vuefes"
+  pageTitle: "{username}'s Name Badge"
+  pageDescription: "This is the name badge page at Vue Fes Japan 2025. Purchase a ticket and create your name badge!"
+
+login:
+  withGoogle: "Log in with Google"
+  withGitHub: "Log in with GitHub"
+
+individualSponsor:
+  title: "Individual Sponsor"
+
+handsOn:
+  title: "Hands-on Workshop"
+
+faq:
+  title: "FAQ"
 
 speakers:
   title: "Speakers"
@@ -48,6 +150,23 @@ volunteer:
 
 sponsorWanted: "Sponsorship Opportunities"
 sponsorWantedCoverImageAlt: "Sponsor Wanted cover image"
+
+sponsors: 
+  title: "Sponsor"
+  coverImageAlt: "Sponsors cover image"
+  viewAll: "View All Sponsors"
+  platinaSponsor: "Platina Sponsor"
+  goldSponsor: "Gold Sponsor"
+  silverSponsor: "Silver Sponsor"
+  bronzeSponsor: "Bronze Sponsor"
+  optionSponsor: "Option Sponsor"
+  details: "Sponsor Details"
+
+access:
+  title: "Access"
+  googleMapLink: "View Google Maps"
+  alt1: "Low-angle view of the exterior of Otemachi Place Hall & Conference. The glass-walled high-rise building and protruding mid-rise section are supported by a row of white columns, and the plaza in front of the building entrance features lush greenery and information boards."
+  alt2: "A large seminar room in the Otemachi Place Hall & Conference Center. It features wood-grain walls, lattice-patterned acoustic ceiling panels, and rows of black stacking chairs."
 
 contactForm:
   title: "Contact Us"

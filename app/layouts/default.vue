@@ -1,8 +1,20 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
-import { useLocaleRoute } from "@typed-router";
+import { useLocaleRoute, type RoutesNamesList } from "@typed-router";
 import { computed, nextTick, useBreakpoint, useRoute, watch, useI18n, type Breakpoint } from "#imports";
-import { MainVisual, VFHeader, VFFooter, VFMenu, VFSpMenu, VFCta, VFSpCta, JaCtaVolunteer, EnCtaVolunteer } from "#components";
+import {
+  EnCtaVolunteer,
+  JaCtaVolunteer,
+  EnCtaTicket,
+  JaCtaTicket,
+  MainVisual,
+  VFCta,
+  VFFooter,
+  VFHeader,
+  VFMenu,
+  VFSpCta,
+  VFSpMenu,
+} from "#components";
 import { useAnimationStore } from "~/stores/animation";
 import { HOME_HEADING_ID } from "~/constant";
 import type { MenuItemProps } from "~/components/menu/VFMenuItem.vue";
@@ -46,19 +58,46 @@ const menuItems = computed<MenuItemProps[]>(() =>
     {
       id: HOME_HEADING_ID.event,
       label: "Ticket",
-      // TODO:
-      routeName: localeRoute({ name: "index" }).name,
-      disabled: !__FEATURE_TICKET__,
+      routeName: localeRoute({ name: "ticket" }).name,
+      disabled: !__FEATURE_TICKET_NAME_BADGE__,
     },
     {
       id: HOME_HEADING_ID.sponsor,
       label: "Sponsor",
-      // TODO:
-      routeName: localeRoute({ name: "index" }).name,
+      routeName: localeRoute({ name: "sponsors" }).name,
       disabled: !__FEATURE_SPONSOR_LIST__,
     },
   ].filter(it => !!it),
 );
+
+const cta = computed(() => {
+  const props = __FEATURE_TICKET_NAME_BADGE__
+    ? {
+        actionButton: {
+          label: t("ticket.details"),
+          link: localeRoute({ name: "ticket" }).path,
+        },
+        openerText: "Ticket",
+      } as const
+    : {
+        actionButton: {
+          label: t("volunteer.applyButtonShort"),
+          link: t("volunteer.applyLink"),
+          external: true,
+        },
+        openerText: "Volunteer",
+      } as const;
+
+  const content = __FEATURE_TICKET_NAME_BADGE__
+    ? locale.value === "ja"
+      ? JaCtaTicket
+      : EnCtaTicket
+    : locale.value === "ja"
+      ? JaCtaVolunteer
+      : EnCtaVolunteer;
+
+  return { props, content };
+});
 
 const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => {
@@ -70,8 +109,20 @@ const isShowedSpCta = computed(() => {
   return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
 });
 
+const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
+  "speaker",
+  "ticket",
+  "ticket-userId",
+  "ticket-userId-edit",
+  "sponsors",
+  "sponsors-sponsorId",
+];
+
 const isWidenContent = computed(() =>
-  ([localeRoute({ name: "speaker" })?.name] as string[]).includes(route.name?.toString() ?? ""),
+  WIDE_ROUTE_NAMES
+    .map(r => localeRoute(r as string)?.name as string | undefined)
+    .filter(it => !!it)
+    .includes(route.name?.toString() ?? ""),
 );
 
 // scroll behavior
@@ -121,13 +172,9 @@ watch(() => route.hash, async (hash) => {
       <div class="side-content right-menu">
         <div v-if="!isShowedSpCta" class="nav-menu">
           <VFCta
-            :action-button="{
-              label: t('volunteer.applyButtonShort'),
-              link: t('volunteer.applyLink'),
-              external: true,
-            }"
+            :action-button="cta.props.actionButton"
           >
-            <component :is="locale === 'ja' ? JaCtaVolunteer : EnCtaVolunteer" />
+            <component :is="cta.content" />
           </VFCta>
         </div>
       </div>
@@ -145,16 +192,8 @@ watch(() => route.hash, async (hash) => {
     <!-- MEMO: 他のCTAを追加する場合はここに追加 -->
 
     <Transition>
-      <VFSpCta
-        v-if="isShowedSpCta"
-        opener-text="Volunteer"
-        :action-button="{
-          label: t('volunteer.applyButtonShort'),
-          link: t('volunteer.applyLink'),
-          external: true,
-        }"
-      >
-        <component :is="locale === 'ja' ? JaCtaVolunteer : EnCtaVolunteer" />
+      <VFSpCta v-if="isShowedSpCta" v-bind="cta.props">
+        <component :is="cta.content" />
       </VFSpCta>
     </Transition>
   </div>

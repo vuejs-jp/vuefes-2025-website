@@ -3,7 +3,9 @@ import { SESSION_SPEAKERS as enSessionSpeakers, PANEL_DISCUSSION_SPEAKERS as enP
 import { SESSION_SPEAKERS as jaSessionSpeakers, PANEL_DISCUSSION_SPEAKERS as jaPanelSpeakers } from "../../../i18n/ja/speakers";
 import SpeakerCard from "./_components/SpeakerCard.vue";
 import { VFSection, JaSpeaker, EnSpeaker, JaPanelDiscussion, EnPanelDiscussion } from "#components";
-import { computed, useI18n } from "#imports";
+import { computed, defineRouteRules, useI18n } from "#imports";
+
+defineRouteRules({ prerender: true });
 
 const { t, locale } = useI18n();
 
@@ -13,7 +15,8 @@ const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : j
 
 <template>
   <div id="pages-speakers">
-    <h1>{{ t("speakers.title") }}</h1>
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+    <h1>Speaker</h1>
 
     <VFSection :title="t('speakers.sessions.title')" wide>
       <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
