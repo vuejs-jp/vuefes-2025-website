@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, useAuth, useI18n, useLocaleRoute } from "#imports";
+import { definePageMeta, navigateTo, ref, useAuth, useI18n, useLocaleRoute } from "#imports";
 import {
   VFButton,
   VFSection,
@@ -14,6 +14,10 @@ import {
   EnFaq,
   JaFaq,
 } from "#components";
+
+definePageMeta({
+  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
+});
 
 const { signIn, status, data } = useAuth();
 const { t, locale } = useI18n();

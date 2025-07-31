@@ -17,12 +17,17 @@ import {
   useSeoMeta,
   useTemplateRef,
   useRoute,
+  definePageMeta,
 } from "#imports";
 
 import type { FormFieldStates, FormSubmitEvent } from "~/components/form/VFForm.vue";
 import type { VFFile } from "~/components/form/VFFileInput.vue";
 import { VFFileInput, VFForm, VFNameBadgePreview, VFSection, VFToast } from "#components";
 import { useToast } from "~/components/toast/VFToast.vue";
+
+definePageMeta({
+  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
+});
 
 const { t } = useI18n();
 const title = () => `${t("nuxtSiteConfig.name")} %separator %s`;
