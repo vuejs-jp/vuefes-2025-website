@@ -3,7 +3,7 @@ import type { Sponsor } from "../sponsor";
 const SPONSORS_PLATINA: Sponsor[] = [
   {
     name: "弁護士ドットコム株式会社",
-    logoImageUrl: "/images/sponsor-logo/platina/cloud-sign.svg",
+    logoImageUrl: "/images/sponsor-logo/platina/cloud-sign.png",
     logoImageAlt: "CLOUDSIGN powered by 弁護士ドットコム",
     linkUrl: "https://www.bengo4.com/corporate/",
     plan: "platina",
@@ -12,7 +12,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
   },
   {
     name: "株式会社ヤプリ",
-    logoImageUrl: "/images/sponsor-logo/platina/yappli.svg",
+    logoImageUrl: "/images/sponsor-logo/platina/yappli.png",
     logoImageAlt: "株式会社ヤプリロゴ",
     linkUrl: "https://yappli.co.jp/",
     plan: "platina",
@@ -21,7 +21,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
   },
   {
     name: "株式会社リンクアンドモチベーション",
-    logoImageUrl: "/images/sponsor-logo/platina/link-and-motivation.svg",
+    logoImageUrl: "/images/sponsor-logo/platina/link-and-motivation.png",
     logoImageAlt: "株式会社リンクアンドモチベーションのシンボルと文字が組み合わさったロゴ",
     linkUrl: "https://www.lmi.ne.jp/",
     plan: "platina",
@@ -30,7 +30,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
   },
   {
     name: "ユニークビジョン株式会社",
-    logoImageUrl: "/images/sponsor-logo/platina/unique-vision.svg",
+    logoImageUrl: "/images/sponsor-logo/platina/unique-vision.png",
     logoImageAlt: "ユニークビジョン株式会社の企業ロゴ画像",
     linkUrl: "https://www.uniquevision.co.jp/",
     plan: "platina",
@@ -42,7 +42,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
 const SPONSORS_GOLD: Sponsor[] = [
   {
     name: "株式会社 コドモン",
-    logoImageUrl: "/images/sponsor-logo/gold/codmon.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/codmon.png",
     logoImageAlt: "株式会社コドモン",
     linkUrl: "https://www.codmon.com/",
     plan: "gold",
@@ -51,7 +51,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社スタディスト",
-    logoImageUrl: "/images/sponsor-logo/gold/studist.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/studist.png",
     logoImageAlt: "株式会社スタディストのロゴ",
     linkUrl: "https://studist.jp/",
     plan: "gold",
@@ -60,7 +60,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "LINEヤフー株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/line-yahoo.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/line-yahoo.png",
     logoImageAlt: "LINEヤフー株式会社",
     linkUrl: "https://www.lycorp.co.jp/ja/technology-design/",
     plan: "gold",
@@ -69,7 +69,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "STORES 株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/stores.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/stores.png",
     logoImageAlt: "ストアーズ",
     linkUrl: "https://jobs.st.inc/",
     plan: "gold",
@@ -78,7 +78,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社Finatextホールディングス",
-    logoImageUrl: "/images/sponsor-logo/gold/finatext-holdings.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/finatext-holdings.png",
     logoImageAlt: "株式会社Finatextホールディングスのロゴ",
     linkUrl: "https://hd.finatext.com/",
     plan: "gold",
@@ -87,7 +87,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "KINTOテクノロジーズ株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/kinto-technologies.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/kinto-technologies.png",
     logoImageAlt: "KINTOテクノロジーズ　ロゴ",
     linkUrl: "https://www.kinto-technologies.com/",
     plan: "gold",
@@ -96,7 +96,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社プレイド",
-    logoImageUrl: "/images/sponsor-logo/gold/plaid.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/plaid.png",
     logoImageAlt: "株式会社プレイド",
     linkUrl: "https://plaid.co.jp/",
     plan: "gold",
@@ -105,7 +105,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "ストックマーク株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/stockmark.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/stockmark.png",
     logoImageAlt: "Stockmark Inc.",
     linkUrl: "https://stockmark.co.jp/",
     plan: "gold",
@@ -114,7 +114,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "フューチャーアーキテクト株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/future-architect.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/future-architect.png",
     logoImageAlt: "フューチャーアーキテクト株式会社",
     linkUrl: "https://www.future.co.jp/architect/",
     plan: "gold",
@@ -123,7 +123,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社GENEROSITY",
-    logoImageUrl: "/images/sponsor-logo/gold/generosity.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/generosity.png",
     logoImageAlt: "株式会社GENEROSITY",
     linkUrl: "https://generosity.co.jp",
     plan: "gold",
@@ -132,7 +132,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "HENNGE株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/hennge.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/hennge.png",
     logoImageAlt: "白い背景に、縦に配置されたHENNGEのロゴと文字が黒でシンプルかつモダンなデザインです。",
     linkUrl: "https://hennge.com/jp/",
     plan: "gold",
@@ -166,7 +166,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社一休",
-    logoImageUrl: "/images/sponsor-logo/gold/ikkyu.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/ikkyu.png",
     logoImageAlt: "",
     linkUrl: "",
     plan: "gold",
@@ -175,7 +175,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "ソーシャルデータバンク株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/social-databank.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/social-databank.png",
     logoImageAlt: "ソーシャルデータバンク株式会社",
     linkUrl: "https://social-db.co.jp",
     plan: "gold",
@@ -184,7 +184,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Tebiki株式会社",
-    logoImageUrl: "/images/sponsor-logo/gold/tebiki.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/tebiki.png",
     logoImageAlt: "Tebiki株式会社",
     linkUrl: "https://tebiki.co.jp/",
     plan: "gold",
@@ -202,7 +202,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   // },
   {
     name: "株式会社キャリアデザインセンター",
-    logoImageUrl: "/images/sponsor-logo/gold/career-design-center.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/career-design-center.png",
     logoImageAlt: "Direct type",
     linkUrl: "https://directtype.jp/?utm_source=event&utm_medium=banner&utm_campaign=tech_event_251025",
     plan: "gold",
@@ -211,7 +211,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社アンドパッド",
-    logoImageUrl: "/images/sponsor-logo/gold/andpad.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/andpad.png",
     logoImageAlt: "アンドパッド ロゴ",
     linkUrl: "https://engineer.andpad.co.jp/",
     plan: "gold",
@@ -220,7 +220,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社mov",
-    logoImageUrl: "/images/sponsor-logo/gold/mov.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/mov.png",
     logoImageAlt: "株式会社mov",
     linkUrl: "https://mov.am/",
     plan: "gold",
@@ -229,7 +229,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社ビザスク",
-    logoImageUrl: "/images/sponsor-logo/gold/visasq.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/visasq.png",
     logoImageAlt: "ビザスク",
     linkUrl: "https://corp.visasq.co.jp/",
     plan: "gold",
@@ -238,7 +238,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "株式会社リブセンス",
-    logoImageUrl: "/images/sponsor-logo/gold/tenshoku-draft.svg",
+    logoImageUrl: "/images/sponsor-logo/gold/tenshoku-draft.png",
     logoImageAlt: "転職ドラフト",
     linkUrl: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=vuefes2025",
     plan: "gold",
@@ -250,7 +250,7 @@ const SPONSORS_GOLD: Sponsor[] = [
 const SPONSORS_SILVER: Sponsor[] = [
   {
     name: "株式会社メイツ",
-    logoImageUrl: "/images/sponsor-logo/silver/mates.svg",
+    logoImageUrl: "/images/sponsor-logo/silver/mates.png",
     logoImageAlt: "株式会社メイツ | 教育のアップデートを目指す",
     linkUrl: "https://mates-app.jp/",
     plan: "silver",
@@ -259,7 +259,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "合同会社DMM.com",
-    logoImageUrl: "/images/sponsor-logo/silver/dmm-com.svg",
+    logoImageUrl: "/images/sponsor-logo/silver/dmm-com.png",
     logoImageAlt: "DMM.com",
     linkUrl: "https://dmm-corp.com/",
     plan: "silver",
@@ -268,7 +268,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "株式会社 アイスタイル",
-    logoImageUrl: "/images/sponsor-logo/silver/istyle.svg",
+    logoImageUrl: "/images/sponsor-logo/silver/istyle.png",
     logoImageAlt: "株式会社アイスタイル",
     linkUrl: "https://www.istyle.co.jp/",
     plan: "silver",
@@ -277,7 +277,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "CodeRabbit",
-    logoImageUrl: "/images/sponsor-logo/silver/code-rabbit.svg",
+    logoImageUrl: "/images/sponsor-logo/silver/code-rabbit.png",
     logoImageAlt: "CodeRabbit",
     linkUrl: "",
     plan: "silver",
@@ -289,7 +289,7 @@ const SPONSORS_SILVER: Sponsor[] = [
 const SPONSORS_BRONZE: Sponsor[] = [
   {
     name: "Sentry",
-    logoImageUrl: "/images/sponsor-logo/bronze/sentry.svg",
+    logoImageUrl: "/images/sponsor-logo/bronze/sentry.png",
     logoImageAlt: "Sentry Logo",
     linkUrl: "https://sentry.ichizoku.io/",
     plan: "bronze",
@@ -298,7 +298,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "合同会社 ザウエル",
-    logoImageUrl: "/images/sponsor-logo/bronze/zauel-llc.svg",
+    logoImageUrl: "/images/sponsor-logo/bronze/zauel-llc.png",
     logoImageAlt: "合同会社ザウエル",
     linkUrl: "https://zauel.co.jp",
     plan: "bronze",
@@ -307,7 +307,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "株式会社サイバーエージェント",
-    logoImageUrl: "/images/sponsor-logo/bronze/cyber-agent.svg",
+    logoImageUrl: "/images/sponsor-logo/bronze/cyber-agent.png",
     logoImageAlt: "株式会社サイバーエージェント",
     linkUrl: "https://www.cyberagent.co.jp/",
     plan: "bronze",
@@ -316,7 +316,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "株式会社IKI",
-    logoImageUrl: "/images/sponsor-logo/bronze/iki.svg",
+    logoImageUrl: "/images/sponsor-logo/bronze/iki.png",
     logoImageAlt: "株式会社IKI",
     linkUrl: "https://iki-inc.net",
     plan: "bronze",
@@ -325,7 +325,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "株式会社Future Techno Developers",
-    logoImageUrl: "/images/sponsor-logo/bronze/future-techno-developers.svg",
+    logoImageUrl: "/images/sponsor-logo/bronze/future-techno-developers.png",
     logoImageAlt: "株式会社Future Techno Developers",
     linkUrl: "https://www.ftechno-dev.com/",
     plan: "bronze",
@@ -334,7 +334,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "株式会社クイック",
-    logoImageUrl: "/images/sponsor-logo/bronze/quick.svg",
+    logoImageUrl: "/images/sponsor-logo/bronze/quick.png",
     logoImageAlt: "総合人材サービス会社「株式会社クイック」のロゴ。\n当社のシンボルマークのモチーフは「人」。“日本の人事部”を標榜する株式会社クイック、また“世界の人事部”をビジョンに掲げるクイックグループの象徴と言えます。ゆとりと豊かさを感じさせるソフトなフォルムには、時代にフィットするしなやかな感性と未来への確かな飛躍が託されています。",
     linkUrl: "https://quick-wpd.notion.site/",
     plan: "bronze",
@@ -347,7 +347,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
 const SPONSORS_OPTION: Sponsor[] = [
   // {
   //   name: "Sentry",
-  //   logoImageUrl: "/images/sponsor-logo/bronze/sentry.svg",
+  //   logoImageUrl: "/images/sponsor-logo/bronze/sentry.png",
   //   logoImageAlt: "Sentry Logo",
   //   linkUrl: "https://sentry.ichizoku.io/",
   //   plan: "bronze",

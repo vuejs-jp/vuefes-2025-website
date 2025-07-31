@@ -24,42 +24,50 @@ const localeRoute = useLocaleRoute();
   >
     <div class="sponsor-list">
       <VFHeading>{{ t('sponsors.platinaSponsor') }}</VFHeading>
-      <SponsorGrid
-        :sponsors="locale === 'ja' ? JaSponsors.PLATINA : EnSponsors.PLATINA"
-        :columns="bp === 'mobile' ? 1 : 2"
-        gap="2rem"
-        image-only
-      />
+      <div class="sponsor-grid-container">
+        <SponsorGrid
+          :sponsors="locale === 'ja' ? JaSponsors.PLATINA : EnSponsors.PLATINA"
+          :columns="bp === 'mobile' ? 1 : 2"
+          gap="24px"
+          image-only
+        />
+      </div>
     </div>
 
     <div class="sponsor-list">
       <VFHeading>{{ t('sponsors.goldSponsor') }}</VFHeading>
-      <SponsorGrid
-        :sponsors="locale === 'ja' ? JaSponsors.GOLD : EnSponsors.GOLD"
-        :columns="bp === 'mobile' ? 2 : 3"
-        gap="2rem"
-        image-only
-      />
+      <div class="sponsor-grid-container">
+        <SponsorGrid
+          :sponsors="locale === 'ja' ? JaSponsors.GOLD : EnSponsors.GOLD"
+          :columns="bp === 'mobile' ? 2 : 3"
+          gap="24px"
+          image-only
+        />
+      </div>
     </div>
 
     <div class="sponsor-list">
       <VFHeading>{{ t('sponsors.silverSponsor') }}</VFHeading>
-      <SponsorGrid
-        :sponsors="locale === 'ja' ? JaSponsors.SILVER : EnSponsors.SILVER"
-        :columns="bp === 'mobile' ? 2 : 4"
-        gap="2rem"
-        image-only
-      />
+      <div class="sponsor-grid-container">
+        <SponsorGrid
+          :sponsors="locale === 'ja' ? JaSponsors.SILVER : EnSponsors.SILVER"
+          :columns="bp === 'mobile' ? 2 : 4"
+          gap="24px"
+          image-only
+        />
+      </div>
     </div>
 
     <div class="sponsor-list">
       <VFHeading>{{ t('sponsors.bronzeSponsor') }}</VFHeading>
-      <SponsorGrid
-        :sponsors="locale === 'ja' ? JaSponsors.BRONZE : EnSponsors.BRONZE"
-        :columns="bp === 'mobile' ? 2 : 4"
-        gap="2rem"
-        image-only
-      />
+      <div class="sponsor-grid-container">
+        <SponsorGrid
+          :sponsors="locale === 'ja' ? JaSponsors.BRONZE : EnSponsors.BRONZE"
+          :columns="bp === 'mobile' ? 2 : 4"
+          gap="24px"
+          image-only
+        />
+      </div>
     </div>
 
     <div class="view-all-sponsors">
@@ -84,5 +92,15 @@ const localeRoute = useLocaleRoute();
   display: grid;
   place-items: center;
   margin-top: 32px;
+}
+
+.sponsor-grid-container {
+  margin-top: 32px;
+  margin-bottom: 40px;
+
+  @media (--mobile) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 </style>

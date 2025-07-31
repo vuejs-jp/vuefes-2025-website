@@ -63,9 +63,9 @@ defineOgImage({
           </NuxtLink>
         </div>
         <NuxtLink :to="currentSponsor.linkUrl" external target="_blank" style="text-decoration: none;">
-          <h3 class="name">
+          <h2 class="name">
             {{ currentSponsor.name }}
-          </h3>
+          </h2>
         </NuxtLink>
       </div>
       <div class="sponsor-tags">
@@ -167,6 +167,7 @@ defineOgImage({
 .sponsor-images{
   display: grid;
   width: fit-content;
+  max-width: 400px;
   margin: 0 auto;
   .name{
     margin-top: 1rem;

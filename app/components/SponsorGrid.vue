@@ -65,6 +65,10 @@ const localeRoute = useLocaleRoute();
 .sponsor-name{
   font-family: IBMPlexSansJP-Bold;
   font-size: 1.125rem;
+
+  @media (--mobile) {
+    font-size: 1rem;
+  }
 }
 
 .sponsor-link,

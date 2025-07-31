@@ -14,13 +14,14 @@ const bp = useBreakpoint();
 
 <template>
   <div id="pages-sponsors">
-    <h1>{{ t("sponsors.title") }}</h1>
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+    <h1>Sponsor</h1>
 
     <VFSection :title="t('sponsors.platinaSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.PLATINA : EnSponsors.PLATINA"
-        :columns="2"
-        gap="2rem"
+        :columns="bp === 'mobile' ? 1 : 2"
+        :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection>
 
@@ -28,6 +29,7 @@ const bp = useBreakpoint();
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.GOLD : EnSponsors.GOLD"
         :columns="bp === 'mobile' ? 2 : 3"
+        :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection>
 
@@ -35,7 +37,7 @@ const bp = useBreakpoint();
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.SILVER : EnSponsors.SILVER"
         :columns="bp === 'mobile' ? 2 : 4"
-        gap="2rem"
+        :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection>
 
@@ -43,7 +45,7 @@ const bp = useBreakpoint();
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.BRONZE : EnSponsors.BRONZE"
         :columns="bp === 'mobile' ? 2 : 4"
-        gap="2rem"
+        :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection>
 
@@ -51,7 +53,7 @@ const bp = useBreakpoint();
       <SponsorGrid
         :items="locale === 'ja' ? JaSponsors.OPTION : EnSponsors.OPTION"
         :columns="bp === 'mobile' ? 2 : 4"
-        gap="2rem"
+        :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection> -->
   </div>
