@@ -5,7 +5,6 @@ import emojiRegex from "emoji-regex";
 import { useLocaleRoute } from "@typed-router";
 import {
   computed,
-  definePageMeta,
   navigateTo,
   onMounted,
   ref,
@@ -30,10 +29,6 @@ const title = () => `${t("nuxtSiteConfig.name")} %separator %s`;
 useSeoMeta({
   ogTitle: title,
   title,
-});
-
-definePageMeta({
-  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
 });
 
 const { data: user } = useAuth();

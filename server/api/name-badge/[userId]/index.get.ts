@@ -11,9 +11,6 @@ import { createError, useRuntimeConfig } from "#imports";
 import { usePeatixApi } from "~~/server/peatix-api/usePeatixApi";
 
 export default defineEventHandler(async (event) => {
-  const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
-  if (!__FEATURE_TICKET_NAME_BADGE__) return;
-
   const userId = getRouterParam(event, "userId");
 
   // Authorization

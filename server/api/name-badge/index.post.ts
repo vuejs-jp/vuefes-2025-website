@@ -27,9 +27,6 @@ const schema = z.object({
 });
 
 export default defineEventHandler(async (event) => {
-  const { __FEATURE_TICKET_NAME_BADGE__ } = useRuntimeConfig();
-  if (!__FEATURE_TICKET_NAME_BADGE__) return;
-
   // Authorization
   const session = await getServerSession(event);
   if (!session || !session.user || !session.userId || !session.user.email) {
