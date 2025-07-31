@@ -193,7 +193,8 @@ export default defineNuxtConfig({
       addDefaultCallbackUrl: true,
     },
     sessionRefresh: {
-      enablePeriodically: true,
+      // The session will be refreshed every 5 second.
+      enablePeriodically: 5000,
       enableOnWindowFocus: true,
     },
   },
