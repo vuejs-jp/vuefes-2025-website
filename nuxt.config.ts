@@ -47,7 +47,11 @@ export default defineNuxtConfig({
     githubClientSecret: process.env.OAUTH_GITHUB_CLIENT_SECRET_ID,
     googleClientId: process.env.OAUTH_GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
-    authOrigin: process.env.NODE_ENV === "production" ? `${process.env.DEPLOY_PRIME_URL}/2025/api/auth` : `http://localhost:${process.env.PORT || 3000}/api/auth`,
+    authOrigin: process.env.NODE_ENV === "production"
+      ? process.env.CONTEXT === "production"
+        ? "https://vuefes.jp/2025/api/auth"
+        : `${process.env.DEPLOY_PRIME_URL}/2025/api/auth`
+      : `http://localhost:${process.env.PORT || 3000}/api/auth`,
 
     // for Peatix API
     peatixApiOrigin: process.env.PEATIX_API_ORIGIN,
@@ -60,11 +64,11 @@ export default defineNuxtConfig({
     __FEATURE_TICKET_NAME_BADGE__: !["0", undefined].includes(process.env.FEATURE_TICKET_NAME_BADGE), //  2025-08-xx ~
     __FEATURE_SPONSOR_LIST__: !["0", undefined].includes(process.env.FEATURE_SPONSOR_LIST), // ?
 
-    siteUrl: process.env.CONTEXT === "branch-deploy"
-      ? "https://main--vuefes-2025.netlify.app/2025/"
-      : process.env.NODE_ENV === "production"
+    siteUrl: process.env.NODE_ENV === "production"
+      ? process.env.CONTEXT === "production"
         ? "https://vuefes.jp/2025/"
-        : "http://localhost:3000/",
+        : `${process.env.DEPLOY_PRIME_URL}/2025/`
+      : "http://localhost:3000/",
 
     public: {
       contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
@@ -179,7 +183,11 @@ export default defineNuxtConfig({
 
   auth: {
     disableServerSideAuth: false,
-    baseURL: process.env.NODE_ENV === "production" ? `${process.env.DEPLOY_PRIME_URL}/2025/api/auth` : `http://localhost:${process.env.PORT || 3000}/api/auth`,
+    baseURL: process.env.NODE_ENV === "production"
+      ? process.env.CONTEXT === "production"
+        ? "https://vuefes.jp/2025/api/auth"
+        : `${process.env.DEPLOY_PRIME_URL}/2025/api/auth`
+      : `http://localhost:${process.env.PORT || 3000}/api/auth`,
     provider: {
       type: "authjs",
       addDefaultCallbackUrl: true,
