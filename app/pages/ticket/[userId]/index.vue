@@ -44,7 +44,7 @@ useSeoMeta({
 });
 
 function handleClickXIcon() {
-  const shareUrl = `${window.location.href}/`;
+  const shareUrl = window.location.href.endsWith("/") ? window.location.href : `${window.location.href}/`;
   const shareText = t("nameBadge.shareText", { link: shareUrl });
   const url = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
   const _ = window.open(url, "_blank") ?? navigateTo(url, { external: true });
