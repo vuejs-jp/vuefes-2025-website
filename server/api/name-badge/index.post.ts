@@ -100,7 +100,7 @@ export default defineEventHandler(async (event) => {
       // all upsert
       const data = {
         email: session.user.email,
-        avatarUrl: `${r2Endpoint}/${process.env.CLOUDFLARE_R2_BUCKET_NAME}/${objectName}`,
+        avatarUrl: encodeURI(`${r2Endpoint}/${process.env.CLOUDFLARE_R2_BUCKET_NAME}/${objectName}`),
         imageFileName: validatedBody.data.avatarImageName,
         displayName: validatedBody.data.name,
         receiptId: validatedBody.data.salesId,
