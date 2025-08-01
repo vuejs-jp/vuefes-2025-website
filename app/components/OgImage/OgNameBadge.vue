@@ -88,9 +88,8 @@ const variants = computed(() => {
       id="name-badge-name"
       :style="{
         position: 'absolute',
-        top: '36.5%',
-        left: '64.5%',
-        transform: 'translate(-50%, -50%)',
+        top: '33.5%',
+        left: '60%',
         color: variants.color,
         fontSize: '1.5rem',
         fontWeight: 'bold',
