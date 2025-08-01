@@ -91,7 +91,7 @@ export default defineEventHandler(async (event) => {
 
     const command = new PutObjectCommand({
       Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
-      Key: encodeURI(objectName),
+      Key: encodeURIComponent(objectName),
       ContentType: validatedBody.data.avatarImageBlob.type,
       Body: Buffer.from(await validatedBody.data.avatarImageBlob.arrayBuffer()),
     });
