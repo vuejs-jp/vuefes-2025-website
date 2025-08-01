@@ -42,7 +42,7 @@ if (__FEATURE_TICKET_NAME_BADGE__) {
       <component :is="SectionStudentSupport" v-if="SectionStudentSupport" />
       <SectionVolunteer />
       <SectionSponsors v-if="SectionSponsors" />
-      <SectionSponsorWanted v-if="!SectionSponsors" />
+      <SectionSponsorWanted />
       <SectionAccess />
       <SectionMessage />
       <SectionContact />
