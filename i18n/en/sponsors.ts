@@ -43,7 +43,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   {
     name: "株式会社 コドモン",
     logoImageUrl: "/images/sponsor-logo/gold/codmon.png",
-    logoImageAlt: "Kodomon Inc.",
+    logoImageAlt: "CoDMON, Inc.",
     linkUrl: "https://www.codmon.com/",
     plan: "gold",
     description: "With the mission of 'Making the environment surrounding children better through the power of technology,' we operate multiple businesses, including our flagship product 'CoDMON,' an ICT service for childcare and educational facilities. Our development team uses Vue.js / Nuxt.js for several products and features!",
@@ -52,7 +52,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   {
     name: "株式会社スタディスト",
     logoImageUrl: "/images/sponsor-logo/gold/studist.png",
-    logoImageAlt: "株式会社スタディストのロゴ",
+    logoImageAlt: "Studist Corporation logo",
     linkUrl: "https://studist.jp/",
     plan: "gold",
     description: `Studist specializes in lean operations, offering the "Teachme Biz" platform for efficient manual management and productivity enhancement. This tool streamlines information sharing, simplifies work processes, and supports businesses in achieving operational excellence and sustainable growth.`,
@@ -260,7 +260,7 @@ const SPONSORS_SILVER: Sponsor[] = [
     name: "CodeRabbit",
     logoImageUrl: "/images/sponsor-logo/silver/code-rabbit.png",
     logoImageAlt: "CodeRabbit",
-    linkUrl: "",
+    linkUrl: "https://www.coderabbit.ai",
     plan: "silver",
     description: "CodeRabbit slashes code review time and catches bugs faster. It hooks into GitHub and GitLab to auto-review PRs. Free VS Code extension available.",
     id: "CodeRabbit",
