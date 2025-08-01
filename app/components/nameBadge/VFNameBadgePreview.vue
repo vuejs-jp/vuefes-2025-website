@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted, ref, useTemplateRef, watchEffect } from "vue";
 
 const {
   name,
@@ -37,124 +37,224 @@ const variants = computed(() => {
   }
 });
 
-const isSafari = ref(false);
+// const isSafari = ref(false);
 const isTouchDevice = ref(false);
+const isFocused = ref(false);
+const isHovering = ref(false);
+
+const cardOuter = useTemplateRef<HTMLElement | null>("cardOuter");
+const cardWrapper = useTemplateRef<HTMLElement | null>("cardWrapper");
+
+function focus() {
+  if (isTouchDevice.value) return;
+  isFocused.value = true;
+}
+
+function unfocus() {
+  if (isTouchDevice.value) return;
+  isFocused.value = false;
+}
+
+const ratioX = ref(0);
+const ratioY = ref(0);
+const posX = ref(0);
+const posY = ref(0);
+const mx = ref(0);
+const my = ref(0);
+const rx = ref(0);
+const ry = ref(0);
+
+function reset() {
+  ratioX.value = 0;
+  ratioY.value = 0;
+  posX.value = 0;
+  posY.value = 0;
+  mx.value = 0;
+}
+
 onMounted(() => {
-  isSafari.value = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  // isSafari.value = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   if (window.matchMedia("(hover: none)").matches) {
     isTouchDevice.value = true;
   }
 
-  const previewRoot = document.querySelector(".name-badge-preview");
-  const cardWrapper = document.querySelector(".base-name-badge-wrapper") as HTMLElement;
-  const backface = cardWrapper.querySelector(".card-face-back") as HTMLElement;
-  let rotationDegree = 0;
+  // const backface = cardWrapper.querySelector(".card-face-back") as HTMLElement;
+  // const rotationDegree = 0;
 
-  previewRoot?.addEventListener("pointermove", (event) => {
-    if (isTouchDevice.value) return;
-
-    if (!cardWrapper) return;
-
-    const { x, y } = event as PointerEvent;
-    const bounds = cardWrapper.getBoundingClientRect();
-    const pointerX = x - bounds.x;
-    const pointerY = y - bounds.y;
-    const ratioX = pointerX / bounds.width;
-    const ratioY = pointerY / bounds.height;
-    cardWrapper.style.setProperty("--ratio-x", `${ratioX}`);
-    cardWrapper.style.setProperty("--ratio-y", `${ratioY}`);
-
-    const posX = 50 + (ratioX - 0.5) * 28;
-    const posY = 50 + (ratioY - 0.5) * 28;
-    cardWrapper.style.setProperty("--posx", `${posX}%`);
-    cardWrapper.style.setProperty("--posy", `${posY}%`);
-
-    const mX = ratioX * 100;
-    const mY = ratioY * 100;
-    cardWrapper.style.setProperty("--mx", `${mX}%`);
-    cardWrapper.style.setProperty("--my", `${mY}%`);
-
-    const rX = (ratioX - 0.5) * -30;
-    const rY = (ratioY - 0.5) * 50;
-    cardWrapper.style.setProperty("--rx", `${rX}deg`);
-    cardWrapper.style.setProperty("--ry", `${rY}deg`);
+  watchEffect(() => {
+    if (!cardWrapper.value) return;
+    if (isFocused.value) {
+      cardWrapper.value.classList.add("focused");
+    } else {
+      cardWrapper.value.classList.remove("focused");
+    }
   });
 
-  // flip
-  cardWrapper.addEventListener("click", () => {
+  cardOuter.value!.addEventListener("pointerleave", () => {
+    if (isFocused.value) return;
+    isHovering.value = false;
+    reset();
+  });
+
+  cardOuter.value!.addEventListener("pointermove", (event) => {
     if (isTouchDevice.value) return;
-    // NOTE: Safari has quirky animation support, so we're not handling it
-    if (isSafari.value) return;
+    if (!cardWrapper.value) return;
 
-    cardWrapper.classList.add("flip-start");
-    cardWrapper.classList.toggle("focused");
+    isHovering.value = true;
+    const { x, y } = event as PointerEvent;
+    const bounds = cardWrapper.value.getBoundingClientRect();
+    const pointerX = x - bounds.x;
+    const pointerY = y - bounds.y;
+    ratioX.value = pointerX / bounds.width;
+    ratioY.value = pointerY / bounds.height;
 
-    // Hide highlight for 1.2 seconds
-    const highlight = cardWrapper.querySelector(".highlight") as HTMLElement;
-    const emboss = cardWrapper.querySelector(".emboss") as HTMLElement;
+    posX.value = 50 + (ratioX.value - 0.5) * 28;
+    posY.value = 50 + (ratioY.value - 0.5) * 28;
 
-    if (highlight) {
-      highlight.style.opacity = "0";
-      emboss.style.opacity = "0";
-      setTimeout(() => {
-        highlight.style.opacity = "";
-        emboss.style.opacity = "";
-      }, 1200);
+    mx.value = ratioX.value * 100;
+    my.value = ratioY.value * 100;
+
+    rx.value = (ratioX.value - 0.5) * -30;
+    ry.value = (ratioY.value - 0.5) * 50;
+  });
+
+  // Zoom
+  cardWrapper.value!.addEventListener("click", () => {
+    if (isTouchDevice.value) return;
+
+    if (isFocused.value) {
+      unfocus();
+    } else {
+      focus();
     }
 
-    // flip with gradually slower speed
-    const delays = [0, 500];
+    // cardWrapper.classList.add("flip-start");
 
-    const flipWithDelay = (index: number) => {
-      if (index >= delays.length) {
-        setTimeout(() => {
-          cardWrapper.classList.remove("flip-start");
-        }, 800); // Wait a bit after the last flip
-        return;
-      }
+    // Hide highlight for 1.2 seconds
+    // const highlight = cardWrapper.querySelector(".highlight") as HTMLElement;
+    // const emboss = cardWrapper.querySelector(".emboss") as HTMLElement;
 
-      setTimeout(() => {
-        rotationDegree += 180;
-        cardWrapper.style.setProperty("--rotation", `${rotationDegree}deg`);
-        backface.style.setProperty("--rotation", `${rotationDegree}deg`);
-        flipWithDelay(index + 1);
-      }, delays[index]);
-    };
+    // if (highlight) {
+    //   highlight.style.opacity = "0";
+    //   emboss.style.opacity = "0";
+    //   setTimeout(() => {
+    //     highlight.style.opacity = "";
+    //     emboss.style.opacity = "";
+    //   }, 1200);
+    // }
 
-    flipWithDelay(0);
+    // // flip with gradually slower speed
+    // const delays = [0, 500];
+
+    // const flipWithDelay = (index: number) => {
+    //   if (index >= delays.length) {
+    //     setTimeout(() => {
+    //       cardWrapper.classList.remove("flip-start");
+    //     }, 800); // Wait a bit after the last flip
+    //     return;
+    //   }
+
+    //   setTimeout(() => {
+    //     rotationDegree += 180;
+    //     cardWrapper.style.setProperty("--rotation", `${rotationDegree}deg`);
+    //     backface.style.setProperty("--rotation", `${rotationDegree}deg`);
+    //     flipWithDelay(index + 1);
+    //   }, delays[index]);
+    // };
+
+    // flipWithDelay(0);
   });
 });
 </script>
 
 <template>
-  <div class="name-badge-preview">
-    <div class="base-name-badge-wrapper" :style="{ width, height, aspectRatio }">
-      <img
-        :src="variants.baseImageUrl"
-        alt="Name Badge Preview"
-        class="base-name-badge card-face card-face-front"
-        :style="{ width, height, aspectRatio, backfaceVisibility: 'hidden' }"
-      />
-      <div class="card-face highlight" :style="{ width, height, aspectRatio }" />
-      <div class="card-face emboss" :style="{ width, height, aspectRatio }" />
-      <div class="card-face card-face-back" :style="{ width, height, aspectRatio }" />
+  <!-- eslint-disable-next-line vuejs-accessibility/no-static-element-interactions -->
+  <div
+    class="name-badge-preview-background"
+    :class="{ focused: isFocused }"
+    @click="unfocus"
+    @keydown.esc.prevent="unfocus"
+  />
+  <div
+    ref="cardOuter"
+    class="name-badge-preview-outer"
+    :class="{ focused: isFocused }"
+  >
+    <div class="name-badge-preview" :class="{ focused: isFocused }">
+      <div
+        ref="cardWrapper" class="base-name-badge-wrapper"
+        :class="{ hovering: isHovering || isFocused }"
+        :style="{
+          width,
+          height,
+          aspectRatio,
+          '--ratio-x': ratioX,
+          '--ratio-y': ratioY,
+          '--posx': `${posX}%`,
+          '--posy': `${posY}%`,
+          '--mx': `${mx}%`,
+          '--my': `${my}%`,
+          '--rx': `${rx}deg`,
+          '--ry': `${ry}deg`,
+        }"
+      >
+        <img
+          :src="variants.baseImageUrl"
+          alt="Name Badge Preview"
+          class="base-name-badge card-face card-face-front"
+          :style="{ width, height, aspectRatio, backfaceVisibility: 'hidden' }"
+        />
+        <div class="card-face highlight" :style="{ width, height, aspectRatio }" />
+        <div class="card-face emboss" :style="{ width, height, aspectRatio }" />
+        <div class="card-face card-face-back" :style="{ width, height, aspectRatio }" />
 
-      <img v-if="avatarImageUrl" id="avatar-image" :src="avatarImageUrl" alt="avatar" />
+        <img v-if="avatarImageUrl" id="avatar-image" :src="avatarImageUrl" alt="avatar" />
 
-      <div id="name-badge-name" :style="{ color: variants.color }">
-        {{ name }}
-      </div>
+        <div id="name-badge-name" :style="{ color: variants.color }">
+          {{ name }}
+        </div>
 
-      <div v-if="userRole==='Staff' && lang" id="name-badge-lang" :style="{ color: variants.color }">
-        {{ lang.toLocaleUpperCase() }}
+        <div v-if="userRole==='Staff' && lang" id="name-badge-lang" :style="{ color: variants.color }">
+          {{ lang.toLocaleUpperCase() }}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.name-badge-preview-background {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0002;
+  backdrop-filter: blur(1px);
+  transition: opacity 0.3s;
+
+  &.focused {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.name-badge-preview-outer {
+  padding: 1rem;
+  transition: transform 0.3s;
+
+  &.focused {
+    z-index: 2000;
+    transform: scale(1.7);
+  }
+}
+
 .name-badge-preview {
   position: relative;
+
   #avatar-image {
     position: absolute;
     top: 57.6%;
@@ -193,7 +293,7 @@ onMounted(() => {
   perspective: 1000px;
   --rotation: 0deg;
   transform: rotateY(var(--rotation));
-  transition: transform 0.6s;
+  transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 1rem;
 
   .highlight {
@@ -214,76 +314,62 @@ onMounted(() => {
     display: grid;
   }
 
-  &.focused {
-    transform: scale(1.7) rotateY(var(--rotation));
+  &.hovering:not(.flip-start) {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transform: rotateY(var(--rotation)) rotateX(var(--rx)) rotateY(var(--ry));
+    translate: calc((var(--ratio-x) - 0.5) * -5%) calc((var(--ratio-y) - 0.5) * -5%);
 
-    @media (hover: hover) {
-      &:hover:not(.flip-start) {
-        transform: scale(1.7) rotateY(var(--rotation)) rotateX(var(--rx)) rotateY(var(--ry));
-      }
+    & > .highlight {
+      background: radial-gradient(
+        circle at var(--mx) var(--my),
+        rgba(255, 255, 255, 0.1) 10%,
+        rgba(255, 255, 255, 0.1) 20%,
+        rgba(0, 0, 0, 0.1) 90%
+      );
+      mix-blend-mode: overlay;
+      transform: rotateX(calc(var(--rx) * -0.2)) rotateY(calc(var(--ry) * -0.2));
     }
-  }
 
-  @media (hover: hover) {
-    &:hover:not(.flip-start) {
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-      transition: transform 0.1s, box-shadow 0.3s;
-      transform: rotateY(var(--rotation)) rotateX(var(--rx)) rotateY(var(--ry));
-      translate: calc((var(--ratio-x) - 0.5) * -5%) calc((var(--ratio-y) - 0.5) * -5%);
+    & > .emboss {
+      background-blend-mode: exclusion, darken, color-dodge;
+      background-size: 400% 400%, 210% 210%, 210% 210%;
+      background-position:
+        calc(((var(--posx) - 50%) * -2.5) + 50%) calc(((var(--posy) - 50%) * -2.5) + 50%),
+        calc(((var(--posx) - 50%) * 1.5) + 50%) calc(((var(--posy) - 50%) * 1.5) + 50%),
+        calc(((var(--posx) - 50%) * 1.5) + 50%) calc(((var(--posy) - 50%) * 1.5) + 50%);
+      filter: brightness(.95) contrast(4) saturate(0.75);
 
-      & > .highlight {
-
-        background: radial-gradient(
-          circle at var(--mx) var(--my),
-          rgba(255, 255, 255, 0.1) 10%,
-          rgba(255, 255, 255, 0.1) 20%,
-          rgba(0, 0, 0, 0.1) 90%
+      &::before {
+        content: "";
+        z-index: 2;
+        grid-area: 1/1;
+        background-image: radial-gradient(
+          farthest-corner ellipse at calc(((var(--mx)) * 0.5) + 25%) calc(((var(--my)) * 0.5) + 25%),
+          rgba(100, 100, 100, .1) 5%,
+          rgba(50, 50, 50, .1) 15%,
+          /* rgba(100, 100, 100, .5) 5%,
+          rgba(50, 50, 50, .4) 15%,  */
+          rgba(0, 0, 0, .6) 30%
         );
-        mix-blend-mode: overlay;
-        transform: rotateX(calc(var(--rx) * -0.2)) rotateY(calc(var(--ry) * -0.2));
+        background-position: center;
+        background-size: 350% 350%;
+        mix-blend-mode: multiply;
       }
 
-      & > .emboss {
-        background-blend-mode: exclusion, darken, color-dodge;
-        background-size: 400% 400%, 210% 210%, 210% 210%;
+      &::after {
+        content: "";
+        grid-area: 1/1;
+        opacity: 0.1;
+        background-image: url("~/assets/images/noise/1.png");
+        background-color: var(--color-sub);
+        background-repeat: repeat;
+        background-size: 25% 25%, 400% 100%;
         background-position:
-          calc(((var(--posx) - 50%) * -2.5) + 50%) calc(((var(--posy) - 50%) * -2.5) + 50%),
-          calc(((var(--posx) - 50%) * 1.5) + 50%) calc(((var(--posy) - 50%) * 1.5) + 50%),
-          calc(((var(--posx) - 50%) * 1.5) + 50%) calc(((var(--posy) - 50%) * 1.5) + 50%);
-        filter: brightness(.95) contrast(4) saturate(0.75);
-
-        &::before {
-          content: "";
-          z-index: 2;
-          grid-area: 1/1;
-          background-image: radial-gradient(
-            farthest-corner ellipse at calc(((var(--mx)) * 0.5) + 25%) calc(((var(--my)) * 0.5) + 25%),
-            rgba(100, 100, 100, .1) 5%,
-            rgba(50, 50, 50, .1) 15%,
-            /* rgba(100, 100, 100, .5) 5%,
-            rgba(50, 50, 50, .4) 15%,  */
-            rgba(0, 0, 0, .6) 30%
-          );
-          background-position: center;
-          background-size: 350% 350%;
-          mix-blend-mode: multiply;
-        }
-
-        &::after {
-          content: "";
-          grid-area: 1/1;
-          opacity: 0.1;
-          background-image: url("~/assets/images/noise/1.png");
-          background-color: var(--color-sub);
-          background-repeat: repeat;
-          background-size: 25% 25%, 400% 100%;
-          background-position:
-            center,
-            calc(((var(--posx) - 50%) * -2.5) + 50%) calc(((var(--posy) - 50%) * -2.5) + 50%);
-          filter: brightness(1) contrast(1) saturate(0);
-          mix-blend-mode: soft-light;
-          background-blend-mode: multiply;
-        }
+          center,
+          calc(((var(--posx) - 50%) * -2.5) + 50%) calc(((var(--posy) - 50%) * -2.5) + 50%);
+        filter: brightness(1) contrast(1) saturate(0);
+        mix-blend-mode: soft-light;
+        background-blend-mode: multiply;
       }
     }
   }
