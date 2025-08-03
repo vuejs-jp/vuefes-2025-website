@@ -96,6 +96,16 @@ export default defineNuxtConfig({
 
   plugins: ["~/plugins/v-click-outside.ts"],
 
+  nitro: {
+    experimental: {
+      tasks: true,
+    },
+    scheduledTasks: {
+    // UTC 16:00 => JST 01:00
+      "0 16 * * *": ["db:sync-role"],
+    },
+  },
+
   vite: {
     define: {
       __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?

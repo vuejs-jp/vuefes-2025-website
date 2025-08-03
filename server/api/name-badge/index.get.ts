@@ -10,6 +10,7 @@ import { getServerSession } from "#auth";
 
 import { createError, useRuntimeConfig } from "#imports";
 import { usePeatixApi } from "~~/server/peatix-api/usePeatixApi";
+import { TicketName } from "~~/server/peatix-api/constant";
 
 export default defineEventHandler(async (event) => {
   // Authorization
@@ -49,11 +50,11 @@ export default defineEventHandler(async (event) => {
     if (sale) {
       const role = (() => {
         switch (sale.ticketName) {
-          case "【早割】一般チケット／[Early Bird] General Ticket":
-          case "一般チケット／General Ticket":
+          case TicketName.EaryBirdGeneral:
+          case TicketName.General:
             return "Attendee";
-          case "【早割】一般＋アフターパーティーチケット／[Early Bird] General + After Party Ticket":
-          case "一般＋アフターパーティーチケット／General + After Party Ticket":
+          case TicketName.EaryBirdGeneralParty:
+          case TicketName.GeneralParty:
             return "Attendee+Party";
           default:
             return null;
