@@ -254,6 +254,7 @@ onMounted(() => {
 
 .name-badge-preview {
   position: relative;
+  user-select: none;
 
   #avatar-image {
     position: absolute;
@@ -263,6 +264,7 @@ onMounted(() => {
     height: 31.7%;
     border-radius: 50%;
     backface-visibility: hidden;
+    user-select: none;
   }
 
   #name-badge-name {
@@ -274,6 +276,7 @@ onMounted(() => {
     color: #333;
     font-family: JetBrainsMono-Regular, IBMPlexSansJP-Regular;
     backface-visibility: hidden;
+    user-select: none;
   }
 
   #name-badge-lang {
@@ -285,6 +288,7 @@ onMounted(() => {
     color: #333;
     font-family: JetBrainsMono-Regular, IBMPlexSansJP-Regular;
     backface-visibility: hidden;
+    user-select: none;
   }
 }
 
