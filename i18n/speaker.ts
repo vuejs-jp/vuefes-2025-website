@@ -4,6 +4,7 @@ export interface Speaker {
   attendedIndex?: number;
   affiliation?: string;
   title?: string;
+  talkOverview?: string;
 
   socialUrls?: {
     x?: string;

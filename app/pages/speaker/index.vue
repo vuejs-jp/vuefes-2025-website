@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { SESSION_SPEAKERS as enSessionSpeakers, PANEL_DISCUSSION_SPEAKERS as enPanelSpeakers } from "../../../i18n/en/speakers";
-import { SESSION_SPEAKERS as jaSessionSpeakers, PANEL_DISCUSSION_SPEAKERS as jaPanelSpeakers } from "../../../i18n/ja/speakers";
+import { SESSION_SPEAKERS as enSessionSpeakers, LT_SPEAKERS as enLT_Speakers, PANEL_DISCUSSION_SPEAKERS as enPanelSpeakers } from "../../../i18n/en/speakers";
+import { SESSION_SPEAKERS as jaSessionSpeakers, LT_SPEAKERS as jaLT_Speakers, PANEL_DISCUSSION_SPEAKERS as jaPanelSpeakers } from "../../../i18n/ja/speakers";
 import SpeakerCard from "./_components/SpeakerCard.vue";
 import { VFSection, JaSpeaker, EnSpeaker, JaPanelDiscussion, EnPanelDiscussion } from "#components";
 import { computed, defineRouteRules, useI18n } from "#imports";
@@ -10,6 +10,7 @@ defineRouteRules({ prerender: true });
 const { t, locale } = useI18n();
 
 const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers : jaSessionSpeakers);
+const ltSpeakers = computed(() => locale.value === "en" ? enLT_Speakers : jaLT_Speakers);
 const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : jaPanelSpeakers);
 </script>
 
@@ -23,6 +24,14 @@ const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : j
 
       <ul class="speakers">
         <SpeakerCard v-for="speaker in sessionSpeakers" :key="speaker.name" :speaker="speaker" />
+      </ul>
+    </VFSection>
+
+    <VFSection :title="t('speakers.lightningTalks.title')" wide>
+      <!-- <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" /> -->
+
+      <ul class="speakers">
+        <SpeakerCard v-for="speaker in ltSpeakers" :key="speaker.name" :speaker="speaker" />
       </ul>
     </VFSection>
 
