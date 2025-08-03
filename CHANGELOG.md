@@ -1,5 +1,27 @@
 # Changelog
 
+## v2.0.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.7.1...v2.0.3)
+
+### 🚀 Enhancements
+
+- Scheduled role sync ([#825](https://github.com/vuejs-jp/vuefes-2025/pull/825))
+- Hide ticket cta when already in /ticket ([#829](https://github.com/vuejs-jp/vuefes-2025/pull/829))
+
+### 🩹 Fixes
+
+- Prevent select name badge preview text ([#826](https://github.com/vuejs-jp/vuefes-2025/pull/826))
+
+### 🏡 Chore
+
+- Remove ticket and sponsor feature flags ([#828](https://github.com/vuejs-jp/vuefes-2025/pull/828))
+- Update name badge base ([#830](https://github.com/vuejs-jp/vuefes-2025/pull/830))
+
+### ❤️ Contributors
+
+- ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 ## v2.0.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.1....v2.0.2)
