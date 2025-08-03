@@ -7,6 +7,7 @@ words:
   - allscale
   - allspeed
   - andpad
+  - arounds
   - authjs
   - autodocs
   - bengo
@@ -14,24 +15,32 @@ words:
   - ceroan
   - chau
   - chiyoda
+  - choco
   - chooseicon
   - cloudsign
   - codmon
+  - Colada
   - cosme
+  - cosmonic
+  - crayfisher
   - cyberagent
   - databank
   - dateness
   - dominikg
+  - emscripten
+  - escentier
   - ffef
   - finatext
   - finetext
   - fract
   - ftechno
   - guillaume
+  - Haba
   - hanzomon
   - hashimoto
   - hennge
   - hinomaru
+  - Hiranuma
   - hiroshi
   - ikkyu
   - ikyu
@@ -40,7 +49,11 @@ words:
   - ishii
   - istyle
   - johnsoncodehk
+  - JUCE
+  - Kaede
+  - Kaigi
   - karte
+  - Kato
   - kawaguchi
   - kazu
   - kazupon
@@ -54,10 +67,16 @@ words:
   - lightningcss
   - livestreaming
   - lycorp
-  - matcha
   - marunouchi
+  - matcha
   - mita
+  - NAGAI
+  - naitokosuke
   - nakano
+  - Naoki
+  - naokihaba
+  - neginasu
+  - Nishihara
   - nitropack
   - noindex
   - noopener
@@ -75,9 +94,18 @@ words:
   - posx
   - presigner
   - primevue
+  - Rahul
+  - Rinchoku
+  - RIZAP
+  - RNBO
   - rolldown
+  - sayn
+  - Seyschab
+  - shiminori
+  - Shingo
   - shinkansen
   - sidebase
+  - ssssota
   - stockmark
   - studist
   - sugiura
@@ -89,33 +117,47 @@ words:
   - textareas
   - textlint
   - themself
+  - Thorsten
   - tiful
+  - todde
   - toei
   - tohoku
   - tokaido
   - tokusho
   - tozai
+  - tsuno
   - ubugeeei
   - unhead
   - uniquevision
   - unplugin
+  - vados
+  - Vashishtha
   - vejhszh
   - visasq
   - vuefes
   - vuejs
+  - Vuelidate
   - vuetify
   - vueuse
   - webauthn
   - webgl
+  - webshops
   - workerd
   - xlink
+  - yamanoku
   - yamanote
   - yappli
+  - Yogo
   - yoshiya
+  - Yuichi
+  - yuichkun
   - yuji
+  - Yuto
+  - zari
   - zauel
   - zauer
   - zeiri
+  - ZOZO
 ignorePaths:
   - dist
   - node_modules
