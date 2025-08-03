@@ -2,7 +2,6 @@
 import { useRoute, useLocaleRoute } from "@typed-router";
 import {
   defineOgImage,
-  definePageMeta,
   navigateTo,
   useAuth,
   useBreakpoint,
@@ -19,10 +18,6 @@ import { useToast } from "~/components/toast/VFToast.vue";
 import XIcon from "~icons/icons/ic_x";
 import BlueskyIcon from "~icons/icons/ic_bluesky";
 import FacebookIcon from "~icons/icons/ic_facebook";
-
-definePageMeta({
-  middleware: () => __FEATURE_TICKET_NAME_BADGE__ || navigateTo("/"),
-});
 
 const { t } = useI18n();
 const toast = useToast();

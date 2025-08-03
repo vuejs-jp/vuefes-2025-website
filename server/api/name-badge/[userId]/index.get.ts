@@ -48,10 +48,10 @@ export default defineEventHandler(async (event) => {
         if (sale) {
           const role = (() => {
             switch (sale.ticketName) {
-              case TicketName.EaryBirdGeneral:
+              case TicketName.EarlyBirdGeneral:
               case TicketName.General:
                 return "Attendee";
-              case TicketName.EaryBirdGeneralParty:
+              case TicketName.EarlyBirdGeneralParty:
               case TicketName.GeneralParty:
                 return "Attendee+Party";
               default:

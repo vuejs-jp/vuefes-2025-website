@@ -57,32 +57,28 @@ const menuItems = computed<MenuItemProps[]>(() =>
       id: HOME_HEADING_ID.event,
       label: "Ticket",
       routeName: localeRoute({ name: "ticket" }).name,
-      disabled: !__FEATURE_TICKET_NAME_BADGE__,
     },
     {
       id: HOME_HEADING_ID.sponsor,
       label: "Sponsor",
       routeName: localeRoute({ name: "sponsors" }).name,
-      disabled: !__FEATURE_SPONSOR_LIST__,
     },
   ].filter(it => !!it),
 );
 
 const cta = computed(() =>
-  __FEATURE_TICKET_NAME_BADGE__
-    ? {
-        props: {
-          actionButton: {
-            label: t("ticket.details"),
-            link: localeRoute({ name: "ticket" }).path,
-          },
-          openerText: "Ticket",
-        },
-        content: locale.value === "ja"
-          ? JaCtaTicket
-          : EnCtaTicket,
-      }
-    : null,
+  ({
+    props: {
+      actionButton: {
+        label: t("ticket.details"),
+        link: localeRoute({ name: "ticket" }).path,
+      },
+      openerText: "Ticket",
+    },
+    content: locale.value === "ja"
+      ? JaCtaTicket
+      : EnCtaTicket,
+  }),
 );
 
 const { y } = useScroll(window);
