@@ -60,6 +60,10 @@ You are welcome to bring your own food and beverages into the venue. If you do, 
 
 After all sessions conclude, you can enjoy a standing buffet-style meal and drinks (including alcohol) while socializing at the venue.
 
+### Are vegan options provided at the after-party?
+
+Unfortunately, we can't offer vegan options at the after-party. But you're welcome to bring your own food and beverages, as long as it's just for your personal consumption.
+
 ### What are the hands-on sessions?
 
 Please see "[About Hands-on Workshop](#hands-on)" for details.
