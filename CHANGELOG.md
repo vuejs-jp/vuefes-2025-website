@@ -1,5 +1,113 @@
 # Changelog
 
+## v2.0.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.7.1...v2.0.1)
+
+### 🚀 Enhancements
+
+- Namecard registration ([#711](https://github.com/vuejs-jp/vuefes-2025/pull/711))
+- Actual ticket link ([#712](https://github.com/vuejs-jp/vuefes-2025/pull/712))
+- Namecard preview ([#715](https://github.com/vuejs-jp/vuefes-2025/pull/715))
+- Namecard detail ([#719](https://github.com/vuejs-jp/vuefes-2025/pull/719))
+- Faq ([#723](https://github.com/vuejs-jp/vuefes-2025/pull/723))
+- Name badge validation ([#724](https://github.com/vuejs-jp/vuefes-2025/pull/724))
+- Name badge variation ([#725](https://github.com/vuejs-jp/vuefes-2025/pull/725))
+- Ticket cta ([#726](https://github.com/vuejs-jp/vuefes-2025/pull/726))
+- Staff name badge ([#737](https://github.com/vuejs-jp/vuefes-2025/pull/737))
+- Name badge ogp ([#741](https://github.com/vuejs-jp/vuefes-2025/pull/741))
+- Name badge sns share btn ([#748](https://github.com/vuejs-jp/vuefes-2025/pull/748))
+- Call peatix api ([#751](https://github.com/vuejs-jp/vuefes-2025/pull/751))
+- Sponsors ([#735](https://github.com/vuejs-jp/vuefes-2025/pull/735))
+- Add accept attribute for image file uploads in VFFileInput ([#756](https://github.com/vuejs-jp/vuefes-2025/pull/756))
+- Section access ([#738](https://github.com/vuejs-jp/vuefes-2025/pull/738))
+- Sponsor og ([#765](https://github.com/vuejs-jp/vuefes-2025/pull/765))
+- Loading overlay ([#769](https://github.com/vuejs-jp/vuefes-2025/pull/769))
+- Pre-release deploy ([#782](https://github.com/vuejs-jp/vuefes-2025/pull/782))
+
+### 🩹 Fixes
+
+- Name badge form ([#727](https://github.com/vuejs-jp/vuefes-2025/pull/727))
+- Ticket text ([#739](https://github.com/vuejs-jp/vuefes-2025/pull/739))
+- Sponsor og imgae ([0707eb8](https://github.com/vuejs-jp/vuefes-2025/commit/0707eb8))
+- Sponsor section style ([#779](https://github.com/vuejs-jp/vuefes-2025/pull/779))
+- Refine URLs to distinguish production and preview deployment contexts ([#784](https://github.com/vuejs-jp/vuefes-2025/pull/784))
+- Name badge form error with empty salesId ([#786](https://github.com/vuejs-jp/vuefes-2025/pull/786))
+- X share trailing slash ([#787](https://github.com/vuejs-jp/vuefes-2025/pull/787))
+- Set sessionRefresh enablePeriodically to 5000 ms for frequent refresh ([#788](https://github.com/vuejs-jp/vuefes-2025/pull/788))
+- Encode avator url ([#792](https://github.com/vuejs-jp/vuefes-2025/pull/792))
+- Sponsor text ([#794](https://github.com/vuejs-jp/vuefes-2025/pull/794))
+- Name badge og image layout ([#795](https://github.com/vuejs-jp/vuefes-2025/pull/795))
+- R2 encode key ([#796](https://github.com/vuejs-jp/vuefes-2025/pull/796))
+- R2 encode key ([#798](https://github.com/vuejs-jp/vuefes-2025/pull/798))
+- Improve badge animations ([#806](https://github.com/vuejs-jp/vuefes-2025/pull/806))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump lightningcss from 1.29.3 to 1.30.1 ([#708](https://github.com/vuejs-jp/vuefes-2025/pull/708))
+- **deps-dev:** Bump three from 0.175.0 to 0.178.0 ([#704](https://github.com/vuejs-jp/vuefes-2025/pull/704))
+- Configure auth origin ([#714](https://github.com/vuejs-jp/vuefes-2025/pull/714))
+- Auth.baseURL ([27c9503](https://github.com/vuejs-jp/vuefes-2025/commit/27c9503))
+- RuntimeConfig.authOrigin ([29493b2](https://github.com/vuejs-jp/vuefes-2025/commit/29493b2))
+- Auth config ([1d6da3b](https://github.com/vuejs-jp/vuefes-2025/commit/1d6da3b))
+- Auth config ([d730161](https://github.com/vuejs-jp/vuefes-2025/commit/d730161))
+- Auth config ([a948b7e](https://github.com/vuejs-jp/vuefes-2025/commit/a948b7e))
+- Add authOrigin and update baseURL with originEnvKey in config ([43d888f](https://github.com/vuejs-jp/vuefes-2025/commit/43d888f))
+- Update authOrigin URL and remove redundant baseURL in config ([f5780ed](https://github.com/vuejs-jp/vuefes-2025/commit/f5780ed))
+- Update auth originEnvKey from DEPLOY_PRIME_URL to AUTH_ORIGIN ([a6e79bf](https://github.com/vuejs-jp/vuefes-2025/commit/a6e79bf))
+- Update auth originEnvKey from DEPLOY_PRIME_URL to AUTH_ORIGIN ([be7cfb1](https://github.com/vuejs-jp/vuefes-2025/commit/be7cfb1))
+- Configure auth URLs to switch between production and localhost environments ([5412cc4](https://github.com/vuejs-jp/vuefes-2025/commit/5412cc4))
+- Preview font ([fc42ed6](https://github.com/vuejs-jp/vuefes-2025/commit/fc42ed6))
+- Rename "name card" -> "name badge" ([#720](https://github.com/vuejs-jp/vuefes-2025/pull/720))
+- Site url ([231a2d7](https://github.com/vuejs-jp/vuefes-2025/commit/231a2d7))
+- Site url ([53d4081](https://github.com/vuejs-jp/vuefes-2025/commit/53d4081))
+- Avoid name badge animation when safari oir touch device ([#749](https://github.com/vuejs-jp/vuefes-2025/pull/749))
+- Og ([#750](https://github.com/vuejs-jp/vuefes-2025/pull/750))
+- Enable debug mode in nuxt.config.ts for font handling settings ([f76d001](https://github.com/vuejs-jp/vuefes-2025/commit/f76d001))
+- Disable debug mode in nuxt.config.ts for production readiness ([5be0c8f](https://github.com/vuejs-jp/vuefes-2025/commit/5be0c8f))
+- Remove avatar image and its container from NameBadge component ([7c8f29a](https://github.com/vuejs-jp/vuefes-2025/commit/7c8f29a))
+- Remove avatar image and its container from NameBadge component" ([1884da3](https://github.com/vuejs-jp/vuefes-2025/commit/1884da3))
+- Use runtime config for absolute image URLs in name badge component ([591a4ca](https://github.com/vuejs-jp/vuefes-2025/commit/591a4ca))
+- Rename attendee.png to default.png for clarity in OG images ([48b0481](https://github.com/vuejs-jp/vuefes-2025/commit/48b0481))
+- Remove runtimeConfig and use static paths for name badge images ([87a4e3e](https://github.com/vuejs-jp/vuefes-2025/commit/87a4e3e))
+- Use runtime config URL for name badge image paths ([dcc1455](https://github.com/vuejs-jp/vuefes-2025/commit/dcc1455))
+- Navigation gurd ([3240d51](https://github.com/vuejs-jp/vuefes-2025/commit/3240d51))
+- X share url ([0f8d7e1](https://github.com/vuejs-jp/vuefes-2025/commit/0f8d7e1))
+- Sns share url ([ce554c0](https://github.com/vuejs-jp/vuefes-2025/commit/ce554c0))
+- Node options on build ([9dbcd5f](https://github.com/vuejs-jp/vuefes-2025/commit/9dbcd5f))
+- No check story build ([06c029e](https://github.com/vuejs-jp/vuefes-2025/commit/06c029e))
+- Off og image cache ([915a44b](https://github.com/vuejs-jp/vuefes-2025/commit/915a44b))
+- Image compressions ([#766](https://github.com/vuejs-jp/vuefes-2025/pull/766))
+- Block claudebot crawler ([#767](https://github.com/vuejs-jp/vuefes-2025/pull/767))
+- Remove dead code ([6900d1a](https://github.com/vuejs-jp/vuefes-2025/commit/6900d1a))
+- Sponsor detail og title ([60be92d](https://github.com/vuejs-jp/vuefes-2025/commit/60be92d))
+- Top section order ([#780](https://github.com/vuejs-jp/vuefes-2025/pull/780))
+- Close volunteer wanted ([#781](https://github.com/vuejs-jp/vuefes-2025/pull/781))
+- Remove cta volunteer ([#789](https://github.com/vuejs-jp/vuefes-2025/pull/789))
+- **release:** V2.0.0 ([597dedb](https://github.com/vuejs-jp/vuefes-2025/commit/597dedb))
+- Revert name badge navigation gurd deletion ([#790](https://github.com/vuejs-jp/vuefes-2025/pull/790))
+- Ticket cta ([d2a8947](https://github.com/vuejs-jp/vuefes-2025/commit/d2a8947))
+- Reopen sponsor wanted ([#793](https://github.com/vuejs-jp/vuefes-2025/pull/793))
+- Disable fresh peatix api (tmp) ([1fd1611](https://github.com/vuejs-jp/vuefes-2025/commit/1fd1611))
+
+### 🎨 Styles
+
+- Adjust NameBadge vertical position for correct alignment ([2d742fc](https://github.com/vuejs-jp/vuefes-2025/commit/2d742fc))
+
+### 🤖 CI
+
+- Configure env ([#713](https://github.com/vuejs-jp/vuefes-2025/pull/713))
+
+### ❤️ Contributors
+
+- Anthony Fu ([@antfu](https://github.com/antfu))
+- Ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+- Ktym4a ([@ktym4a](https://github.com/ktym4a))
+- Koyama Shigehito ([@yamageji](https://github.com/yamageji))
+- Totocalcio ([@totocalcio](https://github.com/totocalcio))
+- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+- Csy19 ([@csy19](https://github.com/csy19))
+
 ## v2.0.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.7.1...v2.0.0)
