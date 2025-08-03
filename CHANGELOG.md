@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.1....v2.0.2)
+
+### 🏡 Chore
+
+- Update faq ([#824](https://github.com/vuejs-jp/vuefes-2025/pull/824))
+
+### ❤️ Contributors
+
+- Nozomu Ikuta ([@nozomuikuta](https://github.com/nozomuikuta))
+- ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+
 ## v2.0.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.7.1...v2.0.1)
