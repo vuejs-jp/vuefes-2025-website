@@ -171,10 +171,17 @@ watch(() => route.hash, async (hash) => {
         :items="menuItems"
       />
     </Transition>
-    <!-- MEMO: 他のCTAを追加する場合はここに追加 -->
 
     <Transition>
-      <VFSpCta v-if="isShowedSpCta && cta" v-bind="cta.props">
+      <VFSpCta
+        v-if="
+          isShowedSpCta
+            && cta
+            // NOTE: When already on /ticket, don't show the menu as clicking the link won't navigate and could be confusing
+            && route.path !== localeRoute({ name: 'ticket' }).path
+        "
+        v-bind="cta.props"
+      >
         <component :is="cta.content" />
       </VFSpCta>
     </Transition>
