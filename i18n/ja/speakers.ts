@@ -84,7 +84,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "Anthony Fu",
     affiliation: "NuxtLabs",
-    title: "Design Engineer",
+    title: "デザインエンジニア",
     avatarUrl: "/images/avatars/antfu.png",
     talkOverview: "新しい Vite DevTools の紹介と、その開発の背景、実際の画面を少しお見せしながら、今後のビジョンについてご説明します。Rolldown や Vite の活用がどのように変わっていくのかもご紹介します。",
     socialUrls: {
@@ -118,8 +118,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Thorsten Seyschab",
-    affiliation: "(Self-employed)",
-    title: "Computer Scientist and Web Engineer",
+    affiliation: "自営業",
+    title: "コンピューターサイエンティスト、ウェブエンジニア",
     avatarUrl: "/images/avatars/todde-tv.jpg",
     talkOverview: "VueJSを使ってウェブショップにインタラクティブな3D体験をもたらしたり、ミニゲームを作成したりする方法について考えたことはありませんか？没入感のあるウェブベースアプリケーションを作成するために、VueJSとWebGLを組み合わせた汎用性を発見しましょう。このトークでは、WebGL Render APIの技術的な深さと、その強力なラッパーライブラリであるThreeJSとTresJSを紹介し、ブラウザで第三次元を解き放つ方法を実演します。ウェブベースの3D開発に興味を持つ初心者と愛好者を対象としたこのトークでは、これらの技術の課題、制限、そして可能性を案内します。ミニゲームのコンセプトへの先行的な覗き見を含む、実世界のプロジェクトから得られた洞察を獲得できます。eコマースからゲーミングまで、様々なアプリケーションにこれらのツールを統合する方法についての包括的な理解を持って帰ることができます。",
     socialUrls: {
@@ -155,7 +155,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "Victor",
     affiliation: "Cosmonic",
-    title: "Backend Engineer",
+    title: "バックエンドエンジニア",
     avatarUrl: "/images/avatars/vados-cosmonic.png",
     talkOverview: "もはや昔ながらの emscriptenではありません。WebAssembly のサーバーサイドの時代が到来しました。WebAssembly System Interface（WASI）と WebAssembly Components によって実現されるこの新時代において、Vue アプリがどのようにこのプラットフォームに適合するのかをご紹介します。このトークでは、サーバーサイド WebAssembly とは何か、それを使う利点は何か、Vue + Vite が、ほとんど手間をかけることなく、この新しいプラットフォームへのアクセスを実現する方法をご紹介します。",
     socialUrls: {
@@ -176,7 +176,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "Yuichi Yogo",
     affiliation: "Escentier",
-    title: "Musician / Engineer",
+    title: "ミュージシャン、エンジニア",
     avatarUrl: "/images/avatars/yuichkun.jpg",
     talkOverview: "Webアプリケーションは、もはや「無音」の存在ではありません。Web Audio API、WebAssembly、GPUアクセラレーションの進化により、ブラウザ上の音声処理は、ネイティブ環境にも匹敵するレベルへと到達しています。このセッションでは、Vue をはじめとするフロントエンド開発者に向けて、リアルタイム音声処理をアプリに統合するための、実践的で本番運用に対応した戦略を紹介します。パフォーマンスやユーザー体験を犠牲にすることなく、オーディオ処理の統合が可能になります。セッションで得られる主な知見：• Web Audio API & AudioWorklet：ブラウザ上での低遅延 DSP の基礎を構築• RNBO → WebAssembly：Cycling '74 の RNBO で制作したプロダクション対応のオーディオモジュールを WebAssembly 経由で Web にデプロイ• GPU アクセラレーテッド・オーディオ：DSP 処理を GPU にオフロードする新しい並列処理パターンを探求• ブラウザの制限：現時点での技術的制約と実用的な回避策の理解• デスクトップ × Web のハイブリッド開発：JUCE 8、WebView、Vue.js を組み合わせ、プラグインと Web UI の橋渡しを実現",
     socialUrls: {

@@ -106,7 +106,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "neginasu",
     affiliation: "DesignOne Japan, Inc.",
-    title: "Front-end Engineer",
+    title: "Frontend Engineer",
     avatarUrl: "/images/avatars/neginasu.png",
     talkOverview: "Our product, built on Vue 3, had relied for years on a custom-built validation logic. However, over time, this homegrown solution began to show its limitations. A lack of documentation, inconsistent specifications, and the complexity of our proprietary setup all contributed to a growing maintenance burden. Eventually, the system became a significant source of technical debt that could no longer be ignored. In this session, we'll walk you through how we confronted this issue. We'll share how we evaluated major Vue validation libraries—like Vuelidate, vee-validate, and Zod—what criteria guided our decision, and how we ultimately chose and implemented a new solution. Beyond just selecting a library, we'll discuss the tangible benefits we gained from the transition: comprehensive official documentation, ease of learning, and improved maintainability. We'll also dive into real-world challenges we faced during the migration from our legacy validation system, strategies for partial coexistence, and phased rollout methods—highlighting how we bridged the gap between ideal plans and practical constraints. This talk is especially relevant for: Developers struggling with the limitations of custom validation logic Teams considering introducing a validation library in a Vue 3 environment Our goal is to share insights that can help you tackle technical debt and move toward a healthier, more sustainable development experience.",
     socialUrls: {
@@ -117,8 +117,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
   },
   {
     name: "Thorsten Seyschab",
-    affiliation: "(Self-employed)",
-    title: "Computer Scientist and Web Engineer",
+    affiliation: "Self-employed",
+    title: "Computer Scientist & Web Engineer",
     avatarUrl: "/images/avatars/todde-tv.jpg",
     talkOverview: "Ever wondered how to bring interactive 3D experiences to webshops, or even create a mini-game, using VueJS? Discover the versatility of VueJS paired with WebGL to create immersive web-based applications. This talk showcases the technical depths of the WebGL Render API and its powerful wrapper libraries ThreeJS and TresJS, to unlock the third dimension in the browser. Aimed at beginners and enthusiasts interested in web-based 3D development, this talk navigates through the challenges, limitations, and potential of these technologies. You will gain insights drawn from real-world projects, including a sneak peek into a mini-game concept. Walk away with a comprehensive understanding of how to integrate these tools into various applications, from eCommerce to gaming.",
     socialUrls: {
@@ -130,7 +130,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "naitokosuke",
     affiliation: "mates Inc.",
-    title: "frontend developer",
+    title: "Frontend Developer",
     avatarUrl: "/images/avatars/naitokosuke.png",
     talkOverview: "\"Tired of errors from typos in route names?\" \"Repeating the same boilerplate for data fetching state management?\" \"Still relying on plain strings for routing—even with TypeScript?\" If these sound familiar in your Vue/Nuxt development workflow, this session is for you. We'll dive into practical strategies for improving developer experience using `typed-router` and `Pinia Colada`. With automatic type generation from file-based routing, you'll get full autocompletion for route names and parameters. Declarative data fetching frees you from manually managing loading and error states. Rich type information and declarative code don't just help developers—they create an ideal environment for AI-assisted development as well. We'll show you how to shift from tedious tasks to meaningful development by building a modern, AI-optimized setup—complete with real code examples and key considerations for adoption.",
     socialUrls: {
@@ -175,7 +175,7 @@ export const SESSION_SPEAKERS: Speaker[] = [
   {
     name: "Yuichi Yogo",
     affiliation: "Escentier",
-    title: "Musician / Engineer",
+    title: "Musician & Engineer",
     avatarUrl: "/images/avatars/yuichkun.jpg",
     talkOverview: "Abstract: Web applications are no longer silent. Thanks to the evolution of the Web Audio API, WebAssembly, and GPU acceleration, browser-based audio can now rival native environments. In this talk I will guide Vue (and broader front-end) developers through practical, production-ready strategies for integrating real-time audio processing into their apps—without sacrificing performance or user experience. Key Takeaways: - Web Audio API & AudioWorklet – Build a solid foundation for low-latency DSP in the browser. - RNBO → WebAssembly – Build production-ready audio modules in Cycling '74's RNBO and deploy them to the web via WebAssembly. - GPU-Accelerated Audio – Explore emerging patterns that offload DSP to the GPU for massive parallelism. - Browser Limitations – Understand current constraints and proven work-arounds. - Hybrid Desktop / Web Workflows – See how JUCE 8 + WebView and Vue.js can bridge plug-ins and web interfaces.",
     socialUrls: {
@@ -190,7 +190,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     name: "ssssota",
     affiliation: "ZOZO, inc.",
-    title: "Frontend developer",
+    title: "Frontend Developer",
     avatarUrl: "/images/avatars/ssssota.png",
     talkOverview: "Rust-based tools are becoming increasingly prominent—names like Rolldown and Biome are popping up more and more. There are even rumors that a company called VoidZero, which claims to be building \"the next-gen JavaScript toolchain,\" now has half its projects written in Rust. As JavaScript/TypeScript engineers, many of us are unknowingly using Rust-powered software—even without ever setting up a Rust development or runtime environment ourselves. In this talk, we'll take a step back and break down how these Rust-based tools actually work under the hood, and how they seamlessly integrate with the JavaScript ecosystem.",
     socialUrls: {
@@ -202,7 +202,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     name: "Naoki Haba",
     affiliation: "codmon inc",
-    title: "software engineer",
+    title: "Software Engineer",
     avatarUrl: "/images/avatars/naokihaba.png",
     talkOverview: "Nuxt 4 introduces the **Singleton Data Fetching Layer**, a brand-new architecture that fundamentally solves long-standing issues with `useFetch` and `useAsyncData`. In this 5-minute lightning talk, we'll break down the key features that dramatically improve both performance and developer experience—such as reduced memory usage, support for reactive keys, and automatic data cleanup. We'll also share real-world migration examples and performance benchmarks to equip you with the knowledge you need to prepare for a smooth transition to Nuxt 4.",
     socialUrls: {
@@ -214,7 +214,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     name: "ツノ",
     affiliation: "Bengo4.com, Inc.",
-    title: "frontend engineer",
+    title: "Frontend Engineer",
     avatarUrl: "/images/avatars/tsuno.jpeg",
     talkOverview: "Many developers feel that contributing to open source is something they'd like to do—but it seems intimidating. I've felt the same. At TSKaigi 2025, Anthony Fu introduced a library called `eslint-typegen`. His talk sparked my interest, so I decided to learn more about it and share what I learned in a public talk outside my company. That small act of output led to an unexpected opportunity: contributing `eslint-typegen` support to `eslint-plugin-vue`. In this lightning talk, I'll reflect on that journey to show that *open source is closer than you think*. I'll cover: 1. How a small talk and public output became the gateway to OSS contribution 2. The technical growth I experienced through contributing 3. The welcoming and open culture of the Vue ecosystem's OSS community I hope this story encourages more developers to take that first small step into the world of open source.",
     socialUrls: {
@@ -235,7 +235,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     name: "shiminori",
     affiliation: "Sole proprietorship",
-    title: "front engineer",
+    title: "Front Engineer",
     avatarUrl: "/images/avatars/shiminori.jpg",
     talkOverview: "In this session, I'll share key considerations for managing authentication state using cookies when building a custom auth system in Nuxt. As of now, there are no stable third-party solutions for email and password-based authentication in Nuxt, which has led us to implement our own. I'll walk you through the challenges we faced and the practical workarounds we found—especially around why simply using the `useCookie` composable didn't behave as expected, and what we did to address it.",
     socialUrls: {
@@ -246,7 +246,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     name: "Nishihara",
     affiliation: "ICS inc",
-    title: "frontend engineer",
+    title: "Frontend Engineer",
     avatarUrl: "/images/avatars/crayfisher_zari.jpg",
     talkOverview: "In this talk, I'll share our experience implementing the Digital Agency's public design system using Vue.js. Along the way, I'll highlight some of the key strengths we discovered—particularly the power of `v-model` and `computed`—as we built out the system.",
     socialUrls: {
@@ -268,7 +268,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     name: "Kaede Kato",
     affiliation: "RIZAP TECHNOLOGIES,Inc.",
-    title: "Front-End Engineer",
+    title: "Frontend Engineer",
     avatarUrl: "/images/avatars/kaede-kato.png",
     talkOverview: "At chocoZAP, we previously relied on external services for booking self-care and self-hair removal appointments—but we've now fully brought that functionality in-house, rebuilding everything with Nuxt. We designed tailored UIs for both web and app (WebView) platforms, focusing on making daily interactions feel intuitive and seamless. In this lightning talk, I'll share key highlights from the project and the strategies we used to optimize the experience. Topics include (subject to time constraints): UI Structure and State Management in Nuxt  * How we structured components (e.g., using `views` and `templates`) to boost reusability and maintainability  * Using the `server/` directory to organize API communication cleanly Flexible Improvement Cycles Enabled by In-House Development  * Fine-grained UI behavior adjustments based on API responses  * Better UX for edge cases like reaching booking limits, reducing user confusion Alignment with chocoZAP's Design System  * Implementing UI consistent with our internal design system, ensuring a unified brand experience across screens Rapid Feedback Loops  * How we quickly incorporated user feedback to minimize friction and improve daily usability This talk is a look behind the scenes at how we built a smoother, more responsive reservation experience—tailored to our users' real-world needs.",
     socialUrls: {},
