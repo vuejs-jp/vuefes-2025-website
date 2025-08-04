@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { SESSION_SPEAKERS as enSessionSpeakers, LT_SPEAKERS as enLT_Speakers, PANEL_DISCUSSION_SPEAKERS as enPanelSpeakers } from "../../../i18n/en/speakers";
-import { SESSION_SPEAKERS as jaSessionSpeakers, LT_SPEAKERS as jaLT_Speakers, PANEL_DISCUSSION_SPEAKERS as jaPanelSpeakers } from "../../../i18n/ja/speakers";
+import { useLocaleRoute } from "@typed-router";
+import { SESSION_SPEAKERS as enSessionSpeakers, LT_SPEAKERS as enLTSpeakers, PANEL_DISCUSSION_SPEAKERS as enPanelSpeakers } from "../../../i18n/en/speakers";
+import { SESSION_SPEAKERS as jaSessionSpeakers, LT_SPEAKERS as jaLTSpeakers, PANEL_DISCUSSION_SPEAKERS as jaPanelSpeakers } from "../../../i18n/ja/speakers";
 import SpeakerCard from "./_components/SpeakerCard.vue";
 import { VFSection, JaSpeaker, EnSpeaker, JaPanelDiscussion, EnPanelDiscussion } from "#components";
 import { computed, defineRouteRules, useI18n } from "#imports";
@@ -8,9 +9,10 @@ import { computed, defineRouteRules, useI18n } from "#imports";
 defineRouteRules({ prerender: true });
 
 const { t, locale } = useI18n();
+const localeRoute = useLocaleRoute();
 
 const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers : jaSessionSpeakers);
-const ltSpeakers = computed(() => locale.value === "en" ? enLT_Speakers : jaLT_Speakers);
+const ltSpeakers = computed(() => locale.value === "en" ? enLTSpeakers : jaLTSpeakers);
 const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : jaPanelSpeakers);
 </script>
 
@@ -23,15 +25,28 @@ const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : j
       <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
 
       <ul class="speakers">
-        <SpeakerCard v-for="speaker in sessionSpeakers" :key="speaker.name" :speaker="speaker" />
+        <NuxtLink
+          v-for="speaker in sessionSpeakers"
+          :key="speaker.id"
+          :to="localeRoute({ name: 'speaker-speakerId', params: { speakerId: speaker.id } })"
+          class="speaker-card-link"
+        >
+          <SpeakerCard :speaker="speaker" />
+        </NuxtLink>
       </ul>
     </VFSection>
 
     <VFSection :title="t('speakers.lightningTalks.title')" wide>
       <!-- <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" /> -->
-
       <ul class="speakers">
-        <SpeakerCard v-for="speaker in ltSpeakers" :key="speaker.name" :speaker="speaker" />
+        <NuxtLink
+          v-for="speaker in ltSpeakers"
+          :key="speaker.id"
+          :to="localeRoute({ name: 'speaker-speakerId', params: { speakerId: speaker.id } })"
+          class="speaker-card-link"
+        >
+          <SpeakerCard :speaker="speaker" />
+        </NuxtLink>
       </ul>
     </VFSection>
 
@@ -80,6 +95,11 @@ const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : j
 
     @media (--mobile) {
       --size: 146px;
+    }
+
+    .speaker-card-link {
+      text-decoration: none;
+      color: inherit;
     }
 
     display: grid;

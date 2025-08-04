@@ -129,10 +129,12 @@ speakers:
   viewAll: "View All Speakers"
   sessions:
     title: "Sessions"
+    information: "Session Information"
   panel:
     title: "Panel Discussion"
   lightningTalks:
     title: "Lightning Talks"
+    information: "Lightning Talk Information"
   sponsorSessions:
     title: "Sponsor Sessions"
 

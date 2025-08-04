@@ -1,9 +1,12 @@
 export interface Speaker {
+  id: string;
   name: string;
   avatarUrl: string;
   attendedIndex?: number;
   affiliation?: string;
   title?: string;
+
+  talkTitle?: string;
   talkOverview?: string;
 
   socialUrls?: {
@@ -12,4 +15,7 @@ export interface Speaker {
     github?: string;
     mastodon?: string;
   };
+
+  // for og image
+  color: "default" | "purple" | "orange" | "navy";
 }

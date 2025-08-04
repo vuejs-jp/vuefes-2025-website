@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useLocaleRoute, useRoute } from "@typed-router";
-import SponsorTag from "./_components/SponsorTag.vue";
+import SponsorTag from "../_components/SponsorTag.vue";
 import XIcon from "~icons/icons/ic_x";
 import GithubIcon from "~icons/icons/ic_github";
 import BlueskyIcon from "~icons/icons/ic_bluesky";

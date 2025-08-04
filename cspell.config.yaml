@@ -4,6 +4,7 @@ useGitIgnore: true
 words:
   - abramov
   - acconect
+  - Akryum
   - allscale
   - allspeed
   - andpad
@@ -24,6 +25,7 @@ words:
   - cosmonic
   - crayfisher
   - cyberagent
+  - danielroe
   - databank
   - dateness
   - dominikg
@@ -34,6 +36,7 @@ words:
   - finetext
   - fract
   - ftechno
+  - gaearon
   - guillaume
   - Haba
   - hanzomon
@@ -64,6 +67,7 @@ words:
   - kinto
   - kodomon
   - lacunarity
+  - leaysgur
   - lightningcss
   - livestreaming
   - lycorp
@@ -78,9 +82,11 @@ words:
   - neginasu
   - Nishihara
   - nitropack
+  - nofa
   - noindex
   - noopener
   - noreferrer
+  - noriyuki
   - nuxi
   - nuxt
   - nuxtjs
@@ -102,6 +108,7 @@ words:
   - sayn
   - Seyschab
   - shiminori
+  - shimizu
   - Shingo
   - shinkansen
   - sidebase

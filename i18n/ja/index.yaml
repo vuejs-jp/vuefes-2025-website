@@ -129,10 +129,12 @@ speakers:
   viewAll: "すべてのスピーカーを見る"
   sessions:
     title: "セッション"
+    information: "セッション情報"
   panel:
     title: "パネルディスカッション"
   lightningTalks:
     title: "ライトニングトーク"
+    information: "ライトニングトーク情報"
   sponsorSessions:
     title: "スポンサーセッション"
 

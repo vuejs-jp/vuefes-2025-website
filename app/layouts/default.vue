@@ -93,6 +93,7 @@ const isShowedSpCta = computed(() => {
 
 const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "speaker",
+  "speaker-speakerId",
   "ticket",
   "ticket-userId",
   "ticket-userId-edit",

@@ -30,7 +30,7 @@ class ColorSetIter {
   }
 }
 
-type CarouselSpeaker = Speaker & {
+type CarouselSpeaker = Omit<Speaker, "id" | "color"> & {
   id: string;
   color: ColorSet;
 };
