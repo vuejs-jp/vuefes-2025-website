@@ -43,6 +43,8 @@ const currentSpeaker = computed(() =>
 useSeoMeta({
   title: () => `${currentSpeaker.value?.name || t("speakers.title")}`,
   ogTitle: () => `Vue Fes Japan 2025 - ${currentSpeaker.value?.name || t("speakers.title")}`,
+  description: () => currentSpeaker.value?.talkTitle,
+  ogDescription: () => currentSpeaker.value?.talkTitle,
 });
 
 defineOgImage({
