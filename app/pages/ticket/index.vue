@@ -50,58 +50,74 @@ async function handleClockGitHubSignIn() {
       <section class="general-tickets">
         <ul class="general-ticket-list">
           <li class="ticket-badge">
-            <span class="ticket-badge-title" :class="locale">{{ t('ticket.generalTicket.title') }}</span>
+            <img src="/images/ticket/ticket-type_general.png" width="400" height="266" alt="" class="ticket-badge-image" />
 
-            <div class="ticket-badge-prices">
-              <span class="ticket-badge-price">
-                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-badge-price-type">({{ t('ticket.early') }})</span>
-                <span class="ticket-badge-price-value">
-                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.earlyPrice'))).toLocaleString() }}
-                </span>
-              </span>
+            <div class="ticket-badge-details">
+              <h2 class="ticket-badge-title" :class="locale">
+                {{ t('ticket.generalTicket.title') }}
+              </h2>
 
-              <span class="ticket-badge-price">
-                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-badge-price-type">({{ t('ticket.standard') }})</span>
-                <span class="ticket-badge-price-value">
-                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.standardPrice'))).toLocaleString() }}
+              <div class="ticket-badge-prices">
+                <span class="ticket-badge-price">
+                  <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                  <span class="ticket-badge-price-type">{{ t('ticket.early') }}</span>
+                  <span class="ticket-badge-price-value">
+                    <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.earlyPrice'))).toLocaleString() }}
+                  </span>
                 </span>
-              </span>
+
+                <span class="ticket-badge-price">
+                  <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                  <span class="ticket-badge-price-type">{{ t('ticket.standard') }}</span>
+                  <span class="ticket-badge-price-value">
+                    <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.standardPrice'))).toLocaleString() }}
+                  </span>
+                </span>
+              </div>
             </div>
           </li>
 
           <li class="ticket-badge">
-            <span class="ticket-badge-title" :class="locale">{{ t('ticket.afterPartyTicket.title') }}</span>
+            <img src="/images/ticket/ticket-type_party.png" width="400" height="266" alt="General Ticket" class="ticket-badge-image" />
 
-            <div class="ticket-badge-prices">
-              <span class="ticket-badge-price">
-                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-badge-price-type">({{ t('ticket.early') }})</span>
-                <span class="ticket-badge-price-value">
-                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.earlyPrice'))).toLocaleString() }}
-                </span>
-              </span>
+            <div class="ticket-badge-details">
+              <h2 class="ticket-badge-title" :class="locale">
+                {{ t('ticket.afterPartyTicket.title') }}
+              </h2>
 
-              <span class="ticket-badge-price">
-                <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-                <span class="ticket-badge-price-type">({{ t('ticket.standard') }})</span>
-                <span class="ticket-badge-price-value">
-                  <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.standardPrice'))).toLocaleString() }}
+              <div class="ticket-badge-prices">
+                <span class="ticket-badge-price">
+                  <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                  <span class="ticket-badge-price-type">{{ t('ticket.early') }}</span>
+                  <span class="ticket-badge-price-value">
+                    <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.earlyPrice'))).toLocaleString() }}
+                  </span>
                 </span>
-              </span>
+
+                <span class="ticket-badge-price">
+                  <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+                  <span class="ticket-badge-price-type">{{ t('ticket.standard') }}</span>
+                  <span class="ticket-badge-price-value">
+                    <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.standardPrice'))).toLocaleString() }}
+                  </span>
+                </span>
+              </div>
             </div>
           </li>
         </ul>
       </section>
 
       <section class="option-tickets">
-        <h3>{{ t('ticket.option') }}</h3>
+        <h2 class="option-tickets-title">
+          {{ t('ticket.option') }}
+        </h2>
 
         <ul class="option-ticket-list">
           <li>
-            <div class="ticket-badge">
-              <span class="ticket-badge-title" :class="locale">{{ t('ticket.handsOn.title') }}</span>
+            <div class="ticket-badge ticket-badge_sub">
+              <h2 class="ticket-badge-title" :class="locale">
+                {{ t('ticket.handsOn.title') }}
+              </h2>
               <div class="ticket-badge-prices">
                 <span class="ticket-badge-price">
                   <span class="ticket-badge-price-value">
@@ -123,8 +139,10 @@ async function handleClockGitHubSignIn() {
           </li>
 
           <li>
-            <div class="ticket-badge">
-              <span class="ticket-badge-title" :class="locale">{{ t('ticket.individual.sponsor') }}</span>
+            <div class="ticket-badge ticket-badge_sub">
+              <h2 class="ticket-badge-title" :class="locale">
+                {{ t('ticket.individual.sponsor') }}
+              </h2>
               <div class="ticket-badge-prices">
                 <span class="ticket-badge-price">
                   <span class="ticket-badge-price-value">
@@ -162,9 +180,7 @@ async function handleClockGitHubSignIn() {
     </VFSection>
 
     <VFSection id="name-badge" :title="t('nameBadge.title')" class="name-badge">
-      <div class="cover-image-wrapper">
-        <img src="/images/ticket/name-badge-cover.png" :alt="t('nameBadge.coverImageAlt')" />
-      </div>
+      <img src="/images/ticket/name-badge-cover.png" width="538" height="430" :alt="t('nameBadge.coverImageAlt')" class="cover-image" />
 
       <i18n-t keypath="nameBadge.description" tag="p" class="name-badge-description">
         <template #ticketName>
@@ -251,55 +267,61 @@ async function handleClockGitHubSignIn() {
   .ticket-type {
     ul.general-ticket-list {
       display: grid;
-      row-gap: 1.5rem;
-      margin-top: 3rem;
+      gap: 32px;
+      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 
-      @media (--mobile) {
+      @media (--mobile-small) {
         margin-top: 2rem;
+        grid-template-columns: 1fr;
       }
+    }
+
+    .option-tickets-title {
+      margin-top: 32px;
     }
 
     ul.option-ticket-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      column-gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      gap: 32px;
+      margin-top: 16px;
 
-      @media (--mobile) {
-        grid-template-columns: unset;
-        row-gap: 1.5rem;
+      @media (--mobile-small) {
+        grid-template-columns: 1fr;
       }
     }
 
     .ticket-badge {
       width: 100%;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: var(--radius-m);
+      flex-direction: column;
+      border-radius: 8px;
       border: 1px solid var(--color-divider);
-      padding: 2rem 1.5rem;
+      overflow: hidden;
 
-      @media (--mobile) {
+      &.ticket-badge_sub {
+        padding: 20px;
+      }
+
+      .ticket-badge-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .ticket-badge-details {
         padding: 1.25rem;
-        display: block;
       }
 
       .ticket-badge-title {
-        display: block;
-
-        &.en {
-          max-width: 12rem;
-        }
-
-        @media (--mobile) {
-          margin-bottom: 1.5rem;
-        }
+        margin: 0;
       }
 
       .ticket-badge-prices {
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
 
         @media (--mobile) {
           display: flex;
@@ -308,15 +330,24 @@ async function handleClockGitHubSignIn() {
 
         .ticket-badge-price {
           display: flex;
+          align-items: center;
+          gap: 16px;
 
           .ticket-badge-price-type {
+            font-size: 1rem;
             display: block;
             text-align: center;
-            margin-right: 0.5rem;
+
+            @media (--mobile) {
+              font-size: 0.875rem;
+            }
           }
 
           .ticket-badge-price-value {
+            display: block;
             font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1;
 
             .ticket-badge-price-unit {
               font-size: 1.75rem;
@@ -348,7 +379,7 @@ async function handleClockGitHubSignIn() {
     .buy-ticket-button-wrapper {
       display: flex;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 40px;
     }
 
     hr.divider {
@@ -372,33 +403,11 @@ async function handleClockGitHubSignIn() {
   }
 
   .name-badge {
-    .cover-image-wrapper {
-      display: flex;
-      justify-content: center;
+    .cover-image {
       width: 100%;
-      margin-bottom: 2rem;
-
-      /* for preventing CLS */
-      height: 430px;
-      aspect-ratio: 538 / 430;
-
-      @media (--mobile) {
-        margin-bottom: 1.5rem;
-
-        /* for preventing CLS */
-        height: 269.35px;
-        aspect-ratio: 337 / 269.35;
-      }
-
-      img {
-        width: 538px;
-        height: 430px;
-
-        @media (--mobile) {
-          width: 337px;
-          height: 269.35px;
-        }
-      }
+      height: auto;
+      max-width: 538px;
+      margin: 0 auto 32px;
     }
 
     .name-badge-attention {
@@ -425,7 +434,7 @@ async function handleClockGitHubSignIn() {
 
       button {
         width: 100%;
-        max-width: 300px;
+        max-width: fit-content;
       }
     }
 
@@ -455,27 +464,86 @@ async function handleClockGitHubSignIn() {
 
   .individual-sponsor,
   .hands-on {
-    :deep(.individual-sponsor-attention) {
-      font-size: 14px;
-      line-height: 21px;
-      margin: 2rem 0;
+    :deep(.individual-sponsor-list){
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    :deep(.individual-sponsor-item){
+      display: flex;
+      gap: 16px 24px;
 
-      @media (--mobile) {
-        font-size: 12px;
-        line-height: 18px;
-        margin: 1.5rem 0;
+      img {
+        width: 100%;
+        max-width: 240px;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        border: 1px solid var(--color-divider-light);
+      }
+
+      @media (--mobile-small) {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-width: inherit;
+        }
+      }
+    }
+    :deep(.individual-sponsor-description) {
+      h2 {
+        margin: 0;
+      }
+      p {
+        margin: 8px 0 ;
       }
     }
 
-    :deep(hr) {
+    :deep(.individual-sponsor-attention) {
+      margin: 0 !important;
+      font-size: 14px;
+      line-height: 21px;
+
+      @media (--mobile-small) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    :deep(.individual-sponsor-divider) {
       width: 100%;
       border: 0;
       border-top: 1px solid var(--color-divider);
       margin: 2rem 0;
 
-      @media (--mobile) {
+      @media (--mobile-small) {
         margin: 1.5rem 0;
       }
+    }
+
+    :deep(.hands-on-title) {
+      margin-top: 32px;
+    }
+
+    :deep(.hands-on-images) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 32px 0;
+
+      @media (--mobile-small) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    :deep(.hands-on-image) {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--color-divider-light);
     }
   }
 }

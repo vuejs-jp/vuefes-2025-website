@@ -1,27 +1,85 @@
 At Vue Fes Japan 2025, we are inviting individual sponsors in addition to corporate sponsorships. The following benefits are available for individual sponsors:
 
-### Credit Listing
+<div class="individual-sponsor-list">
+  <div class="individual-sponsor-item">
+    <img
+      src="/images/ticket/ticket-personal_sponsor_1.png"
+      width="240"
+      height="135"
+      alt=""
+    />
+    <div class="individual-sponsor-description">
+      <h2>Credit Listing</h2>
+      <p>
+        Your name will be listed on the official Vue Fes Japan website
+        (optional).
+      </p>
+    </div>
+  </div>
 
-We will list your name on the official Vue Fes Japan website (optional).
+  <div class="individual-sponsor-item">
+    <img
+      src="/images/ticket/ticket-personal_sponsor_2.png"
+      width="240"
+      height="135"
+      alt=""
+    />
+    <div class="individual-sponsor-description">
+      <h2>Vue Fes Japan 2025 Staff-Exclusive T-Shirt</h2>
+      <p>
+        You will receive an exclusive T-shirt distributed only to staff.
+      </p>
+      <p class="individual-sponsor-attention">
+        * Available in sizes S–XXXL. Please specify your size when
+        purchasing your ticket.
+      </p>
+      <p class="individual-sponsor-attention">
+        * T-shirts will be distributed on-site only; shipping is not
+        available.
+      </p>
+    </div>
+  </div>
 
-### Vue Fes Japan 2025 Staff-Exclusive T-Shirt
+  <div class="individual-sponsor-item">
+    <img
+      src="/images/ticket/ticket-personal_sponsor_3.png"
+      width="240"
+      height="135"
+      alt=""
+    />
+    <div class="individual-sponsor-description">
+      <h2>Priority Entry</h2>
+      <p>
+        An Individual Sponsor priority lane will be available at reception
+        on the day, allowing you to enter smoothly without waiting in line.
+      </p>
+    </div>
+  </div>
 
-You will receive an exclusive T-shirt distributed only to staff.  
+  <div class="individual-sponsor-item">
+    <img
+      src="/images/ticket/ticket-personal_sponsor_4.png"
+      width="240"
+      height="135"
+      alt=""
+    />
+    <div class="individual-sponsor-description">
+      <h2>Priority Seating</h2>
+      <p>
+        Priority seats will be reserved in the front row of each track
+        venue.
+      </p>
+      <p>
+        <span class="individual-sponsor-attention"
+          >* If seats become vacant after the session starts, they will be
+          opened to general attendees.</span
+        >
+      </p>
+    </div>
+  </div>
+</div>
 
-<span class="individual-sponsor-attention">* Available in sizes S–XXXL. Please specify your size when purchasing your ticket.  </span>
-
-<span class="individual-sponsor-attention">* T-shirts will be distributed on-site only; shipping is not available.</span>
-
-### Priority Entry
-
-An Individual Sponsor priority lane will be available at reception on the day, allowing you to enter smoothly without waiting in line.
-
-### Priority Seating
-
-Priority seats will be reserved in the front row of each track venue.  
-
-<span class="individual-sponsor-attention">* If seats become vacant after the session starts, they will be opened to general attendees.</span>
-
+<hr class="individual-sponsor-divider" />
 
 ### 【Important】
 

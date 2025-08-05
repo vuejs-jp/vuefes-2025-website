@@ -4,15 +4,46 @@ Both sessions will use the official "Nuxt Tutorial" (Japanese version). As long 
 
 Please join us according to your level and goals!
 
-### Beginner Hands-on Session
+<div class="hands-on-images">
+  <img
+    src="/images/ticket/ticket-hands-on_1.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+  <img
+    src="/images/ticket/ticket-hands-on_2.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+  <img
+    src="/images/ticket/ticket-hands-on_3.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+  <img
+    src="/images/ticket/ticket-hands-on_4.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+</div>
+
+## Beginner Hands-on Session
 
 This session is designed for those who understand the basics of HTML, CSS, and JavaScript but are new to Vue.js. Through a simple app case study, you will learn the basics and how to use Vue.js together. Staff will be available throughout the workshop to answer any questions, so beginners can participate with confidence.
 
-### Intermediate Hands-on Session
+## Intermediate Hands-on Session
 
 This session is for those who have experience with Vue.js but are new to Nuxt, or for those with experience in other frameworks. You will learn more about Nuxt’s features and development methods than in the beginner session. You can also ask questions about specialized topics, so please feel free to ask anything you want to know about Nuxt or Vue.js.
 
----
+<hr class="individual-sponsor-divider" />
 
 ### 【Important Notes】
 

@@ -4,15 +4,46 @@
 
 ご自身のレベルや目的に合わせて、ぜひご参加ください！
 
-### 初級者向けハンズオン
+<div class="hands-on-images">
+  <img
+    src="/images/ticket/ticket-hands-on_1.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+  <img
+    src="/images/ticket/ticket-hands-on_2.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+  <img
+    src="/images/ticket/ticket-hands-on_3.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+  <img
+    src="/images/ticket/ticket-hands-on_4.png"
+    width="202"
+    height="202"
+    class="hands-on-image"
+    alt=""
+  />
+</div>
+
+## 初級者向けハンズオン
 
 HTML・CSS・JavaScript の基礎は分かるが、Vue.js は初めてという方が対象です。簡易的なアプリのケーススタディを通じて、Vue.js の基礎や使い方を一緒に学びます。ワークショップ中はいつでもスタッフに質問できるため、初めての方も安心してご参加いただけます。
 
-### 中級者向けハンズオン
+## 中級者向けハンズオン
 
 Vue.js の経験があるが Nuxt は未経験の方や、他フレームワークの経験者向けです。初級者向けハンズオンよりも、さらに Nuxt の特徴や開発手法にフォーカスした内容を学べます。専門的な内容についてもご質問いただけますので、Nuxt や Vue.js に関して気になることがあれば、ぜひご質問ください。
 
----
+<hr class="individual-sponsor-divider" />
 
 ### 【ご注意】
 

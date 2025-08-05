@@ -120,12 +120,17 @@ ${isFaq ? generateFaqStyles() : ""}`;
     function generateFaqStyles(): string {
       return `
 <style scoped>
+@import "~/assets/styles/custom-media-query.css";
+
 h3.faq-q-wrapper {
   display: flex;
-  align-items: center;
+  margin-top: 40px;
+  @media (--mobile-small) {
+    margin-top: 32px;
+  }
 }
 
-.faq-q, 
+.faq-q,
 .faq-a {
   border-radius: 50%;
   width: 28px;
@@ -134,11 +139,17 @@ h3.faq-q-wrapper {
   text-align: center;
   display: inline-block;
   margin-right: 8px;
+  margin-top: -4px;
+  font-weight: 700;
+
+  @media (--mobile) {
+    margin-top: -6px;
+  }
 }
 
 .faq-q {
-  color: var(--color-primary-base);
-  border: 1px solid var(--color-primary-base);
+  color: var(--color-base);
+  border: 1px solid var(--color-base);
 }
 
 .faq-a {
@@ -147,8 +158,12 @@ h3.faq-q-wrapper {
 }
 
 .faq-a-content-wrapper {
+  margin-top: 14px;
   display: flex;
-  align-items: flex-start;
+
+  @media (--mobile-small) {
+    margin-top: 12px;
+  }
 }
 
 .faq-q-content,

@@ -1,3 +1,5 @@
+@custom-media --mobile-small (max-width: 700px);
+
 @custom-media --mobile (max-width: 1036px);
 
 @custom-media --mobile-wide (max-width: 1300px);
