@@ -37,8 +37,12 @@ defineOgImage({
 });
 
 useSeoMeta({
-  title: () => t("nameBadge.pageTitle", { username: nameBadgeData.value?.name }),
-  ogTitle: () => t("nameBadge.pageTitle", { username: nameBadgeData.value?.name }),
+  title: () => nameBadgeData.value?.role === "Sponsor"
+    ? t("nameBadge.pageTitleSponsor", { sponsorName: nameBadgeData.value?.name })
+    : t("nameBadge.pageTitle", { username: nameBadgeData.value?.name }),
+  ogTitle: () => nameBadgeData.value?.role === "Sponsor"
+    ? t("nameBadge.pageTitleSponsor", { sponsorName: nameBadgeData.value?.name })
+    : t("nameBadge.pageTitle", { username: nameBadgeData.value?.name }),
   description: () => t("nameBadge.pageDescription"),
   ogDescription: () => t("nameBadge.pageDescription"),
 });
