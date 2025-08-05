@@ -250,7 +250,7 @@ export const LT_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/naokihaba.png",
     color: "purple",
     talkTitle: "What Changes with the Singleton Data Fetching Layer in Nuxt 4",
-    talkOverview: "## Target Audience\n\n* Developers using Nuxt (intermediate to advanced)\n* Frontend engineers interested in performance optimization\n* Teams considering migration from Nuxt 3 to Nuxt 4\n\n## Session Overview\n\nNuxt 4 introduces the **Singleton Data Fetching Layer**, a brand-new architecture that fundamentally solves long-standing issues with `useFetch` and `useAsyncData`.\n\nIn this 5-minute lightning talk, we'll break down the key features that dramatically improve both performance and developer experience—such as reduced memory usage, support for reactive keys, and automatic data cleanup.\n\nWe'll also share real-world migration examples and performance benchmarks to equip you with the knowledge you need to prepare for a smooth transition to Nuxt 4.\n",
+    talkOverview: "The Singleton Data Fetching Layer being introduced in Nuxt4 is a new architecture that fundamentally solves the problems of traditional useFetch/useAsyncData. In this Lightning Talk, I'll explain in 5 minutes the new features that dramatically improve performance and developer experience, including reduced memory usage, reactive key support, and automatic data cleanup.",
     socialUrls: {
       github: "https://github.com/NaokiHaba",
       x: "https://x.com/naokihaba",

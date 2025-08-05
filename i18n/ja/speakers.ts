@@ -251,7 +251,7 @@ export const LT_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/naokihaba.png",
     color: "purple",
     talkTitle: "Nuxt4のSingleton Data Fetching Layerで何が変わるのか",
-    talkOverview: "## 対象者\n\nNuxtを使用している開発者（中級〜上級）\nパフォーマンス最適化に関心のあるフロントエンドエンジニア\nNuxt3からNuxt4への移行を検討しているチーム\n\n## セッション概要\n\nNuxt4で導入されるSingleton Data Fetching Layerは、従来のuseFetch/useAsyncDataの問題点を根本的に解決する新しいアーキテクチャです。本LTでは、メモリ使用量の削減、リアクティブキーのサポート、自動的なデータクリーンアップなど、パフォーマンスと開発体験を劇的に改善する新機能を5分間で解説します。実際の移行例とパフォーマンス改善の実測データを交えながら、Nuxt4への移行準備に必要な知識をお伝えします。\n",
+    talkOverview: "Nuxt4で導入されるSingleton Data Fetching Layerは、従来のuseFetch/useAsyncDataの問題点を根本的に解決する新しいアーキテクチャです。本LTでは、メモリ使用量の削減、リアクティブキーのサポート、自動的なデータクリーンアップなど、パフォーマンスと開発体験を劇的に改善する新機能を5分間で解説します。",
     socialUrls: {
       github: "https://github.com/NaokiHaba",
       x: "https://x.com/naokihaba",
