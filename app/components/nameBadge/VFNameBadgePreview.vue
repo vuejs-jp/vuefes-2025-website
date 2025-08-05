@@ -222,13 +222,28 @@ onMounted(() => {
           :src="variants.baseImageUrl"
           alt="Name Badge Preview"
           class="base-name-badge card-face card-face-front"
-          :style="{ width, height, aspectRatio, backfaceVisibility: 'hidden' }"
+          :style="{
+            width,
+            height,
+            aspectRatio,
+            backfaceVisibility: 'hidden',
+          }"
         />
         <div class="card-face highlight" :style="{ width, height, aspectRatio }" />
         <div class="card-face emboss" :style="{ width, height, aspectRatio }" />
         <div class="card-face card-face-back" :style="{ width, height, aspectRatio }" />
 
-        <img id="avatar-image" :src="avatarImageUrl ?? variants.avatarPlaceholderImageUrl" alt="avatar" />
+        <img
+          id="avatar-image"
+          :src="avatarImageUrl ?? variants.avatarPlaceholderImageUrl"
+          alt="avatar"
+          :style="{
+            ...(userRole === 'Sponsor'
+              ? { objectFit: 'contain', backgroundColor: '#fff' }
+              : {}
+            ),
+          }"
+        />
 
         <div id="name-badge-name" :style="{ color: variants.color }">
           {{ name }}
