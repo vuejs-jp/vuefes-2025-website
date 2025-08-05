@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.0.5
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.4...v2.0.5)
+
+### 🩹 Fixes
+
+- Name card aspect ([#848](https://github.com/vuejs-jp/vuefes-2025/pull/848))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.0.4
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.3...v2.0.4)
