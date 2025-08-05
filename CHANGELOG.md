@@ -1,5 +1,25 @@
 # Changelog
 
+## v2.0.4
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.3...v2.0.4)
+
+### 🩹 Fixes
+
+- Name badge base image typo ([f7d6f34](https://github.com/vuejs-jp/vuefes-2025/commit/f7d6f34))
+- Speaker name badge image ([#835](https://github.com/vuejs-jp/vuefes-2025/pull/835))
+- Name badge og base image default ([#845](https://github.com/vuejs-jp/vuefes-2025/pull/845))
+
+### 🏡 Chore
+
+- Fix typo - name-badge-flow-and-attentions ([#831](https://github.com/vuejs-jp/vuefes-2025/pull/831))
+
+### ❤️ Contributors
+
+- ubugeeei ([@ubugeeei](https://github.com/ubugeeei))
+- koyama shigehito ([@yamageji](https://github.com/yamageji))
+- Keigo Nakao ([@kspace-trk](https://github.com/kspace-trk))
+
 ## v2.0.3
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v1.7.1...v2.0.3)
