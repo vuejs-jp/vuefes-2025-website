@@ -105,6 +105,7 @@ nameBadge:
       error: "Failed to save name badge. Please try again."
   shareText: "I'll be at Vue Fes Japan 2025!\nBuy the ticket and create your name badge!\n\n{link}\n\n#vuefes"
   pageTitle: "{username}'s Name Badge"
+  pageTitleSponsor: "{sponsorName}'s Name Badge"
   pageDescription: "This is the name badge page at Vue Fes Japan 2025. Purchase a ticket and create your name badge!"
 
 login:
