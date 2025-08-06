@@ -100,8 +100,12 @@ export const SESSION_SPEAKERS: Speaker[] = [
     title: "Company Employee",
     avatarUrl: "/images/avatars/yamanoku.png",
     color: "default",
-    talkTitle: "Improving Web App Accessibility in the Age of Generative AI",
-    talkOverview: "In this session, we'll explore practical, general-purpose strategies for improving web application accessibility—not limited to Vue.js or Nuxt—by leveraging generative AI technologies as of October 2025.\n\nYou'll walk away with actionable insights, including key points for selecting the right tools, a thinking framework to guide your decisions, and a concrete action plan you can start applying right away.\n\nTogether, we'll discover how all developers can harness these new tools to build more inclusive products for everyone.",
+    talkTitle: "Improving Web App Accessibility in the Generative AI Era",
+    talkOverview: `In this session, we'll find out about useful, common methods for improving web application accessibility — not limited to development using Vue.js / Nuxt — by leveraging generative AI technologies as of October 2025.
+
+You'll get useful advice you can put into practice, like how to choose the right tools, a thinking framework to guide your decisions, and a concrete action plan you can start applying right away.
+
+Together, we’ll discover how all developers can use these new tools to build more accessible products for everyone.`,
     socialUrls: {
       github: "https://github.com/yamanoku",
       x: "https://x.com/yamanoku",
@@ -145,8 +149,18 @@ export const SESSION_SPEAKERS: Speaker[] = [
     title: "Frontend Developer",
     avatarUrl: "/images/avatars/naitokosuke.png",
     color: "navy",
-    talkTitle: "The Ultimate Developer Experience: \nNext Generation Vue/Nuxt Development with typed-router and Pinia Colada",
-    talkOverview: "\"Tired of errors from typos in route names?\"\n\"Repeating the same boilerplate for data fetching state management?\"\n\"Still relying on plain strings for routing—even with TypeScript?\"\n\nIf these sound familiar in your Vue/Nuxt development workflow, this session is for you.\n\nWe'll dive into practical strategies for improving developer experience using `typed-router` and `Pinia Colada`. With automatic type generation from file-based routing, you'll get full autocompletion for route names and parameters. Declarative data fetching frees you from manually managing loading and error states.\n\nRich type information and declarative code don't just help developers—they create an ideal environment for AI-assisted development as well.\n\nWe'll show you how to shift from tedious tasks to meaningful development by building a modern, AI-optimized setup—complete with real code examples and key considerations for adoption.",
+    talkTitle: "The Ultimate Developer Experience:\nNext Generation Vue/Nuxt Development with Nuxt Typed Router and Pinia Colada",
+    talkOverview: `“Tired of errors from typos in route names?”
+“Repeating the same boilerplate for data fetching state management?”
+“Still relying on plain strings for routing—even with TypeScript?”
+
+If these sound familiar in your Vue/Nuxt development workflow, this session is for you.
+
+We'll dive into practical strategies for improving developer experience using \`Nuxt Typed Router\` and \`Pinia Colada\`. With automatic type generation from file-based routing, you'll get full autocompletion for route names and parameters. Declarative data fetching frees you from manually managing loading and error states.
+
+Rich type information and declarative code don’t just help developers—they create an ideal environment for AI-assisted development as well.
+
+We'll show you how to shift from tedious tasks to meaningful development by building a modern, AI-optimized setup—complete with real code examples and key considerations for adoption.`,
     socialUrls: {
       github: "https://github.com/naitokosuke",
       x: "https://x.com/@naitokosuke",
@@ -234,8 +248,12 @@ export const LT_SPEAKERS: Speaker[] = [
     title: "Frontend Developer",
     avatarUrl: "/images/avatars/ssssota.png",
     color: "default",
-    talkTitle: "Why Do Rust Tools Work Even Without Setting Up Rust?",
-    talkOverview: "Rust-based tools are becoming increasingly prominent—names like Rolldown and Biome are popping up more and more. There are even rumors that a company called VoidZero, which claims to be building \"the next-gen JavaScript toolchain,\" now has half its projects written in Rust.\n\nAs JavaScript/TypeScript engineers, many of us are unknowingly using Rust-powered software—even without ever setting up a Rust development or runtime environment ourselves.\n\nIn this talk, we'll take a step back and break down how these Rust-based tools actually work under the hood, and how they seamlessly integrate with the JavaScript ecosystem.",
+    talkTitle: "Why Do Rust-Based Tools Run Without a Rust Environment?",
+    talkOverview: `These days, tools built with Rust are becoming mainstream. You've probably been hearing a lot about projects like Rolldown and Biome. There's even a rumor that at the company VoidZero, which aims to "build the next generation of JavaScript toolchains," half of their projects are now Rust-based.
+
+It seems that we, as JavaScript/TypeScript engineers, are using Rust-based software without even realizing it—even though we have no memory of ever setting up a Rust development environment.
+
+Let's take a fresh look at how these Rust-based tools work, especially in coordination with JavaScript.`,
     socialUrls: {
       github: "https://github.com/ssssota",
       x: "https://x.com/ssssotaro",
