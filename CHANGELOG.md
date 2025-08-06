@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.1.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.1.0...v2.1.1)
+
+### 🩹 Fixes
+
+- Speaker card link ([33daa9b](https://github.com/vuejs-jp/vuefes-2025/commit/33daa9b))
+
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.1.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.5...v2.1.0)
