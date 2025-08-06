@@ -220,6 +220,7 @@ defineOgImage({
 
   @media (--mobile) {
     grid-template-columns: auto 1fr;
+    column-gap: 1.5rem;
   }
 
   .speaker-avatar {
@@ -247,6 +248,7 @@ defineOgImage({
 
     h3.session-title {
       font-size: 1.125rem;
+      line-height: 1.5;
       margin: 0 0 8px 0;
       white-space: pre-wrap;
       overflow-wrap: anywhere;
@@ -275,6 +277,8 @@ defineOgImage({
     }
 
     .speaker-social {
+      display: flex;
+      gap: 0.25rem;
       a {
         width: 1.5rem;
         height: 1.5rem;
@@ -288,7 +292,8 @@ defineOgImage({
 
     @media (--mobile) {
       display: grid;
-      align-content: center;
+      align-content: start;
+      padding-top: 0.25rem;
     }
 
     .speaker-title,
@@ -305,6 +310,8 @@ defineOgImage({
     }
 
     .speaker-social {
+      display: flex;
+      gap: 0.25rem;
       a {
         width: 1.5rem;
         height: 1.5rem;
