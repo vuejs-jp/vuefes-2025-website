@@ -46,28 +46,24 @@ useSeoMeta({
       <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
 
       <ul class="speakers">
-        <NuxtLink
+        <SpeakerCard
           v-for="speaker in sessionSpeakers"
           :key="speaker.id"
           :to="localeRoute({ name: 'speaker-speakerId', params: { speakerId: speaker.id } })"
-          class="speaker-card-link"
-        >
-          <SpeakerCard :speaker="speaker" />
-        </NuxtLink>
+          class="speaker-card-link" :speaker="speaker"
+        />
       </ul>
     </VFSection>
 
     <VFSection :title="t('speakers.lightningTalks.title')" wide>
       <!-- <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" /> -->
       <ul class="speakers">
-        <NuxtLink
+        <SpeakerCard
           v-for="speaker in ltSpeakers"
           :key="speaker.id"
+          :speaker="speaker"
           :to="localeRoute({ name: 'speaker-speakerId', params: { speakerId: speaker.id } })"
-          class="speaker-card-link"
-        >
-          <SpeakerCard :speaker="speaker" />
-        </NuxtLink>
+        />
       </ul>
     </VFSection>
 
@@ -116,11 +112,6 @@ useSeoMeta({
 
     @media (--mobile) {
       --size: 146px;
-    }
-
-    .speaker-card-link {
-      text-decoration: none;
-      color: inherit;
     }
 
     display: grid;

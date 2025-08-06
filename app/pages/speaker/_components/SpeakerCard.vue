@@ -1,8 +1,10 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T extends RoutesNamesList, P extends string">
+import type { NuxtRoute, RoutesNamesList } from "@typed-router";
 import XIcon from "~icons/icons/ic_x";
 import GithubIcon from "~icons/icons/ic_github";
 import BlueskyIcon from "~icons/icons/ic_bluesky";
 import { useI18n } from "#imports";
+import { NuxtLink } from "#components";
 
 const { t } = useI18n();
 
@@ -18,19 +20,26 @@ defineProps<{
       bluesky?: string;
     };
   };
+  to?: NuxtRoute<T, P>;
 }>();
 </script>
 
 <template>
   <li class="speaker">
-    <img :src="speaker.avatarUrl" :alt="''" class="speaker-image" />
-    <p class="speaker-affiliation text-caption">
-      {{ speaker.affiliation }}<br v-if="speaker.affiliation && speaker.title" />
-      {{ speaker.title }}
-    </p>
-    <h3 class="speaker-name">
-      {{ speaker.name }}
-    </h3>
+    <component
+      :is="to ? NuxtLink : 'div'"
+      :to="to"
+      class="speaker-card-link"
+    >
+      <img :src="speaker.avatarUrl" :alt="''" class="speaker-image" />
+      <p class="speaker-affiliation text-caption">
+        {{ speaker.affiliation }}<br v-if="speaker.affiliation && speaker.title" />
+        {{ speaker.title }}
+      </p>
+      <h3 class="speaker-name">
+        {{ speaker.name }}
+      </h3>
+    </component>
 
     <div class="speaker-socials">
       <NuxtLink v-if="speaker.socialUrls?.github" :to="speaker.socialUrls.github" target="_blank">
@@ -53,6 +62,11 @@ defineProps<{
 
 .speaker {
   width: 100%;
+
+  .speaker-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
 
   .speaker-image {
     width: 100%;
