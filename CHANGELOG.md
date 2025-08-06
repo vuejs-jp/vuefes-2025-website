@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.1.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/17ff2295b414997463d8a647041913ebbce1d7dc...v2.1.2)
+
+### 🩹 Fixes
+
+- Update description for CoDMON in sponsors ([#851](https://github.com/vuejs-jp/vuefes-2025/pull/851))
+
+### ❤️ Contributors
+
+- @naokihaba
+
 ## v2.1.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.1.0...v2.1.1)
