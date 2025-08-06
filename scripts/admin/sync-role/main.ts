@@ -2,10 +2,10 @@ import { eq } from "drizzle-orm";
 import createClient from "openapi-fetch";
 import dotenv from "dotenv";
 
-import type { paths } from "../server/peatix-api/schema";
-import { TicketName } from "../server/peatix-api/constant";
-import { db } from "../server/db/orm";
-import { attendees } from "../server/db/schema";
+import type { paths } from "../../../server/peatix-api/schema";
+import { TicketName } from "../../../server/peatix-api/constant";
+import { db } from "../../../server/db/orm";
+import { attendees } from "../../../server/db/schema";
 
 dotenv.config();
 

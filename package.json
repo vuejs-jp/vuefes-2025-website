@@ -40,7 +40,7 @@
     "release:major": "pnpm dlx changelogen@latest --release --major",
     "release:minor": "pnpm dlx changelogen@latest --release --minor",
     "release:patch": "pnpm dlx changelogen@latest --release --patch",
-    "postinstall": "nuxt prepare"
+    "postinstall": "pnpm dlx tsx scripts/name-badge-admin-data-gen.ts && nuxt prepare"
   },
   "devDependencies": {
     "@auth/drizzle-adapter": "^1.10.0",
