@@ -1,5 +1,47 @@
 # Changelog
 
+## v2.1.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.5...v2.1.0)
+
+### 🚀 Enhancements
+
+- Cfp speakers ([#832](https://github.com/vuejs-jp/vuefes-2025/pull/832))
+- Sync role script ([e4e54c8](https://github.com/vuejs-jp/vuefes-2025/commit/e4e54c8))
+- Speaker detail ([#836](https://github.com/vuejs-jp/vuefes-2025/pull/836))
+- Update talk overview for Nuxt4 Singleton Data Fetching Layer ([#842](https://github.com/vuejs-jp/vuefes-2025/pull/842))
+- Name badge admin script ([#847](https://github.com/vuejs-jp/vuefes-2025/pull/847))
+- Subpage ogp ([#849](https://github.com/vuejs-jp/vuefes-2025/pull/849))
+- Subpage ogp image url ([d2dfdd4](https://github.com/vuejs-jp/vuefes-2025/commit/d2dfdd4))
+
+### 🩹 Fixes
+
+- Ticket section style ([#808](https://github.com/vuejs-jp/vuefes-2025/pull/808))
+- Speaker info (neginasu) ([#844](https://github.com/vuejs-jp/vuefes-2025/pull/844))
+- Name badge og base image default ([#845](https://github.com/vuejs-jp/vuefes-2025/pull/845))
+- Name badge og base image default ([#845](https://github.com/vuejs-jp/vuefes-2025/pull/845))
+- Name card aspect ([#848](https://github.com/vuejs-jp/vuefes-2025/pull/848))
+- Name card aspect ([#848](https://github.com/vuejs-jp/vuefes-2025/pull/848))
+- Sponsor name badge og image base ([1292dac](https://github.com/vuejs-jp/vuefes-2025/commit/1292dac))
+- Sponsor name badge og image base ([c980f3d](https://github.com/vuejs-jp/vuefes-2025/commit/c980f3d))
+- Sponsor name badge og title ([321b7f9](https://github.com/vuejs-jp/vuefes-2025/commit/321b7f9))
+- Sponsor name badge og title ([67aaebb](https://github.com/vuejs-jp/vuefes-2025/commit/67aaebb))
+- Speaker detail style ([#846](https://github.com/vuejs-jp/vuefes-2025/pull/846))
+
+### 🏡 Chore
+
+- Unify the notation for speaker information ([cacb6bf](https://github.com/vuejs-jp/vuefes-2025/commit/cacb6bf))
+- Spealer details og description ([1a239e5](https://github.com/vuejs-jp/vuefes-2025/commit/1a239e5))
+- Updat speaker info ([#850](https://github.com/vuejs-jp/vuefes-2025/pull/850))
+
+### ❤️ Contributors
+
+- @Ubugeeei
+- @yamageji
+- @neginasu
+- @naokihaba
+- @448jp
+
 ## v2.0.5
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.0.4...v2.0.5)
