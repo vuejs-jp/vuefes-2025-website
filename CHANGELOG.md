@@ -36,7 +36,7 @@
 
 ### ❤️ Contributors
 
-- @Ubugeeei
+- @ubugeeei
 - @yamageji
 - @neginasu
 - @naokihaba
