@@ -46,7 +46,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "CoDMON, Inc.",
     linkUrl: "https://www.codmon.com/",
     plan: "gold",
-    description: "With the mission of 'Making the environment surrounding children better through the power of technology,' we operate multiple businesses, including our flagship product 'CoDMON,' an ICT service for childcare and educational facilities. Our development team uses Vue.js / Nuxt.js for several products and features!",
+    description: "With the mission of 'Making the environment surrounding children better through the power of technology,' we operate multiple businesses, including our flagship product 'CoDMON,' an ICT service for childcare and educational facilities. Our development team uses Vue.js / Nuxt for several products and features!",
     id: "codmon",
   },
   {
