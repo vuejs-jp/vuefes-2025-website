@@ -10,6 +10,7 @@ import {
   useSeoMeta,
   useLocalePath,
   useRuntimeConfig,
+  defineOgImage,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
@@ -19,9 +20,12 @@ const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
 
+defineOgImage({
+  component: "root",
+  url: `${runtimeConfig.public.siteUrl}images/og/tokusho.png`,
+});
 useSeoMeta({
   title: t("transactions"),
-  ogImage: `${runtimeConfig.public.siteUrl}images/og/tokusho.png`,
 });
 </script>
 

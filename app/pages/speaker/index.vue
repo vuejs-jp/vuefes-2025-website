@@ -12,6 +12,7 @@ import {
   useSeoMeta,
   useI18n,
   useRuntimeConfig,
+  defineOgImage,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
@@ -24,12 +25,15 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
 const ltSpeakers = computed(() => locale.value === "en" ? enLTSpeakers : jaLTSpeakers);
 const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : jaPanelSpeakers);
 
+defineOgImage({
+  component: "root",
+  url: `${runtimeConfig.public.siteUrl}images/og/speaker.png`,
+});
 useSeoMeta({
   title: () => `Vue Fes Japan 2025 - ${t("speakers.title")}`,
   ogTitle: () => `Vue Fes Japan 2025 - ${t("speakers.title")}`,
   description: () => t("speakers.description"),
   ogDescription: () => t("speakers.description"),
-  ogImage: `${runtimeConfig.public.siteUrl}images/og/speaker.png`,
 });
 </script>
 

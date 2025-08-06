@@ -10,6 +10,7 @@ import {
   useSeoMeta,
   useLocalePath,
   useRuntimeConfig,
+  defineOgImage,
 
 } from "#imports";
 
@@ -20,9 +21,12 @@ const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
 
+defineOgImage({
+  component: "root",
+  url: `${runtimeConfig.public.siteUrl}images/og/privacy-policy.png`,
+});
 useSeoMeta({
   title: t("privacyPolicy"),
-  ogImage: `${runtimeConfig.public.siteUrl}images/og/privacy-policy.png`,
 });
 </script>
 

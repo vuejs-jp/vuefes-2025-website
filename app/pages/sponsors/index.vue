@@ -11,6 +11,7 @@ import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
+  defineOgImage,
 } from "#imports";
 import { VFSection } from "#components";
 
@@ -19,10 +20,13 @@ definePageMeta({ prerender: true });
 const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
 const bp = useBreakpoint();
+defineOgImage({
+  component: "root",
+  url: `${runtimeConfig.public.siteUrl}images/og/sponsors.png`,
+});
 useSeoMeta({
   title: t("sponsors.title"),
   ogTitle: t("sponsors.title"),
-  ogImage: `${runtimeConfig.public.siteUrl}images/og/sponsors.png`,
 });
 </script>
 
