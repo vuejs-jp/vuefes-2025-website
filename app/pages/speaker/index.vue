@@ -4,16 +4,33 @@ import { SESSION_SPEAKERS as enSessionSpeakers, LT_SPEAKERS as enLTSpeakers, PAN
 import { SESSION_SPEAKERS as jaSessionSpeakers, LT_SPEAKERS as jaLTSpeakers, PANEL_DISCUSSION_SPEAKERS as jaPanelSpeakers } from "../../../i18n/ja/speakers";
 import SpeakerCard from "./_components/SpeakerCard.vue";
 import { VFSection, JaSpeaker, EnSpeaker, JaPanelDiscussion, EnPanelDiscussion } from "#components";
-import { computed, defineRouteRules, useI18n } from "#imports";
+import {
+  computed,
+  defineRouteRules,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
+  useI18n,
+  useRuntimeConfig,
+} from "#imports";
 
 defineRouteRules({ prerender: true });
 
+const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 
 const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers : jaSessionSpeakers);
 const ltSpeakers = computed(() => locale.value === "en" ? enLTSpeakers : jaLTSpeakers);
 const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : jaPanelSpeakers);
+
+useSeoMeta({
+  title: () => `Vue Fes Japan 2025 - ${t("speakers.title")}`,
+  ogTitle: () => `Vue Fes Japan 2025 - ${t("speakers.title")}`,
+  description: () => t("speakers.description"),
+  ogDescription: () => t("speakers.description"),
+  ogImage: `${runtimeConfig.public.siteUrl}images/og/speaker.png`,
+});
 </script>
 
 <template>

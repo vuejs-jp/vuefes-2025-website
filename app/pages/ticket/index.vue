@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import { ref, useAuth, useI18n, useLocaleRoute } from "#imports";
+import {
+  ref,
+  useAuth,
+  useI18n,
+  useLocaleRoute,
+  useRuntimeConfig,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
+} from "#imports";
 import {
   VFButton,
   VFSection,
@@ -15,6 +24,7 @@ import {
   JaFaq,
 } from "#components";
 
+const runtimeConfig = useRuntimeConfig();
 const { signIn, status, data } = useAuth();
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
@@ -32,6 +42,12 @@ async function handleClockGitHubSignIn() {
   await signIn("github", { callbackUrl: "/ticket" })
     .finally(() => { isLoading.value = false; });
 }
+
+useSeoMeta({
+  title: t("ticket.title"),
+  ogTitle: t("ticket.title"),
+  ogImage: `${runtimeConfig.public.siteUrl}images/og/ticket.png`,
+});
 </script>
 
 <template>

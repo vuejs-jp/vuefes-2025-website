@@ -9,15 +9,21 @@ import {
   useHead,
   useSeoMeta,
   useLocalePath,
+  useRuntimeConfig,
+
 } from "#imports";
 
 defineRouteRules({ prerender: true });
 
+const runtimeConfig = useRuntimeConfig();
 const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
 
-useSeoMeta({ title: t("privacyPolicy") });
+useSeoMeta({
+  title: t("privacyPolicy"),
+  ogImage: `${runtimeConfig.public.siteUrl}images/og/privacy-policy.png`,
+});
 </script>
 
 <template>

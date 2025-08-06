@@ -9,15 +9,20 @@ import {
   useHead,
   useSeoMeta,
   useLocalePath,
+  useRuntimeConfig,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
 
+const runtimeConfig = useRuntimeConfig();
 const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
 
-useSeoMeta({ title: t("transactions") });
+useSeoMeta({
+  title: t("transactions"),
+  ogImage: `${runtimeConfig.public.siteUrl}images/og/tokusho.png`,
+});
 </script>
 
 <template>

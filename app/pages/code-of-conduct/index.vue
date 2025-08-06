@@ -9,15 +9,20 @@ import {
   useHead,
   useSeoMeta,
   useLocalePath,
+  useRuntimeConfig,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
 
+const runtimeConfig = useRuntimeConfig();
 const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
 
-useSeoMeta({ title: t("coc") });
+useSeoMeta({
+  title: t("coc"),
+  ogImage: `${runtimeConfig.public.siteUrl}images/og/code-of-conduct.png`,
+});
 </script>
 
 <template>

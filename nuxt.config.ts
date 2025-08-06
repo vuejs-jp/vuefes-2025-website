@@ -70,6 +70,11 @@ export default defineNuxtConfig({
 
     public: {
       contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
+      siteUrl: process.env.NODE_ENV === "production"
+        ? process.env.CONTEXT === "production"
+          ? "https://vuefes.jp/2025/"
+          : `${process.env.DEPLOY_PRIME_URL}/2025/`
+        : "http://localhost:3000/",
     },
   },
   components: [{ path: "~/components", pathPrefix: false }],
@@ -168,10 +173,17 @@ export default defineNuxtConfig({
         name: "JetBrainsMono-Regular",
         path: "/fonts/og/JetBrainsMono-Regular.ttf",
       },
-
       {
         name: "IBMPlexSansJP-Regular",
         path: "/fonts/og/IBMPlexSansJP-Regular.ttf",
+      },
+      {
+        name: "IBMPlexSansJP-SemiBold",
+        path: "/fonts/og/IBMPlexSansJP-SemiBold.ttf",
+      },
+      {
+        name: "ClashDisplay-Medium",
+        path: "/fonts/og/ClashDisplay-Medium.ttf",
       },
     ],
   },

@@ -3,13 +3,27 @@ import SponsorGrid from "../../components/SponsorGrid.vue";
 import { SPONSORS as JaSponsors } from "~~/i18n/ja/sponsors";
 import { SPONSORS as EnSponsors } from "~~/i18n/en/sponsors";
 
-import { definePageMeta, useBreakpoint, useI18n } from "#imports";
+import {
+  definePageMeta,
+  useBreakpoint,
+  useI18n,
+  useRuntimeConfig,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useSeoMeta,
+} from "#imports";
 import { VFSection } from "#components";
 
 definePageMeta({ prerender: true });
 
+const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
 const bp = useBreakpoint();
+useSeoMeta({
+  title: t("sponsors.title"),
+  ogTitle: t("sponsors.title"),
+  ogImage: `${runtimeConfig.public.siteUrl}images/og/sponsors.png`,
+});
 </script>
 
 <template>
