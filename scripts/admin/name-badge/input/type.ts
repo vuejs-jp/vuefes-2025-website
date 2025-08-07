@@ -7,11 +7,23 @@ export type NameBadgeInput =
   }) & {
     name: string;
 
-    localAvatarImagePath: string;
-
     /** auto generated value as default */
     userId?: string;
 
     /** auto generated value as default */
     email?: string;
-  };
+  } & (
+    | {
+      /**
+         * @default "create"
+         *
+         * when update and delete, target searched by name and role
+         */
+      action?: "create";
+      localAvatarImagePath: string;
+    }
+    | {
+      action: "update" | "delete";
+      localAvatarImagePath?: string;
+    }
+  );
