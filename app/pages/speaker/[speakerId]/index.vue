@@ -78,7 +78,16 @@ defineOgImage({
           </h3>
 
           <p v-if="currentSpeaker.talkOverview" class="session-overview">
-            {{ currentSpeaker.talkOverview }}
+            <template v-for="(paragraph, idx) in currentSpeaker.talkOverview?.split('\n')" :key="idx">
+              <template v-if="paragraph">
+                <p :style="paragraph.startsWith('・') ? 'text-indent: -1em; padding-left: 1em;' : ''">
+                  {{ paragraph }}
+                </p>
+              </template>
+              <template v-else>
+                <span class="session-overview-spacer"></span>
+              </template>
+            </template>
           </p>
 
           <div class="speaker-meta">
@@ -168,7 +177,16 @@ defineOgImage({
         </h3>
 
         <p v-if="currentSpeaker.talkOverview" class="session-overview-mobile">
-          {{ currentSpeaker.talkOverview }}
+          <template v-for="(paragraph, idx) in currentSpeaker.talkOverview?.split('\n')" :key="idx">
+            <template v-if="paragraph">
+              <p :style="paragraph.startsWith('・') ? 'text-indent: -1em; padding-left: 1em;' : ''">
+                {{ paragraph }}
+              </p>
+            </template>
+            <template v-else>
+              <span class="session-overview-spacer"></span>
+            </template>
+          </template>
         </p>
       </div>
 
@@ -249,7 +267,7 @@ defineOgImage({
     h3.session-title {
       font-size: 1.125rem;
       line-height: 1.5;
-      margin: 0 0 8px 0;
+      margin: 0 0 2rem 0;
       white-space: pre-wrap;
       overflow-wrap: anywhere;
       word-break: normal;
@@ -257,7 +275,7 @@ defineOgImage({
     }
 
     .session-overview {
-      margin-bottom: 1rem;
+      margin-bottom: 2.5rem;
       white-space: pre-wrap;
     }
 
@@ -318,6 +336,7 @@ defineOgImage({
         display: inline-flex;
       }
     }
+
   }
 
   .session-title-mobile {
@@ -325,7 +344,7 @@ defineOgImage({
     font-size: 1rem;
     line-height: 1.5rem;
     margin-top: 1.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: normal;
@@ -347,6 +366,11 @@ defineOgImage({
       grid-column: 1 / -1;
       margin-bottom: 0;
     }
+  }
+
+  .session-overview-spacer {
+    display: block;
+    height: 1.25em;
   }
 }
 </style>

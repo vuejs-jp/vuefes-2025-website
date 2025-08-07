@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "@sidebase/nuxt-auth",
     "nuxt-og-image",
-    "@nuxtjs/robots",
   ],
 
   $production: {
@@ -91,10 +90,6 @@ export default defineNuxtConfig({
         : process.env.NODE_ENV === "production"
           ? "https://vuefes.jp/"
           : "http://localhost:3000/",
-  },
-
-  robots: {
-    robotsTxt: false,
   },
 
   plugins: ["~/plugins/v-click-outside.ts"],

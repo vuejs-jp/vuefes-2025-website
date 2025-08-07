@@ -32,9 +32,6 @@ importers:
       '@nuxtjs/i18n':
         specifier: 9.4.0
         version: 9.4.0(@vue/compiler-dom@3.5.17)(eslint@9.24.0(jiti@2.4.2))(magicast@0.3.5)(rollup@4.44.1)(vue@3.5.17(typescript@5.8.3))
-      '@nuxtjs/robots':
-        specifier: 5.4.0
-        version: 5.4.0(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3))
       '@nuxtjs/seo':
         specifier: ^3.0.1
         version: 3.0.1(@unhead/vue@2.0.5(vue@3.5.17(typescript@5.8.3)))(h3@1.15.3)(magicast@0.3.5)(rollup@4.44.1)(unstorage@1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.44.2(better-sqlite3@11.9.1)))(ioredis@5.6.1))(vite@6.3.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.17(typescript@5.8.3))
@@ -9053,8 +9050,8 @@ packages:
   vue-component-type-helpers@2.2.8:
     resolution: {integrity: sha512-4bjIsC284coDO9om4HPA62M7wfsTvcmZyzdfR0aUlFXqq4tXxM1APyXpNVxPC8QazKw9OhmZNHBVDA6ODaZsrA==}
 
-  vue-component-type-helpers@3.0.4:
-    resolution: {integrity: sha512-WtR3kPk8vqKYfCK/HGyT47lK/T3FaVyWxaCNuosaHYE8h9/k0lYRZ/PI/+T/z2wP+uuNKmL6z30rOcBboOu/YA==}
+  vue-component-type-helpers@3.0.5:
+    resolution: {integrity: sha512-uoNZaJ+a1/zppa/Vgmi8zIOP2PHXDN2rT8NyF+zQRK6ZG94lNB9prcV0GdLJbY9i9lrD47JOVIH92SaiA7oJ1A==}
 
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
@@ -13039,7 +13036,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.5.17(typescript@5.8.3)
-      vue-component-type-helpers: 3.0.4
+      vue-component-type-helpers: 3.0.5
 
   '@stylistic/eslint-plugin@4.2.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -19825,7 +19822,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.8: {}
 
-  vue-component-type-helpers@3.0.4: {}
+  vue-component-type-helpers@3.0.5: {}
 
   vue-devtools-stub@0.1.0: {}
 
