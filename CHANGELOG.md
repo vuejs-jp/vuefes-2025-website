@@ -1,8 +1,27 @@
 # Changelog
 
+## v2.1.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.1.2...v2.1.3)
+
+### 🩹 Fixes
+
+- Session-overview style ([#854](https://github.com/vuejs-jp/vuefes-2025/pull/854))
+- Set default OG image dimensions to 1200x630 pixels ([#853](https://github.com/vuejs-jp/vuefes-2025/pull/853))
+
+### 🏡 Chore
+
+- Robots ([3f38b33](https://github.com/vuejs-jp/vuefes-2025/commit/3f38b33))
+
+### ❤️ Contributors
+
+- @ubugeeei
+- @ktym4a
+- @yamageji
+
 ## v2.1.2
 
-[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/17ff2295b414997463d8a647041913ebbce1d7dc...v2.1.2)
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.1.1...v2.1.2)
 
 ### 🩹 Fixes
 
