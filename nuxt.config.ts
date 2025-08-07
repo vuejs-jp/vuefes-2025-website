@@ -166,6 +166,10 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
+    defaults: {
+      width: 1200,
+      height: 630,
+    },
     enabled: true,
     runtimeCacheStorage: false,
     fonts: [

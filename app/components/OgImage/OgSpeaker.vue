@@ -69,6 +69,8 @@ const variants = computed(() => {
         width: '50%',
         top: '50%',
         left: '75%',
+        objectFit: 'cover',
+        height: '100%',
         transform: 'translate(-50%, -50%)',
         backgroundColor: 'white',
       }"
@@ -93,12 +95,13 @@ const variants = computed(() => {
     <div
       :style="{
         position: 'absolute',
-        top: '70%',
+        bottom: '12%',
         left: '50%',
         fontSize: '40px',
         backgroundColor: variants.subColor,
         color: variants.baseColor,
         fontFamily: 'JetBrainsMono-Regular, IBMPlexSansJP-Regular',
+        lineHeight: '90%',
         padding: '25px 45px',
         borderRadius: '125px',
       }"

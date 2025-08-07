@@ -66,7 +66,8 @@ const variants = computed(() => {
     <div
       :style="{
         position: 'absolute',
-        top: '3.3333%',
+        top: '50%',
+        transform: 'translateY(-50%)',
         right: '8.33333%',
         width: '33.3333%',
         display: 'flex',
@@ -103,11 +104,11 @@ const variants = computed(() => {
       id="name-badge-avatar"
       :style="{
         position: 'absolute',
-        bottom: '12.2%',
+        bottom: '14.4%',
         right: '2%',
         transform: 'translateX(-50%)',
         width: '15.4%',
-        height: '30.5%',
+        height: '29.05%',
         borderRadius: '50%',
         overflow: 'hidden',
       }"
