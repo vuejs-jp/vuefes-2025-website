@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.2.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/09b5ee26c7a31f784b2b41b71c1fd69d923e50e3...v2.2.0)
+
+### 🚀 Enhancements
+
+- Admin name badge crud support ([#863](https://github.com/vuejs-jp/vuefes-2025/pull/863))
+- Add option sponsors ([#843](https://github.com/vuejs-jp/vuefes-2025/pull/843))
+
+### ❤️ Contributors
+
+- @yamageji
+- @ubugeeei
+
 ## v2.1.3
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.1.2...v2.1.3)
