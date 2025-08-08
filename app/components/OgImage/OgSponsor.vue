@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed, useRuntimeConfig } from "#imports";
 
-const { logoImageUrl, plan = "OPTION" } = defineProps<{
+const { logoImageUrl, plan = "OPTION_ONLY" } = defineProps<{
   name: string;
   logoImageUrl: string;
-
-  // TODO: OPTION SPONSOR
-  plan?: "PLATINA" | "GOLD" | "SILVER" | "BRONZE" | "OPTION";
+  plan?: "PLATINA" | "GOLD" | "SILVER" | "BRONZE" | "OPTION_ONLY" | "CREATIVE";
 }>();
+
+const planName = computed(() => {
+  return plan === "OPTION_ONLY" ? "OPTION" : plan;
+});
 
 const runtimeConfig = useRuntimeConfig();
 const logoImageFullUrl = computed(() => `${runtimeConfig.siteUrl}${logoImageUrl.startsWith("/") ? logoImageUrl.slice(1) : logoImageUrl}`);
@@ -18,7 +20,7 @@ const SPONSOR_TAG_STYLE_BASE = {
 };
 
 const variants = computed(() => {
-  switch (plan) {
+  switch (planName.value) {
     case "PLATINA":
       return {
         baseImageUrl: `${runtimeConfig.siteUrl}images/og/speaker-or-sponsor/purple.png`,
@@ -58,6 +60,26 @@ const variants = computed(() => {
         sponsorTagStyle: {
           ...SPONSOR_TAG_STYLE_BASE,
           background: "#DDA25B",
+        },
+      };
+    case "OPTION":
+      return {
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/speaker-or-sponsor/orange.png`,
+        baseColor: "#f66c21",
+        subColor: "#def7d1",
+        sponsorTagStyle: {
+          ...SPONSOR_TAG_STYLE_BASE,
+          background: "#E2E4EC",
+        },
+      };
+    case "CREATIVE":
+      return {
+        baseImageUrl: `${runtimeConfig.siteUrl}images/og/speaker-or-sponsor/default.png`,
+        baseColor: "#007f62",
+        subColor: "#fae8e4",
+        sponsorTagStyle: {
+          ...SPONSOR_TAG_STYLE_BASE,
+          background: "#DBD69A",
         },
       };
   }
@@ -150,7 +172,7 @@ const variants = computed(() => {
       }"
     >
       <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-      {{ plan.charAt(0).toUpperCase() + plan.slice(1).toLowerCase() }} Sponsor
+      {{ planName.charAt(0).toUpperCase() + planName.slice(1).toLowerCase() }} Sponsor
     </div>
   </div>
 </template>

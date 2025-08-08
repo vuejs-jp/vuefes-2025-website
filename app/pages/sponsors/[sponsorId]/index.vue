@@ -6,6 +6,7 @@ import GithubIcon from "~icons/icons/ic_github";
 import BlueskyIcon from "~icons/icons/ic_bluesky";
 import { SPONSORS as JaSponsors } from "~~/i18n/ja/sponsors";
 import { SPONSORS as EnSponsors } from "~~/i18n/en/sponsors";
+import type { Sponsor } from "~~/i18n/sponsor";
 import {
   computed,
   defineOgImage,
@@ -23,14 +24,18 @@ const route = useRoute("sponsors-sponsorId");
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 
-const sponsors = computed(() => {
+type SponsorWithPlan = Omit<Sponsor, "plan"> & { plan: string };
+
+const sponsors = computed((): SponsorWithPlan[] => {
   const sponsorData = locale.value === "ja" ? JaSponsors : EnSponsors;
-  return Object.entries(sponsorData).flatMap(([plan, planSponsors]) =>
-    planSponsors.map(sponsor => ({ ...sponsor, plan })),
-  );
+  return Object.entries(sponsorData)
+    .filter(([plan]) => plan !== "OPTION") // OPTIONプロパティを除外
+    .flatMap(([plan, planSponsors]) =>
+      (planSponsors as Sponsor[]).map(sponsor => ({ ...sponsor, plan })),
+    ) as SponsorWithPlan[];
 });
 
-const currentSponsor = computed(() =>
+const currentSponsor = computed((): SponsorWithPlan | undefined =>
   sponsors.value.find(sponsor => sponsor.id === route.params.sponsorId),
 );
 
@@ -68,9 +73,14 @@ defineOgImage({
           </h2>
         </NuxtLink>
       </div>
-      <div class="sponsor-tags">
-        <SponsorTag :plan="currentSponsor.plan" />
-      </div>
+      <ul class="sponsor-tags">
+        <li v-if="currentSponsor.plan !== 'OPTION_ONLY'">
+          <SponsorTag :plan="currentSponsor.plan" />
+        </li>
+        <li v-for="option in currentSponsor.option" :key="option">
+          <SponsorTag :plan="option" />
+        </li>
+      </ul>
       <div class="sponsor-description">
         {{ currentSponsor.description }}
       </div>
@@ -175,16 +185,19 @@ defineOgImage({
 }
 
 .sponsor-tags{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-top: 2rem;
-  @media (--mobile){
 
+  @media (--mobile){
     margin-top: 1.5rem;
   }
 }
 .sponsor-description{
   margin: 2rem 0;
-  @media (--mobile){
 
+  @media (--mobile){
     margin: 1.5rem 0;
   }
 }

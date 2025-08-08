@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <span :class="`sponsor-tag sponsor-tag--${plan.toLowerCase()}`">
-    {{ $t(`sponsors.${plan.toLowerCase()}Sponsor`) }}
+    {{ $t(`sponsors.${plan.toLowerCase().replace(/-([a-z])/g, (match, letter) => letter.toUpperCase())}Sponsor`) }}
   </span>
 </template>
 
@@ -20,6 +20,7 @@ defineProps({
   padding: 0 8px;
   height: 36px;
   border-radius: 8px;
+  background: #FAE8E4;
 }
 
 .sponsor-tag--platina {
@@ -38,7 +39,7 @@ defineProps({
   background: #DDA25B;
 }
 
-.sponsor-tag--option {
+.sponsor-tag--creative {
   background: #FAE8E4;
 }
 </style>

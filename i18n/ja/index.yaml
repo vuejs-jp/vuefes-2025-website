@@ -158,11 +158,26 @@ sponsors:
   title: "スポンサー"
   coverImageAlt: "スポンサーのカバー画像"
   viewAll: "スポンサー一覧はこちら"
+
   platinaSponsor: "プラチナスポンサー"
   goldSponsor: "ゴールドスポンサー"
   silverSponsor: "シルバースポンサー"
   bronzeSponsor: "ブロンズスポンサー"
   optionSponsor: "オプションスポンサー"
+  creativeSponsor: "クリエイティブスポンサー"
+  
+  hallNamingRightsSponsor: "ホールネーミングライツスポンサー"
+  roomNamingRightsSponsor: "ルームネーミングライツスポンサー"
+  handsOnSponsor: "ハンズオンスポンサー"
+  liveTranslationSponsor: "ライブ翻訳スポンサー"
+  nameBadgeSponsor: "ネームカードスポンサー"
+  afterPartySponsor: "アフターパーティースポンサー"
+  studentSupportSponsor: "学生支援スポンサー"
+  staffTShirtsSponsor: "スタッフTシャツスポンサー"
+  exhibitionSponsor: "展示スポンサー"
+  intermissionSlideSponsor: "幕間スライドスポンサー"
+  jobBoardSponsor: "ジョブボードスポンサー"
+  
   details: "スポンサー情報"
 
 access:
