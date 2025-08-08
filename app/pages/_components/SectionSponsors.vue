@@ -5,6 +5,7 @@ import { useBreakpoint, useI18n, useWithBase } from "#imports";
 import { VFSection, SponsorGrid } from "#components";
 import { SPONSORS as JaSponsors } from "~~/i18n/ja/sponsors";
 import { SPONSORS as EnSponsors } from "~~/i18n/en/sponsors";
+import type { OptionSponsor } from "~~/i18n/sponsor";
 
 const bp = useBreakpoint();
 const withBase = useWithBase();
@@ -70,6 +71,39 @@ const localeRoute = useLocaleRoute();
       </div>
     </div>
 
+    <div class="sponsor-list">
+      <VFHeading>{{ t('sponsors.optionSponsor') }}</VFHeading>
+      <div
+        v-for="option in (locale === 'ja' ? JaSponsors.OPTION : EnSponsors.OPTION) as OptionSponsor[]"
+        :key="option.title"
+      >
+        <div
+          v-if="option.data.length > 0"
+          class="sponsor-option-container"
+        >
+          <h3>{{ t(`sponsors.${option.title}`) }}</h3>
+          <SponsorGrid
+            :sponsors="option.data"
+            :columns="bp === 'mobile' ? 2 : 4"
+            gap="24px"
+            image-only
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor-list">
+      <VFHeading>{{ t('sponsors.creativeSponsor') }}</VFHeading>
+      <div class="sponsor-grid-container">
+        <SponsorGrid
+          :sponsors="locale === 'ja' ? JaSponsors.CREATIVE : EnSponsors.CREATIVE"
+          :columns="bp === 'mobile' ? 1 : 2"
+          gap="24px"
+          image-only
+        />
+      </div>
+    </div>
+
     <div class="view-all-sponsors">
       <VFButton :link="localeRoute({ name: 'sponsors' })">
         {{ t('sponsors.viewAll') }}
@@ -102,5 +136,11 @@ const localeRoute = useLocaleRoute();
     margin-top: 24px;
     margin-bottom: 24px;
   }
+}
+
+.sponsor-option-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 </style>

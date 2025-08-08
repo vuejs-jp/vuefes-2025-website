@@ -42,9 +42,9 @@ const localeRoute = useLocaleRoute();
           <img :src="sponsor.logoImageUrl" :alt="sponsor.logoImageAlt" loading="lazy" />
         </slot>
       </NuxtLink>
-      <div v-if="sponsor.name && !imageOnly" class="sponsor-name">
+      <h3 v-if="sponsor.name && !imageOnly" class="sponsor-name">
         {{ sponsor.name }}
-      </div>
+      </h3>
     </div>
   </div>
 </template>
@@ -63,12 +63,8 @@ const localeRoute = useLocaleRoute();
   gap: 1rem;
 }
 .sponsor-name{
-  font-family: IBMPlexSansJP-Bold;
-  font-size: 1.125rem;
-
-  @media (--mobile) {
-    font-size: 1rem;
-  }
+  margin: 0;
+  font-size: 0.875rem;
 }
 
 .sponsor-link,

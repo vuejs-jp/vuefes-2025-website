@@ -2,6 +2,7 @@
 import SponsorGrid from "../../components/SponsorGrid.vue";
 import { SPONSORS as JaSponsors } from "~~/i18n/ja/sponsors";
 import { SPONSORS as EnSponsors } from "~~/i18n/en/sponsors";
+import type { OptionSponsor } from "~~/i18n/sponsor";
 
 import {
   definePageMeta,
@@ -67,13 +68,34 @@ useSeoMeta({
       />
     </VFSection>
 
-    <!-- <VFSection :title="t('sponsors.optionSponsor')">
+    <VFSection :title="t('sponsors.optionSponsor')">
+      <div
+        v-for="option in (locale === 'ja' ? JaSponsors.OPTION : EnSponsors.OPTION) as OptionSponsor[]"
+        :key="option.title"
+      >
+        <div
+          v-if="option.data.length > 0"
+          class="sponsor-option-container"
+        >
+          <h2 class="sponsor-option-title">
+            {{ t(`sponsors.${option.title}`) }}
+          </h2>
+          <SponsorGrid
+            :sponsors="option.data"
+            :columns="bp === 'mobile' ? 2 : 4"
+            gap="24px"
+          />
+        </div>
+      </div>
+    </VFSection>
+
+    <VFSection :title="t('sponsors.creativeSponsor')">
       <SponsorGrid
-        :items="locale === 'ja' ? JaSponsors.OPTION : EnSponsors.OPTION"
-        :columns="bp === 'mobile' ? 2 : 4"
+        :sponsors="locale === 'ja' ? JaSponsors.CREATIVE : EnSponsors.CREATIVE"
+        :columns="bp === 'mobile' ? 1 : 2"
         :gap="bp === 'mobile' ? '24px' : '32px'"
       />
-    </VFSection> -->
+    </VFSection>
   </div>
 </template>
 
@@ -97,6 +119,24 @@ useSeoMeta({
       padding: 2.5rem 0.75rem;
     }
   }
+}
 
+.sponsor-option-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-top: 40px;
+
+  @media (--mobile) {
+    margin-top: 32px;
+  }
+}
+
+.sponsor-option-title {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin: 0;
+  color: var(--color-text-default);
 }
 </style>

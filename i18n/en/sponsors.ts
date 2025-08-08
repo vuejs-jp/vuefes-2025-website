@@ -1,4 +1,4 @@
-import type { Sponsor } from "../sponsor";
+import type { Sponsor, Option, OptionSponsor } from "../sponsor";
 
 const SPONSORS_PLATINA: Sponsor[] = [
   {
@@ -46,6 +46,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "CoDMON, Inc.",
     linkUrl: "https://www.codmon.com/",
     plan: "gold",
+    option: ["intermission-slide"],
     description: "With the mission of 'Making the environment surrounding children better through the power of technology,' we operate multiple businesses, including our flagship product 'CoDMON,' an ICT service for childcare and educational facilities. Our development team uses Vue.js / Nuxt for several products and features!",
     id: "codmon",
   },
@@ -64,6 +65,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "LY Corporation",
     linkUrl: "https://www.lycorp.co.jp/ja/technology-design/",
     plan: "gold",
+    option: ["student-support"],
     description: "LY Corporation is one of Japan's largest tech companies formed in October 2023 through the reorganization of Group companies including LINE Corporation and Yahoo Japan Corporation.",
     id: "lycorp",
   },
@@ -100,6 +102,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "PLAID, Inc.",
     linkUrl: "https://plaid.co.jp/",
     plan: "gold",
+    option: ["student-support"],
     description: "PLAID, Inc. provides products such as KARTE, a customer experience (CX) platform that analyzes online user behavior in real time to help deliver optimal experiences to end users. We've been using Vue.js since 2014, and many core features of our products are built with it. At our booth, we'll be sharing how we leverage Vue.js and other related technologies in our development. Feel free to stop by and chat with us!",
     id: "plaid",
   },
@@ -109,6 +112,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "Stockmark Inc.",
     linkUrl: "https://stockmark.co.jp/",
     plan: "gold",
+    option: ["name-badge"],
     description: `Stockmark is a startup specializing in natural language processing. We harness the power of AI to collect, share, and summarize information through our "Acconect" service, which strengthens organizations through the power of information. Our diverse initiatives include providing "SAT," a service that structures documents in flexible formats, as well as developing our own large language models (LLMs) and vision language models (VLMs) with parameters in the 100-billion scale.`,
     id: "stockmark",
   },
@@ -118,6 +122,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "Future Architect Inc.",
     linkUrl: "https://www.future.co.jp/architect/",
     plan: "gold",
+    option: ["room-naming-rights"],
     description: `Future Architect, Inc. has many expert engineers in various domains, who also actively contribute as committers. Our engineers provide comprehensive support, from implementation to business consulting, empowering "management and IT" of clients in diverse industries. We are engaged in a multitude of meaningful projects and are looking for talented engineers to join our team! Vue.js is a widely adopted technology in our projects, and we intend to continuously contribute to societal progress by actively engaging with the community.`,
     id: "future",
   },
@@ -165,6 +170,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "Tebiki, Inc.",
     linkUrl: "https://tebiki.co.jp/",
     plan: "gold",
+    option: ["intermission-slide", "job-board"],
     description: "We are on a mission to pioneer the future of frontline operations.\nOur products include Tebiki Frontline Training, a video-based training platform, and Tebiki Frontline Analytics, a digital form and data analysis system. These tools provide end-to-end support for frontline operations, from capturing training videos to analyzing operational data, and help accelerate digital transformation.\nWe are actively addressing complex engineering challenges such as scalable AI-powered video processing, real-time computer vision, IoT integration at the edge, and visualization of petabyte-scale data. Join us in shaping the future of frontline operations.",
     id: "tebiki",
   },
@@ -174,6 +180,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   //   logoImageAlt: "",
   //   linkUrl: "",
   //   plan: "gold",
+  //   option: ["staff-t-shirts"],
   //   description: "",
   //   id: "",
   // },
@@ -196,6 +203,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "ANDPAD logo",
     linkUrl: "https://engineer.andpad.co.jp/",
     plan: "gold",
+    option: ["intermission-slide"],
     description: "ANDPAD is a Vue/Nuxt-powered project management platform for construction, serving 550K+ users across 210K+ companies. We've built smart UIs that untangle complex construction data, customizable billing components, and a design system that accelerates development. Visit our booth!",
     id: "andpad",
   },
@@ -205,6 +213,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "mov inc.",
     linkUrl: "https://mov.am/",
     plan: "gold",
+    option: ["job-board"],
     description: `mov inc. has a mission to "maximize Japan's potential" and is engaged in two businesses: "inbound business" and "store support business." MOV exists as a company that supports the Japanese market, Japanese companies, and Japanese content in order to bring back the vitality of Japan. With an honest consulting style and high-quality products, the company has achieved steady and accelerated growth.`,
     id: "mov",
   },
@@ -223,6 +232,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "Tenshoku-DRAFT",
     linkUrl: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=vuefes2025",
     plan: "gold",
+    option: ["after-party"],
     description: `Tenshoku-DRAFT helps IT engineers boost salary & skills. Get direct salary-inclusive scout offers via "Scout" or expert career advice via "Agent."\nFind a truly rewarding IT engineering path with us.`,
     id: "job-draft",
   },
@@ -235,6 +245,7 @@ const SPONSORS_SILVER: Sponsor[] = [
     logoImageAlt: "Mates Corporation | Aiming to Update Education",
     linkUrl: "https://mates-app.jp/",
     plan: "silver",
+    option: ["hall-naming-rights"],
     description: "Mates Inc. provides ICT educational materials “aim@” with high reproducibility and learning outcomes under the mission of “updating education”.We are looking for engineers who can work together to create products that improve education.",
     id: "mates",
   },
@@ -253,6 +264,7 @@ const SPONSORS_SILVER: Sponsor[] = [
     logoImageAlt: "istyle, Inc.",
     linkUrl: "https://www.istyle.co.jp/",
     plan: "silver",
+    option: ["intermission-slide", "job-board"],
     description: "istyle, Inc. operates @cosme, a leading beauty platform, along with E-commerce and physical stores. By leveraging consumer data, we strive to build a new cross-organizational infrastructure that empowers innovative services.",
     id: "istyle",
   },
@@ -262,6 +274,7 @@ const SPONSORS_SILVER: Sponsor[] = [
     logoImageAlt: "CodeRabbit",
     linkUrl: "https://www.coderabbit.ai",
     plan: "silver",
+    option: ["intermission-slide"],
     description: "CodeRabbit slashes code review time and catches bugs faster. It hooks into GitHub and GitLab to auto-review PRs. Free VS Code extension available.",
     id: "CodeRabbit",
   },
@@ -292,6 +305,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
     logoImageAlt: "CyberAgent,Inc.",
     linkUrl: "https://www.cyberagent.co.jp/",
     plan: "bronze",
+    option: ["hands-on"],
     description: "",
     id: "cyberagent",
   },
@@ -327,17 +341,106 @@ const SPONSORS_BRONZE: Sponsor[] = [
 
 ];
 
-const SPONSORS_OPTION: Sponsor[] = [
-  // {
-  //   name: "Sentry",
-  //   logoImageUrl: "/images/sponsor-logo/bronze/sentry.png",
-  //   logoImageAlt: "Sentry Logo",
-  //   linkUrl: "https://sentry.ichizoku.io/",
-  //   plan: "bronze",
-  //   description: "",
-  //   id: "sentry",
-  // },
+const SPONSORS_OPTION_ONLY: Sponsor[] = [
+  {
+    name: "hacomono.inc",
+    logoImageUrl: "/images/sponsor-logo/option/hacomono.png",
+    logoImageAlt: "hacomono.inc",
+    linkUrl: "https://www.hacomono.co.jp/recruit/engineer/",
+    plan: "option-only",
+    option: ["hall-naming-rights", "intermission-slide"],
+    description: "",
+    id: "hacomono",
+  },
+  {
+    name: "Studio, Inc.",
+    logoImageUrl: "/images/sponsor-logo/option/studio.png",
+    logoImageAlt: "Studio, Inc.",
+    linkUrl: "https://studio.design/ja",
+    plan: "option-only",
+    option: ["student-support"],
+    description: "",
+    id: "studio",
+  },
+];
 
+const SPONSORS_CREATIVE: Sponsor[] = [
+  {
+    name: "IE3",
+    logoImageUrl: "/images/sponsor-logo/creative/ie3.png",
+    logoImageAlt: "IE3 Logo",
+    linkUrl: "https://ie3.jp/",
+    plan: "creative",
+    description: "IE3 is a creative unit composed of visual artists, engineers, and designers. With the mission \"Make it First.\", we strive to create new expressions and experiences by fusing engineering and creativity. We specialize across multiple domains including media art, digital signage, UI/UX design, and web, and we have delivered large-scale projects including media art installations and signage for public and commercial facilities. Our achievements include prestigious awards such as the Excellence Award at the Japan Media Arts Festival and a Gold at the Cannes Lions.",
+    id: "ie3",
+  },
+];
+
+const filterSponsorsByOption = (option: Option): Sponsor[] => [
+  ...SPONSORS_PLATINA.filter(sponsor => sponsor.option?.includes(option)),
+  ...SPONSORS_GOLD.filter(sponsor => sponsor.option?.includes(option)),
+  ...SPONSORS_SILVER.filter(sponsor => sponsor.option?.includes(option)),
+  ...SPONSORS_BRONZE.filter(sponsor => sponsor.option?.includes(option)),
+  ...SPONSORS_OPTION_ONLY.filter(sponsor => sponsor.option?.includes(option)),
+];
+
+const SPONSORS_HALL_NAMING_RIGHTS: Sponsor[] = filterSponsorsByOption("hall-naming-rights");
+const SPONSORS_ROOM_NAMING_RIGHTS: Sponsor[] = filterSponsorsByOption("room-naming-rights");
+const SPONSORS_HANS_ON: Sponsor[] = filterSponsorsByOption("hands-on");
+const SPONSORS_LIVE_TRANSLATION: Sponsor[] = filterSponsorsByOption("live-translation");
+const SPONSORS_NAME_BADGE: Sponsor[] = filterSponsorsByOption("name-badge");
+const SPONSORS_AFTER_PARTY: Sponsor[] = filterSponsorsByOption("after-party");
+const SPONSORS_STUDENT_SUPPORT: Sponsor[] = filterSponsorsByOption("student-support");
+const SPONSORS_STAFF_T_SHIRTS: Sponsor[] = filterSponsorsByOption("staff-t-shirts");
+const SPONSORS_EXHIBITION: Sponsor[] = filterSponsorsByOption("exhibition");
+const SPONSORS_INTERMISSION_SLIDE: Sponsor[] = filterSponsorsByOption("intermission-slide");
+const SPONSORS_JOB_BOARD: Sponsor[] = filterSponsorsByOption("job-board");
+
+const SPONSORS_OPTION: OptionSponsor[] = [
+  {
+    title: "hallNamingRightsSponsor",
+    data: SPONSORS_HALL_NAMING_RIGHTS,
+  },
+  {
+    title: "roomNamingRightsSponsor",
+    data: SPONSORS_ROOM_NAMING_RIGHTS,
+  },
+  {
+    title: "handsOnSponsor",
+    data: SPONSORS_HANS_ON,
+  },
+  {
+    title: "liveTranslationSponsor",
+    data: SPONSORS_LIVE_TRANSLATION,
+  },
+  {
+    title: "nameBadgeSponsor",
+    data: SPONSORS_NAME_BADGE,
+  },
+  {
+    title: "afterPartySponsor",
+    data: SPONSORS_AFTER_PARTY,
+  },
+  {
+    title: "studentSupportSponsor",
+    data: SPONSORS_STUDENT_SUPPORT,
+  },
+  {
+    title: "staffTShirtsSponsor",
+    data: SPONSORS_STAFF_T_SHIRTS,
+  },
+  {
+    title: "exhibitionSponsor",
+    data: SPONSORS_EXHIBITION,
+  },
+  {
+    title: "intermissionSlideSponsor",
+    data: SPONSORS_INTERMISSION_SLIDE,
+  },
+  {
+    title: "jobBoardSponsor",
+    data: SPONSORS_JOB_BOARD,
+  },
 ];
 
 export const SPONSORS = {
@@ -345,5 +448,8 @@ export const SPONSORS = {
   GOLD: SPONSORS_GOLD,
   SILVER: SPONSORS_SILVER,
   BRONZE: SPONSORS_BRONZE,
+  OPTION_ONLY: SPONSORS_OPTION_ONLY,
+  CREATIVE: SPONSORS_CREATIVE,
   OPTION: SPONSORS_OPTION,
+  JOB_BOARD: SPONSORS_JOB_BOARD,
 };

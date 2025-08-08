@@ -158,11 +158,26 @@ sponsors:
   title: "Sponsor"
   coverImageAlt: "Sponsors cover image"
   viewAll: "View All Sponsors"
+
   platinaSponsor: "Platina Sponsor"
   goldSponsor: "Gold Sponsor"
   silverSponsor: "Silver Sponsor"
   bronzeSponsor: "Bronze Sponsor"
   optionSponsor: "Option Sponsor"
+  creativeSponsor: "Creative Sponsor"
+
+  hallNamingRightsSponsor: "Hall Naming Rights Sponsor"
+  roomNamingRightsSponsor: "Room Naming Rights Sponsor"
+  handsOnSponsor: "Hands-on Sponsor"
+  liveTranslationSponsor: "Live Translation Sponsor"
+  nameBadgeSponsor: "Name Badge Sponsor"
+  afterPartySponsor: "After Party Sponsor"
+  studentSupportSponsor: "Student Support Sponsor"
+  staffTShirtsSponsor: "Staff T-shirts Sponsor"
+  exhibitionSponsor: "Exhibition Sponsor"
+  intermissionSlideSponsor: "Intermission Slide Sponsor"
+  jobBoardSponsor: "Job Board Sponsor"
+
   details: "Sponsor Details"
 
 access:
