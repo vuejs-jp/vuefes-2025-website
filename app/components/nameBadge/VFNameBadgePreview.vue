@@ -14,7 +14,7 @@ const {
   avatarImageUrl?: string;
 
   /** only for userRole = "Staff" */
-  lang?: "jp" | "en";
+  lang?: string;
 
   width?: string;
   height?: string;
@@ -250,7 +250,7 @@ onMounted(() => {
         </div>
 
         <div v-if="userRole==='Staff' && lang" id="name-badge-lang" :style="{ color: variants.color }">
-          {{ lang.toLocaleUpperCase() }}
+          {{ lang }}
         </div>
       </div>
     </div>
