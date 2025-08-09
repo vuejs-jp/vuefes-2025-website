@@ -82,13 +82,16 @@ export default defineEventHandler(async (event) => {
     name: nameBadgeData.displayName,
     role: nameBadgeData.role,
     lang: nameBadgeData.lang,
-    avatarUrl: await getSignedUrl(
-      S3,
-      new GetObjectCommand({
-        Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
-        Key: new URL(nameBadgeData.avatarUrl ?? "").pathname.split("/").pop() ?? undefined,
-      }),
-      { expiresIn: 3600 },
-    ),
+    avatarUrl:
+      nameBadgeData.avatarUrl
+        ? await getSignedUrl(
+          S3,
+          new GetObjectCommand({
+            Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
+            Key: new URL(nameBadgeData.avatarUrl).pathname.split("/").pop(),
+          }),
+          { expiresIn: 3600 },
+        )
+        : undefined,
   };
 });
