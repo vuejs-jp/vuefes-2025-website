@@ -97,7 +97,7 @@ const localeRoute = useLocaleRoute();
       <div class="sponsor-grid-container">
         <SponsorGrid
           :sponsors="locale === 'ja' ? JaSponsors.CREATIVE : EnSponsors.CREATIVE"
-          :columns="bp === 'mobile' ? 1 : 2"
+          :columns="bp === 'mobile' ? 2 : 3"
           gap="24px"
           image-only
         />

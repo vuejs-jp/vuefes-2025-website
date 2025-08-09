@@ -92,7 +92,7 @@ useSeoMeta({
     <VFSection :title="t('sponsors.creativeSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.CREATIVE : EnSponsors.CREATIVE"
-        :columns="bp === 'mobile' ? 1 : 2"
+        :columns="bp === 'mobile' ? 2 : 3"
         :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection>
