@@ -5,6 +5,7 @@ const { name, userRole, avatarImageUrl } = defineProps<{
   name?: string;
   userRole?: "Attendee" | "Attendee+Party" | "Sponsor" | "Speaker" | "Staff";
   avatarImageUrl?: string;
+  lang?: string;
 }>();
 
 const runtimeConfig = useRuntimeConfig();
@@ -98,6 +99,23 @@ const variants = computed(() => {
       }"
     >
       {{ name }}
+    </div>
+
+    <div
+      v-if="userRole === 'Staff' && lang"
+      id="name-badge-lang"
+      :style="{
+        position: 'absolute',
+        top: '49%',
+        left: '82.5%',
+        transform: 'translateX(-50%)',
+        color: variants.color,
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        fontFamily: 'JetBrainsMono-Regular, IBMPlexSansJP-Regular',
+      }"
+    >
+      {{ lang }}
     </div>
 
     <div

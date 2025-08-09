@@ -33,6 +33,7 @@ defineOgImage({
     name: () => nameBadgeData.value?.name,
     userRole: () => nameBadgeData.value?.role,
     avatarImageUrl: () => nameBadgeData.value?.avatarUrl,
+    lang: () => nameBadgeData.value?.lang,
   },
 });
 

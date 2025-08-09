@@ -317,7 +317,8 @@ onMounted(() => {
   #name-badge-lang {
     position: absolute;
     top: 47.5%;
-    left: 70%;
+    left: 75%;
+    transform: translateX(-50%);
     font-size: 1rem;
     font-weight: normal;
     color: #333;
