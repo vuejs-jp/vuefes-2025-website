@@ -34,7 +34,7 @@ const data: NameBadgeInput[] = [
   {
     name: "Hanako Suzuki",
     role: "Staff",
-    lang: "jp",  // jp | en
+    lang: "ja,en",
     localAvatarImagePath: path.resolve(__dirname, "./images/suzuki.png")
   },
   
