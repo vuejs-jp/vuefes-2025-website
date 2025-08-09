@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.2.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.1...v2.2.2)
+
+### 🩹 Fixes
+
+- Staff lang preview position ([#870](https://github.com/vuejs-jp/vuefes-2025/pull/870))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.2.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.0...v2.2.1)
