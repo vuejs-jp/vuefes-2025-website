@@ -20,7 +20,7 @@ export type NameBadgeInput =
          * when update and delete, target searched by name and role
          */
       action?: "create";
-      localAvatarImagePath: string;
+      localAvatarImagePath?: string;
     }
     | {
       action: "update" | "delete";

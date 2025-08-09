@@ -162,19 +162,23 @@ await (async function main() {
       return;
     }
 
-    if (!it.localAvatarImagePath) {
-      console.error(`[Error] localAvatarImagePath is required for create action`);
-      return;
-    }
+    // Process image if provided
+    let avatarUrl: string | undefined;
+    let filename: string | undefined;
 
-    const filename = it.localAvatarImagePath.split("/").pop()!;
-    if (!filename) {
-      console.error(`[Error] Invalid image path: ${it.localAvatarImagePath}`);
-      return;
-    }
-    if (!isImageFormatSupported(filename)) {
-      console.error(`[Error] Unsupported image format: ${filename}`);
-      return;
+    if (it.localAvatarImagePath) {
+      filename = it.localAvatarImagePath.split("/").pop()!;
+      if (!filename) {
+        console.error(`[Error] Invalid image path: ${it.localAvatarImagePath}`);
+        return;
+      }
+      if (!isImageFormatSupported(filename)) {
+        console.error(`[Error] Unsupported image format: ${filename}`);
+        return;
+      }
+
+      // Register image to R2
+      avatarUrl = await uploadToR2(it.localAvatarImagePath, filename);
     }
 
     // Create User
@@ -183,9 +187,6 @@ await (async function main() {
       name: it.name,
       email: it.email,
     }).execute();
-
-    // Register image to R2
-    const avatarUrl = await uploadToR2(it.localAvatarImagePath, filename);
 
     // Create Attendee Data
     await db
