@@ -23,4 +23,3 @@
   from = "/*"
   to = "/2025/:splat"
   status = 301
-  force = true
