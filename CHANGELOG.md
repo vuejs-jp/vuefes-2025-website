@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.2.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.2...v2.2.3)
+
+### 🩹 Fixes
+
+- Creative sponsor size ([#871](https://github.com/vuejs-jp/vuefes-2025/pull/871))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.2.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.1...v2.2.2)
