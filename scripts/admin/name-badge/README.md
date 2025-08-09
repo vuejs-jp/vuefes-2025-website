@@ -14,7 +14,7 @@ CLOUDFLARE_R2_BUCKET_NAME=xxx
 
 ### 2. Create Data File (`input/data.ts`)
 
-Since `/input` is gitignored, it's convenient to place image files in `/input/images` etc.
+Since `/input/img` is gitignored, to place image files.
 
 ```typescript
 import path from "node:path";
