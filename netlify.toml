@@ -17,11 +17,9 @@
   from = "/2025/*"
   to = "/:splat"
   status = 200
-  force = true
 
 [[redirects]]
   # redirect all requests to /2025/:splat
   from = "/*"
   to = "/2025/:splat"
   status = 301
-  force = true
