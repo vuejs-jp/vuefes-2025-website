@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.2.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.0...v2.2.1)
+
+### 🚀 Enhancements
+
+- Add staff avatar image ([#867](https://github.com/vuejs-jp/vuefes-2025/pull/867))
+
+### 🩹 Fixes
+
+- Handle empty avatarUrl ([#868](https://github.com/vuejs-jp/vuefes-2025/pull/868))
+- Staff lang schema ([#869](https://github.com/vuejs-jp/vuefes-2025/pull/869))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.2.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/09b5ee26c7a31f784b2b41b71c1fd69d923e50e3...v2.2.0)
