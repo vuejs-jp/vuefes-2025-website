@@ -45,6 +45,28 @@ const variants = computed(() => {
       };
   }
 });
+
+const nameTransform = computed(() => {
+  // Count full-width characters as 2 and half-width characters as 1
+  let weightedLength = 0;
+  const nameStr = name ?? "";
+  for (const char of nameStr) {
+    // Detect full-width characters (Japanese, Chinese, Korean, full-width symbols, etc.)
+    if (char.match(/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u)) {
+      weightedLength += 2;
+    } else {
+      weightedLength += 1;
+    }
+  }
+
+  if (weightedLength <= 12) return `scaleX(1)`;
+  if (weightedLength <= 16) return `scaleX(0.95) translateX(-2.5%)`;
+  if (weightedLength <= 20) return `scaleX(0.9) translateX(-2.5%)`;
+  if (weightedLength <= 24) return `scaleX(0.85) translateX(-2.5%)`;
+  if (weightedLength <= 28) return `scaleX(0.8) translateX(-2.5%)`;
+  if (weightedLength <= 32) return `scaleX(0.75) translateX(-2.5%)`;
+  return `scaleX(0.7) translateX(-2.5%)`;
+});
 </script>
 
 <template>
@@ -96,6 +118,9 @@ const variants = computed(() => {
         fontSize: '1.5rem',
         fontWeight: 'bold',
         fontFamily: 'JetBrainsMono-Regular, IBMPlexSansJP-Regular',
+        transform: nameTransform,
+        transformOrigin: 'left center',
+        whiteSpace: 'nowrap',
       }"
     >
       {{ name }}

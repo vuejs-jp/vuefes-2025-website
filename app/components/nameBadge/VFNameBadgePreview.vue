@@ -57,6 +57,27 @@ const variants = computed(() => {
   }
 });
 
+const nameScaleX = computed(() => {
+  // Count full-width characters as 2, half-width characters as 1
+  let weightedLength = 0;
+  for (const char of name ?? "") {
+    // Check for full-width characters (Japanese, Chinese, Korean, full-width symbols, etc.)
+    if (char.match(/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u)) {
+      weightedLength += 2;
+    } else {
+      weightedLength += 1;
+    }
+  }
+
+  if (weightedLength <= 12) return 1;
+  if (weightedLength <= 16) return 0.9;
+  if (weightedLength <= 20) return 0.85;
+  if (weightedLength <= 24) return 0.8;
+  if (weightedLength <= 28) return 0.7;
+  if (weightedLength <= 32) return 0.6;
+  return 0.5;
+});
+
 // const isSafari = ref(false);
 const isTouchDevice = ref(false);
 const isFocused = ref(false);
@@ -245,7 +266,7 @@ onMounted(() => {
           }"
         />
 
-        <div id="name-badge-name" :style="{ color: variants.color }">
+        <div id="name-badge-name" :style="{ color: variants.color, transform: `scaleX(${nameScaleX})` }">
           {{ name }}
         </div>
 
@@ -309,9 +330,11 @@ onMounted(() => {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    font-family: JetBrainsMono-Regular, IBMPlexSansJP-Regular;
+    font-family: JetBrainsMono-Thin, IBMPlexSansJP-Thin;
     backface-visibility: hidden;
     user-select: none;
+    transform-origin: left center;
+    white-space: nowrap;
   }
 
   #name-badge-lang {
