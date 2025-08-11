@@ -1,0 +1,1 @@
+A Vue.js quiz event where anyone can participate just by attending on the day. Top scorers will receive Vue Fes Japan 2025 original goods! Whether you're confident in your knowledge or just starting out, let's learn about Vue.js while having fun?

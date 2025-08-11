@@ -35,11 +35,11 @@ ticket:
   early: "Early Bird"
   standard: "Standard"
   priceUnit: "JPY"
-  generalTicket: 
+  generalTicket:
     title: "General Ticket"
     earlyPrice: "7000"
     standardPrice: "8000"
-  afterPartyTicket: 
+  afterPartyTicket:
     title: "General Admission + After-Party Ticket"
     earlyPrice: "10000"
     standardPrice: "11000"
@@ -121,6 +121,67 @@ handsOn:
 faq:
   title: "FAQ"
 
+event:
+  title: "Event"
+  panel:
+    title: "Panel Discussion"
+    panelist: "Panelist"
+    location: "FitFits with hacomono Track"
+    time: "16:10 - 17:10"
+  quiz:
+    title: "Vue Quiz"
+    location: "CyberAgent Track"
+    time: "17:20 - 17:50"
+    image:
+      alt1: "A vertical banner and screen displayed at the Vue Fes Japan 2024 venue."
+      alt2: "Kazupon speaking while holding a microphone, with the Vue Fes event logo projected behind him."
+      alt3: "During a session at Vue Fes Japan 2024, participants listen to a speaker's presentation while looking at the screen. The room is lively with people using their laptops."
+      alt4: "During a session at Vue Fes Japan 2024, an attendee raises their hand to ask a question from the audience. The speakers are seated at the front of the room."
+  handsOn:
+    title: "Hands-on"
+    location: "CyberAgent Track"
+    time: "12:50 - 14:50 / 15:10 - 17:10 "
+    image:
+      alt1: "Participants attending the “Vue.js / Nuxt Hands-on” session at Vue Fes Japan 2024, following along with the lecture while viewing the presentation slides."
+      alt2: "Anthony speaking at Vue Fes Japan 2024, delivering a presentation in front of a backdrop featuring the Vue Fes Japan logo and sponsor logos."
+      alt3: "During a hands-on session at Vue Fes Japan 2024, participants work on their laptops while following the slides. The instructor is presenting at the front of the room."
+      alt4: "Ubugeeei explaining during a hands-on session at Vue Fes Japan 2024, holding a microphone in his right hand and pointing to the screen with his left."
+  studentSupport:
+    title: "Student Support Content"
+    location: "CyberAgent Track"
+    time: "11:30 - 12:30"
+  creativeWall:
+    title: "Creative Wall"
+    location: "2F Reception Area"
+    description: "The famous Vue Fes Japan Creative Wall returns this year! Please write your passionate thoughts about Vue.js and Vue Fes Japan. You can also take a commemorative photo with the OSS logo you always use."
+    alt: "Staff members posing with smiles in front of the Creative Wall set up at the Vue Fes Japan 2024 venue, holding OSS logos in their hands."
+  sponsorBooth:
+    title: "Sponsor Booth Rally"
+    location: "1F Sponsor Booth"
+    description: "Collect 12 or more stickers distributed at each sponsor booth to participate in a lottery with no losing tickets. You can challenge up to 3 times based on the number of stickers collected. You might win luxury prizes!?"
+    alt: "Participants visiting the sponsor booth at Vue Fes Japan 2024, engaging with the displays and enjoying the interaction."
+  freeDrink:
+    title: "Free Drinks & Snacks"
+    location: "1F & 2F Foyer"
+    description: "How about coffee or tea after concentrating on sessions and events? We also provide free snacks. Feel free to stop by when you want to refresh a little."
+    alt: "Staff members at the Drink & Snack corner of Vue Fes Japan 2024, standing in front of the table with smiles while offering beverages and snacks to attendees."
+  festival:
+    title: "Festival Corner"
+    location: "1F Foyer"
+    description: "A festival corner where you can experience the atmosphere of a Japanese festival appears. Experience 'ring toss', 'katanuki', and 'graffiti senbei' to get Vue Fes Japan original sweets or nostalgic dagashi."
+    alt: "A decorative corner evoking the atmosphere of a Japanese festival, featuring colorful water yo-yos, paper lanterns, and a fan with fireworks. At the center is a tenugui cloth with the word '祭' (festival) written on it."
+  tattoo:
+    title: "Tattoo Space"
+    location: "2F Foyer"
+    description: "Attach special tattoo stickers to your arms and legs to enhance the festival atmosphere. You can immediately apply familiar logos such as Vue Fes Japan, Vue.js, and Nuxt on the spot."
+    alt: "An arm with tattoo stickers featuring the Vue Fes Japan 2024 logo and various OSS logos."
+  cocktail:
+    title: "Vue Cocktail Bash"
+    location: "After Party"
+    description: "The original cocktail that caused a sensation last year is back! We developed special cocktails inspired by Vue.js and other OSS with original recipes. Non-alcoholic options are also available. Please enjoy them as a commemoration of your visit!"
+    alt: "Original cocktails inspired by Vue.js, lined up in a row. Each green-colored drink is decorated with a tag featuring the Vue logo."
+    attention1: "※ Original cocktails are only available at the after party."
+    attention2: "※ Limited quantity."
 speakers:
   title: "Speakers"
   description: "At Vue Fes Japan, leading developers from around the world will gather—ranging from core team members of well-known OSS projects like Vue.js to engineers bringing real-world insights from the field."
@@ -154,7 +215,7 @@ volunteer:
 sponsorWanted: "Sponsorship Opportunities"
 sponsorWantedCoverImageAlt: "Sponsor Wanted cover image"
 
-sponsors: 
+sponsors:
   title: "Sponsor"
   coverImageAlt: "Sponsors cover image"
   viewAll: "View All Sponsors"
@@ -211,6 +272,7 @@ snsIconImageAlt:
   youtube: "YouTube icon"
   github: "GitHub icon"
   note: "note icon"
+events: "Related Events"
 privacyPolicy: "Privacy Policy"
 coc: "Code of Conduct"
 transactions: "Notation based on the Act on Specified Commercial Transactions"

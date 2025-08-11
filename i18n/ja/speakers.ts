@@ -401,3 +401,30 @@ export const PANEL_DISCUSSION_SPEAKERS: Speaker[] = [
     },
   },
 ];
+
+export const STUDENT_SUPPORT_SPEAKERS: Omit<Speaker, "id" | "color">[] = [
+  {
+    name: "kazupon",
+    affiliation: "株式会社プレイド",
+    title: "Vue.js コアチームメンバー",
+    avatarUrl: "/images/avatars/kazupon.png",
+  },
+  {
+    name: "ubugeeei",
+    affiliation: "株式会社メイツ",
+    title: "Vue.js メンバー",
+    avatarUrl: "/images/avatars/ubugeeei.png",
+  },
+  {
+    name: "Anthony Fu",
+    affiliation: "NuxtLabs / Vercel",
+    title: "Vue・Nuxt・Vite コアチーム",
+    avatarUrl: "/images/avatars/antfu.png",
+  },
+  {
+    name: "Naoki Haba",
+    affiliation: "株式会社コドモン",
+    title: "ソフトウェアエンジニア",
+    avatarUrl: "/images/avatars/naokihaba.png",
+  },
+];

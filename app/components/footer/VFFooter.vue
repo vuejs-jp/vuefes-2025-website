@@ -12,6 +12,9 @@ import Logo from "~icons/logo/logo";
 
 const localePath = useLocalePath();
 const { t } = useI18n();
+
+// TODO: イベントページ正式公開後は削除
+const isEventFeatureEnabled = __FEATURE_EVENT__;
 </script>
 
 <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
@@ -83,10 +86,11 @@ const { t } = useI18n();
         </ul>
 
         <ul class="other-links">
-          <!-- TODO: -->
-          <!-- <li>
-            <NuxtLink to="#">関連イベント</NuxtLink>
-          </li> -->
+          <li :class="{ hidden: !isEventFeatureEnabled }">
+            <NuxtLink :to="localePath('/event')">{{
+              t("events")
+            }}</NuxtLink>
+          </li>
           <li>
             <NuxtLink :to="localePath('/privacy-policy')">{{
               t("privacyPolicy")
@@ -230,6 +234,10 @@ footer {
     @media (--mobile) {
       margin-top: 3rem;
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }
 </style>
