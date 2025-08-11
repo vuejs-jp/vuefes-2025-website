@@ -15,7 +15,7 @@
 [[redirects]]
   # get contents from dist/* by accessing /2025/*
   from = "/2025/*"
-  to = "https://vuefes-2025.netlify.app/2025/:splat"
+  to = "/:splat"
   status = 200
 
 [[redirects]]
