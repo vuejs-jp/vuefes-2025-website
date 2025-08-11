@@ -100,11 +100,12 @@ header {
       }
 
       &a {
-        &:hover {
-
-          :deep(svg),
-          :deep(path) {
-            fill: var(--color-accent-hover) !important;
+        @media (any-hover: hover) {
+          &:hover {
+            :deep(svg),
+            :deep(path) {
+              fill: var(--color-accent-hover) !important;
+            }
           }
         }
       }
@@ -144,7 +145,7 @@ header {
           color: var(--color-base);
         }
 
-        @media (hover: hover) {
+        @media (any-hover: hover) {
           &:hover {
             text-decoration: underline;
           }
@@ -165,8 +166,10 @@ header {
             cursor: not-allowed;
           }
 
-          &:hover {
-            --color-base: var(--color-accent-hover);
+          @media (any-hover: hover) {
+            &:hover {
+              --color-base: var(--color-accent-hover);
+            }
           }
         }
       }

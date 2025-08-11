@@ -139,11 +139,13 @@ footer {
       }
     }
 
-    .sns-button:hover {
-      --color-base: var(--color-accent-hover);
-      svg {
-        transform: scale(1.1);
-        transition: transform 0.2s;
+    @media (any-hover: hover) {
+      .sns-button:hover {
+        --color-base: var(--color-accent-hover);
+        svg {
+          transform: scale(1.1);
+          transition: transform 0.2s;
+        }
       }
     }
   }

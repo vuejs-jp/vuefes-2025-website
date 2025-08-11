@@ -166,9 +166,14 @@ watch(() => formState, (v) => {
         width: 130px;
       }
 
-      &:focus,
-      &:hover {
+      &:focus{
         border-color: var(--color-primary);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          border-color: var(--color-primary);
+        }
       }
     }
   }

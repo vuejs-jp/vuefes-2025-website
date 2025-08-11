@@ -75,8 +75,11 @@ body {
   [data-vf-mdc] {
     a {
       color: var(--color-base);
-      &:hover {
-        color: var(--color-accent-hover);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--color-accent-hover);
+        }
       }
     }
   }

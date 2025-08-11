@@ -103,8 +103,10 @@ defineProps<{
       color: var(--color-text-default);
       transition: transform 0.2s;
 
-      &:hover {
-        transform: scale(1.1);
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

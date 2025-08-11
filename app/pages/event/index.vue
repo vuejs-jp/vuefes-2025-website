@@ -248,7 +248,7 @@ useSeoMeta({
     font-size: 1rem;
     font-weight: bold;
 
-    @media(--mobile) {
+    @media (--mobile) {
       font-size: 0.875rem;
     }
   }
@@ -261,7 +261,7 @@ useSeoMeta({
     font-size: 0.875rem;
     font-family: JetBrainsMono-Regular;
 
-    @media(--mobile) {
+    @media (--mobile) {
       font-size: 0.75rem;
     }
   }

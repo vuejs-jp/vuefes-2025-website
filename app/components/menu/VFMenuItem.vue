@@ -27,8 +27,10 @@ const { label, disabled } = defineProps<MenuItemProps>();
   text-decoration: none;
   font-family: JetBrainsMono-Medium;
 
-  &:hover {
-    color: var(--color-base);
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-base);
+    }
   }
 
   &.menuitem-link-active {

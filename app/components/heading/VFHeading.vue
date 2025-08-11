@@ -67,7 +67,7 @@ h2 {
 
 .anchor {
   text-decoration: none;
-  @media (hover: hover) {
+  @media (any-hover: hover) {
     &:hover {
       color: var(--color-accent-hover);
 

@@ -33,9 +33,11 @@ const label = computed(() => isOpened ? "Close" : openerText);
   font-size: 0.875rem;
 
   /* TODO: no hover style when touch devices (in VFButton) */
-  &:hover {
-    background: var(--color-base) !important;
-    color: var(--color-white) !important;
+  @media (any-hover: hover) {
+    &:hover {
+      background: var(--color-base-hover);
+      color: var(--color-white);
+    }
   }
 }
 </style>

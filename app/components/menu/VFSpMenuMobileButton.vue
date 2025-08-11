@@ -33,10 +33,12 @@ const label = computed(() => isOpened ? "Close" : "Menu");
   font-size: 0.875rem;
 
   /* TODO: no hover style when touch devices (in VFButton) */
-  &:hover {
-    background: var(--color-gray-transparent) !important;
-    backdrop-filter: blur(10px) !important;
-    color: var(--color-base) !important;
+  @media (any-hover: hover) {
+    &:hover {
+      background: var(--color-gray-transparent) !important;
+      backdrop-filter: blur(10px) !important;
+      color: var(--color-base) !important;
+    }
   }
 }
 </style>
