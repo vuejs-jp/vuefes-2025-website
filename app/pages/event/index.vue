@@ -41,7 +41,8 @@ if (!__FEATURE_EVENT__) {
   throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
 }
 
-defineRouteRules({ prerender: true });
+// To differentiate OGP based on query params
+defineRouteRules({ prerender: false });
 
 const SectionId = {
   PanelDiscussion: "panel-discussion",
