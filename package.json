@@ -70,7 +70,7 @@
     "d1-driver": "^2.0.2",
     "dotenv": "^17.0.1",
     "drizzle-kit": "^0.31.4",
-    "drizzle-orm": "^0.44.2",
+    "drizzle-orm": "^0.44.4",
     "emoji-regex": "^10.4.0",
     "eslint": "^9.33.0",
     "eslint-plugin-storybook": "^0.12.0",
