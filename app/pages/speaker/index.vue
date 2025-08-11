@@ -42,7 +42,7 @@ useSeoMeta({
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Speaker</h1>
 
-    <VFSection :title="t('speakers.sessions.title')" wide>
+    <VFSection id="sessions" :title="t('speakers.sessions.title')" wide>
       <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
 
       <ul class="speakers">
@@ -55,7 +55,7 @@ useSeoMeta({
       </ul>
     </VFSection>
 
-    <VFSection :title="t('speakers.lightningTalks.title')" wide>
+    <VFSection id="lightning-talks" :title="t('speakers.lightningTalks.title')" wide>
       <!-- <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" /> -->
       <ul class="speakers">
         <SpeakerCard
@@ -67,7 +67,7 @@ useSeoMeta({
       </ul>
     </VFSection>
 
-    <VFSection :title="t('speakers.panel.title')" wide>
+    <VFSection id="panel-discussion" :title="t('speakers.panel.title')" wide>
       <component :is="locale === 'ja' ? JaPanelDiscussion : EnPanelDiscussion" class="description" />
 
       <ul class="speakers">

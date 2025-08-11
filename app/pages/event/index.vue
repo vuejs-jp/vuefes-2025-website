@@ -73,7 +73,7 @@ useSeoMeta({
 <template>
   <div id="pages-event">
     <h1>{{ $t('event.title') }}</h1>
-    <VFSection :title="t('event.panel.title')" class="vf-section discussion-event">
+    <VFSection id="panel-discussion" :title="t('event.panel.title')" class="vf-section discussion-event">
       <component :is="locale === 'ja' ? JaPanelDiscussionEvent : EnPanelDiscussionEvent">
         <template #speaker>
           <ul class="speaker-list">
@@ -87,7 +87,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.quiz.title')" class="vf-section">
+    <VFSection id="vue-quiz" :title="t('event.quiz.title')" class="vf-section">
       <component :is="locale === 'ja' ? JaVueQuiz : EnVueQuiz" />
       <div class="meta">
         <span class="location"> {{ t('event.quiz.location') }}</span>
@@ -98,7 +98,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.handsOn.title')" class="vf-section">
+    <VFSection id="hands-on" :title="t('event.handsOn.title')" class="vf-section">
       <component :is="locale === 'ja' ? JaHandsOnEvent : EnHandsOnEvent">
         <template #images>
           <div class="image-list">
@@ -115,7 +115,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.studentSupport.title')" class="vf-section student-support-event">
+    <VFSection id="student-support-contents" :title="t('event.studentSupport.title')" class="vf-section student-support-event">
       <component :is="locale === 'ja' ? JaStudentSupportEvent : EnStudentSupportEvent">
         <template #speaker>
           <ul class="speaker-list">
@@ -129,7 +129,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.creativeWall.title')" class="vf-section">
+    <VFSection id="creative-wall" :title="t('event.creativeWall.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.creativeWall.location') }}</span>
       </div>
@@ -139,7 +139,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.sponsorBooth.title')" class="vf-section">
+    <VFSection id="sponsor-sticker-rally" :title="t('event.sponsorBooth.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.sponsorBooth.location') }}</span>
       </div>
@@ -149,7 +149,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.freeDrink.title')" class="vf-section">
+    <VFSection id="free-drinks" :title="t('event.freeDrink.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.freeDrink.location') }}</span>
       </div>
@@ -159,7 +159,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.festival.title')" class="vf-section">
+    <VFSection id="festival" :title="t('event.festival.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.festival.location') }}</span>
       </div>
@@ -169,7 +169,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.tattoo.title')" class="vf-section">
+    <VFSection id="tattoo-space" :title="t('event.tattoo.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.tattoo.location') }}</span>
       </div>
@@ -179,7 +179,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('event.cocktail.title')" class="vf-section">
+    <VFSection id="cocktail-bash" :title="t('event.cocktail.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.cocktail.location') }}</span>
       </div>

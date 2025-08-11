@@ -36,7 +36,7 @@ useSeoMeta({
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Sponsor</h1>
 
-    <VFSection :title="t('sponsors.platinaSponsor')">
+    <VFSection id="platina-sponsor" :title="t('sponsors.platinaSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.PLATINA : EnSponsors.PLATINA"
         :columns="bp === 'mobile' ? 1 : 2"
@@ -44,7 +44,7 @@ useSeoMeta({
       />
     </VFSection>
 
-    <VFSection :title="t('sponsors.goldSponsor')">
+    <VFSection id="gold-sponsor" :title="t('sponsors.goldSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.GOLD : EnSponsors.GOLD"
         :columns="bp === 'mobile' ? 2 : 3"
@@ -52,7 +52,7 @@ useSeoMeta({
       />
     </VFSection>
 
-    <VFSection :title="t('sponsors.silverSponsor')">
+    <VFSection id="silver-sponsor" :title="t('sponsors.silverSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.SILVER : EnSponsors.SILVER"
         :columns="bp === 'mobile' ? 2 : 4"
@@ -60,7 +60,7 @@ useSeoMeta({
       />
     </VFSection>
 
-    <VFSection :title="t('sponsors.bronzeSponsor')">
+    <VFSection id="bronze-sponsor" :title="t('sponsors.bronzeSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.BRONZE : EnSponsors.BRONZE"
         :columns="bp === 'mobile' ? 2 : 4"
@@ -68,7 +68,7 @@ useSeoMeta({
       />
     </VFSection>
 
-    <VFSection :title="t('sponsors.optionSponsor')">
+    <VFSection id="option-sponsor" :title="t('sponsors.optionSponsor')">
       <div
         v-for="option in (locale === 'ja' ? JaSponsors.OPTION : EnSponsors.OPTION) as OptionSponsor[]"
         :key="option.title"
@@ -89,7 +89,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection :title="t('sponsors.creativeSponsor')">
+    <VFSection id="creative-sponsor" :title="t('sponsors.creativeSponsor')">
       <SponsorGrid
         :sponsors="locale === 'ja' ? JaSponsors.CREATIVE : EnSponsors.CREATIVE"
         :columns="bp === 'mobile' ? 2 : 3"

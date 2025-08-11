@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { useI18n } from "#imports";
 import { VFSection, JaStudentSupport, EnStudentSupport, VFButton } from "#components";
+import { HOME_HEADING_ID } from "~/constant";
 
 const { locale, t } = useI18n();
 </script>
 
 <template>
   <VFSection
+    :id="HOME_HEADING_ID.studentSupport"
     :title="t('student.title')"
   >
     <component :is="locale === 'ja' ? JaStudentSupport : EnStudentSupport" />
