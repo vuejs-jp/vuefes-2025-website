@@ -16,8 +16,7 @@ import {
 } from "#imports";
 import { VFSection } from "#components";
 
-// To differentiate OGP based on query params
-definePageMeta({ prerender: false });
+definePageMeta({ prerender: true });
 
 const route = useRoute("speaker-speakerId");
 const { t, locale } = useI18n();

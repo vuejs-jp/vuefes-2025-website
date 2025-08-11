@@ -17,7 +17,8 @@ import {
   useRoute,
 } from "#imports";
 
-defineRouteRules({ prerender: true });
+// To differentiate OGP based on query params
+defineRouteRules({ prerender: false });
 
 const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
