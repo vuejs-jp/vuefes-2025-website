@@ -83,7 +83,7 @@ const { locale } = useI18n();
   &::before {
     content: "";
     position: absolute;
-    z-index: 1;
+    z-index: var(--z-index-base);
     top: 0;
     left: 0;
     right: 0;

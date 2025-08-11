@@ -282,7 +282,7 @@ onMounted(() => {
 .name-badge-preview-background {
   opacity: 0;
   pointer-events: none;
-  z-index: 1000;
+  z-index: var(--z-index-modal);
   position: absolute;
   top: 0;
   left: 0;
@@ -303,7 +303,7 @@ onMounted(() => {
   transition: transform 0.3s;
 
   &.focused {
-    z-index: 2000;
+    z-index: var(--z-index-focused-name-badge);
     transform: scale(1.7);
   }
 }
@@ -404,7 +404,7 @@ onMounted(() => {
 
       &::before {
         content: "";
-        z-index: 2;
+        z-index: var(--z-name-badge-highlight);
         grid-area: 1/1;
         background-image: radial-gradient(
           farthest-corner ellipse at calc(((var(--mx)) * 0.5) + 25%) calc(((var(--my)) * 0.5) + 25%),
@@ -439,7 +439,7 @@ onMounted(() => {
 
   .card-face-back {
     position: absolute;
-    z-index: 999;
+    z-index: var(--z-index-overlay);
     top: 0;
     left: 0;
     transform: rotateY(calc(var(--rotation) + 180deg));

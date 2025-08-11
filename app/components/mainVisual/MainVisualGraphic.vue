@@ -65,7 +65,7 @@ const handleWebGLInitialized = () => {
 
 .main-visual-graphic-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-index-base);
   width: auto;
   height: auto;
   display: flex;

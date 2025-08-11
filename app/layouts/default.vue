@@ -200,7 +200,7 @@ watch(() => route.hash, async (hash) => {
 
 .main-visual {
   position: fixed;
-  z-index: -1;
+  z-index: var(--z-index-background);
 }
 
 .content {
@@ -264,7 +264,7 @@ watch(() => route.hash, async (hash) => {
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
-  z-index: 100;
+  z-index: var(--z-index-header);
 
   @media (--mobile) {
     padding-top: 0.25rem;
@@ -281,7 +281,7 @@ watch(() => route.hash, async (hash) => {
   bottom: 24px;
   width: 100%;
   height: auto;
-  z-index: 200; /* higher than .header */
+  z-index: var(--z-index-navigation); /* higher than .header */
   display: flex;
   justify-content: center;
   gap: 0.5rem;

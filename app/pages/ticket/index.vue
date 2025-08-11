@@ -264,7 +264,7 @@ useSeoMeta({
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.2);
-    z-index: 999;
+    z-index: var(--z-index-overlay);
   }
 
   display: grid;
