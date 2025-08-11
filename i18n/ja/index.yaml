@@ -127,6 +127,8 @@ event:
     title: "パネルディスカッション"
     location: "FitFits with hacomonoトラック"
     time: "16:10 - 17:10"
+    talkTitle: "生成 AI の発表から数年が経ち、近年では「AI エージェント」を用いた開発スタイル（Vibe Coding）が注目されています。今後、AI の性能はさらに発展していくと予想されており、このパラダイムシフトは我々のフロントエンド開発にどのような影響を及ぼすのでしょうか。本パネルディスカッションでは、React、Vue.js、Svelte の著名な有識者である Dan Abramov、Evan You、dominikg を迎え、「生成 AI 時代におけるフロントエンドの未来」について多角的に議論していただきます。"
+    talkDescription: "React/Vue.js/Svelte が見据える次の 10 年"
   quiz:
     title: "Vue Quiz"
     location: "サイバーエージェントトラック"

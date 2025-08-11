@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRoute } from "@typed-router";
 import {
   PANEL_DISCUSSION_SPEAKERS as enPanelSpeakers,
   STUDENT_SUPPORT_SPEAKERS as enStudentSupportSpeakers,
@@ -33,6 +34,7 @@ import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
+  useQueryHashSync,
 } from "#imports";
 
 if (!__FEATURE_EVENT__) {
@@ -40,6 +42,19 @@ if (!__FEATURE_EVENT__) {
 }
 
 defineRouteRules({ prerender: true });
+
+const SectionId = {
+  PanelDiscussion: "panel-discussion",
+  VueQuiz: "vue-quiz",
+  HandsOn: "hands-on",
+  StudentSupportContents: "student-support-contents",
+  CreativeWall: "creative-wall",
+  SponsorStickerRally: "sponsor-sticker-rally",
+  FreeDrinks: "free-drinks",
+  Festival: "festival",
+  TattooSpace: "tattoo-space",
+  CocktailBash: "cocktail-bash",
+} as const;
 
 const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
@@ -61,19 +76,38 @@ const handsOnImageList = [
   { src: "/images/event/hands-on_4.jpg", alt: t("event.handsOn.image.alt4") },
 ];
 
+const route = useRoute();
+
+useQueryHashSync({ queryKey: "section" });
+
 defineOgImage({
   component: "root",
-  url: `${runtimeConfig.public.siteUrl}images/og/event.png`,
+  url:
+    route.query.section === SectionId.PanelDiscussion
+      ? `${runtimeConfig.public.siteUrl}images/og/panel-discussion.png`
+      : `${runtimeConfig.public.siteUrl}images/og/event.png`,
 });
 useSeoMeta({
-  title: t("event.title"),
+  title: route.query.section === SectionId.PanelDiscussion
+    ? t("event.panel.talkTitle")
+    : t("event.title"),
+  ogTitle:
+    route.query.section === SectionId.PanelDiscussion
+      ? t("event.panel.talkTitle")
+      : t("event.title"),
+  description: route.query.section === SectionId.PanelDiscussion
+    ? t("event.panel.talkDescription")
+    : undefined,
+  ogDescription: route.query.section === SectionId.PanelDiscussion
+    ? t("event.panel.talkDescription")
+    : undefined,
 });
 </script>
 
 <template>
   <div id="pages-event">
     <h1>{{ $t('event.title') }}</h1>
-    <VFSection id="panel-discussion" :title="t('event.panel.title')" class="vf-section discussion-event">
+    <VFSection :id="SectionId.PanelDiscussion" :title="t('event.panel.title')" class="vf-section discussion-event">
       <component :is="locale === 'ja' ? JaPanelDiscussionEvent : EnPanelDiscussionEvent">
         <template #speaker>
           <ul class="speaker-list">
@@ -87,7 +121,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="vue-quiz" :title="t('event.quiz.title')" class="vf-section">
+    <VFSection :id="SectionId.VueQuiz" :title="t('event.quiz.title')" class="vf-section">
       <component :is="locale === 'ja' ? JaVueQuiz : EnVueQuiz" />
       <div class="meta">
         <span class="location"> {{ t('event.quiz.location') }}</span>
@@ -98,7 +132,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="hands-on" :title="t('event.handsOn.title')" class="vf-section">
+    <VFSection :id="SectionId.HandsOn" :title="t('event.handsOn.title')" class="vf-section">
       <component :is="locale === 'ja' ? JaHandsOnEvent : EnHandsOnEvent">
         <template #images>
           <div class="image-list">
@@ -115,7 +149,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="student-support-contents" :title="t('event.studentSupport.title')" class="vf-section student-support-event">
+    <VFSection :id="SectionId.StudentSupportContents" :title="t('event.studentSupport.title')" class="vf-section student-support-event">
       <component :is="locale === 'ja' ? JaStudentSupportEvent : EnStudentSupportEvent">
         <template #speaker>
           <ul class="speaker-list">
@@ -129,7 +163,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="creative-wall" :title="t('event.creativeWall.title')" class="vf-section">
+    <VFSection :id="SectionId.CreativeWall" :title="t('event.creativeWall.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.creativeWall.location') }}</span>
       </div>
@@ -139,7 +173,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="sponsor-sticker-rally" :title="t('event.sponsorBooth.title')" class="vf-section">
+    <VFSection :id="SectionId.SponsorStickerRally" :title="t('event.sponsorBooth.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.sponsorBooth.location') }}</span>
       </div>
@@ -149,7 +183,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="free-drinks" :title="t('event.freeDrink.title')" class="vf-section">
+    <VFSection :id="SectionId.FreeDrinks" :title="t('event.freeDrink.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.freeDrink.location') }}</span>
       </div>
@@ -159,7 +193,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="festival" :title="t('event.festival.title')" class="vf-section">
+    <VFSection :id="SectionId.Festival" :title="t('event.festival.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.festival.location') }}</span>
       </div>
@@ -169,7 +203,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="tattoo-space" :title="t('event.tattoo.title')" class="vf-section">
+    <VFSection :id="SectionId.TattooSpace" :title="t('event.tattoo.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.tattoo.location') }}</span>
       </div>
@@ -179,7 +213,7 @@ useSeoMeta({
       </div>
     </VFSection>
 
-    <VFSection id="cocktail-bash" :title="t('event.cocktail.title')" class="vf-section">
+    <VFSection :id="SectionId.CocktailBash" :title="t('event.cocktail.title')" class="vf-section">
       <div class="meta">
         <span class="location"> {{ t('event.cocktail.location') }}</span>
       </div>

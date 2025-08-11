@@ -13,6 +13,8 @@ import {
   useI18n,
   useRuntimeConfig,
   defineOgImage,
+  useQueryHashSync,
+  useRoute,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
@@ -25,15 +27,39 @@ const sessionSpeakers = computed(() => locale.value === "en" ? enSessionSpeakers
 const ltSpeakers = computed(() => locale.value === "en" ? enLTSpeakers : jaLTSpeakers);
 const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : jaPanelSpeakers);
 
+const SectionId = {
+  Sessions: "sessions",
+  LightningTalks: "lightning-talks",
+  PanelDiscussion: "panel-discussion",
+} as const;
+
+const route = useRoute();
+
+useQueryHashSync({ queryKey: "section" });
+
 defineOgImage({
   component: "root",
-  url: `${runtimeConfig.public.siteUrl}images/og/speaker.png`,
+  url: route.query.section === SectionId.PanelDiscussion
+    ? `${runtimeConfig.public.siteUrl}images/og/panel-discussion.png`
+    : `${runtimeConfig.public.siteUrl}images/og/speaker.png`,
 });
 useSeoMeta({
-  title: () => `Vue Fes Japan 2025 - ${t("speakers.title")}`,
-  ogTitle: () => `Vue Fes Japan 2025 - ${t("speakers.title")}`,
-  description: () => t("speakers.description"),
-  ogDescription: () => t("speakers.description"),
+  title: () =>
+    route.query.section === SectionId.PanelDiscussion
+      ? t("event.panel.talkTitle")
+      : t("speakers.title"),
+  ogTitle: () =>
+    route.query.section === SectionId.PanelDiscussion
+      ? t("event.panel.talkTitle")
+      : t("speakers.title"),
+  description: () =>
+    route.query.section === SectionId.PanelDiscussion
+      ? t("event.panel.talkDescription")
+      : t("speakers.description"),
+  ogDescription: () =>
+    route.query.section === SectionId.PanelDiscussion
+      ? t("event.panel.talkDescription")
+      : t("speakers.description"),
 });
 </script>
 
@@ -42,7 +68,7 @@ useSeoMeta({
     <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <h1>Speaker</h1>
 
-    <VFSection id="sessions" :title="t('speakers.sessions.title')" wide>
+    <VFSection :id="SectionId.Sessions" :title="t('speakers.sessions.title')" wide>
       <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" />
 
       <ul class="speakers">
@@ -55,7 +81,7 @@ useSeoMeta({
       </ul>
     </VFSection>
 
-    <VFSection id="lightning-talks" :title="t('speakers.lightningTalks.title')" wide>
+    <VFSection :id="SectionId.LightningTalks" :title="t('speakers.lightningTalks.title')" wide>
       <!-- <component :is="locale === 'ja' ? JaSpeaker : EnSpeaker" class="description" /> -->
       <ul class="speakers">
         <SpeakerCard
@@ -67,7 +93,7 @@ useSeoMeta({
       </ul>
     </VFSection>
 
-    <VFSection id="panel-discussion" :title="t('speakers.panel.title')" wide>
+    <VFSection :id="SectionId.PanelDiscussion" :title="t('speakers.panel.title')" wide>
       <component :is="locale === 'ja' ? JaPanelDiscussion : EnPanelDiscussion" class="description" />
 
       <ul class="speakers">
