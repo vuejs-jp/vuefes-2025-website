@@ -42,8 +42,8 @@ importers:
         specifier: ^4.3.2
         version: 4.3.3(vue@3.5.18(typescript@5.8.3))
       '@primevue/nuxt-module':
-        specifier: ^4.3.2
-        version: 4.3.3(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.18(typescript@5.8.3))
+        specifier: ^4.3.7
+        version: 4.3.7(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.18(typescript@5.8.3))
       '@sidebase/nuxt-auth':
         specifier: 1.0.0
         version: 1.0.0(@netlify/blobs@9.1.2)(better-sqlite3@11.9.1)(drizzle-orm@0.44.2(better-sqlite3@11.9.1))(magicast@0.3.5)(next-auth@4.21.1(next@13.5.11(@babel/core@7.26.10)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(xml2js@0.6.2)
@@ -138,8 +138,8 @@ importers:
         specifier: 4.0.0-alpha.11
         version: 4.0.0-alpha.11
       primevue:
-        specifier: ^4.3.2
-        version: 4.3.3(vue@3.5.18(typescript@5.8.3))
+        specifier: ^4.3.7
+        version: 4.3.7(vue@3.5.18(typescript@5.8.3))
       rehype-external-links:
         specifier: ^3.0.0
         version: 3.0.0
@@ -2625,12 +2625,20 @@ packages:
     resolution: {integrity: sha512-WKrxZPM9fPAEsM0xcTrOOJn86MbfOEzPwSwpO94Y7RtguWw+1nrvqYNzCcmVqO6zBi0BVMihoWxMKFIRzTOuZg==}
     engines: {node: '>=12.11.0'}
 
-  '@primeuix/styled@0.5.0':
-    resolution: {integrity: sha512-k5CTQ+10cXIXxZTep7sktmYe8lJkjmUaFVDAc1OCsWTJR+bhBy/s6zWIatGljVtuf3RmTSxtlrHQeFLjPmdUNQ==}
+  '@primeuix/forms@0.1.0':
+    resolution: {integrity: sha512-LctcQidb+B5PuvAFWH24YH/SIzmHlOabLHpaTeGY/k51iBv1WyCp+5w9JMYuMB/BplSvV0ZGySxQVkN5Azr/aQ==}
     engines: {node: '>=12.11.0'}
 
-  '@primeuix/styles@1.0.0':
-    resolution: {integrity: sha512-j/TlbqihLNMP37zFNjxac5dTRaQEf5Ldrv0P7NwKigCCc/+MI5j4MddxDw1LnxkGhWCJ1Gjbt9uwyQteWtSv7A==}
+  '@primeuix/styled@0.5.1':
+    resolution: {integrity: sha512-5Ftw/KSauDPClQ8F2qCyCUF7cIUEY4yLNikf0rKV7Vsb8zGYNK0dahQe7CChaR6M2Kn+NA2DSBSk76ZXqj6Uog==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/styled@0.7.2':
+    resolution: {integrity: sha512-tIJ6byZezTYZ9YUICNSidQHOIQOQL3zeUgjwiX0JnBTK3+WCvy4DyCBcrJ94RtiX0WGFZSYNvaGaFkTo4jU8FQ==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/styles@1.2.3':
+    resolution: {integrity: sha512-+KwmQsLTYgVAqFADmO252btz40lstPML6r4QMNjxz4gLNCKVW3kPR0/aCouQx6/21+boXG1P68tu8Zk3FAKr2w==}
 
   '@primeuix/utils@0.4.1':
     resolution: {integrity: sha512-5+1NLfyna+gLRPeFTo+xlR0tfPVLuVdidbeahAMLkQga5Rw0LxyUBCyD2/Zv2JkV69o2T+hpEDyddl3VdnYoBw==}
@@ -2640,8 +2648,16 @@ packages:
     resolution: {integrity: sha512-fHL0DGnyhL/9toBoV0cO6L+Xg/uaxmOHJW4SrDNMq6GQ7cDXR3Y0vDLvX5j/8kIsaC7LB3329sQLNHgtEETnWw==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/auto-import-resolver@4.3.3':
-    resolution: {integrity: sha512-CwQPlG8IzDySOwF8N0Q0rLv76awCH7SzYt+RHu1AO/HZEsdCorclIoJO6TrJYevenlhxialprRqpIV52McoRpw==}
+  '@primeuix/utils@0.5.4':
+    resolution: {integrity: sha512-8LggV3Jz59pymHQD10e/u63z/GemQ22RBeu2Gb1eJgBYVwn1iOb82LR+daeAc/LxrXCC5pHnftnCmnZO6vInLA==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/utils@0.6.1':
+    resolution: {integrity: sha512-tQL/ZOPgCdD+NTimlUmhyD0ey8J1XmpZE4hDHM+/fnuBicVVmlKOd5HpS748LcOVRUKbWjmEPdHX4hi5XZoC1Q==}
+    engines: {node: '>=12.11.0'}
+
+  '@primevue/auto-import-resolver@4.3.7':
+    resolution: {integrity: sha512-U/gJ2q1XckszMcgViYsjz6+hCdhoCi+6l9JS6E93MFfsGji1NnlwM/+7ZDElGQ0CT8YuLXEOhg+HgR1Fiznljg==}
     engines: {node: '>=12.11.0'}
 
   '@primevue/core@4.3.3':
@@ -2650,20 +2666,30 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
+  '@primevue/core@4.3.7':
+    resolution: {integrity: sha512-rYmEZTKs/C2Re+xFluY9R02+n4TcyJshooPPOG6zc23v/bmhrfcqCiS5gNiuXF/lYoOh4y8VTcHF6eZCZW724Q==}
+    engines: {node: '>=12.11.0'}
+    peerDependencies:
+      vue: ^3.5.0
+
   '@primevue/forms@4.3.3':
     resolution: {integrity: sha512-GZYMd8wp+7/4DVMoGGUtRkAHw352peT3pgwgzaFYQqNIjxxGw9eI253XTxrppRCowrGJ2jEe80p9WfHi087B1g==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/icons@4.3.3':
-    resolution: {integrity: sha512-ouQaxHyeFB6MSfEGGbjaK5Qv9efS1xZGetZoU5jcPm090MSYLFtroP1CuK3lZZAQals06TZ6T6qcoNukSHpK5w==}
+  '@primevue/forms@4.3.7':
+    resolution: {integrity: sha512-Hk52vSDZskMqJlwBiKmfjYtUL3lvTs4C4456OV7CeI++8ah094kuwlJsOulgAeYw9P2hzCoOrnMS4SoL3F3j6w==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/metadata@4.3.3':
-    resolution: {integrity: sha512-R1IBTGsYsmOlAy4/dytJW699Iie9B8p8PqbIxDY0GWiMGk8O0tVBYfuCs50w0QtHqmThhLRtSS+eCSOP1ybwSg==}
+  '@primevue/icons@4.3.7':
+    resolution: {integrity: sha512-CKiOeiJzNSbELwbQdrgWHgmfcAmjNQXqRZtBGb8sUPrB8hjWf9lYMBAbcAuqJbyLFFcC0lFiB80CfBR07FNSHw==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/nuxt-module@4.3.3':
-    resolution: {integrity: sha512-81T65CTuPCD7mW1nzrY1hhBOvxhobjwLy+/mHCuHwmZYjDSpGxMaw6BtWYEk4vrAFPtQHWQGRCj1iYUtDSx5GQ==}
+  '@primevue/metadata@4.3.7':
+    resolution: {integrity: sha512-nTyedHcAuqDqO79+iiyCpFe/phJH5DZEwsx+M6jXSWohHhU8pRjiRCK1rU0exyHkUbaA/QkyUUJOVb/Gkwmh5A==}
+    engines: {node: '>=12.11.0'}
+
+  '@primevue/nuxt-module@4.3.7':
+    resolution: {integrity: sha512-dhiWjfJJtrnAyj+FnXQUcLaFTcsrkJ7QmSALdPIU5Ehem7f4HyJDpkqk7lbufz4qIA1joHbnkLKGN0+n/Io3cg==}
     engines: {node: '>=12.11.0'}
 
   '@redocly/ajv@8.11.2':
@@ -7622,8 +7648,8 @@ packages:
     resolution: {integrity: sha512-UATF+R/2H8owxwPvF12Knihu9aYGTuZttGHrEEq5NBWz38mREh23+WvCVKX3fhnIZIMV7ye6E1fnqAl+V6WYEw==}
     hasBin: true
 
-  primevue@4.3.3:
-    resolution: {integrity: sha512-nooYVoEz5CdP3EhUkD6c3qTdRmpLHZh75fBynkUkl46K8y5rksHTjdSISiDijwTA5STQIOkyqLb+RM+HQ6nC1Q==}
+  primevue@4.3.7:
+    resolution: {integrity: sha512-yyknh2kFjSGwRyxqmUUWy/pY4FK1vxoonGH3eQdtd8k/sGl5JpSQ2f0tXpR79lV6dcGf3FZPL1B5JNR11zJfmg==}
     engines: {node: '>=12.11.0'}
 
   printable-characters@1.0.42:
@@ -12105,26 +12131,44 @@ snapshots:
     dependencies:
       '@primeuix/utils': 0.4.1
 
-  '@primeuix/styled@0.5.0':
+  '@primeuix/forms@0.1.0':
     dependencies:
-      '@primeuix/utils': 0.5.2
+      '@primeuix/utils': 0.6.1
 
-  '@primeuix/styles@1.0.0':
+  '@primeuix/styled@0.5.1':
     dependencies:
-      '@primeuix/styled': 0.5.0
+      '@primeuix/utils': 0.5.4
+
+  '@primeuix/styled@0.7.2':
+    dependencies:
+      '@primeuix/utils': 0.6.1
+
+  '@primeuix/styles@1.2.3':
+    dependencies:
+      '@primeuix/styled': 0.7.2
 
   '@primeuix/utils@0.4.1': {}
 
   '@primeuix/utils@0.5.2': {}
 
-  '@primevue/auto-import-resolver@4.3.3':
+  '@primeuix/utils@0.5.4': {}
+
+  '@primeuix/utils@0.6.1': {}
+
+  '@primevue/auto-import-resolver@4.3.7':
     dependencies:
-      '@primevue/metadata': 4.3.3
+      '@primevue/metadata': 4.3.7
 
   '@primevue/core@4.3.3(vue@3.5.18(typescript@5.8.3))':
     dependencies:
-      '@primeuix/styled': 0.5.0
+      '@primeuix/styled': 0.5.1
       '@primeuix/utils': 0.5.2
+      vue: 3.5.18(typescript@5.8.3)
+
+  '@primevue/core@4.3.7(vue@3.5.18(typescript@5.8.3))':
+    dependencies:
+      '@primeuix/styled': 0.7.2
+      '@primeuix/utils': 0.6.1
       vue: 3.5.18(typescript@5.8.3)
 
   '@primevue/forms@4.3.3(vue@3.5.18(typescript@5.8.3))':
@@ -12135,25 +12179,34 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@primevue/icons@4.3.3(vue@3.5.18(typescript@5.8.3))':
+  '@primevue/forms@4.3.7(vue@3.5.18(typescript@5.8.3))':
     dependencies:
-      '@primeuix/utils': 0.5.2
-      '@primevue/core': 4.3.3(vue@3.5.18(typescript@5.8.3))
+      '@primeuix/forms': 0.1.0
+      '@primeuix/utils': 0.6.1
+      '@primevue/core': 4.3.7(vue@3.5.18(typescript@5.8.3))
     transitivePeerDependencies:
       - vue
 
-  '@primevue/metadata@4.3.3': {}
-
-  '@primevue/nuxt-module@4.3.3(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.18(typescript@5.8.3))':
+  '@primevue/icons@4.3.7(vue@3.5.18(typescript@5.8.3))':
     dependencies:
-      '@nuxt/kit': 3.16.2(magicast@0.3.5)
-      '@primeuix/styled': 0.5.0
-      '@primeuix/utils': 0.5.2
-      '@primevue/auto-import-resolver': 4.3.3
-      '@primevue/metadata': 4.3.3
+      '@primeuix/utils': 0.6.1
+      '@primevue/core': 4.3.7(vue@3.5.18(typescript@5.8.3))
+    transitivePeerDependencies:
+      - vue
+
+  '@primevue/metadata@4.3.7': {}
+
+  '@primevue/nuxt-module@4.3.7(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.18(typescript@5.8.3))':
+    dependencies:
+      '@nuxt/kit': 3.17.7(magicast@0.3.5)
+      '@primeuix/styled': 0.7.2
+      '@primeuix/utils': 0.6.1
+      '@primevue/auto-import-resolver': 4.3.7
+      '@primevue/forms': 4.3.7(vue@3.5.18(typescript@5.8.3))
+      '@primevue/metadata': 4.3.7
       pathe: 1.1.2
-      primevue: 4.3.3(vue@3.5.18(typescript@5.8.3))
-      unplugin-vue-components: 28.4.1(@babel/parser@7.28.0)(@nuxt/kit@3.16.2(magicast@0.3.5))(vue@3.5.18(typescript@5.8.3))
+      primevue: 4.3.7(vue@3.5.18(typescript@5.8.3))
+      unplugin-vue-components: 28.4.1(@babel/parser@7.28.0)(@nuxt/kit@3.17.7(magicast@0.3.5))(vue@3.5.18(typescript@5.8.3))
     transitivePeerDependencies:
       - '@babel/parser'
       - magicast
@@ -18071,13 +18124,13 @@ snapshots:
       diff: 4.0.2
       js-yaml: 3.14.1
 
-  primevue@4.3.3(vue@3.5.18(typescript@5.8.3)):
+  primevue@4.3.7(vue@3.5.18(typescript@5.8.3)):
     dependencies:
-      '@primeuix/styled': 0.5.0
-      '@primeuix/styles': 1.0.0
-      '@primeuix/utils': 0.5.2
-      '@primevue/core': 4.3.3(vue@3.5.18(typescript@5.8.3))
-      '@primevue/icons': 4.3.3(vue@3.5.18(typescript@5.8.3))
+      '@primeuix/styled': 0.7.2
+      '@primeuix/styles': 1.2.3
+      '@primeuix/utils': 0.6.1
+      '@primevue/core': 4.3.7(vue@3.5.18(typescript@5.8.3))
+      '@primevue/icons': 4.3.7(vue@3.5.18(typescript@5.8.3))
     transitivePeerDependencies:
       - vue
 
@@ -19573,7 +19626,7 @@ snapshots:
       pathe: 2.0.3
       picomatch: 4.0.2
 
-  unplugin-vue-components@28.4.1(@babel/parser@7.28.0)(@nuxt/kit@3.16.2(magicast@0.3.5))(vue@3.5.18(typescript@5.8.3)):
+  unplugin-vue-components@28.4.1(@babel/parser@7.28.0)(@nuxt/kit@3.17.7(magicast@0.3.5))(vue@3.5.18(typescript@5.8.3)):
     dependencies:
       chokidar: 3.6.0
       debug: 4.4.1(supports-color@10.0.0)
@@ -19586,7 +19639,7 @@ snapshots:
       vue: 3.5.18(typescript@5.8.3)
     optionalDependencies:
       '@babel/parser': 7.28.0
-      '@nuxt/kit': 3.16.2(magicast@0.3.5)
+      '@nuxt/kit': 3.17.7(magicast@0.3.5)
     transitivePeerDependencies:
       - supports-color
 
