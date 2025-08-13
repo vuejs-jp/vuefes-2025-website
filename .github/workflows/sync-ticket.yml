@@ -5,8 +5,7 @@ name: Sync Ticket
 on:
   schedule:
     # UTC 16:00 => JST 01:00
-    # - cron: '0 16 * * *'
-    - cron: '24 14 * * *'
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,6 +22,7 @@ jobs:
         uses: ./.github/actions/setup-node-pnpm
 
       - name: Run Sync Ticket Script
+        run: 'curl "$PEATIX_API_ORIGIN/event/$PEATIX_EVENT_ID/list_sales?fresh=true" -H "Authorization: Bearer $PEATIX_API_SECRET" && pnpm dlx tsx scripts/admin/sync-role/main.ts'
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_DATABASE_ID: ${{ vars.CLOUDFLARE_DATABASE_ID }}
@@ -30,6 +30,3 @@ jobs:
           PEATIX_API_ORIGIN: ${{ vars.PEATIX_API_ORIGIN }}
           PEATIX_EVENT_ID: ${{ vars.PEATIX_EVENT_ID }}
           PEATIX_API_SECRET: ${{ secrets.PEATIX_API_SECRET }}
-        run: |
-          curl "$PEATIX_API_ORIGIN/event/$PEATIX_EVENT_ID/list_sales?fresh=true" -H "Authorization: Bearer $PEATIX_API_SECRET" &&\
-          pnpm dlx tsx scripts/admin/sync-role/main.ts
