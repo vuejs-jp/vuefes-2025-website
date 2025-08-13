@@ -97,7 +97,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "resolvers": "link:@primevue/forms/resolvers",
-    "satori": "^0.16.1",
+    "satori": "^0.16.2",
     "storybook": "8.4.7",
     "textlint": "^14.4.2",
     "textlint-filter-rule-allowlist": "^4.0.0",
