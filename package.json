@@ -17,6 +17,9 @@
     "executionEnv": {
       "nodeVersion": "22.14.0"
     },
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "better-sqlite3",
