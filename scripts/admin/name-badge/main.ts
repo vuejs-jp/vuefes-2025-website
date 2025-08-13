@@ -216,11 +216,6 @@ await (async function main() {
       eq(attendees.role, it.role),
     ];
 
-    // For Staff role, also match lang field
-    if (it.role === "Staff" && "lang" in it) {
-      whereConditions.push(eq(attendees.lang, it.lang));
-    }
-
     const [existingUser] = await db
       .select({
         user: {
