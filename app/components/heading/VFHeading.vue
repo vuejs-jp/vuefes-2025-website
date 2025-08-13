@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { nth = 2 } = defineProps<{
+  id?: string;
+
   /** @default 2 */
   nth?: 1 | 2 | 3;
 }>();
@@ -10,9 +12,16 @@ defineSlots<{
 </script>
 
 <template>
-  <component :is="`h${nth}`" v-bind="$attrs">
+  <a v-if="id" :href="`#${id}`" class="anchor">
+    <component :is="`h${nth}`" :id="id" v-bind="$attrs">
+      <slot />
+    </component>
+  </a>
+
+  <component :is="`h${nth}`" v-else :id="id" v-bind="$attrs">
     <slot />
   </component>
+
   <hr />
 </template>
 
@@ -53,6 +62,25 @@ h2 {
   @media (--mobile) {
     font-size: 1.125rem;
     line-height: 1.725;
+  }
+}
+
+.anchor {
+  text-decoration: none;
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-accent-hover);
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--color-accent-hover);
+        &::before {
+          background-color: var(--color-accent-hover);
+        }
+      }
+    }
   }
 }
 </style>

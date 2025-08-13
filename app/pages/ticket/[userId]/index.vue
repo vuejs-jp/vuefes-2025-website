@@ -272,8 +272,10 @@ function copyUrl() {
             width: 59px;
             height: 59px;
 
-            &:hover {
-              opacity: 0.8;
+            @media (any-hover: hover) {
+              &:hover {
+                opacity: 0.8;
+              }
             }
           }
         }

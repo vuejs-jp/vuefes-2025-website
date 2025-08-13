@@ -35,11 +35,11 @@ ticket:
   early: "早割"
   standard: "通常"
   priceUnit: "￥"
-  generalTicket: 
+  generalTicket:
     title: "一般チケット"
     earlyPrice: "7000"
     standardPrice: "8000"
-  afterPartyTicket: 
+  afterPartyTicket:
     title: "一般＋アフターパーティーチケット"
     earlyPrice: "10000"
     standardPrice: "11000"
@@ -121,6 +121,68 @@ handsOn:
 faq:
   title: "FAQ"
 
+event:
+  title: "Event"
+  panel:
+    title: "パネルディスカッション"
+    location: "FitFits with hacomonoトラック"
+    time: "16:10 - 17:10"
+    talkTitle: "フロントエンドの未来を語る"
+    talkDescription: "生成 AI の発表から数年が経ち、近年では「AI エージェント」を用いた開発スタイル（Vibe Coding）が注目されています。今後、AI の性能はさらに発展していくと予想されており、このパラダイムシフトは我々のフロントエンド開発にどのような影響を及ぼすのでしょうか。本パネルディスカッションでは、React、Vue.js、Svelte の著名な有識者である Dan Abramov、Evan You、dominikg を迎え、「生成 AI 時代におけるフロントエンドの未来」について多角的に議論していただきます。"
+  quiz:
+    title: "Vue Quiz"
+    location: "サイバーエージェントトラック"
+    time: "17:20 - 17:50"
+    image:
+      alt1: "Vue Fes Japan 2024の縦型の垂れ幕とスクリーンが並んで表示されている会場の様子。"
+      alt2: "マイクを持って話す kazupon。背後には Vue Fes のイベントロゴが投影されている。"
+      alt3: "Vue Fes Japan 2024のセッション中、スクリーンを見ながら登壇者の発表を聞いている参加者たち。会場はノートパソコンを広げた人々で賑わっている。"
+      alt4: "Vue Fes Japan 2024のセッション中、観客席から手を挙げて質問する参加者。前方にはスピーカーが座っている。"
+  handsOn:
+    title: "ハンズオン"
+    location: "サイバーエージェントトラック"
+    time: "12:50 - 14:50 / 15:10 - 17:10 "
+    image:
+      alt1: "Vue Fes Japan 2024の「Vue.js / Nuxt ハンズオン」セッションで、スライドを見ながら講義を受ける参加者たち。"
+      alt2: "Vue Fes Japan 2024で登壇するAnthony。Vue Fes Japan のロゴ とスポンサーのロゴが並ぶバックパネルの前で、マイク越しに発表している。"
+      alt3: "Vue Fes Japan 2024のハンズオンセッション中、スライドを見ながらノートパソコンで作業する参加者たち。講師は前方で説明を行っている。"
+      alt4: "Vue Fes Japan 2024のハンズオンセッションで、右手にマイクを持ち、左手でスクリーンを指差しながら説明をするubugeeei。"
+  studentSupport:
+    title: "学生支援コンテンツ"
+    location: "サイバーエージェントトラック"
+    time: "11:30 - 12:30"
+  creativeWall:
+    title: "クリエイティブウォール"
+    location: "2F 受付前"
+    description: "Vue Fes Japan 名物のクリエイティブウォールが今年も登場です。Vue.js や Vue Fes Japan に対する熱い想いをぜひ書き込んでください。いつも使っている OSS ロゴと一緒に記念写真も撮影できます。"
+    alt: "Vue Fes Japan 2024の会場に設置されたクリエイティブウォールの前で、OSSロゴを手に笑顔でポーズをとるスタッフたち。"
+  sponsorBooth:
+    title: "スポンサーブースシールラリー"
+    location: "1F スポンサーブース"
+    description: "各スポンサーブースで配られるシールを12枚以上集めると、ハズレなしのくじ引きに参加できます。集めたシールの枚数に応じて最大3回まで挑戦可能です。豪華景品が当たるかも！？"
+    alt: "Vue Fes Japan 2024のスポンサーブースを訪れ、展示物を見ながら楽しそうに交流する参加者たち。"
+  freeDrink:
+    title: "フリードリンク & スナック"
+    location: "1F・2F ホワイエ"
+    description: "セッションやイベントで集中した後に、コーヒーやお茶はいかがですか？　お菓子も無料でご用意しています。ちょっとリフレッシュしたくなったら気軽にお立ち寄りください。"
+    alt: "Vue Fes Japan 2024のドリンク＆スナックコーナーで、来場者に飲み物やお菓子を提供するスタッフたち。テーブルの前で笑顔で並んでいる。"
+  festival:
+    title: "縁日コーナー"
+    location: "1F ホワイエ"
+    description: "お祭り縁日の雰囲気を味わえる縁日コーナーが登場。「輪投げ」「かたぬき」「落書きせんべい」などを体験すると、Vue Fes Japan オリジナルお菓子、または懐かしの駄菓子がもらえます。"
+    alt: "色とりどりのヨーヨーや提灯、うちわなどが並ぶ、祭の雰囲気を演出した装飾コーナー。中央には「祭」と書かれた手ぬぐいが置かれている。"
+  tattoo:
+    title: "タトゥースペース"
+    location: "2F ホワイエ"
+    description: "腕や手足に特製タトゥーシールを貼り付けて、フェス気分を盛り上げましょう。Vue Fes Japan はもちろん、おなじみの Vue.js や Nuxt などのロゴマークをその場ですぐに付けられます。"
+    alt: "Vue Fes Japan 2024のロゴや OSS のロゴがデザインされたタトゥーシールを腕に貼っている様子。"
+  cocktail:
+    title: "Vue Cocktail Bash"
+    location: "アフターパーティー"
+    description: "昨年話題を呼んだオリジナルカクテルが、今年も帰ってきます！　Vue.js をはじめ、OSS をイメージした特別なカクテルをオリジナルレシピで開発しました。ノンアルコールもご用意しています。来場の記念に、是非ご堪能ください！"
+    alt: "Vue.jsをイメージして作られたオリジナルカクテルが並んでいる。緑色のドリンクにはVueのロゴタグが付けられている。"
+    attention1: "※ オリジナルカクテルのご提供は、アフターパーティーのみとなります。"
+    attention2: "※ 数量限定でのご提供となります。"
 speakers:
   title: "スピーカー"
   description: "Vue Fes Japan では、Vue.js をはじめとした著名 OSS のコアチームメンバーから現場で培ったリアルな知見を届けるエンジニアまで、最前線で活躍する世界中の開発者たちが勢揃いします。"
@@ -154,7 +216,7 @@ volunteer:
 sponsorWanted: "スポンサー募集"
 sponsorWantedCoverImageAlt: "Sponsor Wantedのカバー画像"
 
-sponsors: 
+sponsors:
   title: "スポンサー"
   coverImageAlt: "スポンサーのカバー画像"
   viewAll: "スポンサー一覧はこちら"
@@ -211,6 +273,7 @@ snsIconImageAlt:
   youtube: "YouTubeアイコン"
   github: "GitHubアイコン"
   note: "noteアイコン"
+events: "関連イベント"
 privacyPolicy: "プライバシーポリシー"
 coc: "行動規範"
 transactions: "特定商取引法に基づく表示"

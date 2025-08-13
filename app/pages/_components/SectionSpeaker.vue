@@ -134,9 +134,11 @@ const speakers = computed<CarouselSpeaker[]>(() => {
         height: 48px;
 
         /* reset */
-        &:hover {
-          color: var(--color-base);
-          border: 1px solid var(--color-base);
+        @media (any-hover: hover) {
+          &:hover {
+            color: var(--color-base);
+            border: 1px solid var(--color-base);
+          }
         }
       }
 

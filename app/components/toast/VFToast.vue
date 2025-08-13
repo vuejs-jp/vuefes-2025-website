@@ -140,7 +140,7 @@ const positionRight = computed(() => {
   bottom: 1rem;
   left: v-bind(positionRight);
   transition: all linear 0s;
-  z-index: 1000;
+  z-index: var(--z-index-modal);
   padding: 1.5rem 2.5rem;
   @media (--mobile) {
     padding: 1rem 1.5rem;

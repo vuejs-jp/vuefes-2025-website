@@ -41,6 +41,30 @@
   --color-alert: #db0000;
 }
 
+/** 
+ * Z-index layers
+  ------------------------------------------ */
+
+:root {
+  /* Background layers */
+  --z-index-background: -1;
+  
+  /* Base content layers */
+  --z-index-base: 1;
+  --z-name-badge-highlight: 2;
+  
+  /* UI layers */
+  --z-index-header: 100;
+  --z-index-navigation: 200;
+  
+  /* Overlay layers */
+  --z-index-overlay: 300;
+  --z-index-modal: 400;
+  
+  /* Special layers */
+  --z-index-focused-name-badge: 9999;
+}
+
 body {
   color: var(--color-text-default);
   background-color: var(--color-sub);
@@ -75,8 +99,11 @@ body {
   [data-vf-mdc] {
     a {
       color: var(--color-base);
-      &:hover {
-        color: var(--color-accent-hover);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--color-accent-hover);
+        }
       }
     }
   }

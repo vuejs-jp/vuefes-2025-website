@@ -61,11 +61,19 @@ input {
     color: var(--color-place-holder);
   }
 
-  &:enabled:focus,
-  &:enabled:hover {
+  &:enabled:focus {
     border-color: var(--color-primary);
     &.invalid {
       border-color: var(--color-alert);
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:enabled:hover {
+      border-color: var(--color-primary);
+      &.invalid {
+        border-color: var(--color-alert);
+      }
     }
   }
 

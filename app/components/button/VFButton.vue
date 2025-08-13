@@ -130,7 +130,12 @@ a {
 }
 
 button {
-  &:enabled:hover,
+  @media (any-hover: hover) {
+    &:enabled:hover {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
   &:enabled:active {
     background-color: var(--color-accent-hover);
   }
@@ -142,7 +147,14 @@ button {
   }
 
   &.button-outlined {
-    &:enabled:hover,
+    @media (any-hover: hover) {
+      &:enabled:hover {
+        background-color: inherit;
+        border: 1px solid var(--color-base);
+        color: var(--color-base);
+      }
+    }
+
     &:enabled:active {
       background-color: inherit;
       border: 1px solid var(--color-base);
@@ -156,7 +168,11 @@ button {
   }
 
   &.button-icon {
-    &:enabled:hover,
+    @media (any-hover: hover) {
+      &:enabled:hover {
+        background-color: var(--color-white);
+      }
+    }
     &:enabled:active {
       background-color: var(--color-white);
     }
@@ -164,13 +180,23 @@ button {
 }
 
 a {
-  &:hover,
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+  }
   &:active {
     background-color: var(--color-accent-hover);
   }
 
   &.button-outlined {
-    &:hover,
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: inherit;
+        border: 1px solid var(--color-base);
+        color: var(--color-base);
+      }
+    }
     &:active {
       background-color: inherit;
       border: 1px solid var(--color-base);
@@ -179,7 +205,11 @@ a {
   }
 
   &.button-icon {
-    &:hover,
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-white);
+      }
+    }
     &:active {
       background-color: var(--color-white);
     }

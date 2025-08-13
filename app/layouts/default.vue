@@ -47,14 +47,13 @@ const menuItems = computed<MenuItemProps[]>(() =>
       routeName: localeRoute({ name: "speaker" }).name,
     },
     {
-      id: HOME_HEADING_ID.ticket,
+      id: HOME_HEADING_ID.event,
       label: "Event",
-      // TODO:
-      routeName: localeRoute({ name: "index" }).name,
+      routeName: localeRoute({ name: "event" }).name,
       disabled: !__FEATURE_EVENT__,
     },
     {
-      id: HOME_HEADING_ID.event,
+      id: HOME_HEADING_ID.ticket,
       label: "Ticket",
       routeName: localeRoute({ name: "ticket" }).name,
     },
@@ -99,6 +98,7 @@ const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "ticket-userId-edit",
   "sponsors",
   "sponsors-sponsorId",
+  "event",
 ];
 
 const isWidenContent = computed(() =>
@@ -200,7 +200,7 @@ watch(() => route.hash, async (hash) => {
 
 .main-visual {
   position: fixed;
-  z-index: -1;
+  z-index: var(--z-index-background);
 }
 
 .content {
@@ -264,7 +264,7 @@ watch(() => route.hash, async (hash) => {
   top: 0;
   width: 100%;
   padding-top: 0.5rem;
-  z-index: 100;
+  z-index: var(--z-index-header);
 
   @media (--mobile) {
     padding-top: 0.25rem;
@@ -281,7 +281,7 @@ watch(() => route.hash, async (hash) => {
   bottom: 24px;
   width: 100%;
   height: auto;
-  z-index: 200; /* higher than .header */
+  z-index: var(--z-index-navigation); /* higher than .header */
   display: flex;
   justify-content: center;
   gap: 0.5rem;

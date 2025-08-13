@@ -24,7 +24,9 @@ const localeRoute = useLocaleRoute();
     }"
   >
     <div class="sponsor-list">
-      <VFHeading>{{ t('sponsors.platinaSponsor') }}</VFHeading>
+      <VFHeading id="platina-sponsors">
+        {{ t('sponsors.platinaSponsor') }}
+      </VFHeading>
       <div class="sponsor-grid-container">
         <SponsorGrid
           :sponsors="locale === 'ja' ? JaSponsors.PLATINA : EnSponsors.PLATINA"
@@ -36,7 +38,9 @@ const localeRoute = useLocaleRoute();
     </div>
 
     <div class="sponsor-list">
-      <VFHeading>{{ t('sponsors.goldSponsor') }}</VFHeading>
+      <VFHeading id="gold-sponsors">
+        {{ t('sponsors.goldSponsor') }}
+      </VFHeading>
       <div class="sponsor-grid-container">
         <SponsorGrid
           :sponsors="locale === 'ja' ? JaSponsors.GOLD : EnSponsors.GOLD"
@@ -48,7 +52,9 @@ const localeRoute = useLocaleRoute();
     </div>
 
     <div class="sponsor-list">
-      <VFHeading>{{ t('sponsors.silverSponsor') }}</VFHeading>
+      <VFHeading id="silver-sponsors">
+        {{ t('sponsors.silverSponsor') }}
+      </VFHeading>
       <div class="sponsor-grid-container">
         <SponsorGrid
           :sponsors="locale === 'ja' ? JaSponsors.SILVER : EnSponsors.SILVER"
@@ -60,7 +66,9 @@ const localeRoute = useLocaleRoute();
     </div>
 
     <div class="sponsor-list">
-      <VFHeading>{{ t('sponsors.bronzeSponsor') }}</VFHeading>
+      <VFHeading id="bronze-sponsors">
+        {{ t('sponsors.bronzeSponsor') }}
+      </VFHeading>
       <div class="sponsor-grid-container">
         <SponsorGrid
           :sponsors="locale === 'ja' ? JaSponsors.BRONZE : EnSponsors.BRONZE"
@@ -72,7 +80,9 @@ const localeRoute = useLocaleRoute();
     </div>
 
     <div class="sponsor-list">
-      <VFHeading>{{ t('sponsors.optionSponsor') }}</VFHeading>
+      <VFHeading id="option-sponsors">
+        {{ t('sponsors.optionSponsor') }}
+      </VFHeading>
       <div
         v-for="option in (locale === 'ja' ? JaSponsors.OPTION : EnSponsors.OPTION) as OptionSponsor[]"
         :key="option.title"
@@ -93,7 +103,9 @@ const localeRoute = useLocaleRoute();
     </div>
 
     <div class="sponsor-list">
-      <VFHeading>{{ t('sponsors.creativeSponsor') }}</VFHeading>
+      <VFHeading id="creative-sponsors">
+        {{ t('sponsors.creativeSponsor') }}
+      </VFHeading>
       <div class="sponsor-grid-container">
         <SponsorGrid
           :sponsors="locale === 'ja' ? JaSponsors.CREATIVE : EnSponsors.CREATIVE"

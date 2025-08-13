@@ -36,7 +36,7 @@ const localeRoute = useLocaleRoute();
           name: 'sponsors-sponsorId',
           params: { sponsorId: sponsor.id },
         })"
-        class="sponsor-link"
+        class="to-sponsor"
       >
         <slot :item="sponsor">
           <img :src="sponsor.logoImageUrl" :alt="sponsor.logoImageAlt" loading="lazy" />
@@ -67,14 +67,14 @@ const localeRoute = useLocaleRoute();
   font-size: 0.875rem;
 }
 
-.sponsor-link,
+.to-sponsor,
 .sponsor-item {
   display: block;
   width: 100%;
   text-decoration: none;
 }
 
-.sponsor-link img,
+.to-sponsor img,
 .sponsor-item img {
   width: 100%;
   height: auto;

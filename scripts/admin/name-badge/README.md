@@ -14,7 +14,7 @@ CLOUDFLARE_R2_BUCKET_NAME=xxx
 
 ### 2. Create Data File (`input/data.ts`)
 
-Since `/input` is gitignored, it's convenient to place image files in `/input/images` etc.
+Since `/input/img` is gitignored, to place image files.
 
 ```typescript
 import path from "node:path";
@@ -34,7 +34,7 @@ const data: NameBadgeInput[] = [
   {
     name: "Hanako Suzuki",
     role: "Staff",
-    lang: "jp",  // jp | en
+    lang: "ja,en",
     localAvatarImagePath: path.resolve(__dirname, "./images/suzuki.png")
   },
   

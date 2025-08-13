@@ -26,8 +26,8 @@
     ]
   },
   "scripts": {
-    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' nuxt build",
-    "dev": "cross-env FEATURE_TIMETABLE=0 FEATURE_EVENT=0 nuxt dev",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' FEATURE_EVENT=1 nuxt build",
+    "dev": "cross-env FEATURE_TIMETABLE=0 FEATURE_EVENT=1 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",
@@ -70,9 +70,9 @@
     "d1-driver": "^2.0.2",
     "dotenv": "^17.0.1",
     "drizzle-kit": "^0.31.4",
-    "drizzle-orm": "^0.44.2",
+    "drizzle-orm": "^0.44.4",
     "emoji-regex": "^10.4.0",
-    "eslint": "^9.24.0",
+    "eslint": "^9.33.0",
     "eslint-plugin-storybook": "^0.12.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lightningcss": "^1.30.1",

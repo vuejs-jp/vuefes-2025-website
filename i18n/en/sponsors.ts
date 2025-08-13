@@ -2,7 +2,7 @@ import type { Sponsor, Option, OptionSponsor } from "../sponsor";
 
 const SPONSORS_PLATINA: Sponsor[] = [
   {
-    name: "弁護士ドットコム株式会社",
+    name: "Bengo4.com,Inc.",
     logoImageUrl: "/images/sponsor-logo/platina/cloud-sign.png",
     logoImageAlt: "CLOUDSIGN powered by Bengo4.com",
     linkUrl: "https://www.bengo4.com/corporate/",
@@ -11,7 +11,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
     id: "bengo4",
   },
   {
-    name: "株式会社ヤプリ",
+    name: "Yappli, Inc.",
     logoImageUrl: "/images/sponsor-logo/platina/yappli.png",
     logoImageAlt: "yappli.inc logo",
     linkUrl: "https://yappli.co.jp/",
@@ -20,7 +20,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
     id: "yappli",
   },
   {
-    name: "株式会社リンクアンドモチベーション",
+    name: "Link and Motivation Inc.",
     logoImageUrl: "/images/sponsor-logo/platina/link-and-motivation.png",
     logoImageAlt: "Corporate logo of Link and Motivation with symbol and text",
     linkUrl: "https://www.lmi.ne.jp/",
@@ -29,7 +29,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
     id: "lmi",
   },
   {
-    name: "ユニークビジョン株式会社",
+    name: "Unique Vision Company",
     logoImageUrl: "/images/sponsor-logo/platina/unique-vision.png",
     logoImageAlt: "Unique Vision Co., Ltd. corporate logo image",
     linkUrl: "https://www.uniquevision.co.jp/",
@@ -41,7 +41,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
 
 const SPONSORS_GOLD: Sponsor[] = [
   {
-    name: "株式会社 コドモン",
+    name: "CoDMON, Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/codmon.png",
     logoImageAlt: "CoDMON, Inc.",
     linkUrl: "https://www.codmon.com/",
@@ -51,7 +51,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "codmon",
   },
   {
-    name: "株式会社スタディスト",
+    name: "Studist Corporation",
     logoImageUrl: "/images/sponsor-logo/gold/studist.png",
     logoImageAlt: "Studist Corporation logo",
     linkUrl: "https://studist.jp/",
@@ -60,7 +60,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "studist",
   },
   {
-    name: "LINEヤフー株式会社",
+    name: "LY Corporation",
     logoImageUrl: "/images/sponsor-logo/gold/line-yahoo.png",
     logoImageAlt: "LY Corporation",
     linkUrl: "https://www.lycorp.co.jp/ja/technology-design/",
@@ -70,16 +70,16 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "lycorp",
   },
   {
-    name: "STORES 株式会社",
+    name: "STORES, Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/stores.png",
     logoImageAlt: "STORES",
     linkUrl: "https://jobs.st.inc/",
     plan: "gold",
-    description: "STORES 株式会社は、「Just for Fun」のミッションのもと、こだわりや情熱に駆動される経済を目指しています。小売、飲食、サービス業を中心とする中小事業者の店舗運営を支える幅広いプロダクトを提供しています。顧客データを基盤とした「STORES」のプロダクトを通じて、事業者の持続的な売上成長をサポートし、個性豊かで多様な商いがあふれる社会を実現します。",
+    description: "STORES Inc. aims to create an economy driven by passion and dedication under our mission of \"Just for Fun.\" We provide a wide range of products that support store operations for small and medium-sized businesses, primarily in retail, food service, and service industries. Through our customer data-driven \"STORES\" products, we support sustainable revenue growth for businesses and realize a society overflowing with diverse and distinctive commerce.",
     id: "st",
   },
   {
-    name: "株式会社Finatextホールディングス",
+    name: "Finatext Holdings Ltd.",
     logoImageUrl: "/images/sponsor-logo/gold/finatext-holdings.png",
     logoImageAlt: "Logo of Finatext Holdings, Inc.",
     linkUrl: "https://hd.finatext.com/",
@@ -88,7 +88,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "finatext",
   },
   {
-    name: "KINTOテクノロジーズ株式会社",
+    name: "KINTO Technologies Corporation",
     logoImageUrl: "/images/sponsor-logo/gold/kinto-technologies.png",
     logoImageAlt: "KINTOtechnologies logo",
     linkUrl: "https://www.kinto-technologies.com/",
@@ -97,7 +97,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "kinto-technologies",
   },
   {
-    name: "株式会社プレイド",
+    name: "PLAID, Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/plaid.png",
     logoImageAlt: "PLAID, Inc.",
     linkUrl: "https://plaid.co.jp/",
@@ -107,7 +107,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "plaid",
   },
   {
-    name: "ストックマーク株式会社",
+    name: "Stockmark Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/stockmark.png",
     logoImageAlt: "Stockmark Inc.",
     linkUrl: "https://stockmark.co.jp/",
@@ -117,7 +117,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "stockmark",
   },
   {
-    name: "フューチャーアーキテクト株式会社",
+    name: "Future Architect, Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/future-architect.png",
     logoImageAlt: "Future Architect Inc.",
     linkUrl: "https://www.future.co.jp/architect/",
@@ -127,7 +127,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "future",
   },
   {
-    name: "株式会社GENEROSITY",
+    name: "GENEROSITY Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/generosity.png",
     logoImageAlt: "GENEROSITY Inc.",
     linkUrl: "https://generosity.co.jp",
@@ -136,7 +136,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "generosity",
   },
   {
-    name: "HENNGE株式会社",
+    name: "HENNGE K.K.",
     logoImageUrl: "/images/sponsor-logo/gold/hennge.png",
     logoImageAlt: "On a white background, the HENNGE logo and lettering are vertically arranged in a simple and modern black design.",
     linkUrl: "https://hennge.com/jp/",
@@ -145,7 +145,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "hennge",
   },
   {
-    name: "株式会社一休",
+    name: "Ikyu Corporation",
     logoImageUrl: "/images/sponsor-logo/gold/ikkyu.png",
     logoImageAlt: "Ikyu Corporation",
     linkUrl: "https://www.ikyu.co.jp/",
@@ -156,7 +156,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "ikkyu",
   },
   {
-    name: "ソーシャルデータバンク株式会社",
+    name: "Social Databank, Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/social-databank.png",
     logoImageAlt: "Social Databank, Inc.",
     linkUrl: "https://social-db.co.jp",
@@ -165,7 +165,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "social-db",
   },
   {
-    name: "Tebiki株式会社",
+    name: "Tebiki, Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/tebiki.png",
     logoImageAlt: "Tebiki, Inc.",
     linkUrl: "https://tebiki.co.jp/",
@@ -175,7 +175,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "tebiki",
   },
   // {
-  //   name: "メドピア株式会社",
+  //   name: "MedPeer, Inc.",
   //   logoImageUrl: "/images/sponsor-logo/",
   //   logoImageAlt: "",
   //   linkUrl: "",
@@ -185,7 +185,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   //   id: "",
   // },
   {
-    name: "株式会社キャリアデザインセンター",
+    name: "CAREER DESIGN CENTER CO.,LTD.",
     logoImageUrl: "/images/sponsor-logo/gold/career-design-center.png",
     logoImageAlt: "Direct type",
     linkUrl: "https://directtype.jp/?utm_source=event&utm_medium=banner&utm_campaign=tech_event_251025",
@@ -198,7 +198,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "career-design-center",
   },
   {
-    name: "株式会社アンドパッド",
+    name: "ANDPAD Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/andpad.png",
     logoImageAlt: "ANDPAD logo",
     linkUrl: "https://engineer.andpad.co.jp/",
@@ -208,7 +208,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "andpad",
   },
   {
-    name: "株式会社mov",
+    name: "mov inc.",
     logoImageUrl: "/images/sponsor-logo/gold/mov.png",
     logoImageAlt: "mov inc.",
     linkUrl: "https://mov.am/",
@@ -218,7 +218,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "mov",
   },
   {
-    name: "株式会社ビザスク",
+    name: "VisasQ Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/visasq.png",
     logoImageAlt: "VISASQ",
     linkUrl: "https://corp.visasq.co.jp/",
@@ -227,7 +227,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     id: "visasq",
   },
   {
-    name: "株式会社リブセンス",
+    name: "Livesense Inc.",
     logoImageUrl: "/images/sponsor-logo/gold/tenshoku-draft.png",
     logoImageAlt: "Tenshoku-DRAFT",
     linkUrl: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=vuefes2025",
@@ -240,7 +240,7 @@ const SPONSORS_GOLD: Sponsor[] = [
 ];
 const SPONSORS_SILVER: Sponsor[] = [
   {
-    name: "株式会社メイツ",
+    name: "Mates Inc.",
     logoImageUrl: "/images/sponsor-logo/silver/mates.png",
     logoImageAlt: "Mates Corporation | Aiming to Update Education",
     linkUrl: "https://mates-app.jp/",
@@ -250,7 +250,7 @@ const SPONSORS_SILVER: Sponsor[] = [
     id: "mates",
   },
   {
-    name: "合同会社DMM.com",
+    name: "DMM.com LLC",
     logoImageUrl: "/images/sponsor-logo/silver/dmm-com.png",
     logoImageAlt: "DMM.com",
     linkUrl: "https://dmm-corp.com/",
@@ -259,7 +259,7 @@ const SPONSORS_SILVER: Sponsor[] = [
     id: "dmm-corp",
   },
   {
-    name: "株式会社 アイスタイル",
+    name: "istyle Inc.",
     logoImageUrl: "/images/sponsor-logo/silver/istyle.png",
     logoImageAlt: "istyle, Inc.",
     linkUrl: "https://www.istyle.co.jp/",
@@ -291,7 +291,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
     id: "sentry",
   },
   {
-    name: "合同会社 ザウエル",
+    name: "ZAUEL LLC.",
     logoImageUrl: "/images/sponsor-logo/bronze/zauel-llc.png",
     logoImageAlt: "ZAUEL LLC.",
     linkUrl: "https://zauel.co.jp",
@@ -300,7 +300,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
     id: "zauel",
   },
   {
-    name: "株式会社サイバーエージェント",
+    name: "CyberAgent, Inc.",
     logoImageUrl: "/images/sponsor-logo/bronze/cyber-agent.png",
     logoImageAlt: "CyberAgent,Inc.",
     linkUrl: "https://www.cyberagent.co.jp/",
@@ -310,7 +310,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
     id: "cyberagent",
   },
   {
-    name: "株式会社IKI",
+    name: "IKI Inc.",
     logoImageUrl: "/images/sponsor-logo/bronze/iki.png",
     logoImageAlt: "IKI Inc.",
     linkUrl: "https://iki-inc.net",
@@ -319,7 +319,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
     id: "iki",
   },
   {
-    name: "株式会社Future Techno Developers",
+    name: "Future Techno Developers Co.,Ltd.",
     logoImageUrl: "/images/sponsor-logo/bronze/future-techno-developers.png",
     logoImageAlt: "Future Techno Developers Co., Ltd.",
     linkUrl: "https://www.ftechno-dev.com/",
@@ -328,7 +328,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
     id: "ftechno-dev",
   },
   {
-    name: "株式会社クイック",
+    name: "QUICK CO.,LTD.",
     logoImageUrl: "/images/sponsor-logo/bronze/quick.png",
     logoImageAlt: `The logo of "QUICK Co., Ltd.", a comprehensive human resources service company.
     The motif of our company's symbol mark is "people." It is a symbol of QUICK Co., Ltd., which calls itself "Japan's Human Resources Department," and of the QUICK Group, which has a vision of becoming "the world's Human Resources Department." The soft form, which exudes a sense of spaciousness and abundance, represents a flexible sensibility that fits the times and a sure leap into the future.
