@@ -1,5 +1,46 @@
 # Changelog
 
+## v2.3.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.3...v2.3.0)
+
+### 🚀 Enhancements
+
+- Event page ([#865](https://github.com/vuejs-jp/vuefes-2025/pull/865))
+- Section anchor link ([#877](https://github.com/vuejs-jp/vuefes-2025/pull/877))
+- Sponsor name (english) ([#878](https://github.com/vuejs-jp/vuefes-2025/pull/878))
+- Panel discussion og image ([#891](https://github.com/vuejs-jp/vuefes-2025/pull/891))
+  - Panel discussion og image ([fee4b10](https://github.com/vuejs-jp/vuefes-2025/commit/fee4b10))
+  - Panel discussion og ([eeb9a58](https://github.com/vuejs-jp/vuefes-2025/commit/eeb9a58))
+  - Panel discussion og prerendering ([0d75137](https://github.com/vuejs-jp/vuefes-2025/commit/0d75137))
+  - Update panel discussion ogimage ([#898](https://github.com/vuejs-jp/vuefes-2025/pull/898))
+
+### 🩹 Fixes
+
+- Name badge preview name width ([#873](https://github.com/vuejs-jp/vuefes-2025/pull/873))
+- Sponsor link class name to prevent ad block ([#874](https://github.com/vuejs-jp/vuefes-2025/pull/874))
+
+### 💅 Refactors
+
+- Z-index management ([#880](https://github.com/vuejs-jp/vuefes-2025/pull/880))
+
+### 🏡 Chore
+
+- Update doc ([358607b](https://github.com/vuejs-jp/vuefes-2025/commit/358607b))
+- Update doc ([966fad2](https://github.com/vuejs-jp/vuefes-2025/commit/966fad2))
+- Use any-hover ([#879](https://github.com/vuejs-jp/vuefes-2025/pull/879))
+- **deps-dev:** Bump primevue from 4.3.3 to 4.3.7 ([#841](https://github.com/vuejs-jp/vuefes-2025/pull/841))
+- **deps-dev:** Bump drizzle-orm from 0.44.2 to 0.44.4 ([#890](https://github.com/vuejs-jp/vuefes-2025/pull/890))
+- **deps-dev:** Bump vue from 3.5.17 to 3.5.18 ([#759](https://github.com/vuejs-jp/vuefes-2025/pull/759))
+- **deps-dev:** Bump eslint from 9.24.0 to 9.32.0 ([#760](https://github.com/vuejs-jp/vuefes-2025/pull/760))
+
+### ❤️ Contributors
+
+- @ubugeeei
+- @totocalcio
+- @ktym4a
+- @kspace-trk
+
 ## v2.2.3
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.2...v2.2.3)
