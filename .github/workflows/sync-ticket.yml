@@ -5,7 +5,8 @@ name: Sync Ticket
 on:
   schedule:
     # UTC 16:00 => JST 01:00
-    - cron: '0 16 * * *'
+    # - cron: '0 16 * * *'
+    - cron: '15 14 * * *'
   workflow_dispatch:
 
 jobs:
