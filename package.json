@@ -18,7 +18,8 @@
       "nodeVersion": "22.14.0"
     },
     "overrides": {
-      "vite": "npm:rolldown-vite@latest"
+      "vite": "npm:rolldown-vite@latest",
+      "vue": "npm:vue@3.6.0-alpha.2"
     },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
