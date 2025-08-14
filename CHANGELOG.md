@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.3.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.3.0...v2.3.1)
+
+### 🏡 Chore
+
+- Add Japanese-only notice to hands-on section ([#905](https://github.com/vuejs-jp/vuefes-2025/pull/905))
+
+### ❤️ Contributors
+
+- @yuki-mina
+
 ## v2.3.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.2.3...v2.3.0)
