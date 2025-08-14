@@ -18,4 +18,6 @@ This session is for those who have experience with Vue.js but are new to Nuxt, o
 
 ### 【Important Notes】
 
+The hands-on sessions will be conducted in Japanese.
+
 Prior registration is required to participate. Please apply for a Hands-on Ticket (free) when purchasing your general admission ticket. Seating is limited and available on a first-come, first-served basis, so early registration is recommended!
