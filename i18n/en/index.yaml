@@ -274,7 +274,6 @@ snsIconImageAlt:
   youtube: "YouTube icon"
   github: "GitHub icon"
   note: "note icon"
-events: "Related Events"
 privacyPolicy: "Privacy Policy"
 coc: "Code of Conduct"
 transactions: "Notation based on the Act on Specified Commercial Transactions"
@@ -282,3 +281,8 @@ backTop: "Back to Top"
 validation:
   required: "The input of {target} is required."
   email: "The Email Address is not in the correct format."
+
+relatedEvents:
+  title: "Related Events"
+  sectionTitle: "Related Events"
+  linkText: "View Event Page"
