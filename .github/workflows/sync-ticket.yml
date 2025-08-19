@@ -18,8 +18,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Dependencies
-        uses: ./.github/actions/setup-node-pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set node version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install
 
       - name: Run Sync Ticket Script
         run: 'curl "$PEATIX_API_ORIGIN/event/$PEATIX_EVENT_ID/list_sales?fresh=true" -H "Authorization: Bearer $PEATIX_API_SECRET" && pnpm dlx tsx scripts/admin/sync-role/main.ts'
