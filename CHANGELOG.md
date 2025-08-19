@@ -1,5 +1,29 @@
 # Changelog
 
+## v2.5.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.4.0...v2.5.0)
+
+### 🚀 Enhancements
+
+- Sync ticket scheduled job ([#901](https://github.com/vuejs-jp/vuefes-2025/pull/901))
+- Add related events page ([#907](https://github.com/vuejs-jp/vuefes-2025/pull/907))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump satori from 0.16.1 to 0.16.2 ([#895](https://github.com/vuejs-jp/vuefes-2025/pull/895))
+
+### 🤖 CI
+
+- Improve workflow ([#910](https://github.com/vuejs-jp/vuefes-2025/pull/910))
+- Remove nvmrc ([d8d6474](https://github.com/vuejs-jp/vuefes-2025/commit/d8d6474))
+
+### ❤️ Contributors
+
+- @ubugeeei
+- @hannoeru
+- @yamageji
+
 ## v2.4.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.3.1...v2.4.0)
