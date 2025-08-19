@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.4.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.3.1...v2.4.0)
+
+### 🚀 Enhancements
+
+- Student support application closing ([47f227f](https://github.com/vuejs-jp/vuefes-2025/commit/47f227f))
+
+### ❤️ Contributors
+
+- @ubugeeei
+- @naokihaba
+
 ## v2.3.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.3.0...v2.3.1)
