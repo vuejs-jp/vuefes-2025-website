@@ -1,0 +1,32 @@
+# eslint-disable @stylistic/spaced-comment
+
+name: Sync Ticket
+
+on:
+  schedule:
+    # UTC 16:00 => JST 01:00
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-ticket:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Dependencies
+        uses: ./.github/actions/setup-node-pnpm
+
+      - name: Run Sync Ticket Script
+        run: 'curl "$PEATIX_API_ORIGIN/event/$PEATIX_EVENT_ID/list_sales?fresh=true" -H "Authorization: Bearer $PEATIX_API_SECRET" && pnpm dlx tsx scripts/admin/sync-role/main.ts'
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_DATABASE_ID: ${{ vars.CLOUDFLARE_DATABASE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PEATIX_API_ORIGIN: ${{ vars.PEATIX_API_ORIGIN }}
+          PEATIX_EVENT_ID: ${{ vars.PEATIX_EVENT_ID }}
+          PEATIX_API_SECRET: ${{ secrets.PEATIX_API_SECRET }}

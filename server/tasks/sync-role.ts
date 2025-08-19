@@ -9,7 +9,7 @@ import { useRuntimeConfig } from "#imports";
 
 export default defineTask({
   meta: {
-    name: "db:sync-role",
+    name: "sync-role",
     description: "Synchronize database attendee.role",
   },
   async run() {

@@ -99,6 +99,7 @@ const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "sponsors",
   "sponsors-sponsorId",
   "event",
+  "related-events",
 ];
 
 const isWidenContent = computed(() =>

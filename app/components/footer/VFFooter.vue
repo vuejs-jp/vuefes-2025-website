@@ -87,8 +87,8 @@ const isEventFeatureEnabled = __FEATURE_EVENT__;
 
         <ul class="other-links">
           <li :class="{ hidden: !isEventFeatureEnabled }">
-            <NuxtLink :to="localePath('/event')">{{
-              t("events")
+            <NuxtLink :to="localePath('/related-events')">{{
+              t("relatedEvents.sectionTitle")
             }}</NuxtLink>
           </li>
           <li>

@@ -101,7 +101,7 @@ export default defineNuxtConfig({
     },
     scheduledTasks: {
       // peatix api cron runs at UTC 16:00 (JST 01:00), so execute about 15 minutes later
-      "15 16 * * *": ["db:sync-role"],
+      "15 16 * * *": ["sync-role"],
     },
   },
 

@@ -1,21 +1,29 @@
 # eslint-disable @stylistic/spaced-comment
-
-name: Check
+name: CI
 
 on: push
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    environment: dev
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install Dependencies
-        uses: ./.github/actions/setup-node-pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set node version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install
 
       - name: Check Spelling
         run: pnpm spell
