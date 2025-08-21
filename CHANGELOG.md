@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.5.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.5.0...v2.5.1)
+
+### 🏡 Chore
+
+- Sync-ticket ([bb9bb14](https://github.com/vuejs-jp/vuefes-2025/commit/bb9bb14))
+- Speaker info (Kaede Kato) ([214b23f](https://github.com/vuejs-jp/vuefes-2025/commit/214b23f))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.5.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.4.0...v2.5.0)
