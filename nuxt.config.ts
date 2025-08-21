@@ -81,6 +81,8 @@ export default defineNuxtConfig({
   imports: { autoImport: false },
   devtools: { enabled: true },
   app: { baseURL: process.env.NODE_ENV === "production" ? "/2025/" : "/" },
+  // @nuxt/robot don't support generate robots.txt when setting baseURL
+  robots: { robotsTxt: false },
 
   site: {
     // The name and description are set for each language in the following files:
