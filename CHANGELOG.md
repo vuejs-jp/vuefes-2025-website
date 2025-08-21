@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.5.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.5.1...v2.5.2)
+
+### 🩹 Fixes
+
+- Remove redirects from netlify.toml configuration file ([a3bb83a](https://github.com/vuejs-jp/vuefes-2025/commit/a3bb83a))
+
+### ❤️ Contributors
+
+- @ktym4a
+
 ## v2.5.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.5.0...v2.5.1)
