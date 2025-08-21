@@ -352,7 +352,13 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     avatarUrl: "/images/avatars/kaede-kato.png",
     color: "navy",
     talkTitle: "Building the chocoZAP Service Reservation System In-House with Nuxt",
-    talkOverview: "At chocoZAP, we previously relied on external services for booking self-care and self-hair removal appointments—but we've now fully brought that functionality in-house, rebuilding everything with Nuxt.\n\nWe designed tailored UIs for both web and app (WebView) platforms, focusing on making daily interactions feel intuitive and seamless.\n\nIn this lightning talk, I'll share key highlights from the project and the strategies we used to optimize the experience. Topics include (subject to time constraints):\n\nUI Structure and State Management in Nuxt\n\n  * How we structured components (e.g., using `views` and `templates`) to boost reusability and maintainability\n  * Using the `server/` directory to organize API communication cleanly\n\nFlexible Improvement Cycles Enabled by In-House Development\n\n  * Fine-grained UI behavior adjustments based on API responses\n  * Better UX for edge cases like reaching booking limits, reducing user confusion\n\nAlignment with chocoZAP's Design System\n\n  * Implementing UI consistent with our internal design system, ensuring a unified brand experience across screens\n\nRapid Feedback Loops\n\n  * How we quickly incorporated user feedback to minimize friction and improve daily usability\n\nThis talk is a look behind the scenes at how we built a smoother, more responsive reservation experience—tailored to our users' real-world needs.",
+    talkOverview: `At chocoZAP, we had been using external services for booking self-esthetic and self-hair removal services.
+This time, we have developed our own reservation system in Nuxt.
+
+As a result, the development team can now independently design and improve the system,
+and we have built a structure that allows us to flexibly enhance API communication and authentication in-house.
+
+In this LT, we will introduce the technical architecture and the key points we focused on.`,
     socialUrls: {},
   },
 ];
