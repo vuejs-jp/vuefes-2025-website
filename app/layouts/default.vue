@@ -53,6 +53,11 @@ const menuItems = computed<MenuItemProps[]>(() =>
       disabled: !__FEATURE_EVENT__,
     },
     {
+      id: HOME_HEADING_ID.store,
+      label: "Store",
+      routeName: localeRoute({ name: "store" }).name,
+    },
+    {
       id: HOME_HEADING_ID.ticket,
       label: "Ticket",
       routeName: localeRoute({ name: "ticket" }).name,
@@ -100,6 +105,7 @@ const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "sponsors-sponsorId",
   "event",
   "related-events",
+  "store",
 ];
 
 const isWidenContent = computed(() =>

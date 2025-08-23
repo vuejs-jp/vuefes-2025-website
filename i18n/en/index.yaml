@@ -286,3 +286,14 @@ relatedEvents:
   title: "Related Events"
   sectionTitle: "Related Events"
   linkText: "View Event Page"
+
+store:
+  title: "Vue Fes Store"
+  description: "The Vue Fes Store is back this year, where you can purchase Vue Fes Japan exclusive original goods. This time, we have completely redesigned the goods design in conjunction with the site and logo rebranding. Get your original goods and help make Vue Fes Japan even more exciting!"
+  coverImageAlt: "Along with the text 'Check the items!', the official goods of Vue Fes Japan 2025 are displayed. A black hoodie, a logo T-shirt, a blue-purple and orange marble-patterned wristband, and postcards are shown."
+  panel:
+    title: "Store"
+  preOrder: "Pre-order"
+  color: "Color: "
+  material: "Material: "
+  size: "Size: "

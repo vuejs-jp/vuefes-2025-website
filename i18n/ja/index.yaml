@@ -227,7 +227,7 @@ sponsors:
   bronzeSponsor: "ブロンズスポンサー"
   optionSponsor: "オプションスポンサー"
   creativeSponsor: "クリエイティブスポンサー"
-  
+
   hallNamingRightsSponsor: "ホールネーミングライツスポンサー"
   roomNamingRightsSponsor: "ルームネーミングライツスポンサー"
   handsOnSponsor: "ハンズオンスポンサー"
@@ -239,7 +239,7 @@ sponsors:
   exhibitionSponsor: "展示スポンサー"
   intermissionSlideSponsor: "幕間スライドスポンサー"
   jobBoardSponsor: "ジョブボードスポンサー"
-  
+
   details: "スポンサー情報"
 
 access:
@@ -285,3 +285,14 @@ relatedEvents:
   title: "Related Events"
   sectionTitle: "関連イベント"
   linkText: "イベントページを見る"
+
+store:
+  title: "Vue Fes Store"
+  description: "Vue Fes Japan 限定オリジナルグッズをお買い求めいただける Vue Fes Store が今年も登場。今回はサイトおよびロゴのリブランディングに伴い、グッズのデザインを一新しました。オリジナルグッズを揃えて、Vue Fes Japan を盛り上げましょう！"
+  coverImageAlt: "Check the items! のテキストとともに Vue Fes Japan 2025 の公式グッズが並んでいる。黒いパーカー、ロゴ入り T シャツ、青紫オレンジのマーブル柄のラバーバンド、ポストカードが写っている。"
+  panel:
+    title: "ストア"
+  preOrder: "予約注文する"
+  color: "カラー： "
+  material: "素材： "
+  size: "サイズ: "
