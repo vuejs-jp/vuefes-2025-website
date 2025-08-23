@@ -174,12 +174,17 @@ defineOgImage({
   }
 }
 
-.sponsor-images{
+.sponsor-images {
   display: grid;
   width: fit-content;
   max-width: 400px;
   margin: 0 auto;
-  .name{
+
+  img {
+    aspect-ratio: 399.983 / 224.792;
+  }
+
+  .name {
     margin-top: 1rem;
   }
 }

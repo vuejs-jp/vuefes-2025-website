@@ -381,9 +381,10 @@ useSeoMeta({
       margin-top: 4.75rem;
     }
   }
-
 }
-.discussion-event,.student-support-event{
+
+.discussion-event,
+.student-support-event {
   :deep(h3) {
     font-size: 1.125rem;
     line-height: 1.5;

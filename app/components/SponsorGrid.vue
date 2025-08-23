@@ -79,5 +79,6 @@ const localeRoute = useLocaleRoute();
   width: 100%;
   height: auto;
   object-fit: contain;
+  aspect-ratio: 250 / 109;
 }
 </style>

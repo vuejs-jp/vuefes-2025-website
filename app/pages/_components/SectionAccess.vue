@@ -62,6 +62,7 @@ const { locale, t } = useI18n();
   }
   img {
     width: 100%;
+    aspect-ratio: 342 / 227;
   }
 }
 </style>
