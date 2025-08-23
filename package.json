@@ -112,7 +112,7 @@
     "vue-router": "latest",
     "vue-tsc": "^2.2.8",
     "wrangler": "^4.23.0",
-    "zod": "^3.24.2"
+    "valibot": "^1.1.0"
   },
   "eslintConfig": {
     "extends": [

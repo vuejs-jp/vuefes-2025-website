@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { z } from "zod";
+import * as v from "valibot";
 import emojiRegex from "emoji-regex";
 
 import { useLocaleRoute } from "@typed-router";
@@ -51,11 +51,11 @@ const sizeInMB = (sizeInBytes: number, decimalsNum = 2) => {
   return +result.toFixed(decimalsNum);
 };
 
-const schema = z.object({
-  name: z
-    .string()
-    .min(1, t("nameBadge.form.name.error.required"))
-    .refine(
+const schema = v.objectAsync({
+  name: v.pipe(
+    v.string(),
+    v.minLength(1, t("nameBadge.form.name.error.required")),
+    v.check(
       (value) => {
         const len = [...value].reduce(
           (len, char) => len + (/[\u2E80-\u9FFF\uF900-\uFAFF\uFF00-\uFFEF]/.test(char) ? 2 : 1),
@@ -63,40 +63,39 @@ const schema = z.object({
         );
         return len <= 24;
       },
-      { message: t("nameBadge.form.name.error.tooLong") },
-    )
-    .refine(
-      value => !emojiRegex().test(value),
-      { message: t("nameBadge.form.name.error.emoji") },
+      t("nameBadge.form.name.error.tooLong"),
     ),
+    v.check(
+      value => !emojiRegex().test(value),
+      t("nameBadge.form.name.error.emoji"),
+    ),
+  ),
 
-  salesId: z
-    .string()
-    .min(1, t("nameBadge.form.receipt.error.required")),
+  salesId: v.pipe(
+    v.string(),
+    v.minLength(1, t("nameBadge.form.receipt.error.required")),
+  ),
 
-  avatarImage: z
-    .custom<VFFile>()
-    .refine(
-      file => !!file,
-      { message: t("nameBadge.form.avatarImage.error.required") },
-    )
-    .refine(
-      async (file) => {
+  avatarImage: v.pipeAsync(
+    v.custom<VFFile>((input: unknown): input is VFFile => !!input),
+    v.checkAsync(
+      async (file: VFFile) => {
         const { size } = await fetch(file.objectURL).then(r => r.blob());
         return sizeInMB(size) <= 5;
       },
-      { message: t("nameBadge.form.avatarImage.error.size") },
-    )
-    .refine(
-      file => ["image/jpg", "image/jpeg", "image/png"].includes(file.type),
-      { message: t("nameBadge.form.avatarImage.error.type") },
+      t("nameBadge.form.avatarImage.error.size"),
     ),
+    v.check(
+      (file: VFFile) => ["image/jpg", "image/jpeg", "image/png"].includes(file.type),
+      t("nameBadge.form.avatarImage.error.type"),
+    ),
+  ),
 });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const form = useTemplateRef<any>("form");
-const currentStates = computed(() => form.value?.currentState?.() as FormFieldStates<z.infer<typeof schema>> | undefined);
-const initialValues = ref<Partial<z.infer<typeof schema>>>({
+const currentStates = computed(() => form.value?.currentState?.() as FormFieldStates<v.InferOutput<typeof schema>> | undefined);
+const initialValues = ref<Partial<v.InferOutput<typeof schema>>>({
   name: "",
   salesId: "",
   avatarImage: undefined,

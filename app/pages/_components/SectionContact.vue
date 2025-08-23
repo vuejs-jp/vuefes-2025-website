@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { z } from "zod";
+import * as v from "valibot";
 import { HOME_HEADING_ID } from "~/constant";
 import { reactive, useI18n, useRuntimeConfig } from "#imports";
 import { VFSection, VFButton } from "#components";
@@ -12,20 +12,23 @@ const config = useRuntimeConfig();
 
 const toast = useToast();
 
-const schema = z.object({
-  name: z
-    .string()
-    .nonempty(t("validation.required", { target: t("contactForm.formFields.name.label") })),
-  email: z
-    .string()
-    .nonempty(t("validation.required", { target: t("contactForm.formFields.email.label") }))
-    .email(t("validation.email")),
-  content: z
-    .string()
-    .nonempty(t("validation.required", { target: t("contactForm.formFields.content.label") })),
+const schema = v.object({
+  name: v.pipe(
+    v.string(),
+    v.nonEmpty(t("validation.required", { target: t("contactForm.formFields.name.label") })),
+  ),
+  email: v.pipe(
+    v.string(),
+    v.nonEmpty(t("validation.required", { target: t("contactForm.formFields.email.label") })),
+    v.email(t("validation.email")),
+  ),
+  content: v.pipe(
+    v.string(),
+    v.nonEmpty(t("validation.required", { target: t("contactForm.formFields.content.label") })),
+  ),
 });
 
-const state = reactive<z.infer<typeof schema>>({
+const state = reactive<v.InferOutput<typeof schema>>({
   name: "",
   email: "",
   content: "",

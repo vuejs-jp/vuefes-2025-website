@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { PutObjectCommand, DeleteObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { defineEventHandler, readFormData } from "h3";
-import { z } from "zod";
+import * as v from "valibot";
 import { eq } from "drizzle-orm/sql";
 
 import { db } from "../../db/orm";
@@ -21,14 +21,14 @@ const sizeInMB = (sizeInBytes: number, decimalsNum = 2) => {
   return +result.toFixed(decimalsNum);
 };
 
-const schema = z.object({
-  name: z.string().min(1),
-  salesId: z.string().min(1),
-  avatarImageBlob: z
-    .custom<File>()
-    .refine(file => file instanceof File)
-    .refine(file => sizeInMB(file.size) <= 5),
-  avatarImageName: z.string(),
+const schema = v.object({
+  name: v.pipe(v.string(), v.minLength(1)),
+  salesId: v.pipe(v.string(), v.minLength(1)),
+  avatarImageBlob: v.pipe(
+    v.custom<File>((input: unknown) => input instanceof File),
+    v.check(file => sizeInMB(file.size) <= 5, "File size must be 5MB or less"),
+  ),
+  avatarImageName: v.string(),
 });
 
 export default defineEventHandler(async (event) => {
@@ -46,7 +46,7 @@ export default defineEventHandler(async (event) => {
     .entries()
     .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
 
-  const validatedBody = schema.safeParse(rawBody);
+  const validatedBody = v.safeParse(schema, rawBody);
   if (!validatedBody.success) {
     throw createError({
       message: "Invalid request",
@@ -73,7 +73,7 @@ export default defineEventHandler(async (event) => {
     // image registration
     const maybeRegistered = await db.select().from(attendees).where(eq(attendees.userId, session.userId)).get();
 
-    const objectName = `${randomUUID()}-${validatedBody.data.avatarImageName}`;
+    const objectName = `${randomUUID()}-${validatedBody.output.avatarImageName}`;
 
     const r2Endpoint = `https://${process.env.CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com`;
     const S3 = new S3Client({
@@ -97,8 +97,8 @@ export default defineEventHandler(async (event) => {
     const command = new PutObjectCommand({
       Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
       Key: encodeURIComponent(objectName),
-      ContentType: validatedBody.data.avatarImageBlob.type,
-      Body: Buffer.from(await validatedBody.data.avatarImageBlob.arrayBuffer()),
+      ContentType: validatedBody.output.avatarImageBlob.type,
+      Body: Buffer.from(await validatedBody.output.avatarImageBlob.arrayBuffer()),
     });
     await S3.send(command);
     try {
@@ -106,9 +106,9 @@ export default defineEventHandler(async (event) => {
       const data = {
         email: session.user.email,
         avatarUrl: encodeURI(`${r2Endpoint}/${process.env.CLOUDFLARE_R2_BUCKET_NAME}/${objectName}`),
-        imageFileName: validatedBody.data.avatarImageName,
-        displayName: validatedBody.data.name,
-        receiptId: validatedBody.data.salesId,
+        imageFileName: validatedBody.output.avatarImageName,
+        displayName: validatedBody.output.name,
+        receiptId: validatedBody.output.salesId,
       };
       await db
         .insert(attendees)

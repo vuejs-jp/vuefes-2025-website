@@ -1,11 +1,11 @@
 <script lang="ts">
-import type { ZodSchema } from "zod";
+import type * as v from "valibot";
 import {
   type FormFieldState,
   type FormSubmitEvent,
   Form as PForm,
 } from "@primevue/forms";
-import { zodResolver } from "@primevue/forms/resolvers/zod";
+import { valibotResolver } from "@primevue/forms/resolvers/valibot";
 import { useTemplateRef } from "#imports";
 
 export { type FormSubmitEvent, type FormFieldState } from "@primevue/forms";
@@ -14,7 +14,8 @@ export interface FormProps<State extends object> {
   initialValues: State;
   /** @default "blur" */
   validateOn?: "blur" | "submit" | "immediate";
-  schema?: ZodSchema<State>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  schema?: v.ObjectSchema<any, any> | v.ObjectSchemaAsync<any, any>;
 }
 
 export interface FormEmits {
@@ -55,7 +56,7 @@ defineExpose({
     v-slot="$form"
     ref="form"
     :initial-values
-    :resolver="schema ? zodResolver(schema) : undefined"
+    :resolver="schema ? valibotResolver(schema) : undefined"
     :validate-on-blur="validateOn === 'blur'"
     :validate-on-submit="validateOn === 'submit'"
     :validate-on-mount="validateOn === 'immediate'"
