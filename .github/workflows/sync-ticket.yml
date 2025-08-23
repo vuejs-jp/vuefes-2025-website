@@ -1,5 +1,3 @@
-# eslint-disable @stylistic/spaced-comment
-
 name: Sync Ticket
 
 on:

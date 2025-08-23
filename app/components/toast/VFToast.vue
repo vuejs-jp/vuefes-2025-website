@@ -9,8 +9,8 @@ import {
 } from "vue";
 import { useI18n } from "#imports";
 
-export type ToastOption =
-  | {
+export type ToastOption
+  = {
     autoClose: true;
     durationMs?: number;
   }

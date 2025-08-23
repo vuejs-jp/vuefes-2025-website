@@ -85,13 +85,13 @@ export default defineEventHandler(async (event) => {
     avatarUrl:
       nameBadgeData.avatarUrl
         ? await getSignedUrl(
-          S3,
-          new GetObjectCommand({
-            Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
-            Key: new URL(nameBadgeData.avatarUrl).pathname.split("/").pop(),
-          }),
-          { expiresIn: 3600 },
-        )
+            S3,
+            new GetObjectCommand({
+              Bucket: process.env.CLOUDFLARE_R2_BUCKET_NAME!,
+              Key: new URL(nameBadgeData.avatarUrl).pathname.split("/").pop(),
+            }),
+            { expiresIn: 3600 },
+          )
         : undefined,
   };
 });

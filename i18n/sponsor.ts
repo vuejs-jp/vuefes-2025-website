@@ -16,18 +16,18 @@ export interface Sponsor {
   }[];
 }
 
-export type Option =
-  | "hall-naming-rights"
-  | "room-naming-rights"
-  | "hands-on"
-  | "live-translation"
-  | "name-badge"
-  | "after-party"
-  | "student-support"
-  | "staff-t-shirts"
-  | "exhibition"
-  | "intermission-slide"
-  | "job-board";
+export type Option
+  = | "hall-naming-rights"
+    | "room-naming-rights"
+    | "hands-on"
+    | "live-translation"
+    | "name-badge"
+    | "after-party"
+    | "student-support"
+    | "staff-t-shirts"
+    | "exhibition"
+    | "intermission-slide"
+    | "job-board";
 
 export interface OptionSponsor {
   title: string;

@@ -1,5 +1,5 @@
-export type NameBadgeInput =
-  ({
+export type NameBadgeInput
+  = ({
     role: "Attendee" | "Attendee+Party" | "Speaker" | "Sponsor";
   } | {
     role: "Staff";
