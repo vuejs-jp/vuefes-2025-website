@@ -73,7 +73,7 @@
     "cross-env": "^7.0.3",
     "cspell": "^8.17.5",
     "d1-driver": "^2.0.2",
-    "dotenv": "^17.0.1",
+    "dotenv": "^17.2.1",
     "drizzle-kit": "^0.31.4",
     "drizzle-orm": "^0.44.4",
     "emoji-regex": "^10.4.0",
