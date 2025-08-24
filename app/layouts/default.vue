@@ -233,6 +233,7 @@ watch(() => route.hash, async (hash) => {
 
   &.widen-content {
     min-width: 960px;
+    transition: unset;
 
     @media (--mobile) {
       min-width: 0;

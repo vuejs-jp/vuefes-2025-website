@@ -31,6 +31,7 @@ const label = computed(() => isOpened ? "Close" : "Menu");
   border-radius: 20px;
   font-family: JetBrainsMono-Medium !important;
   font-size: 0.875rem;
+  min-width: 7rem;
 
   /* TODO: no hover style when touch devices (in VFButton) */
   @media (any-hover: hover) {
