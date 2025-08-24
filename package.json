@@ -60,7 +60,7 @@
     "@nuxtjs/storybook": "^8.3.3",
     "@primevue/forms": "^4.3.2",
     "@primevue/nuxt-module": "^4.3.7",
-    "@sidebase/nuxt-auth": "1.0.0",
+    "@sidebase/nuxt-auth": "1.0.1",
     "@storybook-vue/nuxt": "^8.3.3",
     "@storybook/addon-essentials": "8.4.7",
     "@storybook/addon-interactions": "8.4.7",
