@@ -216,8 +216,22 @@ We'll show you how to shift from tedious tasks to meaningful development by buil
     title: "Musician & Engineer",
     avatarUrl: "/images/avatars/yuichkun.jpg",
     color: "navy",
-    talkTitle: "Building Production-Ready Audio Applications with JavaScript",
-    talkOverview: "Abstract:\nWeb applications are no longer silent. Thanks to the evolution of the Web Audio API, WebAssembly, and GPU acceleration, browser-based audio can now rival native environments. In this talk I will guide Vue (and broader front-end) developers through practical, production-ready strategies for integrating real-time audio processing into their apps—without sacrificing performance or user experience.\n\nKey Takeaways:\n- Web Audio API & AudioWorklet – Build a solid foundation for low-latency DSP in the browser.\n- RNBO → WebAssembly – Build production-ready audio modules in Cycling '74's RNBO and deploy them to the web via WebAssembly.\n- GPU-Accelerated Audio – Explore emerging patterns that offload DSP to the GPU for massive parallelism.\n- Browser Limitations – Understand current constraints and proven work-arounds.\n- Hybrid Desktop / Web Workflows – See how JUCE 8 + WebView and Vue.js can bridge plug-ins and web interfaces.\n\nLive Demos:\n- Single Motion Granular – A browser-based granular synth (RNBO DSP + Svelte UI)\nhttps://kentaro-granular-web.vercel.app/\n- Listen to the Inaudible – Media-art piece decoding ultrasonic messages on smartphones (graduation work, Tokyo University of the Arts)\nhttps://yogo.style/works/listen-to-the-inaudible\n- Starling – A musician-oriented plug-in: Max for Live DSP with a Vue.js front-end via Node.js IPC\nhttps://www.youtube.com/watch?v=Uoy_kM_8f90\n\nTarget Audience:\nFront-end engineers, creative coders, and audio developers who want to push Vue.js beyond visuals and into immersive sonic experiences.\n\nPrerequisites:\nBasic familiarity with JavaScript/TypeScript and Vue.js. No prior DSP knowledge required—concepts will be introduced from first principles.",
+    talkTitle: "Building Production-Ready Audio Applications in Web",
+    talkOverview: `Abstract:
+Web applications are no longer silent. Thanks to the evolution of the Web Audio API, WebAssembly, and GPU acceleration, browser-based audio can now rival native environments. In this talk I will guide Vue (and broader front-end) developers through practical, production-ready strategies for integrating real-time audio processing into their apps—without sacrificing performance or user experience.
+
+Key Takeaways:
+- Web Audio API & AudioWorklet – Build a solid foundation for low-latency DSP in the browser.
+- RNBO → WebAssembly – Build prototype-oriented audio modules in Cycling '74's RNBO and deploy them to the web via WebAssembly.
+- JUCE – High-level overview of JUCE as a widely used framework in the audio community, with a brief note on how it may relate to web workflows.
+- GPU-Accelerated Audio – Explore emerging patterns that offload DSP to the GPU for massive parallelism.
+- Browser Limitations – Understand current constraints and proven work-arounds.
+
+Target Audience:
+Front-end engineers, creative coders, and audio developers who want to push Vue.js beyond visuals and into immersive sonic experiences.
+
+Prerequisites:
+Basic familiarity with JavaScript/TypeScript and Vue.js. No prior DSP knowledge required—concepts will be introduced from first principles.`,
     socialUrls: {
       github: "https://github.com/yuichkun",
       x: "https://x.com/@yogo_escentier",

@@ -213,8 +213,24 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
     title: "音楽家、エンジニア",
     avatarUrl: "/images/avatars/yuichkun.jpg",
     color: "navy",
-    talkTitle: "JavaScript を活用した実用的オーディオアプリケーションの構築",
-    talkOverview: "概要：\nWebアプリケーションは、もはや「無音」の存在ではありません。Web Audio API、WebAssembly、GPUアクセラレーションの進化により、ブラウザ上の音声処理は、ネイティブ環境にも匹敵するレベルへと到達しています。このセッションでは、Vue をはじめとするフロントエンド開発者に向けて、リアルタイム音声処理をアプリに統合するための、実践的で本番運用に対応した戦略を紹介します。パフォーマンスやユーザー体験を犠牲にすることなく、オーディオ処理の統合が可能になります。\n\nセッションで得られる主な知見：\n・Web Audio API & AudioWorklet：ブラウザ上での低遅延 DSP の基礎を構築\n・RNBO → WebAssembly：Cycling '74 の RNBO で制作したプロダクション対応のオーディオモジュールを WebAssembly 経由で Web にデプロイ\n・ GPU アクセラレーテッド・オーディオ：DSP 処理を GPU にオフロードする新しい並列処理パターンを探求\n・ブラウザの制限：現時点での技術的制約と実用的な回避策の理解\n・デスクトップ × Web のハイブリッド開発：JUCE 8、WebView、Vue.js を組み合わせ、プラグインと Web UI の橋渡しを実現\n\nライブデモ：\n・Single Motion Granular – RNBO DSP + Svelte UI を組み合わせたブラウザベースのグラニュラーシンセ\n  https://kentaro-granular-web.vercel.app/\n・Listen to the Inaudible – スマートフォンで超音波メッセージを解読するメディアアート作品（東京芸大 卒業制作）\n  https://yogo.style/works/listen-to-the-inaudible\n・Starling – Vue.js フロントエンド × Node.js IPC を組み合わせた、ミュージシャン向け Max for Live プラグイン\n  https://www.youtube.com/watch?v=Uoy_kM_8f90\n\n対象者：\n視覚表現だけでなく音の領域へ Vue.js を拡張したい、フロントエンドエンジニア・クリエイティブコーダー・オーディオ開発者。\n\n参加に必要な知識：\nJavaScript/TypeScript および Vue.js の基本的な知識。DSP の前提知識は不要で、基本から丁寧に解説します。",
+    talkTitle: "オーディオアプリケーションをWebでつくる",
+    talkOverview: `概要:
+ウェブアプリはもはや無音ではありません。
+Web Audio API、WebAssembly、そしてGPUアクセラレーションの進化により、ブラウザ上のオーディオはネイティブ環境に匹敵するレベルに到達しています。本セッションでは、Vue（および、より広いフロントエンド）開発者に向けて、パフォーマンスやユーザー体験を損なうことなくリアルタイムのオーディオ処理をアプリに統合するための、実践的で本番運用に耐える戦略を解説します。
+
+主なポイント:
+- Web Audio API & AudioWorklet – ブラウザで自在なDSP(音声信号処理)を実現するための基盤
+- RNBO → WebAssembly – Cycling '74のRNBOでオーディオモジュールを素早くプロトタイプし、WebAssemblyを通じてウェブにデプロイする
+- JUCE – オーディオデベロッパーコミュニティで広く使われているフレームワークとしてのJUCEをざっくり概説
+- GPU-Accelerated Audio – DSPをGPUにオフロードして大規模並列性を活用する新たなパターンを探る
+- ブラウザの制約 – 現状の各種ブラウザのオーディオ周りの制約と、ワークアラウンドを紹介
+
+対象者:
+Vue.jsをビジュアルの枠を超えて、没入型の音響体験へと拡張したいフロントエンドエンジニア、クリエイティブコーダー、オーディオデベロッパー。
+
+前提知識:
+JavaScript/TypeScriptとVue.jsの基本的な知識。
+DSP(音声信号処理)の予備知識は不要です。`,
     socialUrls: {
       github: "https://github.com/yuichkun",
       x: "https://x.com/yogo_escentier",
