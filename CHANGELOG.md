@@ -1,5 +1,41 @@
 # Changelog
 
+## v2.6.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.5.2...v2.6.0)
+
+### 🚀 Enhancements
+
+- Add sponsor (MedPeer) ([#914](https://github.com/vuejs-jp/vuefes-2025/pull/914))
+- Add store page ([#926](https://github.com/vuejs-jp/vuefes-2025/pull/926))
+
+### 🩹 Fixes
+
+- Disable auto generate robots.txt ([#913](https://github.com/vuejs-jp/vuefes-2025/pull/913))
+- Route key ([08c3033](https://github.com/vuejs-jp/vuefes-2025/commit/08c3033))
+
+### 💅 Refactors
+
+- Replace zod with valibot ([#912](https://github.com/vuejs-jp/vuefes-2025/pull/912))
+
+### 🏡 Chore
+
+- Sponsor logo (MedPeer) ([#927](https://github.com/vuejs-jp/vuefes-2025/pull/927))
+- Aspect ([f450c18](https://github.com/vuejs-jp/vuefes-2025/commit/f450c18))
+- **deps-dev:** Bump @nuxt/eslint from 1.3.0 to 1.8.0 ([#894](https://github.com/vuejs-jp/vuefes-2025/pull/894))
+- Styles (sp menu btn, wide layout transition) ([#929](https://github.com/vuejs-jp/vuefes-2025/pull/929))
+- Speaker info (Yuichi Yogo) ([#934](https://github.com/vuejs-jp/vuefes-2025/pull/934))
+- Remove unnecessary `component: "root"` ([#935](https://github.com/vuejs-jp/vuefes-2025/pull/935))
+- Add plans overview ([cd03b35](https://github.com/vuejs-jp/vuefes-2025/commit/cd03b35))
+
+### ❤️ Contributors
+
+- Ubugeeei <ubuge1122@gmail.com>
+- Hal ([@Hal-Spidernight](https://github.com/Hal-Spidernight))
+- Totocalcio <totohyper@yahoo.co.jp>
+- ハン / Han ([@hannoeru](https://github.com/hannoeru))
+- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+
 ## v2.5.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.5.1...v2.5.2)
