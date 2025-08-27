@@ -21,7 +21,6 @@ const { locale, t } = useI18n();
 const localePath = useLocalePath();
 
 defineOgImage({
-  component: "root",
   url: `${runtimeConfig.public.siteUrl}images/og/code-of-conduct.png`,
 });
 useSeoMeta({

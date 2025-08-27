@@ -25,7 +25,6 @@ const goods = computed(() => locale.value === "en" ? enGoods : jaGoods);
 const indent = computed(() => locale.value === "en" ? "0.7em" : "0.25em");
 
 defineOgImage({
-  component: "root",
   url: `${runtimeConfig.public.siteUrl}images/og/store.png`,
 });
 

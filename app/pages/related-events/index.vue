@@ -42,7 +42,6 @@ const dateOption = computed(() => locale.value === "en"
     });
 
 defineOgImage({
-  component: "root",
   url: `${runtimeConfig.public.siteUrl}images/og/related-events.png`,
 });
 

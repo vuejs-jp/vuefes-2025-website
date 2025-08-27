@@ -82,7 +82,6 @@ const route = useRoute();
 useQueryHashSync({ queryKey: "section" });
 
 defineOgImage({
-  component: "root",
   url:
     route.query.section === SectionId.PanelDiscussion
       ? `${runtimeConfig.public.siteUrl}images/og/panel-discussion.png`
