@@ -26,7 +26,6 @@ import {
 
 import {
   computed,
-  createError,
   defineOgImage,
   defineRouteRules,
   useI18n,
@@ -36,10 +35,6 @@ import {
   useSeoMeta,
   useQueryHashSync,
 } from "#imports";
-
-if (!__FEATURE_EVENT__) {
-  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
-}
 
 // To differentiate OGP based on query params
 defineRouteRules({ prerender: false });

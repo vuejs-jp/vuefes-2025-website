@@ -50,7 +50,6 @@ const menuItems = computed<MenuItemProps[]>(() =>
       id: HOME_HEADING_ID.event,
       label: "Event",
       routeName: localeRoute({ name: "event" }).name,
-      disabled: !__FEATURE_EVENT__,
     },
     {
       id: HOME_HEADING_ID.store,
