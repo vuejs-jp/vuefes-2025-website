@@ -59,7 +59,6 @@ export default defineNuxtConfig({
 
     // for server
     __FEATURE_TIMETABLE__: !["0", undefined].includes(process.env.FEATURE_TIMETABLE), // ?
-    __FEATURE_STUDENT_SUPPORT_APPLICATION_CLOSING__: !["0", undefined].includes(process.env.FEATURE_STUDENT_SUPPORT_APPLICATION_CLOSING), // 9/25
 
     siteUrl: process.env.NODE_ENV === "production"
       ? process.env.CONTEXT === "production"
@@ -109,7 +108,6 @@ export default defineNuxtConfig({
   vite: {
     define: {
       __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
-      __FEATURE_STUDENT_SUPPORT_APPLICATION_CLOSING__: process.env.FEATURE_STUDENT_SUPPORT_APPLICATION_CLOSING || false, // 9/25
     },
     css: {
       transformer: "lightningcss",
