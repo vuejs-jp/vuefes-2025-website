@@ -194,6 +194,25 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
     },
   },
   {
+    id: "wattanx",
+    name: "wattanx",
+    affiliation: "STORES 株式会社",
+    title: "デザインエンジニア / nuxt ecosystem team",
+    avatarUrl: "/images/avatars/wattanx.png",
+    color: "purple",
+    talkTitle: "Demystifying Nuxt Test Utils",
+    talkOverview: `Nuxt アプリケーションを Vitest と @vue/test-utils だけでテストしようとすると、プラグインや ミドルウェア、さらにはサーバーサイドレンダリングまで本番と同じ条件を再現するのは容易ではありません。
+
+こうした課題を解決してくれるのが @nuxt/test-utils です。本セッションでは 実際の現場で役立つ Tips や具体的な使い方だけでなく、テスト環境上で Nuxt がどのように動作するのか、その仕組みを解説します。
+
+このセッションを通じて、より多くの開発者が “明日から現場で使える知識” と “仕組みへの理解” の両方を持ち帰り、効率的に Nuxt アプリケーションをテストできるようになることを目指します。`,
+    socialUrls: {
+      github: "https://github.com/wattanx",
+      x: "https://x.com/pontaxx",
+      bluesky: "https://bsky.app/profile/@wattanx.dev",
+    },
+  },
+  {
     id: "sayn0",
     name: "sayn0",
     affiliation: "エン・ジャパン株式会社",

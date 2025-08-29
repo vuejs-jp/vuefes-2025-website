@@ -197,6 +197,25 @@ We'll show you how to shift from tedious tasks to meaningful development by buil
     },
   },
   {
+    id: "wattanx",
+    name: "wattanx",
+    affiliation: "STORES, Inc.",
+    title: "Design Engineer / nuxt ecosystem team",
+    avatarUrl: "/images/avatars/wattanx.png",
+    color: "purple",
+    talkTitle: "Demystifying Nuxt Test Utils",
+    talkOverview: `Testing a Nuxt application with only Vitest and @vue/test-utils makes it challenging to fully replicate the production environment, including plugins, middleware, and server-side rendering.
+
+@nuxt/test-utils addresses these challenges. This session will provide practical tips and specific usage examples, while also explaining the mechanics of Nuxt in a test environment.
+
+This session aims to equip developers with practical knowledge and a deeper understanding of Nuxt’s behavior in testing, enabling them to efficiently test Nuxt applications.`,
+    socialUrls: {
+      github: "https://github.com/wattanx",
+      x: "https://x.com/pontaxx",
+      bluesky: "https://bsky.app/profile/@wattanx.dev",
+    },
+  },
+  {
     id: "sayn0",
     name: "sayn0",
     affiliation: "en-japan Inc.",
