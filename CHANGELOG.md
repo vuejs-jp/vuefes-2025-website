@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.6.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.6.0...v2.6.1)
+
+### 🏡 Chore
+
+- Unflag event page ([#936](https://github.com/vuejs-jp/vuefes-2025/pull/936))
+- Unflag student support closing ([#937](https://github.com/vuejs-jp/vuefes-2025/pull/937))
+- **deps-dev:** Bump eslint-plugin-storybook from 0.12.0 to 9.0.7 ([#933](https://github.com/vuejs-jp/vuefes-2025/pull/933))
+- **deps-dev:** Bump @chromatic-com/storybook from 3.2.6 to 3.2.7 ([#931](https://github.com/vuejs-jp/vuefes-2025/pull/931))
+- Add speaker wattanx ([#956](https://github.com/vuejs-jp/vuefes-2025/pull/956))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.6.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.5.2...v2.6.0)
