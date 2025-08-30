@@ -100,7 +100,7 @@
     "resolvers": "link:@primevue/forms/resolvers",
     "satori": "^0.16.2",
     "storybook": "8.4.7",
-    "textlint": "^14.4.2",
+    "textlint": "^15.2.2",
     "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-rule-preset-vuejs-jp": "github:vuejs-jp/textlint-rule-preset-vuejs-jp",
     "three": "^0.178.0",
