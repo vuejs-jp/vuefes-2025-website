@@ -84,6 +84,7 @@ const linkComp = computed(() => socialUrls?.x ? socialUrls.x : socialUrls?.githu
       height: auto;
       border-radius: 8%;
       border: 0.5px solid #ddd;
+      aspect-ratio: 1 / 1;
     }
   }
 
