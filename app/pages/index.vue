@@ -17,11 +17,16 @@ import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
+  defineAsyncComponent,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
 
 const { t } = useI18n();
+
+const SectionStaff = import.meta.vfFeatures.staff
+  ? defineAsyncComponent(() => import("./_components/SectionStaff.vue"))
+  : null;
 
 useSeoMeta({ title: "" });
 </script>
@@ -39,6 +44,7 @@ useSeoMeta({ title: "" });
       <SectionAccess />
       <SectionMessage />
       <SectionContact />
+      <SectionStaff v-if="SectionStaff" />
     </div>
 
     <h2 class="sns-introduction-heading">

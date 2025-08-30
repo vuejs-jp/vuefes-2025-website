@@ -128,6 +128,7 @@ export default defineNuxtConfig({
   // Use `process.env.CONTEXT !== "production"` for dev only features
   featureFlags: {
     timetable: process.env.CONTEXT !== "production",
+    staff: process.env.CONTEXT !== "production",
     soldOutAfterParty: true,
     soldOutEarlyBirdAfterParty: true,
   },
@@ -160,9 +161,6 @@ export default defineNuxtConfig({
     defaultLocale: "ja",
     // FIXME: https://github.com/vuejs-jp/vuefes-2025/issues/236
     detectBrowserLanguage: false,
-    experimental: {
-      localeDetector: "./server/localeDetector.ts",
-    },
   },
 
   ogImage: {

@@ -268,6 +268,10 @@ contactForm:
       label: "Send"
   successMessage: "Sent successfully"
   errorMessage: "Failed to send. Please try again."
+staff:
+  title: "Staff"
+  description: "Vue Fes Japan 2025 is planned and organized by the staff of the Vue.js Japan User Group."
+  volunteer: "Volunteer Staff"
 snsIntroduction: "Please check our official social media for the latest updates."
 snsIconImageAlt:
   x: "X (formerly Twitter) icon"

@@ -267,6 +267,10 @@ contactForm:
       label: "送信する"
   successMessage: "送信しました"
   errorMessage: "送信に失敗しました。もう一度お試しください。"
+staff:
+  title: "スタッフ"
+  description: "Vue Fes Japan 2025 は、Vue.js 日本ユーザーグループのスタッフによって企画・運営されています。"
+  volunteer: "ボランティアスタッフ"
 snsIntroduction: "最新情報は公式SNSをご覧ください"
 snsIconImageAlt:
   x: "X(旧Twitter)アイコン"

@@ -12,6 +12,7 @@ export const HOME_HEADING_ID = {
   access: "access",
   studentSupport: "student-support",
   store: "store",
+  staff: "staff",
 
   // NOTE: Be careful as it is hardcoded in MDC
   contact: "contact-form",
