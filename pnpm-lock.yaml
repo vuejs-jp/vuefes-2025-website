@@ -178,8 +178,8 @@ importers:
         specifier: github:vuejs-jp/textlint-rule-preset-vuejs-jp
         version: https://codeload.github.com/vuejs-jp/textlint-rule-preset-vuejs-jp/tar.gz/d62d64c25aed61a5f7455028b31aca7640181a13(textlint@14.5.0)
       three:
-        specifier: ^0.178.0
-        version: 0.178.0
+        specifier: ^0.179.1
+        version: 0.179.1
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -8967,8 +8967,8 @@ packages:
     engines: {node: '>=18.14.0'}
     hasBin: true
 
-  three@0.178.0:
-    resolution: {integrity: sha512-ybFIB0+x8mz0wnZgSGy2MO/WCO6xZhQSZnmfytSPyNpM0sBafGRVhdaj+erYh5U+RhQOAg/eXqw5uVDiM2BjhQ==}
+  three@0.179.1:
+    resolution: {integrity: sha512-5y/elSIQbrvKOISxpwXCR4sQqHtGiOI+MKLc3SsBdDXA2hz3Mdp3X59aUp8DyybMa34aeBwbFTpdoLJaUDEWSw==}
 
   tiny-bin@1.11.1:
     resolution: {integrity: sha512-UFC5EwtmCkFshKOBgXZzNFJsHpZrtbWZ/jQj+pwoIGUUbmenlQGGVDOwVqVOuG1nTxICSd+GLp3b+j7dUKZr2Q==}
@@ -20446,7 +20446,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  three@0.178.0: {}
+  three@0.179.1: {}
 
   tiny-bin@1.11.1:
     dependencies:
