@@ -36,6 +36,7 @@ jobs:
       - name: Check Building
         run: pnpm build
         env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
           AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_R2_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}

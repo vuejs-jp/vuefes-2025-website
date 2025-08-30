@@ -39,7 +39,7 @@ const menuItems = computed<MenuItemProps[]>(() =>
       label: "Timetable",
       // TODO:
       routeName: localeRoute({ name: "index" }).name,
-      disabled: !__FEATURE_TIMETABLE__,
+      disabled: !import.meta.vfFeatures.timetable,
     },
     {
       id: HOME_HEADING_ID.speaker,

@@ -30,8 +30,8 @@ const { signIn, status, data } = useAuth();
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 
-const isSoldOutAfterParty = __FEATURE_SOLD_OUT_AFTER_PARTY__;
-const isSoldOutEarlyBirdAfterParty = __FEATURE_SOLD_OUT_EARLY_BIRD_AFTER_PARTY__;
+const isSoldOutAfterParty = import.meta.vfFeatures.soldOutAfterParty;
+const isSoldOutEarlyBirdAfterParty = import.meta.vfFeatures.soldOutEarlyBirdAfterParty;
 
 const isLoading = ref(false);
 
