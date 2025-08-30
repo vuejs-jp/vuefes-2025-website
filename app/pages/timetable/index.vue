@@ -4,26 +4,25 @@ import TimetableCell from "./_components/TimetableCell.vue";
 import TimetableCard from "./_components/TimetableCard.vue";
 import { VFSection } from "#components";
 import {
+  defineOgImage,
   defineRouteRules,
-  useBreakpoint,
-  useFetch,
-  useI18n,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  useHead,
-  useSeoMeta,
-  useState,
-  onMounted,
-  onBeforeUnmount,
   nextTick,
   onBeforeRouteLeave,
-  // defineOgImage,
-  // useRuntimeConfig,
-
+  onBeforeUnmount,
+  onMounted,
+  useBreakpoint,
+  useFetch,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  useHead,
+  useI18n,
+  useRuntimeConfig,
+  useSeoMeta,
+  useState,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
 
-// const runtimeConfig = useRuntimeConfig();
+const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
 const bp = useBreakpoint();
 
@@ -58,10 +57,9 @@ if (import.meta.client) {
   });
 }
 
-// defineOgImage({
-//   component: "root",
-//   url: `${runtimeConfig.public.siteUrl}images/og/timetable.png`,
-// });
+defineOgImage({
+  url: `${runtimeConfig.public.siteUrl}images/og/timetable.png`,
+});
 
 useSeoMeta({
   title: () => `Vue Fes Japan 2025 - ${t("timetable.title")}`,
