@@ -108,6 +108,8 @@ export default defineNuxtConfig({
   vite: {
     define: {
       __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
+      __FEATURE_SOLD_OUT_AFTER_PARTY__: !["0", undefined].includes(process.env.FEATURE_SOLD_OUT_AFTER_PARTY),
+      __FEATURE_SOLD_OUT_EARLY_BIRD_AFTER_PARTY__: !["0", undefined].includes(process.env.FEATURE_SOLD_OUT_EARLY_BIRD_AFTER_PARTY),
     },
     css: {
       transformer: "lightningcss",

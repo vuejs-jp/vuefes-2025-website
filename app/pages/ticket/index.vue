@@ -30,6 +30,9 @@ const { signIn, status, data } = useAuth();
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 
+const isSoldOutAfterParty = __FEATURE_SOLD_OUT_AFTER_PARTY__;
+const isSoldOutEarlyBirdAfterParty = __FEATURE_SOLD_OUT_EARLY_BIRD_AFTER_PARTY__;
+
 const isLoading = ref(false);
 
 async function handleClockGoogleSignIn() {
@@ -109,17 +112,19 @@ useSeoMeta({
                 <span class="ticket-badge-price">
                   <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
                   <span class="ticket-badge-price-type">{{ t('ticket.early') }}</span>
-                  <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-value" :class="{ 'sold-out': isSoldOutEarlyBirdAfterParty }">
                     <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.earlyPrice'))).toLocaleString() }}
                   </span>
+                  <span v-if="isSoldOutEarlyBirdAfterParty" class="sold-out-label">{{ t('ticket.soldOut') }}</span>
                 </span>
 
                 <span class="ticket-badge-price">
                   <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
                   <span class="ticket-badge-price-type">{{ t('ticket.standard') }}</span>
-                  <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-value" :class="{ 'sold-out': isSoldOutAfterParty }">
                     <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.afterPartyTicket.standardPrice'))).toLocaleString() }}
                   </span>
+                  <span v-if="isSoldOutAfterParty" class="sold-out-label">{{ t('ticket.soldOut') }}</span>
                 </span>
               </div>
             </div>
@@ -369,6 +374,10 @@ useSeoMeta({
             font-weight: 700;
             line-height: 1;
 
+            &.sold-out {
+              text-decoration: line-through;
+            }
+
             .ticket-badge-price-unit {
               font-size: 1.75rem;
 
@@ -377,6 +386,15 @@ useSeoMeta({
                 margin-right: 0.5rem;
               }
             }
+          }
+
+          .sold-out-label {
+            color: var(--color-sub);
+            background-color: var(--color-base);
+            font-size: 11px;
+            padding: 0 0.375rem;
+            border-radius: 4px;
+            margin-left: -8px;
           }
         }
       }

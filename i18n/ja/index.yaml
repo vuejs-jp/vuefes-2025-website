@@ -56,6 +56,7 @@ ticket:
     attention1: "※ Vue Fes Japan へのご参加には、一般チケットも必要となります。"
     attention2: "※ 詳しくは{about}をご覧ください。"
     about: "個人スポンサーについて"
+  soldOut: "SOLD OUT"
   buy: "チケットを購入する"
 
 nameBadge:

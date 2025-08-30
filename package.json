@@ -31,8 +31,8 @@
     ]
   },
   "scripts": {
-    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' nuxt build",
-    "dev": "cross-env FEATURE_TIMETABLE=0 nuxt dev",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' FEATURE_SOLD_OUT_AFTER_PARTY=1 FEATURE_SOLD_OUT_EARLY_BIRD_AFTER_PARTY=1 nuxt build",
+    "dev": "cross-env FEATURE_TIMETABLE=0 FEATURE_SOLD_OUT_AFTER_PARTY=1 FEATURE_SOLD_OUT_EARLY_BIRD_AFTER_PARTY=1 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "nuxi typecheck",
