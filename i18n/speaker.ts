@@ -6,6 +6,9 @@ export interface Speaker {
   affiliation?: string;
   title?: string;
 
+  talkSchedule?: string;
+  talkTrack?: "hacomono" | "mates" | "feature" | "cyberAgent";
+
   talkTitle?: string;
   talkOverview?: string;
 

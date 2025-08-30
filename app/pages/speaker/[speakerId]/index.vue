@@ -13,12 +13,14 @@ import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
+  useRouter,
 } from "#imports";
 import { VFSection } from "#components";
 
 definePageMeta({ prerender: true });
 
 const route = useRoute("speaker-speakerId");
+const router = useRouter();
 const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 
@@ -57,6 +59,35 @@ defineOgImage({
     color: () => currentSpeaker.value?.color || "default",
   },
 });
+
+const goBack = () => {
+  if (window.history.length > 1) {
+    router.back();
+  } else {
+    router.push(localeRoute({ name: "speaker" }));
+  }
+};
+
+// FIXME: Timetableでも使ってるのでどっかに切り出しておきたい
+const accentColorName = computed(() => {
+  switch (currentSpeaker.value?.talkTrack) {
+    case "hacomono":
+      return "primary";
+    case "mates":
+      return "purple";
+    case "feature":
+      return "orange";
+    case "cyberAgent":
+      return "navy";
+    default:
+      return "primary";
+  }
+});
+
+const trackStyles = computed(() => ({
+  "--base-color": `var(--color-${accentColorName.value}-base)`,
+  "--sub-color": `var(--color-${accentColorName.value}-sub)`,
+}));
 </script>
 
 <template>
@@ -65,8 +96,12 @@ defineOgImage({
     <h1>Speaker</h1>
 
     <VFSection :title="currentSpeaker?.type === 'session' ? t('speakers.sessions.information') : t('speakers.lightningTalks.information')">
-      <!-- TODO: track name -->
-      <!-- TODO: time -->
+      <div class="speaker-track" :style="trackStyles">
+        {{ t(`timetable.track.${currentSpeaker.talkTrack}`) }}
+      </div>
+      <div class="speaker-time" :style="trackStyles">
+        {{ currentSpeaker.talkSchedule }}
+      </div>
 
       <div class="speaker-information">
         <div class="speaker-avatar">
@@ -74,7 +109,7 @@ defineOgImage({
         </div>
         <div class="speaker-details">
           <h3 class="session-title">
-            {{ currentSpeaker.talkTitle || "TBD" }}
+            {{ currentSpeaker.talkTitle }}
           </h3>
 
           <p v-if="currentSpeaker.talkOverview" class="session-overview">
@@ -191,7 +226,7 @@ defineOgImage({
       </div>
 
       <div class="back-to-speakers">
-        <VFButton outlined :link="localeRoute({ name: 'speaker' })">
+        <VFButton outlined @click="goBack">
           {{ t("back") }}
         </VFButton>
       </div>
@@ -228,6 +263,40 @@ defineOgImage({
     @media (--mobile) {
       margin-top: 1.5rem;
     }
+  }
+}
+.speaker-track{
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background-color: var(--base-color);
+  color: var(--sub-color);
+    @media (--mobile) {
+      height: 29px;
+      font-size: 14px;
+    }
+}
+.speaker-time{
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  height: 28px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  padding: 0 16px;
+  font-family: JetBrainsMono-Medium;
+  font-size: 14px;
+  border: 1px solid var(--base-color);
+  border-radius: 100px;
+  background-color: #fff;
+  color: var(--base-color);
+  @media (--mobile) {
+    height: 25px;
+    margin-bottom: 24px;
+    font-size: 12px;
   }
 }
 

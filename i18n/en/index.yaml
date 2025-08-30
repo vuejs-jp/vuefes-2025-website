@@ -283,6 +283,30 @@ validation:
   required: "The input of {target} is required."
   email: "The Email Address is not in the correct format."
 
+timetable:
+  title: "timetable"
+  description: "This is the timetable for Vue Fes Japan 2025."
+  track:
+    hacomono: "FitFits with hacomono Track"
+    mates: "Mates Track"
+    feature: "Future Architect Track"
+    cyberAgent: "CyberAgent Track"
+  slider: "Slider"
+  session: "Session"
+  # Timetable content translations
+  openingReception: "Opening and reception"
+  opening: "Opening"
+  keynote: "Keynote"
+  platinumSponsorSession: "Platinum Sponsor Session"
+  lunchTime: "Lunch Time"
+  studentSupportProgram: "Student Support Program"
+  break: "Break"
+  beginnerHandsOn: "Beginner Hands-on"
+  intermediateHandsOn: "Intermediate Hands-on"
+  panelDiscussion: "Panel Discussion"
+  lightningTalk: "Lightning Talk"
+  transition: "Transition"
+  afterParty: "After Party\nsupported by Tenshoku-DRAFT"
 relatedEvents:
   title: "Related Events"
   sectionTitle: "Related Events"

@@ -282,6 +282,30 @@ validation:
   required: "{target}の入力は必須です。"
   email: "メールアドレスが正しい形式ではありません。"
 
+timetable:
+  title: "タイムテーブル"
+  description: "Vue Fes Japan 2025のタイムテーブルです。"
+  track:
+    hacomono: "FitFits with hacomonoトラック"
+    mates: "メイツトラック"
+    feature: "フューチャーアーキテクトトラック"
+    cyberAgent: "サイバーエージェントトラック"
+  slider: "発表資料"
+  session: "セッション"
+  # Timetable content translations
+  openingReception: "開場・受付"
+  opening: "オープニング"
+  keynote: "キーノート"
+  platinumSponsorSession: "プラチナスポンサーセッション"
+  lunchTime: "ランチタイム"
+  studentSupportProgram: "学生支援プログラム"
+  break: "休憩"
+  beginnerHandsOn: "初級者向けハンズオン"
+  intermediateHandsOn: "中級者向けハンズオン"
+  panelDiscussion: "パネルディスカッション"
+  lightningTalk: "ライトニングトーク"
+  transition: "転換"
+  afterParty: "アフターパーティー\nsupported by 転職ドラフト"
 relatedEvents:
   title: "Related Events"
   sectionTitle: "関連イベント"
