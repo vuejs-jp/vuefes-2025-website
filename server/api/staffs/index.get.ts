@@ -3,7 +3,7 @@ import { staffs } from "../../static-data/staffs";
 
 export type Staff = {
   name: string;
-  avatarUrl: string;
+  avatarUrl?: string;
   pinned?: boolean;
   socialUrls?: {
     x?: string;

@@ -33,6 +33,9 @@ const localeRoute = useLocaleRoute();
 const isSoldOutAfterParty = import.meta.vfFeatures.soldOutAfterParty;
 const isSoldOutEarlyBirdAfterParty = import.meta.vfFeatures.soldOutEarlyBirdAfterParty || import.meta.vfFeatures.soldOutEarlyBird;
 const isSoldOutEarlyBird = import.meta.vfFeatures.soldOutEarlyBird;
+const isSoldOutGeneral = import.meta.vfFeatures.soldOutGeneral;
+const isSoldOutHandsOn = import.meta.vfFeatures.soldOutHandsOn;
+const isSoldOutIndividualSponsor = import.meta.vfFeatures.soldOutIndividualSponsor;
 
 const isLoading = ref(false);
 
@@ -94,9 +97,10 @@ useSeoMeta({
                 <span class="ticket-badge-price">
                   <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
                   <span class="ticket-badge-price-type">{{ t('ticket.standard') }}</span>
-                  <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-value" :class="{ 'sold-out': isSoldOutGeneral }">
                     <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.standardPrice'))).toLocaleString() }}
                   </span>
+                  <span v-if="isSoldOutGeneral" class="sold-out-label">{{ t('ticket.soldOut') }}</span>
                 </span>
               </div>
             </div>
@@ -147,9 +151,10 @@ useSeoMeta({
               </h2>
               <div class="ticket-badge-prices">
                 <span class="ticket-badge-price">
-                  <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-value" :class="{ 'sold-out': isSoldOutHandsOn }">
                     <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.handsOn.price'))).toLocaleString() }}
                   </span>
+                  <span v-if="isSoldOutHandsOn" class="sold-out-label">{{ t('ticket.soldOut') }}</span>
                 </span>
               </div>
             </div>
@@ -172,9 +177,10 @@ useSeoMeta({
               </h2>
               <div class="ticket-badge-prices">
                 <span class="ticket-badge-price">
-                  <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-value" :class="{ 'sold-out': isSoldOutIndividualSponsor }">
                     <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.individual.price'))).toLocaleString() }}
                   </span>
+                  <span v-if="isSoldOutIndividualSponsor" class="sold-out-label">{{ t('ticket.soldOut') }}</span>
                 </span>
               </div>
             </div>

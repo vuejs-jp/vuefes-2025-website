@@ -7,8 +7,8 @@ import SliderIcon from "~icons/icons/timetable-slider.svg";
 const {
   type,
   title,
-  sessionStart,
-  sessionEnd,
+  startTime,
+  endTime,
   speakers,
   slide,
   colspan,
@@ -44,16 +44,16 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
 <template>
   <td class="cell" :colspan="colspan" :rowspan="rowspan" :class="{ 'cell--schedule': type === 'schedule' }">
     <div class="cell-inner">
-      <div v-if="sessionStart && type !== 'schedule'" class="time">
+      <div v-if="startTime && type !== 'schedule'" class="time">
         <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-        {{ sessionStart }} - {{ sessionEnd }}
+        {{ startTime }} - {{ endTime }}
       </div>
 
       <template v-if="type === 'schedule'">
         <div class="schedule-content">
-          <div v-if="sessionStart" class="time">
+          <div v-if="startTime" class="time">
             <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-            {{ sessionStart }} - {{ sessionEnd }}
+            {{ startTime }} - {{ endTime }}
           </div>
           <div class="schedule-title">
             {{ title }}
@@ -160,6 +160,7 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
   font-family: IBMPlexSansJP-Bold;
   font-size: 16px;
   text-align: left;
+  white-space: pre-wrap;
   a {
     all: inherit;
     cursor: pointer;

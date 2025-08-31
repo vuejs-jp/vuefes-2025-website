@@ -5,8 +5,8 @@ export interface TimetableCell {
   id: string;
   type?: "session" | "lightningTalk" | "schedule" | "event";
   title?: string;
-  sessionStart?: string;
-  sessionEnd?: string;
+  startTime?: string;
+  endTime?: string;
   speakers?: Speaker[];
   slide?: string;
   colspan?: number;

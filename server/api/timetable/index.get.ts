@@ -3,6 +3,7 @@ import { useTranslation } from "../../i18n/useTranslation";
 
 import type { Timetable } from "../../../i18n/timetable";
 import type { Speaker } from "../../../i18n/speaker";
+import type { Sponsor } from "~~/i18n/sponsor";
 
 export default defineEventHandler(async (event): Promise<Timetable> => {
   const query = getQuery(event);
@@ -18,6 +19,12 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
     ? await import(`../../../i18n/ja/speakers`)
     : await import(`../../../i18n/en/speakers`);
 
+  const {
+    SPONSORS,
+  } = locale === "ja"
+    ? await import(`../../../i18n/ja/sponsors`)
+    : await import(`../../../i18n/en/sponsors`);
+
   function getSpeaker(id: string): Speaker {
     const speaker = SESSION_SPEAKERS.find(s => s.id === id);
     if (!speaker) {
@@ -25,6 +32,27 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
     }
     return speaker;
   }
+
+  function getSponsor(id: string): Sponsor {
+    const sponsor = [
+      ...SPONSORS.PLATINA,
+      ...SPONSORS.GOLD,
+      ...SPONSORS.SILVER,
+      ...SPONSORS.BRONZE,
+      ...SPONSORS.CREATIVE,
+      ...SPONSORS.OPTION_ONLY,
+    ].find(s => s.id === id);
+
+    if (!sponsor) {
+      throw new Error(`Sponsor not found: ${id}`);
+    }
+    return sponsor;
+  }
+
+  // for student support program
+  const lycorp = getSponsor("lycorp");
+  const plaid = getSponsor("plaid");
+  const studio = getSponsor("studio");
 
   return {
     id: "timetable",
@@ -37,6 +65,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             id: "open",
             type: "schedule",
             title: t("timetable.openingReception"),
+            startTime: "09:00",
+            endTime: "10:00",
             colspan: 4,
             rowspan: 6,
           },
@@ -72,8 +102,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: t("timetable.opening"),
             colspan: 2,
             rowspan: 1,
-            sessionStart: "10:00",
-            sessionEnd: "10:10",
+            startTime: "10:00",
+            endTime: "10:10",
             track: "hacomono",
             speakers: [],
           },
@@ -99,7 +129,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
       },
       {
         id: "",
-        time: "10:11",
+        time: "10:10",
         cells: [
           {
             id: "evan_you",
@@ -107,8 +137,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: t("timetable.keynote"),
             colspan: 2,
             rowspan: 6,
-            sessionStart: "10:11",
-            sessionEnd: "10:50",
+            startTime: "10:10",
+            endTime: "10:50",
             speakers: [getSpeaker("yyx990803")],
             track: "hacomono",
           },
@@ -144,8 +174,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: t("timetable.platinumSponsorSession"),
             colspan: 1,
             rowspan: 1,
-            sessionStart: "10:55",
-            sessionEnd: "11:05",
+            startTime: "10:55",
+            endTime: "11:05",
             track: "hacomono",
           },
           {
@@ -155,8 +185,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             colspan: 1,
             rowspan: 1,
             track: "mates",
-            sessionStart: "10:55",
-            sessionEnd: "11:05",
+            startTime: "10:55",
+            endTime: "11:05",
           },
         ],
       },
@@ -170,8 +200,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: t("timetable.platinumSponsorSession"),
             colspan: 1,
             rowspan: 1,
-            sessionStart: "11:05",
-            sessionEnd: "11:15",
+            startTime: "11:05",
+            endTime: "11:15",
             track: "hacomono",
           },
           {
@@ -181,8 +211,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             colspan: 1,
             rowspan: 1,
             track: "mates",
-            sessionStart: "11:05",
-            sessionEnd: "11:15",
+            startTime: "11:05",
+            endTime: "11:15",
           },
         ],
       },
@@ -206,14 +236,29 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
           {
             id: "student-support",
             type: "event",
-            title: t("timetable.studentSupportProgram"),
+            title: t("timetable.studentSupportProgramSessionTitle"),
             colspan: 1,
             rowspan: 6,
             track: "cyberAgent",
-            sessionStart: "11:30",
-            sessionEnd: "12:30",
+            startTime: "11:30",
+            endTime: "12:30",
             link: "student-support-contents",
-            speakers: [...STUDENT_SUPPORT_SPEAKERS as Speaker[]],
+            speakers: [
+              ...STUDENT_SUPPORT_SPEAKERS as Speaker[],
+              // note: omit avatarUrl and colors
+              {
+                id: "lycorp",
+                name: lycorp.name,
+              } as Speaker,
+              {
+                id: "plaid",
+                name: plaid.name,
+              } as Speaker,
+              {
+                id: "studio",
+                name: studio.name,
+              } as Speaker,
+            ],
           },
         ],
       },
@@ -272,8 +317,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "12:50",
-            sessionEnd: "13:20",
+            startTime: "12:50",
+            endTime: "13:20",
             speakers: [getSpeaker("danielroe")],
             track: "hacomono",
           },
@@ -283,8 +328,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "12:50",
-            sessionEnd: "13:20",
+            startTime: "12:50",
+            endTime: "13:20",
             speakers: [getSpeaker("leaysgur")],
             track: "mates",
           },
@@ -294,8 +339,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "12:50",
-            sessionEnd: "13:20",
+            startTime: "12:50",
+            endTime: "13:20",
             speakers: [getSpeaker("yamanoku")],
             track: "feature",
           },
@@ -306,8 +351,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             colspan: 1,
             rowspan: 11,
             track: "cyberAgent",
-            sessionStart: "12:50",
-            sessionEnd: "14:50",
+            startTime: "12:50",
+            endTime: "14:50",
             link: "hands-on",
           },
         ],
@@ -344,8 +389,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             colspan: 1,
             rowspan: 3,
             speakers: [getSpeaker("johnsoncodehk")],
-            sessionStart: "13:35",
-            sessionEnd: "14:05",
+            startTime: "13:35",
+            endTime: "14:05",
             track: "hacomono",
           },
           {
@@ -356,8 +401,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             rowspan: 3,
             speakers: [getSpeaker("hi-ogawa")],
             track: "mates",
-            sessionStart: "13:35",
-            sessionEnd: "14:05",
+            startTime: "13:35",
+            endTime: "14:05",
           },
           {
             id: "neginasu",
@@ -367,8 +412,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             rowspan: 3,
             speakers: [getSpeaker("neginasu")],
             track: "feature",
-            sessionStart: "13:35",
-            sessionEnd: "14:05",
+            startTime: "13:35",
+            endTime: "14:05",
           },
         ],
       },
@@ -403,8 +448,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "14:20",
-            sessionEnd: "14:50",
+            startTime: "14:20",
+            endTime: "14:50",
             speakers: [getSpeaker("akryum")],
             track: "hacomono",
           },
@@ -414,8 +459,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "14:20",
-            sessionEnd: "14:50",
+            startTime: "14:20",
+            endTime: "14:50",
             speakers: [getSpeaker("toddeTV")],
             track: "mates",
           },
@@ -425,8 +470,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "14:20",
-            sessionEnd: "14:50",
+            startTime: "14:20",
+            endTime: "14:50",
             speakers: [getSpeaker("naitokosuke")],
             track: "feature",
           },
@@ -463,8 +508,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "15:05",
-            sessionEnd: "15:35",
+            startTime: "15:05",
+            endTime: "15:35",
             speakers: [getSpeaker("baku89")],
             track: "hacomono",
           },
@@ -474,8 +519,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "15:05",
-            sessionEnd: "15:35",
+            startTime: "15:05",
+            endTime: "15:35",
             speakers: [getSpeaker("vados-cosmonic")],
             track: "mates",
           },
@@ -485,8 +530,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "15:05",
-            sessionEnd: "15:35",
+            startTime: "15:05",
+            endTime: "15:35",
             speakers: [getSpeaker("hiranuma")],
             track: "feature",
           },
@@ -497,8 +542,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             colspan: 1,
             rowspan: 15,
             track: "cyberAgent",
-            sessionStart: "15:05",
-            sessionEnd: "17:05",
+            startTime: "15:05",
+            endTime: "17:05",
             link: "hands-on",
           },
         ],
@@ -549,8 +594,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "15:45",
-            sessionEnd: "16:15",
+            startTime: "15:45",
+            endTime: "16:15",
             speakers: [getSpeaker("wattanx")],
             track: "mates",
           },
@@ -563,11 +608,11 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
           {
             id: "discussion",
             type: "event",
-            title: t("timetable.panelDiscussion"),
+            title: t("timetable.crossTalkTitle"),
             colspan: 1,
             rowspan: 8,
-            sessionStart: "15:50",
-            sessionEnd: "16:50",
+            startTime: "15:50",
+            endTime: "16:50",
             track: "hacomono",
             link: "panel-discussion",
             speakers: [...PANEL_DISCUSSION_SPEAKERS],
@@ -578,8 +623,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "15:50",
-            sessionEnd: "16:20",
+            startTime: "15:50",
+            endTime: "16:20",
             speakers: [getSpeaker("sayn0")],
             track: "feature",
           },
@@ -626,8 +671,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             colspan: 1,
             rowspan: 8,
             track: "mates",
-            sessionStart: "16:25",
-            sessionEnd: "17:25",
+            startTime: "16:25",
+            endTime: "17:25",
             speakers: [...LT_SPEAKERS],
           },
         ],
@@ -642,8 +687,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 5,
-            sessionStart: "16:35",
-            sessionEnd: "17:05",
+            startTime: "16:35",
+            endTime: "17:05",
             speakers: [getSpeaker("yuichkun")],
             track: "feature",
           },
@@ -705,8 +750,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "17:20",
-            sessionEnd: "17:50",
+            startTime: "17:20",
+            endTime: "17:50",
             speakers: [getSpeaker("antfu")],
             track: "feature",
           },
@@ -716,8 +761,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: "Vue Quiz",
             colspan: 1,
             rowspan: 3,
-            sessionStart: "17:20",
-            sessionEnd: "17:50",
+            startTime: "17:20",
+            endTime: "17:50",
             track: "cyberAgent",
             link: "vue-quiz",
           },
@@ -773,8 +818,8 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             title: t("timetable.afterParty"),
             colspan: 2,
             rowspan: 10,
-            sessionStart: "18:00",
-            sessionEnd: "19:30",
+            startTime: "18:00",
+            endTime: "19:30",
           },
         ],
       },

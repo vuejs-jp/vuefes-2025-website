@@ -85,11 +85,19 @@ const cta = computed(() =>
 
 const { y } = useScroll(window);
 const isShowedSpMenu = computed(() => {
-  const targetBp: Breakpoint[] = isWidenContent.value ? ["mobile-wide", "mobile"] : ["mobile"];
+  const targetBp: Breakpoint[]
+    = isTimetable.value
+      ? ["pc", "mobile-wide", "mobile"]
+      : isWidenContent.value
+        ? ["mobile-wide", "mobile"]
+        : ["mobile"];
   return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
 });
 const isShowedSpCta = computed(() => {
-  const targetBp: Breakpoint[] = isWidenContent.value ? ["pc", "mobile-wide", "mobile"] : ["mobile-wide", "mobile"];
+  const targetBp: Breakpoint[]
+    = isTimetable.value || isWidenContent.value
+      ? ["pc", "mobile-wide", "mobile"]
+      : ["mobile-wide", "mobile"];
   return targetBp.includes(bp.value) && (!isRoot.value || y.value > 450);
 });
 
@@ -102,7 +110,6 @@ const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "sponsors",
   "sponsors-sponsorId",
   "event",
-  "timetable",
   "related-events",
   "store",
 ];
@@ -113,6 +120,8 @@ const isWidenContent = computed(() =>
     .filter(it => !!it)
     .includes(route.name?.toString() ?? ""),
 );
+
+const isTimetable = computed(() => localeRoute("timetable" as string).name === route.name?.toString());
 
 // scroll behavior
 watch(() => route.hash, async (hash) => {
@@ -150,7 +159,7 @@ watch(() => route.hash, async (hash) => {
           <VFMenu :items="menuItems" />
         </div>
       </div>
-      <div class="content" :class="{ 'widen-content': isWidenContent }">
+      <div class="content" :class="{ 'widen-content': isWidenContent, 'timetable': isTimetable }">
         <VFHeader :is-root class="header" />
 
         <main class="main">
@@ -220,6 +229,7 @@ watch(() => route.hash, async (hash) => {
   justify-content: center;
   min-width: 700px;
   max-width: 700px;
+  transition: unset;
 
   @media (--mobile) {
     row-gap: 1rem;
@@ -230,10 +240,18 @@ watch(() => route.hash, async (hash) => {
     flex-basis: auto;
   }
 
+  &.timetable {
+    width: 90%;
+    max-width: 1400px;
+
+    @media (--mobile) {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
   &.widen-content {
     min-width: 960px;
-    /* min-width: 95%; */
-    transition: unset;
 
     @media (--mobile) {
       min-width: 0;

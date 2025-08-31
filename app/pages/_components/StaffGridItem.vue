@@ -3,7 +3,7 @@ import { computed } from "vue";
 
 export type StaffItemProps = {
   name: string;
-  avatarUrl: string;
+  avatarUrl?: string;
   socialUrls?: {
     x?: string;
     github?: string;

@@ -6,7 +6,7 @@ const evan = {
   id: "yyx990803",
   name: "Evan You",
   title: "Vue.js、Vite クリエーター",
-  talkSchedule: "10:11 - 10:50",
+  talkSchedule: "10:10 - 10:50",
   talkTrack: "hacomono" as const,
   avatarUrl: "/images/avatars/evan-you.png",
   attendedIndex: 1,
@@ -29,9 +29,13 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/daniel-roe.png",
     attendedIndex: 4,
     color: "purple",
-    // TODO: ja
-    talkTitle: import.meta.vfFeatures.guestDetailsDaniel ? "Beyond the Framework: Building for the Next Decade of the Web" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsDaniel ? `Frontend tooling moves at breakneck speed, but the foundations of great web applications remain surprisingly constant. In this talk, Daniel explores how to architect projects that will thrive across technology shifts — from framework migrations to evolving hosting landscapes. Drawing from his work leading the Nuxt core team and collaborating with global developer communities, Daniel shares patterns, pitfalls, and practical strategies for building software that stays resilient, adaptable, and joyful to work on.` : undefined,
+    talkTitle: import.meta.vfFeatures.guestDetailsDaniel ? "フレームワークを超えて：次の10年のウェブを築く" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsDaniel
+      ? `フロントエンドのツール群は驚くほどのスピードで進化していますが、優れたウェブアプリケーションの基盤は驚くほど変わらずに存在しています。
+
+本講演では、Daniel がフレームワークの移行からホスティング環境の変化に至るまで、技術の移り変わりを乗り越えて発展し続けるプロジェクトの設計方法を探ります。
+Nuxt コアチームを率いる経験や、世界中の開発者コミュニティとの協働から得た知見をもとに、Daniel はパターン、落とし穴、そしてソフトウェアを「強靭で適応力があり、そして楽しく開発できるもの」にするための実践的な戦略を共有します。`
+      : undefined,
     socialUrls: {
       github: "https://github.com/danielroe",
       bluesky: "https://bsky.app/profile/danielroe.dev",
@@ -63,9 +67,17 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/guillaume-chau.png",
     attendedIndex: 6,
     color: "navy",
-    // TODO: ja
-    talkTitle: import.meta.vfFeatures.guestDetailsAkryum ? "rstore and the challenge of building a local-first store" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsAkryum ? `We will explore what is rstore and how it works as a flexible state management solution. Let's answer many interesting questions like: What does local-first mean? How is rstore different from pinia? How was it made extensible to support many use cases? What is data federation? How to make an offline sync engine?` : undefined,
+    talkTitle: import.meta.vfFeatures.guestDetailsAkryum ? "rstoreとローカルファーストなストア構築の課題" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsAkryum
+      ? `私たちは rstore とは何か、そして柔軟な状態管理ソリューションとしてどのように機能するのかを探っていきます。
+
+次のような興味深い問いに答えていきましょう。
+・「ローカルファースト」とはどういう意味なのか？
+・rstore は Pinia とどう違うのか？
+・どのようにして多様なユースケースをサポートできる拡張性を実現したのか？
+・「データフェデレーション」とは何か？
+・オフライン同期エンジンはどのように作るのか？`
+      : undefined,
     socialUrls: {
       github: "https://github.com/Akryum",
       x: "https://x.com/Akryum",
@@ -99,7 +111,10 @@ export const SESSION_SPEAKERS: Speaker[] = [
     attendedIndex: 8,
     color: "purple",
     talkTitle: import.meta.vfFeatures.guestDetailsOgawa ? "Inside Vitest: テストフレームワークアーキテクチャの詳細解説" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsOgawa ? "このトークでは、Vitestのアーキテクチャ的な独自性について探求します。Viteの幅広いフレームワークエコシステムとプラグイン機能の活用方法、Node.js、ブラウザ、エッジ環境でテストを実行可能にするランタイム非依存アーキテクチャ、そしてモッキング、カバレッジ、テストの並列実行システムなどのコア機能の実装について解説します。内部構造を理解することで、ソフトウェア開発ワークフローを改善するためのテストの書き方やとパフォーマンス最適化を学ぶことができます。" : undefined,
+    talkOverview: import.meta.vfFeatures.guestDetailsOgawa
+      ? `このトークでは、Vitestのアーキテクチャ的な独自性について探求します。Viteの幅広いフレームワークエコシステムとプラグイン機能の活用方法、Node.js、ブラウザ、エッジ環境でテストを実行可能にするランタイム非依存アーキテクチャ、そしてモッキング、カバレッジ、テストの並列実行システムなどのコア機能の実装について解説します。
+内部構造を理解することで、ソフトウェア開発ワークフローを改善するためのテストの書き方やとパフォーマンス最適化を学ぶことができます。`
+      : undefined,
     socialUrls: {
       github: "https://github.com/hi-ogawa",
       bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
@@ -119,7 +134,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
     talkTitle: import.meta.vfFeatures.guestDetailsLeaysgur ? "OXCというOSSへの貢献と、その振り返り" : "TBD",
     talkOverview: import.meta.vfFeatures.guestDetailsLeaysgur
       ? `OXCは、Rust製のJavaScript関連ツール群を扱うOSSです。
-そのOXCに貢献するようになって、1年半以上が経っていました。これまで、どういった想いでOSS活動を続けてきたか、またそれはどういう内容だったのかを一挙に振り返ります。`
+そのOXCに貢献するようになって、1年半以上が経っていました。
+これまで、どういった想いでOSS活動を続けてきたか、またそれはどういう内容だったのかを一挙に振り返ります。`
       : undefined,
     socialUrls: {
       github: "https://github.com/leaysgur",
