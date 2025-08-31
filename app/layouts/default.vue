@@ -229,6 +229,7 @@ watch(() => route.hash, async (hash) => {
   justify-content: center;
   min-width: 700px;
   max-width: 700px;
+  transition: unset;
 
   @media (--mobile) {
     row-gap: 1rem;
@@ -251,7 +252,6 @@ watch(() => route.hash, async (hash) => {
 
   &.widen-content {
     min-width: 960px;
-    transition: unset;
 
     @media (--mobile) {
       min-width: 0;
