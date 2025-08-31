@@ -132,7 +132,7 @@ export default defineNuxtConfig({
 
     soldOutAfterParty: true,
     soldOutEarlyBirdAfterParty: true,
-    soldOutEarlyBird: process.env.CONTEXT !== "production", // turn it on at 9/1
+    soldOutEarlyBird: true,
     soldOutGeneral: false, // turn on when sold out
     soldOutHandsOn: false, // turn on when sold out
     soldOutIndividualSponsor: false, // turn on when sold out
