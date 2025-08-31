@@ -6,7 +6,7 @@ const evan = {
   id: "yyx990803",
   name: "Evan You",
   affiliation: "Creator of Vue.js & Vite",
-  talkSchedule: "10:11 - 10:50",
+  talkSchedule: "10:10 - 10:50",
   talkTrack: "hacomono" as const,
   avatarUrl: "/images/avatars/evan-you.png",
   attendedIndex: 1,
