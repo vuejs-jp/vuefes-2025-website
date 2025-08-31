@@ -131,6 +131,13 @@ export default defineNuxtConfig({
     staff: process.env.CONTEXT !== "production",
     soldOutAfterParty: true,
     soldOutEarlyBirdAfterParty: true,
+    guestDetailsEvan: false,
+    guestDetailsDaniel: process.env.CONTEXT !== "production",
+    guestDetailsJohnson: process.env.CONTEXT !== "production",
+    guestDetailsAkryum: process.env.CONTEXT !== "production",
+    guestDetailsBaku: process.env.CONTEXT !== "production",
+    guestDetailsOgawa: process.env.CONTEXT !== "production",
+    guestDetailsLeaysgur: process.env.CONTEXT !== "production",
   },
 
   eslint: {

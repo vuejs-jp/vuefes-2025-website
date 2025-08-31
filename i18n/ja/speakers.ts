@@ -29,7 +29,9 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/daniel-roe.png",
     attendedIndex: 4,
     color: "purple",
-    talkTitle: "TBD",
+    // TODO: ja
+    talkTitle: import.meta.vfFeatures.guestDetailsDaniel ? "Beyond the Framework: Building for the Next Decade of the Web" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsDaniel ? `Frontend tooling moves at breakneck speed, but the foundations of great web applications remain surprisingly constant. In this talk, Daniel explores how to architect projects that will thrive across technology shifts — from framework migrations to evolving hosting landscapes. Drawing from his work leading the Nuxt core team and collaborating with global developer communities, Daniel shares patterns, pitfalls, and practical strategies for building software that stays resilient, adaptable, and joyful to work on.` : undefined,
     socialUrls: {
       github: "https://github.com/danielroe",
       bluesky: "https://bsky.app/profile/danielroe.dev",
@@ -44,7 +46,9 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/johnson-chu.png",
     attendedIndex: 5,
     color: "orange",
-    talkTitle: "TBD",
+    // TODO:
+    talkTitle: import.meta.vfFeatures.guestDetailsJohnson ? "TBD" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsJohnson ? undefined : undefined,
     socialUrls: {
       github: "https://github.com/johnsoncodehk",
       x: "https://x.com/johnsoncodehk",
@@ -59,7 +63,9 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/guillaume-chau.png",
     attendedIndex: 6,
     color: "navy",
-    talkTitle: "TBD",
+    // TODO: ja
+    talkTitle: import.meta.vfFeatures.guestDetailsAkryum ? "rstore and the challenge of building a local-first store" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsAkryum ? `We will explore what is rstore and how it works as a flexible state management solution. Let's answer many interesting questions like: What does local-first mean? How is rstore different from pinia? How was it made extensible to support many use cases? What is data federation? How to make an offline sync engine?` : undefined,
     socialUrls: {
       github: "https://github.com/Akryum",
       x: "https://x.com/Akryum",
@@ -75,7 +81,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/baku-hashimoto.png",
     attendedIndex: 7,
     color: "default",
-    talkTitle: "TBD",
+    talkTitle: import.meta.vfFeatures.guestDetailsBaku ? "Vue.jsでつくる実験映像" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsBaku ? "映像作家として、Vue.jsを使って自作のモーショングラフィックス制作ツールやUIライブラリを開発しながら、コマ撮りやミュージック・ビデオづくりを行ってきました。本セッションでは、非エンジニア視点でのVueの活用法、創作フローにおけるGUI開発の役割、そして表現とツール開発が交差する実践例を紹介します。" : undefined,
     socialUrls: {
       github: "https://github.com/baku89",
       x: "https://x.com/_baku89",
@@ -91,7 +98,8 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/hi-ogawa.png",
     attendedIndex: 8,
     color: "purple",
-    talkTitle: "TBD",
+    talkTitle: import.meta.vfFeatures.guestDetailsOgawa ? "Inside Vitest: テストフレームワークアーキテクチャの詳細解説" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsOgawa ? "このトークでは、Vitestのアーキテクチャ的な独自性について探求します。Viteの幅広いフレームワークエコシステムとプラグイン機能の活用方法、Node.js、ブラウザ、エッジ環境でテストを実行可能にするランタイム非依存アーキテクチャ、そしてモッキング、カバレッジ、テストの並列実行システムなどのコア機能の実装について解説します。内部構造を理解することで、ソフトウェア開発ワークフローを改善するためのテストの書き方やとパフォーマンス最適化を学ぶことができます。" : undefined,
     socialUrls: {
       github: "https://github.com/hi-ogawa",
       bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
@@ -108,7 +116,11 @@ export const SESSION_SPEAKERS: Speaker[] = [
     avatarUrl: "/images/avatars/yuji-sugiura.png",
     attendedIndex: 9,
     color: "orange",
-    talkTitle: "TBD",
+    talkTitle: import.meta.vfFeatures.guestDetailsLeaysgur ? "OXCというOSSへの貢献と、その振り返り" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsLeaysgur
+      ? `OXCは、Rust製のJavaScript関連ツール群を扱うOSSです。
+そのOXCに貢献するようになって、1年半以上が経っていました。これまで、どういった想いでOSS活動を続けてきたか、またそれはどういう内容だったのかを一挙に振り返ります。`
+      : undefined,
     socialUrls: {
       github: "https://github.com/leaysgur",
       x: "https://x.com/leaysgur",
