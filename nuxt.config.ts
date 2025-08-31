@@ -129,9 +129,14 @@ export default defineNuxtConfig({
   featureFlags: {
     timetable: process.env.CONTEXT !== "production",
     staff: process.env.CONTEXT !== "production",
+
     soldOutAfterParty: true,
     soldOutEarlyBirdAfterParty: true,
-    soldOutEarlyBird: process.env.CONTEXT !== "production", // turn on it at 9/1
+    soldOutEarlyBird: process.env.CONTEXT !== "production", // turn it on at 9/1
+    soldOutGeneral: false, // turn on when sold out
+    soldOutHandsOn: false, // turn on when sold out
+    soldOutIndividualSponsor: false, // turn on when sold out
+
     guestDetailsEvan: false,
     guestDetailsDaniel: process.env.CONTEXT !== "production",
     guestDetailsJohnson: process.env.CONTEXT !== "production",
