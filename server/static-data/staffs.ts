@@ -431,6 +431,13 @@ export const staffs: Staffs = {
         github: "https://github.com/jiyuujin",
       },
     },
+    {
+      name: "Anthony Fu",
+      avatarUrl: "/images/avatars/staffs/antfu.webp",
+      socialUrls: {
+        github: "https://github.com/antfu",
+      },
+    },
   ],
   volunteers: [
     { name: "いちむら ゆうま" },
