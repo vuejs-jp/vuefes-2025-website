@@ -303,6 +303,7 @@ timetable:
   platinumSponsorSession: "プラチナスポンサーセッション"
   lunchTime: "ランチタイム"
   studentSupportProgram: "学生支援プログラム"
+  studentSupportProgramSessionTitle: "学生支援プログラム\nkazuponが見つけた才能たち ── Vue.jsそしてOSSエコシステムを変える開発者発掘術"
   break: "休憩"
   beginnerHandsOn: "初級者向けハンズオン"
   intermediateHandsOn: "中級者向けハンズオン"

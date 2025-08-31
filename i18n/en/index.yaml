@@ -304,6 +304,7 @@ timetable:
   platinumSponsorSession: "Platinum Sponsor Session"
   lunchTime: "Lunch Time"
   studentSupportProgram: "Student Support Program"
+  studentSupportProgramSessionTitle: "Student Support Program\nTalents discovered by kazupon ── Developer discovery techniques that change Vue.js and the OSS ecosystem"
   break: "Break"
   beginnerHandsOn: "Beginner Hands-on"
   intermediateHandsOn: "Intermediate Hands-on"
