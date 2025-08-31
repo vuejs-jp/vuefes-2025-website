@@ -37,9 +37,8 @@ const menuItems = computed<MenuItemProps[]>(() =>
     {
       id: HOME_HEADING_ID.timetable,
       label: "Timetable",
-      // TODO:
-      routeName: localeRoute({ name: "index" }).name,
-      disabled: !__FEATURE_TIMETABLE__,
+      routeName: localeRoute({ name: "timetable" }).name,
+      disabled: !import.meta.vfFeatures.timetable,
     },
     {
       id: HOME_HEADING_ID.speaker,
@@ -103,6 +102,7 @@ const WIDE_ROUTE_NAMES: RoutesNamesList[] = [
   "sponsors",
   "sponsors-sponsorId",
   "event",
+  "timetable",
   "related-events",
   "store",
 ];
@@ -232,6 +232,7 @@ watch(() => route.hash, async (hash) => {
 
   &.widen-content {
     min-width: 960px;
+    /* min-width: 95%; */
     transition: unset;
 
     @media (--mobile) {

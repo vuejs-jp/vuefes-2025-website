@@ -56,6 +56,7 @@ ticket:
     attention1: "※ Vue Fes Japan へのご参加には、一般チケットも必要となります。"
     attention2: "※ 詳しくは{about}をご覧ください。"
     about: "個人スポンサーについて"
+  soldOut: "SOLD OUT"
   buy: "チケットを購入する"
 
 nameBadge:
@@ -266,6 +267,10 @@ contactForm:
       label: "送信する"
   successMessage: "送信しました"
   errorMessage: "送信に失敗しました。もう一度お試しください。"
+staff:
+  title: "スタッフ"
+  description: "Vue Fes Japan 2025 は、Vue.js 日本ユーザーグループのスタッフによって企画・運営されています。"
+  volunteer: "ボランティアスタッフ"
 snsIntroduction: "最新情報は公式SNSをご覧ください"
 snsIconImageAlt:
   x: "X(旧Twitter)アイコン"
@@ -281,6 +286,30 @@ validation:
   required: "{target}の入力は必須です。"
   email: "メールアドレスが正しい形式ではありません。"
 
+timetable:
+  title: "タイムテーブル"
+  description: "Vue Fes Japan 2025のタイムテーブルです。"
+  track:
+    hacomono: "FitFits with hacomonoトラック"
+    mates: "メイツトラック"
+    feature: "フューチャーアーキテクトトラック"
+    cyberAgent: "サイバーエージェントトラック"
+  slider: "発表資料"
+  session: "セッション"
+  # Timetable content translations
+  openingReception: "開場・受付"
+  opening: "オープニング"
+  keynote: "キーノート"
+  platinumSponsorSession: "プラチナスポンサーセッション"
+  lunchTime: "ランチタイム"
+  studentSupportProgram: "学生支援プログラム"
+  break: "休憩"
+  beginnerHandsOn: "初級者向けハンズオン"
+  intermediateHandsOn: "中級者向けハンズオン"
+  panelDiscussion: "パネルディスカッション"
+  lightningTalk: "ライトニングトーク"
+  transition: "転換"
+  afterParty: "アフターパーティー\nsupported by 転職ドラフト"
 relatedEvents:
   title: "Related Events"
   sectionTitle: "関連イベント"

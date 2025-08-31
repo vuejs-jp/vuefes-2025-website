@@ -4,16 +4,23 @@ useGitIgnore: true
 words:
   - abramov
   - acconect
+  - Ainoya
+  - akinori
   - Akryum
   - allscale
   - allspeed
   - andpad
+  - arisa
   - arounds
+  - astrotyotogood
+  - astuki
+  - atsuki
   - authjs
   - autodocs
   - barai
   - bengo
   - bsky
+  - Bucky
   - ceroan
   - chau
   - chiyoda
@@ -22,6 +29,7 @@ words:
   - cloudsign
   - codmon
   - Colada
+  - corons
   - cosme
   - cosmonic
   - crayfisher
@@ -30,72 +38,118 @@ words:
   - danielroe
   - databank
   - dateness
+  - dero
   - dominikg
   - emscripten
   - escentier
+  - evenodd
   - ffef
   - finatext
   - finetext
   - fract
   - ftechno
+  - fujimmm
+  - Fujishiro
+  - FUJITA
   - gaearon
+  - genj
   - guillaume
+  - Gura
   - Haba
   - hacomono
   - Hanako
+  - hannoeru
   - hanzomon
+  - happylifetaka
   - hashimoto
+  - Hasuto
   - healthtech
   - hennge
+  - hikkobay
   - hinomaru
   - Hiranuma
+  - hiro
+  - hiroko
   - hiroshi
   - ikkyu
+  - Ikuta
   - ikyu
   - inputtext
   - intlify
   - ishii
   - istyle
   - Jiro
+  - jiyuujin
   - johnsoncodehk
   - JUCE
+  - Junpei
   - Kaede
   - Kaigi
+  - KALUPASU
+  - karacoro
+  - karan
+  - karancoro
   - karte
   - katanuki
   - Kato
+  - katsuhiro
   - kawaguchi
   - kazu
   - kazupon
   - kazuya
+  - keigo
   - keihin
   - kgierke
   - kiaking
   - kinto
+  - Kobari
   - kodomon
+  - Kogure
+  - kokoe
+  - Kota
+  - kotafujishiro
+  - ktym
+  - kurawa
   - lacunarity
   - leaysgur
   - lightningcss
   - Livesense
   - livestreaming
   - lycorp
+  - magcho
   - marunouchi
   - matcha
   - medpeer
+  - misaki
   - mita
+  - miyake
+  - mizukirimatsu
+  - mnch
+  - moabear
+  - mooncat
+  - Moriguin
+  - morishita
+  - Murata
   - NAGAI
   - naitokosuke
   - nakano
+  - nakayama
+  - nakayamaakinori
+  - nami
   - Naoki
   - naokihaba
+  - naramochi
   - neginasu
   - Nishihara
   - nitropack
   - nofa
   - noindex
+  - nokki
   - noopener
   - noreferrer
   - noriyuki
+  - Nozomu
+  - nozomuikuta
   - nuxi
   - nuxt
   - nuxtjs
@@ -114,10 +168,19 @@ words:
   - Rahul
   - Rakuten
   - Rinchoku
+  - ritogk
   - RIZAP
   - RNBO
   - rolldown
+  - rowspan
+  - rstore
+  - rymiyamoto
+  - ryoaccount
+  - ryuhei
   - Saburo
+  - sasagar
+  - sasagawaki
+  - Sasaki
   - Sato
   - sayn
   - senbei
@@ -126,7 +189,9 @@ words:
   - shimizu
   - Shingo
   - shinkansen
+  - Shota
   - sidebase
+  - Spidernight
   - ssssota
   - stockmark
   - studist
@@ -141,14 +206,21 @@ words:
   - textareas
   - textlint
   - themself
+  - thiha
   - Thorsten
   - tiful
+  - tigertrack
   - todde
   - toei
   - tohoku
   - tokaido
   - tokusho
+  - Tomoda
+  - totocalcio
+  - toyo
   - tozai
+  - Tsai
+  - Tsuchiya
   - tsuno
   - ubugeeei
   - unhead
@@ -171,14 +243,21 @@ words:
   - webshops
   - workerd
   - xlink
+  - yamageji
   - yamanoku
   - yamanote
   - yappli
   - Yogo
   - yoshiya
+  - Yuhei
   - Yuichi
   - yuichkun
   - yuji
+  - Yuka
+  - yuki
+  - Yurika
+  - Yusa
+  - yuta
   - Yuto
   - zari
   - zauel

@@ -6,6 +6,7 @@ import type { NuxtPage } from "nuxt/schema";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    "./modules/00.feature-flags.ts",
     "@nuxt/eslint",
     "@nuxt/scripts",
     "@nuxtjs/i18n",
@@ -57,9 +58,6 @@ export default defineNuxtConfig({
     peatixApiSecret: process.env.PEATIX_API_SECRET,
     peatixEventId: process.env.PEATIX_EVENT_ID,
 
-    // for server
-    __FEATURE_TIMETABLE__: !["0", undefined].includes(process.env.FEATURE_TIMETABLE), // ?
-
     siteUrl: process.env.NODE_ENV === "production"
       ? process.env.CONTEXT === "production"
         ? "https://vuefes.jp/2025/"
@@ -106,9 +104,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    define: {
-      __FEATURE_TIMETABLE__: process.env.FEATURE_TIMETABLE || false, // ?
-    },
     css: {
       transformer: "lightningcss",
       lightningcss: {
@@ -128,6 +123,22 @@ export default defineNuxtConfig({
         },
       }),
     ],
+  },
+
+  // Use `process.env.CONTEXT !== "production"` for dev only features
+  featureFlags: {
+    timetable: process.env.CONTEXT !== "production",
+    staff: process.env.CONTEXT !== "production",
+    soldOutAfterParty: true,
+    soldOutEarlyBirdAfterParty: true,
+    soldOutEarlyBird: process.env.CONTEXT !== "production", // turn on it at 9/1
+    guestDetailsEvan: false,
+    guestDetailsDaniel: process.env.CONTEXT !== "production",
+    guestDetailsJohnson: process.env.CONTEXT !== "production",
+    guestDetailsAkryum: process.env.CONTEXT !== "production",
+    guestDetailsBaku: process.env.CONTEXT !== "production",
+    guestDetailsOgawa: process.env.CONTEXT !== "production",
+    guestDetailsLeaysgur: process.env.CONTEXT !== "production",
   },
 
   eslint: {

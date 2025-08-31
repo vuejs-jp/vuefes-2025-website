@@ -30,3 +30,4 @@ logs
 .netlify
 
 app/components/_i18n
+server/i18n/generated

@@ -22,6 +22,7 @@ export default withNuxt()
       "app/components/_i18n",
       "server/db/drizzle",
       "server/peatix-api/schema.d.ts",
+      "server/i18n/generated",
     ],
   })
   .append({
