@@ -608,7 +608,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
           {
             id: "discussion",
             type: "event",
-            title: t("timetable.panelDiscussion"),
+            title: t("timetable.crossTalkTitle"),
             colspan: 1,
             rowspan: 8,
             startTime: "15:50",

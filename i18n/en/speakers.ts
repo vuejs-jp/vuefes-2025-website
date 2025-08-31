@@ -30,7 +30,12 @@ export const SESSION_SPEAKERS: Speaker[] = [
     attendedIndex: 4,
     color: "purple",
     talkTitle: import.meta.vfFeatures.guestDetailsDaniel ? "Beyond the Framework: Building for the Next Decade of the Web" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsDaniel ? `Frontend tooling moves at breakneck speed, but the foundations of great web applications remain surprisingly constant. In this talk, Daniel explores how to architect projects that will thrive across technology shifts — from framework migrations to evolving hosting landscapes. Drawing from his work leading the Nuxt core team and collaborating with global developer communities, Daniel shares patterns, pitfalls, and practical strategies for building software that stays resilient, adaptable, and joyful to work on.` : undefined,
+    talkOverview: import.meta.vfFeatures.guestDetailsDaniel
+      ? `Frontend tooling moves at breakneck speed, but the foundations of great web applications remain surprisingly constant.
+
+In this talk, Daniel explores how to architect projects that will thrive across technology shifts — from framework migrations to evolving hosting landscapes.
+Drawing from his work leading the Nuxt core team and collaborating with global developer communities, Daniel shares patterns, pitfalls, and practical strategies for building software that stays resilient, adaptable, and joyful to work on.`
+      : undefined,
     socialUrls: {
       github: "https://github.com/danielroe",
       bluesky: "https://bsky.app/profile/danielroe.dev",
@@ -63,7 +68,16 @@ export const SESSION_SPEAKERS: Speaker[] = [
     attendedIndex: 6,
     color: "navy",
     talkTitle: import.meta.vfFeatures.guestDetailsAkryum ? "rstore and the challenge of building a local-first store" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsAkryum ? `We will explore what is rstore and how it works as a flexible state management solution. Let's answer many interesting questions like: What does local-first mean? How is rstore different from pinia? How was it made extensible to support many use cases? What is data federation? How to make an offline sync engine?` : undefined,
+    talkOverview: import.meta.vfFeatures.guestDetailsAkryum
+      ? `We will explore what is rstore and how it works as a flexible state management solution.
+
+Let's answer many interesting questions like:
+・What does local-first mean?
+・How is rstore different from pinia?
+・How was it made extensible to support many use cases?
+・What is data federation?
+・How to make an offline sync engine?`
+      : undefined,
     socialUrls: {
       github: "https://github.com/Akryum",
       x: "https://x.com/Akryum",
@@ -97,7 +111,10 @@ export const SESSION_SPEAKERS: Speaker[] = [
     attendedIndex: 8,
     color: "purple",
     talkTitle: import.meta.vfFeatures.guestDetailsOgawa ? "Inside Vitest: Test Framework Architecture Deep Dive" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsOgawa ? "This talk explores what makes Vitest architecturally unique, including how it leverages Vite's broad framework ecosystem and plugin capabilities, its runtime agnostic architecture that enables running the same tests across Node.js, browsers, and edge environments, and the implementation of core testing features like mocking, coverage, and parallel execution systems. By understanding the internals, you'll learn better testing practices and test performance optimization techniques to improve your software development workflow." : undefined,
+    talkOverview: import.meta.vfFeatures.guestDetailsOgawa
+      ? `This talk explores what makes Vitest architecturally unique, including how it leverages Vite's broad framework ecosystem and plugin capabilities, its runtime agnostic architecture that enables running the same tests across Node.js, browsers, and edge environments, and the implementation of core testing features like mocking, coverage, and parallel execution systems.
+By understanding the internals, you'll learn better testing practices and test performance optimization techniques to improve your software development workflow.`
+      : undefined,
     socialUrls: {
       github: "https://github.com/hi-ogawa",
       bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
