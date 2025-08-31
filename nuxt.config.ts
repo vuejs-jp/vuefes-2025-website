@@ -131,6 +131,7 @@ export default defineNuxtConfig({
     staff: process.env.CONTEXT !== "production",
     soldOutAfterParty: true,
     soldOutEarlyBirdAfterParty: true,
+    soldOutEarlyBird: process.env.CONTEXT !== "production", // turn on it at 9/1
     guestDetailsEvan: false,
     guestDetailsDaniel: process.env.CONTEXT !== "production",
     guestDetailsJohnson: process.env.CONTEXT !== "production",

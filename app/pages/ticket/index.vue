@@ -31,7 +31,8 @@ const { t, locale } = useI18n();
 const localeRoute = useLocaleRoute();
 
 const isSoldOutAfterParty = import.meta.vfFeatures.soldOutAfterParty;
-const isSoldOutEarlyBirdAfterParty = import.meta.vfFeatures.soldOutEarlyBirdAfterParty;
+const isSoldOutEarlyBirdAfterParty = import.meta.vfFeatures.soldOutEarlyBirdAfterParty || import.meta.vfFeatures.soldOutEarlyBird;
+const isSoldOutEarlyBird = import.meta.vfFeatures.soldOutEarlyBird;
 
 const isLoading = ref(false);
 
@@ -84,9 +85,10 @@ useSeoMeta({
                 <span class="ticket-badge-price">
                   <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
                   <span class="ticket-badge-price-type">{{ t('ticket.early') }}</span>
-                  <span class="ticket-badge-price-value">
+                  <span class="ticket-badge-price-value" :class="{ 'sold-out': isSoldOutEarlyBird }">
                     <span class="ticket-badge-price-unit" :class="locale">{{ t("ticket.priceUnit") }}</span>{{ (Number(t('ticket.generalTicket.earlyPrice'))).toLocaleString() }}
                   </span>
+                  <span v-if="isSoldOutEarlyBird" class="sold-out-label">{{ t('ticket.soldOut') }}</span>
                 </span>
 
                 <span class="ticket-badge-price">
