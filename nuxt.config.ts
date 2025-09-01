@@ -127,7 +127,7 @@ export default defineNuxtConfig({
 
   // Use `process.env.CONTEXT !== "production"` for dev only features
   featureFlags: {
-    timetable: process.env.CONTEXT !== "production",
+    timetable: true,
     staff: process.env.CONTEXT !== "production",
 
     soldOutAfterParty: true,
@@ -138,12 +138,12 @@ export default defineNuxtConfig({
     soldOutIndividualSponsor: false, // turn on when sold out
 
     guestDetailsEvan: false,
-    guestDetailsDaniel: process.env.CONTEXT !== "production",
-    guestDetailsJohnson: process.env.CONTEXT !== "production",
-    guestDetailsAkryum: process.env.CONTEXT !== "production",
-    guestDetailsBaku: process.env.CONTEXT !== "production",
-    guestDetailsOgawa: process.env.CONTEXT !== "production",
-    guestDetailsLeaysgur: process.env.CONTEXT !== "production",
+    guestDetailsDaniel: true,
+    guestDetailsJohnson: true,
+    guestDetailsAkryum: true,
+    guestDetailsBaku: true,
+    guestDetailsOgawa: true,
+    guestDetailsLeaysgur: true,
   },
 
   eslint: {

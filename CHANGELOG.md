@@ -1,5 +1,44 @@
 # Changelog
 
+## v2.7.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.6.1...v2.7.0)
+
+### 🚀 Enhancements
+
+- Sold out after party ([#969](https://github.com/vuejs-jp/vuefes-2025/pull/969))
+- Feature flags improvement ([#970](https://github.com/vuejs-jp/vuefes-2025/pull/970))
+- Timetable ([#908](https://github.com/vuejs-jp/vuefes-2025/pull/908))
+- Staff ([#930](https://github.com/vuejs-jp/vuefes-2025/pull/930))
+- Guiest details ([#971](https://github.com/vuejs-jp/vuefes-2025/pull/971))
+- Closing early bird ([#972](https://github.com/vuejs-jp/vuefes-2025/pull/972))
+- Soldout tickets ([#981](https://github.com/vuejs-jp/vuefes-2025/pull/981))
+
+### 🩹 Fixes
+
+- Keynote time ([#974](https://github.com/vuejs-jp/vuefes-2025/pull/974))
+
+### 🏡 Chore
+
+- Eslint ignore path ([084db0e](https://github.com/vuejs-jp/vuefes-2025/commit/084db0e))
+- Add timetable og image ([5733802](https://github.com/vuejs-jp/vuefes-2025/commit/5733802))
+- Shuffle on client ([7f72943](https://github.com/vuejs-jp/vuefes-2025/commit/7f72943))
+- Aspect-ratio ([98fe395](https://github.com/vuejs-jp/vuefes-2025/commit/98fe395))
+- Add volunteer staff (Satouuuuuu) ([#975](https://github.com/vuejs-jp/vuefes-2025/pull/975))
+- Timetable improvement ([#977](https://github.com/vuejs-jp/vuefes-2025/pull/977))
+- Section transition ([477beec](https://github.com/vuejs-jp/vuefes-2025/commit/477beec))
+- Guest speaker info ([#979](https://github.com/vuejs-jp/vuefes-2025/pull/979))
+- Add core staff (antfu) ([#980](https://github.com/vuejs-jp/vuefes-2025/pull/980))
+- Sold out early bird ([39d97ca](https://github.com/vuejs-jp/vuefes-2025/commit/39d97ca))
+- Toggle feature flags for 2025-09-01 release ([d5e4a1e](https://github.com/vuejs-jp/vuefes-2025/commit/d5e4a1e))
+
+### ❤️ Contributors
+
+- @ubugeeei
+- @448jp
+- @Hal-Spidernight
+- @csy19
+
 ## v2.6.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.6.0...v2.6.1)
