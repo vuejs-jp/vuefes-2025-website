@@ -349,7 +349,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "default",
     talkTitle: "なんでRustの環境構築してないのにRust製のツールが動くの？",
     talkOverview: "最近はRust製のツールが幅を利かせています。RolldownやBiomeなんかは最近よく聞きます。\nVoidZeroという会社は「次世代のJavaScriptツールチェーンを作る」と言いながらRustのプロジェクトが半数を占めているという噂も。\n\nJavaScript/TypeScript系エンジニアである我々は気付かないうちにRust製のソフトウェアを使っているようです。\nRustの開発・実行環境なんて用意した記憶がないのに...。\n\n改めてRust製のツールが（JavaScriptと協調しながら）動く仕組みをおさらいしましょう。",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/ssssota",
@@ -366,7 +366,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "purple",
     talkTitle: "Nuxt4のSingleton Data Fetching Layerで何が変わるのか",
     talkOverview: "Nuxt4で導入されるSingleton Data Fetching Layerは、従来のuseFetch/useAsyncDataの問題点を根本的に解決する新しいアーキテクチャです。本LTでは、メモリ使用量の削減、リアクティブキーのサポート、自動的なデータクリーンアップなど、パフォーマンスと開発体験を劇的に改善する新機能を5分間で解説します。",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/NaokiHaba",
@@ -383,7 +383,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "orange",
     talkTitle: "アウトプットから始めるOSSコントリビューション\n〜eslint-plugin-vueの場合〜",
     talkOverview: "開発者の中には、「OSSに貢献したいけど難しそう」と感じている方が多いと思います（私もそうです）。\n\nTSKaigi 2025 にて、Anthony Fu 氏が登壇し、eslint-typegen というライブラリを紹介していました。\neslint-typegen に興味を持ち、学習した内容を社外に向けて登壇という形でアウトプットしました。\nこの経験がきっかけとなり、eslint-plugin-vue に eslint-typegen を追加する機会をいただきました。\n\n本LTでは上記を振り返りながら、「OSSの世界は意外と身近である」ことを伝えます。\n具体的には下記の内容を想定しています。\n\n1. 小さな発表やアウトプットが、OSS貢献のきっかけとなったプロセスについて\n2. OSSへの貢献を通じて、技術的に成長できたこと\n3. Vueエコシステムのコミュニティに、OSS参加を歓迎する文化があること",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/2nofa11",
@@ -398,7 +398,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "navy",
     talkTitle: "知覚とデザイン short version",
     talkOverview: "現在では「UI/UX」はありきたりの言葉になりました。\nユーザーストーリーを考慮した導線設計、デザインスタイルガイドを作成することでユーザーに見せるデザインの統一性・アクションをわかりやすくしています。\n\n人間が目から取得した情報を脳がどのように処理するかを理解することで、普段のデザインの見方に対して新しい所見を与えられればと思います。",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/rinchoku",
@@ -414,7 +414,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "default",
     talkTitle: "Nuxt 認証基盤作成における Cookie 状態管理のポイント",
     talkOverview: "Nuxt において独自の認証基盤を構築する際の、Cookie を用いた状態管理のポイントについて共有させていただきます。\n\n現時点では、Nuxt におけるメールアドレスおよびパスワードによる認証に関して、安定して利用できるサードパーティ製のソリューションが存在しません。\n\nそのため、独自に認証機構を実装した際の工夫点や注意点についてお伝えいたします。  \n特に、`useCookie` コンポーザブルを使用するだけでは期待通りに動作しなかった背景についても説明できればと考えております。\n",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/noriyuki-shimizu",
@@ -430,7 +430,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "purple",
     talkTitle: "個人でデジタル庁のデザインシステムをVue.jsで作っている話",
     talkOverview: "デジタル庁が公開しているデザインシステムをVue.jsで実装した話について発表します。デザインシステムを作っていく中で感じた強力なv-modelやcomputedの魅力などをお伝えします。",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/Crayfisher-zari",
@@ -447,7 +447,7 @@ export const LT_SPEAKERS: Speaker[] = [
     color: "orange",
     talkTitle: "React Nativeならぬ\"Vue Native\"が実現するかも？\n新世代マルチプラットフォーム開発フレームワークのLynxとLynxのVue.js対応を追ってみよう",
     talkOverview: "2025年3月、TikTokやCapCutなどを運営していることで有名なByteDance社が、新世代のモバイル向けマルチプラットフォーム開発フレームワークであるLynxを公開、OSSとして発表しました。\nこのLynx、Vue.jsに対応しようとしているそうです。ReactユーザーにとってのReact Nativeのように、Vue.jsのユーザーがキャッチアップ工数少なくモバイルネイティブアプリ開発ができるようになるかもしれません。\n\n実際、LynxのVue.jsの対応（以下Vue+Lynxと表現します）に向けてはVueクリエイターのEvan You氏がLynxのVue+Lynxを支援することをXで表明したり、VueコミュニティのRahul Vashishtha氏がVue+LynxのプロトタイプをGithub上で公開したりといった動きがあります。\n\nまだLynx自体公開されてから期間も短いこともあり、Vue+Lynxとなるとなかなか情報が少ないですし、日本語文献はもっと少ない（といいますかCfP書いてる時点で日本語での情報を少なくとも私は見つけられていない…）こともあり、なかなかこの話題が盛り上がっていないどころかほとんど見聞きしません。\n\nVashishtha氏のプロトタイプなどにも触れながら、Vue+LynxについてVueFes参加者のみなさんとワクワクを共有できたら幸いです。\n",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       x: "https://x.com/yut0naga1",
@@ -468,7 +468,7 @@ export const LT_SPEAKERS: Speaker[] = [
 API通信や認証も含めて自社で柔軟に改善できる体制を整えました。
 
 本LTでは、その技術構成と工夫したポイントをご紹介します。`,
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {},
   },

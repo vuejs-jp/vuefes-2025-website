@@ -355,7 +355,7 @@ export const LT_SPEAKERS: Speaker[] = [
 It seems that we, as JavaScript/TypeScript engineers, are using Rust-based software without even realizing it—even though we have no memory of ever setting up a Rust development environment.
 
 Let's take a fresh look at how these Rust-based tools work, especially in coordination with JavaScript.`,
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/ssssota",
@@ -372,7 +372,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     color: "purple",
     talkTitle: "What Changes with the Singleton Data Fetching Layer in Nuxt 4",
     talkOverview: "The Singleton Data Fetching Layer being introduced in Nuxt4 is a new architecture that fundamentally solves the problems of traditional useFetch/useAsyncData. In this Lightning Talk, I'll explain in 5 minutes the new features that dramatically improve performance and developer experience, including reduced memory usage, reactive key support, and automatic data cleanup.",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/NaokiHaba",
@@ -389,7 +389,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     color: "orange",
     talkTitle: "Getting Started with OSS Contribution Through Output: A Case Study on eslint-plugin-vue",
     talkOverview: "Many developers feel that contributing to open source is something they'd like to do—but it seems intimidating. I've felt the same.\n\nAt TSKaigi 2025, Anthony Fu introduced a library called `eslint-typegen`. His talk sparked my interest, so I decided to learn more about it and share what I learned in a public talk outside my company. That small act of output led to an unexpected opportunity: contributing `eslint-typegen` support to `eslint-plugin-vue`.\n\nIn this lightning talk, I'll reflect on that journey to show that *open source is closer than you think*. I'll cover:\n\n1. How a small talk and public output became the gateway to OSS contribution\n2. The technical growth I experienced through contributing\n3. The welcoming and open culture of the Vue ecosystem's OSS community\n\nI hope this story encourages more developers to take that first small step into the world of open source.",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/2nofa11",
@@ -404,7 +404,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     color: "navy",
     talkTitle: "Perception and Design (Short Version)",
     talkOverview: "Today, \"UI/UX\" has become a buzzword we hear all the time.\n\nBy designing user flows based on user stories and creating consistent design style guides, we aim to present a unified look and make actions clear for users.\n\nIn this talk, I hope to offer a fresh perspective on how we approach everyday design—by understanding how the human brain processes the information it receives through the eyes.",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/rinchoku",
@@ -420,7 +420,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     color: "default",
     talkTitle: "The Key to Cookie-Based State Management in Nuxt Authentication",
     talkOverview: "In this session, I'll share key considerations for managing authentication state using cookies when building a custom auth system in Nuxt.\n\nAs of now, there are no stable third-party solutions for email and password-based authentication in Nuxt, which has led us to implement our own.\n\nI'll walk you through the challenges we faced and the practical workarounds we found—especially around why simply using the `useCookie` composable didn't behave as expected, and what we did to address it.",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/noriyuki-shimizu",
@@ -436,7 +436,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     color: "purple",
     talkTitle: "Building Japan's Digital Agency Design System in Vue.js as a Solo Developer",
     talkOverview: "In this talk, I'll share our experience implementing the Digital Agency's public design system using Vue.js. Along the way, I'll highlight some of the key strengths we discovered—particularly the power of `v-model` and `computed`—as we built out the system.",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       github: "https://github.com/Crayfisher-zari",
@@ -453,7 +453,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
     color: "orange",
     talkTitle: "Could \"Vue Native\" the Vue Version of React Native Become a Reality?\nLet's Take a Look at Lynx, a Next-Generation Cross-Platform Framework, and Its Vue.js Support",
     talkOverview: "In March 2025, ByteDance—the company behind TikTok and CapCut—announced a new open-source, next-generation mobile cross-platform development framework called **Lynx**.\n\nLynx is now aiming to support **Vue.js**, potentially offering Vue developers a mobile-native development experience with minimal learning curve—much like what React Native does for React users.\n\nThere's already exciting momentum: Vue creator **Evan You** has publicly expressed support for Vue+Lynx on X (formerly Twitter), and Vue community member **Rahul Vashishtha** has even shared a working prototype on GitHub.\n\nGiven how new Lynx is, there's still very little documentation available—especially in Japanese—and it hasn't yet gained much attention in Vue circles.\n\nIn this talk, I'd love to introduce Vue+Lynx, highlight what's already happening (including Vashishtha's prototype), and share the excitement and possibilities this could bring to the Vue community. Let's explore what the future of Vue-powered native app development might look like—together.",
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {
       x: "https://x.com/yut0naga1",
@@ -474,7 +474,7 @@ As a result, the development team can now independently design and improve the s
 and we have built a structure that allows us to flexibly enhance API communication and authentication in-house.
 
 In this LT, we will introduce the technical architecture and the key points we focused on.`,
-    talkSchedule: "16:25 - 16:30",
+    talkSchedule: "16:25 - 17:25",
     talkTrack: "mates",
     socialUrls: {},
   },
