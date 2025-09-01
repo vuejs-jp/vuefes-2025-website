@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.7.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.0...v2.7.1)
+
+### 🏡 Chore
+
+- Lt schedule ([aefcca2](https://github.com/vuejs-jp/vuefes-2025/commit/aefcca2))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.7.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.6.1...v2.7.0)
