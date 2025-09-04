@@ -2,7 +2,7 @@
 @import "./custom-media-query.css";
 @import "./reset.css";
 
-/** 
+/**
  * Colors
   ------------------------------------------ */
 
@@ -41,26 +41,26 @@
   --color-alert: #db0000;
 }
 
-/** 
+/**
  * Z-index layers
   ------------------------------------------ */
 
 :root {
   /* Background layers */
   --z-index-background: -1;
-  
+
   /* Base content layers */
   --z-index-base: 1;
   --z-name-badge-highlight: 2;
-  
+
   /* UI layers */
   --z-index-header: 100;
   --z-index-navigation: 200;
-  
+
   /* Overlay layers */
   --z-index-overlay: 300;
   --z-index-modal: 400;
-  
+
   /* Special layers */
   --z-index-focused-name-badge: 9999;
 }
@@ -82,7 +82,8 @@ body {
     color: var(--color-base);
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     color: var(--color-text-default);
     margin-bottom: 0.5rem;
   }
@@ -135,103 +136,91 @@ body {
   }
 }
 
-/** 
+/**
+ * Typography (token)
+  ------------------------------------------ */
+:root {
+  --typography-h1-size: 20px;
+  --typography-h1-line-height: 30px;
+  --typography-h2-size: 18px;
+  --typography-h2-line-height: 27px;
+  --typography-h3-size: 16px;
+  --typography-h3-line-height: 24px;
+  --typography-body1-size: 16px;
+  --typography-body1-line-height: 24px;
+  --typography-body2-size: 14px;
+  --typography-body2-line-height: 21px;
+  --typography-body3-size: 13px;
+  --typography-body3-line-height: 19.5px;
+  --typography-caption-size: 11px;
+  --typography-caption-line-height: 16.5px;
+
+  @media (--mobile) {
+    --typography-h1-size: 18px;
+    --typography-h1-line-height: 27px;
+    --typography-h2-size: 16px;
+    --typography-h2-line-height: 24px;
+    --typography-h3-size: 14px;
+    --typography-h3-line-height: 21px;
+    --typography-body1-size: 14px;
+    --typography-body1-line-height: 21px;
+    --typography-body2-size: 12px;
+    --typography-body2-line-height: 18px;
+    --typography-body3-size: 11px;
+    --typography-body3-line-height: 15px;
+    --typography-caption-size: 10px;
+    --typography-caption-line-height: 15px;
+  }
+}
+
+/**
  * Typography
   ------------------------------------------ */
 
 :root {
   /* align to BODY1 */
   * {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: var(--typography-body1-size);
+    line-height: var(--typography-body1-line-height);
   }
 
   h1 {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: var(--typography-h1-size);
+    line-height: var(--typography-h1-line-height);
   }
 
   h2 {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: var(--typography-h2-size);
+    line-height: var(--typography-h2-line-height);
   }
 
   h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: var(--typography-h3-size);
+    line-height: var(--typography-h3-line-height);
   }
 
   /**
-   * utilities 
+   * utilities
    ------------------------------------------ */
 
   .text-body-1 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: var(--typography-body1-size);
+    line-height: var(--typography-body1-line-height);
   }
 
   .text-body-2 {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: var(--typography-body2-size);
+    line-height: var(--typography-body2-line-height);
   }
 
   .text-body-3 {
-    font-size: 13px;
-    line-height: 19.5px;
+    font-size: var(--typography-body3-size);
+    line-height: var(--typography-body3-line-height);
   }
 
   .text-caption {
-    font-size: 11px;
-    line-height: 16.5px;
-  }
-}
-
-@media (--mobile) {
-  :root {
-    /* align to BODY1 */
-    * {
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    h1 {
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    h2 {
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    h3 {
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    /**
-     * utilities 
-     ------------------------------------------ */
-
-    .text-body-1 {
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    .text-body-2 {
-      font-size: 12px;
-      line-height: 18px;
-    }
-
-    .text-body-3 {
-      font-size: 11px;
-      line-height: 15px;
-    }
-
-    .text-caption {
-      font-size: 10px;
-      line-height: 15px;
-    }
+    font-size: var(--typography-caption-size);
+    line-height: var(--typography-caption-line-height);
   }
 }
 
@@ -262,7 +251,7 @@ body {
   }
 }
 
-/** 
+/**
  * Radius
   ------------------------------------------ */
 
@@ -282,7 +271,6 @@ p {
     margin-bottom: 0;
   }
 }
-
 
 /**
   * Smooth Scroll
