@@ -124,8 +124,8 @@ By understanding the internals, you'll learn better testing practices and test p
   {
     id: "leaysgur",
     name: "Yuji Sugiura",
-    affiliation: "PixelGrid Inc.",
-    title: "Frontend Engineer",
+    affiliation: "VoidZero Inc.",
+    title: "Oxc core team member",
     talkSchedule: "12:50 - 13:20",
     talkTrack: "mates",
     avatarUrl: "/images/avatars/yuji-sugiura.png",

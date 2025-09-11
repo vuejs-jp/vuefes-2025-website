@@ -124,8 +124,8 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
   {
     id: "leaysgur",
     name: "杉浦 有右嗣",
-    affiliation: "ピクセルグリッド",
-    title: "フロントエンドエンジニア",
+    affiliation: "VoidZero Inc.",
+    title: "Oxc コアチームメンバー",
     talkSchedule: "12:50 - 13:20",
     talkTrack: "mates",
     avatarUrl: "/images/avatars/yuji-sugiura.png",
