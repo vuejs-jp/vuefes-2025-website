@@ -278,7 +278,15 @@ const SPONSORS_SILVER: Sponsor[] = [
     description: "CodeRabbit slashes code review time and catches bugs faster. It hooks into GitHub and GitLab to auto-review PRs. Free VS Code extension available.",
     id: "CodeRabbit",
   },
-
+  {
+    name: "CrowdWorks, Inc.",
+    logoImageUrl: "/images/sponsor-logo/silver/crowd-works.png",
+    logoImageAlt: "CrowdWorks, Inc.'s logo",
+    linkUrl: "https://crowdworks.co.jp/",
+    plan: "silver",
+    description: "As one of Japan's largest crowdsourcing platforms, CrowdWorks actively leverages Vue.js for our service development. We are delighted to support the success of Vue Fes Japan and hope for the continued development of the community.",
+    id: "crowd-works",
+  },
 ];
 const SPONSORS_BRONZE: Sponsor[] = [
   {

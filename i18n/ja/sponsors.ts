@@ -298,7 +298,15 @@ const SPONSORS_SILVER: Sponsor[] = [
     description: "CodeRabbitはコードレビューの時間とバグを減らすAIコードレビューサービスです。GitHub/GitLabなどと連携し、PRを自動でレビューします。VS Code機能拡張は無料で利用できます。",
     id: "CodeRabbit",
   },
-
+  {
+    name: "株式会社 クラウドワークス",
+    logoImageUrl: "/images/sponsor-logo/silver/crowd-works.png",
+    logoImageAlt: "株式会社クラウドワークスのロゴ",
+    linkUrl: "https://crowdworks.co.jp/",
+    plan: "silver",
+    description: "日本最大級のクラウドソーシングサービス「クラウドワークス」は、サービス開発でVue.jsを積極的に活用しています。コミュニティの更なる発展を願い、Vue Fes Japanの成功を応援しています！",
+    id: "crowd-works",
+  },
 ];
 const SPONSORS_BRONZE: Sponsor[] = [
   {
