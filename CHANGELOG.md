@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.7.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.1...v2.7.2)
+
+### 💅 Refactors
+
+- Typography token ([#978](https://github.com/vuejs-jp/vuefes-2025/pull/978))
+
+### 🏡 Chore
+
+- Add CrowdWorks, Inc. as a silver sponsor (#966) ([#966](https://github.com/vuejs-jp/vuefes-2025/pull/966))
+- Update speaker affiliation and title (Yuji Sugiura) ([#989](https://github.com/vuejs-jp/vuefes-2025/pull/989))
+- **deps-dev:** Bump textlint from 14.5.0 to 15.2.2 ([#986](https://github.com/vuejs-jp/vuefes-2025/pull/986))
+
+### ❤️ Contributors
+
+- @naokihaba
+- @totocalcio
+
 ## v2.7.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.0...v2.7.1)
