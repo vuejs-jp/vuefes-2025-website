@@ -58,7 +58,7 @@
     "@nuxtjs/i18n": "9.4.0",
     "@nuxtjs/seo": "^3.0.1",
     "@nuxtjs/storybook": "^8.3.3",
-    "@primevue/forms": "^4.3.2",
+    "@primevue/forms": "^4.3.9",
     "@primevue/nuxt-module": "^4.3.7",
     "@sidebase/nuxt-auth": "1.0.0",
     "@storybook-vue/nuxt": "^8.3.3",
