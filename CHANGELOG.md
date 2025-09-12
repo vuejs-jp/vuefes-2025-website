@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.7.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.2...v2.7.3)
+
+### 🩹 Fixes
+
+- Namecard deadline ([#992](https://github.com/vuejs-jp/vuefes-2025/pull/992))
+
+### ❤️ Contributors
+
+- @totocalcio
+
 ## v2.7.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.1...v2.7.2)
