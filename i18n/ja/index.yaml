@@ -63,7 +63,8 @@ nameBadge:
   title: "ネームカード"
   description: "{ticketName}をご購入後、必要な情報をご登録いただくと、当日会場にてご自身のアバター＋名前入りのネームカードがもらえます！（要ソーシャルログイン）"
   ticketName: "Vue Fes Japan 2025 のチケット"
-  deadlineDescription: "ネームカード編集期限：2025 年 9 月 29 日 23:59"
+  deadlineDescription: "ネームカード編集期限：2025 年 9 月 {correction} 21 日（日） 23:59"
+  correction: "29 日"
   attention: "※ネームカード作成は必須ではありません。"
   coverImageAlt: "ネームカードイメージ画像"
   confirm: 自分のネームカードを確認する

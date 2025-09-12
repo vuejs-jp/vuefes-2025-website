@@ -222,9 +222,13 @@ useSeoMeta({
           </a>
         </template>
       </i18n-t>
-      <p class="name-badge-description">
-        {{ t('nameBadge.deadlineDescription') }}
-      </p>
+      <i18n-t keypath="nameBadge.deadlineDescription" tag="p" class="name-badge-description">
+        <template #correction>
+          <del>
+            {{ t('nameBadge.correction') }}
+          </del>
+        </template>
+      </i18n-t>
       <p class="name-badge-attention">
         {{ t('nameBadge.attention') }}
       </p>
