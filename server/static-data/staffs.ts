@@ -481,5 +481,6 @@ export const staffs: Staffs = {
     { name: "山本 隆史" },
     { name: "石坂 大輝" },
     { name: "Satouuuuuu" },
+    { name: "Nakahira Masato" },
   ],
 };
