@@ -128,7 +128,7 @@ export default defineNuxtConfig({
   // Use `process.env.CONTEXT !== "production"` for dev only features
   featureFlags: {
     timetable: true,
-    staff: process.env.CONTEXT !== "production",
+    staff: true,
 
     soldOutAfterParty: true,
     soldOutEarlyBirdAfterParty: true,
