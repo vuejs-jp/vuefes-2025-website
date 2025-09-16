@@ -134,7 +134,7 @@ export default defineNuxtConfig({
     soldOutEarlyBirdAfterParty: true,
     soldOutEarlyBird: true,
     soldOutGeneral: false, // turn on when sold out
-    soldOutHandsOn: false, // turn on when sold out
+    soldOutHandsOn: true, // turn on when sold out
     soldOutIndividualSponsor: false, // turn on when sold out
 
     guestDetailsEvan: false,
