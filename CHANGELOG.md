@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.8.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.8.0...v2.8.1)
+
+### 🏡 Chore
+
+- Sold out hands-on ([1394c73](https://github.com/vuejs-jp/vuefes-2025/commit/1394c73))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.8.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.3...v2.8.0)
