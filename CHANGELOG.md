@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.8.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.3...v2.8.0)
+
+### 🏡 Chore
+
+- Make the staffs public ([d58b759](https://github.com/vuejs-jp/vuefes-2025/commit/d58b759))
+
+### ❤️ Contributors
+
+- @ubugeeei
+
 ## v2.7.3
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.2...v2.7.3)
