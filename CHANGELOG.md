@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.8.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.8.1...v2.8.2)
+
+### 🏡 Chore
+
+- Add volunteer staff (Nakahira Masato) ([#997](https://github.com/vuejs-jp/vuefes-2025/pull/997))
+
+### ❤️ Contributors
+
+- @448jp
+
 ## v2.8.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.8.0...v2.8.1)
