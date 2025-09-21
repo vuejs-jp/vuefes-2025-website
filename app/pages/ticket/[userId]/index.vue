@@ -24,6 +24,8 @@ const toast = useToast();
 const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();
 
+const expiredNameBadgeRegistration = import.meta.vfFeatures.expiredNameBadgeRegistration;
+
 const { data: session, status } = useAuth();
 const route = useRoute("ticket-userId");
 const { data: nameBadgeData } = useFetch(`/api/name-badge/${route.params.userId}`);
@@ -112,6 +114,7 @@ function copyUrl() {
         </p>
 
         <VFButton
+          v-if="!expiredNameBadgeRegistration"
           :link="localeRoute(`/ticket/${session!.userId}/edit`)"
           class="vf-button vf-button-primary"
         >

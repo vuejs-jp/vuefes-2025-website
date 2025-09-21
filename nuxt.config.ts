@@ -137,6 +137,8 @@ export default defineNuxtConfig({
     soldOutHandsOn: true, // turn on when sold out
     soldOutIndividualSponsor: false, // turn on when sold out
 
+    expiredNameBadgeRegistration: true,
+
     guestDetailsEvan: false,
     guestDetailsDaniel: true,
     guestDetailsJohnson: true,

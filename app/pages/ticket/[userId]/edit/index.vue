@@ -37,11 +37,26 @@ const bp = useBreakpoint();
 const localeRoute = useLocaleRoute();
 const route = useRoute();
 
+if (import.meta.vfFeatures.expiredNameBadgeRegistration) {
+  if (user.value) {
+    await navigateTo(localeRoute({
+      name: "ticket-userId",
+      params: { userId: user.value.userId },
+    }));
+  } else {
+    await navigateTo(localeRoute({ name: "ticket" }));
+  }
+}
+
 if (route.params.userId !== user.value?.userId) {
-  navigateTo(localeRoute({
-    name: "ticket-userId",
-    params: { userId: user.value!.userId },
-  }));
+  if (user.value) {
+    await navigateTo(localeRoute({
+      name: "ticket-userId",
+      params: { userId: user.value.userId },
+    }));
+  } else {
+    await navigateTo(localeRoute({ name: "ticket" }));
+  }
 }
 
 const { data: nameBadgeData, refresh } = useFetch("/api/name-badge");
