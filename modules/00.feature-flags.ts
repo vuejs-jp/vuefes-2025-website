@@ -63,7 +63,7 @@ export default defineNuxtModule<ModuleOptions>({
       nitroConfig.typescript.tsConfig.compilerOptions = nitroConfig.typescript.tsConfig.compilerOptions || {};
       nitroConfig.typescript.tsConfig.compilerOptions.types = nitroConfig.typescript.tsConfig.compilerOptions.types || [];
       if (Array.isArray(nitroConfig.typescript.tsConfig.compilerOptions.types)) {
-        nitroConfig.typescript.tsConfig.compilerOptions.types.push(".nuxt/types/nitro-feature-flags");
+        nitroConfig.typescript.tsConfig.compilerOptions.types.push("../.nuxt/types/nitro-feature-flags");
       }
     });
 

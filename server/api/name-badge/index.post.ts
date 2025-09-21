@@ -32,6 +32,13 @@ const schema = v.object({
 });
 
 export default defineEventHandler(async (event) => {
+  if (import.meta.vfFeatures.expiredNameBadgeRegistration) {
+    throw createError({
+      message: "Name badge registration period has ended",
+      statusCode: 403,
+    });
+  }
+
   // Authorization
   const session = await getServerSession(event);
   if (!session || !session.user || !session.userId || !session.user.email) {
