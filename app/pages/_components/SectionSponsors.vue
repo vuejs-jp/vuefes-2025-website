@@ -116,6 +116,15 @@ const localeRoute = useLocaleRoute();
       </div>
     </div>
 
+    <div class="sponsor-list">
+      <VFHeading id="individual-sponsors">
+        {{ t('sponsors.individualSponsor') }}
+      </VFHeading>
+      <div class="sponsor-individual-container">
+        <span v-for="(name, index) in locale === 'ja' ? JaSponsors.INDIVIDUAL : EnSponsors.INDIVIDUAL" :key="index">{{ name }}</span>
+      </div>
+    </div>
+
     <div class="view-all-sponsors">
       <VFButton :link="localeRoute({ name: 'sponsors' })">
         {{ t('sponsors.viewAll') }}
@@ -154,5 +163,11 @@ const localeRoute = useLocaleRoute();
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+}
+
+.sponsor-individual-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 </style>

@@ -150,7 +150,7 @@ const SPONSORS_GOLD: Sponsor[] = [
     logoImageAlt: "Ikyu Corporation",
     linkUrl: "https://www.ikyu.co.jp/",
     plan: "gold",
-    description: `We offer IKYU.com, a online reservation platform for accommodations and restaurants. 
+    description: `We offer IKYU.com, a online reservation platform for accommodations and restaurants.
     Through our platform, we aim to create more "luxurious moments for the heart" in the world. \nAt Ikyu, we actively use Vue.js to develop large-scale B2C services with over 10 million members.
     `,
     id: "ikkyu",
@@ -384,6 +384,48 @@ const SPONSORS_CREATIVE: Sponsor[] = [
   },
 ];
 
+const SPONSORS_INDIVIDUAL: string[] = [
+  "Yuhei FUJITA",
+  "Naoki Haba",
+  "uiuifree",
+  "Katashin",
+  "ubugeeei",
+  "田中弘治",
+  "yamanoku",
+  "Natsuki",
+  "Jabelic",
+  "ナイトウコウスケ",
+  "kzhrk",
+  "江崎伸英",
+  "Haoqun Jiang",
+  "Daisuke Fujimoto",
+  "近藤信幸",
+  "SerKo",
+  "yug1224",
+  "Re:Vue",
+  "Delton Ding",
+  "LemonNeko",
+  "みなみ@hecateball",
+  "西脇美穂",
+  "odan",
+  ".ごっち(Goto Yuta)",
+  "tsukkee",
+  "白石  祐大",
+  "IlyaL",
+  "かみくず",
+  "mizdra",
+  "koyasaeki",
+  "jiyuujin",
+  "うめのこ",
+  "みっちー",
+  "ヨウ",
+  "R.Okuyama",
+  "ぽにょ@ponyoxa",
+  "@cyber_snufkin",
+  "Haruki Tetone",
+  "いのうえたくや",
+];
+
 const filterSponsorsByOption = (option: Option): Sponsor[] => [
   ...SPONSORS_PLATINA.filter(sponsor => sponsor.option?.includes(option)),
   ...SPONSORS_GOLD.filter(sponsor => sponsor.option?.includes(option)),
@@ -458,6 +500,7 @@ export const SPONSORS = {
   BRONZE: SPONSORS_BRONZE,
   OPTION_ONLY: SPONSORS_OPTION_ONLY,
   CREATIVE: SPONSORS_CREATIVE,
+  INDIVIDUAL: SPONSORS_INDIVIDUAL,
   OPTION: SPONSORS_OPTION,
   JOB_BOARD: SPONSORS_JOB_BOARD,
 };
