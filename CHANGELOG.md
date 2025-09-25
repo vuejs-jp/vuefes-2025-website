@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.9.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.8.2...v2.9.0)
+
+### 🚀 Enhancements
+
+- Expired name badge registration ([#1005](https://github.com/vuejs-jp/vuefes-2025/pull/1005), [#1006](https://github.com/vuejs-jp/vuefes-2025/pull/1006))
+- Individual sponsor ([#1012](https://github.com/vuejs-jp/vuefes-2025/pull/1012))
+
+### ❤️ Contributors
+
+- @totocalcio
+- @ubugeeei
+
 ## v2.8.2
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.8.1...v2.8.2)
