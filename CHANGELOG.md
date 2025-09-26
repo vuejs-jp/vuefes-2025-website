@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.9.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.0...v2.9.1)
+
+### 🚀 Enhancements
+
+- Add individual sponsor to sponsor page ([#1015](https://github.com/vuejs-jp/vuefes-2025/pull/1015))
+
+### ❤️ Contributors
+
+- @totocalcio
+
 ## v2.9.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.8.2...v2.9.0)
