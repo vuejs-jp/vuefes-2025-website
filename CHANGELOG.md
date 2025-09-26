@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.9.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.1...v2.9.2)
+
+### 🚀 Enhancements
+
+- Add kickflow, Inc. as a silver sponsor ([#995](https://github.com/vuejs-jp/vuefes-2025/pull/995))
+
+### ❤️ Contributors
+
+- @naokihaba
+
 ## v2.9.1
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.0...v2.9.1)
