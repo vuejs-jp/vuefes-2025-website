@@ -95,6 +95,12 @@ useSeoMeta({
         :gap="bp === 'mobile' ? '24px' : '32px'"
       />
     </VFSection>
+
+    <VFSection id="individual-sponsor" :title="t('sponsors.individualSponsor')">
+      <div class="sponsor-individual-container">
+        <span v-for="(name, index) in locale === 'ja' ? JaSponsors.INDIVIDUAL : EnSponsors.INDIVIDUAL" :key="index">{{ name }}</span>
+      </div>
+    </VFSection>
   </div>
 </template>
 
@@ -137,5 +143,11 @@ useSeoMeta({
   column-gap: 8px;
   margin: 0;
   color: var(--color-text-default);
+}
+
+.sponsor-individual-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 </style>
