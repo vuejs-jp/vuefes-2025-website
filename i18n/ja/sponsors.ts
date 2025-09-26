@@ -307,6 +307,16 @@ const SPONSORS_SILVER: Sponsor[] = [
     description: "日本最大級のクラウドソーシングサービス「クラウドワークス」は、サービス開発でVue.jsを積極的に活用しています。コミュニティの更なる発展を願い、Vue Fes Japanの成功を応援しています！",
     id: "crowd-works",
   },
+  {
+    name: "株式会社 kickflow",
+    logoImageUrl: "/images/sponsor-logo/silver/kickflow.png",
+    logoImageAlt: "株式会社kickflow",
+    linkUrl: "https://kickflow.com/",
+    plan: "silver",
+    option: ["job-board"],
+    description: "私たちは、企業向けのクラウドワークフローであるkickflowを開発・提供しています。kickflowは企業の生産性向上で高く評価されており、大手企業や成長中の企業に導入されています。",
+    id: "kickflow",
+  },
 ];
 const SPONSORS_BRONZE: Sponsor[] = [
   {

@@ -287,6 +287,16 @@ const SPONSORS_SILVER: Sponsor[] = [
     description: "As one of Japan's largest crowdsourcing platforms, CrowdWorks actively leverages Vue.js for our service development. We are delighted to support the success of Vue Fes Japan and hope for the continued development of the community.",
     id: "crowd-works",
   },
+  {
+    name: "kickflow, Inc.",
+    logoImageUrl: "/images/sponsor-logo/silver/kickflow.png",
+    logoImageAlt: "kickflow, Inc.",
+    linkUrl: "https://kickflow.com/",
+    plan: "silver",
+    option: ["job-board"],
+    description: "We develop and provide kickflow, a cloud workflow solution for businesses.kickflow is highly regarded for improving corporate productivity and is used by large and growing companies.",
+    id: "kickflow",
+  },
 ];
 const SPONSORS_BRONZE: Sponsor[] = [
   {

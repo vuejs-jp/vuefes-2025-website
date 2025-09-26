@@ -290,6 +290,7 @@ words:
   - zauer
   - zeiri
   - ZOZO
+  - kickflow
 ignorePaths:
   - dist
   - node_modules
