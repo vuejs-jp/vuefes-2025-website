@@ -447,7 +447,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
   {
     id: "yut0naga1",
     name: "Yuto NAGAI",
-    affiliation: "HealthCare Innovation Group, Future Corporation",
+    affiliation: "Future Architect, Inc.",
     title: "Senior Consultant",
     avatarUrl: "/images/avatars/yut0naga1.jpg",
     color: "orange",
