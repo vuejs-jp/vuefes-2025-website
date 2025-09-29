@@ -434,6 +434,9 @@ const SPONSORS_INDIVIDUAL: string[] = [
   "@cyber_snufkin",
   "Haruki Tetone",
   "いのうえたくや",
+  "mew-ton",
+  "みずの",
+  "Hiroki Osame",
 ];
 
 const filterSponsorsByOption = (option: Option): Sponsor[] => [

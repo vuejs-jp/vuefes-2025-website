@@ -441,7 +441,7 @@ export const LT_SPEAKERS: Speaker[] = [
   {
     id: "yut0naga1",
     name: "永井優斗",
-    affiliation: "フューチャー株式会社 HealthCare Innovation Group",
+    affiliation: "フューチャーアーキテクト株式会社",
     title: "シニアコンサルタント",
     avatarUrl: "/images/avatars/yut0naga1.jpg",
     color: "orange",
