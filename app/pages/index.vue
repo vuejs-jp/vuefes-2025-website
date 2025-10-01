@@ -5,7 +5,7 @@ import SectionGranYourGear from "./_components/SectionGranYourGear.vue";
 import SectionStudentSupport from "./_components/SectionStudentSupport.vue";
 import SectionVolunteer from "./_components/SectionVolunteer.vue";
 import SectionSponsors from "./_components/SectionSponsors.vue";
-import SectionSponsorWanted from "./_components/SectionSponsorWanted.vue";
+import SectionSponsorClosed from "./_components/SectionSponsorClosed.vue";
 import SectionAccess from "./_components/SectionAccess.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
 import SectionContact from "./_components/SectionContact.vue";
@@ -40,7 +40,7 @@ useSeoMeta({ title: "" });
       <SectionStudentSupport />
       <SectionVolunteer />
       <SectionSponsors />
-      <SectionSponsorWanted />
+      <SectionSponsorClosed />
       <SectionAccess />
       <SectionMessage />
       <SectionContact />
