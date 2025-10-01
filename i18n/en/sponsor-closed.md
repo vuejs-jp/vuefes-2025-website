@@ -1,6 +1,6 @@
 Thank you very much for your interest in sponsoring Vue Fes Japan 2025.
 
-We are pleased to announce that as of October 2, 2025, we have closed applications for all sponsorship plans due to overwhelming interest.
+We are pleased to announce that as of October 1, 2025, we have closed applications for all sponsorship plans due to overwhelming interest.
 
 Together with our supporting sponsor companies, we are committed to contributing to the further development of the Vue.js community and are working diligently to ensure a successful conference.
 
