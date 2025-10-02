@@ -11,6 +11,8 @@
 - Individual sponsor ([#1012](https://github.com/vuejs-jp/vuefes-2025/pull/1012))
 - Add individual sponsor to sponsor page ([#1015](https://github.com/vuejs-jp/vuefes-2025/pull/1015))
 - Add kickflow, Inc. as a silver sponsor ([#995](https://github.com/vuejs-jp/vuefes-2025/pull/995))
+- Add sponsor session ([#1011](https://github.com/vuejs-jp/vuefes-2025/pull/1011))
+- Update timetable ([#1027](https://github.com/vuejs-jp/vuefes-2025/pull/1027))
 
 ### 🏡 Chore
 
@@ -21,17 +23,18 @@
 - **release:** V2.8.2 ([e21d63d](https://github.com/vuejs-jp/vuefes-2025/commit/e21d63d))
 - **release:** V2.9.0 ([58e4521](https://github.com/vuejs-jp/vuefes-2025/commit/58e4521))
 - **release:** V2.9.1 ([5d7835c](https://github.com/vuejs-jp/vuefes-2025/commit/5d7835c))
-- **release:** V2.9.2 ([4b01680](https://github.com/vuejs-jp/vuefes-2025/commit/4b01680))
 - Individual sponsor ([#1016](https://github.com/vuejs-jp/vuefes-2025/pull/1016))
 - Remove some staff members ([#1019](https://github.com/vuejs-jp/vuefes-2025/pull/1019))
-- **release:** V2.9.3 ([d605a91](https://github.com/vuejs-jp/vuefes-2025/commit/d605a91))
+- **release:** V2.10.0 ([6cc0f60](https://github.com/vuejs-jp/vuefes-2025/commit/6cc0f60))
+- **release:** V2.10.0" ([cda24c0](https://github.com/vuejs-jp/vuefes-2025/commit/cda24c0))
 
 ### ❤️ Contributors
 
-- Ubugeeei <ubuge1122@gmail.com>
 - OKI Yoshiya <oki.yoshiya@ceroan.co.jp>
-- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+- Yamageji <koyama.shigehito@ceroan.co.jp>
 - Totocalcio <totohyper@yahoo.co.jp>
+- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+- Ubugeeei <ubuge1122@gmail.com>
 
 ## v2.9.3
 
@@ -57,6 +60,7 @@
 ### ❤️ Contributors
 
 - @naokihaba
+>>>>>>> production
 
 ## v2.9.1
 

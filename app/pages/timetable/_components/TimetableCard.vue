@@ -91,9 +91,17 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
                 <div v-if="speaker.avatarUrl" class="avatar">
                   <img :src="speaker.avatarUrl" :alt="speaker.name">
                 </div>
-                <p class="name">
-                  {{ speaker.name }}
-                </p>
+                <div class="speaker-info">
+                  <p v-if="speaker.affiliation" class="affiliation">
+                    {{ speaker.affiliation }}
+                  </p>
+                  <p v-if="speaker.title" class="job-title">
+                    {{ speaker.title }}
+                  </p>
+                  <p class="name">
+                    {{ speaker.name }}
+                  </p>
+                </div>
               </div>
             </div>
           </template>
@@ -191,7 +199,7 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
 
 .speaker-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0 8px;
   margin-top: 8px;
 
@@ -203,9 +211,30 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
     background-color: #fff;
   }
 
+  .speaker-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .affiliation {
+    font-size: 11px;
+    color: var(--color-text-default);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .job-title {
+    font-size: 11px;
+    color: var(--color-text-default);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
   .name {
     font-size: 14px;
     color: var(--color-text-default);
+    line-height: 1.2;
   }
 }
 

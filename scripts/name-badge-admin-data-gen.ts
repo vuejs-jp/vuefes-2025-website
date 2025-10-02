@@ -1,13 +1,15 @@
 import { existsSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import path from "node:path";
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const code = `import path from "node:path";
+const code = `import { fileURLToPath } from "node:url";
+import path from "node:path";
 import type { NameBadgeInput } from "./type";
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const data: NameBadgeInput[] = [
   // {
