@@ -1,8 +1,8 @@
 # Changelog
 
-## v2.9.2
+## v2.9.4
 
-[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.4...v2.9.2)
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.4...v2.9.4)
 
 ### 🚀 Enhancements
 
@@ -35,6 +35,32 @@
 - Totocalcio <totohyper@yahoo.co.jp>
 - Naoki Haba ([@naokihaba](https://github.com/naokihaba))
 - Ubugeeei <ubuge1122@gmail.com>
+
+## v2.9.3
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.2...v2.9.3)
+
+### 🏡 Chore
+
+- Individual sponsor ([#1016](https://github.com/vuejs-jp/vuefes-2025/pull/1016))
+- Remove some staff members ([#1019](https://github.com/vuejs-jp/vuefes-2025/pull/1019))
+
+### ❤️ Contributors
+
+- @448jp
+
+## v2.9.2
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.1...v2.9.2)
+
+### 🚀 Enhancements
+
+- Add kickflow, Inc. as a silver sponsor ([#995](https://github.com/vuejs-jp/vuefes-2025/pull/995))
+
+### ❤️ Contributors
+
+- @naokihaba
+>>>>>>> production
 
 ## v2.9.1
 
