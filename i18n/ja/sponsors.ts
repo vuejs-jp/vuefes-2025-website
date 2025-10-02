@@ -9,6 +9,26 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: "弁護士ドットコム株式会社について\n「プロフェッショナル・テックで、次の常識をつくる。」をミッションとして、人々と専門家をつなぐポータルサイト『弁護士ドットコム』『BUSINESS LAWYERS』『税理士ドットコム』、契約マネジメントプラットフォーム『クラウドサイン』、『リーガル特化型AIエージェント「Legal Brain エージェント」』を提供しています。\n当社はVue.js はサービス初期から活用しており、プロダクトを長年支えてきました。運営の皆様をはじめ、参加者の方々と一緒に Vue.js のコミュニティを盛り上げていきたいと思います。当日会場でお会いできるのを楽しみにしております。",
     id: "bengo4",
+    session: [
+      {
+        title: "webpack 依存からの脱却！快適フロントエンド開発を Viteで実現する",
+        overview: "弁護士ドットコム株式会社が提供するクラウドサインは、リリースしてから今年で10年を迎えます。フロントエンドの規模も大きくなり、webpackを使用し続けることによるペインがありました。\n\n本セッションでは、どのようなペインを抱えていて今回 Vite 移行に至ったのか、そして具体的な移行の方法、移行したことによってどのような恩恵を得ることができたのかの成果についてお話したいと思います。",
+        speaker: {
+          sponsorId: "bengo4",
+          name: "Nobuaki Kambe",
+          affiliation: "弁護士ドットコム株式会社",
+          talkSchedule: "10:55 - 11:05",
+          talkTrack: "hacomono",
+          title: "フロントエンドエンジニア",
+          avatarUrl: "/images/avatars/sponsors/nobuaki-kambe.png",
+          id: "nobuaki-kambe",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/nobuaki0331",
+          },
+        },
+      },
+    ],
   },
   {
     name: "株式会社ヤプリ",
@@ -18,6 +38,28 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: "株式会社ヤプリは、「デジタルを簡単に、社会を便利に」をミッションに、ノーコードでアプリを開発・運用できるプラットフォーム「Yappli」と「Yappli CRM」を提供し、企業のモバイルDXを支援しています。導入企業は750社を超え、小売・EC、社内DX、公共機関など幅広い分野で活用されています。また、アプリ開発で培った技術を活かし、次世代Web構築プラットフォーム「Yappli WebX」を提供開始し、統合的な顧客体験を提供するデジタルエクスペリエンスプラットフォーム（DXP）へと進化を続けています。",
     id: "yappli",
+    session: [
+      {
+        title: "alien-signalsと自作OSSで実現するフレームワーク非依存なロジック共通化の探求",
+        overview: "マルチプロダクト環境では、似通った処理やロジックを各プロダクトごとに重複実装しがちです。\n\n本セッションでは、\"ロジックそのものをフレームワークから切り離し、Signalsをベースとした純粋なTypeScriptで一度だけ実装し、各フレームワークで同じ実装を活用する\" というアプローチを共有します。\n\nこのアプローチを実現するために、Vue.js 3.6でも採用されるalien-signalsをベースとした自作OSSの『sigrea』というライブラリを構築しました。\n\nこのライブラリを用いて、フレームワークに依存しないロジックを定義し、各フレームワークへ薄いアダプターで橋渡しする設計方法をお話しします。",
+        speaker: {
+          sponsorId: "yappli",
+          name: "Aose Yuu",
+          affiliation: "株式会社ヤプリ",
+          talkSchedule: "11:05 - 11:15",
+          talkTrack: "hacomono",
+          title: "フロントエンドエンジニア",
+          avatarUrl: "/images/avatars/sponsors/aose-chan.jpg",
+          id: "aose-yuu",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/aose_developer",
+            bluesky: "https://bsky.app/profile/aose-yuu.bsky.social",
+            github: "https://github.com/aose-yuu",
+          },
+        },
+      },
+    ],
   },
   {
     name: "株式会社リンクアンドモチベーション",
@@ -27,6 +69,27 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: `Vue Fes Japan、今年もご一緒できることを心から嬉しく思います！\nリンクアンドモチベーションは、「モチベーションを科学し、働きがいのある会社を増やす」ことを目指すHR Techカンパニーです。Vue.jsのしなやかさ、開発の楽しさ、そして何よりもコミュニティの温かさに魅了され、日々"Vue.jsとともに"成長中です。Vue.jsを愛するすべての人たちのための「フェス」。開発者も、参加者も、スタッフも、関わるすべての人がコントリビューター。当日は、たくさんのVue.jsファンの皆さんとお話しできることを、楽しみにしております。Let's make it a Vue-tiful day!`,
     id: "lmi",
+    session: [
+      {
+        title: "VueはAIに弱い？そんなの都市伝説です",
+        overview: "「AIにコード書かせるならReact」という空気、ありませんか？\nしかし、Vue.jsでもAIとの効果的なコラボレーションは十分に可能です。\n実際に取り組んでみると、重要なのはフレームワークではなく“開発しやすさ“への投資でした。\n人に優しい設計、その積み重ねが結果としてAIにも優しい環境をつくります。\nこのセッションでは、AI×Vue.jsでのプロダクト開発に挑戦してきた経験と、そこから得た学びを共有します。",
+        speaker: {
+          sponsorId: "lmi",
+          name: "中上 裕基",
+          affiliation: "株式会社リンクアンドモチベーション",
+          talkSchedule: "10:55 - 11:05",
+          talkTrack: "mates",
+          title: "フロントエンドエンジニア",
+          avatarUrl: "/images/avatars/sponsors/yuki_nakagami.jpg",
+          id: "nakagam3",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/nakagam3",
+            github: "https://github.com/nakagam3",
+          },
+        },
+      },
+    ],
   },
   {
     name: "ユニークビジョン株式会社",
@@ -36,6 +99,26 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: "ユニークビジョンは、ソーシャルメディアを通じて企業のブランド体験を創出するテクノロジーカンパニーです。自社開発のSNSマーケティングツール「Belugaシリーズ」は、年間800件以上の施策を実施しています。\nプロダクト開発ではVue.jsを積極的に導入しており、Vue.js製のコンポーネントライブラリを社内OSSとして開発・改善する文化が根付いています。また、2022年から毎月開催しているエンジニア勉強会「UV Study」では、Vue.jsを頻繁にテーマとして取り上げています。\nツール・文化・場づくりの三位一体で、Vue.jsの発展を後押ししていきます。",
     id: "uniquevision",
+    session: [
+      {
+        title: "Storybook 駆動開発で実現する持続可能な Vue コンポーネント設計",
+        overview: "Vue.js での開発において「再利用可能で保守しやすいコンポーネント設計」は重要な課題です。しかし実際のチーム開発では、コンポーネントのインターフェースが後から決まることで設計が複雑化したり、テストが後回しになって品質にばらつきが生じるといった問題に直面することがあります。\n\n私たちのチームでは、Storybook 駆動開発という手法を 1 年間実践し、これらの課題を解決してきました。従来の「実装 → テスト」ではなく、「インターフェース定義・Story 作成 → 実装 → 自動テスト」という流れに変えることで、手戻りの削減と高いテストカバレッジを実現しています。\n\nこの手法の核心は、実装前に Vue コンポーネントのインターフェースを明確に定義し、Story として表現することです。Storybook の制約が良い設計を促し、自動テスト作成が自然に習慣化されます。コンポーネント数が増えても、品質のばらつきがなく、新しいメンバーでも一定の品質を保てています。\n\nなぜこの手法が効果的なのか、どのような工夫でチーム全体に浸透させたのか、1 年間の実践で得た知見とベストプラクティスをお話しします。",
+        speaker: {
+          sponsorId: "uniquevision",
+          name: "矢光 隆太郎",
+          affiliation: "ユニークビジョン株式会社",
+          talkSchedule: "11:05 - 11:15",
+          talkTrack: "mates",
+          title: "エンジニア",
+          avatarUrl: "/images/avatars/sponsors/ryutaro_yako.jpg",
+          id: "ryutaro-yako",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/RyutaroYako",
+          },
+        },
+      },
+    ],
   },
 ];
 
@@ -68,6 +151,26 @@ const SPONSORS_GOLD: Sponsor[] = [
     option: ["student-support"],
     description: "LINEヤフー株式会社は、2023年10月にLINE株式会社とヤフー株式会社を含むグループ会社の再編により誕生した、日本最大級のテックカンパニーです。当社は合併前から Vue.js を活用し、プロダクトの開発・提供や Vue.js および Vue Fes Japan への貢献・協賛を行ってきました。今後も Vue.js とともに、世の中やユーザーの生活を変えるようなプロダクトを開発してまいります。",
     id: "lycorp",
+    session: [
+      {
+        title: "LINE公式アカウントの技術スタックと開発の裏側",
+        overview: "「LINE公式アカウント」プラットフォームは、国内外の幅広いユーザーと企業に利用される、拡張性と信頼性を重視した大規模プロダクトです。\n一般ユーザーが日々触れるLINE内のWebアプリケーション群と、ビジネスオーナーが運用で使用する管理画面の両輪で成り立ち、機能追加と品質改善を継続的に行っています。\n\n本セッションでは、Vue.jsを中心とした実際のプロダクト構成と技術選定、スケールし続ける開発の裏側を紹介します。",
+        speaker: {
+          sponsorId: "lycorp",
+          name: "佐野 友亮",
+          affiliation: "LINEヤフー株式会社",
+          talkSchedule: "11:30 - 12:30",
+          talkTrack: "cyberAgent",
+          title: "フロントエンドエンジニア",
+          avatarUrl: "/images/avatars/sponsors/yusuke-sano.jpg",
+          id: "yusuke-sano",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/YusukeSano",
+          },
+        },
+      },
+    ],
   },
   {
     name: "STORES 株式会社",
@@ -105,6 +208,26 @@ const SPONSORS_GOLD: Sponsor[] = [
     option: ["student-support"],
     description: "プレイドは、オンライン上でのユーザー行動をリアルタイムに解析し、エンドユーザーに最適な体験を提供するためのCX（顧客体験）プラットフォーム「KARTE」などを提供しています。プレイドでは、2014年からVue.jsを採用し、KARTEなどのプロダクトの多くの機能をVue.jsで実装しています。当日はブースにて、プレイドのVue.jsや関連技術の活用の工夫などをお話しします。ぜひお立ち寄りください！",
     id: "plaid",
+    session: [
+      {
+        title: "プレイドのユニークな技術とインターンのリアル",
+        overview: "このセッションでは、株式会社プレイドの内製DBやリアルタイム解析基盤などのユニークな技術、そしてインターンで挑めるプロジェクトや成長のリアルを、登壇者自身の「ここが本当に面白い！」という推しポイントを交えてお話しします。",
+        speaker: {
+          sponsorId: "plaid",
+          name: "片山拓海",
+          affiliation: "株式会社プレイド",
+          talkSchedule: "11:30 - 12:30",
+          talkTrack: "cyberAgent",
+          title: "ソフトウェアエンジニア",
+          avatarUrl: "/images/avatars/sponsors/takumi-katayama.jpg",
+          id: "takumi-katayama",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/takurinton",
+          },
+        },
+      },
+    ],
   },
   {
     name: "ストックマーク株式会社",
@@ -346,6 +469,43 @@ const SPONSORS_BRONZE: Sponsor[] = [
     option: ["hands-on"],
     description: "",
     id: "cyberagent",
+    session: [
+      {
+        title: "ViteとTypeScriptのProject Referencesで大規模モノレポのUIカタログのリリースサイクルを高速化する",
+        overview: "CyberAgent group Infrastructure Unit（CIU）のWebフロントエンドでは、50以上のパッケージを束ねたモノレポを運用しています。\nこのモノレポは、CIUのWebフロントエンドのUIや共通ロジック、APIクライアントなどを含むSDKとして、CIUの様々なサービスの開発に用いられています。\n本LTでは、SDKが提供しているUIのカタログについて、Viteを活用してリリースを高速化しているお話をします。\n特に、モノレポの管理に用いているTypeScriptのProject ReferencesとViteをどのように組み合わせて、開発サーバーを高速化しつつ、本番への変更にかかる時間を短縮しているのかについてご紹介します。",
+        speaker: {
+          sponsorId: "cyberagent",
+          name: "did0es",
+          affiliation: "株式会社サイバーエージェント",
+          title: "ソフトウェアエンジニア",
+          avatarUrl: "/images/avatars/sponsors/did0es.png",
+          id: "did0es",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/did0es",
+            github: "https://github.com/shuta13",
+          },
+        },
+      },
+      {
+        title: "Vue.js コミュニティとサイバーエージェント",
+        overview: "Jabelicがフロントエンドエンジニアになった身の上話と、サイバーエージェントについて軽く紹介させてください。",
+        speaker: {
+          sponsorId: "cyberagent",
+          name: "Jabelic",
+          affiliation: "株式会社サイバーエージェント",
+          title: "Webフロントエンドエンジニア",
+          avatarUrl: "/images/avatars/sponsors/jabelic.png",
+          id: "jabelic",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/Jabelic_",
+            bluesky: "https://bsky.app/profile/jabelic.bsky.social",
+            github: "https://github.com/Jabelic",
+          },
+        },
+      },
+    ],
   },
   {
     name: "株式会社IKI",
@@ -396,6 +556,26 @@ const SPONSORS_OPTION_ONLY: Sponsor[] = [
     option: ["student-support"],
     description: "",
     id: "studio",
+    session: [
+      {
+        title: "Vue.jsを8年間使ってきた会社が今考えていること",
+        overview: "Studio株式会社では、Vue.jsを1系から8年間使い続けてきました。Vue.jsの構文の変更や、TypeScriptの導入、周辺ツールの変遷などと付き合いながら、現在もアプリケーション開発の中心にあります。そんな会社のエンジニアに現在のVue.jsやフロントエンドについてどんなことを考えているのかアンケートを実施してみました。",
+        speaker: {
+          sponsorId: "studio",
+          name: "齊藤広野",
+          affiliation: "Studio株式会社",
+          talkSchedule: "11:30 - 12:30",
+          talkTrack: "cyberAgent",
+          title: "フロントエンドエンジニア",
+          avatarUrl: "/images/avatars/sponsors/koya-saito.jpg",
+          id: "koya-saito",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/kokorau",
+          },
+        },
+      },
+    ],
   },
 ];
 
