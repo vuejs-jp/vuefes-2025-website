@@ -9,6 +9,26 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: "At Bengo4.com, Inc., our mission is “Create the next common sense through professional tech,” and we provide services that connect people with experts, including portal sites such as Bengo4.com, BUSINESS LAWYERS, and Zeiri4.com, as well as the contract management platform CLOUDSIGN and the legal-focused AI agent “Legal Brain Agent.” \nWe have been leveraging Vue.js since the very beginning of our service, and it has supported our products for many years. Together with the organizers and all participants, we hope to energize the Vue.js community. We’re really looking forward to seeing you at the venue!",
     id: "bengo4",
+    session: [
+      {
+        title: "Breaking Free from Webpack Dependency! Achieving Comfortable Frontend Development with Vite",
+        overview: "CloudSign, provided by Bengo4.com, Inc., marks its 10th anniversary this year since its release. As the frontend has grown in scale, we've experienced pain points from continuing to use webpack. \nIn this session, I would like to discuss what pain points we were facing that led us to migrate to Vite, the specific migration methods we used, and the benefits and results we achieved from this migration.",
+        speaker: {
+          sponsorId: "bengo4",
+          name: "Nobuaki Kambe",
+          affiliation: "Bengo4.com, Inc.",
+          talkSchedule: "10:55 - 11:05",
+          talkTrack: "hacomono",
+          title: "Frontend Engineer",
+          avatarUrl: "/images/avatars/sponsors/nobuaki-kambe.png",
+          id: "nobuaki-kambe",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/nobuaki0331",
+          },
+        },
+      },
+    ],
   },
   {
     name: "Yappli, Inc.",
@@ -18,6 +38,28 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: `Driven by its mission to make digital transformation accessible, Yappli offers no-code, AI powered platforms for mobile app and web development - "Yappli" and "Yappli WebX." Trusted by over 750 companies across diverse industries, the company delivers integrated solutions that elevate customer and employee experiences.`,
     id: "yappli",
+    session: [
+      {
+        title: "Exploring Framework-Agnostic Logic Sharing with alien-signals and Custom OSS",
+        overview: "In multi-product environments, we tend to duplicate similar processing and logic across each product.\n\nIn this session, I'll share an approach where we decouple logic from frameworks, implement it once in pure TypeScript based on Signals, and leverage the same implementation across different frameworks.\n\nTo realize this approach, I've built a custom OSS library called 'sigrea' based on alien-signals, which is set to be adopted in Vue.js 3.6.I'll discuss how to define framework-agnostic logic using this library and bridge it to each framework through thin adapters.",
+        speaker: {
+          sponsorId: "yappli",
+          name: "Aose Yuu",
+          affiliation: "Yappli, Inc.",
+          talkSchedule: "11:05 - 11:15",
+          talkTrack: "hacomono",
+          title: "Front-end Engineer",
+          avatarUrl: "/images/avatars/sponsors/aose-chan.jpg",
+          id: "aose-yuu",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/aose_developer",
+            bluesky: "https://bsky.app/profile/aose-yuu.bsky.social",
+            github: "https://github.com/aose-yuu",
+          },
+        },
+      },
+    ],
   },
   {
     name: "Link and Motivation Inc.",
@@ -27,15 +69,56 @@ const SPONSORS_PLATINA: Sponsor[] = [
     plan: "platina",
     description: `We're excited to join Vue Fes Japan again!\nLink and Motivation is an HR Tech company on a mission to create more fulfilling workplaces.\nCaptivated by the elegance and community of Vue.js, we've grown alongside it since 2017.\nLet's make it a Vue-tiful day together!`,
     id: "lmi",
+    session: [
+      {
+        title: "Is Vue Not Good with AI? That's Just an Urban Legend",
+        overview: "Ever heard people say, \"If you're using AI to write code, go with React\"?\nBut we've found that effective collaboration with AI is just as possible with Vue.js.\nWhat really matters isn't the framework itself, but investing in a smoother developer experience.\nBy building human-friendly design step by step, we naturally create an environment that's also friendly for AI.\nIn this session, I'll share our experience developing products with AI and Vue.js, and the lessons we learned along the way.",
+        speaker: {
+          sponsorId: "lmi",
+          name: "Yuki Nakagami",
+          affiliation: "Link and Motivation Inc.",
+          talkSchedule: "10:55 - 11:05",
+          talkTrack: "mates",
+          title: "Front-end Engineer",
+          avatarUrl: "/images/avatars/sponsors/yuki_nakagami.jpg",
+          id: "nakagam3",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/nakagam3",
+            github: "https://github.com/nakagam3",
+          },
+        },
+      },
+    ],
   },
   {
-    name: "Unique Vision Company",
+    name: "Unique Vision Company, Japan.",
     logoImageUrl: "/images/sponsor-logo/platina/unique-vision.png",
     logoImageAlt: "Unique Vision Co., Ltd. corporate logo image",
     linkUrl: "https://www.uniquevision.co.jp/",
     plan: "platina",
     description: "Unique Vision is a technology-focused company that creates brand experiences through social media. Our in-house developed SNS marketing tool, the 'Beluga Series,' operates over 800 campaigns annually.\nWe actively utilize Vue.js in our product development, and have established a strong culture of developing and refining Vue.js component libraries as internal open-source software. Since 2022, our monthly 'UV Study' engineering workshops frequently feature Vue.js as a central theme. \nThrough tools, culture, and community-building, we drive the growth of Vue.js.",
     id: "uniquevision",
+    session: [
+      {
+        title: "Sustainable Vue Component Design through Storybook-Driven Development",
+        overview: "In Vue.js development, \"designing reusable and maintainable components\" is a critical challenge. However, in actual team development, we often face issues such as designs becoming complex when component interfaces are decided later, or quality inconsistencies arising when testing is postponed.\n\nOur team has been practicing Storybook-Driven Development for a year and has successfully resolved these challenges. By changing from the traditional \"implementation → testing\" flow to \"interface definition/Story creation → implementation → automated testing,\" we've achieved reduced rework and high test coverage.\n\nThe core of this approach is clearly defining Vue component interfaces before implementation and expressing them as Stories. Storybook's constraints promote good design, and automated test creation naturally becomes habitual. Even as the number of components grows, there's no quality variance, and new members can maintain consistent quality.\n\nI'll share why this approach is effective, how we successfully adopted it across the entire team, and the insights and best practices we've gained from a year of practice.",
+        speaker: {
+          sponsorId: "uniquevision",
+          name: "Ryutaro Yako",
+          affiliation: "Unique Vision Company, Japan.",
+          talkSchedule: "11:05 - 11:15",
+          talkTrack: "mates",
+          title: "Engineer",
+          avatarUrl: "/images/avatars/sponsors/ryutaro_yako.jpg",
+          id: "ryutaro-yako",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/RyutaroYako",
+          },
+        },
+      },
+    ],
   },
 ];
 
@@ -68,6 +151,26 @@ const SPONSORS_GOLD: Sponsor[] = [
     option: ["student-support"],
     description: "LY Corporation is one of Japan's largest tech companies formed in October 2023 through the reorganization of Group companies including LINE Corporation and Yahoo Japan Corporation.",
     id: "lycorp",
+    session: [
+      {
+        title: "The Tech Stack and Development Behind LINE Official Account",
+        overview: "The LINE Official Account platform is a large-scale product that prioritizes scalability and reliability, serving a wide range of users and businesses both domestically and internationally.\nIt consists of two pillars: web applications within LINE that general users interact with daily, and admin dashboards that business owners use for operations, with continuous feature additions and quality improvements.\nIn this session, I'll introduce the actual product architecture and technology selection centered around Vue.js, as well as the behind-the-scenes of continuously scaling development.",
+        speaker: {
+          sponsorId: "lycorp",
+          name: "Yusuke Sano",
+          affiliation: "LY Corporation",
+          talkSchedule: "11:30 - 12:30",
+          talkTrack: "cyberAgent",
+          title: "Frontend Developer",
+          avatarUrl: "/images/avatars/sponsors/yusuke-sano.jpg",
+          id: "yusuke-sano",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/YusukeSano",
+          },
+        },
+      },
+    ],
   },
   {
     name: "STORES, Inc.",
@@ -105,6 +208,26 @@ const SPONSORS_GOLD: Sponsor[] = [
     option: ["student-support"],
     description: "PLAID, Inc. provides products such as KARTE, a customer experience (CX) platform that analyzes online user behavior in real time to help deliver optimal experiences to end users. We've been using Vue.js since 2014, and many core features of our products are built with it. At our booth, we'll be sharing how we leverage Vue.js and other related technologies in our development. Feel free to stop by and chat with us!",
     id: "plaid",
+    session: [
+      {
+        title: "PLAID's Unique Technologies and the Reality of Internships",
+        overview: "In this session, we'll discuss PLAID, Inc.'s unique technologies such as their in-house database and real-time analytics infrastructure, as well as the reality of projects interns can tackle and their growth opportunities. The speakers will share their personal \"this is what's really interesting!\" highlights and recommendations.",
+        speaker: {
+          sponsorId: "plaid",
+          name: "Takumi Katayama",
+          affiliation: "PLAID, Inc.",
+          talkSchedule: "11:30 - 12:30",
+          talkTrack: "cyberAgent",
+          title: "Software Engineer",
+          avatarUrl: "/images/avatars/sponsors/takumi-katayama.jpg",
+          id: "takumi-katayama",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/takurinton",
+          },
+        },
+      },
+    ],
   },
   {
     name: "Stockmark Inc.",
@@ -326,6 +449,43 @@ const SPONSORS_BRONZE: Sponsor[] = [
     option: ["hands-on"],
     description: "",
     id: "cyberagent",
+    session: [
+      {
+        title: "Accelerating UI Catalog Release Cycles in Large-Scale Monorepos with Vite and TypeScript Project References",
+        overview: "In the Web frontend of CyberAgent group Infrastructure Unit (CIU), we operate a monorepo that bundles over 50 packages.\nThis monorepo serves as an SDK containing UI components, common logic, and API clients for CIU's Web frontend, and is used in the development of various CIU services.\nIn this LT, I'll talk about how we're accelerating releases for the UI catalog provided by the SDK using Vite.\nIn particular, I'll introduce how we combine TypeScript's Project References, which we use for monorepo management, with Vite to speed up the development server while reducing the time required for production changes.",
+        speaker: {
+          sponsorId: "cyberagent",
+          name: "did0es",
+          affiliation: "CyberAgent, Inc.",
+          title: "Software Engineer",
+          avatarUrl: "/images/avatars/sponsors/did0es.png",
+          id: "did0es",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/did0es",
+            github: "https://github.com/shuta13",
+          },
+        },
+      },
+      {
+        title: "Vue.js Community and CyberAgent",
+        overview: "Let me share my personal story of how Jabelic became a frontend engineer and briefly introduce CyberAgent.",
+        speaker: {
+          sponsorId: "cyberagent",
+          name: "Jabelic",
+          affiliation: "CyberAgent, Inc.",
+          title: "Web Frontend Developer",
+          avatarUrl: "/images/avatars/sponsors/jabelic.png",
+          id: "jabelic",
+          color: "default",
+          socialUrls: {
+            x: "https://x.com/Jabelic_",
+            bluesky: "https://bsky.app/profile/jabelic.bsky.social",
+            github: "https://github.com/Jabelic",
+          },
+        },
+      },
+    ],
   },
   {
     name: "IKI Inc.",
@@ -379,6 +539,26 @@ const SPONSORS_OPTION_ONLY: Sponsor[] = [
     option: ["student-support"],
     description: "",
     id: "studio",
+    session: [
+      {
+        title: "What a Company That's Been Using Vue.js for 8 Years Is Thinking Now",
+        overview: "At Studio Inc., we have been using Vue.js continuously for 8 years since version 1. While dealing with changes in Vue.js syntax, the introduction of TypeScript, and the evolution of surrounding tools, it remains at the center of our application development today. We conducted a survey among our engineers to find out what they think about the current state of Vue.js and frontend development.",
+        speaker: {
+          sponsorId: "studio",
+          name: "Koya Saito",
+          affiliation: "Studio, Inc.",
+          talkSchedule: "11:30 - 12:30",
+          talkTrack: "cyberAgent",
+          title: "Frontend Engineer",
+          avatarUrl: "/images/avatars/sponsors/koya-saito.jpg",
+          id: "koya-saito",
+          color: "default",
+          socialUrls: {
+            github: "https://github.com/kokorau",
+          },
+        },
+      },
+    ],
   },
 ];
 

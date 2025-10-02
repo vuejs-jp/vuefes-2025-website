@@ -54,6 +54,15 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
   const plaid = getSponsor("plaid");
   const studio = getSponsor("studio");
 
+  // for platina sponsor session
+  const bengo4 = getSponsor("bengo4");
+  const lmi = getSponsor("lmi");
+  const yappli = getSponsor("yappli");
+  const uniquevision = getSponsor("uniquevision");
+
+  // for hands-on sponsor session
+  const cyberagent = getSponsor("cyberagent");
+
   return {
     id: "timetable",
     rows: [
@@ -171,22 +180,24 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
           {
             id: "sponsor-session01",
             type: "session",
-            title: t("timetable.platinumSponsorSession"),
+            title: "",
             colspan: 1,
             rowspan: 1,
             startTime: "10:55",
             endTime: "11:05",
+            speakers: [{ ...bengo4.session![0]!.speaker, talkTitle: bengo4.session![0]!.title }],
             track: "hacomono",
           },
           {
             id: "sponsor-session02",
             type: "session",
-            title: t("timetable.platinumSponsorSession"),
+            title: "",
             colspan: 1,
             rowspan: 1,
-            track: "mates",
             startTime: "10:55",
             endTime: "11:05",
+            speakers: [{ ...lmi.session![0]!.speaker, talkTitle: lmi.session![0]!.title }],
+            track: "mates",
           },
         ],
       },
@@ -197,22 +208,24 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
           {
             id: "sponsor-session03",
             type: "session",
-            title: t("timetable.platinumSponsorSession"),
+            title: "",
             colspan: 1,
             rowspan: 1,
             startTime: "11:05",
             endTime: "11:15",
+            speakers: [{ ...yappli.session![0]!.speaker, talkTitle: yappli.session![0]!.title }],
             track: "hacomono",
           },
           {
             id: "sponsor-session04",
             type: "session",
-            title: t("timetable.platinumSponsorSession"),
+            title: "",
             colspan: 1,
             rowspan: 1,
-            track: "mates",
             startTime: "11:05",
             endTime: "11:15",
+            speakers: [{ ...uniquevision.session![0]!.speaker, talkTitle: uniquevision.session![0]!.title }],
+            track: "mates",
           },
         ],
       },
@@ -245,19 +258,9 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             link: "student-support-contents",
             speakers: [
               ...STUDENT_SUPPORT_SPEAKERS as Speaker[],
-              // note: omit avatarUrl and colors
-              {
-                id: "lycorp",
-                name: lycorp.name,
-              } as Speaker,
-              {
-                id: "plaid",
-                name: plaid.name,
-              } as Speaker,
-              {
-                id: "studio",
-                name: studio.name,
-              } as Speaker,
+              { ...lycorp.session![0]!.speaker, talkTitle: lycorp.session![0]!.title },
+              { ...plaid.session![0]!.speaker, talkTitle: plaid.session![0]!.title },
+              { ...studio.session![0]!.speaker, talkTitle: studio.session![0]!.title },
             ],
           },
         ],
@@ -354,6 +357,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             startTime: "12:50",
             endTime: "14:50",
             link: "hands-on",
+            speakers: [{ ...cyberagent.session![1]!.speaker, talkTitle: cyberagent.session![1]!.title }],
           },
         ],
       },
@@ -545,6 +549,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             startTime: "15:05",
             endTime: "17:05",
             link: "hands-on",
+            speakers: [{ ...cyberagent.session![0]!.speaker, talkTitle: cyberagent.session![0]!.title }],
           },
         ],
       },

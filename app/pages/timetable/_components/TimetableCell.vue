@@ -80,8 +80,16 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
 
         <div v-if="speakers" class="speakers" :style="{ '--speaker-gap': type ==='lightningTalk' ? '32px' : undefined }">
           <template v-for="speaker in speakers" :key="speaker.id">
-            <div>
-              <NuxtLink :to="localeRoute({ name: 'speaker-speakerId', params: { speakerId: speaker.id } }) || ''" class="title">
+            <div :class="{ 'event-speaker': type === 'event' }">
+              <NuxtLink
+                v-if="speaker.talkTitle"
+                :to="localeRoute(
+                  speaker.sponsorId === undefined
+                    ? { name: 'speaker-speakerId', params: { speakerId: speaker.id } }
+                    : { name: 'sponsors-sponsorId', params: { sponsorId: speaker.sponsorId }, hash: `#${speaker.id}` },
+                ) || (speaker.sponsorId === undefined ? '/speakers' : '/sponsors')"
+                class="title"
+              >
                 {{ speaker.talkTitle }}
               </NuxtLink>
               <div class="speaker-item">
@@ -205,6 +213,12 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
   margin-top: 8px;
     svg{
     --color-base:v-bind(color) ;
+  }
+}
+
+.event-speaker {
+  &:has(a) {
+    margin-top: 24px;
   }
 }
 </style>

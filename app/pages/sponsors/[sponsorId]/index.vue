@@ -15,8 +15,13 @@ import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useHead,
   useSeoMeta,
+  nextTick,
+  onMounted,
 } from "#imports";
 import { VFSection } from "#components";
+
+type TalkTrack = "hacomono" | "mates" | "feature" | "cyberAgent";
+type TrackColor = "primary" | "purple" | "orange" | "navy";
 
 definePageMeta({ prerender: true });
 
@@ -53,6 +58,35 @@ defineOgImage({
     plan: () => currentSponsor.value?.plan,
   },
 });
+
+const accentColorName = (talkTrack: TalkTrack): TrackColor => {
+  switch (talkTrack) {
+    case "hacomono":
+      return "primary";
+    case "mates":
+      return "purple";
+    case "feature":
+      return "orange";
+    case "cyberAgent":
+      return "navy";
+    default:
+      return "primary";
+  }
+};
+
+const trackStyles = (talkTrack: TalkTrack) => ({
+  "--base-color": `var(--color-${accentColorName(talkTrack)}-base)`,
+  "--sub-color": `var(--color-${accentColorName(talkTrack)}-sub)`,
+});
+
+onMounted(async () => {
+  if (!route.hash) return;
+  const targetElement = document.getElementById(route.hash.substring(1));
+
+  if (targetElement === null) return;
+  await nextTick();
+  requestAnimationFrame(() => targetElement.scrollIntoView());
+});
 </script>
 
 <template>
@@ -87,14 +121,37 @@ defineOgImage({
 
       <div v-if="currentSponsor.session" class="sponsor-session">
         <hr />
-        <div v-for="session in currentSponsor.session" :key="session.title" class="sponsor-speaker-item">
+
+        <div v-for="session in currentSponsor.session" :key="session.speaker.id" class="sponsor-speaker-item">
+          <div v-if="session.speaker.talkTrack" class="session-track" :style="trackStyles(session.speaker.talkTrack)">
+            <div class="speaker-track">
+              {{ t(`timetable.track.${session.speaker.talkTrack}`) }}
+            </div>
+            <div class="speaker-time">
+              {{ session.speaker.talkSchedule }}
+            </div>
+          </div>
+
           <div class="session-speaker-image">
-            <img :src="session.speaker.avatarUrl" :alt="session.speaker.title" loading="lazy" />
+            <img :src="session.speaker.avatarUrl" :alt="session.speaker.name" loading="lazy" />
           </div>
 
           <div class="session-detail">
-            <h4>{{ session.title }}</h4>
-            <p>{{ session.overview }}</p>
+            <h4 :id="session.speaker.id" class="sponsor-speaker-title">
+              {{ session.title }}
+            </h4>
+            <p v-if="session.overview" class="sponsor-speaker-overview">
+              <template v-for="(paragraph, idx) in session.overview?.split('\n')" :key="idx">
+                <template v-if="paragraph">
+                  <p :style="paragraph.startsWith('・') ? 'text-indent: -1em; padding-left: 1em;' : ''">
+                    {{ paragraph }}
+                  </p>
+                </template>
+                <template v-else>
+                  <span class="sponsor-speaker-overview-spacer"></span>
+                </template>
+              </template>
+            </p>
           </div>
 
           <div class="speaker">
@@ -219,22 +276,44 @@ defineOgImage({
 .sponsor-speaker-item{
   display: grid;
   grid-template-columns: calc(180 / 832 * 100%) 1fr;
-  grid-template-rows: repeat(2,auto);
-  grid-template-areas: "image session" "image speaker";
+  grid-template-rows: repeat(3,auto);
+  grid-template-areas: "track track" "image session" "image speaker";
   gap: 1rem 2rem;
   @media (--mobile){
-    grid-template-columns: repeat(2,50%);
-    grid-template-areas: "image speaker" "session session";
+    grid-template-columns: repeat(2,calc(50% - 0.75rem));
+    grid-template-areas: "track track" "image speaker" "session session";
     gap: 1.5rem;
+  }
+}
+
+.sponsor-speaker-overview {
+  margin-bottom: 2.5rem;
+  white-space: pre-wrap;
+  @media (--mobile){
+    margin-bottom: 2.25rem;
+  }
+}
+
+.sponsor-speaker-overview-spacer {
+  display: block;
+  height: 1.25em;
+  @media (--mobile){
+    height: 1rem;
   }
 }
 
 .session-detail{
   grid-area: session;
   h4{
-    margin: 0;
-    font-size: 1.125rem;
+    margin: 0 0 1.5rem;
+    font-size: var(--typography-h2-size);
+    line-height: var(--typography-h2-line-height);
     font-family: IBMPlexSansJP-Bold;
+    scroll-margin-top: 102px;
+    @media (--mobile){
+      margin-bottom: 0.5rem;
+      scroll-margin-top: 74px;
+    }
   }
   p{
     margin-top: 8px;
@@ -256,34 +335,79 @@ defineOgImage({
 }
 .speaker-affiliation{
   margin: 0;
-  font-size: 11px;
-  line-height: 1;
+  font-size: var(--typography-caption-size);
+  line-height: var(--typography-caption-line-height);
 }
 .speaker-name{
   margin-top: 4px;
+  font-size: var(--typography-h2-size);
+  line-height: var(--typography-h2-line-height);
 }
 
 .speaker-socials {
-    display: flex;
-    gap: 0.25rem;
-    margin-top: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
 
-    svg {
-      width: 1.5rem;
-      height: 1.5rem;
-      color: var(--color-text-default);
-      transition: transform 0.2s;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-text-default);
+    transition: transform 0.2s;
 
-      @media (any-hover: hover) {
-        &:hover {
-          transform: scale(1.1);
-        }
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }
+}
 
-  .view-all-sponsors{
-    display: grid;
-    place-items: center;
+.view-all-sponsors{
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+  @media (--mobile){
+    margin-bottom: 1.5rem;
   }
+}
+
+.session-track {
+  grid-area: track;
+}
+
+.speaker-track{
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background-color: var(--base-color);
+  color: var(--sub-color);
+    @media (--mobile) {
+      height: 29px;
+      font-size: 14px;
+    }
+}
+.speaker-time{
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  height: 28px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+  font-family: JetBrainsMono-Medium;
+  font-size: 14px;
+  border: 1px solid var(--base-color);
+  border-radius: 100px;
+  background-color: #fff;
+  color: var(--base-color);
+  @media (--mobile) {
+    height: 25px;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+}
 </style>
