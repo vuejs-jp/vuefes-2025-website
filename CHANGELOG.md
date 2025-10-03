@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.9.5
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.5...v2.9.5)
+
+### 🚀 Enhancements
+
+- Update ticket text ([762fec4](https://github.com/vuejs-jp/vuefes-2025/commit/762fec4))
+
+### 🏡 Chore
+
+- **release:** V2.9.2 ([4b01680](https://github.com/vuejs-jp/vuefes-2025/commit/4b01680))
+- **release:** V2.9.3 ([d605a91](https://github.com/vuejs-jp/vuefes-2025/commit/d605a91))
+- **release:** V2.9.4 ([a215260](https://github.com/vuejs-jp/vuefes-2025/commit/a215260))
+
+### ❤️ Contributors
+
+- OKI Yoshiya <oki.yoshiya@ceroan.co.jp>
+- Ubugeeei <ubuge1122@gmail.com>
+
 ## v2.9.4
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.7.4...v2.9.4)
