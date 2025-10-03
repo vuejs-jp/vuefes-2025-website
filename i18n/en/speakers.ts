@@ -382,7 +382,7 @@ Let's take a fresh look at how these Rust-based tools work, especially in coordi
   },
   {
     id: "2nofa11",
-    name: "ツノ",
+    name: "2nofa11",
     affiliation: "Bengo4.com, Inc.",
     title: "Frontend Engineer",
     avatarUrl: "/images/avatars/tsuno.jpeg",
