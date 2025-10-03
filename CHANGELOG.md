@@ -29,7 +29,7 @@
 ### ❤️ Contributors
 
 - Naokihaba <naosprintrunner6385@gmail.com>
-- NaokiHaba <naosprintrunner6385@gmail.com>
+- @naokihaba 
 
 ## v2.9.6
 
