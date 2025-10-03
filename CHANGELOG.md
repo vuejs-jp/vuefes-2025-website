@@ -1,5 +1,36 @@
 # Changelog
 
+## v2.9.7
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.6...v2.9.7)
+
+### 🚀 Enhancements
+
+- Add Japanese and English sponsor closed messages for Vue Fes Japan 2025 ([ef705c0](https://github.com/vuejs-jp/vuefes-2025/commit/ef705c0))
+- Add SectionSponsorClosed component for sponsor closed messages ([e81bbd3](https://github.com/vuejs-jp/vuefes-2025/commit/e81bbd3))
+- Add sponsorClosed constant for improved heading management ([bab833b](https://github.com/vuejs-jp/vuefes-2025/commit/bab833b))
+- Add sponsorClosed message for improved sponsorship status visibility ([a223aba](https://github.com/vuejs-jp/vuefes-2025/commit/a223aba))
+- Replace SectionSponsorWanted with SectionSponsorClosed for updated sponsorship display ([7e3a9dd](https://github.com/vuejs-jp/vuefes-2025/commit/7e3a9dd))
+
+### 🩹 Fixes
+
+- Correct sponsorship application closing date to October 1, 2025 ([716fec0](https://github.com/vuejs-jp/vuefes-2025/commit/716fec0))
+- Update speaker name from "ツノ" to "2nofa11" ([0bbda19](https://github.com/vuejs-jp/vuefes-2025/commit/0bbda19))
+- Update version from 2.9.5 to 2.9.6 ([9749876](https://github.com/vuejs-jp/vuefes-2025/commit/9749876))
+
+### 💅 Refactors
+
+- Simplify SectionSponsorClosed component by removing unused imports and props ([beec2e6](https://github.com/vuejs-jp/vuefes-2025/commit/beec2e6))
+
+### 🏡 Chore
+
+- **release:** V2.9.6 ([3348956](https://github.com/vuejs-jp/vuefes-2025/commit/3348956))
+
+### ❤️ Contributors
+
+- Naokihaba <naosprintrunner6385@gmail.com>
+- NaokiHaba <naosprintrunner6385@gmail.com>
+
 ## v2.9.6
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.6...v2.9.6)
