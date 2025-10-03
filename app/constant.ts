@@ -8,6 +8,7 @@ export const HOME_HEADING_ID = {
   message: "message",
   sponsor: "sponsor",
   sponsorWanted: "sponsor-wanted",
+  sponsorClosed: "sponsor-closed",
   volunteer: "volunteer",
   access: "access",
   studentSupport: "student-support",
