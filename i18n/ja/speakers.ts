@@ -270,7 +270,7 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
     socialUrls: {
       github: "https://github.com/wattanx",
       x: "https://x.com/pontaxx",
-      bluesky: "https://bsky.app/profile/@wattanx.dev",
+      bluesky: "https://bsky.app/profile/wattanx.dev",
     },
   },
   {
