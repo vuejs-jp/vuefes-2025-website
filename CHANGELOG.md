@@ -4,13 +4,18 @@
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.7...v2.9.8)
 
+### 🩹 Fixes
+
+- **Change the company name of sayn0**([84aadb9](https://github.com/vuejs-jp/vuefes-2025/pull/1048))
+
 ### 🏡 Chore
 
 - **release:** V2.9.7 ([a98c09f](https://github.com/vuejs-jp/vuefes-2025/commit/a98c09f))
 
 ### ❤️ Contributors
 
-- Naokihaba <naosprintrunner6385@gmail.com>
+- @naokihaba
+- @ryoAccount
 
 ## v2.9.7
 
@@ -40,7 +45,6 @@
 
 ### ❤️ Contributors
 
-- Naokihaba <naosprintrunner6385@gmail.com>
 - @naokihaba 
 
 ## v2.9.6
