@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.9.8
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.7...v2.9.8)
+
+### 🏡 Chore
+
+- **release:** V2.9.7 ([a98c09f](https://github.com/vuejs-jp/vuefes-2025/commit/a98c09f))
+
+### ❤️ Contributors
+
+- Naokihaba <naosprintrunner6385@gmail.com>
+
 ## v2.9.7
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.6...v2.9.7)

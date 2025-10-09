@@ -280,7 +280,7 @@ This session aims to equip developers with practical knowledge and a deeper unde
   {
     id: "sayn0",
     name: "sayn0",
-    affiliation: "en-japan Inc.",
+    affiliation: "en Inc.",
     title: "Frontend Engineer",
     talkSchedule: "15:50 - 16:20",
     talkTrack: "feature",
