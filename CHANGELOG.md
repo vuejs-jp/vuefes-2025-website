@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.9.9
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.8...v2.9.9)
+
+### 🩹 Fixes
+
+- Update bluesky profile URL for speakers ([#1054](https://github.com/vuejs-jp/vuefes-2025/pull/1054))
+
+### 🏡 Chore
+
+- **release:** V2.9.8 ([efaaaf8](https://github.com/vuejs-jp/vuefes-2025/commit/efaaaf8))
+- Update changelog for v2.9.8 release ([12c19de](https://github.com/vuejs-jp/vuefes-2025/commit/12c19de))
+
+### ❤️ Contributors
+
+- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+- NaokiHaba <naosprintrunner6385@gmail.com>
+
 ## v2.9.8
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.7...v2.9.8)
