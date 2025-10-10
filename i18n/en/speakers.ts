@@ -51,8 +51,8 @@ Drawing from his work leading the Nuxt core team and collaborating with global d
     attendedIndex: 5,
     color: "orange",
     // TODO:
-    talkTitle: import.meta.vfFeatures.guestDetailsJohnson ? "TBD" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsJohnson ? undefined : undefined,
+    talkTitle: import.meta.vfFeatures.guestDetailsJohnson ? "Vue Language Tooling in 5 Years" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsJohnson ? "I will share with you the significant changes in Vue's language tooling over the past five years, along with the stories behind them." : undefined,
     socialUrls: {
       github: "https://github.com/johnsoncodehk",
       x: "https://x.com/johnsoncodehk",
