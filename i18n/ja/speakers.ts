@@ -51,8 +51,8 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
     attendedIndex: 5,
     color: "orange",
     // TODO:
-    talkTitle: import.meta.vfFeatures.guestDetailsJohnson ? "TBD" : "TBD",
-    talkOverview: import.meta.vfFeatures.guestDetailsJohnson ? undefined : undefined,
+    talkTitle: import.meta.vfFeatures.guestDetailsJohnson ? "5 年間における Vue 言語ツールの進化" : "TBD",
+    talkOverview: import.meta.vfFeatures.guestDetailsJohnson ? "この 5 年間における Vue の言語ツールの大きな変化と、それらにまつわる裏話を共有します。" : undefined,
     socialUrls: {
       github: "https://github.com/johnsoncodehk",
       x: "https://x.com/johnsoncodehk",
