@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.9.10
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.9...v2.9.10)
+
+### 🚀 Enhancements
+
+- Add Johnson Chu talk details ([#1057](https://github.com/vuejs-jp/vuefes-2025/pull/1057))
+
+### 🏡 Chore
+
+- **release:** V2.9.9 ([d4c90bf](https://github.com/vuejs-jp/vuefes-2025/commit/d4c90bf))
+
+### ❤️ Contributors
+
+- Koyama Shigehito
+- Naokihaba
+
 ## v2.9.9
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.8...v2.9.9)
