@@ -617,6 +617,8 @@ const SPONSORS_INDIVIDUAL: string[] = [
   "mew-ton",
   "みずの",
   "Hiroki Osame",
+  "森田 竜一郎",
+  "松永貴照",
 ];
 
 const filterSponsorsByOption = (option: Option): Sponsor[] => [
