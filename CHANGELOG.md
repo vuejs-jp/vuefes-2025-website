@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.9.11
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.10...v2.9.11)
+
+### 🚀 Enhancements
+
+- 個人スポンサーを2名追加 ([ab60747](https://github.com/vuejs-jp/vuefes-2025/commit/ab60747))
+
+### ❤️ Contributors
+
+- Koyama Shigehito
+
 ## v2.9.10
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.9...v2.9.10)
