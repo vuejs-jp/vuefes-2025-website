@@ -247,20 +247,18 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
         time: "11:30",
         cells: [
           {
-            id: "student-support",
+            id: "student-support-speaker-session",
             type: "event",
             title: `${t("timetable.studentSupportSponsorSession")}`,
             colspan: 1,
-            rowspan: 6,
+            rowspan: 3,
             track: "cyberAgent",
             startTime: "11:30",
-            endTime: "12:30",
+            endTime: "12:00",
             speakers: [
               { ...lycorp.session![0]!.speaker, talkTitle: lycorp.session![0]!.title },
               { ...plaid.session![0]!.speaker, talkTitle: plaid.session![0]!.title },
               { ...studio.session![0]!.speaker, talkTitle: studio.session![0]!.title },
-              { ...STUDENT_SUPPORT_SPEAKERS[0], talkTitle: t("timetable.studentSupportProgramSessionTitle") } as Speaker,
-              ...STUDENT_SUPPORT_SPEAKERS.slice(1) as Speaker[],
             ],
           },
         ],
@@ -274,8 +272,24 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
         cells: [],
       },
       {
-        id: "row_27",
-        cells: [],
+        id: "1200",
+        time: "12:00",
+        cells: [
+          {
+            id: "student-support-panel-session",
+            type: "event",
+            title: `${t("timetable.studentSupportProgramSessionTitle")}`,
+            colspan: 1,
+            rowspan: 3,
+            track: "cyberAgent",
+            startTime: "12:00",
+            endTime: "12:30",
+            link: "student-support-contents",
+            speakers: [
+              ...STUDENT_SUPPORT_SPEAKERS as Speaker[],
+            ],
+          },
+        ],
       },
       {
         id: "row_28",
