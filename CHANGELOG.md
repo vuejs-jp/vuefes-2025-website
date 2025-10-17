@@ -1,5 +1,31 @@
 # Changelog
 
+## v2.9.12
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.9...v2.9.12)
+
+### 🚀 Enhancements
+
+- Add Johnson Chu talk details ([#1057](https://github.com/vuejs-jp/vuefes-2025/pull/1057))
+- 個人スポンサーを2名追加 ([ab60747](https://github.com/vuejs-jp/vuefes-2025/commit/ab60747))
+
+### 🩹 Fixes
+
+- Update student support program terminology and session details ([a016df7](https://github.com/vuejs-jp/vuefes-2025/commit/a016df7))
+
+### 🏡 Chore
+
+- **release:** V2.9.9 ([d4c90bf](https://github.com/vuejs-jp/vuefes-2025/commit/d4c90bf))
+- **release:** V2.9.10 ([bbbb63b](https://github.com/vuejs-jp/vuefes-2025/commit/bbbb63b))
+- **release:** V2.9.11 ([a513792](https://github.com/vuejs-jp/vuefes-2025/commit/a513792))
+
+### ❤️ Contributors
+
+- NaokiHaba <naosprintrunner6385@gmail.com>
+- Yamageji <koyama.shigehito@ceroan.co.jp>
+- Koyama Shigehito <koyama.shigehito@ceroan.co.jp>
+- Naokihaba <naosprintrunner6385@gmail.com>
+
 ## v2.9.11
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.10...v2.9.11)
