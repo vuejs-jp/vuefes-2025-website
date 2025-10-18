@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.9.13
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.12...v2.9.13)
+
 ## v2.9.12
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.9...v2.9.12)
