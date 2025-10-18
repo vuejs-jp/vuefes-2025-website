@@ -24,7 +24,7 @@ It's a special discount for those who purchase tickets early. You can buy ticket
 
 ### What about the schedule and session details?
 
-The schedule and session details will be published on this website before ticket sales begin. Please note that some content may be published or changed after ticket sales start.
+Please check [Timetable](/2025/en/timetable), [Speaker](/2025/en/speaker).
 
 ### What do I need for admission on the day of the event?
 
@@ -52,7 +52,7 @@ The receipts are issued by Ceroan LLC, the operations and accounting contractor 
 
 ### Will lunch be provided?
 
-**Lunch will not be provided** at Vue Fes Japan 2025. The program distributed to all attendees will include information about lunch options around the venue for your reference.
+**Lunch will not be provided** at Vue Fes Japan 2025. Please refer to the [lunch information around the venue](https://esa-pages.io/p/sharing/6906/posts/1614/52f6a682402e5d1e4a51.html).
 
 You are welcome to bring your own food and beverages into the venue. If you do, please be considerate of those around you.
 
