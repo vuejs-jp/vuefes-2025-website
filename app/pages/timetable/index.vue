@@ -114,6 +114,20 @@ useSeoMeta({
         </div>
       </template>
     </VFSection>
+
+    <VFSection :title="t('venueMap.title')" class="venue-map-section">
+      <a
+        :href="locale === 'ja' ? '/images/venue-map/map_jp@2x.png': '/images/venue-map/map_en@2x.png'"
+        target="_blank"
+      >
+        <span class="visually-hidden">{{ t('venueMap.openInNewTab') }}</span>
+        <img
+          :src="locale === 'ja' ? '/images/venue-map/map_jp.png': '/images/venue-map/map_en.png'"
+          :alt="t('venueMap.alt')"
+          loading="lazy"
+        >
+      </a>
+    </VFSection>
   </div>
 </template>
 
@@ -164,5 +178,19 @@ useSeoMeta({
   background-color: #fff;
   font-size: 16px;
   font-family: JetBrainsMono-Medium;
+}
+
+.venue-map-section {
+  img {
+    width: 100%;
+  }
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
 }
 </style>
