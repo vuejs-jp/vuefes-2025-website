@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.9.14
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.13...v2.9.14)
+
+### 🚀 Enhancements
+
+- Add venue map ([#1079](https://github.com/vuejs-jp/vuefes-2025/pull/1079))
+
+### 🏡 Chore
+
+- **release:** V2.9.13 ([e3ee3ee](https://github.com/vuejs-jp/vuefes-2025/commit/e3ee3ee))
+
+### ❤️ Contributors
+
+- Totocalcio <totohyper@yahoo.co.jp>
+- OKI Yoshiya <oki.yoshiya@ceroan.co.jp>
+
 ## v2.9.13
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.12...v2.9.13)
