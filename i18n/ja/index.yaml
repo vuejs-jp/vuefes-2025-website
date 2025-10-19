@@ -315,6 +315,10 @@ timetable:
   lightningTalk: "ライトニングトーク"
   transition: "転換"
   afterParty: "アフターパーティー\nsupported by 転職ドラフト"
+venueMap:
+  title: "会場マップ"
+  alt: "会場のフロアマップ。1階にスポンサーブース、サイバーエージェントトラック、フューチャーアーキテクトトラックがあり、2階にメイツトラックとFitFits with hacomonoトラックがあります。入口や受付、休憩スペースの位置が確認できるマップです。"
+  openInNewTab: "別タブで開きます。"
 relatedEvents:
   title: "Related Events"
   sectionTitle: "関連イベント"

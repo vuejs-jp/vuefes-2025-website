@@ -290,7 +290,7 @@ validation:
   email: "The Email Address is not in the correct format."
 
 timetable:
-  title: "timetable"
+  title: "Timetable"
   description: "This is the timetable for Vue Fes Japan 2025."
   track:
     hacomono: "FitFits with hacomono Track"
@@ -316,6 +316,10 @@ timetable:
   lightningTalk: "Lightning Talk"
   transition: "Transition"
   afterParty: "After Party\nsupported by Tenshoku-DRAFT"
+venueMap:
+  title: "Venue Map"
+  alt: "A floor map of the venue. The first floor includes the Sponsor Booth, the CyberAgent Track, and the Future Architect Track. The second floor features the mates Track and the FitFits with hacomono Track. The map shows the locations of the entrance, reception, and rest areas."
+  openInNewTab: "Opens in a new browser tab."
 relatedEvents:
   title: "Related Events"
   sectionTitle: "Related Events"
