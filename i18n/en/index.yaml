@@ -185,6 +185,8 @@ event:
     alt: "Original cocktails inspired by Vue.js, lined up in a row. Each green-colored drink is decorated with a tag featuring the Vue logo."
     attention1: "※ Original cocktails are only available at the after party."
     attention2: "※ Limited quantity."
+  coverImageAlt: "A cover image for the event with the text 'Join the Event!'"
+  view: "View Event"
 speakers:
   title: "Speakers"
   description: "At Vue Fes Japan, leading developers from around the world will gather—ranging from core team members of well-known OSS projects like Vue.js to engineers bringing real-world insights from the field."
@@ -316,6 +318,8 @@ timetable:
   lightningTalk: "Lightning Talk"
   transition: "Transition"
   afterParty: "After Party\nsupported by Tenshoku-DRAFT"
+  view: "View Timetable"
+  coverImageAlt: "A cover image for the timetable with the text 'Discover the Sessions!'"
 venueMap:
   title: "Venue Map"
   alt: "A floor map of the venue. The first floor includes the Sponsor Booth, the CyberAgent Track, and the Future Architect Track. The second floor features the mates Track and the FitFits with hacomono Track. The map shows the locations of the entrance, reception, and rest areas."
@@ -335,3 +339,4 @@ store:
   color: "Color: "
   material: "Material: "
   size: "Size: "
+  view: "View Store"

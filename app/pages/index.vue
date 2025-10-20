@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import SectionGetYourTicket from "./_components/SectionGetYourTicket.vue";
-import SectionSpeakers from "./_components/SectionSpeaker.vue";
-import SectionGranYourGear from "./_components/SectionGranYourGear.vue";
-import SectionStudentSupport from "./_components/SectionStudentSupport.vue";
-import SectionVolunteer from "./_components/SectionVolunteer.vue";
-import SectionSponsors from "./_components/SectionSponsors.vue";
-import SectionSponsorClosed from "./_components/SectionSponsorClosed.vue";
 import SectionAccess from "./_components/SectionAccess.vue";
-import SectionMessage from "./_components/SectionMessage.vue";
 import SectionContact from "./_components/SectionContact.vue";
+import SectionEvent from "./_components/SectionEvent.vue";
+import SectionMessage from "./_components/SectionMessage.vue";
+import SectionSpeakers from "./_components/SectionSpeaker.vue";
+import SectionSponsors from "./_components/SectionSponsors.vue";
+import SectionTimetable from "./_components/SectionTimetable.vue";
 
 import {
   defineRouteRules,
@@ -34,14 +31,11 @@ useSeoMeta({ title: "" });
 <template>
   <div id="pages-index">
     <div class="section-container">
-      <SectionGetYourTicket />
+      <SectionTimetable />
       <SectionSpeakers />
-      <SectionGranYourGear />
-      <SectionStudentSupport />
-      <SectionVolunteer />
-      <SectionSponsors />
-      <SectionSponsorClosed />
+      <SectionEvent />
       <SectionAccess />
+      <SectionSponsors />
       <SectionMessage />
       <SectionContact />
       <SectionStaff v-if="SectionStaff" />

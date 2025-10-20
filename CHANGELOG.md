@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.9.15
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.14...v2.9.15)
+
+### 🚀 Enhancements
+
+- 当日向けにセクション整理 ([#1081](https://github.com/vuejs-jp/vuefes-2025/pull/1081))
+
+### ❤️ Contributors
+
+- Totocalcio
+
 ## v2.9.14
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.13...v2.9.14)
