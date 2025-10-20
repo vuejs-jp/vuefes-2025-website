@@ -184,6 +184,8 @@ event:
     alt: "Vue.jsをイメージして作られたオリジナルカクテルが並んでいる。緑色のドリンクにはVueのロゴタグが付けられている。"
     attention1: "※ オリジナルカクテルのご提供は、アフターパーティーのみとなります。"
     attention2: "※ 数量限定でのご提供となります。"
+  coverImageAlt: "Join the Event! と書かれたイベントのカバー画像。"
+  view: "イベントを見る"
 speakers:
   title: "スピーカー"
   description: "Vue Fes Japan では、Vue.js をはじめとした著名 OSS のコアチームメンバーから現場で培ったリアルな知見を届けるエンジニアまで、最前線で活躍する世界中の開発者たちが勢揃いします。"
@@ -315,6 +317,8 @@ timetable:
   lightningTalk: "ライトニングトーク"
   transition: "転換"
   afterParty: "アフターパーティー\nsupported by 転職ドラフト"
+  view: "タイムテーブルを見る"
+  coverImageAlt: "Discover the Sessions!と書かれたタイムテーブルのカバー画像。"
 venueMap:
   title: "会場マップ"
   alt: "会場のフロアマップ。1階にスポンサーブース、サイバーエージェントトラック、フューチャーアーキテクトトラックがあり、2階にメイツトラックとFitFits with hacomonoトラックがあります。入口や受付、休憩スペースの位置が確認できるマップです。"
@@ -334,3 +338,4 @@ store:
   color: "カラー： "
   material: "素材： "
   size: "サイズ: "
+  view: "ストアを見る"
