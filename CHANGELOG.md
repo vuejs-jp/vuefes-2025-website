@@ -26,7 +26,7 @@
 
 ### ❤️ Contributors
 
-- Totocalcio <totohyper@yahoo.co.jp>
+- @totocalcio 
 - Yamageji <koyama.shigehito@ceroan.co.jp>
 
 ## v2.9.15
