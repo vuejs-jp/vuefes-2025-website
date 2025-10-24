@@ -10,7 +10,7 @@
 
 ### ❤️ Contributors
 
-- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+- @naokihaba
 
 ## v2.9.16
 
