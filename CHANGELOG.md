@@ -27,7 +27,7 @@
 ### ❤️ Contributors
 
 - @totocalcio 
-- Yamageji <koyama.shigehito@ceroan.co.jp>
+- @yamageji 
 
 ## v2.9.15
 
