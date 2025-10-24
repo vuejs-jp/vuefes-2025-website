@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.9.17
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.16...v2.9.17)
+
+### 🩹 Fixes
+
+- Update session time from 11:55 to 10:55 ([#1087](https://github.com/vuejs-jp/vuefes-2025/pull/1087))
+
+### ❤️ Contributors
+
+- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+
 ## v2.9.16
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.15...v2.9.16)
