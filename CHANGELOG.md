@@ -1,5 +1,34 @@
 # Changelog
 
+## v2.9.17
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.16...v2.9.17)
+
+### 🩹 Fixes
+
+- Update session time from 11:55 to 10:55 ([#1087](https://github.com/vuejs-jp/vuefes-2025/pull/1087))
+
+### ❤️ Contributors
+
+- @naokihaba
+
+## v2.9.16
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.15...v2.9.16)
+
+### 🩹 Fixes
+
+- Update venue map image ([74ba6b3](https://github.com/vuejs-jp/vuefes-2025/commit/74ba6b3))
+
+### 🏡 Chore
+
+- **release:** V2.9.15 ([c990577](https://github.com/vuejs-jp/vuefes-2025/commit/c990577))
+
+### ❤️ Contributors
+
+- @totocalcio 
+- @yamageji 
+
 ## v2.9.15
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.14...v2.9.15)
