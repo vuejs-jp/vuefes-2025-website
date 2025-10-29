@@ -226,6 +226,7 @@ const SPONSORS_GOLD: Sponsor[] = [
             github: "https://github.com/takurinton",
           },
         },
+        slide: "https://speakerdeck.com/plaidtech/plaid-unique-tech-and-internship-life",
       },
     ],
   },
@@ -486,6 +487,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
             github: "https://github.com/shuta13",
           },
         },
+        slide: "https://speakerdeck.com/shuta13/vitetotypescriptnoproject-referencesde-da-gui-mo-monoreponouikatarogunoririsusaikuruwogao-su-hua-suru",
       },
       {
         title: "Vue.js コミュニティとサイバーエージェント",

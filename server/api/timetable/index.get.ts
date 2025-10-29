@@ -187,6 +187,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "11:05",
             speakers: [{ ...bengo4.session![0]!.speaker, talkTitle: bengo4.session![0]!.title }],
             track: "hacomono",
+            slide: "https://speakerdeck.com/bengo4com/20251025-cloudsign-vuefesjapan2025",
           },
           {
             id: "sponsor-session02",
@@ -198,6 +199,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "11:05",
             speakers: [{ ...lmi.session![0]!.speaker, talkTitle: lmi.session![0]!.title }],
             track: "mates",
+            slide: "https://speakerdeck.com/lmi/vuefes2025-link-and-motivation",
           },
         ],
       },
@@ -215,6 +217,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "11:15",
             speakers: [{ ...yappli.session![0]!.speaker, talkTitle: yappli.session![0]!.title }],
             track: "hacomono",
+            slide: "https://speakerdeck.com/aoseyuu/exploring-framework-agnostic-logic-sharing-with-alien-signals-and-custom-oss",
           },
           {
             id: "sponsor-session04",
@@ -226,6 +229,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "11:15",
             speakers: [{ ...uniquevision.session![0]!.speaker, talkTitle: uniquevision.session![0]!.title }],
             track: "mates",
+
           },
         ],
       },
@@ -257,7 +261,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "12:00",
             speakers: [
               { ...lycorp.session![0]!.speaker, talkTitle: lycorp.session![0]!.title },
-              { ...plaid.session![0]!.speaker, talkTitle: plaid.session![0]!.title },
+              { ...plaid.session![0]!.speaker, talkTitle: plaid.session![0]!.title, slide: plaid.session![0]!.slide },
               { ...studio.session![0]!.speaker, talkTitle: studio.session![0]!.title },
             ],
           },
@@ -338,6 +342,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "13:20",
             speakers: [getSpeaker("danielroe")],
             track: "hacomono",
+            slide: "https://rfihabsudkpoqozp.public.blob.vercel-storage.com/slides/2025-09-20-wts-beyond-framework.pdf",
           },
           {
             id: "leaysgur",
@@ -349,6 +354,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "13:20",
             speakers: [getSpeaker("leaysgur")],
             track: "mates",
+            slide: "https://leaysgur.github.io/slides/vuefes_jp-2025/",
           },
           {
             id: "cell_33_3",
@@ -360,6 +366,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "13:20",
             speakers: [getSpeaker("yamanoku")],
             track: "feature",
+            slide: "https://yamanoku.net/vuefes-japan-2025/slide/",
           },
           {
             id: "1",
@@ -421,6 +428,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             track: "mates",
             startTime: "13:35",
             endTime: "14:05",
+            slide: "https://hiroshi-talks.vercel.app/2025-10-25",
           },
           {
             id: "neginasu",
@@ -432,6 +440,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             track: "feature",
             startTime: "13:35",
             endTime: "14:05",
+            slide: "https://speakerdeck.com/neginasu/which-vue-validation-library-should-we-really-use-the-limits-of-self-made-validation-and-how-i-finally-moved-on",
           },
         ],
       },
@@ -470,6 +479,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "14:50",
             speakers: [getSpeaker("akryum")],
             track: "hacomono",
+            slide: "https://slides.akryum.dev/2025-10-rstore-vue-fes/",
           },
           {
             id: "toddeTV",
@@ -481,6 +491,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "14:50",
             speakers: [getSpeaker("toddeTV")],
             track: "mates",
+            slide: "https://talk-2025-10-25-vue-fes-japan.vercel.app/",
           },
           {
             id: "naitokosuke",
@@ -492,6 +503,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "14:50",
             speakers: [getSpeaker("naitokosuke")],
             track: "feature",
+            slide: "https://naitokosuke.github.io/vue-fes-japan-2025-slide-lite",
           },
         ],
       },
@@ -530,6 +542,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "15:35",
             speakers: [getSpeaker("baku89")],
             track: "hacomono",
+            slide: "https://baku89.com/ja/vuefes2025",
           },
           {
             id: "vados-cosmonic",
@@ -552,6 +565,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "15:35",
             speakers: [getSpeaker("hiranuma")],
             track: "feature",
+            slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
           },
           {
             id: "2",
@@ -563,7 +577,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             startTime: "15:05",
             endTime: "17:05",
             link: "hands-on",
-            speakers: [{ ...cyberagent.session![0]!.speaker, talkTitle: `【${t("timetable.handsOnSponsorSession")}】\n${cyberagent.session![0]!.title}` }],
+            speakers: [{ ...cyberagent.session![0]!.speaker, talkTitle: `【${t("timetable.handsOnSponsorSession")}】\n${cyberagent.session![0]!.title}`, slide: cyberagent.session![0]!.slide }],
           },
         ],
       },
@@ -617,6 +631,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "16:15",
             speakers: [getSpeaker("wattanx")],
             track: "mates",
+            slide: "https://talks.wattanx.dev/2025/vue-fes-japan/",
           },
         ],
       },
@@ -710,6 +725,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "17:05",
             speakers: [getSpeaker("yuichkun")],
             track: "feature",
+            slide: "https://building-audio-apps-with-js.vercel.app/1",
           },
         ],
       },
@@ -773,6 +789,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "17:50",
             speakers: [getSpeaker("antfu")],
             track: "feature",
+            slide: "https://talks.antfu.me/2025/vuefes/1",
           },
           {
             id: "vue_quiz",

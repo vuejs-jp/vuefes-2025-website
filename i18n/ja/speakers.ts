@@ -356,6 +356,7 @@ export const LT_SPEAKERS: Speaker[] = [
       x: "https://x.com/ssssotaro",
       bluesky: "https://bsky.app/profile/ssssota.bsky.social",
     },
+    slide: "https://speakerdeck.com/ssssota/why-do-rust-based-tools-run-without-a-rust-environment",
   },
   {
     id: "NaokiHaba",
@@ -373,6 +374,7 @@ export const LT_SPEAKERS: Speaker[] = [
       x: "https://x.com/naokihaba",
       bluesky: "https://bsky.app/profile/naokihaba.bsky.social",
     },
+    slide: "https://speakerdeck.com/naokihaba/nuxt-4-no-singleton-data-fetching-layer-de-he-gabian-warunoka",
   },
   {
     id: "2nofa11",
@@ -389,6 +391,7 @@ export const LT_SPEAKERS: Speaker[] = [
       github: "https://github.com/2nofa11",
       x: "https://x.com/2nofa11",
     },
+    slide: "https://speakerdeck.com/bengo4com/20251025-cloudsign-vuefesjapan2025-lt",
   },
   {
     id: "rinchoku",
@@ -404,6 +407,7 @@ export const LT_SPEAKERS: Speaker[] = [
       github: "https://github.com/rinchoku",
       x: "https://x.com/stupid_owl",
     },
+    slide: "https://speakerdeck.com/rinchoku/zhi-jue-todezain",
   },
   {
     id: "noriyuki-shimizu",
@@ -420,6 +424,7 @@ export const LT_SPEAKERS: Speaker[] = [
       github: "https://github.com/noriyuki-shimizu",
       x: "https://x.com/@smnr14785228",
     },
+    slide: "https://gamma.app/docs/Nuxt-Cookie--3tmj2du5ltzn66z",
   },
   {
     id: "Crayfisher-zari",
@@ -437,6 +442,7 @@ export const LT_SPEAKERS: Speaker[] = [
       x: "https://x.com/@crayfisher_zari",
       bluesky: "https://bsky.app/profile/crayfisher-zari.bsky.social",
     },
+    slide: "https://speakerdeck.com/nishiharatsubasa/ge-ren-dedezitaruting-no-dezainsisutemuwovue-dot-jsde-zuo-tuteiruhua",
   },
   {
     id: "yut0naga1",
@@ -452,6 +458,7 @@ export const LT_SPEAKERS: Speaker[] = [
     socialUrls: {
       x: "https://x.com/yut0naga1",
     },
+    slide: "https://speakerdeck.com/yut0naga1_fa/react-nativenaranu-vue-native-gashi-xian-surukamo-xin-shi-dai-marutipuratutohuomukai-fa-huremuwakunolynxtolynxnovue-dot-jsdui-ying-wozhui-tutemiyou-vue-lynx",
   },
   {
     id: "kaede-kato",

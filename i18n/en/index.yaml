@@ -299,7 +299,7 @@ timetable:
     mates: "Mates Track"
     feature: "Future Architect Track"
     cyberAgent: "CyberAgent Track"
-  slider: "Slider"
+  slider: "Slides"
   session: "Session"
   # Timetable content translations
   openingReception: "Opening and reception"

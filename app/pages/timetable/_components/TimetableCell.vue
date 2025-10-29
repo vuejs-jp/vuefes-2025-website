@@ -109,6 +109,10 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
                 </div>
               </div>
             </div>
+            <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
+            <a v-if="speaker.slide" :href="speaker.slide" class="slide" :style="type ==='lightningTalk' ? '--slide-margin-top: -24px': '--slide-margin-top: 0'" target="_blank">
+              <SliderIcon :aria-label="t('timetable.slider')" role="img" />
+            </a>
           </template>
         </div>
         <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
@@ -236,10 +240,29 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
 }
 
 .slide {
-  margin-top: 8px;
-    svg{
-    --color-base:v-bind(color) ;
+  --slide-margin-top: 8px;
+
+  margin-top: var(--slide-margin-top);
+  display: inline-grid;
+  place-items: center;
+  align-self: start;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: v-bind(color);
+    transition: transform 0.2s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
+
+    /* svg{
+    --color-base:v-bind(color) ;
+  } */
 }
 
 .event-speaker {
