@@ -241,7 +241,6 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
   margin-top: 8px;
   display: inline-grid;
   place-items: center;
-  align-self: start;
 
   svg {
     width: 1.5rem;
