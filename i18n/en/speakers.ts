@@ -264,7 +264,6 @@ We'll show you how to shift from tedious tasks to meaningful development by buil
       x: "https://x.com/waka_405",
       bluesky: "https://bsky.app/profile/waka405.bsky.social",
     },
-    slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
   },
   {
     id: "wattanx",
@@ -302,6 +301,7 @@ This session aims to equip developers with practical knowledge and a deeper unde
     socialUrls: {
       x: "https://x.com/sayn0de",
     },
+    slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
   },
   {
     id: "yuichkun",

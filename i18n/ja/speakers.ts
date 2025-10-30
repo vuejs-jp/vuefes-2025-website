@@ -260,7 +260,6 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
       x: "https://x.com/waka_405",
       bluesky: "https://bsky.app/profile/waka405.bsky.social",
     },
-    slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
   },
   {
     id: "wattanx",
@@ -298,6 +297,7 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
     socialUrls: {
       x: "https://x.com/sayn0de",
     },
+    slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
   },
   {
     id: "yuichkun",
