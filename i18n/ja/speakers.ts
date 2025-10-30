@@ -40,6 +40,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       github: "https://github.com/danielroe",
       bluesky: "https://bsky.app/profile/danielroe.dev",
     },
+    slide: "https://rfihabsudkpoqozp.public.blob.vercel-storage.com/slides/2025-09-20-wts-beyond-framework.pdf",
   },
   {
     id: "johnsoncodehk",
@@ -83,6 +84,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       x: "https://x.com/Akryum",
       bluesky: "https://bsky.app/profile/guillaume.akryum.dev",
     },
+    slide: "https://slides.akryum.dev/2025-10-rstore-vue-fes/",
   },
   {
     id: "baku89",
@@ -99,6 +101,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       github: "https://github.com/baku89",
       x: "https://x.com/_baku89",
     },
+    slide: "https://baku89.com/ja/vuefes2025",
   },
   {
     id: "hi-ogawa",
@@ -120,6 +123,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
       x: "https://twitter.com/hiroshi_18181",
     },
+    slide: "https://hiroshi-talks.vercel.app/2025-10-25",
   },
   {
     id: "leaysgur",
@@ -141,6 +145,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       github: "https://github.com/leaysgur",
       x: "https://x.com/leaysgur",
     },
+    slide: "https://leaysgur.github.io/slides/vuefes_jp-2025/",
   },
   {
     id: "yamanoku",
@@ -157,6 +162,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       x: "https://x.com/yamanoku",
       bluesky: "https://bsky.app/profile/yamanoku.net",
     },
+    slide: "https://yamanoku.net/vuefes-japan-2025/slide/",
   },
   {
     id: "neginasu",
@@ -174,6 +180,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       x: "https://x.com/neginasu_grid",
       bluesky: "https://bsky.app/profile/neginasu-grid.bsky.social",
     },
+    slide: "https://speakerdeck.com/neginasu/which-vue-validation-library-should-we-really-use-the-limits-of-self-made-validation-and-how-i-finally-moved-on",
   },
   {
     id: "toddeTV",
@@ -191,6 +198,7 @@ Nuxt コアチームを率いる経験や、世界中の開発者コミュニテ
       x: "https://x.com/toddeTV",
       bluesky: "https://bsky.app/profile/todde.tv",
     },
+    slide: "https://talk-2025-10-25-vue-fes-japan.vercel.app/",
   },
   {
     id: "naitokosuke",
@@ -218,6 +226,7 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
       x: "https://x.com/@naitokosuke",
       bluesky: "https://bsky.app/profile/n-aito.bsky.social",
     },
+    slide: "https://naitokosuke.github.io/vue-fes-japan-2025-slide-lite",
   },
   {
     id: "vados-cosmonic",
@@ -251,6 +260,7 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
       x: "https://x.com/waka_405",
       bluesky: "https://bsky.app/profile/waka405.bsky.social",
     },
+    slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
   },
   {
     id: "wattanx",
@@ -272,6 +282,7 @@ Vue/Nuxt 開発でのこんな日常的なストレスを解決したくあり�
       x: "https://x.com/pontaxx",
       bluesky: "https://bsky.app/profile/wattanx.dev",
     },
+    slide: "https://talks.wattanx.dev/2025/vue-fes-japan/",
   },
   {
     id: "sayn0",
@@ -319,6 +330,7 @@ DSP(音声信号処理)の予備知識は不要です。`,
       github: "https://github.com/yuichkun",
       x: "https://x.com/yogo_escentier",
     },
+    slide: "https://building-audio-apps-with-js.vercel.app/1",
   },
   {
     id: "antfu",
@@ -336,6 +348,7 @@ DSP(音声信号処理)の予備知識は不要です。`,
       x: "https://x.com/antfu7",
       bluesky: "https://bsky.app/profile/antfu.me",
     },
+    slide: "https://talks.antfu.me/2025/vuefes/1",
   },
 ];
 

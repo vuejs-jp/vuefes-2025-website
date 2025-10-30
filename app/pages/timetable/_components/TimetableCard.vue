@@ -10,7 +10,6 @@ const {
   startTime,
   endTime,
   speakers,
-  slide,
   track,
   link,
 } = defineProps <TimetableCell>();
@@ -110,10 +109,6 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
             </a>
           </template>
         </div>
-        <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
-        <a v-if="slide" :href="slide" class="slide" target="_blank">
-          <SliderIcon :aria-label="t('timetable.slider')" role="img" />
-        </a>
       </template>
     </div>
   </div>

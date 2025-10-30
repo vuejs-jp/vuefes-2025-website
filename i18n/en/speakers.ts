@@ -40,6 +40,7 @@ Drawing from his work leading the Nuxt core team and collaborating with global d
       github: "https://github.com/danielroe",
       bluesky: "https://bsky.app/profile/danielroe.dev",
     },
+    slide: "https://rfihabsudkpoqozp.public.blob.vercel-storage.com/slides/2025-09-20-wts-beyond-framework.pdf",
   },
   {
     id: "johnsoncodehk",
@@ -83,6 +84,7 @@ Let's answer many interesting questions like:
       x: "https://x.com/Akryum",
       bluesky: "https://bsky.app/profile/guillaume.akryum.dev",
     },
+    slide: "https://slides.akryum.dev/2025-10-rstore-vue-fes/",
   },
   {
     id: "baku89",
@@ -99,6 +101,7 @@ Let's answer many interesting questions like:
       github: "https://github.com/baku89",
       x: "https://x.com/_baku89",
     },
+    slide: "https://baku89.com/ja/vuefes2025",
   },
   {
     id: "hi-ogawa",
@@ -120,6 +123,7 @@ By understanding the internals, you'll learn better testing practices and test p
       bluesky: "https://bsky.app/profile/hiogawa.bsky.social",
       x: "https://twitter.com/hiroshi_18181",
     },
+    slide: "https://hiroshi-talks.vercel.app/2025-10-25",
   },
   {
     id: "leaysgur",
@@ -141,6 +145,7 @@ Let me reflect on my motivations for OSS contribution and what those contributio
       github: "https://github.com/leaysgur",
       x: "https://x.com/leaysgur",
     },
+    slide: "https://leaysgur.github.io/slides/vuefes_jp-2025/",
   },
   {
     id: "yamanoku",
@@ -161,6 +166,7 @@ Together, we’ll discover how all developers can use these new tools to build m
       x: "https://x.com/yamanoku",
       bluesky: "https://bsky.app/profile/yamanoku.net",
     },
+    slide: "https://yamanoku.net/vuefes-japan-2025/slide/",
   },
   {
     id: "neginasu",
@@ -178,6 +184,7 @@ Together, we’ll discover how all developers can use these new tools to build m
       x: "https://x.com/neginasu_grid",
       bluesky: "https://bsky.app/profile/neginasu-grid.bsky.social",
     },
+    slide: "https://speakerdeck.com/neginasu/which-vue-validation-library-should-we-really-use-the-limits-of-self-made-validation-and-how-i-finally-moved-on",
   },
   {
     id: "toddeTV",
@@ -195,6 +202,7 @@ Together, we’ll discover how all developers can use these new tools to build m
       x: "https://x.com/toddeTV",
       bluesky: "https://bsky.app/profile/todde.tv",
     },
+    slide: "https://talk-2025-10-25-vue-fes-japan.vercel.app/",
   },
   {
     id: "naitokosuke",
@@ -222,6 +230,7 @@ We'll show you how to shift from tedious tasks to meaningful development by buil
       x: "https://x.com/@naitokosuke",
       bluesky: "https://bsky.app/profile/n-aito.bsky.social",
     },
+    slide: "https://naitokosuke.github.io/vue-fes-japan-2025-slide-lite",
   },
   {
     id: "vados-cosmonic",
@@ -255,6 +264,7 @@ We'll show you how to shift from tedious tasks to meaningful development by buil
       x: "https://x.com/waka_405",
       bluesky: "https://bsky.app/profile/waka405.bsky.social",
     },
+    slide: "https://speakerdeck.com/sayn0/aiqu-dong-dejin-meruyi-cun-raiburarigeng-xin-vue-puroziekutonopin-zhi-xiang-shang-tokai-fa-supidogai-shan-noshi-jian-lu",
   },
   {
     id: "wattanx",
@@ -276,6 +286,7 @@ This session aims to equip developers with practical knowledge and a deeper unde
       x: "https://x.com/pontaxx",
       bluesky: "https://bsky.app/profile/wattanx.dev",
     },
+    slide: "https://talks.wattanx.dev/2025/vue-fes-japan/",
   },
   {
     id: "sayn0",
@@ -321,6 +332,7 @@ Basic familiarity with JavaScript/TypeScript and Vue.js. No prior DSP knowledge 
       github: "https://github.com/yuichkun",
       x: "https://x.com/@yogo_escentier",
     },
+    slide: "https://building-audio-apps-with-js.vercel.app/1",
   },
   {
     id: "antfu",
@@ -338,6 +350,7 @@ Basic familiarity with JavaScript/TypeScript and Vue.js. No prior DSP knowledge 
       x: "https://x.com/antfu7",
       bluesky: "https://bsky.app/profile/antfu.me",
     },
+    slide: "https://talks.antfu.me/2025/vuefes/1",
   },
 ];
 

@@ -26,6 +26,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
           socialUrls: {
             github: "https://github.com/nobuaki0331",
           },
+          slide: "https://speakerdeck.com/bengo4com/20251025-cloudsign-vuefesjapan2025",
         },
       },
     ],
@@ -57,6 +58,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
             bluesky: "https://bsky.app/profile/aose-yuu.bsky.social",
             github: "https://github.com/aose-yuu",
           },
+          slide: "https://speakerdeck.com/aoseyuu/exploring-framework-agnostic-logic-sharing-with-alien-signals-and-custom-oss",
         },
       },
     ],
@@ -87,6 +89,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
             x: "https://x.com/nakagam3",
             github: "https://github.com/nakagam3",
           },
+          slide: "https://speakerdeck.com/lmi/vuefes2025-link-and-motivation",
         },
       },
     ],

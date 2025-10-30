@@ -10,7 +10,6 @@ const {
   startTime,
   endTime,
   speakers,
-  slide,
   colspan,
   rowspan,
   track,
@@ -115,10 +114,6 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
             </a>
           </template>
         </div>
-        <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
-        <a v-if="slide" :href="slide" class="slide" target="_blank">
-          <SliderIcon :aria-label="t('timetable.slider')" role="img" />
-        </a>
       </template>
     </div>
   </td>
