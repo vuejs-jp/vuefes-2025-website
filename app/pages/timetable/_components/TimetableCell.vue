@@ -254,10 +254,6 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
       }
     }
   }
-
-    /* svg{
-    --color-base:v-bind(color) ;
-  } */
 }
 
 .event-speaker {
