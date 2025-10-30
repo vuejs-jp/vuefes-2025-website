@@ -102,11 +102,11 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
                   </p>
                 </div>
               </div>
+              <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
+              <a v-if="speaker.slide" :href="speaker.slide" class="slide" target="_blank">
+                <SliderIcon :aria-label="t('timetable.slider')" role="img" />
+              </a>
             </div>
-            <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
-            <a v-if="speaker.slide" :href="speaker.slide" class="slide" :style="type ==='lightningTalk' ? '--slide-margin-top: -16px': '--slide-margin-top: -8px'" target="_blank">
-              <SliderIcon :aria-label="t('timetable.slider')" role="img" />
-            </a>
           </template>
         </div>
       </template>
@@ -238,9 +238,7 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
 }
 
 .slide {
-  --slide-margin-top: 8px;
-
-  margin-top: var(--slide-margin-top);
+  margin-top: 8px;
   display: inline-grid;
   place-items: center;
   align-self: start;
