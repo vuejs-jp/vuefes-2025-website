@@ -226,7 +226,6 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "11:15",
             speakers: [{ ...uniquevision.session![0]!.speaker, talkTitle: uniquevision.session![0]!.title }],
             track: "mates",
-
           },
         ],
       },
