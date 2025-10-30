@@ -13,7 +13,6 @@ export interface Sponsor {
     title: string;
     overview: string;
     speaker: Speaker;
-    slide?: string;
   }[];
 }
 

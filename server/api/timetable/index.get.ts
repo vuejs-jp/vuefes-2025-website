@@ -258,7 +258,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             endTime: "12:00",
             speakers: [
               { ...lycorp.session![0]!.speaker, talkTitle: lycorp.session![0]!.title },
-              { ...plaid.session![0]!.speaker, talkTitle: plaid.session![0]!.title, slide: plaid.session![0]!.slide },
+              { ...plaid.session![0]!.speaker, talkTitle: plaid.session![0]!.title },
               { ...studio.session![0]!.speaker, talkTitle: studio.session![0]!.title },
             ],
           },
@@ -564,7 +564,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
             startTime: "15:05",
             endTime: "17:05",
             link: "hands-on",
-            speakers: [{ ...cyberagent.session![0]!.speaker, talkTitle: `【${t("timetable.handsOnSponsorSession")}】\n${cyberagent.session![0]!.title}`, slide: cyberagent.session![0]!.slide }],
+            speakers: [{ ...cyberagent.session![0]!.speaker, talkTitle: `【${t("timetable.handsOnSponsorSession")}】\n${cyberagent.session![0]!.title}` }],
           },
         ],
       },
