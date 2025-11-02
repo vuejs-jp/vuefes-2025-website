@@ -6,6 +6,7 @@ export interface Speaker {
   affiliation?: string;
   title?: string;
   sponsorId?: string;
+  slide?: string;
 
   talkSchedule?: string;
   talkTrack?: "hacomono" | "mates" | "feature" | "cyberAgent";
