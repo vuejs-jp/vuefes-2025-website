@@ -4,6 +4,7 @@ declare module "~icons/icons/ic_youtube";
 declare module "~icons/icons/ic_github";
 declare module "~icons/icons/ic_note";
 declare module "~icons/icons/ic_facebook";
+declare module "~icons/icons/timetable-slider";
 declare module "~icons/icons/animation-play";
 declare module "~icons/icons/animation-pause";
 declare module "~icons/icons/keyboard-arrow-left";

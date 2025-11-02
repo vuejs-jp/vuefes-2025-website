@@ -8,7 +8,6 @@ export interface TimetableCell {
   startTime?: string;
   endTime?: string;
   speakers?: Speaker[];
-  slide?: string;
   colspan?: number;
   rowspan?: number;
   track?: "hacomono" | "mates" | "feature" | "cyberAgent" | "blank";

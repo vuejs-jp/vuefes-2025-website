@@ -2,7 +2,7 @@
 import { computed } from "vue";
 import { useI18n, useLocaleRoute } from "#imports";
 import type { TimetableCell } from "~~/i18n/timetable";
-import SliderIcon from "~icons/icons/timetable-slider.svg";
+import SliderIcon from "~icons/icons/timetable-slider";
 
 const {
   type,
@@ -10,7 +10,6 @@ const {
   startTime,
   endTime,
   speakers,
-  slide,
   track,
   link,
 } = defineProps <TimetableCell>();
@@ -103,13 +102,13 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
                   </p>
                 </div>
               </div>
+              <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
+              <a v-if="speaker.slide" :href="speaker.slide" class="slide" target="_blank">
+                <SliderIcon :aria-label="t('timetable.slider')" role="img" />
+              </a>
             </div>
           </template>
         </div>
-        <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
-        <a v-if="slide" :href="slide" class="slide" target="_blank">
-          <SliderIcon :aria-label="t('timetable.slider')" role="img" />
-        </a>
       </template>
     </div>
   </div>
@@ -240,9 +239,20 @@ const hoverColor = computed(() => `var(--color-${accentColorName.value}-accent-h
 
 .slide {
   margin-top: 8px;
+  display: inline-grid;
+  place-items: center;
 
   svg {
-    --color-base: v-bind(color);
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: v-bind(color);
+    transition: transform 0.2s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 

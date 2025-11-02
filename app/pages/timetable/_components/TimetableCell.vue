@@ -10,7 +10,6 @@ const {
   startTime,
   endTime,
   speakers,
-  slide,
   colspan,
   rowspan,
   track,
@@ -108,13 +107,13 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
                   </p>
                 </div>
               </div>
+              <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
+              <a v-if="speaker.slide" :href="speaker.slide" class="slide" target="_blank">
+                <SliderIcon :aria-label="t('timetable.slider')" role="img" />
+              </a>
             </div>
           </template>
         </div>
-        <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
-        <a v-if="slide" :href="slide" class="slide" target="_blank">
-          <SliderIcon :aria-label="t('timetable.slider')" role="img" />
-        </a>
       </template>
     </div>
   </td>
@@ -237,8 +236,20 @@ const hoverColor = `var(--color-${accentColorName.value}-accent-hover)`;
 
 .slide {
   margin-top: 8px;
-    svg{
-    --color-base:v-bind(color) ;
+  display: inline-grid;
+  place-items: center;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: v-bind(color);
+    transition: transform 0.2s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 

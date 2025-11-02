@@ -1,5 +1,28 @@
 # Changelog
 
+## v2.10.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.17...v2.10.0)
+
+### 🚀 Enhancements
+
+- Add slides ([968f8a7](https://github.com/vuejs-jp/vuefes-2025/commit/968f8a7))
+- Remove slide references and update speaker slide links ([23ef7eb](https://github.com/vuejs-jp/vuefes-2025/commit/23ef7eb))
+
+### 🩹 Fixes
+
+- Slides ([9778527](https://github.com/vuejs-jp/vuefes-2025/commit/9778527))
+- Update slide references for sponsors in English and Japanese ([fdca342](https://github.com/vuejs-jp/vuefes-2025/commit/fdca342))
+
+### 🏡 Chore
+
+- **release:** V2.9.17 ([3e0224a](https://github.com/vuejs-jp/vuefes-2025/commit/3e0224a))
+
+### ❤️ Contributors
+
+- Totocalcio <totohyper@yahoo.co.jp>
+- Naokihaba <naosprintrunner6385@gmail.com>
+
 ## v2.9.17
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.16...v2.9.17)
