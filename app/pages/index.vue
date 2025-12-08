@@ -3,6 +3,7 @@ import SectionAccess from "./_components/SectionAccess.vue";
 import SectionContact from "./_components/SectionContact.vue";
 import SectionEvent from "./_components/SectionEvent.vue";
 import SectionMessage from "./_components/SectionMessage.vue";
+import SectionPhoto from "./_components/SectionPhoto.vue";
 import SectionSpeakers from "./_components/SectionSpeaker.vue";
 import SectionSponsors from "./_components/SectionSponsors.vue";
 import SectionTimetable from "./_components/SectionTimetable.vue";
@@ -31,6 +32,7 @@ useSeoMeta({ title: "" });
 <template>
   <div id="pages-index">
     <div class="section-container">
+      <SectionPhoto />
       <SectionTimetable />
       <SectionSpeakers />
       <SectionEvent />
