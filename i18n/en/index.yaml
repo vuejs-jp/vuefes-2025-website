@@ -254,6 +254,29 @@ access:
   alt1: "Low-angle view of the exterior of Otemachi Place Hall & Conference. The glass-walled high-rise building and protruding mid-rise section are supported by a row of white columns, and the plaza in front of the building entrance features lush greenery and information boards."
   alt2: "A large seminar room in the Otemachi Place Hall & Conference Center. It features wood-grain walls, lattice-patterned acoustic ceiling panels, and rows of black stacking chairs."
 
+photo:
+  title: "Photo"
+  description: "Thank you to everyone who attended Vue Fes Japan 2025. Photos taken on the day are released under the {cc0Link}, so feel free to use them on your blogs, social media, and more."
+  cc0LinkText: "CC0 license"
+  categories:
+    preparation: "Preparation Day"
+    beforeOpening: "Before Opening"
+    reception: "Reception"
+    creativeWall: "Creative Wall"
+    installation: "Installation"
+    hacomonoTrack: "FitFits with hacomono Track"
+    matesTrack: "Mates Track"
+    futureArchitectTrack: "Future Architect Track"
+    cyberAgentTrack: "CyberAgent Track"
+    sponsorBooth: "Sponsor Booth"
+    vueFesStore: "Vue Fes Store"
+    festivalCorner: "Festival Corner"
+    tattooSpace: "Tattoo Space"
+    freeDrinkAndSnack: "Free Drinks & Snacks"
+    restAndChargingSpace: "Rest & Charging Space"
+    afterParty: "After Party"
+    otherSnapshots: "Other Snapshots"
+
 contactForm:
   title: "Contact Us"
   description: >
@@ -299,7 +322,7 @@ timetable:
     mates: "Mates Track"
     feature: "Future Architect Track"
     cyberAgent: "CyberAgent Track"
-  slider: "Slides"
+  slider: "Slider"
   session: "Session"
   # Timetable content translations
   openingReception: "Opening and reception"

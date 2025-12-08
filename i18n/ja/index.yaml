@@ -253,6 +253,29 @@ access:
   alt1: "大手町プレイス ホール＆カンファレンスの建物外観のローアングルビュー。ガラス張りの高層ビルと張り出した中層部を白い円柱列が支えており、建物入口前の広場には緑豊かな植栽と案内板が設置されている。"
   alt2: "大手町プレイス ホール＆カンファレンス会場内の大きなセミナールーム。木目調の壁面と格子状の音響天井パネル、黒いスタッキングチェアが並べられている。"
 
+photo:
+  title: "写真"
+  description: "Vue Fes Japan 2025 にご参加いただいたみなさん、ありがとうございました。当日撮影された写真を {cc0Link} にて公開しますので、ブログや SNS などにご自由にお使いください。"
+  cc0LinkText: "CC0 ライセンス"
+  categories:
+    preparation: "前日準備"
+    beforeOpening: "開場前"
+    reception: "受付"
+    creativeWall: "クリエイティブウォール"
+    installation: "インスタレーション"
+    hacomonoTrack: "FitFits with hacomonoトラック"
+    matesTrack: "メイツトラック"
+    futureArchitectTrack: "フューチャーアーキテクトトラック"
+    cyberAgentTrack: "サイバーエージェントトラック"
+    sponsorBooth: "スポンサーブース"
+    vueFesStore: "Vue Fes Store"
+    festivalCorner: "縁日コーナー"
+    tattooSpace: "タトゥースペース"
+    freeDrinkAndSnack: "フリードリンク＆スナック"
+    restAndChargingSpace: "休憩・充電スペース"
+    afterParty: "アフターパーティー"
+    otherSnapshots: "その他スナップ"
+
 contactForm:
   title: "お問い合わせ"
   description: >
