@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.11.0
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.10.0...v2.11.0)
+
+### 🚀 Enhancements
+
+- Add photo section ([#1095](https://github.com/vuejs-jp/vuefes-2025/pull/1095))
+
+### ❤️ Contributors
+
+- Naoki Haba ([@naokihaba](https://github.com/naokihaba))
+
 ## v2.10.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.9.17...v2.10.0)
