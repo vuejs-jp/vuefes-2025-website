@@ -175,7 +175,7 @@ export default defineEventHandler(async (event): Promise<Timetable> => {
       },
       {
         id: "1055",
-        time: "11:55",
+        time: "10:55",
         cells: [
           {
             id: "sponsor-session01",

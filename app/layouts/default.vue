@@ -35,6 +35,11 @@ const menuItems = computed<MenuItemProps[]>(() =>
       routeName: localeRoute({ name: "index" }).name,
     },
     {
+      id: HOME_HEADING_ID.photo,
+      label: "Photo",
+      routeName: localeRoute({ name: "photo" }).name,
+    },
+    {
       id: HOME_HEADING_ID.timetable,
       label: "Timetable",
       routeName: localeRoute({ name: "timetable" }).name,

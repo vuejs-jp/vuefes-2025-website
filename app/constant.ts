@@ -1,5 +1,6 @@
 export const HOME_HEADING_ID = {
   home: "",
+  photo: "photo",
   timetable: "timetable",
   speaker: "speaker",
   ticket: "ticket",
