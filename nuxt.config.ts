@@ -117,10 +117,10 @@ export default defineNuxtConfig({
     plugins: [
       Icons({
         customCollections: {
-          icons: FileSystemIconLoader("./public/images/icons", (svg) =>
+          icons: FileSystemIconLoader("./public/images/icons", svg =>
             svg.replace(/#007F62/g, "var(--color-base)"),
           ),
-          logo: FileSystemIconLoader("./public/images/logo", (svg) =>
+          logo: FileSystemIconLoader("./public/images/logo", svg =>
             svg.replace(/#007F62/g, "var(--color-base)"),
           ),
         },
