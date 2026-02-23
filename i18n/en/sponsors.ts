@@ -1,9 +1,11 @@
 import type { Sponsor, Option, OptionSponsor } from "../sponsor";
 
+const BASE_URL = import.meta.dev ? "/" : "/2025/";
+
 const SPONSORS_PLATINA: Sponsor[] = [
   {
     name: "Bengo4.com,Inc.",
-    logoImageUrl: "/images/sponsor-logo/platina/cloud-sign.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/platina/cloud-sign.png`,
     logoImageAlt: "CLOUDSIGN powered by Bengo4.com",
     linkUrl: "https://www.bengo4.com/corporate/",
     plan: "platina",
@@ -20,7 +22,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
           talkSchedule: "10:55 - 11:05",
           talkTrack: "hacomono",
           title: "Frontend Engineer",
-          avatarUrl: "/images/avatars/sponsors/nobuaki-kambe.png",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/nobuaki-kambe.png`,
           id: "nobuaki-kambe",
           color: "default",
           socialUrls: {
@@ -33,7 +35,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
   },
   {
     name: "Yappli, Inc.",
-    logoImageUrl: "/images/sponsor-logo/platina/yappli.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/platina/yappli.png`,
     logoImageAlt: "yappli.inc logo",
     linkUrl: "https://yappli.co.jp/",
     plan: "platina",
@@ -50,7 +52,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
           talkSchedule: "11:05 - 11:15",
           talkTrack: "hacomono",
           title: "Front-end Engineer",
-          avatarUrl: "/images/avatars/sponsors/aose-chan.jpg",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/aose-chan.jpg`,
           id: "aose-yuu",
           color: "default",
           socialUrls: {
@@ -65,7 +67,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
   },
   {
     name: "Link and Motivation Inc.",
-    logoImageUrl: "/images/sponsor-logo/platina/link-and-motivation.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/platina/link-and-motivation.png`,
     logoImageAlt: "Corporate logo of Link and Motivation with symbol and text",
     linkUrl: "https://www.lmi.ne.jp/",
     plan: "platina",
@@ -82,7 +84,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
           talkSchedule: "10:55 - 11:05",
           talkTrack: "mates",
           title: "Front-end Engineer",
-          avatarUrl: "/images/avatars/sponsors/yuki_nakagami.jpg",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/yuki_nakagami.jpg`,
           id: "nakagam3",
           color: "default",
           socialUrls: {
@@ -96,7 +98,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
   },
   {
     name: "Unique Vision Company, Japan.",
-    logoImageUrl: "/images/sponsor-logo/platina/unique-vision.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/platina/unique-vision.png`,
     logoImageAlt: "Unique Vision Co., Ltd. corporate logo image",
     linkUrl: "https://www.uniquevision.co.jp/",
     plan: "platina",
@@ -113,7 +115,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
           talkSchedule: "11:05 - 11:15",
           talkTrack: "mates",
           title: "Engineer",
-          avatarUrl: "/images/avatars/sponsors/ryutaro_yako.jpg",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/ryutaro_yako.jpg`,
           id: "ryutaro-yako",
           color: "default",
           socialUrls: {
@@ -128,7 +130,7 @@ const SPONSORS_PLATINA: Sponsor[] = [
 const SPONSORS_GOLD: Sponsor[] = [
   {
     name: "CoDMON, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/codmon.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/codmon.png`,
     logoImageAlt: "CoDMON, Inc.",
     linkUrl: "https://www.codmon.com/",
     plan: "gold",
@@ -138,7 +140,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Studist Corporation",
-    logoImageUrl: "/images/sponsor-logo/gold/studist.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/studist.png`,
     logoImageAlt: "Studist Corporation logo",
     linkUrl: "https://studist.jp/",
     plan: "gold",
@@ -147,7 +149,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "LY Corporation",
-    logoImageUrl: "/images/sponsor-logo/gold/line-yahoo.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/line-yahoo.png`,
     logoImageAlt: "LY Corporation",
     linkUrl: "https://www.lycorp.co.jp/ja/technology-design/",
     plan: "gold",
@@ -165,7 +167,7 @@ const SPONSORS_GOLD: Sponsor[] = [
           talkSchedule: "11:30 - 12:30",
           talkTrack: "cyberAgent",
           title: "Frontend Developer",
-          avatarUrl: "/images/avatars/sponsors/yusuke-sano.jpg",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/yusuke-sano.jpg`,
           id: "yusuke-sano",
           color: "default",
           socialUrls: {
@@ -177,7 +179,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "STORES, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/stores.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/stores.png`,
     logoImageAlt: "STORES",
     linkUrl: "https://jobs.st.inc/",
     plan: "gold",
@@ -186,7 +188,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Finatext Holdings Ltd.",
-    logoImageUrl: "/images/sponsor-logo/gold/finatext-holdings.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/finatext-holdings.png`,
     logoImageAlt: "Logo of Finatext Holdings, Inc.",
     linkUrl: "https://hd.finatext.com/",
     plan: "gold",
@@ -195,7 +197,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "KINTO Technologies Corporation",
-    logoImageUrl: "/images/sponsor-logo/gold/kinto-technologies.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/kinto-technologies.png`,
     logoImageAlt: "KINTOtechnologies logo",
     linkUrl: "https://www.kinto-technologies.com/",
     plan: "gold",
@@ -204,7 +206,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "PLAID, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/plaid.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/plaid.png`,
     logoImageAlt: "PLAID, Inc.",
     linkUrl: "https://plaid.co.jp/",
     plan: "gold",
@@ -222,7 +224,7 @@ const SPONSORS_GOLD: Sponsor[] = [
           talkSchedule: "11:30 - 12:30",
           talkTrack: "cyberAgent",
           title: "Software Engineer",
-          avatarUrl: "/images/avatars/sponsors/takumi-katayama.jpg",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/takumi-katayama.jpg`,
           id: "takumi-katayama",
           color: "default",
           socialUrls: {
@@ -235,7 +237,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Stockmark Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/stockmark.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/stockmark.png`,
     logoImageAlt: "Stockmark Inc.",
     linkUrl: "https://stockmark.co.jp/",
     plan: "gold",
@@ -245,7 +247,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Future Architect, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/future-architect.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/future-architect.png`,
     logoImageAlt: "Future Architect Inc.",
     linkUrl: "https://www.future.co.jp/architect/",
     plan: "gold",
@@ -255,7 +257,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "GENEROSITY Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/generosity.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/generosity.png`,
     logoImageAlt: "GENEROSITY Inc.",
     linkUrl: "https://generosity.co.jp",
     plan: "gold",
@@ -264,7 +266,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "HENNGE K.K.",
-    logoImageUrl: "/images/sponsor-logo/gold/hennge.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/hennge.png`,
     logoImageAlt: "On a white background, the HENNGE logo and lettering are vertically arranged in a simple and modern black design.",
     linkUrl: "https://hennge.com/jp/",
     plan: "gold",
@@ -273,7 +275,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Ikyu Corporation",
-    logoImageUrl: "/images/sponsor-logo/gold/ikkyu.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/ikkyu.png`,
     logoImageAlt: "Ikyu Corporation",
     linkUrl: "https://www.ikyu.co.jp/",
     plan: "gold",
@@ -284,7 +286,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Social Databank, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/social-databank.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/social-databank.png`,
     logoImageAlt: "Social Databank, Inc.",
     linkUrl: "https://social-db.co.jp",
     plan: "gold",
@@ -293,7 +295,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Tebiki, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/tebiki.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/tebiki.png`,
     logoImageAlt: "Tebiki, Inc.",
     linkUrl: "https://tebiki.co.jp/",
     plan: "gold",
@@ -303,7 +305,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "MedPeer, Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/medpeer.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/medpeer.png`,
     logoImageAlt: "MedPeer, Inc.",
     linkUrl: "https://medpeer.co.jp/",
     plan: "gold",
@@ -313,7 +315,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "CAREER DESIGN CENTER CO.,LTD.",
-    logoImageUrl: "/images/sponsor-logo/gold/career-design-center.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/career-design-center.png`,
     logoImageAlt: "Direct type",
     linkUrl: "https://directtype.jp/?utm_source=event&utm_medium=banner&utm_campaign=tech_event_251025",
     plan: "gold",
@@ -326,7 +328,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "ANDPAD Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/andpad.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/andpad.png`,
     logoImageAlt: "ANDPAD logo",
     linkUrl: "https://engineer.andpad.co.jp/",
     plan: "gold",
@@ -336,7 +338,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "mov inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/mov.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/mov.png`,
     logoImageAlt: "mov inc.",
     linkUrl: "https://mov.am/",
     plan: "gold",
@@ -346,7 +348,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "VisasQ Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/visasq.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/visasq.png`,
     logoImageAlt: "VISASQ",
     linkUrl: "https://corp.visasq.co.jp/",
     plan: "gold",
@@ -355,7 +357,7 @@ const SPONSORS_GOLD: Sponsor[] = [
   },
   {
     name: "Livesense Inc.",
-    logoImageUrl: "/images/sponsor-logo/gold/tenshoku-draft.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/gold/tenshoku-draft.png`,
     logoImageAlt: "Tenshoku-DRAFT",
     linkUrl: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=vuefes2025",
     plan: "gold",
@@ -368,7 +370,7 @@ const SPONSORS_GOLD: Sponsor[] = [
 const SPONSORS_SILVER: Sponsor[] = [
   {
     name: "Mates Inc.",
-    logoImageUrl: "/images/sponsor-logo/silver/mates.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/silver/mates.png`,
     logoImageAlt: "Mates Corporation | Aiming to Update Education",
     linkUrl: "https://mates-app.jp/",
     plan: "silver",
@@ -378,7 +380,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "DMM.com LLC",
-    logoImageUrl: "/images/sponsor-logo/silver/dmm-com.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/silver/dmm-com.png`,
     logoImageAlt: "DMM.com",
     linkUrl: "https://dmm-corp.com/",
     plan: "silver",
@@ -387,7 +389,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "istyle Inc.",
-    logoImageUrl: "/images/sponsor-logo/silver/istyle.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/silver/istyle.png`,
     logoImageAlt: "istyle, Inc.",
     linkUrl: "https://www.istyle.co.jp/",
     plan: "silver",
@@ -397,7 +399,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "CodeRabbit",
-    logoImageUrl: "/images/sponsor-logo/silver/code-rabbit.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/silver/code-rabbit.png`,
     logoImageAlt: "CodeRabbit",
     linkUrl: "https://www.coderabbit.ai",
     plan: "silver",
@@ -407,7 +409,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "CrowdWorks, Inc.",
-    logoImageUrl: "/images/sponsor-logo/silver/crowd-works.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/silver/crowd-works.png`,
     logoImageAlt: "CrowdWorks, Inc.'s logo",
     linkUrl: "https://crowdworks.co.jp/",
     plan: "silver",
@@ -416,7 +418,7 @@ const SPONSORS_SILVER: Sponsor[] = [
   },
   {
     name: "kickflow, Inc.",
-    logoImageUrl: "/images/sponsor-logo/silver/kickflow.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/silver/kickflow.png`,
     logoImageAlt: "kickflow, Inc.",
     linkUrl: "https://kickflow.com/",
     plan: "silver",
@@ -428,7 +430,7 @@ const SPONSORS_SILVER: Sponsor[] = [
 const SPONSORS_BRONZE: Sponsor[] = [
   {
     name: "Sentry",
-    logoImageUrl: "/images/sponsor-logo/bronze/sentry.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/bronze/sentry.png`,
     logoImageAlt: "Sentry Logo",
     linkUrl: "https://sentry.ichizoku.io/",
     plan: "bronze",
@@ -437,7 +439,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "ZAUEL LLC.",
-    logoImageUrl: "/images/sponsor-logo/bronze/zauel-llc.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/bronze/zauel-llc.png`,
     logoImageAlt: "ZAUEL LLC.",
     linkUrl: "https://zauel.co.jp",
     plan: "bronze",
@@ -446,7 +448,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "CyberAgent, Inc.",
-    logoImageUrl: "/images/sponsor-logo/bronze/cyber-agent.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/bronze/cyber-agent.png`,
     logoImageAlt: "CyberAgent,Inc.",
     linkUrl: "https://www.cyberagent.co.jp/",
     plan: "bronze",
@@ -462,7 +464,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
           name: "did0es",
           affiliation: "CyberAgent, Inc.",
           title: "Software Engineer",
-          avatarUrl: "/images/avatars/sponsors/did0es.png",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/did0es.png`,
           id: "did0es",
           color: "default",
           socialUrls: {
@@ -480,7 +482,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
           name: "Jabelic",
           affiliation: "CyberAgent, Inc.",
           title: "Web Frontend Developer",
-          avatarUrl: "/images/avatars/sponsors/jabelic.png",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/jabelic.png`,
           id: "jabelic",
           color: "default",
           socialUrls: {
@@ -494,7 +496,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "IKI Inc.",
-    logoImageUrl: "/images/sponsor-logo/bronze/iki.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/bronze/iki.png`,
     logoImageAlt: "IKI Inc.",
     linkUrl: "https://iki-inc.net",
     plan: "bronze",
@@ -503,7 +505,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "Future Techno Developers Co.,Ltd.",
-    logoImageUrl: "/images/sponsor-logo/bronze/future-techno-developers.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/bronze/future-techno-developers.png`,
     logoImageAlt: "Future Techno Developers Co., Ltd.",
     linkUrl: "https://www.ftechno-dev.com/",
     plan: "bronze",
@@ -512,7 +514,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
   },
   {
     name: "QUICK CO.,LTD.",
-    logoImageUrl: "/images/sponsor-logo/bronze/quick.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/bronze/quick.png`,
     logoImageAlt: `The logo of "QUICK Co., Ltd.", a comprehensive human resources service company.
     The motif of our company's symbol mark is "people." It is a symbol of QUICK Co., Ltd., which calls itself "Japan's Human Resources Department," and of the QUICK Group, which has a vision of becoming "the world's Human Resources Department." The soft form, which exudes a sense of spaciousness and abundance, represents a flexible sensibility that fits the times and a sure leap into the future.
     `,
@@ -527,7 +529,7 @@ const SPONSORS_BRONZE: Sponsor[] = [
 const SPONSORS_OPTION_ONLY: Sponsor[] = [
   {
     name: "hacomono.inc",
-    logoImageUrl: "/images/sponsor-logo/option/hacomono.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/option/hacomono.png`,
     logoImageAlt: "hacomono.inc",
     linkUrl: "https://www.hacomono.co.jp/recruit/engineer/",
     plan: "option-only",
@@ -537,7 +539,7 @@ const SPONSORS_OPTION_ONLY: Sponsor[] = [
   },
   {
     name: "Studio, Inc.",
-    logoImageUrl: "/images/sponsor-logo/option/studio.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/option/studio.png`,
     logoImageAlt: "Studio, Inc.",
     linkUrl: "https://studio.design/ja",
     plan: "option-only",
@@ -555,7 +557,7 @@ const SPONSORS_OPTION_ONLY: Sponsor[] = [
           talkSchedule: "11:30 - 12:30",
           talkTrack: "cyberAgent",
           title: "Frontend Engineer",
-          avatarUrl: "/images/avatars/sponsors/koya-saito.jpg",
+          avatarUrl: `${BASE_URL}images/avatars/sponsors/koya-saito.jpg`,
           id: "koya-saito",
           color: "default",
           socialUrls: {
@@ -570,7 +572,7 @@ const SPONSORS_OPTION_ONLY: Sponsor[] = [
 const SPONSORS_CREATIVE: Sponsor[] = [
   {
     name: "IE3",
-    logoImageUrl: "/images/sponsor-logo/creative/ie3.png",
+    logoImageUrl: `${BASE_URL}images/sponsor-logo/creative/ie3.png`,
     logoImageAlt: "IE3 Logo",
     linkUrl: "https://ie3.jp/",
     plan: "creative",
