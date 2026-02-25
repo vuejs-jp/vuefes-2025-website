@@ -34,10 +34,13 @@ import {
   useHead,
   useSeoMeta,
   useQueryHashSync,
+  useWithBase,
 } from "#imports";
 
 // To differentiate OGP based on query params
 defineRouteRules({ prerender: false });
+
+const withBase = useWithBase();
 
 const SectionId = {
   PanelDiscussion: "panel-discussion",
@@ -58,19 +61,19 @@ const { t, locale } = useI18n();
 const panelSpeakers = computed(() => locale.value === "en" ? enPanelSpeakers : jaPanelSpeakers);
 const studentSupportSpeakers = computed(() => locale.value === "en" ? enStudentSupportSpeakers : jaStudentSupportSpeakers);
 
-const quizImageList = [
-  { src: "/images/event/quiz_1.jpg", alt: t("event.quiz.image.alt1") },
-  { src: "/images/event/quiz_2.jpg", alt: t("event.quiz.image.alt2") },
-  { src: "/images/event/quiz_3.jpg", alt: t("event.quiz.image.alt3") },
-  { src: "/images/event/quiz_4.jpg", alt: t("event.quiz.image.alt4") },
-];
+const quizImageList = computed(() => [
+  { src: withBase("/images/event/quiz_1.jpg"), alt: t("event.quiz.image.alt1") },
+  { src: withBase("/images/event/quiz_2.jpg"), alt: t("event.quiz.image.alt2") },
+  { src: withBase("/images/event/quiz_3.jpg"), alt: t("event.quiz.image.alt3") },
+  { src: withBase("/images/event/quiz_4.jpg"), alt: t("event.quiz.image.alt4") },
+]);
 
-const handsOnImageList = [
-  { src: "/images/event/hands-on_1.jpg", alt: t("event.handsOn.image.alt1") },
-  { src: "/images/event/hands-on_2.jpg", alt: t("event.handsOn.image.alt2") },
-  { src: "/images/event/hands-on_3.jpg", alt: t("event.handsOn.image.alt3") },
-  { src: "/images/event/hands-on_4.jpg", alt: t("event.handsOn.image.alt4") },
-];
+const handsOnImageList = computed(() => [
+  { src: withBase("/images/event/hands-on_1.jpg"), alt: t("event.handsOn.image.alt1") },
+  { src: withBase("/images/event/hands-on_2.jpg"), alt: t("event.handsOn.image.alt2") },
+  { src: withBase("/images/event/hands-on_3.jpg"), alt: t("event.handsOn.image.alt3") },
+  { src: withBase("/images/event/hands-on_4.jpg"), alt: t("event.handsOn.image.alt4") },
+]);
 
 const route = useRoute();
 
