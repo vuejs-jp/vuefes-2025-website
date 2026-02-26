@@ -47,30 +47,33 @@ export default defineNuxtConfig({
     githubClientSecret: process.env.OAUTH_GITHUB_CLIENT_SECRET_ID,
     googleClientId: process.env.OAUTH_GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
-    authOrigin: process.env.NODE_ENV === "production"
-      ? process.env.CONTEXT === "production"
-        ? "https://vuefes.jp/2025/api/auth"
-        : `${process.env.DEPLOY_PRIME_URL}/2025/api/auth`
-      : `http://localhost:${process.env.PORT || 3000}/api/auth`,
+    authOrigin:
+      process.env.NODE_ENV === "production"
+        ? process.env.CONTEXT === "production"
+          ? "https://vuefes.jp/2025/api/auth"
+          : `${process.env.DEPLOY_PRIME_URL}/2025/api/auth`
+        : `http://localhost:${process.env.PORT || 3000}/api/auth`,
 
     // for Peatix API
     peatixApiOrigin: process.env.PEATIX_API_ORIGIN,
     peatixApiSecret: process.env.PEATIX_API_SECRET,
     peatixEventId: process.env.PEATIX_EVENT_ID,
 
-    siteUrl: process.env.NODE_ENV === "production"
-      ? process.env.CONTEXT === "production"
-        ? "https://vuefes.jp/2025/"
-        : `${process.env.DEPLOY_PRIME_URL}/2025/`
-      : "http://localhost:3000/",
-
-    public: {
-      contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
-      siteUrl: process.env.NODE_ENV === "production"
+    siteUrl:
+      process.env.NODE_ENV === "production"
         ? process.env.CONTEXT === "production"
           ? "https://vuefes.jp/2025/"
           : `${process.env.DEPLOY_PRIME_URL}/2025/`
         : "http://localhost:3000/",
+
+    public: {
+      contactFormEndpoint: "https://vuejs-jp.form.newt.so/v1/UR5LmScZc",
+      siteUrl:
+        process.env.NODE_ENV === "production"
+          ? process.env.CONTEXT === "production"
+            ? "https://vuefes.jp/2025/"
+            : `${process.env.DEPLOY_PRIME_URL}/2025/`
+          : "http://localhost:3000/",
     },
   },
   components: [{ path: "~/components", pathPrefix: false }],
@@ -97,10 +100,6 @@ export default defineNuxtConfig({
     experimental: {
       tasks: true,
     },
-    scheduledTasks: {
-      // peatix api cron runs at UTC 16:00 (JST 01:00), so execute about 15 minutes later
-      "15 16 * * *": ["sync-role"],
-    },
   },
 
   vite: {
@@ -118,8 +117,12 @@ export default defineNuxtConfig({
     plugins: [
       Icons({
         customCollections: {
-          icons: FileSystemIconLoader("./public/images/icons", svg => svg.replace(/#007F62/g, "var(--color-base)")),
-          logo: FileSystemIconLoader("./public/images/logo", svg => svg.replace(/#007F62/g, "var(--color-base)")),
+          icons: FileSystemIconLoader("./public/images/icons", svg =>
+            svg.replace(/#007F62/g, "var(--color-base)"),
+          ),
+          logo: FileSystemIconLoader("./public/images/logo", svg =>
+            svg.replace(/#007F62/g, "var(--color-base)"),
+          ),
         },
       }),
     ],
@@ -218,11 +221,12 @@ export default defineNuxtConfig({
 
   auth: {
     disableServerSideAuth: false,
-    baseURL: process.env.NODE_ENV === "production"
-      ? process.env.CONTEXT === "production"
-        ? "https://vuefes.jp/2025/api/auth"
-        : `${process.env.DEPLOY_PRIME_URL}/2025/api/auth`
-      : `http://localhost:${process.env.PORT || 3000}/api/auth`,
+    baseURL:
+      process.env.NODE_ENV === "production"
+        ? process.env.CONTEXT === "production"
+          ? "https://vuefes.jp/2025/api/auth"
+          : `${process.env.DEPLOY_PRIME_URL}/2025/api/auth`
+        : `http://localhost:${process.env.PORT || 3000}/api/auth`,
     provider: {
       type: "authjs",
       addDefaultCallbackUrl: true,

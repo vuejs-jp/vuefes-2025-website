@@ -10,10 +10,10 @@ These acts of discrimination and harassment are inappropriate in any setting or 
 
 ## If you feel uncomfortable
 
-If you feel that you have been discriminated against or harassed, or if you notice or have concerns that someone else has been harassed, please contact us immediately using [the Contact Us form](/#contact-form).
+If you feel that you have been discriminated against or harassed, or if you notice or have concerns that someone else has been harassed, please contact us immediately using [the Contact Us form](/2025/#contact-form).
 
 The Vue.js Japan User Group is committed to a safe environment and will provide all other assistance, including contacting the police. Your participation is of utmost importance to us, and we will always remain on the side of those who have been subjected to acts of discrimination or harassment.
 
 ## How can we help you?
 
-Contact the Vue.js Japan User Group using [our contact form](/#contact-form).
+Contact the Vue.js Japan User Group using [our contact form](/2025/#contact-form).

@@ -1,10 +1,12 @@
 import type { Staffs } from "../api/staffs/index.get";
 
+const BASE_URL = import.meta.dev ? "/" : "/2025/";
+
 export const staffs: Staffs = {
   leaders: [
     {
       name: "kazupon",
-      avatarUrl: "/images/avatars/staffs/kazu_pon.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/kazu_pon.webp`,
       pinned: true,
       socialUrls: {
         x: "https://x.com/kazu_pon",
@@ -13,7 +15,7 @@ export const staffs: Staffs = {
     },
     {
       name: "448jp",
-      avatarUrl: "/images/avatars/staffs/448jp.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/448jp.webp`,
       pinned: true,
       socialUrls: {
         x: "https://x.com/448jp",
@@ -22,7 +24,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Nozomu Ikuta",
-      avatarUrl: "/images/avatars/staffs/nozomuikuta.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/nozomuikuta.webp`,
       pinned: true,
       socialUrls: {
         x: "https://x.com/nozomuikuta",
@@ -31,7 +33,7 @@ export const staffs: Staffs = {
     },
     {
       name: "ubugeeei",
-      avatarUrl: "/images/avatars/staffs/ubugeeei.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ubugeeei.webp`,
       socialUrls: {
         x: "https://x.com/ubugeeei",
         github: "https://github.com/ubugeeei",
@@ -39,7 +41,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Naoki Haba",
-      avatarUrl: "/images/avatars/staffs/naokihaba.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/naokihaba.webp`,
       socialUrls: {
         x: "https://x.com/naokihaba",
         github: "https://github.com/naokihaba",
@@ -47,7 +49,7 @@ export const staffs: Staffs = {
     },
     {
       name: "yuki-mina",
-      avatarUrl: "/images/avatars/staffs/yuki-mina.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/yuki-mina.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/yuki-mina",
@@ -55,7 +57,7 @@ export const staffs: Staffs = {
     },
     {
       name: "かっつー",
-      avatarUrl: "/images/avatars/staffs/katsuhiro.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/katsuhiro.webp`,
       socialUrls: {
         x: "https://x.com/astrotyotogood",
         github: "https://github.com/fkatsuhiro",
@@ -63,7 +65,7 @@ export const staffs: Staffs = {
     },
     {
       name: "S4S4P1Y0",
-      avatarUrl: "/images/avatars/staffs/sasagar.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/sasagar.webp`,
       socialUrls: {
         x: "https://x.com/sasagawaki",
         github: "https://github.com/sasagar",
@@ -71,7 +73,7 @@ export const staffs: Staffs = {
     },
     {
       name: "karacoro",
-      avatarUrl: "/images/avatars/staffs/karacoro.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/karacoro.webp`,
       socialUrls: {
         x: "https://x.com/karan_corons",
         github: "https://github.com/tsukuha",
@@ -79,7 +81,7 @@ export const staffs: Staffs = {
     },
     {
       name: "KALUPASU",
-      avatarUrl: "/images/avatars/staffs/KALUPASU12.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/KALUPASU12.webp`,
       socialUrls: {
         x: "https://x.com/KALUPASU12",
         github: "https://github.com/KALUPASU",
@@ -89,7 +91,7 @@ export const staffs: Staffs = {
   cores: [
     {
       name: "early",
-      avatarUrl: "/images/avatars/staffs/early.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/early.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/m-arisa",
@@ -97,7 +99,7 @@ export const staffs: Staffs = {
     },
     {
       name: "jay-es",
-      avatarUrl: "/images/avatars/staffs/jay-es.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/jay-es.webp`,
       socialUrls: {
         x: "https://x.com/shindy_JP",
         github: "https://github.com/jay-es",
@@ -105,7 +107,7 @@ export const staffs: Staffs = {
     },
     {
       name: "hiroko_ino",
-      avatarUrl: "/images/avatars/staffs/hiroko_ino.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/hiroko_ino.webp`,
       socialUrls: {
         x: "https://x.com/uribou_studying",
         github: "https://github.com/hiroko-ino",
@@ -113,7 +115,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Hal",
-      avatarUrl: "/images/avatars/staffs/hal.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/hal.webp`,
       socialUrls: {
         x: "https://x.com/hal_spidernight",
         github: "https://github.com/Hal-Spidernight",
@@ -121,7 +123,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Yuhei FUJITA",
-      avatarUrl: "/images/avatars/staffs/yuhei_fujita.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/yuhei_fujita.webp`,
       socialUrls: {
         x: "https://x.com/Yuhei_FUJITA",
         github: "https://github.com/YuheiFUJITA",
@@ -129,7 +131,7 @@ export const staffs: Staffs = {
     },
     {
       name: "ねぎなす",
-      avatarUrl: "/images/avatars/staffs/neginasu.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/neginasu.webp`,
       socialUrls: {
         x: "https://x.com/neginasu_grid",
         github: "https://github.com/neginasu",
@@ -137,7 +139,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Han",
-      avatarUrl: "/images/avatars/staffs/han.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/han.webp`,
       socialUrls: {
         x: "https://x.com/hannoeru",
         github: "https://github.com/hannoeru",
@@ -145,7 +147,7 @@ export const staffs: Staffs = {
     },
     {
       name: "aster-mnch",
-      avatarUrl: "/images/avatars/staffs/aster-mnch.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/aster-mnch.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/aster-mnch",
@@ -153,7 +155,7 @@ export const staffs: Staffs = {
     },
     {
       name: "パンダム",
-      avatarUrl: "/images/avatars/staffs/rymiyamoto.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/rymiyamoto.webp`,
       socialUrls: {
         x: "https://x.com/rymiyamoto129",
         github: "https://github.com/rymiyamoto",
@@ -161,7 +163,7 @@ export const staffs: Staffs = {
     },
     {
       name: "miyake",
-      avatarUrl: "/images/avatars/staffs/miyake.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/miyake.webp`,
       socialUrls: {
         x: "",
         github: "",
@@ -169,7 +171,7 @@ export const staffs: Staffs = {
     },
     {
       name: "たかのり",
-      avatarUrl: "/images/avatars/staffs/happylifetaka.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/happylifetaka.webp`,
       socialUrls: {
         x: "https://x.com/happylifetaka",
         github: "https://github.com/happylifetaka",
@@ -177,7 +179,7 @@ export const staffs: Staffs = {
     },
     {
       name: "hikkobay",
-      avatarUrl: "/images/avatars/staffs/hikkobay.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/hikkobay.webp`,
       socialUrls: {
         x: "https://x.com/hikkobay",
         github: "https://github.com/splendente",
@@ -185,7 +187,7 @@ export const staffs: Staffs = {
     },
     {
       name: "RYO",
-      avatarUrl: "/images/avatars/staffs/ryoaccount.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ryoaccount.webp`,
       socialUrls: {
         x: "https://x.com/RYO_nami",
         github: "https://github.com/ryoAccount",
@@ -193,7 +195,7 @@ export const staffs: Staffs = {
     },
     {
       name: "kokoe",
-      avatarUrl: "/images/avatars/staffs/kokoe.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/kokoe.webp`,
       socialUrls: {
         x: "https://x.com/kokoejo",
         github: "https://github.com/kokoe",
@@ -201,7 +203,7 @@ export const staffs: Staffs = {
     },
     {
       name: "fujimmm331",
-      avatarUrl: "/images/avatars/staffs/fujimmm331.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/fujimmm331.webp`,
       socialUrls: {
         x: "https://x.com/Fujimmm_331",
         github: "https://github.com/fujimmm331",
@@ -209,7 +211,7 @@ export const staffs: Staffs = {
     },
     {
       name: "keigo",
-      avatarUrl: "/images/avatars/staffs/keigo.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/keigo.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/kspace-trk",
@@ -217,7 +219,7 @@ export const staffs: Staffs = {
     },
     {
       name: "dero1to",
-      avatarUrl: "/images/avatars/staffs/dero1to.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/dero1to.webp`,
       socialUrls: {
         x: "https://x.com/dero1to",
         github: "https://github.com/dero1to",
@@ -225,7 +227,7 @@ export const staffs: Staffs = {
     },
     {
       name: "totocalcio",
-      avatarUrl: "/images/avatars/staffs/totocalcio.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/totocalcio.webp`,
       socialUrls: {
         x: "https://x.com/dir20634",
         github: "https://github.com/totocalcio",
@@ -233,7 +235,7 @@ export const staffs: Staffs = {
     },
     {
       name: "genj1",
-      avatarUrl: "/images/avatars/staffs/genj1.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/genj1.webp`,
       socialUrls: {
         x: "https://x.com/genj1__",
         github: "https://github.com/genj11",
@@ -241,7 +243,7 @@ export const staffs: Staffs = {
     },
     {
       name: "tutti",
-      avatarUrl: "/images/avatars/staffs/tutti.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/tutti.webp`,
       socialUrls: {
         x: "https://x.com/tutti2612",
         github: "https://github.com/tutti2612",
@@ -249,7 +251,7 @@ export const staffs: Staffs = {
     },
     {
       name: "kurawa",
-      avatarUrl: "/images/avatars/staffs/kurawa.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/kurawa.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/ngo-ni",
@@ -257,7 +259,7 @@ export const staffs: Staffs = {
     },
     {
       name: "naramochi",
-      avatarUrl: "/images/avatars/staffs/naramochi.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/naramochi.webp`,
       socialUrls: {
         x: "https://x.com/_naramochi",
         github: "https://github.com/naramochi",
@@ -265,7 +267,7 @@ export const staffs: Staffs = {
     },
     {
       name: "あべ",
-      avatarUrl: "/images/avatars/staffs/moabear.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/moabear.webp`,
       socialUrls: {
         x: "https://x.com/moabear29",
         github: "https://github.com/moabear",
@@ -273,7 +275,7 @@ export const staffs: Staffs = {
     },
     {
       name: "yamageji",
-      avatarUrl: "/images/avatars/staffs/yamageji.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/yamageji.webp`,
       socialUrls: {
         x: "https://x.com/yamageji",
         github: "https://github.com/yamageji",
@@ -281,7 +283,7 @@ export const staffs: Staffs = {
     },
     {
       name: "nokki_y",
-      avatarUrl: "/images/avatars/staffs/nokki_y.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/nokki_y.webp`,
       socialUrls: {
         x: "https://x.com/nokki_y",
         github: "https://github.com/nokki–y",
@@ -289,7 +291,7 @@ export const staffs: Staffs = {
     },
     {
       name: "csy19",
-      avatarUrl: "/images/avatars/staffs/csy19.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/csy19.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/csy19",
@@ -297,7 +299,7 @@ export const staffs: Staffs = {
     },
     {
       name: "いとえり",
-      avatarUrl: "/images/avatars/staffs/ito_eri.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ito_eri.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/eri-ito",
@@ -305,7 +307,7 @@ export const staffs: Staffs = {
     },
     {
       name: "n.morishita",
-      avatarUrl: "/images/avatars/staffs/n_morishita.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/n_morishita.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/n-morishita",
@@ -313,7 +315,7 @@ export const staffs: Staffs = {
     },
     {
       name: "kou",
-      avatarUrl: "/images/avatars/staffs/kou_u.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/kou_u.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/mooncat126",
@@ -321,7 +323,7 @@ export const staffs: Staffs = {
     },
     {
       name: "M.Matsuyama",
-      avatarUrl: "/images/avatars/staffs/mizukirimatsu.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/mizukirimatsu.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/mizukirimatsu",
@@ -329,7 +331,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Yurika.Sato",
-      avatarUrl: "/images/avatars/staffs/sato_yurika.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/sato_yurika.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/sato-yurika",
@@ -337,7 +339,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Kia Ishii",
-      avatarUrl: "/images/avatars/staffs/kiaking.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/kiaking.webp`,
       socialUrls: {
         x: "https://x.com/KiaKing85",
         github: "https://github.com/kiaking",
@@ -345,7 +347,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Sphere Stacking",
-      avatarUrl: "/images/avatars/staffs/sphere_stacking.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/sphere_stacking.webp`,
       socialUrls: {
         x: "https://x.com/SphereStacking",
         github: "https://github.com/SphereStacking",
@@ -353,7 +355,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Kota Fujishiro",
-      avatarUrl: "/images/avatars/staffs/kota_fujishiro.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/kota_fujishiro.webp`,
       socialUrls: {
         x: "https://x.com/kotafujishiro",
         github: "https://github.com/kotafujishiro",
@@ -361,7 +363,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Shota Ainoya",
-      avatarUrl: "/images/avatars/staffs/ainoya_s.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ainoya_s.webp`,
       socialUrls: {
         x: "https://x.com/ainoya_design",
         github: "https://github.com/ainoya-s",
@@ -369,7 +371,7 @@ export const staffs: Staffs = {
     },
     {
       name: "nakayama akinori0",
-      avatarUrl: "/images/avatars/staffs/akinori_nakayama.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/akinori_nakayama.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/nakayamaakinori0",
@@ -377,7 +379,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Yusa",
-      avatarUrl: "/images/avatars/staffs/Yusa.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/Yusa.webp`,
       socialUrls: {
         x: "https://x.com/Yusa136",
         github: "https://github.com/YuSa0-6",
@@ -385,7 +387,7 @@ export const staffs: Staffs = {
     },
     {
       name: "astuki",
-      avatarUrl: "/images/avatars/staffs/astuki.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/astuki.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/atsuki0922",
@@ -393,7 +395,7 @@ export const staffs: Staffs = {
     },
     {
       name: "ktym4a",
-      avatarUrl: "/images/avatars/staffs/ktym4a.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ktym4a.webp`,
       socialUrls: {
         x: "https://x.com/ktym4a_s",
         github: "https://github.com/ktym4a",
@@ -401,7 +403,7 @@ export const staffs: Staffs = {
     },
     {
       name: "misaki",
-      avatarUrl: "/images/avatars/staffs/misaki.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/misaki.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/Misaki3391",
@@ -409,7 +411,7 @@ export const staffs: Staffs = {
     },
     {
       name: "ryuhei373",
-      avatarUrl: "/images/avatars/staffs/ryuhei373.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ryuhei373.webp`,
       socialUrls: {
         x: "https://x.com/373_3",
         github: "https://github.com/ryuhei373",
@@ -417,7 +419,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Kogure",
-      avatarUrl: "/images/avatars/staffs/ryo_gk55.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/ryo_gk55.webp`,
       socialUrls: {
         x: "https://x.com/ryo_gk55",
         github: "https://github.com/ryo-gk",
@@ -425,7 +427,7 @@ export const staffs: Staffs = {
     },
     {
       name: "jiyuujin",
-      avatarUrl: "/images/avatars/staffs/jiyuujin.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/jiyuujin.webp`,
       socialUrls: {
         x: "",
         github: "https://github.com/jiyuujin",
@@ -433,7 +435,7 @@ export const staffs: Staffs = {
     },
     {
       name: "Anthony Fu",
-      avatarUrl: "/images/avatars/staffs/antfu.webp",
+      avatarUrl: `${BASE_URL}images/avatars/staffs/antfu.webp`,
       socialUrls: {
         github: "https://github.com/antfu",
       },

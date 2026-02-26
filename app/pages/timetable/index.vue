@@ -18,9 +18,11 @@ import {
   useRuntimeConfig,
   useSeoMeta,
   useState,
+  useWithBase,
 } from "#imports";
 
 defineRouteRules({ prerender: true });
+const withBase = useWithBase();
 
 const runtimeConfig = useRuntimeConfig();
 const { t, locale } = useI18n();
@@ -117,12 +119,12 @@ useSeoMeta({
 
     <VFSection :title="t('venueMap.title')" class="venue-map-section">
       <a
-        :href="locale === 'ja' ? '/images/venue-map/map_jp@2x.png': '/images/venue-map/map_en@2x.png'"
+        :href="locale === 'ja' ? withBase('/images/venue-map/map_jp@2x.png'): withBase('/images/venue-map/map_en@2x.png')"
         target="_blank"
       >
         <span class="visually-hidden">{{ t('venueMap.openInNewTab') }}</span>
         <img
-          :src="locale === 'ja' ? '/images/venue-map/map_jp.png': '/images/venue-map/map_en.png'"
+          :src="locale === 'ja' ? withBase('/images/venue-map/map_jp.png'): withBase('/images/venue-map/map_en.png')"
           :alt="t('venueMap.alt')"
           loading="lazy"
         >

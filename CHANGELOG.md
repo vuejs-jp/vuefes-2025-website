@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.11.1
+
+[compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.11.0...v2.11.1)
+
+### 🩹 Fixes
+
+- Add base url ([e5e7e17](https://github.com/vuejs-jp/vuefes-2025/commit/e5e7e17))
+
+### 🏡 Chore
+
+- **release:** V2.11.0 ([a7b0341](https://github.com/vuejs-jp/vuefes-2025/commit/a7b0341))
+
+### ❤️ Contributors
+
+- Tempestif <soccer.i_y@icloud.com>
+- Naokihaba <naosprintrunner6385@gmail.com>
+
 ## v2.11.0
 
 [compare changes](https://github.com/vuejs-jp/vuefes-2025/compare/v2.10.0...v2.11.0)
