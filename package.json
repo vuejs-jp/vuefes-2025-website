@@ -113,7 +113,7 @@
     "vue-router": "latest",
     "vue-tsc": "^2.2.8",
     "yaml": "^2.8.1",
-    "wrangler": "^4.23.0"
+    "wrangler": "^4.45.0"
   },
   "eslintConfig": {
     "extends": [
